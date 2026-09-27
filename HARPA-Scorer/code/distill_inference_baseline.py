@@ -13,7 +13,7 @@ hf_token = os.getenv("HUGGINGFACE_TOKEN")  # set in your environment before runn
 #model_id = "ROOT/harpa_reasoning_distilled_final"       # your HF model repo
 model_id = "Qwen/Qwen2.5-7B-Instruct"
 dataset_id = "ROOT/harpa-rmr1-sft-split-dataset"        # your HF dataset repo
-split = "validation"
+split = "test"
 
 max_new_tokens = 8912
 
@@ -35,7 +35,7 @@ tokenizer = AutoTokenizer.from_pretrained(
 model.eval()
 
 print("Loading dataset...")
-dataset = load_dataset(dataset_id, token=True)[split]  # split="validation"
+dataset = load_dataset(dataset_id, token=True)[split]  # split="test"
 
 # ------------------ Helpers ------------------ #
 def extract_winner_from_trace(text: str):
