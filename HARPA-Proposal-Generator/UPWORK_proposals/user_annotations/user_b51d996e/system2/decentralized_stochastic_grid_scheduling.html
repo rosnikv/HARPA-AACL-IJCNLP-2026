@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7b581c9ce200b031451f592478c7c34b5fc47898</p>
+<hr>
+<section><h2>Title</h2>
+<p>Decentralized Stochastic Grid Scheduling with Graph Neural Networks and Consensus Mechanisms</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Centralized approaches to electrical grid scheduling struggle to handle the increasing complexity and uncertainty introduced by renewable energy sources and distributed energy resources. Current methods often rely on centralized optimization techniques that may not scale well or adapt quickly to local changes in energy production and consumption.</p>
+<h3>Motivation</h3>
+<p>A decentralized approach leveraging local decision-making and peer-to-peer communication could lead to more robust and efficient grid scheduling, especially in the face of uncertainties and rapid changes in energy supply and demand. Existing methods often struggle with scalability and adaptability in complex, dynamic grid environments. Our proposed Decentralized Stochastic Grid Scheduling (DSGS) system combines graph neural networks (GNNs) with stochastic programming and a novel consensus mechanism, potentially offering improved performance in terms of energy efficiency, grid stability, and resilience to disruptions.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a Decentralized Stochastic Grid Scheduling (DSGS) system that combines graph neural networks (GNNs) with stochastic programming. Each node in the power grid (e.g., substations, large consumers, renewable energy sources) is represented by a local agent. These agents use GNNs to process local information and communicate with neighboring nodes, creating a distributed representation of the grid state. The GNN is trained to predict future energy production and consumption patterns, incorporating uncertainty through probabilistic outputs. Based on these predictions, each agent then solves a local stochastic optimization problem to determine its energy dispatch or consumption schedule. To ensure global consistency, we introduce a novel consensus mechanism inspired by blockchain technology, where agents propose and validate each other's schedules. This allows the system to converge on a globally optimal solution while maintaining decentralized decision-making. To handle the high-dimensional action space, we employ a hierarchical reinforcement learning approach, where high-level policies determine overall strategies (e.g., risk aversion level, focus on renewables) and low-level policies optimize specific scheduling decisions.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess data from both simulated grid environments and real-world regional power systems. This should include time series data of energy production, consumption, and grid state information. Split the data into training, validation, and test sets.</p><p><strong>Step 2: GNN Model Development</strong></p><p>Implement a Graph Neural Network (GNN) model using PyTorch Geometric or a similar library. The GNN should take as input the grid topology and node features (e.g., current energy production/consumption, historical data) and output predictions of future energy states with uncertainty estimates.</p><p><strong>Step 3: Stochastic Optimization</strong></p><p>Implement a stochastic optimization module that takes the GNN's probabilistic predictions as input and outputs optimal energy dispatch/consumption schedules for each node. Use a framework like PuLP or CVXPY for optimization.</p><p><strong>Step 4: Consensus Mechanism</strong></p><p>Develop a consensus mechanism where agents share and validate each other's schedules. Implement this using a distributed ledger approach, where each agent maintains a local copy of the global schedule.</p><p><strong>Step 5: Hierarchical Reinforcement Learning</strong></p><p>Implement a hierarchical RL framework using a library like Stable Baselines3. The high-level policy should determine overall strategies, while the low-level policy optimizes specific scheduling decisions.</p><p><strong>Step 6: Training</strong></p><p>Train the GNN model on historical data. Train the RL policies using the simulated environment. Use techniques like curriculum learning to gradually increase the complexity of the scenarios.</p><p><strong>Step 7: Evaluation</strong></p><p>Evaluate the DSGS system on both simulated and real-world test data. Compare against baselines including centralized optimization methods and existing decentralized approaches. Metrics should include energy efficiency, grid stability, renewable energy utilization, and resilience to disruptions.</p><p><strong>Step 8: Scalability Testing</strong></p><p>Conduct experiments to assess the performance of DSGS on increasingly large and complex grid structures. Measure computational time and communication overhead as the number of nodes increases.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Perform ablation studies to understand the contribution of each component (GNN, stochastic optimization, consensus mechanism, hierarchical RL) to the overall performance.</p><p><strong>Step 10: Analysis and Reporting</strong></p><p>Analyze the results, create visualizations, and prepare a comprehensive report or paper detailing the methodology, experiments, and findings.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Centralized Optimization)</strong></p><p>Optimize the energy dispatch for a 10-node grid over the next 24 hours, given current production and consumption data, and weather forecasts.</p><p><strong>Baseline Prompt Expected Output (Centralized Optimization)</strong></p><p>A centralized schedule specifying energy production and consumption for each node at each hour, optimized for overall grid efficiency.</p><p><strong>Proposed Prompt Input (DSGS)</strong></p><p>For a 10-node grid, each node should optimize its local energy dispatch for the next 24 hours, given its own data and information from neighboring nodes.</p><p><strong>Proposed Prompt Expected Output (DSGS)</strong></p><p>Each node produces its own optimized schedule. These schedules are then shared and validated through the consensus mechanism, resulting in a globally consistent and optimized schedule that adapts to local conditions and uncertainties.</p><p><strong>Explanation</strong></p><p>The DSGS approach allows for more flexible and adaptive scheduling, taking into account local conditions and uncertainties. It can potentially handle disruptions more gracefully and scale to larger grid sizes more effectively than the centralized approach.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed DSGS system does not outperform baseline methods as expected, we can pivot the project in several directions. First, we could conduct a detailed analysis of where and why the system underperforms. This might involve visualizing the decision-making process of individual nodes, analyzing the consensus mechanism's convergence properties, or investigating the GNN's prediction accuracy under different scenarios. We could also explore hybrid approaches that combine elements of centralized and decentralized decision-making, which might offer a balance between adaptability and global optimality. Additionally, we could focus on specific sub-problems where DSGS shows promise, such as handling sudden disruptions or integrating renewable energy sources, and develop specialized solutions for these scenarios. Finally, we could turn this into an analysis paper, offering insights into the challenges of decentralized grid scheduling and proposing future research directions based on our findings.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/afd0541230b246928024f21d9c8b81f7c762d3f2" target="_blank">Inventory Optimization in Retail Supply Chains Using Deep Reinforcement Learning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e217df918325bf13a8baa45603713af610474a98" target="_blank">Deep Reinforcement Learning for Optimal Replenishment in Stochastic Assembly Systems</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/67c9b3ac2748297ce2de06fd0464783932c0297c" target="_blank">Outbound Modeling for Inventory Management</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/746c50f86e58210323d3ba01ffc7f8ad2343910c" target="_blank">Computing optimal policies for managing inventories with noisy observations</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/9aa4ba9affbbf577edaa41455269ceeca58a15f1" target="_blank">Two‐stage stochastic demand response in smart grid considering random appliance usage patterns</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/46672cba9fa38c878fd44643068534c7e1c05abb" target="_blank">Fully dynamic reorder policies with deep reinforcement learning for multi-echelon inventory management</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4e3cc81c58db72ba1b40eb062dc87feb6c2a6419" target="_blank">Two-Stage Stochastic Programming Method for Multi-Energy Microgrid System</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/be435a2e4f5e2a9f3d72aa7530c1a5cd20936d87" target="_blank">Deep RL Dual Sourcing Inventory Management with Supply and Capacity Risk Awareness</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/00647a552e1de161e796fa61b2e0d0f0c1e1b860" target="_blank">Single-Site Perishable Inventory Management Under Uncertainties: A Deep Reinforcement Learning Approach</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ab2cacd24cf1c25adc325e1ef13b58bfacadb5f4" target="_blank">Adaptive Inventory Strategies using Deep Reinforcement Learning for Dynamic Agri-Food Supply Chains</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

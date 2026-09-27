@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3eedfc92689a99f468c562e41e8b7ee6e19e673d</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating HGNN with MAPPO enhances adaptability and efficiency in dynamic job-shop scheduling.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Heterogeneous Graph Neural Networks with Multi-Agent Proximal Policy Optimization in dynamic job-shop scheduling will improve adaptability and efficiency in handling real-time changes, such as job arrivals and machine breakdowns, compared to traditional single-agent scheduling methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods for dynamic job-shop scheduling often rely on predefined state feature vectors, which limit adaptability to real-time changes such as job arrivals and machine breakdowns. While recent studies have integrated Graph Neural Networks (GNNs) with Deep Reinforcement Learning (DRL), they primarily focus on homogeneous graph representations or single-agent frameworks. This overlooks the potential of heterogeneous graph structures and multi-agent systems to capture complex interactions in dynamic environments. Our hypothesis addresses this gap by exploring the integration of Heterogeneous Graph Neural Networks (HGNN) with Multi-Agent Proximal Policy Optimization (MAPPO) to enhance adaptability and efficiency in large-scale scheduling problems.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Heterogeneous Graph Neural Networks (HGNN) with Multi-Agent Proximal Policy Optimization (MAPPO) to address dynamic job-shop scheduling challenges. HGNNs are employed to encode the diverse types of nodes and edges in the job-shop environment, capturing complex interactions between jobs and machines. This graph representation is used by MAPPO, a reinforcement learning algorithm designed for multi-agent systems, to optimize scheduling decisions. Each agent represents a job or machine, collaborating to maximize global rewards such as minimizing makespan and improving resource utilization. This approach is expected to enhance adaptability to real-time changes, as the HGNN captures diverse state information, and MAPPO facilitates coordinated decision-making. The hypothesis will be tested using a benchmark dataset for dynamic job-shop scheduling, comparing the proposed method against traditional single-agent RL approaches. The expected outcome is improved adaptability and efficiency in scheduling decisions, demonstrated through metrics like makespan reduction and resource utilization.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384">Heterogeneous Graph Neural Network (HGNN)</a>: HGNNs are used to encode the state of the job-shop environment, capturing the heterogeneous nature of jobs and machines. This involves representing the environment as a graph with diverse node and edge types, allowing for more accurate state representation. The HGNN processes this graph to extract features that inform scheduling decisions. This approach is selected for its ability to handle complex interactions in dynamic environments, expected to improve adaptability and efficiency in scheduling.</p>
+<p><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384">Multi-Agent Proximal Policy Optimization (MAPPO)</a>: MAPPO is a reinforcement learning algorithm used to train multiple agents, each representing a job or machine in the scheduling environment. It optimizes scheduling decisions by iteratively updating policy networks based on observed rewards. MAPPO is chosen for its ability to handle coordination among agents, enabling them to learn optimal scheduling strategies collaboratively. This is expected to enhance adaptability to real-time changes, as agents can dynamically adjust their actions based on the current state.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves several key steps. First, the job-shop environment is represented as a heterogeneous graph, with nodes representing jobs and machines, and edges capturing dependencies and interactions. This graph is processed by an HGNN, which extracts features that encode the state of the environment. These features are then used by MAPPO to train multiple agents, each corresponding to a job or machine. The agents learn to optimize scheduling decisions through trial and error, guided by a global reward function that considers objectives like makespan reduction and resource utilization. The integration of HGNN and MAPPO allows for dynamic adaptation to real-time changes, as agents can adjust their actions based on updated state information. The method is implemented using Python, with TensorFlow or PyTorch for model training, and evaluated on a benchmark dataset for dynamic job-shop scheduling. The evaluation involves comparing the proposed method against traditional single-agent RL approaches, using metrics like makespan and resource utilization to assess performance.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Heterogeneous Graph Neural Networks (HGNN) with Multi-Agent Proximal Policy Optimization (MAPPO) improves adaptability and efficiency in dynamic job-shop scheduling compared to traditional single-agent methods. The experiment should include the following components:</p></p>
+<p><ol>
+<li>ENVIRONMENT SETUP:</li>
+<li>Implement a dynamic job-shop scheduling environment where:<ul>
+<li>Jobs arrive dynamically over time</li>
+<li>Each job consists of multiple operations with precedence constraints</li>
+<li>Machines can experience random breakdowns</li>
+<li>The state includes job attributes (processing time, due date, etc.) and machine status</li>
+</ul>
+</li>
+<li>Use the OR-Library job shop scheduling instances as the base, and extend them to support dynamic events</li>
+</ol></p>
+<p><ol>
+<li>HETEROGENEOUS GRAPH REPRESENTATION:</li>
+<li>Represent the job-shop environment as a heterogeneous graph with:<ul>
+<li>Node types: jobs, operations, machines</li>
+<li>Edge types: job-operation (belongs-to), operation-machine (can-be-processed-on), operation-operation (precedence)</li>
+<li>Node features: processing time, due date, ready time, etc.</li>
+<li>Edge features: setup time, processing time, etc.</li>
+</ul>
+</li>
+</ol></p>
+<p><ol>
+<li>HGNN-MAPPO IMPLEMENTATION (EXPERIMENTAL SYSTEM):</li>
+<li>Implement a Heterogeneous Graph Neural Network (HGNN) using PyTorch Geometric that:<ul>
+<li>Takes the heterogeneous graph as input</li>
+<li>Uses different transformation matrices for different node/edge types</li>
+<li>Performs message passing to aggregate information from neighbors</li>
+<li>Outputs node embeddings that capture the state of the environment</li>
+</ul>
+</li>
+<li>Implement Multi-Agent PPO (MAPPO) where:<ul>
+<li>Each machine is an agent</li>
+<li>Agents share a centralized critic but have individual actors</li>
+<li>The critic takes the graph embeddings from HGNN as input</li>
+<li>The actors take local observations (machine-specific embeddings) as input</li>
+<li>Agents are trained to maximize a global reward function</li>
+</ul>
+</li>
+</ol></p>
+<p><ol>
+<li>BASELINE IMPLEMENTATIONS:</li>
+<li>Implement the following baselines for comparison:<ul>
+<li>Single-agent PPO with a standard MLP architecture (no graph representation)</li>
+<li>Dispatching rules: Earliest Due Date (EDD), Shortest Processing Time (SPT)</li>
+<li>Optional: Q-learning with tabular representation</li>
+</ul>
+</li>
+</ol></p>
+<p><ol>
+<li>REWARD FUNCTION:</li>
+<li>Primary objective: Minimize makespan (completion time of the last job)</li>
+<li>Secondary objectives: Minimize tardiness, maximize resource utilization</li>
+<li>The reward function should be a weighted combination of these objectives</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>EVALUATION METRICS:</li>
+<li>Makespan: Time to complete all jobs</li>
+<li>Tardiness: Sum of delays beyond due dates</li>
+<li>Resource utilization: Percentage of time machines are busy</li>
+<li>Adaptability: Performance degradation when unexpected events occur</li>
+</ol></p>
+<p><ol>
+<li>EXPERIMENT CONFIGURATION:</li>
+<li>Define a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'</li>
+<li>For MINI_PILOT:<ul>
+<li>Use 2 small job shop instances (e.g., 6 jobs, 6 machines)</li>
+<li>Run for 5 episodes with 100 steps per episode</li>
+<li>Include only basic dynamic events (1-2 new job arrivals, 1 machine breakdown)</li>
+<li>Train for 10 iterations only</li>
+</ul>
+</li>
+<li>For PILOT:<ul>
+<li>Use 5 medium job shop instances (e.g., 10 jobs, 10 machines)</li>
+<li>Run for 20 episodes with 200 steps per episode</li>
+<li>Include moderate dynamic events (5-10 new job arrivals, 2-3 machine breakdowns)</li>
+<li>Train for 50 iterations</li>
+</ul>
+</li>
+<li>For FULL_EXPERIMENT:<ul>
+<li>Use 10 job shop instances of varying sizes (up to 20 jobs, 20 machines)</li>
+<li>Run for 100 episodes with 500 steps per episode</li>
+<li>Include complex dynamic events (random job arrivals, multiple machine breakdowns)</li>
+<li>Train for 200 iterations</li>
+</ul>
+</li>
+</ol></p>
+<p><ol>
+<li>ABLATION STUDIES:</li>
+<li>Test HGNN with single-agent PPO to isolate the effect of the graph representation</li>
+<li>Test MAPPO with MLP (no graph) to isolate the effect of multi-agent learning</li>
+</ol></p>
+<p><ol>
+<li>STATISTICAL ANALYSIS:</li>
+<li>Run each configuration with 5 different random seeds</li>
+<li>Perform statistical significance tests (t-tests or ANOVA) on the results</li>
+<li>Generate confidence intervals for the performance metrics</li>
+</ol></p>
+<p><ol>
+<li>VISUALIZATION AND REPORTING:<ul>
+<li>Plot learning curves for all methods</li>
+<li>Generate Gantt charts of the final schedules</li>
+<li>Visualize the heterogeneous graph and attention weights</li>
+<li>Report all metrics with standard deviations</li>
+</ul>
+</li>
+</ol></p>
+<p><p>IMPORTANT IMPLEMENTATION NOTES:<br />
+1. Start by running the MINI_PILOT configuration to verify the code works correctly<br />
+2. If successful, proceed to the PILOT configuration<br />
+3. Stop after the PILOT and do not run the FULL_EXPERIMENT (this will be manually triggered after review)<br />
+4. Ensure proper logging of all metrics and intermediate results<br />
+5. Save model checkpoints after each training iteration<br />
+6. Implement early stopping based on validation performance<br />
+7. Use PyTorch for all neural network implementations</p></p>
+<p><p>The code should be modular and well-documented, with separate modules for:<br />
+- Environment (job shop scheduling with dynamic events)<br />
+- Graph construction and HGNN implementation<br />
+- MAPPO implementation<br />
+- Baseline methods<br />
+- Training and evaluation loops<br />
+- Visualization and analysis tools</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3eedfc92689a99f468c562e41e8b7ee6e19e673d">Paper 0: Learning to schedule job-shop problems: representation and policy learning using graph neural network and reinforcement learning</a> (228 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/29ad8b90355c6735029b31d633717e7a067da1fe">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/f4536d6a8ee83759967251647fda2c6b07a23e41">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/3cfe96699f76ed1d4d78c25585043e53c3ce1da7">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/4ee80764dd71669b797c38b731aabf16389ab8b3">Paper 4</a>. The analysis reveals a progression from using graph neural networks and reinforcement learning for job-shop scheduling to more sophisticated models that incorporate multi-agent systems, improved graph representations, and real-time dispatching capabilities. However, a gap remains in exploring the integration of dynamic environmental factors and adaptive learning mechanisms to further enhance scheduling performance. Building upon the existing work, a novel research idea could involve developing a dynamic scheduling framework that adapts to real-time changes in the environment, such as job arrivals and machine breakdowns, using a hybrid approach that combines reinforcement learning with adaptive graph neural networks.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3eedfc92689a99f468c562e41e8b7ee6e19e673d" target="_blank">Learning to schedule job-shop problems: representation and policy learning using graph neural network and reinforcement learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/29ad8b90355c6735029b31d633717e7a067da1fe" target="_blank">ScheduleNet: Learn to solve multi-agent scheduling problems with reinforcement learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/f4536d6a8ee83759967251647fda2c6b07a23e41" target="_blank">Deep Reinforcement Learning Guided Improvement Heuristic for Job Shop Scheduling</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/3cfe96699f76ed1d4d78c25585043e53c3ce1da7" target="_blank">Learning Topological Representations with Bidirectional Graph Attention Network for Solving Job Shop Scheduling Problem</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/4ee80764dd71669b797c38b731aabf16389ab8b3" target="_blank">Graph-Based Imitation Learning for Real-Time Job Shop Dispatcher</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/d99487d2dfa8e6f13512ecc216a9e7e1e2cee237" target="_blank">Combining Reinforcement Learning Algorithms with Graph Neural Networks to Solve Dynamic Job Shop Scheduling Problems</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384" target="_blank">Multi-Agent Reinforcement Learning for Job Shop Scheduling in Dynamic Environments</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/eaf4bcc91fa73f5ca286c2b47edac1c7ba01f03a" target="_blank">Scheduling for the Flexible Job-Shop Problem with a Dynamic Number of Machines Using Deep Reinforcement Learning</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/225ce47525d0a659b938398cd9770e14e5c6a377" target="_blank">Optimizing Job Allocation using Reinforcement Learning with Graph Neural Networks</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/f7f3b472cd6d813b6af90ee567178ec7f43b6ba8" target="_blank">Solving the flexible job-shop scheduling problem through an enhanced deep reinforcement learning approach</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/243cee8d8a7dad3ab0a2527dc5215dfe25cd7057" target="_blank">Dynamic Operating System Scheduling Using Double DQN: A Reinforcement Learning Approach to Task Optimization</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/47691d78e20c6db99b769ea5a1d3933e672cf001" target="_blank">A Reinforcement Learning-Driven Task Scheduling Algorithm for Multi-Tenant Distributed Systems</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/55f436eaf1c9382750dacae1d473ffaa1cd2c22e" target="_blank">Research on an Adaptive Real-Time Scheduling Method of Dynamic Job-Shop Based on Reinforcement Learning</a> (2023)</li>
+</ol>
+</body>
+</html>

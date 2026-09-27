@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>d2fc27a97e0d0de3f07f21d5a56eafef54c358d8</p>
+<hr>
+<section><h2>Title</h2>
+<p>Hierarchical Intention-Guided Reinforcement Learning for Multi-Objective Dynamic Flexible Job Shop Scheduling</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current approaches to multi-objective dynamic flexible job shop scheduling (MODFJSP) often struggle to balance multiple competing objectives while adapting to real-time changes in smart manufacturing environments. This problem is crucial as it directly impacts the efficiency, cost-effectiveness, and adaptability of modern manufacturing systems.</p>
+<h3>Motivation</h3>
+<p>Existing methods typically use single-level reinforcement learning or meta-heuristics, which may not effectively capture the hierarchical nature of scheduling decisions or struggle to generalize across different manufacturing scenarios. Inspired by human decision-making processes in complex environments, we propose incorporating high-level intentions to guide low-level scheduling actions, allowing for more adaptive and generalizable scheduling strategies. This approach is motivated by the observation that humans often set high-level goals or priorities before making detailed decisions, which allows for more flexible and context-aware problem-solving.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce a novel Hierarchical Intention-Guided Scheduler (HIGS) that decomposes the MODFJSP into two levels: (1) A high-level intention network that learns to set dynamic scheduling priorities (e.g., prioritize energy efficiency vs. throughput) based on the current system state and long-term objectives. (2) A low-level action network that generates specific scheduling decisions guided by the current intention. The intention network uses a transformer architecture to process global factory state information and generate a continuous intention vector. This vector is then used to condition the action network, implemented as a graph neural network operating on the job-machine graph. We train both networks end-to-end using a hierarchical reinforcement learning approach with intrinsic motivation, where the intention network is rewarded for setting intentions that lead to good overall performance, while the action network is rewarded for successfully following the given intentions. To handle the dynamic nature of the problem, we incorporate a meta-learning outer loop that allows the networks to quickly adapt to new scenarios or objective weightings.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess MODFJSP benchmark datasets, including standard datasets (e.g., Taillard's benchmarks) and more realistic simulations of smart manufacturing environments with dynamic job arrivals and machine failures. Create a data loader that can efficiently feed this data into our models.</p><p><strong>Step 2: Environment Setup</strong></p><p>Implement a flexible job shop scheduling environment using OpenAI Gym interface. This environment should support multiple objectives (e.g., makespan, energy consumption, tardiness) and allow for dynamic changes (e.g., new job arrivals, machine breakdowns).</p><p><strong>Step 3: Model Architecture</strong></p><p>Implement the HIGS architecture using PyTorch. The high-level intention network should be a transformer that takes in the global factory state and outputs an intention vector. The low-level action network should be a graph neural network that takes in the job-machine graph and the intention vector, and outputs scheduling decisions.</p><p><strong>Step 4: Training Algorithm</strong></p><p>Implement the hierarchical reinforcement learning algorithm with intrinsic motivation. Use PPO (Proximal Policy Optimization) for both networks. The reward function for the intention network should be based on the overall performance across multiple objectives, while the reward for the action network should be based on how well it follows the given intention.</p><p><strong>Step 5: Meta-Learning Loop</strong></p><p>Implement a meta-learning outer loop using MAML (Model-Agnostic Meta-Learning) to allow quick adaptation to new scenarios or objective weightings.</p><p><strong>Step 6: Baseline Implementation</strong></p><p>Implement baseline methods for comparison, including traditional heuristics (e.g., dispatching rules), single-level RL approaches, and recent multi-agent RL methods.</p><p><strong>Step 7: Evaluation</strong></p><p>Evaluate HIGS and baselines on the prepared datasets. Metrics should include makespan, energy consumption, tardiness, and adaptability to changes. Use a sliding window approach to assess performance over time in dynamic scenarios.</p><p><strong>Step 8: Ablation Studies</strong></p><p>Conduct ablation studies to assess the impact of different components of HIGS, such as the hierarchical structure, the intention mechanism, and the meta-learning loop.</p><p><strong>Step 9: Analysis</strong></p><p>Analyze the learned intentions and their impact on scheduling decisions. Visualize how intentions change over time and in response to different scenarios.</p><p><strong>Step 10: Report Generation</strong></p><p>Generate a comprehensive report detailing the experimental setup, results, and analysis. Include visualizations of the scheduling process and performance comparisons.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Schedule 5 jobs on 3 machines with the objective of minimizing makespan and energy consumption. Job processing times and energy consumption rates are provided.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Job 1 -&gt; Machine 2, Job 2 -&gt; Machine 1, Job 3 -&gt; Machine 3, Job 4 -&gt; Machine 2, Job 5 -&gt; Machine 1. Makespan: 25 units, Total Energy Consumption: 100 units.</p><p><strong>Proposed Prompt Input</strong></p><p>Schedule 5 jobs on 3 machines with the objective of minimizing makespan and energy consumption. Job processing times and energy consumption rates are provided. Current factory state: high workload, low energy reserves.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>High-level Intention: Prioritize energy efficiency (70%) over makespan (30%). Low-level Actions: Job 1 -&gt; Machine 3, Job 2 -&gt; Machine 1, Job 3 -&gt; Machine 2, Job 4 -&gt; Machine 3, Job 5 -&gt; Machine 1. Makespan: 27 units, Total Energy Consumption: 85 units.</p><p><strong>Explanation</strong></p><p>The HIGS method first generates a high-level intention based on the current factory state, prioritizing energy efficiency due to low energy reserves. This intention then guides the low-level scheduling decisions, resulting in a schedule that sacrifices some makespan to achieve better energy efficiency. The baseline method, lacking this hierarchical structure, produces a schedule that may be suboptimal given the current factory state.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed HIGS method doesn't meet the success criteria, we can pursue several alternative directions. First, we can conduct a detailed analysis of the learned intentions to understand if they are capturing meaningful high-level strategies. This could involve visualizing the intention space and correlating intentions with performance across different scenarios. If the intentions are not meaningful, we might need to redesign the intention network or its training process. Second, we can investigate the interaction between the intention and action networks, possibly introducing additional mechanisms like attention to better guide the low-level decisions. Third, if the adaptability to dynamic changes is insufficient, we can focus on improving the meta-learning component, perhaps by exploring other meta-learning algorithms or by designing a more targeted adaptation mechanism for manufacturing scenarios. Lastly, if the overall performance is still lacking, we could turn this into an analysis paper, offering insights into the challenges of hierarchical decision-making in complex manufacturing environments and proposing future research directions based on our findings.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/0e568d742ca0670556d396d0db0aa5c147b9ac6c" target="_blank">Multi-Objective Scheduling for Green Flexible Assembly Job-Shop System via Multi-Agent Deep Reinforcement Learning With Game Theory</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384" target="_blank">Multi-Agent Reinforcement Learning for Job Shop Scheduling in Dynamic Environments</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6dbedbc41303f941c83e6f301d00e83fb13c630e" target="_blank">Efficient Multi-Objective Optimization on Dynamic Flexible Job Shop Scheduling Using Deep Reinforcement Learning Approach</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/92a3c5d4773e7bf8cb0ef75ca07a1693de4f0167" target="_blank">Real-Time Scheduling for Dynamic Partial-No-Wait Multiobjective Flexible Job Shop by Deep Reinforcement Learning</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/bcad4261c2498c8db0ea0556ccd495f980c48cdc" target="_blank">An Enhanced Multi-Objective Evolutionary Algorithm with Reinforcement Learning for Energy-Efficient Scheduling in the Flexible Job Shop</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/759efac6127304d3de8f992c230dc17ebec94c32" target="_blank">Hierarchical Reinforcement Learning for Multi-Objective Real-Time Flexible Scheduling in a Smart Shop Floor</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/926525b978ff0dfb54be8e5602b1f61991e09c96" target="_blank">ReflecSched: Solving Dynamic Flexible Job-Shop Scheduling via LLM-Powered Hierarchical Reflection</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/eaf4bcc91fa73f5ca286c2b47edac1c7ba01f03a" target="_blank">Scheduling for the Flexible Job-Shop Problem with a Dynamic Number of Machines Using Deep Reinforcement Learning</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2e1de6aeba2f10fdf60675ecf59f3bf8bb63103d" target="_blank">Multi-Agent Reinforcement Learning for Real-Time Dynamic Production Scheduling in a Robot Assembly Cell</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f3b2baed5155312a35aa6bd44cd8266650fb4ddb" target="_blank">A Reinforcement Learning Driven Iterated Greedy Algorithm for Energy-Efficiency Flexible Job-Shop Scheduling Problem</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

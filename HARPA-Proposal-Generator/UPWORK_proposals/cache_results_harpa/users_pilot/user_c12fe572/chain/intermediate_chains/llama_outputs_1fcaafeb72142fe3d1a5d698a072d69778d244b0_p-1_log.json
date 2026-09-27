@@ -1,0 +1,1405 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.UR$^2$: Unify RAG and Reasoning through Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of integrating retrieval and reasoning through reinforcement learning, similar to the source paper's approach of using RL to optimize LLM reasoning with search engines. However, it extends the idea by unifying RAG and reasoning more broadly, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.M2IO-R1: An Efficient RL-Enhanced Reasoning Framework for Multimodal Retrieval Augmented Multimodal Generation": {
+                    "explanation": "While this paper uses reinforcement learning for multimodal reasoning, it focuses on multimodal inputs and outputs, which diverges from the source paper's focus on search engine interaction for text-based reasoning. The connection is more thematic than direct.",
+                    "relevance": 0
+                },
+                "3.Learning to Reason for Factuality": {
+                    "explanation": "This paper addresses factual reasoning in LLMs using reinforcement learning, which is related to the source paper's use of RL for reasoning. However, it focuses on factuality and hallucination reduction, which are different aspects than the search engine interaction in the source paper.",
+                    "relevance": 1
+                },
+                "4.Exploring Superior Function Calls via Reinforcement Learning": {
+                    "explanation": "This paper focuses on improving function calling capabilities using RL, which is a different application of RL compared to the source paper's focus on search engine interactions for reasoning.",
+                    "relevance": 0
+                },
+                "5.R-Zero: Self-Evolving Reasoning LLM from Zero Data": {
+                    "explanation": "R-Zero introduces a self-evolving framework for LLMs using RL, which shares the reinforcement learning aspect with the source paper. However, it focuses on self-evolution and task generation rather than search engine interaction.",
+                    "relevance": 1
+                },
+                "6.PAIRS: Parametric-Verified Adaptive Information Retrieval and Selection for Efficient RAG": {
+                    "explanation": "PAIRS focuses on improving RAG efficiency by integrating parametric and retrieved knowledge, which is related to the source paper's focus on optimizing retrieval processes. However, it does not directly build on the source paper's RL-based approach.",
+                    "relevance": 1
+                },
+                "7.Thinking With Videos: Multimodal Tool-Augmented Reinforcement Learning for Long Video Reasoning": {
+                    "explanation": "This paper uses RL for video reasoning, which is a different domain and application from the text-based search engine interaction in the source paper.",
+                    "relevance": 0
+                },
+                "8.Multi-module GRPO: Composing Policy Gradients and Prompt Optimization for Language Model Programs": {
+                    "explanation": "This paper focuses on optimizing language model programs using GRPO, which is a different approach than the RL-based search engine interaction optimization in the source paper.",
+                    "relevance": 0
+                },
+                "9.Agent Lightning: Train ANY AI Agents with Reinforcement Learning": {
+                    "explanation": "Agent Lightning presents a framework for RL-based training of AI agents, which shares the RL aspect with the source paper but focuses on agent training rather than search engine interaction.",
+                    "relevance": 0
+                },
+                "10.Tool-integrated Reinforcement Learning for Repo Deep Search": {
+                    "explanation": "This paper uses RL for issue localization in software development, which is a different application domain than the search engine interaction optimization in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.UR$^2$: Unify RAG and Reasoning through Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of integrating retrieval and reasoning through reinforcement learning, similar to the source paper's approach of using RL to optimize LLM reasoning with search engines. However, it extends the idea by unifying RAG and reasoning more broadly, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.Learning to Reason for Factuality": {
+                    "explanation": "This paper addresses factual reasoning in LLMs using reinforcement learning, which is related to the source paper's use of RL for reasoning. However, it focuses on factuality and hallucination reduction, which are different aspects than the search engine interaction in the source paper.",
+                    "relevance": 1
+                },
+                "3.R-Zero: Self-Evolving Reasoning LLM from Zero Data": {
+                    "explanation": "R-Zero introduces a self-evolving framework for LLMs using RL, which shares the reinforcement learning aspect with the source paper. However, it focuses on self-evolution and task generation rather than search engine interaction.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Patho-AgenticRAG: Towards Multimodal Agentic Retrieval-Augmented Generation for Pathology VLMs via Reinforcement Learning": {
+                    "explanation": "This paper extends the concept of retrieval-augmented generation (RAG) to a multimodal context, specifically for pathology VLMs, and employs reinforcement learning to improve reasoning and retrieval. It is partially dependent on the source paper's findings on reinforcement learning for reasoning and retrieval-augmented generation.",
+                    "relevance": 2
+                },
+                "2.Don't Overthink It: A Survey of Efficient R1-style Large Reasoning Models": {
+                    "explanation": "This paper is a survey of R1-style reasoning models, including those inspired by the source paper. However, as a survey, it primarily reviews existing literature without presenting novel hypotheses or findings.",
+                    "relevance": 0
+                },
+                "3.A Survey on AgentOps: Categorization, Challenges, and Future Directions": {
+                    "explanation": "This paper is a survey on agent operations and does not directly build upon or depend on the source paper's findings. It categorizes and reviews existing literature on agent systems.",
+                    "relevance": 0
+                },
+                "4.RepoForge: Training a SOTA Fast-thinking SWE Agent with an End-to-End Data Curation Pipeline Synergizing SFT and RL at Scale": {
+                    "explanation": "RepoForge focuses on training software engineering agents using reinforcement learning, similar to the source paper's use of RL for LLMs. However, it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "5.A Survey of LLM-based Deep Search Agents: Paradigm, Optimization, Evaluation, and Challenges": {
+                    "explanation": "This paper is a survey of LLM-based search agents and does not present new hypotheses or findings that build upon the source paper.",
+                    "relevance": 0
+                },
+                "6.Prompting Large Language Models with Partial Knowledge for Answering Questions with Unseen Entities": {
+                    "explanation": "This paper explores retrieval-augmented generation (RAG) and the use of partial knowledge in LLMs, which relates to the source paper's focus on retrieval-augmented reasoning. It builds on the source paper's concepts of retrieval and reasoning.",
+                    "relevance": 2
+                },
+                "7.MAO-ARAG: Multi-Agent Orchestration for Adaptive Retrieval-Augmented Generation": {
+                    "explanation": "MAO-ARAG proposes an adaptive RAG framework using multi-agent orchestration and reinforcement learning, which is inspired by the source paper's use of RL in retrieval-augmented reasoning.",
+                    "relevance": 1
+                },
+                "8.MetaAgent: Toward Self-Evolving Agent via Tool Meta-Learning": {
+                    "explanation": "MetaAgent focuses on self-evolving agents through meta-learning, which is a different approach from the source paper's reinforcement learning for LLMs. It does not directly build on the source paper's findings.",
+                    "relevance": 0
+                },
+                "9.PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning": {
+                    "explanation": "PilotRL introduces a reinforcement learning framework for LLM agents, similar to the source paper's use of RL for reasoning and retrieval. It builds on the source paper's concepts of RL optimization.",
+                    "relevance": 2
+                },
+                "10.Generalized Reinforcement Learning for Retriever-Specific Query Rewriter with Unstructured Real-World Documents": {
+                    "explanation": "This paper focuses on reinforcement learning for query rewriting in RAG systems, which is related to the source paper's use of RL for retrieval-augmented reasoning.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Patho-AgenticRAG: Towards Multimodal Agentic Retrieval-Augmented Generation for Pathology VLMs via Reinforcement Learning": {
+                    "explanation": "This paper extends the concept of retrieval-augmented generation (RAG) to a multimodal context, specifically for pathology VLMs, and employs reinforcement learning to improve reasoning and retrieval. It is partially dependent on the source paper's findings on reinforcement learning for reasoning and retrieval-augmented generation.",
+                    "relevance": 2
+                },
+                "2.Prompting Large Language Models with Partial Knowledge for Answering Questions with Unseen Entities": {
+                    "explanation": "This paper explores retrieval-augmented generation (RAG) and the use of partial knowledge in LLMs, which relates to the source paper's focus on retrieval-augmented reasoning. It builds on the source paper's concepts of retrieval and reasoning.",
+                    "relevance": 2
+                },
+                "3.PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning": {
+                    "explanation": "PilotRL introduces a reinforcement learning framework for LLM agents, similar to the source paper's use of RL for reasoning and retrieval. It builds on the source paper's concepts of RL optimization.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for reasoning in LLMs, similar to the source paper. However, it focuses on graph structures for knowledge representation, which is a different approach from the search engine interaction in the source paper.",
+                    "relevance": 1
+                },
+                "2.From Sufficiency to Reflection: Reinforcement-Guided Thinking Quality in Retrieval-Augmented Reasoning for LLMs": {
+                    "explanation": "This paper shares a focus on improving reasoning in LLMs using reinforcement learning, similar to the source paper. It introduces a multi-dimensional reward system, which is an extension of the reward-based learning discussed in the source paper.",
+                    "relevance": 1
+                },
+                "3.A Comprehensive Taxonomy of Negation for NLP and Neural Retrievers": {
+                    "explanation": "This paper focuses on negation in NLP and does not directly relate to the reinforcement learning or search engine interaction aspects of the source paper.",
+                    "relevance": 0
+                },
+                "4.UserBench: An Interactive Gym Environment for User-Centric Agents": {
+                    "explanation": "This paper introduces a benchmark for user-centric interactions, which is not directly related to the reinforcement learning or search engine interaction aspects of the source paper.",
+                    "relevance": 0
+                },
+                "5.Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning": {
+                    "explanation": "This paper discusses an agentic framework using reinforcement learning, similar to the source paper's focus on RL for reasoning in LLMs. It is partially dependent on the source paper's findings on RL optimization methods.",
+                    "relevance": 2
+                },
+                "6.Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper introduces a novel RL algorithm for multi-turn LLM-based agents, which aligns with the source paper's focus on RL for reasoning. However, it does not specifically build on the search engine interaction aspect.",
+                    "relevance": 1
+                },
+                "7.RAG in the Wild: On the (In)effectiveness of LLMs with Mixture-of-Knowledge Retrieval Augmentation": {
+                    "explanation": "This paper evaluates RAG systems in diverse retrieval scenarios, which is related to the source paper's focus on retrieval-augmented reasoning, but it does not specifically build on the reinforcement learning aspect.",
+                    "relevance": 1
+                },
+                "8.Shop-R1: Rewarding LLMs to Simulate Human Behavior in Online Shopping via Reinforcement Learning": {
+                    "explanation": "This paper applies reinforcement learning to simulate human behavior in online shopping, which is a different application area from the source paper's focus on reasoning and search engine interaction.",
+                    "relevance": 0
+                },
+                "9.ResearcherBench: Evaluating Deep AI Research Systems on the Frontiers of Scientific Inquiry": {
+                    "explanation": "This paper introduces a benchmark for evaluating AI research systems, which is not directly related to the reinforcement learning or search engine interaction aspects of the source paper.",
+                    "relevance": 0
+                },
+                "10.RAVine: Reality-Aligned Evaluation for Agentic Search": {
+                    "explanation": "This paper focuses on evaluating agentic search systems, which is related to the source paper's focus on search engine interaction, but it does not specifically build on the reinforcement learning aspect.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Graph-R1: Towards Agentic GraphRAG Framework via End-to-end Reinforcement Learning": {
+                    "explanation": "This paper discusses an agentic framework using reinforcement learning, similar to the source paper's focus on RL for reasoning in LLMs. It is partially dependent on the source paper's findings on RL optimization methods.",
+                    "relevance": 2
+                },
+                "2.GraphRAG-R1: Graph Retrieval-Augmented Generation with Process-Constrained Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for reasoning in LLMs, similar to the source paper. However, it focuses on graph structures for knowledge representation, which is a different approach from the search engine interaction in the source paper.",
+                    "relevance": 1
+                },
+                "3.From Sufficiency to Reflection: Reinforcement-Guided Thinking Quality in Retrieval-Augmented Reasoning for LLMs": {
+                    "explanation": "This paper shares a focus on improving reasoning in LLMs using reinforcement learning, similar to the source paper. It introduces a multi-dimensional reward system, which is an extension of the reward-based learning discussed in the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented generation (RAG) and uses reinforcement learning to improve evidence extraction, similar to how Search-R1 uses RL to optimize search interactions. The focus on improving retrieval quality and reasoning aligns with the source paper's goals.",
+                    "relevance": 2
+                },
+                "2. Interaction as Intelligence: Deep Research With Human-AI Partnership": {
+                    "explanation": "This paper focuses on human-AI interaction and cognitive oversight, which is a different domain from the reinforcement learning and search optimization focus of the source paper. It does not directly build on or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Does More Inference-Time Compute Really Help Robustness?": {
+                    "explanation": "This paper examines inference-time computation and robustness, which is not directly related to the reinforcement learning and search optimization focus of the source paper.",
+                    "relevance": 0
+                },
+                "4. WebShaper: Agentically Data Synthesizing via Information-Seeking Formalization": {
+                    "explanation": "WebShaper focuses on data synthesis for information-seeking tasks, which is related to the source paper's theme of optimizing search interactions. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "5. AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents": {
+                    "explanation": "AgentFly explores reinforcement learning for language model agents, similar to the reinforcement learning approach in Search-R1. However, it focuses more on the framework and scalability rather than search optimization.",
+                    "relevance": 1
+                },
+                "6. A Simple 'Try Again' Can Elicit Multi-Turn LLM Reasoning": {
+                    "explanation": "This paper investigates multi-turn reasoning using reinforcement learning, which is related to the source paper's focus on multi-turn search interactions. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. VisionThink: Smart and Efficient Vision Language Model via Reinforcement Learning": {
+                    "explanation": "VisionThink focuses on vision-language models and token compression, which is not directly related to the search optimization and reasoning focus of the source paper.",
+                    "relevance": 0
+                },
+                "8. Xiangqi-R1: Enhancing Spatial Strategic Reasoning in LLMs for Chinese Chess via Reinforcement Learning": {
+                    "explanation": "This paper focuses on strategic reasoning in board games using reinforcement learning, which is a different application area from the search optimization in the source paper.",
+                    "relevance": 0
+                },
+                "9. Am I on the Right Track? What Can Predicted Query Performance Tell Us about the Search Behaviour of Agentic RAG": {
+                    "explanation": "This paper directly builds on the Search-R1 framework by examining query performance prediction within Agentic RAG models, making it highly relevant to the source paper.",
+                    "relevance": 2
+                },
+                "10. VerifyBench: A Systematic Benchmark for Evaluating Reasoning Verifiers Across Domains": {
+                    "explanation": "VerifyBench focuses on evaluating reasoning verifiers, which is not directly related to the search optimization and reinforcement learning focus of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented generation (RAG) and uses reinforcement learning to improve evidence extraction, similar to how Search-R1 uses RL to optimize search interactions. The focus on improving retrieval quality and reasoning aligns with the source paper's goals.",
+                    "relevance": 2
+                },
+                "2. Am I on the Right Track? What Can Predicted Query Performance Tell Us about the Search Behaviour of Agentic RAG": {
+                    "explanation": "This paper directly builds on the Search-R1 framework by examining query performance prediction within Agentic RAG models, making it highly relevant to the source paper.",
+                    "relevance": 2
+                },
+                "3. WebShaper: Agentically Data Synthesizing via Information-Seeking Formalization": {
+                    "explanation": "WebShaper focuses on data synthesis for information-seeking tasks, which is related to the source paper's theme of optimizing search interactions. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Towards Agentic RAG with Deep Reasoning: A Survey of RAG-Reasoning Systems in LLMs": {
+                    "explanation": "This paper is a survey and does not present novel hypotheses or findings. It summarizes existing literature on RAG and reasoning systems, which includes the concepts from the source paper but does not directly build upon its findings.",
+                    "relevance": 0
+                },
+                "2. Leanabell-Prover-V2: Verifier-integrated Reasoning for Formal Theorem Proving via Reinforcement Learning": {
+                    "explanation": "While this paper also uses reinforcement learning for reasoning, its focus is on formal theorem proving and verifier feedback, which is a different application area than the search optimization in the source paper.",
+                    "relevance": 0
+                },
+                "3. FrugalRAG: Learning to retrieve and reason for multi-hop QA": {
+                    "explanation": "This paper explores retrieval-augmented generation (RAG) and reasoning for question answering, similar to the source paper's focus on optimizing LLM reasoning with search. It partially depends on the source paper's findings regarding RL-based optimization for retrieval and reasoning.",
+                    "relevance": 2
+                },
+                "4. Deep Research Comparator: A Platform For Fine-grained Human Annotations of Deep Research Agents": {
+                    "explanation": "This paper introduces a platform for evaluating deep research agents, which is not directly related to the reinforcement learning and search optimization focus of the source paper.",
+                    "relevance": 0
+                },
+                "5. SciMaster: Towards General-Purpose Scientific AI Agents, Part I. X-Master as Foundation: Can We Lead on Humanity's Last Exam?": {
+                    "explanation": "This paper focuses on developing general-purpose scientific AI agents with tool-augmented reasoning, which is a broader scope than the specific search optimization and RL techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "6. Agentic-R1: Distilled Dual-Strategy Reasoning": {
+                    "explanation": "This paper presents a fine-tuning framework for reasoning strategies in LLMs, which aligns with the source paper's focus on optimizing LLM reasoning. It builds on the source paper's ideas of using RL for improving reasoning capabilities.",
+                    "relevance": 1
+                },
+                "7. R1-RE: Cross-Domain Relation Extraction with RLVR": {
+                    "explanation": "This paper uses reinforcement learning for relation extraction, which is a different task than the search optimization and reasoning in the source paper, though it shares the RL approach.",
+                    "relevance": 0
+                },
+                "8. WebSailor: Navigating Super-human Reasoning for Web Agent": {
+                    "explanation": "WebSailor focuses on enhancing reasoning capabilities for web agents, similar to the source paper's goal of optimizing LLMs for search and reasoning tasks. It is inspired by the source paper's approach to improving reasoning through RL.",
+                    "relevance": 1
+                },
+                "9. RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents": {
+                    "explanation": "This paper applies reinforcement learning to improve emotional intelligence in dialogue systems, which is unrelated to the search and reasoning optimization focus of the source paper.",
+                    "relevance": 0
+                },
+                "10. Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search": {
+                    "explanation": "This paper introduces a hierarchical reasoning framework for complex search tasks, which aligns with the source paper's focus on optimizing LLM reasoning and search interactions. It builds on the source paper's concepts of separating reasoning and execution.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. FrugalRAG: Learning to retrieve and reason for multi-hop QA": {
+                    "explanation": "This paper explores retrieval-augmented generation (RAG) and reasoning for question answering, similar to the source paper's focus on optimizing LLM reasoning with search. It partially depends on the source paper's findings regarding RL-based optimization for retrieval and reasoning.",
+                    "relevance": 2
+                },
+                "2. Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search": {
+                    "explanation": "This paper introduces a hierarchical reasoning framework for complex search tasks, which aligns with the source paper's focus on optimizing LLM reasoning and search interactions. It builds on the source paper's concepts of separating reasoning and execution.",
+                    "relevance": 2
+                },
+                "3. Agentic-R1: Distilled Dual-Strategy Reasoning": {
+                    "explanation": "This paper presents a fine-tuning framework for reasoning strategies in LLMs, which aligns with the source paper's focus on optimizing LLM reasoning. It builds on the source paper's ideas of using RL for improving reasoning capabilities.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent": {
+                    "explanation": "This paper focuses on handling long-context LLMs with memory agents and does not directly relate to the source paper's focus on search and reasoning with reinforcement learning.",
+                    "relevance": 0
+                },
+                "2.Agent-as-Tool: A Study on the Hierarchical Decision Making with Reinforcement Learning": {
+                    "explanation": "This paper discusses hierarchical decision-making in LLMs with reinforcement learning, which is related to the source paper's focus on reinforcement learning for reasoning but does not directly build on the search engine interaction aspect.",
+                    "relevance": 1
+                },
+                "3.Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks": {
+                    "explanation": "This paper challenges the effectiveness of RAG methods on reasoning benchmarks and introduces a new datastore, which is relevant to the source paper's focus on retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "4.RAG-R1 : Incentivize the Search and Reasoning Capabilities of LLMs through Multi-query Parallelism": {
+                    "explanation": "This paper builds on the source paper by proposing a new framework that enhances LLMs' search and reasoning capabilities through multi-query parallelism, directly relating to the source paper's focus on search and reasoning with RL.",
+                    "relevance": 2
+                },
+                "5.L0: Reinforcement Learning to Become General Agents": {
+                    "explanation": "This paper focuses on training LLMs as general agents using reinforcement learning, which is related to the source paper's use of RL but does not specifically address search engine interaction.",
+                    "relevance": 1
+                },
+                "6.Predicting thinking time in Reasoning models": {
+                    "explanation": "This paper addresses predicting reasoning time in models, which is not directly related to the source paper's focus on search and reasoning with reinforcement learning.",
+                    "relevance": 0
+                },
+                "7.Unleashing Embodied Task Planning Ability in LLMs via Reinforcement Learning": {
+                    "explanation": "This paper focuses on embodied task planning with reinforcement learning, which is not directly related to the source paper's focus on search engine interaction.",
+                    "relevance": 0
+                },
+                "8.SEEA-R1: Tree-Structured Reinforcement Fine-Tuning for Self-Evolving Embodied Agents": {
+                    "explanation": "This paper focuses on self-evolving embodied agents with reinforcement learning, which is not directly related to the source paper's focus on search engine interaction.",
+                    "relevance": 0
+                },
+                "9.MMSearch-R1: Incentivizing LMMs to Search": {
+                    "explanation": "This paper introduces a framework for LMMs to perform multi-turn search, which is directly related to the source paper's focus on search and reasoning with RL.",
+                    "relevance": 2
+                },
+                "10.ReCode: Updating Code API Knowledge with Reinforcement Learning": {
+                    "explanation": "This paper focuses on updating code API knowledge with reinforcement learning, which is not directly related to the source paper's focus on search engine interaction.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Frustratingly Simple Retrieval Improves Challenging, Reasoning-Intensive Benchmarks": {
+                    "explanation": "This paper challenges the effectiveness of RAG methods on reasoning benchmarks and introduces a new datastore, which is relevant to the source paper's focus on retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "2.RAG-R1 : Incentivize the Search and Reasoning Capabilities of LLMs through Multi-query Parallelism": {
+                    "explanation": "This paper builds on the source paper by proposing a new framework that enhances LLMs' search and reasoning capabilities through multi-query parallelism, directly relating to the source paper's focus on search and reasoning with RL.",
+                    "relevance": 2
+                },
+                "3.MMSearch-R1: Incentivizing LMMs to Search": {
+                    "explanation": "This paper introduces a framework for LMMs to perform multi-turn search, which is directly related to the source paper's focus on search and reasoning with RL.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. From Web Search towards Agentic Deep Research: Incentivizing Search with Reasoning Agents": {
+                    "explanation": "This paper discusses the evolution of search systems towards agentic deep research, which involves autonomous reasoning and iterative retrieval, similar to the Search-R1 framework's focus on using LLMs for reasoning and search. The paper is inspired by the source paper's exploration of LLMs interacting with search engines.",
+                    "relevance": 1
+                },
+                "2. CaughtCheating: Is Your MLLM a Good Cheating Detective? Exploring the Boundary of Visual Perception and Reasoning": {
+                    "explanation": "This paper focuses on visual perception and reasoning in multi-modal LLMs, which is not directly related to the source paper's focus on search and reasoning with LLMs. It explores a different domain of application.",
+                    "relevance": 0
+                },
+                "3. Deep Research Agents: A Systematic Examination And Roadmap": {
+                    "explanation": "This paper systematically examines deep research agents, which are closely related to the Search-R1 concept of using LLMs for complex reasoning and search tasks. It likely builds on the foundational ideas of the source paper regarding LLMs and search engines.",
+                    "relevance": 2
+                },
+                "4. Graphs Meet AI Agents: Taxonomy, Progress, and Future Opportunities": {
+                    "explanation": "This paper is a review of how graph techniques can empower AI agents, which is not directly related to the source paper's focus on LLMs and search engine interaction.",
+                    "relevance": 0
+                },
+                "5. KAG-Thinker: Interactive Thinking and Deep Reasoning in LLMs via Knowledge-Augmented Generation": {
+                    "explanation": "KAG-Thinker focuses on interactive thinking and reasoning in LLMs, which aligns with the source paper's exploration of reasoning in LLMs. However, it does not specifically depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. JarvisArt: Liberating Human Artistic Creativity via an Intelligent Photo Retouching Agent": {
+                    "explanation": "This paper focuses on AI-driven photo retouching, which is unrelated to the source paper's focus on LLMs and search engine interaction.",
+                    "relevance": 0
+                },
+                "7. From General to Targeted Rewards: Surpassing GPT-4 in Open-Ended Long-Context Generation": {
+                    "explanation": "This paper discusses reinforcement learning in the context of long-context generation, which is related to the source paper's use of RL for search and reasoning. However, it does not directly build on the source paper's findings.",
+                    "relevance": 1
+                },
+                "8. MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents": {
+                    "explanation": "MEM1 focuses on memory and reasoning in long-horizon tasks, which is related to the source paper's exploration of reasoning in LLMs. However, it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "9. A Vision for Geo-Temporal Deep Research Systems: Towards Comprehensive, Transparent, and Reproducible Geo-Temporal Information Synthesis": {
+                    "explanation": "This paper discusses geo-temporal reasoning in deep research systems, which is a different focus from the source paper's exploration of LLMs and search engine interaction.",
+                    "relevance": 0
+                },
+                "10. Ego-R1: Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning": {
+                    "explanation": "Ego-R1 focuses on reasoning over ultra-long egocentric videos, which is unrelated to the source paper's focus on LLMs and search engine interaction.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Deep Research Agents: A Systematic Examination And Roadmap": {
+                    "explanation": "This paper systematically examines deep research agents, which are closely related to the Search-R1 concept of using LLMs for complex reasoning and search tasks. It likely builds on the foundational ideas of the source paper regarding LLMs and search engines.",
+                    "relevance": 2
+                },
+                "2. From Web Search towards Agentic Deep Research: Incentivizing Search with Reasoning Agents": {
+                    "explanation": "This paper discusses the evolution of search systems towards agentic deep research, which involves autonomous reasoning and iterative retrieval, similar to the Search-R1 framework's focus on using LLMs for reasoning and search. The paper is inspired by the source paper's exploration of LLMs interacting with search engines.",
+                    "relevance": 1
+                },
+                "3. KAG-Thinker: Interactive Thinking and Deep Reasoning in LLMs via Knowledge-Augmented Generation": {
+                    "explanation": "KAG-Thinker focuses on interactive thinking and reasoning in LLMs, which aligns with the source paper's exploration of reasoning in LLMs. However, it does not specifically depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.ReVeal: Self-Evolving Code Agents via Iterative Generation-Verification": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for reasoning frameworks, similar to the source paper. However, it focuses on code generation and verification, which is a different application domain from the search and retrieval optimization in the source paper.",
+                    "relevance": 0
+                },
+                "2.Conversational Search: From Fundamentals to Frontiers in the LLM Era": {
+                    "explanation": "This paper is a tutorial and review of conversational search systems, focusing on the role of LLMs. It does not propose new hypotheses or findings directly related to the reinforcement learning and search optimization discussed in the source paper.",
+                    "relevance": 0
+                },
+                "3.AutoMind: Adaptive Knowledgeable Agent for Automated Data Science": {
+                    "explanation": "While this paper discusses LLMs and their application in data science, it does not directly build upon or depend on the reinforcement learning and search optimization techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Reasoning RAG via System 1 or System 2: A Survey on Reasoning Agentic Retrieval-Augmented Generation for Industry Challenges": {
+                    "explanation": "This paper is a survey on Reasoning Agentic RAG methods, which are related to retrieval-augmented generation. However, as a review, it does not present new hypotheses or findings that build upon the source paper.",
+                    "relevance": 0
+                },
+                "5.CIIR@LiveRAG 2025: Optimizing Multi-Agent Retrieval Augmented Generation through Self-Training": {
+                    "explanation": "This paper discusses a multi-agent RAG framework with self-training, which involves optimization techniques similar to those in the source paper. However, it focuses on multi-agent collaboration rather than the specific reinforcement learning and search optimization discussed in the source paper.",
+                    "relevance": 1
+                },
+                "6.VerIF: Verification Engineering for Reinforcement Learning in Instruction Following": {
+                    "explanation": "This paper discusses reinforcement learning with verifiable rewards, which is conceptually related to the reinforcement learning framework in the source paper. However, it focuses on instruction following rather than search optimization.",
+                    "relevance": 1
+                },
+                "7.TaskCraft: Automated Generation of Agentic Tasks": {
+                    "explanation": "This paper introduces a workflow for generating agentic tasks, which involves multi-step problem solving with autonomy and tool use. It does not directly relate to the reinforcement learning and search optimization in the source paper.",
+                    "relevance": 0
+                },
+                "8.Reinforcement Learning Fine-Tuning of Language Model for Instruction Following and Math Reasoning": {
+                    "explanation": "This paper explores reinforcement learning fine-tuning for instruction following and math reasoning, which is related to the reinforcement learning aspect of the source paper. However, it focuses on different tasks and does not depend on the search optimization techniques discussed in the source paper.",
+                    "relevance": 1
+                },
+                "9.A Survey on Large Language Models for Mathematical Reasoning": {
+                    "explanation": "This paper is a survey on mathematical reasoning in LLMs, reviewing various methods including reinforcement learning. As a survey, it does not propose new hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "10.Router-R1: Teaching LLMs Multi-Round Routing and Aggregation via Reinforcement Learning": {
+                    "explanation": "This paper presents a reinforcement learning framework for multi-round routing and aggregation, which is conceptually related to the reinforcement learning framework in the source paper. However, it focuses on routing and aggregation rather than search optimization.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.CIIR@LiveRAG 2025: Optimizing Multi-Agent Retrieval Augmented Generation through Self-Training": {
+                    "explanation": "This paper discusses a multi-agent RAG framework with self-training, which involves optimization techniques similar to those in the source paper. However, it focuses on multi-agent collaboration rather than the specific reinforcement learning and search optimization discussed in the source paper.",
+                    "relevance": 1
+                },
+                "2.VerIF: Verification Engineering for Reinforcement Learning in Instruction Following": {
+                    "explanation": "This paper discusses reinforcement learning with verifiable rewards, which is conceptually related to the reinforcement learning framework in the source paper. However, it focuses on instruction following rather than search optimization.",
+                    "relevance": 1
+                },
+                "3.Reinforcement Learning Fine-Tuning of Language Model for Instruction Following and Math Reasoning": {
+                    "explanation": "This paper explores reinforcement learning fine-tuning for instruction following and math reasoning, which is related to the reinforcement learning aspect of the source paper. However, it focuses on different tasks and does not depend on the search optimization techniques discussed in the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. RAISE: Enhancing Scientific Reasoning in LLMs via Step-by-Step Retrieval": {
+                    "explanation": "RAISE focuses on retrieval-augmented reasoning, similar to Search-R1, but specifically targets scientific reasoning. It shares the concept of using retrieval to enhance reasoning capabilities, but it does not directly depend on the findings of Search-R1.",
+                    "relevance": 1
+                },
+                "2. Reinforcing VLMs to Use Tools for Detailed Visual Reasoning Under Resource Constraints": {
+                    "explanation": "This paper focuses on vision-language models and does not directly relate to the text-based reasoning and search optimization discussed in Search-R1.",
+                    "relevance": 0
+                },
+                "3. Coordinating Search-Informed Reasoning and Reasoning-Guided Search in Claim Verification": {
+                    "explanation": "HARIS involves reasoning-driven searching and search-informed reasoning, which aligns with the reinforcement learning and search interaction concepts in Search-R1. It builds on the idea of integrating search with reasoning, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "4. From Passive to Active Reasoning: Can Large Language Models Ask the Right Questions under Incomplete Information?": {
+                    "explanation": "This paper addresses active reasoning in LLMs, which involves interaction with external systems, similar to the search interactions in Search-R1. However, it does not directly build upon the specific methods or findings of Search-R1.",
+                    "relevance": 1
+                },
+                "5. KnowCoder-V2: Deep Knowledge Analysis": {
+                    "explanation": "KnowCoder-V2 focuses on knowledge organization and computation, which is different from the search and reasoning optimization in Search-R1. It does not directly relate to the source paper's findings.",
+                    "relevance": 0
+                },
+                "6. Prefix Grouper: Efficient GRPO Training through Shared-Prefix Forward": {
+                    "explanation": "This paper deals with optimizing GRPO training, which is unrelated to the reinforcement learning and search interaction techniques discussed in Search-R1.",
+                    "relevance": 0
+                },
+                "7. OPeRA: A Dataset of Observation, Persona, Rationale, and Action for Evaluating LLMs on Human Online Shopping Behavior Simulation": {
+                    "explanation": "OPeRA focuses on simulating human behavior in online shopping, which is unrelated to the reasoning and search optimization in Search-R1.",
+                    "relevance": 0
+                },
+                "8. Knowledgeable-r1: Policy Optimization for Knowledge Exploration in Retrieval-Augmented Generation": {
+                    "explanation": "Knowledgeable-r1 addresses retrieval-augmented generation and policy optimization, similar to Search-R1's focus on retrieval and reasoning optimization. It shares a thematic connection but does not directly depend on the findings of Search-R1.",
+                    "relevance": 1
+                },
+                "9. R-Search: Empowering LLM Reasoning with Search via Multi-Reward Reinforcement Learning": {
+                    "explanation": "R-Search builds on the concept of integrating reasoning with search using reinforcement learning, similar to Search-R1. It directly relates to the source paper's approach and findings, making it highly relevant.",
+                    "relevance": 2
+                },
+                "10. Does Thinking More always Help? Understanding Test-Time Scaling in Reasoning Models": {
+                    "explanation": "This paper examines test-time scaling in reasoning models, which is tangentially related to the reasoning optimization in Search-R1 but does not directly build on its findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Coordinating Search-Informed Reasoning and Reasoning-Guided Search in Claim Verification": {
+                    "explanation": "HARIS involves reasoning-driven searching and search-informed reasoning, which aligns with the reinforcement learning and search interaction concepts in Search-R1. It builds on the idea of integrating search with reasoning, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. R-Search: Empowering LLM Reasoning with Search via Multi-Reward Reinforcement Learning": {
+                    "explanation": "R-Search builds on the concept of integrating reasoning with search using reinforcement learning, similar to Search-R1. It directly relates to the source paper's approach and findings, making it highly relevant.",
+                    "relevance": 2
+                },
+                "3. RAISE: Enhancing Scientific Reasoning in LLMs via Step-by-Step Retrieval": {
+                    "explanation": "RAISE focuses on retrieval-augmented reasoning, similar to Search-R1, but specifically targets scientific reasoning. It shares the concept of using retrieval to enhance reasoning capabilities, but it does not directly depend on the findings of Search-R1.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Cell-o1: Training LLMs to Solve Single-Cell Reasoning Puzzles with Reinforcement Learning": {
+                    "explanation": "This paper focuses on cell type annotation using LLMs and reinforcement learning, which is a different domain from the source paper's focus on search engine interaction and reasoning. There is no direct connection in terms of hypothesis or findings.",
+                    "relevance": 0
+                },
+                "2.Multimodal DeepResearcher: Generating Text-Chart Interleaved Reports From Scratch with Agentic Framework": {
+                    "explanation": "While this paper deals with reasoning and retrieval-augmented generation, it focuses on multimodal content generation rather than search engine interaction and reinforcement learning for reasoning, which are the core of the source paper.",
+                    "relevance": 0
+                },
+                "3.Reasoning-Table: Exploring Reinforcement Learning for Table Reasoning": {
+                    "explanation": "This paper applies reinforcement learning to table reasoning, which is a different application than the search engine interaction in the source paper. However, both papers explore reinforcement learning for reasoning tasks, indicating some thematic overlap.",
+                    "relevance": 1
+                },
+                "4.SealQA: Raising the Bar for Reasoning in Search-Augmented Language Models": {
+                    "explanation": "SealQA directly addresses search-augmented language models and their reasoning capabilities, which is closely related to the source paper's focus on improving LLM reasoning with search engine interactions. It builds on similar challenges and methodologies.",
+                    "relevance": 2
+                },
+                "5.Dyna-Think: Synergizing Reasoning, Acting, and World Model Simulation in AI Agents": {
+                    "explanation": "Dyna-Think focuses on integrating reasoning with world model simulation, which is a broader AI framework than the specific search engine interaction focus of the source paper. It does not directly build on the source paper's findings.",
+                    "relevance": 0
+                },
+                "6.Pangu DeepDiver: Adaptive Search Intensity Scaling via Open-Web Reinforcement Learning": {
+                    "explanation": "Pangu DeepDiver explores adaptive search strategies in open-web environments using reinforcement learning, which is similar to the source paper's focus on optimizing search interactions for LLMs. It builds upon the source paper's themes of search and reinforcement learning.",
+                    "relevance": 2
+                },
+                "7.CodeV-R1: Reasoning-Enhanced Verilog Generation": {
+                    "explanation": "CodeV-R1 applies reinforcement learning to Verilog generation, which is unrelated to the search engine interaction focus of the source paper. The domains and applications are distinct.",
+                    "relevance": 0
+                },
+                "8.TimeHC-RL: Temporal-aware Hierarchical Cognitive Reinforcement Learning for Enhancing LLMs' Social Intelligence": {
+                    "explanation": "TimeHC-RL focuses on enhancing social intelligence in LLMs through reinforcement learning, which is a different application than the search engine interaction and reasoning improvements in the source paper.",
+                    "relevance": 0
+                },
+                "9.ComposeRAG: A Modular and Composable RAG for Corpus-Grounded Multi-Hop Question Answering": {
+                    "explanation": "ComposeRAG deals with retrieval-augmented generation for multi-hop question answering, which involves reasoning and retrieval but does not specifically focus on search engine interaction or reinforcement learning as in the source paper.",
+                    "relevance": 1
+                },
+                "10.Training LLMs for EHR-Based Reasoning Tasks via Reinforcement Learning": {
+                    "explanation": "This paper applies reinforcement learning to EHR-based reasoning tasks, which is a different domain from the search engine interaction and reasoning focus of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.SealQA: Raising the Bar for Reasoning in Search-Augmented Language Models": {
+                    "explanation": "SealQA directly addresses search-augmented language models and their reasoning capabilities, which is closely related to the source paper's focus on improving LLM reasoning with search engine interactions. It builds on similar challenges and methodologies.",
+                    "relevance": 2
+                },
+                "2.Pangu DeepDiver: Adaptive Search Intensity Scaling via Open-Web Reinforcement Learning": {
+                    "explanation": "Pangu DeepDiver explores adaptive search strategies in open-web environments using reinforcement learning, which is similar to the source paper's focus on optimizing search interactions for LLMs. It builds upon the source paper's themes of search and reinforcement learning.",
+                    "relevance": 2
+                },
+                "3.Reasoning-Table: Exploring Reinforcement Learning for Table Reasoning": {
+                    "explanation": "This paper applies reinforcement learning to table reasoning, which is a different application than the search engine interaction in the source paper. However, both papers explore reinforcement learning for reasoning tasks, indicating some thematic overlap.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Table-R1: Inference-Time Scaling for Table Reasoning": {
+                    "explanation": "This paper focuses on inference-time scaling for table reasoning tasks, using reinforcement learning with verifiable rewards. While it mentions reinforcement learning, it does not directly build upon the specific methods or findings of Search-R1, which is focused on search query generation and retrieval-augmented reasoning.",
+                    "relevance": 0
+                },
+                "2.ToMAP: Training Opponent-Aware LLM Persuaders with Theory of Mind": {
+                    "explanation": "This paper introduces a novel approach for training LLM persuaders with Theory of Mind capabilities, which is unrelated to the search and retrieval-augmented reasoning focus of the source paper.",
+                    "relevance": 0
+                },
+                "3.OWL: Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation": {
+                    "explanation": "While this paper discusses reinforcement learning for multi-agent systems, it does not specifically relate to the search query generation or retrieval-augmented reasoning aspects of the source paper.",
+                    "relevance": 0
+                },
+                "4.Robot-R1: Reinforcement Learning for Enhanced Embodied Reasoning in Robotics": {
+                    "explanation": "Robot-R1 leverages reinforcement learning for embodied reasoning in robotics, inspired by the DeepSeek-R1 approach. However, it does not directly build upon the search and retrieval-augmented reasoning methods of Search-R1.",
+                    "relevance": 0
+                },
+                "5.EvolveSearch: An Iterative Self-Evolving Search Agent": {
+                    "explanation": "EvolveSearch focuses on enhancing agentic web search capabilities using a combination of supervised fine-tuning and reinforcement learning, which aligns with the source paper's focus on optimizing search interactions and retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "6.VRAG-RL: Empower Vision-Perception-Based RAG for Visually Rich Information Understanding via Iterative Reasoning with Reinforcement Learning": {
+                    "explanation": "This paper introduces a reinforcement learning framework for visually rich information understanding, which is related to the retrieval-augmented reasoning focus of the source paper, but specifically for visual data.",
+                    "relevance": 1
+                },
+                "7.Learning to Route Queries Across Knowledge Bases for Step-wise Retrieval-Augmented Reasoning": {
+                    "explanation": "R1-Router focuses on retrieval-augmented reasoning by dynamically interacting with multiple knowledge bases, which is closely related to the source paper's focus on optimizing search interactions and retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "8.AgentDNS: A Root Domain Naming System for LLM Agents": {
+                    "explanation": "AgentDNS focuses on service discovery and interoperability for LLM agents, which is unrelated to the search and retrieval-augmented reasoning focus of the source paper.",
+                    "relevance": 0
+                },
+                "9.R1-Code-Interpreter: Training LLMs to Reason with Code via Supervised and Reinforcement Learning": {
+                    "explanation": "R1-Code-Interpreter extends LLMs to reason with code using reinforcement learning, which is related to the source paper's focus on reasoning and reinforcement learning, but specifically for code execution.",
+                    "relevance": 1
+                },
+                "10.Towards Better Instruction Following Retrieval Models": {
+                    "explanation": "This paper focuses on improving instruction-following capabilities in retrieval models, which is not directly related to the search and retrieval-augmented reasoning focus of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.EvolveSearch: An Iterative Self-Evolving Search Agent": {
+                    "explanation": "EvolveSearch focuses on enhancing agentic web search capabilities using a combination of supervised fine-tuning and reinforcement learning, which aligns with the source paper's focus on optimizing search interactions and retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "2.Learning to Route Queries Across Knowledge Bases for Step-wise Retrieval-Augmented Reasoning": {
+                    "explanation": "R1-Router focuses on retrieval-augmented reasoning by dynamically interacting with multiple knowledge bases, which is closely related to the source paper's focus on optimizing search interactions and retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "3.VRAG-RL: Empower Vision-Perception-Based RAG for Visually Rich Information Understanding via Iterative Reasoning with Reinforcement Learning": {
+                    "explanation": "This paper introduces a reinforcement learning framework for visually rich information understanding, which is related to the retrieval-augmented reasoning focus of the source paper, but specifically for visual data.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Scaling External Knowledge Input Beyond Context Windows of LLMs via Multi-Agent Collaboration": {
+                    "explanation": "This paper explores multi-agent collaboration to scale external knowledge input for LLMs, which is related to the source paper's focus on improving LLM reasoning with external knowledge. However, it does not directly build upon the reinforcement learning framework introduced in the source paper.",
+                    "relevance": 1
+                },
+                "2.Reinforced Informativeness Optimization for Long-Form Retrieval-Augmented Generation": {
+                    "explanation": "This paper focuses on improving long-form retrieval-augmented generation using reinforcement learning, similar to the source paper's use of RL for reasoning. However, it does not directly depend on the specific methods or findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution": {
+                    "explanation": "SPA-RL addresses the challenge of delayed rewards in RL for LLMs, which is a different aspect of RL application compared to the source paper's focus on search query generation and retrieval. There is no direct dependency on the source paper's findings.",
+                    "relevance": 0
+                },
+                "4.Interleaved Reasoning for Large Language Models via Reinforcement Learning": {
+                    "explanation": "This paper uses RL to enhance reasoning in LLMs by interleaving thinking and answering, which aligns with the source paper's use of RL for improving reasoning. The approach is conceptually similar but not directly dependent on the source paper.",
+                    "relevance": 1
+                },
+                "5.Iterative Self-Incentivization Empowers Large Language Models as Agentic Searchers": {
+                    "explanation": "This paper introduces an agentic search framework for LLMs, which is closely related to the source paper's focus on search query generation and retrieval using RL. It builds upon the concept of search optimization in LLMs.",
+                    "relevance": 2
+                },
+                "6.ARM: Adaptive Reasoning Model": {
+                    "explanation": "ARM focuses on adaptive reasoning formats for LLMs, which is not directly related to the source paper's reinforcement learning approach for search query generation and retrieval.",
+                    "relevance": 0
+                },
+                "7.Collision- and Reachability-Aware Multi-Robot Control with Grounded LLM Planners": {
+                    "explanation": "This paper applies RL to multi-robot control with LLMs, which is unrelated to the source paper's focus on search query generation and retrieval for LLMs.",
+                    "relevance": 0
+                },
+                "8.VTool-R1: VLMs Learn to Think with Images via Reinforcement Learning on Multimodal Tool Use": {
+                    "explanation": "VTool-R1 extends RL to vision-language models for multimodal reasoning, which is a different application than the source paper's focus on text-based search query generation and retrieval.",
+                    "relevance": 0
+                },
+                "9.DeepResearchGym: A Free, Transparent, and Reproducible Evaluation Sandbox for Deep Research": {
+                    "explanation": "This paper introduces an evaluation sandbox for deep research systems, which is unrelated to the source paper's focus on reinforcement learning for search query generation and retrieval.",
+                    "relevance": 0
+                },
+                "10.Behavior Injection: Preparing Language Models for Reinforcement Learning": {
+                    "explanation": "Behavior Injection focuses on preparing LLMs for RL through data augmentation, which is not directly related to the source paper's specific RL framework for search query generation and retrieval.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Iterative Self-Incentivization Empowers Large Language Models as Agentic Searchers": {
+                    "explanation": "This paper introduces an agentic search framework for LLMs, which is closely related to the source paper's focus on search query generation and retrieval using RL. It builds upon the concept of search optimization in LLMs.",
+                    "relevance": 2
+                },
+                "2.Scaling External Knowledge Input Beyond Context Windows of LLMs via Multi-Agent Collaboration": {
+                    "explanation": "This paper explores multi-agent collaboration to scale external knowledge input for LLMs, which is related to the source paper's focus on improving LLM reasoning with external knowledge. However, it does not directly build upon the reinforcement learning framework introduced in the source paper.",
+                    "relevance": 1
+                },
+                "3.Reinforced Informativeness Optimization for Long-Form Retrieval-Augmented Generation": {
+                    "explanation": "This paper focuses on improving long-form retrieval-augmented generation using reinforcement learning, similar to the source paper's use of RL for reasoning. However, it does not directly depend on the specific methods or findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. On the Effect of Negative Gradient in Group Relative Deep Reinforcement Optimization": {
+                    "explanation": "This paper discusses reinforcement learning dynamics in LLMs, specifically focusing on Group Relative Policy Optimization (GRPO) and a phenomenon called Lazy Likelihood Displacement (LLD). While it shares a general theme of reinforcement learning with the source paper, it does not directly build upon or depend on the specific findings or methods of Search-R1.",
+                    "relevance": 0
+                },
+                "2. Enhancing LLMs' Reasoning-Intensive Multimedia Search Capabilities through Fine-Tuning and Reinforcement Learning": {
+                    "explanation": "This paper focuses on improving LLMs' multimedia search capabilities using reinforcement learning, similar to Search-R1's focus on search-enhanced reasoning. It introduces a method for reasoning-intensive search, which aligns with the source paper's goal of optimizing LLM reasoning with search interactions.",
+                    "relevance": 1
+                },
+                "3. Hybrid Latent Reasoning via Reinforcement Learning": {
+                    "explanation": "This paper explores latent reasoning in LLMs using reinforcement learning, which is conceptually related to the source paper's focus on reasoning and RL. However, it does not directly rely on the specific findings or methods of Search-R1.",
+                    "relevance": 0
+                },
+                "4. Distilling LLM Agent into Small Models with Retrieval and Code Tools": {
+                    "explanation": "This paper discusses distilling reasoning capabilities into smaller models using retrieval tools, which relates to the source paper's theme of retrieval-augmented reasoning. However, it does not directly depend on or build upon the specific methods or findings of Search-R1.",
+                    "relevance": 0
+                },
+                "5. LeTS: Learning to Think-and-Search via Process-and-Outcome Reward Hybridization": {
+                    "explanation": "LeTS focuses on integrating reasoning into retrieval-augmented generation via reinforcement learning, similar to Search-R1's approach. It proposes a hybrid reward framework for reasoning, which aligns with the source paper's reinforcement learning framework for search-enhanced reasoning.",
+                    "relevance": 2
+                },
+                "6. QwenLong-L1: Towards Long-Context Large Reasoning Models with Reinforcement Learning": {
+                    "explanation": "This paper addresses long-context reasoning in LLMs using reinforcement learning, which is conceptually related to the source paper's focus on reasoning and RL. However, it does not directly rely on the specific findings or methods of Search-R1.",
+                    "relevance": 0
+                },
+                "7. Plan-R1: Safe and Feasible Trajectory Planning as Language Modeling": {
+                    "explanation": "Plan-R1 applies reinforcement learning to trajectory planning in autonomous driving, which is unrelated to the source paper's focus on LLM reasoning and search-enhanced reasoning.",
+                    "relevance": 0
+                },
+                "8. The Real Barrier to LLM Agent Usability is Agentic ROI": {
+                    "explanation": "This position paper discusses the usability of LLM agents and does not directly relate to the source paper's focus on reinforcement learning and search-enhanced reasoning.",
+                    "relevance": 0
+                },
+                "9. R1-Searcher++: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning": {
+                    "explanation": "R1-Searcher++ builds upon the concept of retrieval-augmented reasoning with reinforcement learning, similar to Search-R1. It introduces a framework for dynamic knowledge acquisition, which is directly related to the source paper's focus on optimizing LLM reasoning with search interactions.",
+                    "relevance": 2
+                },
+                "10. Tool-Star: Empowering LLM-Brained Multi-Tool Reasoner via Reinforcement Learning": {
+                    "explanation": "Tool-Star focuses on multi-tool reasoning in LLMs using reinforcement learning, which is conceptually related to the source paper's focus on reasoning and RL. However, it does not directly rely on the specific findings or methods of Search-R1.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. LeTS: Learning to Think-and-Search via Process-and-Outcome Reward Hybridization": {
+                    "explanation": "LeTS focuses on integrating reasoning into retrieval-augmented generation via reinforcement learning, similar to Search-R1's approach. It proposes a hybrid reward framework for reasoning, which aligns with the source paper's reinforcement learning framework for search-enhanced reasoning.",
+                    "relevance": 2
+                },
+                "2. R1-Searcher++: Incentivizing the Dynamic Knowledge Acquisition of LLMs via Reinforcement Learning": {
+                    "explanation": "R1-Searcher++ builds upon the concept of retrieval-augmented reasoning with reinforcement learning, similar to Search-R1. It introduces a framework for dynamic knowledge acquisition, which is directly related to the source paper's focus on optimizing LLM reasoning with search interactions.",
+                    "relevance": 2
+                },
+                "3. Enhancing LLMs' Reasoning-Intensive Multimedia Search Capabilities through Fine-Tuning and Reinforcement Learning": {
+                    "explanation": "This paper focuses on improving LLMs' multimedia search capabilities using reinforcement learning, similar to Search-R1's focus on search-enhanced reasoning. It introduces a method for reasoning-intensive search, which aligns with the source paper's goal of optimizing LLM reasoning with search interactions.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty": {
+                    "explanation": "This paper addresses inefficiencies in RAG systems, similar to the source paper's focus on optimizing LLM reasoning with search interactions. However, it introduces a new RL method to tackle uncertainty in search decisions, which is not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "2. O2-Searcher: A Searching-based Agent Model for Open-Domain Open-Ended Question Answering": {
+                    "explanation": "This paper extends the concept of search-based reasoning to open-ended questions, leveraging RL for dynamic knowledge acquisition. It builds on the idea of using search to enhance reasoning, similar to the source paper, but focuses on a different application domain.",
+                    "relevance": 1
+                },
+                "3. SimpleDeepSearcher: Deep Information Seeking via Web-Powered Reasoning Trajectory Synthesis": {
+                    "explanation": "This paper introduces a framework for synthesizing training data for RAG systems, focusing on data engineering rather than RL optimization, which is the focus of the source paper. While related, it does not directly depend on the source paper's findings.",
+                    "relevance": 0
+                },
+                "4. Reasoning Beyond Language: A Comprehensive Survey on Latent Chain-of-Thought Reasoning": {
+                    "explanation": "This is a review paper on latent CoT reasoning and does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "5. WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning": {
+                    "explanation": "This paper presents a multi-turn RL framework for web agents, similar to the source paper's focus on multi-turn search interactions for LLMs. It shares the RL approach but applies it to web environments, partially depending on the source paper's exploration of RL for reasoning.",
+                    "relevance": 2
+                },
+                "6. R2ec: Towards Large Recommender Models with Reasoning": {
+                    "explanation": "This paper explores reasoning in recommender systems, using RL to enhance recommendation capabilities. While it shares the theme of RL for reasoning, it is not directly connected to the search and reasoning optimization focus of the source paper.",
+                    "relevance": 0
+                },
+                "7. An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper conducts empirical studies on RL for LLM-based search agents, directly exploring the same domain as the source paper. It investigates key factors in RL design, making it highly relevant and partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "8. ConvSearch-R1: Enhancing Query Reformulation for Conversational Search with Reasoning via Reinforcement Learning": {
+                    "explanation": "This paper focuses on conversational query reformulation using RL, which is related to the source paper's theme of optimizing search interactions. However, it addresses a specific application in conversational search, making it inspired but not dependent on the source paper.",
+                    "relevance": 1
+                },
+                "9. NOVER: Incentive Training for Language Models via Verifier-Free Reinforcement Learning": {
+                    "explanation": "This paper introduces a verifier-free RL framework for LLMs, focusing on incentive training rather than search optimization. It does not directly relate to the search and reasoning focus of the source paper.",
+                    "relevance": 0
+                },
+                "10. s3: You Don't Need That Much Data to Train a Search Agent via RL": {
+                    "explanation": "This paper proposes a lightweight framework for training search agents via RL, focusing on data efficiency. It shares the theme of RL for search optimization with the source paper, making it partially dependent on the source paper's exploration of RL for reasoning.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning": {
+                    "explanation": "This paper presents a multi-turn RL framework for web agents, similar to the source paper's focus on multi-turn search interactions for LLMs. It shares the RL approach but applies it to web environments, partially depending on the source paper's exploration of RL for reasoning.",
+                    "relevance": 2
+                },
+                "2. An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper conducts empirical studies on RL for LLM-based search agents, directly exploring the same domain as the source paper. It investigates key factors in RL design, making it highly relevant and partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. s3: You Don't Need That Much Data to Train a Search Agent via RL": {
+                    "explanation": "This paper proposes a lightweight framework for training search agents via RL, focusing on data efficiency. It shares the theme of RL for search optimization with the source paper, making it partially dependent on the source paper's exploration of RL for reasoning.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning in retrieval-augmented generation (RAG) systems, similar to Search-R1. It proposes a new method, ReasonRAG, which introduces process-level rewards, contrasting with the outcome-based rewards used in Search-R1. The hypothesis is partially dependent on the findings of Search-R1, as it seeks to improve upon its limitations.",
+                    "relevance": 2
+                },
+                "2.R2MED: A Benchmark for Reasoning-Driven Medical Retrieval": {
+                    "explanation": "This paper introduces a new benchmark for medical retrieval, focusing on reasoning capabilities. While it deals with reasoning, it does not directly build upon or depend on the findings of Search-R1, which is more focused on reinforcement learning for search query generation.",
+                    "relevance": 0
+                },
+                "3.Visual Agentic Reinforcement Fine-Tuning": {
+                    "explanation": "This paper explores multi-modal agentic capabilities in LVLMs, focusing on visual reasoning and tool use. It does not directly relate to the reinforcement learning and search query optimization discussed in Search-R1.",
+                    "relevance": 0
+                },
+                "4.ExTrans: Multilingual Deep Reasoning Translation via Exemplar-Enhanced Reinforcement Learning": {
+                    "explanation": "This paper applies reinforcement learning to multilingual machine translation, focusing on reward modeling for translation tasks. While it uses reinforcement learning, it does not directly build on the search query optimization and reasoning framework of Search-R1.",
+                    "relevance": 0
+                },
+                "5.ReEx-SQL: Reasoning with Execution-Aware Reinforcement Learning for Text-to-SQL": {
+                    "explanation": "ReEx-SQL introduces an execution-aware reasoning framework for Text-to-SQL, using reinforcement learning to improve query generation. While it shares the use of reinforcement learning with Search-R1, it focuses on SQL query generation rather than search query optimization.",
+                    "relevance": 0
+                },
+                "6.DGRO: Enhancing LLM Reasoning via Exploration-Exploitation Control and Reward Variance Management": {
+                    "explanation": "DGRO proposes a new RL algorithm for LLM reasoning, focusing on exploration-exploitation balance and reward variance management. It builds on the concept of reinforcement learning for reasoning, similar to Search-R1, but does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "7.Effective and Transparent RAG: Adaptive-Reward Reinforcement Learning for Decision Traceability": {
+                    "explanation": "This paper proposes ARENA, a framework for RAG systems that enhances reasoning and generation using adaptive rewards. It builds on the concept of reinforcement learning in RAG systems, similar to Search-R1, and seeks to address some of its challenges, making it partially dependent on its findings.",
+                    "relevance": 2
+                },
+                "8.Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment": {
+                    "explanation": "This paper focuses on multi-turn reasoning in LLMs using a turn-level credit assignment strategy in reinforcement learning. While it shares the use of reinforcement learning with Search-R1, it does not directly build on its search query optimization framework.",
+                    "relevance": 0
+                },
+                "9.Demystifying and Enhancing the Efficiency of Large Language Model Based Search Agents": {
+                    "explanation": "This paper addresses efficiency bottlenecks in LLM-based search agents, focusing on retrieval methods and system design. While it deals with search agents, it does not directly build on the reinforcement learning and search query optimization framework of Search-R1.",
+                    "relevance": 0
+                },
+                "10.Not All Thoughts are Generated Equal: Efficient LLM Reasoning via Multi-Turn Reinforcement Learning": {
+                    "explanation": "This paper proposes a framework for efficient reasoning in LLMs using multi-turn reinforcement learning. While it shares the use of reinforcement learning with Search-R1, it does not directly build on its search query optimization framework.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Process vs. Outcome Reward: Which is Better for Agentic RAG Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning in retrieval-augmented generation (RAG) systems, similar to Search-R1. It proposes a new method, ReasonRAG, which introduces process-level rewards, contrasting with the outcome-based rewards used in Search-R1. The hypothesis is partially dependent on the findings of Search-R1, as it seeks to improve upon its limitations.",
+                    "relevance": 2
+                },
+                "2.Effective and Transparent RAG: Adaptive-Reward Reinforcement Learning for Decision Traceability": {
+                    "explanation": "This paper proposes ARENA, a framework for RAG systems that enhances reasoning and generation using adaptive rewards. It builds on the concept of reinforcement learning in RAG systems, similar to Search-R1, and seeks to address some of its challenges, making it partially dependent on its findings.",
+                    "relevance": 2
+                },
+                "3.DGRO: Enhancing LLM Reasoning via Exploration-Exploitation Control and Reward Variance Management": {
+                    "explanation": "DGRO proposes a new RL algorithm for LLM reasoning, focusing on exploration-exploitation balance and reward variance management. It builds on the concept of reinforcement learning for reasoning, similar to Search-R1, but does not directly depend on its findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Search and Refine During Think: Autonomous Retrieval-Augmented Reasoning of LLMs": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented reasoning introduced in the source paper by proposing a new framework, AutoRefine, which enhances the retrieval process through refinement steps. It shares the core idea of using reinforcement learning to improve reasoning in LLMs, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Group-in-Group Policy Optimization for LLM Agent Training": {
+                    "explanation": "While this paper discusses reinforcement learning in the context of LLMs, it focuses on a different aspect: group-based policy optimization for agent training. It does not directly build on the retrieval-augmented reasoning framework or findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Time-R1: Towards Comprehensive Temporal Reasoning in LLMs": {
+                    "explanation": "This paper introduces a framework for temporal reasoning in LLMs, which is a different focus from the retrieval-augmented reasoning discussed in the source paper. Although both use reinforcement learning, the specific application areas do not overlap.",
+                    "relevance": 0
+                },
+                "4. Scent of Knowledge: Optimizing Search-Enhanced Reasoning with Information Foraging": {
+                    "explanation": "This paper is closely related to the source paper as it also explores retrieval-augmented reasoning using reinforcement learning. It introduces a new framework, InForage, which aligns with the source paper's goal of optimizing search-enhanced reasoning in LLMs.",
+                    "relevance": 2
+                },
+                "5. Benchmarking Retrieval-Augmented Generation for Chemistry": {
+                    "explanation": "This paper focuses on the application of retrieval-augmented generation in the chemistry domain, which is a specific use case and does not directly relate to the general framework or findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. Agent RL Scaling Law: Agent RL with Spontaneous Code Execution for Mathematical Problem Solving": {
+                    "explanation": "This paper discusses reinforcement learning for tool-integrated reasoning in mathematical problem-solving, which is a different application from the retrieval-augmented reasoning in the source paper.",
+                    "relevance": 0
+                },
+                "7. Why Uncertainty Estimation Methods Fall Short in RAG: An Axiomatic Analysis": {
+                    "explanation": "This paper analyzes uncertainty estimation in retrieval-augmented generation, which is related to the source paper's focus on retrieval-augmented reasoning. However, it does not directly build on the source paper's findings or hypotheses.",
+                    "relevance": 1
+                },
+                "8. ZeroSearch: Incentivize the Search Capability of LLMs without Searching": {
+                    "explanation": "This paper addresses the challenges of search capability in LLMs using reinforcement learning, similar to the source paper. It proposes a novel approach, ZeroSearch, which is inspired by the source paper's exploration of search-enhanced reasoning.",
+                    "relevance": 1
+                },
+                "9. Benchmarking LLMs' Swarm intelligence": {
+                    "explanation": "This paper focuses on swarm intelligence and decentralized coordination in LLMs, which is unrelated to the retrieval-augmented reasoning framework of the source paper.",
+                    "relevance": 0
+                },
+                "10. Sailing by the Stars: A Survey on Reward Models and Learning Strategies for Learning from Rewards": {
+                    "explanation": "This is a survey paper that discusses learning from rewards in LLMs, which is a broader topic and does not directly connect with the specific retrieval-augmented reasoning framework of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Search and Refine During Think: Autonomous Retrieval-Augmented Reasoning of LLMs": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented reasoning introduced in the source paper by proposing a new framework, AutoRefine, which enhances the retrieval process through refinement steps. It shares the core idea of using reinforcement learning to improve reasoning in LLMs, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Scent of Knowledge: Optimizing Search-Enhanced Reasoning with Information Foraging": {
+                    "explanation": "This paper is closely related to the source paper as it also explores retrieval-augmented reasoning using reinforcement learning. It introduces a new framework, InForage, which aligns with the source paper's goal of optimizing search-enhanced reasoning in LLMs.",
+                    "relevance": 2
+                },
+                "3. Why Uncertainty Estimation Methods Fall Short in RAG: An Axiomatic Analysis": {
+                    "explanation": "This paper analyzes uncertainty estimation in retrieval-augmented generation, which is related to the source paper's focus on retrieval-augmented reasoning. However, it does not directly build on the source paper's findings or hypotheses.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. WebThinker: Empowering Large Reasoning Models with Deep Research Capability": {
+                    "explanation": "This paper builds on the idea of enhancing reasoning models with external search capabilities, similar to Search-R1's use of search engines. However, it introduces a new framework (WebThinker) and focuses on deep research capabilities rather than the specific reinforcement learning approach of Search-R1.",
+                    "relevance": 1
+                },
+                "2. Iterative Tool Usage Exploration for Multimodal Agents via Step-wise Preference Tuning": {
+                    "explanation": "This paper focuses on multimodal agents and tool usage without direct connection to the reinforcement learning framework for search and reasoning presented in Search-R1.",
+                    "relevance": 0
+                },
+                "3. ReasonIR: Training Retrievers for Reasoning Tasks": {
+                    "explanation": "ReasonIR focuses on training retrievers for reasoning tasks, which is related to the retrieval aspect of Search-R1. However, it does not directly depend on the specific reinforcement learning methods or search query generation of Search-R1.",
+                    "relevance": 1
+                },
+                "4. Nemotron-Research-Tool-N1: Exploring Tool-Using Language Models with Reinforced Reasoning": {
+                    "explanation": "This paper explores the use of reinforcement learning to enhance tool-calling abilities in LLMs, which is conceptually related to Search-R1's use of RL for search query generation. However, it focuses on tool use rather than search engine interaction.",
+                    "relevance": 1
+                },
+                "5. RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning": {
+                    "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is related to the reinforcement learning approach in Search-R1. However, it does not specifically focus on search engine interaction or retrieval-augmented reasoning.",
+                    "relevance": 1
+                },
+                "6. SARI: Structured Audio Reasoning via Curriculum-Guided Reinforcement Learning": {
+                    "explanation": "SARI focuses on audio-language reasoning and does not directly relate to the search engine interaction or retrieval-augmented reasoning aspects of Search-R1.",
+                    "relevance": 0
+                },
+                "7. AlignRAG: Leveraging Critique Learning for Evidence-Sensitive Retrieval-Augmented Reasoning": {
+                    "explanation": "AlignRAG addresses retrieval-augmented reasoning and aligns closely with the retrieval-augmented reasoning concept in Search-R1, focusing on improving evidence alignment in RAG systems.",
+                    "relevance": 2
+                },
+                "8. Collaborative Learning of On-Device Small Model and Cloud-Based Large Model: Advances and Future Directions": {
+                    "explanation": "This is a review paper that summarizes existing literature on collaborative learning between on-device and cloud-based models, without novel hypotheses or findings directly related to Search-R1.",
+                    "relevance": 0
+                },
+                "9. ToolRL: Reward is All Tool Learning Needs": {
+                    "explanation": "ToolRL explores reward design for tool use within the RL paradigm, which is related to the reinforcement learning aspect of Search-R1 but focuses on tool use rather than search engine interaction.",
+                    "relevance": 1
+                },
+                "10. ReTool: Reinforcement Learning for Strategic Tool Use in LLMs": {
+                    "explanation": "ReTool focuses on strategic tool use in LLMs using RL, which is conceptually related to the RL approach in Search-R1, but it does not specifically address search engine interaction or retrieval-augmented reasoning.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. AlignRAG: Leveraging Critique Learning for Evidence-Sensitive Retrieval-Augmented Reasoning": {
+                    "explanation": "AlignRAG addresses retrieval-augmented reasoning and aligns closely with the retrieval-augmented reasoning concept in Search-R1, focusing on improving evidence alignment in RAG systems.",
+                    "relevance": 2
+                },
+                "2. WebThinker: Empowering Large Reasoning Models with Deep Research Capability": {
+                    "explanation": "This paper builds on the idea of enhancing reasoning models with external search capabilities, similar to Search-R1's use of search engines. However, it introduces a new framework (WebThinker) and focuses on deep research capabilities rather than the specific reinforcement learning approach of Search-R1.",
+                    "relevance": 1
+                },
+                "3. ReasonIR: Training Retrievers for Reasoning Tasks": {
+                    "explanation": "ReasonIR focuses on training retrievers for reasoning tasks, which is related to the retrieval aspect of Search-R1. However, it does not directly depend on the specific reinforcement learning methods or search query generation of Search-R1.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Minimalist Approach to LLM Reasoning: from Rejection Sampling to Reinforce": {
+                    "explanation": "This paper explores reinforcement learning methods for LLM reasoning, similar to the source paper's focus on RL for improving LLM performance. However, it does not specifically build upon the Search-R1 framework or its findings.",
+                    "relevance": 1
+                },
+                "2. Deep Reasoning Translation via Reinforcement Learning": {
+                    "explanation": "While this paper uses reinforcement learning for translation tasks, it does not directly relate to the search and reasoning enhancements proposed in Search-R1.",
+                    "relevance": 0
+                },
+                "3. MLRC-Bench: Can Language Agents Solve Machine Learning Research Challenges?": {
+                    "explanation": "This paper introduces a benchmark for evaluating LLMs in ML research tasks, which is not directly related to the reinforcement learning and search optimization focus of the source paper.",
+                    "relevance": 0
+                },
+                "4. Collab-RAG: Boosting Retrieval-Augmented Generation for Complex Question Answering via White-Box and Black-Box LLM Collaboration": {
+                    "explanation": "Collab-RAG focuses on improving retrieval-augmented generation, which is relevant to the source paper's interest in retrieval-augmented reasoning. However, it does not specifically depend on the findings of Search-R1.",
+                    "relevance": 1
+                },
+                "5. DeepResearcher: Scaling Deep Research via Reinforcement Learning in Real-world Environments": {
+                    "explanation": "DeepResearcher explores reinforcement learning in real-world environments for LLMs, aligning with the source paper's RL approach for search optimization. It builds on similar principles of using RL for LLM enhancement.",
+                    "relevance": 1
+                },
+                "6. Harnessing the Reasoning Economy: A Survey of Efficient Reasoning for Large Language Models": {
+                    "explanation": "This is a survey paper that does not present new hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "7. RARE: Retrieval-Augmented Reasoning Modeling": {
+                    "explanation": "RARE focuses on retrieval-augmented reasoning, similar to the source paper's approach, and proposes a new paradigm that could be seen as building on the ideas of retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "8. Language Models can Self-Improve at State-Value Estimation for Better Search": {
+                    "explanation": "This paper discusses self-supervised methods for improving search in LLMs, which is related to the source paper's focus on search optimization, but it does not directly depend on the findings of Search-R1.",
+                    "relevance": 1
+                },
+                "9. From System 1 to System 2: A Survey of Reasoning Large Language Models": {
+                    "explanation": "This is a survey paper and does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "10. RAG-Gym: Systematic Optimization of Language Agents for Retrieval-Augmented Generation": {
+                    "explanation": "RAG-Gym explores optimization techniques for retrieval-augmented generation, which is relevant to the source paper's focus on retrieval-augmented reasoning. However, it does not specifically depend on the Search-R1 framework.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. RARE: Retrieval-Augmented Reasoning Modeling": {
+                    "explanation": "RARE focuses on retrieval-augmented reasoning, similar to the source paper's approach, and proposes a new paradigm that could be seen as building on the ideas of retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "2. A Minimalist Approach to LLM Reasoning: from Rejection Sampling to Reinforce": {
+                    "explanation": "This paper explores reinforcement learning methods for LLM reasoning, similar to the source paper's focus on RL for improving LLM performance. However, it does not specifically build upon the Search-R1 framework or its findings.",
+                    "relevance": 1
+                },
+                "3. Collab-RAG: Boosting Retrieval-Augmented Generation for Complex Question Answering via White-Box and Black-Box LLM Collaboration": {
+                    "explanation": "Collab-RAG focuses on improving retrieval-augmented generation, which is relevant to the source paper's interest in retrieval-augmented reasoning. However, it does not specifically depend on the findings of Search-R1.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+            "pmid": "2503.09516",
+            "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+            "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+            "year": 2025,
+            "citation_count": 194
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. RAS: Retrieval-And-Structuring for Knowledge-Intensive LLM Generation": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented reasoning, similar to the source paper's focus on optimizing LLM reasoning with search interactions. However, it introduces a new approach of structuring retrieved information, which is not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "2. DeepRAG: Thinking to Retrieve Step by Step for Large Language Models": {
+                    "explanation": "DeepRAG shares a similar goal with the source paper in enhancing retrieval-augmented reasoning. It models retrieval as a Markov Decision Process, which aligns with the source paper's use of reinforcement learning for search optimization, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. A Survey of Test-Time Compute: From Intuitive Inference to Deliberate Reasoning": {
+                    "explanation": "This paper is a review that surveys test-time compute scaling in language models, lacking novel hypotheses or findings directly connected to the source paper.",
+                    "relevance": 0
+                },
+                "4. AlignRAG: An Adaptable Framework for Resolving Misalignments in Retrieval-Aware Reasoning of RAG": {
+                    "explanation": "AlignRAG addresses reasoning misalignment in retrieval-augmented generation, which is related to the source paper's focus on optimizing reasoning trajectories. However, it introduces a distinct framework and does not rely on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "5. Gosling Grows Up: Retrieval with Learned Dense and Sparse Representations Using Anserini": {
+                    "explanation": "This paper discusses the evolution of the Anserini IR toolkit and its application in retrieval models. It does not directly relate to the source paper's focus on reinforcement learning for search optimization in LLMs.",
+                    "relevance": 0
+                },
+                "6. Sailing AI by the Stars: A Survey of Learning from Rewards in Post-Training and Test-Time Scaling of Large Language Models": {
+                    "explanation": "This is a survey paper that provides an overview of learning from rewards in LLMs, including reinforcement learning. It does not present new findings or hypotheses directly connected to the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. DeepRAG: Thinking to Retrieve Step by Step for Large Language Models": {
+                    "explanation": "DeepRAG shares a similar goal with the source paper in enhancing retrieval-augmented reasoning. It models retrieval as a Markov Decision Process, which aligns with the source paper's use of reinforcement learning for search optimization, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. RAS: Retrieval-And-Structuring for Knowledge-Intensive LLM Generation": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented reasoning, similar to the source paper's focus on optimizing LLM reasoning with search interactions. However, it introduces a new approach of structuring retrieved information, which is not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "3. AlignRAG: An Adaptable Framework for Resolving Misalignments in Retrieval-Aware Reasoning of RAG": {
+                    "explanation": "AlignRAG addresses reasoning misalignment in retrieval-augmented generation, which is related to the source paper's focus on optimizing reasoning trajectories. However, it introduces a distinct framework and does not rely on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "04fd5c534a7f4f7b3318493c16d7ba01d8c09a7e",
+            "title": "DeepRAG: Thinking to Retrieve Step by Step for Large Language Models",
+            "abstract": "Large Language Models (LLMs) have shown remarkable reasoning capabilities, while their practical applications are limited by severe factual hallucinations due to limitations in the timeliness, accuracy, and comprehensiveness of their parametric knowledge. Meanwhile, enhancing retrieval-augmented generation (RAG) with reasoning remains challenging due to ineffective task decomposition and redundant retrieval, which can introduce noise and degrade response quality. In this paper, we propose DeepRAG, a framework that models retrieval-augmented reasoning as a Markov Decision Process (MDP), enabling reasonable and adaptive retrieval. By iteratively decomposing queries, DeepRAG dynamically determines whether to retrieve external knowledge or rely on parametric reasoning at each step. Experiments show that DeepRAG improves retrieval efficiency and boosts answer accuracy by 26.4%, demonstrating its effectiveness in enhancing retrieval-augmented reasoning.",
+            "year": 2025,
+            "citation_count": 10,
+            "relevance": 2,
+            "explanation": "DeepRAG shares a similar goal with the source paper in enhancing retrieval-augmented reasoning. It models retrieval as a Markov Decision Process, which aligns with the source paper's use of reinforcement learning for search optimization, indicating partial dependence on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Exploring Superior Function Calls via Reinforcement Learning": {
+                    "explanation": "This paper focuses on function calling capabilities via reinforcement learning, which is not directly related to retrieval-augmented reasoning or the specific challenges addressed by DeepRAG. It does not build upon the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "2. RAG-R1 : Incentivize the Search and Reasoning Capabilities of LLMs through Multi-query Parallelism": {
+                    "explanation": "This paper proposes a framework to enhance retrieval-augmented generation by expanding from single-query to multi-query parallelism, which aligns with the source paper's focus on improving retrieval-augmented reasoning. It partially depends on the findings of the source paper regarding retrieval efficiency and reasoning capabilities.",
+                    "relevance": 2
+                },
+                "3. Learning to Route Queries Across Knowledge Bases for Step-wise Retrieval-Augmented Reasoning": {
+                    "explanation": "This paper addresses the dynamic interaction with knowledge bases for retrieval-augmented reasoning, which is conceptually related to the source paper's focus on retrieval-augmented reasoning. It builds on the idea of dynamic retrieval, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "4. Towards Better Instruction Following Retrieval Models": {
+                    "explanation": "This paper focuses on improving instruction-following capabilities in retrieval models, which is not directly related to the retrieval-augmented reasoning framework proposed in the source paper.",
+                    "relevance": 0
+                },
+                "5. Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty": {
+                    "explanation": "This paper addresses sub-optimal search behaviors in agentic retrieval-augmented generation, which is related to the source paper's focus on improving retrieval efficiency and reasoning quality. It shares a conceptual link with the source paper's approach to retrieval-augmented reasoning.",
+                    "relevance": 2
+                },
+                "6. WebThinker: Empowering Large Reasoning Models with Deep Research Capability": {
+                    "explanation": "This paper introduces a deep research agent for reasoning models, which involves dynamic information retrieval similar to the source paper's focus on retrieval-augmented reasoning. However, it does not directly build upon the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "7. A Comprehensive Survey of Reward Models: Taxonomy, Applications, Challenges, and Future": {
+                    "explanation": "This is a review paper that provides an overview of reward models and does not present novel hypotheses or findings related to the source paper.",
+                    "relevance": 0
+                },
+                "8. RARE: Retrieval-Augmented Reasoning Modeling": {
+                    "explanation": "This paper proposes a retrieval-augmented reasoning model that decouples knowledge storage from reasoning optimization, which is closely related to the source paper's focus on retrieval-augmented reasoning. It builds upon the concepts introduced in the source paper.",
+                    "relevance": 2
+                },
+                "9. Large Language Model Agent: A Survey on Methodology, Applications and Challenges": {
+                    "explanation": "This is a survey paper on large language model agents and does not present novel hypotheses or findings related to the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. RAG-R1 : Incentivize the Search and Reasoning Capabilities of LLMs through Multi-query Parallelism": {
+                    "explanation": "This paper proposes a framework to enhance retrieval-augmented generation by expanding from single-query to multi-query parallelism, which aligns with the source paper's focus on improving retrieval-augmented reasoning. It partially depends on the findings of the source paper regarding retrieval efficiency and reasoning capabilities.",
+                    "relevance": 2
+                },
+                "2. Learning to Route Queries Across Knowledge Bases for Step-wise Retrieval-Augmented Reasoning": {
+                    "explanation": "This paper addresses the dynamic interaction with knowledge bases for retrieval-augmented reasoning, which is conceptually related to the source paper's focus on retrieval-augmented reasoning. It builds on the idea of dynamic retrieval, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "3. Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty": {
+                    "explanation": "This paper addresses sub-optimal search behaviors in agentic retrieval-augmented generation, which is related to the source paper's focus on improving retrieval efficiency and reasoning quality. It shares a conceptual link with the source paper's approach to retrieval-augmented reasoning.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "89a5223e14896e7404d8c2fbd246f989ab3bcaac",
+            "title": "Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty",
+            "abstract": "Agentic Retrieval-Augmented Generation (RAG) systems enhance Large Language Models (LLMs) by enabling dynamic, multi-step reasoning and information retrieval. However, these systems often exhibit sub-optimal search behaviors like over-search (retrieving redundant information) and under-search (failing to retrieve necessary information), which hinder efficiency and reliability. This work formally defines and quantifies these behaviors, revealing their prevalence across multiple QA datasets and agentic RAG systems (e.g., one model could have avoided searching in 27.7% of its search steps). Furthermore, we demonstrate a crucial link between these inefficiencies and the models' uncertainty regarding their own knowledge boundaries, where response accuracy correlates with model's uncertainty in its search decisions. To address this, we propose $\\beta$-GRPO, a reinforcement learning-based training method that incorporates confidence threshold to reward high-certainty search decisions. Experiments on seven QA benchmarks show that $\\beta$-GRPO enable a 3B model with better agentic RAG ability, outperforming other strong baselines with a 4% higher average exact match score.",
+            "year": 2025,
+            "citation_count": 2,
+            "relevance": 2,
+            "explanation": "This paper addresses sub-optimal search behaviors in agentic retrieval-augmented generation, which is related to the source paper's focus on improving retrieval efficiency and reasoning quality. It shares a conceptual link with the source paper's approach to retrieval-augmented reasoning."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Survey of LLM-based Deep Search Agents: Paradigm, Optimization, Evaluation, and Challenges": {
+                    "explanation": "This paper is a review of LLM-based search agents, providing a systematic analysis of existing works and identifying challenges and future directions. It does not present novel hypotheses or findings directly related to the source paper's specific focus on mitigating sub-optimal search behaviors in RAG systems. Therefore, it is categorized as a review paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

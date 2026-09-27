@@ -1,0 +1,234 @@
+[
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "ed02d4a08a50d23709b7ce5df9878a8bc34ac12c",
+            "pmid": "2110.03192",
+            "title": "GNN is a Counter? Revisiting GNN for Question Answering",
+            "abstract": "Question Answering (QA) has been a long-standing research topic in AI and NLP fields, and a wealth of studies have been conducted to attempt to equip QA systems with human-level reasoning capability. To approximate the complicated human reasoning process, state-of-the-art QA systems commonly use pre-trained language models (LMs) to access knowledge encoded in LMs together with elaborately designed modules based on Graph Neural Networks (GNNs) to perform reasoning over knowledge graphs (KGs). However, many problems remain open regarding the reasoning functionality of these GNN-based modules. Can these GNN-based modules really perform a complex reasoning process? Are they under- or over-complicated for QA? To open the black box of GNN and investigate these problems, we dissect state-of-the-art GNN modules for QA and analyze their reasoning capability. We discover that even a very simple graph neural counter can outperform all the existing GNN modules on CommonsenseQA and OpenBookQA, two popular QA benchmark datasets which heavily rely on knowledge-aware reasoning. Our work reveals that existing knowledge-aware GNN modules may only carry out some simple reasoning such as counting. It remains a challenging open problem to build comprehensive reasoning modules for knowledge-powered QA.",
+            "year": 2021,
+            "citation_count": 32
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Relation-aware Language-Graph Transformer for Question Answering": {
+                    "explanation": "This paper builds on the idea of integrating language models with graph neural networks for question answering, similar to the source paper. It proposes a novel method for reasoning over language and graphs, which is inspired by the limitations identified in the source paper regarding existing GNN-based modules.",
+                    "relevance": 1
+                },
+                "2.ComFact: A Benchmark for Linking Contextual Commonsense Knowledge": {
+                    "explanation": "This paper introduces a new task and benchmark for linking contextual commonsense knowledge, which is related to the broader field of commonsense reasoning in NLP. However, it does not directly build on the findings or hypotheses of the source paper regarding GNNs in question answering.",
+                    "relevance": 0
+                },
+                "3.Deep Bidirectional Language-Knowledge Graph Pretraining": {
+                    "explanation": "This paper explores the integration of language models and knowledge graphs, similar to the source paper's focus on GNNs for QA. It introduces a new pretraining approach that could be seen as addressing the limitations of GNNs identified in the source paper, thus partially depending on its findings.",
+                    "relevance": 2
+                },
+                "4.Dynamic Relevance Graph Network for Knowledge-Aware Question Answering": {
+                    "explanation": "This paper proposes a novel GNN architecture for question answering, directly addressing the challenges of reasoning with knowledge graphs highlighted in the source paper. It builds on the source paper's findings about the limitations of existing GNN modules.",
+                    "relevance": 2
+                },
+                "5.Great Truths are Always Simple: A Rather Simple Knowledge Encoder for Enhancing the Commonsense Reasoning Capacity of Pre-Trained Models": {
+                    "explanation": "This paper conducts an empirical analysis of knowledge-aware GNNs and proposes a simpler approach, which aligns with the source paper's critique of existing GNN modules being over-complicated. It is inspired by the source paper's findings.",
+                    "relevance": 1
+                },
+                "6.ACENet: Attention Guided Commonsense Reasoning on Hybrid Knowledge Graph": {
+                    "explanation": "This paper focuses on enhancing commonsense reasoning by integrating knowledge graphs with language models, similar to the source paper's theme. However, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Deep Bidirectional Language-Knowledge Graph Pretraining": {
+                    "explanation": "This paper explores the integration of language models and knowledge graphs, similar to the source paper's focus on GNNs for QA. It introduces a new pretraining approach that could be seen as addressing the limitations of GNNs identified in the source paper, thus partially depending on its findings.",
+                    "relevance": 2
+                },
+                "2.Dynamic Relevance Graph Network for Knowledge-Aware Question Answering": {
+                    "explanation": "This paper proposes a novel GNN architecture for question answering, directly addressing the challenges of reasoning with knowledge graphs highlighted in the source paper. It builds on the source paper's findings about the limitations of existing GNN modules.",
+                    "relevance": 2
+                },
+                "3.Relation-aware Language-Graph Transformer for Question Answering": {
+                    "explanation": "This paper builds on the idea of integrating language models with graph neural networks for question answering, similar to the source paper. It proposes a novel method for reasoning over language and graphs, which is inspired by the limitations identified in the source paper regarding existing GNN-based modules.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "ad3dfb2514cb0c899fcb9a14d229ff2a6018892f",
+            "title": "Deep Bidirectional Language-Knowledge Graph Pretraining",
+            "abstract": "Pretraining a language model (LM) on text has been shown to help various downstream NLP tasks. Recent works show that a knowledge graph (KG) can complement text data, offering structured background knowledge that provides a useful scaffold for reasoning. However, these works are not pretrained to learn a deep fusion of the two modalities at scale, limiting the potential to acquire fully joint representations of text and KG. Here we propose DRAGON (Deep Bidirectional Language-Knowledge Graph Pretraining), a self-supervised approach to pretraining a deeply joint language-knowledge foundation model from text and KG at scale. Specifically, our model takes pairs of text segments and relevant KG subgraphs as input and bidirectionally fuses information from both modalities. We pretrain this model by unifying two self-supervised reasoning tasks, masked language modeling and KG link prediction. DRAGON outperforms existing LM and LM+KG models on diverse downstream tasks including question answering across general and biomedical domains, with +5% absolute gain on average. In particular, DRAGON achieves notable performance on complex reasoning about language and knowledge (+10% on questions involving long contexts or multi-step reasoning) and low-resource QA (+8% on OBQA and RiddleSense), and new state-of-the-art results on various BioNLP tasks. Our code and trained models are available at https://github.com/michiyasunaga/dragon.",
+            "year": 2022,
+            "citation_count": 213,
+            "relevance": 2,
+            "explanation": "This paper explores the integration of language models and knowledge graphs, similar to the source paper's focus on GNNs for QA. It introduces a new pretraining approach that could be seen as addressing the limitations of GNNs identified in the source paper, thus partially depending on its findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Democratising Knowledge Representation with BioCypher": {
+                    "explanation": "This paper focuses on standardizing the framework of knowledge graph creation, which is a different aspect from the source paper's focus on pretraining language models with integrated knowledge graphs. While both papers deal with knowledge graphs, the connection is not strong enough to suggest that the hypothesis in this paper is inspired by or dependent on the source paper.",
+                    "relevance": 0
+                },
+                "2. Large language models encode clinical knowledge": {
+                    "explanation": "This paper discusses the capabilities of large language models in the medical domain, focusing on clinical knowledge and question answering. While it involves language models, it does not directly build upon or depend on the integration of knowledge graphs as proposed in the source paper.",
+                    "relevance": 0
+                },
+                "3. Graph Learning and Its Advancements on Large Language Models: A Holistic Survey": {
+                    "explanation": "This is a survey paper on graph learning and its integration with large language models. It does not present new hypotheses or findings directly inspired by or dependent on the source paper, which focuses on pretraining language models with knowledge graphs.",
+                    "relevance": 0
+                },
+                "4. A Survey of Knowledge Graph Reasoning on Graph Types: Static, Dynamic, and Multi-Modal": {
+                    "explanation": "This is a survey paper on knowledge graph reasoning, which does not present new hypotheses or findings directly inspired by or dependent on the source paper. It summarizes existing literature rather than building on the specific approach of integrating language models with knowledge graphs.",
+                    "relevance": 0
+                },
+                "5. A Unified Knowledge Graph Augmentation Service for Boosting Domain-specific NLP Tasks": {
+                    "explanation": "This paper proposes a service for augmenting domain-specific NLP tasks with knowledge graphs, which aligns with the source paper's theme of integrating knowledge graphs with language models. The hypothesis in this paper is inspired by the idea of enhancing NLP tasks with knowledge graphs, similar to the source paper's approach.",
+                    "relevance": 1
+                },
+                "6. VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering": {
+                    "explanation": "This paper presents a model that performs bidirectional fusion between unstructured and structured multimodal knowledge, similar to the bidirectional fusion of text and knowledge graphs in the source paper. The hypothesis in this paper is partially dependent on the idea of integrating structured knowledge for reasoning, as proposed in the source paper.",
+                    "relevance": 2
+                },
+                "7. UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models": {
+                    "explanation": "This paper proposes a framework for unifying structured knowledge grounding tasks, which involves integrating structured knowledge with language models. The hypothesis in this paper is inspired by the source paper's approach of integrating knowledge graphs with language models for improved NLP task performance.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering": {
+                    "explanation": "This paper presents a model that performs bidirectional fusion between unstructured and structured multimodal knowledge, similar to the bidirectional fusion of text and knowledge graphs in the source paper. The hypothesis in this paper is partially dependent on the idea of integrating structured knowledge for reasoning, as proposed in the source paper.",
+                    "relevance": 2
+                },
+                "2. A Unified Knowledge Graph Augmentation Service for Boosting Domain-specific NLP Tasks": {
+                    "explanation": "This paper proposes a service for augmenting domain-specific NLP tasks with knowledge graphs, which aligns with the source paper's theme of integrating knowledge graphs with language models. The hypothesis in this paper is inspired by the idea of enhancing NLP tasks with knowledge graphs, similar to the source paper's approach.",
+                    "relevance": 1
+                },
+                "3. UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models": {
+                    "explanation": "This paper proposes a framework for unifying structured knowledge grounding tasks, which involves integrating structured knowledge with language models. The hypothesis in this paper is inspired by the source paper's approach of integrating knowledge graphs with language models for improved NLP task performance.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "ef98395632e38e0e742695b6e7dbae32c78cc76b",
+            "title": "VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering",
+            "abstract": "Visual question answering (VQA) requires systems to perform concept-level reasoning by unifying unstructured (e.g., the context in question and answer; \u201cQA context\u201d) and structured (e.g., knowledge graph for the QA context and scene; \u201cconcept graph\u201d) multimodal knowledge. Existing works typically combine a scene graph and a concept graph of the scene by connecting corresponding visual nodes and concept nodes, then incorporate the QA context representation to perform question answering. However, these methods only perform a unidirectional fusion from unstructured knowledge to structured knowledge, limiting their potential to capture joint reasoning over the heterogeneous modalities of knowledge. To perform more expressive reasoning, we propose VQA-GNN, a new VQA model that performs bidirectional fusion between unstructured and structured multimodal knowledge to obtain unified knowledge representations. Specifically, we inter-connect the scene graph and the concept graph through a super node that represents the QA context, and introduce a new multimodal GNN technique to perform inter-modal message passing for reasoning that mitigates representational gaps between modalities. On two challenging VQA tasks (VCR and GQA), our method outperforms strong baseline VQA methods by 3.2% on VCR (Q-AR) and 4.6% on GQA, suggesting its strength in performing concept-level reasoning. Ablation studies further demonstrate the efficacy of the bidirectional fusion and multimodal GNN method in unifying unstructured and structured multimodal knowledge.",
+            "year": 2022,
+            "citation_count": 22,
+            "relevance": 2,
+            "explanation": "This paper presents a model that performs bidirectional fusion between unstructured and structured multimodal knowledge, similar to the bidirectional fusion of text and knowledge graphs in the source paper. The hypothesis in this paper is partially dependent on the idea of integrating structured knowledge for reasoning, as proposed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Graph Neural Networks in Vision-Language Image Understanding: A Survey": {
+                    "explanation": "This paper is a survey and does not present a novel hypothesis or findings. It reviews the field of graph neural networks in vision-language tasks, including VQA, which is related to the source paper. However, as a review, it does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ef98395632e38e0e742695b6e7dbae32c78cc76b",
+            "title": "VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering",
+            "abstract": "Visual question answering (VQA) requires systems to perform concept-level reasoning by unifying unstructured (e.g., the context in question and answer; \u201cQA context\u201d) and structured (e.g., knowledge graph for the QA context and scene; \u201cconcept graph\u201d) multimodal knowledge. Existing works typically combine a scene graph and a concept graph of the scene by connecting corresponding visual nodes and concept nodes, then incorporate the QA context representation to perform question answering. However, these methods only perform a unidirectional fusion from unstructured knowledge to structured knowledge, limiting their potential to capture joint reasoning over the heterogeneous modalities of knowledge. To perform more expressive reasoning, we propose VQA-GNN, a new VQA model that performs bidirectional fusion between unstructured and structured multimodal knowledge to obtain unified knowledge representations. Specifically, we inter-connect the scene graph and the concept graph through a super node that represents the QA context, and introduce a new multimodal GNN technique to perform inter-modal message passing for reasoning that mitigates representational gaps between modalities. On two challenging VQA tasks (VCR and GQA), our method outperforms strong baseline VQA methods by 3.2% on VCR (Q-AR) and 4.6% on GQA, suggesting its strength in performing concept-level reasoning. Ablation studies further demonstrate the efficacy of the bidirectional fusion and multimodal GNN method in unifying unstructured and structured multimodal knowledge.",
+            "year": 2022,
+            "citation_count": 22,
+            "relevance": 2,
+            "explanation": "This paper presents a model that performs bidirectional fusion between unstructured and structured multimodal knowledge, similar to the bidirectional fusion of text and knowledge graphs in the source paper. The hypothesis in this paper is partially dependent on the idea of integrating structured knowledge for reasoning, as proposed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. T2SG: Traffic Topology Scene Graph for Topology Reasoning in Autonomous Driving": {
+                    "explanation": "This paper focuses on traffic scene understanding and topology reasoning in autonomous driving using a novel scene graph approach. While it shares a conceptual similarity with the source paper in using scene graphs for reasoning, it does not directly build upon the findings or hypotheses of the source paper, which is focused on visual question answering with multimodal knowledge fusion.",
+                    "relevance": 0
+                },
+                "2. PV-VTT: A Privacy-Centric Dataset for Mission-Specific Anomaly Detection and Natural Language Interpretation": {
+                    "explanation": "This paper introduces a dataset for anomaly detection and privacy violation identification using a GNN-based model. Although it involves graph neural networks, it does not directly relate to the source paper's focus on visual question answering with multimodal knowledge fusion.",
+                    "relevance": 0
+                },
+                "3. Mastering Scene Understanding: Scene Graphs to the Rescue": {
+                    "explanation": "This is a tutorial paper that reviews the use of scene graphs in computer vision, including applications like visual question answering. It does not present novel hypotheses or findings and serves as a review of existing literature, thus it is not directly relevant to the source paper.",
+                    "relevance": 0
+                },
+                "4. ViTA: An Efficient Video-to-Text Algorithm using VLM for RAG-based Video Analysis System": {
+                    "explanation": "This paper discusses a method for converting video to text using vision language models, focusing on efficiency in video analysis. It does not directly relate to the source paper's focus on visual question answering with multimodal knowledge fusion via graph neural networks.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "ef98395632e38e0e742695b6e7dbae32c78cc76b",
+            "title": "VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering",
+            "abstract": "Visual question answering (VQA) requires systems to perform concept-level reasoning by unifying unstructured (e.g., the context in question and answer; \u201cQA context\u201d) and structured (e.g., knowledge graph for the QA context and scene; \u201cconcept graph\u201d) multimodal knowledge. Existing works typically combine a scene graph and a concept graph of the scene by connecting corresponding visual nodes and concept nodes, then incorporate the QA context representation to perform question answering. However, these methods only perform a unidirectional fusion from unstructured knowledge to structured knowledge, limiting their potential to capture joint reasoning over the heterogeneous modalities of knowledge. To perform more expressive reasoning, we propose VQA-GNN, a new VQA model that performs bidirectional fusion between unstructured and structured multimodal knowledge to obtain unified knowledge representations. Specifically, we inter-connect the scene graph and the concept graph through a super node that represents the QA context, and introduce a new multimodal GNN technique to perform inter-modal message passing for reasoning that mitigates representational gaps between modalities. On two challenging VQA tasks (VCR and GQA), our method outperforms strong baseline VQA methods by 3.2% on VCR (Q-AR) and 4.6% on GQA, suggesting its strength in performing concept-level reasoning. Ablation studies further demonstrate the efficacy of the bidirectional fusion and multimodal GNN method in unifying unstructured and structured multimodal knowledge.",
+            "year": 2022,
+            "citation_count": 22,
+            "relevance": 2,
+            "explanation": "This paper presents a model that performs bidirectional fusion between unstructured and structured multimodal knowledge, similar to the bidirectional fusion of text and knowledge graphs in the source paper. The hypothesis in this paper is partially dependent on the idea of integrating structured knowledge for reasoning, as proposed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. FlexMUSE: Multimodal Unification and Semantics Enhancement Framework with Flexible interaction for Creative Writing": {
+                    "explanation": "This paper focuses on multimodal creative writing, which is a different application domain compared to visual question answering. Although it involves multimodal unification, it does not directly relate to the reasoning with multimodal knowledge via graph neural networks as proposed in the source paper.",
+                    "relevance": 0
+                },
+                "2. MissionHD: Data-Driven Refinement of Reasoning Graph Structure through Hyperdimensional Causal Path Encoding and Decoding": {
+                    "explanation": "MissionHD introduces a framework for refining reasoning graph structures, which is related to the source paper's focus on reasoning with graph neural networks. However, it is more about refining graph structures rather than bidirectional fusion of multimodal knowledge, making it somewhat related but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "3. Augmented Vision-Language Models: A Systematic Review": {
+                    "explanation": "This paper is a systematic review of vision-language models and does not propose new hypotheses or findings. It summarizes existing literature, making it unrelated to the source paper's novel contributions.",
+                    "relevance": 0
+                },
+                "4. DeepMLF: Multimodal language model with learnable tokens for deep fusion in sentiment analysis": {
+                    "explanation": "DeepMLF focuses on sentiment analysis using multimodal fusion, which is a different task from visual question answering. Although it involves multimodal fusion, it does not directly build upon the source paper's methods or findings.",
+                    "relevance": 0
+                },
+                "5. Multimodal Fusion and Vision-Language Models: A Survey for Robot Vision": {
+                    "explanation": "This paper is a survey of multimodal fusion techniques and vision-language models in the context of robot vision. It does not propose new hypotheses or findings and is unrelated to the source paper's focus on visual question answering.",
+                    "relevance": 0
+                },
+                "6. Hypergraph-Based Model for Visual Question Answering with External Knowledge Integration": {
+                    "explanation": "This paper proposes a hypergraph-based model for visual question answering, which is directly related to the source paper's focus on reasoning with multimodal knowledge via graph neural networks. The use of hypergraphs and external knowledge integration aligns with the source paper's goals, making it highly relevant.",
+                    "relevance": 2
+                },
+                "7. Predicate Hierarchies Improve Few-Shot State Classification": {
+                    "explanation": "This paper focuses on state classification using predicate hierarchies, which is a different task from visual question answering. It does not directly relate to the source paper's methods or findings.",
+                    "relevance": 0
+                },
+                "8. ASAM: Asynchronous self-attention model for visual question answering": {
+                    "explanation": "ASAM proposes a model for visual question answering, which is related to the source paper's domain. However, it focuses on asynchronous self-attention rather than graph neural networks or bidirectional fusion of multimodal knowledge, making it somewhat related but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Hypergraph-Based Model for Visual Question Answering with External Knowledge Integration": {
+                    "explanation": "This paper proposes a hypergraph-based model for visual question answering, which is directly related to the source paper's focus on reasoning with multimodal knowledge via graph neural networks. The use of hypergraphs and external knowledge integration aligns with the source paper's goals, making it highly relevant.",
+                    "relevance": 2
+                },
+                "2. MissionHD: Data-Driven Refinement of Reasoning Graph Structure through Hyperdimensional Causal Path Encoding and Decoding": {
+                    "explanation": "MissionHD introduces a framework for refining reasoning graph structures, which is related to the source paper's focus on reasoning with graph neural networks. However, it is more about refining graph structures rather than bidirectional fusion of multimodal knowledge, making it somewhat related but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "3. ASAM: Asynchronous self-attention model for visual question answering": {
+                    "explanation": "ASAM proposes a model for visual question answering, which is related to the source paper's domain. However, it focuses on asynchronous self-attention rather than graph neural networks or bidirectional fusion of multimodal knowledge, making it somewhat related but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    }
+]

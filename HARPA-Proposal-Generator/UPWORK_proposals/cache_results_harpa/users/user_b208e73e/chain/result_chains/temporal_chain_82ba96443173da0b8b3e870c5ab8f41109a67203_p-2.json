@@ -1,0 +1,37 @@
+[
+    {
+        "paperId": "82ba96443173da0b8b3e870c5ab8f41109a67203",
+        "pmid": "2202.00273",
+        "title": "StyleGAN-XL: Scaling StyleGAN to Large Diverse Datasets",
+        "abstract": "Computer graphics has experienced a recent surge of data-centric approaches for photorealistic and controllable content creation. StyleGAN in particular sets new standards for generative modeling regarding image quality and controllability. However, StyleGAN\u2019s performance severely degrades on large unstructured datasets such as ImageNet. StyleGAN was designed for controllability; hence, prior works suspect its restrictive design to be unsuitable for diverse datasets. In contrast, we find the main limiting factor to be the current training strategy. Following the recently introduced Projected GAN paradigm, we leverage powerful neural network priors and a progressive growing strategy to successfully train the latest StyleGAN3 generator on ImageNet. Our final model, StyleGAN-XL, sets a new state-of-the-art on large-scale image synthesis and is the first to generate images at a resolution of 10242 at such a dataset scale. We demonstrate that this model can invert and edit images beyond the narrow domain of portraits or specific object classes. Code, models, and supplementary videos can be found at https://sites.google.com/view/stylegan-xl/ .",
+        "year": 2022,
+        "citation_count": 528
+    },
+    {
+        "paperId": "df155537f7c4e59e179a95f3b37a179f913c94f9",
+        "title": "clip2latent: Text driven sampling of a pre-trained StyleGAN using denoising diffusion and CLIP",
+        "abstract": "We introduce a new method to efficiently create text-to-image models from a pre-trained CLIP and StyleGAN. It enables text driven sampling with an existing generative model without any external data or fine-tuning. This is achieved by training a diffusion model conditioned on CLIP embeddings to sample latent vectors of a pre-trained StyleGAN, which we call clip2latent. We leverage the alignment between CLIP's image and text embeddings to avoid the need for any text labelled data for training the conditional diffusion model. We demonstrate that clip2latent allows us to generate high-resolution (1024x1024 pixels) images based on text prompts with fast sampling, high image quality, and low training compute and data requirements. We also show that the use of the well studied StyleGAN architecture, without further fine-tuning, allows us to directly apply existing methods to control and modify the generated images adding a further layer of control to our text-to-image pipeline.",
+        "year": 2022,
+        "citation_count": 20,
+        "relevance": 2,
+        "explanation": "This paper builds on StyleGAN by using it in conjunction with CLIP and diffusion models to create text-to-image models, directly leveraging the StyleGAN architecture and its capabilities."
+    },
+    {
+        "paperId": "ebb832ce9ebc2817946a287f1cc869a6f6e05a78",
+        "title": "Bridging CLIP and StyleGAN through Latent Alignment for Image Editing",
+        "abstract": "Text-driven image manipulation is developed since the vision-language model (CLIP) has been proposed. Previous work has adopted CLIP to design a text-image consistency-based objective to address this issue. However, these methods require either test-time optimization or image feature cluster analysis for single-mode manipulation direction. In this paper, we manage to achieve inference-time optimization-free diverse manipulation direction mining by bridging CLIP and StyleGAN through Latent Alignment (CSLA). More specifically, our efforts consist of three parts: 1) a data-free training strategy to train latent mappers to bridge the latent space of CLIP and StyleGAN; 2) for more precise mapping, temporal relative consistency is proposed to address the knowledge distribution bias problem among different latent spaces; 3) to refine the mapped latent in s space, adaptive style mixing is also proposed. With this mapping scheme, we can achieve GAN inversion, text-to-image generation and text-driven image manipulation. Qualitative and quantitative comparisons are made to demonstrate the effectiveness of our method.",
+        "year": 2022,
+        "citation_count": 14,
+        "relevance": 1,
+        "explanation": "This paper builds on the concept of integrating CLIP and StyleGAN, similar to the source paper. It introduces a method for text-driven image manipulation by aligning the latent spaces of CLIP and StyleGAN, which is inspired by the source paper's approach of using CLIP embeddings with StyleGAN for text-to-image generation. The paper's hypothesis is inspired by the source paper's findings on leveraging CLIP and StyleGAN for image generation."
+    },
+    {
+        "paperId": "063171664f46ea1e08c09423d1eca7bad859fb52",
+        "title": "Multi\u2010Modal Face Stylization with a Generative Prior",
+        "abstract": "In this work, we introduce a new approach for face stylization. Despite existing methods achieving impressive results in this task, there is still room for improvement in generating high\u2010quality artistic faces with diverse styles and accurate facial reconstruction. Our proposed framework, MMFS, supports multi\u2010modal face stylization by leveraging the strengths of StyleGAN and integrates it into an encoder\u2010decoder architecture. Specifically, we use the mid\u2010resolution and high\u2010resolution layers of StyleGAN as the decoder to generate high\u2010quality faces, while aligning its low\u2010resolution layer with the encoder to extract and preserve input facial details. We also introduce a two\u2010stage training strategy, where we train the encoder in the first stage to align the feature maps with StyleGAN and enable a faithful reconstruction of input faces. In the second stage, the entire network is fine\u2010tuned with artistic data for stylized face generation. To enable the fine\u2010tuned model to be applied in zero\u2010shot and one\u2010shot stylization tasks, we train an additional mapping network from the large\u2010scale Contrastive\u2010Language\u2010Image\u2010Pre\u2010training (CLIP) space to a latent w+ space of fine\u2010tuned StyleGAN. Qualitative and quantitative experiments show that our framework achieves superior performance in both one\u2010shot and zero\u2010shot face stylization tasks, outperforming state\u2010of\u2010the\u2010art methods by a large margin.",
+        "year": 2023,
+        "citation_count": 4,
+        "relevance": 2,
+        "explanation": "This paper uses StyleGAN for face stylization and involves mapping from CLIP space, similar to the source paper's bridging of CLIP and StyleGAN. It partially depends on the source paper's findings regarding latent space alignment."
+    }
+]

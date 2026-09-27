@@ -1,0 +1,381 @@
+[
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "9b302002c4b764f61fa7a3d14270470f625945cf",
+            "pmid": "2410.13509",
+            "title": "RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards",
+            "abstract": "Retrieval-Augmented Generation (RAG) has proven its effectiveness in mitigating hallucinations in Large Language Models (LLMs) by retrieving knowledge from external resources. To adapt LLMs for the RAG systems, current approaches use instruction tuning to optimize LLMs, improving their ability to utilize retrieved knowledge. This supervised fine-tuning (SFT) approach focuses on equipping LLMs to handle diverse RAG tasks using different instructions. However, it trains RAG modules to overfit training signals and overlooks the varying data preferences among agents within the RAG system. In this paper, we propose a Differentiable Data Rewards (DDR) method, which end-to-end trains RAG systems by aligning data preferences between different RAG modules. DDR works by collecting the rewards to optimize each agent in the RAG system with the rollout method, which prompts agents to sample some potential responses as perturbations, evaluates the impact of these perturbations on the whole RAG system, and subsequently optimizes the agent to produce outputs that improve the performance of the RAG system. Our experiments on various knowledge-intensive tasks demonstrate that DDR significantly outperforms the SFT method, particularly for LLMs with smaller-scale parameters that depend more on the retrieved knowledge. Additionally, DDR exhibits a stronger capability to align the data preference between RAG modules. The DDR method makes the generation module more effective in extracting key information from documents and mitigating conflicts between parametric memory and external knowledge. All codes are available at https://github.com/OpenMatch/RAG-DDR.",
+            "year": 2024,
+            "citation_count": 13
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented generation (RAG) to address factual hallucination in Medical Vision Language Models. While it introduces a new domain (medical) and focuses on multimodal systems, it shares the foundational idea of using RAG to improve model performance. However, it does not directly depend on the specific findings or hypotheses of the source paper, which focuses on optimizing RAG systems using Differentiable Data Rewards (DDR).",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models": {
+                    "explanation": "This paper builds on the concept of retrieval-augmented generation (RAG) to address factual hallucination in Medical Vision Language Models. While it introduces a new domain (medical) and focuses on multimodal systems, it shares the foundational idea of using RAG to improve model performance. However, it does not directly depend on the specific findings or hypotheses of the source paper, which focuses on optimizing RAG systems using Differentiable Data Rewards (DDR).",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "98cb07d3e50f0718ff17eca4e898f451e0f3381d",
+            "title": "MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models",
+            "abstract": "Artificial Intelligence (AI) has demonstrated significant potential in healthcare, particularly in disease diagnosis and treatment planning. Recent progress in Medical Large Vision-Language Models (Med-LVLMs) has opened up new possibilities for interactive diagnostic tools. However, these models often suffer from factual hallucination, which can lead to incorrect diagnoses. Fine-tuning and retrieval-augmented generation (RAG) have emerged as methods to address these issues. However, the amount of high-quality data and distribution shifts between training data and deployment data limit the application of fine-tuning methods. Although RAG is lightweight and effective, existing RAG-based approaches are not sufficiently general to different medical domains and can potentially cause misalignment issues, both between modalities and between the model and the ground truth. In this paper, we propose a versatile multimodal RAG system, MMed-RAG, designed to enhance the factuality of Med-LVLMs. Our approach introduces a domain-aware retrieval mechanism, an adaptive retrieved contexts selection method, and a provable RAG-based preference fine-tuning strategy. These innovations make the RAG process sufficiently general and reliable, significantly improving alignment when introducing retrieved contexts. Experimental results across five medical datasets (involving radiology, ophthalmology, pathology) on medical VQA and report generation demonstrate that MMed-RAG can achieve an average improvement of 43.8% in the factual accuracy of Med-LVLMs. Our data and code are available in https://github.com/richard-peng-xia/MMed-RAG.",
+            "year": 2024,
+            "citation_count": 38,
+            "relevance": 1,
+            "explanation": "This paper builds on the concept of retrieval-augmented generation (RAG) to address factual hallucination in Medical Vision Language Models. While it introduces a new domain (medical) and focuses on multimodal systems, it shares the foundational idea of using RAG to improve model performance. However, it does not directly depend on the specific findings or hypotheses of the source paper, which focuses on optimizing RAG systems using Differentiable Data Rewards (DDR)."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. OpenRAG: Open-source Retrieval-Augmented Generation Architecture for Personalized Learning": {
+                    "explanation": "This paper focuses on a RAG system for personalized learning, which is a different application domain than the medical focus of the source paper. While both involve RAG systems, the specific challenges and solutions are distinct, making this paper not directly connected to the source paper.",
+                    "relevance": 0
+                },
+                "2. Towards Interpretable Radiology Report Generation via Concept Bottlenecks using a Multi-Agentic RAG": {
+                    "explanation": "This paper addresses interpretability in radiology report generation using a multi-agent RAG system, which aligns with the source paper's focus on enhancing factual accuracy in medical LVLMs. The use of RAG systems for improving clinical relevance and transparency is a shared goal, making this paper partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization": {
+                    "explanation": "MMedPO addresses modality misalignment in Med-LVLMs, similar to the source paper's focus on improving factuality and alignment in Med-LVLMs. Both papers propose preference optimization strategies to enhance model performance, indicating a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "4. MMIE: Massive Multimodal Interleaved Comprehension Benchmark for Large Vision-Language Models": {
+                    "explanation": "This paper introduces a benchmark for evaluating interleaved multimodal comprehension and generation in LVLMs. While it relates to the general field of LVLMs, it does not specifically address the medical domain or the RAG-based enhancements discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models": {
+                    "explanation": "CARES evaluates the trustworthiness of Med-LVLMs, which is related to the source paper's focus on improving factual accuracy. However, it is more of a benchmarking effort rather than building on the specific RAG-based methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "6. Calibrated Self-Rewarding Vision Language Models": {
+                    "explanation": "This paper proposes a self-rewarding approach to reduce hallucinations in LVLMs, which aligns with the source paper's goal of enhancing factuality in Med-LVLMs. The focus on reducing hallucinations and improving modality alignment suggests a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "7. MoVA: Adapting Mixture of Vision Experts to Multimodal Context": {
+                    "explanation": "MoVA focuses on adapting vision experts for multimodal contexts, which is a different approach than the RAG-based methods discussed in the source paper. The focus is more on vision encoder adaptation rather than retrieval-augmented generation.",
+                    "relevance": 0
+                },
+                "8. Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning": {
+                    "explanation": "Visual CoT introduces a dataset and benchmark for chain-of-thought reasoning in MLLMs, which does not directly relate to the RAG-based methods or the medical domain focus of the source paper.",
+                    "relevance": 0
+                },
+                "9. AlzheimerRAG: Multimodal Retrieval Augmented Generation for PubMed articles": {
+                    "explanation": "AlzheimerRAG applies a multimodal RAG pipeline for biomedical research, similar to the source paper's focus on enhancing factuality in Med-LVLMs. The use of RAG in a medical context suggests a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Towards Interpretable Radiology Report Generation via Concept Bottlenecks using a Multi-Agentic RAG": {
+                    "explanation": "This paper aligns with the source paper's focus on enhancing factual accuracy in medical LVLMs using RAG systems, indicating a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization": {
+                    "explanation": "MMedPO addresses modality misalignment in Med-LVLMs, similar to the source paper's focus on improving factuality and alignment, suggesting a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. Calibrated Self-Rewarding Vision Language Models": {
+                    "explanation": "This paper proposes a self-rewarding approach to reduce hallucinations in LVLMs, aligning with the source paper's goal of enhancing factuality in Med-LVLMs, indicating a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "b4a97890b16468f4e635c602b4b629e3bbb9d3df",
+            "title": "Calibrated Self-Rewarding Vision Language Models",
+            "abstract": "Large Vision-Language Models (LVLMs) have made substantial progress by integrating pre-trained large language models (LLMs) and vision models through instruction tuning. Despite these advancements, LVLMs often exhibit the hallucination phenomenon, where generated text responses appear linguistically plausible but contradict the input image, indicating a misalignment between image and text pairs. This misalignment arises because the model tends to prioritize textual information over visual input, even when both the language model and visual representations are of high quality. Existing methods leverage additional models or human annotations to curate preference data and enhance modality alignment through preference optimization. These approaches may not effectively reflect the target LVLM's preferences, making the curated preferences easily distinguishable. Our work addresses these challenges by proposing the Calibrated Self-Rewarding (CSR) approach, which enables the model to self-improve by iteratively generating candidate responses, evaluating the reward for each response, and curating preference data for fine-tuning. In the reward modeling, we employ a step-wise strategy and incorporate visual constraints into the self-rewarding process to place greater emphasis on visual input. Empirical results demonstrate that CSR enhances performance and reduces hallucinations across ten benchmarks and tasks, achieving substantial improvements over existing methods by 7.62%. Our empirical results are further supported by rigorous theoretical analysis, under mild assumptions, verifying the effectiveness of introducing visual constraints into the self-rewarding paradigm. Additionally, CSR shows compatibility with different vision-language models and the ability to incrementally improve performance through iterative fine-tuning. Our data and code are available at https://github.com/YiyangZhou/CSR.",
+            "year": 2024,
+            "citation_count": 43,
+            "relevance": 2,
+            "explanation": "This paper proposes a self-rewarding approach to reduce hallucinations in LVLMs, aligning with the source paper's goal of enhancing factuality in Med-LVLMs, indicating a partial dependency on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Probing Visual Language Priors in VLMs": {
+                    "explanation": "This paper investigates visual language priors and proposes a self-improving framework to enhance visual reasoning in VLMs. It shares a thematic connection with the source paper's focus on reducing hallucinations and improving modality alignment, but it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.Bootstrapping Language-Guided Navigation Learning with Self-Refining Data Flywheel": {
+                    "explanation": "This paper focuses on language-guided navigation learning, which is unrelated to the source paper's focus on vision-language models and hallucinations.",
+                    "relevance": 0
+                },
+                "3.MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization": {
+                    "explanation": "This paper addresses modality misalignment in medical vision-language models using preference optimization, similar to the source paper's approach to reducing hallucinations in LVLMs. It partially depends on the source paper's findings regarding preference optimization and modality alignment.",
+                    "relevance": 2
+                },
+                "4.EACO: Enhancing Alignment in Multimodal LLMs via Critical Observation": {
+                    "explanation": "EACO focuses on enhancing alignment in multimodal LLMs using self-generated preference data. It shares a conceptual similarity with the source paper's self-rewarding approach, but it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "5.Scaling Inference-Time Search with Vision Value Model for Improved Visual Comprehension": {
+                    "explanation": "This paper presents a Vision Value Model to enhance visual comprehension during inference-time search. While it addresses hallucinations, it does not directly build upon the source paper's findings or methods.",
+                    "relevance": 0
+                },
+                "6.Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning": {
+                    "explanation": "Critic-V introduces a framework to improve reasoning in VLMs by providing critiques. It shares a thematic connection with the source paper's focus on reducing hallucinations but does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "7.VLRewardBench: A Challenging Benchmark for Vision-Language Generative Reward Models": {
+                    "explanation": "VLRewardBench introduces a benchmark for evaluating vision-language generative reward models. It is not directly related to the source paper's focus on self-rewarding models and modality alignment.",
+                    "relevance": 0
+                },
+                "8.VidHal: Benchmarking Temporal Hallucinations in Vision LLMs": {
+                    "explanation": "VidHal focuses on evaluating video-based hallucinations in vision LLMs, which is not directly related to the source paper's focus on image-text alignment and self-rewarding.",
+                    "relevance": 0
+                },
+                "9.Fine-Grained Verifiers: Preference Modeling as Next-token Prediction in Vision-Language Alignment": {
+                    "explanation": "This paper proposes a self-alignment method using fine-grained verifiers for vision-language alignment. It shares a conceptual similarity with the source paper's self-rewarding approach but does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "10.CREAM: Consistency Regularized Self-Rewarding Language Models": {
+                    "explanation": "CREAM focuses on improving self-rewarding language models through consistency regularization. It shares a thematic connection with the source paper's self-rewarding approach but does not directly depend on its findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization": {
+                    "explanation": "This paper addresses modality misalignment in medical vision-language models using preference optimization, similar to the source paper's approach to reducing hallucinations in LVLMs. It partially depends on the source paper's findings regarding preference optimization and modality alignment.",
+                    "relevance": 2
+                },
+                "2.Probing Visual Language Priors in VLMs": {
+                    "explanation": "This paper investigates visual language priors and proposes a self-improving framework to enhance visual reasoning in VLMs. It shares a thematic connection with the source paper's focus on reducing hallucinations and improving modality alignment, but it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.EACO: Enhancing Alignment in Multimodal LLMs via Critical Observation": {
+                    "explanation": "EACO focuses on enhancing alignment in multimodal LLMs using self-generated preference data. It shares a conceptual similarity with the source paper's self-rewarding approach, but it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "b4a97890b16468f4e635c602b4b629e3bbb9d3df",
+            "title": "Calibrated Self-Rewarding Vision Language Models",
+            "abstract": "Large Vision-Language Models (LVLMs) have made substantial progress by integrating pre-trained large language models (LLMs) and vision models through instruction tuning. Despite these advancements, LVLMs often exhibit the hallucination phenomenon, where generated text responses appear linguistically plausible but contradict the input image, indicating a misalignment between image and text pairs. This misalignment arises because the model tends to prioritize textual information over visual input, even when both the language model and visual representations are of high quality. Existing methods leverage additional models or human annotations to curate preference data and enhance modality alignment through preference optimization. These approaches may not effectively reflect the target LVLM's preferences, making the curated preferences easily distinguishable. Our work addresses these challenges by proposing the Calibrated Self-Rewarding (CSR) approach, which enables the model to self-improve by iteratively generating candidate responses, evaluating the reward for each response, and curating preference data for fine-tuning. In the reward modeling, we employ a step-wise strategy and incorporate visual constraints into the self-rewarding process to place greater emphasis on visual input. Empirical results demonstrate that CSR enhances performance and reduces hallucinations across ten benchmarks and tasks, achieving substantial improvements over existing methods by 7.62%. Our empirical results are further supported by rigorous theoretical analysis, under mild assumptions, verifying the effectiveness of introducing visual constraints into the self-rewarding paradigm. Additionally, CSR shows compatibility with different vision-language models and the ability to incrementally improve performance through iterative fine-tuning. Our data and code are available at https://github.com/YiyangZhou/CSR.",
+            "year": 2024,
+            "citation_count": 43,
+            "relevance": 2,
+            "explanation": "This paper proposes a self-rewarding approach to reduce hallucinations in LVLMs, aligning with the source paper's goal of enhancing factuality in Med-LVLMs, indicating a partial dependency on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models": {
+                    "explanation": "This paper addresses factual hallucination in medical vision-language models, similar to the hallucination issue discussed in the source paper. However, it focuses on a different domain (medical) and uses a different approach (RAG) rather than the calibrated self-rewarding method. The connection is more thematic than methodological.",
+                    "relevance": 0
+                },
+                "2. Preference Optimization with Multi-Sample Comparisons": {
+                    "explanation": "This paper discusses preference optimization in generative models, which is related to the source paper's focus on preference data and optimization. However, it introduces a different method (multi-sample comparisons) and does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. MJ-Bench: Is Your Multimodal Reward Model Really a Good Judge for Text-to-Image Generation?": {
+                    "explanation": "MJ-Bench focuses on evaluating multimodal judges for text-to-image generation, addressing issues like hallucination and alignment. While it shares a thematic concern with the source paper, it does not directly build on the source paper's findings or methods.",
+                    "relevance": 0
+                },
+                "4. CARES: A Comprehensive Benchmark of Trustworthiness in Medical Vision Language Models": {
+                    "explanation": "CARES focuses on trustworthiness in medical vision-language models, which is a different domain and focus compared to the source paper. There is no direct methodological or hypothesis connection to the source paper.",
+                    "relevance": 0
+                },
+                "5. ShareGPT4Video: Improving Video Understanding and Generation with Better Captions": {
+                    "explanation": "This paper focuses on video understanding and generation, which is a different application area than the source paper's focus on vision-language models. There is no direct connection to the source paper's hypothesis or findings.",
+                    "relevance": 0
+                },
+                "6. MoVA: Adapting Mixture of Vision Experts to Multimodal Context": {
+                    "explanation": "MoVA discusses adapting vision experts for multimodal contexts, which is related to the source paper's focus on improving vision-language model alignment. However, it uses a different approach and does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "7. Are We on the Right Way for Evaluating Large Vision-Language Models?": {
+                    "explanation": "This paper critiques current evaluation methods for vision-language models, which is relevant to the source paper's focus on improving model performance. However, it does not directly build on the source paper's findings or methods.",
+                    "relevance": 1
+                },
+                "8. HALC: Object Hallucination Reduction via Adaptive Focal-Contrast Decoding": {
+                    "explanation": "HALC addresses object hallucinations in vision-language models, similar to the source paper's focus on reducing hallucinations. However, it introduces a different method (adaptive focal-contrast decoding) and does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Preference Optimization with Multi-Sample Comparisons": {
+                    "explanation": "This paper discusses preference optimization in generative models, which is related to the source paper's focus on preference data and optimization.",
+                    "relevance": 1
+                },
+                "2. MoVA: Adapting Mixture of Vision Experts to Multimodal Context": {
+                    "explanation": "MoVA discusses adapting vision experts for multimodal contexts, which is related to the source paper's focus on improving vision-language model alignment.",
+                    "relevance": 1
+                },
+                "3. Are We on the Right Way for Evaluating Large Vision-Language Models?": {
+                    "explanation": "This paper critiques current evaluation methods for vision-language models, which is relevant to the source paper's focus on improving model performance.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "0c34e53897c5527241efc1d34c88b8d49a238dfe",
+            "title": "MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization",
+            "abstract": "The advancement of Large Vision-Language Models (LVLMs) has propelled their application in the medical field. However, Medical LVLMs (Med-LVLMs) encounter factuality challenges due to modality misalignment, where the models prioritize textual knowledge over visual input, leading to hallucinations that contradict information in medical images. Previous attempts to enhance modality alignment in Med-LVLMs through preference optimization have inadequately mitigated clinical relevance in preference data, making these samples easily distinguishable and reducing alignment effectiveness. To address this challenge, we propose MMedPO, a novel multimodal medical preference optimization approach that considers the clinical relevance of preference samples to enhance Med-LVLM alignment. MMedPO curates multimodal preference data by introducing two types of dispreference: (1) plausible hallucinations injected through target Med-LVLMs or GPT-4o to produce medically inaccurate responses, and (2) lesion region neglect achieved through local lesion-noising, disrupting visual understanding of critical areas. We then calculate clinical relevance for each sample based on scores from multiple Med-LLMs and visual tools, and integrate these scores into the preference optimization process as weights, enabling effective alignment. Our experiments demonstrate that MMedPO significantly enhances factual accuracy in Med-LVLMs, achieving substantial improvements over existing preference optimization methods by averaging 14.2% and 51.7% across the Med-VQA and report generation tasks. Our code are available in https://github.com/aiming-lab/MMedPO.",
+            "year": 2024,
+            "citation_count": 5,
+            "relevance": 2,
+            "explanation": "This paper addresses modality misalignment in medical vision-language models using preference optimization, similar to the source paper's approach to reducing hallucinations in LVLMs. It partially depends on the source paper's findings regarding preference optimization and modality alignment."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. CheXPO: Preference Optimization for Chest X-ray VLMs with Counterfactual Rationale": {
+                    "explanation": "This paper is related to the source paper as it addresses the issue of hallucinations in vision-language models, specifically in the context of medical imaging. It builds on the concept of preference optimization, which is a central theme in the source paper, but focuses on chest X-ray applications and introduces a different method involving counterfactual rationale.",
+                    "relevance": 1
+                },
+                "2. MMedAgent-RL: Optimizing Multi-Agent Collaboration for Multimodal Medical Reasoning": {
+                    "explanation": "This paper focuses on multi-agent collaboration for medical reasoning, which is a different approach from the preference optimization discussed in the source paper. While both papers deal with Med-LVLMs, the methods and applications are distinct, with this paper emphasizing reinforcement learning and multi-agent frameworks rather than preference optimization.",
+                    "relevance": 0
+                },
+                "3. MDocAgent: A Multi-Modal Multi-Agent Framework for Document Understanding": {
+                    "explanation": "This paper deals with document understanding using a multi-modal, multi-agent framework. Although it involves vision-language models, it does not directly relate to the preference optimization or the specific challenges addressed in the source paper, which focuses on medical image alignment and factual accuracy.",
+                    "relevance": 0
+                },
+                "4. Improving Medical Large Vision-Language Models with Abnormal-Aware Feedback": {
+                    "explanation": "This paper is relevant to the source paper as it addresses the challenges in visual localization and abnormality detection in Med-LVLMs, which are related to the modality misalignment issues discussed in the source paper. It proposes a novel training method to enhance the detection capabilities of Med-LVLMs, which aligns with the source paper's goal of improving factual accuracy in medical imaging.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. CheXPO: Preference Optimization for Chest X-ray VLMs with Counterfactual Rationale": {
+                    "explanation": "This paper is related to the source paper as it addresses the issue of hallucinations in vision-language models, specifically in the context of medical imaging. It builds on the concept of preference optimization, which is a central theme in the source paper, but focuses on chest X-ray applications and introduces a different method involving counterfactual rationale.",
+                    "relevance": 1
+                },
+                "2. Improving Medical Large Vision-Language Models with Abnormal-Aware Feedback": {
+                    "explanation": "This paper is relevant to the source paper as it addresses the challenges in visual localization and abnormality detection in Med-LVLMs, which are related to the modality misalignment issues discussed in the source paper. It proposes a novel training method to enhance the detection capabilities of Med-LVLMs, which aligns with the source paper's goal of improving factual accuracy in medical imaging.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "9d4a10c751946acb3e16c9ec939ca966ff37313f",
+            "title": "Improving Medical Large Vision-Language Models with Abnormal-Aware Feedback",
+            "abstract": "Existing Medical Large Vision-Language Models (Med-LVLMs), encapsulating extensive medical knowledge, demonstrate excellent capabilities in understanding medical images. However, there remain challenges in visual localization in medical images, which is crucial for abnormality detection and interpretation. To address these issues, we propose a novel UMed-LVLM designed to unveil medical abnormalities. Specifically, we collect a Medical Abnormalities Unveiling (MAU) dataset and propose a two-stage training method for UMed-LVLM training. To collect MAU dataset, we propose a prompt method utilizing the GPT-4V to generate diagnoses based on identified abnormal areas in medical images. Moreover, the two-stage training method includes Abnormal-Aware Instruction Tuning and Abnormal-Aware Rewarding, comprising Relevance Reward, Abnormal Localization Reward and Vision Relevance Reward. Experimental results demonstrate that our UMed-LVLM significantly outperforms existing Med-LVLMs in identifying and understanding medical abnormalities, achieving a 58% improvement over the baseline. In addition, this work shows that enhancing the abnormality detection capabilities of Med-LVLMs significantly improves their understanding of medical images and generalization capability.",
+            "year": 2025,
+            "citation_count": 15,
+            "relevance": 2,
+            "explanation": "This paper is relevant to the source paper as it addresses the challenges in visual localization and abnormality detection in Med-LVLMs, which are related to the modality misalignment issues discussed in the source paper. It proposes a novel training method to enhance the detection capabilities of Med-LVLMs, which aligns with the source paper's goal of improving factual accuracy in medical imaging."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. CAP-LLM: Context-Augmented Personalized Large Language Models for News Headline Generation": {
+                    "explanation": "This paper focuses on personalized news headline generation and does not relate to medical vision-language models or abnormality detection in medical images.",
+                    "relevance": 0
+                },
+                "2. LumiGen: An LVLM-Enhanced Iterative Framework for Fine-Grained Text-to-Image Generation": {
+                    "explanation": "While this paper involves vision-language models, it is centered on text-to-image generation rather than medical image analysis or abnormality detection.",
+                    "relevance": 0
+                },
+                "3. Coherent Multimodal Reasoning with Iterative Self-Evaluation for Vision-Language Models": {
+                    "explanation": "This paper enhances reasoning capabilities in vision-language models, which could be related to improving understanding in medical LVLMs, but it does not specifically address medical abnormality detection.",
+                    "relevance": 1
+                },
+                "4. CIMR: Contextualized Iterative Multimodal Reasoning for Robust Instruction Following in LVLMs": {
+                    "explanation": "This paper focuses on enhancing instruction following in LVLMs through iterative reasoning, which may be relevant to improving the understanding of medical images, but it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "5. Revolutionizing Radiology Workflow with Factual and Efficient CXR Report Generation": {
+                    "explanation": "This paper directly addresses medical image interpretation and report generation, which aligns with the source paper's focus on improving medical LVLMs for abnormality detection.",
+                    "relevance": 2
+                },
+                "6. Contextual Candor: Enhancing LLM Trustworthiness Through Hierarchical Unanswerability Detection": {
+                    "explanation": "This paper focuses on improving LLM trustworthiness through unanswerability detection, which is unrelated to medical image analysis or abnormality detection.",
+                    "relevance": 0
+                },
+                "7. Beyond Empathy: Integrating Diagnostic and Therapeutic Reasoning with Large Language Models for Mental Health Counseling": {
+                    "explanation": "This paper focuses on mental health counseling using LLMs, which is unrelated to medical image analysis or abnormality detection.",
+                    "relevance": 0
+                },
+                "8. Harnessing Generative LLMs for Enhanced Financial Event Entity Extraction Performance": {
+                    "explanation": "This paper addresses financial text analysis and entity extraction, which is unrelated to medical image analysis or abnormality detection.",
+                    "relevance": 0
+                },
+                "9. Improving the Accuracy and Efficiency of Legal Document Tagging with Large Language Models and Instruction Prompts": {
+                    "explanation": "This paper focuses on legal document tagging using LLMs, which is unrelated to medical image analysis or abnormality detection.",
+                    "relevance": 0
+                },
+                "10. Generating Medically-Informed Explanations for Depression Detection using LLMs": {
+                    "explanation": "This paper focuses on depression detection using LLMs, which is unrelated to medical image analysis or abnormality detection.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Revolutionizing Radiology Workflow with Factual and Efficient CXR Report Generation": {
+                    "explanation": "This paper directly addresses medical image interpretation and report generation, which aligns with the source paper's focus on improving medical LVLMs for abnormality detection.",
+                    "relevance": 2
+                },
+                "2. Coherent Multimodal Reasoning with Iterative Self-Evaluation for Vision-Language Models": {
+                    "explanation": "This paper enhances reasoning capabilities in vision-language models, which could be related to improving understanding in medical LVLMs, but it does not specifically address medical abnormality detection.",
+                    "relevance": 1
+                },
+                "3. CIMR: Contextualized Iterative Multimodal Reasoning for Robust Instruction Following in LVLMs": {
+                    "explanation": "This paper focuses on enhancing instruction following in LVLMs through iterative reasoning, which may be relevant to improving the understanding of medical images, but it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "9d4a10c751946acb3e16c9ec939ca966ff37313f",
+            "title": "Improving Medical Large Vision-Language Models with Abnormal-Aware Feedback",
+            "abstract": "Existing Medical Large Vision-Language Models (Med-LVLMs), encapsulating extensive medical knowledge, demonstrate excellent capabilities in understanding medical images. However, there remain challenges in visual localization in medical images, which is crucial for abnormality detection and interpretation. To address these issues, we propose a novel UMed-LVLM designed to unveil medical abnormalities. Specifically, we collect a Medical Abnormalities Unveiling (MAU) dataset and propose a two-stage training method for UMed-LVLM training. To collect MAU dataset, we propose a prompt method utilizing the GPT-4V to generate diagnoses based on identified abnormal areas in medical images. Moreover, the two-stage training method includes Abnormal-Aware Instruction Tuning and Abnormal-Aware Rewarding, comprising Relevance Reward, Abnormal Localization Reward and Vision Relevance Reward. Experimental results demonstrate that our UMed-LVLM significantly outperforms existing Med-LVLMs in identifying and understanding medical abnormalities, achieving a 58% improvement over the baseline. In addition, this work shows that enhancing the abnormality detection capabilities of Med-LVLMs significantly improves their understanding of medical images and generalization capability.",
+            "year": 2025,
+            "citation_count": 15,
+            "relevance": 2,
+            "explanation": "This paper is relevant to the source paper as it addresses the challenges in visual localization and abnormality detection in Med-LVLMs, which are related to the modality misalignment issues discussed in the source paper. It proposes a novel training method to enhance the detection capabilities of Med-LVLMs, which aligns with the source paper's goal of improving factual accuracy in medical imaging."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Interpretable and Robust Dialogue State Tracking via Natural Language Summarization with LLMs": {
+                    "explanation": "This paper focuses on dialogue state tracking using LLMs, which is unrelated to the source paper's focus on medical vision-language models and abnormality detection.",
+                    "relevance": 0
+                },
+                "2.Evidence-Driven Marker Extraction for Social Media Suicide Risk Detection": {
+                    "explanation": "This paper discusses suicide risk detection using LLMs, which does not connect to the source paper's focus on medical image analysis and abnormality detection.",
+                    "relevance": 0
+                },
+                "3.Contextualizing Search Queries In-Context Learning for Conversational Rewriting with LLMs": {
+                    "explanation": "This paper addresses conversational query rewriting using LLMs, which is not related to the source paper's focus on improving medical vision-language models for abnormality detection.",
+                    "relevance": 0
+                },
+                "4.Multi-granular Training Strategies for Robust Multi-hop Reasoning Over Noisy and Heterogeneous Knowledge Sources": {
+                    "explanation": "This paper focuses on multi-hop reasoning and knowledge integration using LLMs, which does not relate to the source paper's focus on medical image analysis and abnormality detection.",
+                    "relevance": 0
+                },
+                "5.Visual Large Language Models for Generalized and Specialized Applications": {
+                    "explanation": "This paper is a survey of visual-language models, which might provide context but does not directly build upon or depend on the source paper's specific advancements in medical vision-language models.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "paperId": "347604483bf70b1863dc5dd4f21fe7abe6da5abc",
+        "title": "LEAF: Learning and Evaluation Augmented by Fact-Checking to Improve Factualness in Large Language Models",
+        "abstract": "Large language models (LLMs) have shown remarkable capabilities in various natural language processing tasks, yet they often struggle with maintaining factual accuracy, particularly in knowledge-intensive domains like healthcare. This study introduces LEAF: Learning and Evaluation Augmented by Fact-Checking, a novel approach designed to enhance the factual reliability of LLMs, with a focus on medical question answering (QA). LEAF utilizes a dual strategy to enhance the factual accuracy of responses from models such as Llama 3 70B Instruct and Llama 3 8B Instruct. The first strategy, Fact-Check-Then-RAG, improves Retrieval-Augmented Generation (RAG) by incorporating fact-checking results to guide the retrieval process without updating model parameters. The second strategy, Learning from Fact-Checks via Self-Training, involves supervised fine-tuning (SFT) on fact-checked responses or applying Simple Preference Optimization (SimPO) with fact-checking as a ranking mechanism, both updating LLM parameters from supervision. These findings suggest that integrating fact-checked responses whether through RAG enhancement or self-training enhances the reliability and factual correctness of LLM outputs, offering a promising solution for applications where information accuracy is crucial.",
+        "year": 2024,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper is highly relevant as it addresses the factual accuracy of LLMs, similar to the source paper's focus on hallucination and fact verification. It proposes methods to enhance factual reliability, which aligns with the source paper's findings on using LLMs for fact verification."
+    },
+    {
+        "paperId": "c5533c8be71d749d330d02fba9a4f1cf3bc43914",
+        "title": "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models",
+        "abstract": "Given the growing influx of misinformation across news and social media, there is a critical need for systems that can provide effective real-time verification of news claims. Large language or multimodal model based verification has been proposed to scale up online policing mechanisms for mitigating spread of false and harmful content. While these can potentially reduce burden on human fact-checkers, such efforts may be hampered by foundation model training data becoming outdated. In this work, we test the limits of improving foundation model performance without continual updating through an initial study of knowledge transfer using either existing intra- and inter- domain benchmarks or explanations generated from large language models (LLMs). We evaluate on 12 public benchmarks for fact-checking and misinformation detection as well as two other tasks relevant to content moderation -- toxicity and stance detection. Our results on two recent multi-modal fact-checking benchmarks, Mocheg and Fakeddit, indicate that knowledge transfer strategies can improve Fakeddit performance over the state-of-the-art by up to 1.7% and Mocheg performance by up to 2.9%.",
+        "year": 2024,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper discusses improving fact verification systems, which is related to the source paper's findings on using LLMs for fact verification. It partially depends on the source paper's insights into LLMs' fact verification capabilities."
+    },
+    {
+        "paperId": "32d8df3dddfeb5d04326a17c0d506b1304aa8dc1",
+        "title": "VERISCORE: Evaluating the factuality of verifiable claims in long-form text generation",
+        "abstract": "Existing metrics for evaluating the factuality of long-form text, such as FACTSCORE (Min et al., 2023) and SAFE (Wei et al., 2024), decompose an input text into\"atomic claims\"and verify each against a knowledge base like Wikipedia. These metrics are not suitable for most generation tasks because they assume that every claim is verifiable (i.e., can plausibly be proven true or false). We address this issue with VERISCORE, a metric for diverse long-form generation tasks that contain both verifiable and unverifiable content. VERISCORE can be effectively implemented with either closed or fine-tuned open-weight language models, and human evaluation confirms that VERISCORE's extracted claims are more sensible than those from competing methods across eight different long-form tasks. We use VERISCORE to evaluate generations from 16 different models across multiple long-form tasks and find that while GPT-4o is the best-performing model overall, open-weight models such as Mixtral-8x22 are closing the gap. We show that an LM's VERISCORE on one task (e.g., biography generation) does not necessarily correlate to its VERISCORE on a different task (e.g., long-form QA), highlighting the need for expanding factuality evaluation across tasks with varying fact density.",
+        "year": 2024,
+        "citation_count": 51,
+        "relevance": 2,
+        "explanation": "VERISCORE focuses on evaluating factuality in text generation, which is related to the source paper's discussion on LLM hallucination and fact verification. It builds on the need for factual evaluation in LLM outputs."
+    },
+    {
+        "paperId": "d0489fd7c5ff833e08969341ae6e5fa1d0e6dd2a",
+        "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+        "abstract": "Recognizing if LLM output can be grounded in evidence is central to many tasks in NLP: retrieval-augmented generation, summarization, document-grounded dialogue, and more. Current approaches to this kind of fact-checking are based on verifying each piece of a model generation against potential evidence using an LLM. However, this process can be very computationally expensive, requiring many calls to a model to check a single response. In this work, we show how to build small fact-checking models that have GPT-4-level performance but for 400x lower cost. We do this by constructing synthetic training data with GPT-4, which involves creating realistic yet challenging instances of factual errors via a structured generation procedure. Training on this data teaches models to check each fact in the claim and recognize synthesis of information across sentences. For evaluation, we unify datasets from recent work on fact-checking and grounding LLM generations into a new benchmark, LLM-AggreFact. Our best system MiniCheck-FT5 (770M parameters) outperforms all systems of comparable size and reaches GPT-4 accuracy. We release LLM-AggreFact, code for data synthesis, and models.",
+        "year": 2024,
+        "citation_count": 121,
+        "relevance": 2,
+        "explanation": "This paper is highly relevant as it addresses fact-checking of LLM outputs, which is a core aspect of the source paper's investigation into LLM hallucinations and fact verification."
+    },
+    {
+        "paperId": "c29c2653d5d4bcbb7cb72f4618c2c058968d8cd5",
+        "title": "ClaimVer: Explainable Claim-Level Verification and Evidence Attribution of Text Through Knowledge Graphs",
+        "abstract": "In the midst of widespread misinformation and disinformation through social media and the proliferation of AI-generated texts, it has become increasingly difficult for people to validate and trust information they encounter. Many fact-checking approaches and tools have been developed, but they often lack appropriate explainability or granularity to be useful in various contexts. A text validation method that is easy to use, accessible, and can perform fine-grained evidence attribution has become crucial. More importantly, building user trust in such a method requires presenting the rationale behind each prediction, as research shows this significantly influences people's belief in automated systems. Localizing and bringing users' attention to the specific problematic content is also paramount, instead of providing simple blanket labels. In this paper, we present ClaimVer, a human-centric framework tailored to meet users' informational and verification needs by generating rich annotations and thereby reducing cognitive load. Designed to deliver comprehensive evaluations of texts, it highlights each claim, verifies it against a trusted knowledge graph (KG), presents the evidence, and provides succinct, clear explanations for each claim prediction. Finally, our framework introduces an attribution score, enhancing applicability across a wide range of downstream tasks.",
+        "year": 2024,
+        "citation_count": 8,
+        "relevance": 2,
+        "explanation": "This paper is relevant as it deals with claim verification and evidence attribution, which aligns with the source paper's focus on fact verification in LLMs."
+    },
+    {
+        "paperId": "2495700b4303512784fbdbfccc58c6c4f7771ac2",
+        "title": "Language Models with Conformal Factuality Guarantees",
+        "abstract": "Guaranteeing the correctness and factuality of language model (LM) outputs is a major open problem. In this work, we propose conformal factuality, a framework that can ensure high probability correctness guarantees for LMs by connecting language modeling and conformal prediction. We observe that the correctness of an LM output is equivalent to an uncertainty quantification problem, where the uncertainty sets are defined as the entailment set of an LM's output. Using this connection, we show that conformal prediction in language models corresponds to a back-off algorithm that provides high probability correctness guarantees by progressively making LM outputs less specific (and expanding the associated uncertainty sets). This approach applies to any black-box LM and requires very few human-annotated samples. Evaluations of our approach on closed book QA (FActScore, NaturalQuestions) and reasoning tasks (MATH) show that our approach can provide 80-90% correctness guarantees while retaining the majority of the LM's original output.",
+        "year": 2024,
+        "citation_count": 57,
+        "relevance": 2,
+        "explanation": "This paper is relevant as it proposes a framework for ensuring factuality in LLM outputs, which is closely related to the source paper's focus on hallucination and fact verification."
+    }
+]

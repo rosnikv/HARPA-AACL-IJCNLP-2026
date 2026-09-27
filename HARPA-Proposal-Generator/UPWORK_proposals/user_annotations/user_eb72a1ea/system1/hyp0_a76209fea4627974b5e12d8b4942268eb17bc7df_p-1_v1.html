@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>a76209fea4627974b5e12d8b4942268eb17bc7df</p>
+<hr>
+<h2>Title</h2>
+<p>Combining iterative retrieval, multi-hop reasoning, and contrastive noise to enhance retrieval accuracy in noisy environments.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating iterative retrieval with multi-hop reasoning and contrastive noise introduction will enhance retrieval accuracy and response quality in noisy environments by dynamically refining queries and filtering irrelevant information.</p>
+<h3>Motivation</h3>
+<p>Existing Retrieval-Augmented Generation (RAG) systems have explored various retrieval methods and reasoning enhancements, but there remains a gap in understanding how iterative retrieval combined with multi-hop reasoning can specifically enhance retrieval accuracy and response quality under noisy conditions. While iterative retrieval and multi-hop reasoning have been individually explored, their combined effect in a dynamic retrieval context, particularly with noise reduction techniques, is underexplored. This hypothesis addresses the gap by testing the integration of iterative retrieval with multi-hop reasoning and contrastive noise introduction to improve response quality and efficiency in noisy environments.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of iterative retrieval with multi-hop reasoning and contrastive noise introduction to enhance retrieval accuracy and response quality in noisy environments. Iterative retrieval involves refining queries based on intermediate results, allowing for dynamic adjustment to better meet information needs. Multi-hop reasoning enables the integration of information across multiple retrieval steps, synthesizing comprehensive answers. Contrastive noise introduction improves the model's ability to differentiate relevant from irrelevant information by introducing controlled noise during training. The hypothesis posits that this combination will improve retrieval accuracy and response quality by dynamically refining queries and filtering noise. This approach addresses gaps in existing research by exploring the synergy between iterative retrieval and multi-hop reasoning under noisy conditions, a combination not extensively tested in prior work. The expected outcome is improved response quality and efficiency, particularly in environments with high noise levels, making it suitable for tasks requiring robust reasoning and retrieval accuracy.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509">Iterative Retrieval</a>: Iterative retrieval involves refining queries based on intermediate results, allowing for dynamic adjustment to better meet information needs. This approach uses feedback loops to refine the query, enhancing retrieval accuracy by adapting to the evolving context of the task. It is expected to improve retrieval precision by iteratively refining the retrieval process, particularly in noisy environments where initial retrievals may be incomplete or imperfect.</p>
+<p><a href="https://www.semanticscholar.org/paper/7afb80c8c0dc0c5f32d63a847a72b9bc8bada519">Multi-hop Reasoning</a>: Multi-hop reasoning involves integrating information across multiple retrieval steps to derive comprehensive answers. This approach uses a chain-of-thought framework to generate intermediate sub-queries and retrieve relevant documents for each sub-query. It enhances retrieval accuracy by allowing the model to construct a comprehensive understanding of the query, leading to more accurate and relevant retrieval results.</p>
+<p><a href="https://www.semanticscholar.org/paper/f848c7cbf63bd8231bf4e0adfc6eda8ad2673868">Contrastive Noise Introduction</a>: Contrastive noise introduction involves adding noise to the training data to improve the model's robustness against irrelevant information. This technique helps the model distinguish between relevant and irrelevant data by introducing contrasting examples during training. It is particularly useful in scenarios where the retrieval system needs to handle ambiguous or noisy queries, enhancing the model's ability to filter out irrelevant information.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates iterative retrieval, multi-hop reasoning, and contrastive noise introduction to enhance retrieval accuracy and response quality in noisy environments. The process begins with an initial query, which undergoes iterative refinement based on intermediate retrieval results. Each iteration involves adjusting the query to better capture the necessary context, using feedback loops to refine the retrieval process. Multi-hop reasoning is employed to integrate information across multiple retrieval steps, using a chain-of-thought framework to generate intermediate sub-queries and retrieve relevant documents. This approach allows the model to construct a comprehensive understanding of the query, synthesizing information from multiple sources. Contrastive noise introduction is applied during the training phase, adding controlled noise to the data to improve the model's ability to differentiate relevant from irrelevant information. This technique enhances the model's robustness against noise, ensuring that only the most pertinent information is retrieved and used during generation. The integration of these components is expected to improve retrieval accuracy and response quality by dynamically refining queries and filtering noise. The hypothesis will be tested using benchmark datasets with varying levels of noise, evaluating retrieval accuracy and response quality using metrics such as precision, recall, and F1 score. The expected outcome is improved response quality and efficiency, particularly in noisy environments, making it suitable for tasks requiring robust reasoning and retrieval accuracy.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating iterative retrieval with multi-hop reasoning and contrastive noise introduction will enhance retrieval accuracy and response quality in noisy environments. The experiment should compare our proposed integrated approach against baseline methods.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will test a novel information retrieval system that combines three key components:<br />
+1. Iterative Retrieval: A module that refines queries based on intermediate results<br />
+2. Multi-hop Reasoning: A framework for integrating information across multiple retrieval steps<br />
+3. Contrastive Noise Introduction: A technique for adding controlled noise to improve robustness against irrelevant information</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Experiment Framework</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. The experiment should start with <code>MINI_PILOT</code> mode, then proceed to <code>PILOT</code> if successful, but stop before <code>FULL_EXPERIMENT</code> for human verification.</p></p>
+<p><ul>
+<li><code>MINI_PILOT</code>: Use 20 queries from the training set with 3 noise levels (low, medium, high). Run 3 iterations of query refinement per query. This should complete in under 10 minutes.</li>
+<li><code>PILOT</code>: Use 100 queries from the training set for training/tuning and 50 queries from the validation set for evaluation, with all 3 noise levels. Run up to 5 iterations of query refinement per query. This should complete in under 2 hours.</li>
+<li><code>FULL_EXPERIMENT</code>: Use the complete training dataset for training/tuning and the complete test dataset for final evaluation, with all noise levels. Run up to 10 iterations of query refinement per query.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Dataset Preparation</strong></h4>
+<ol>
+<li>Use the HotpotQA dataset as the primary benchmark, which naturally requires multi-hop reasoning.</li>
+<li>Create three versions with different noise levels:</li>
+<li>Low noise: Add 1-3 irrelevant sentences to each context passage</li>
+<li>Medium noise: Add 4-7 irrelevant sentences to each context passage</li>
+<li>High noise: Add 8-12 irrelevant sentences to each context passage</li>
+<li>The irrelevant sentences should be sampled from other documents in the dataset that are unrelated to the query.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>System Components</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Iterative Retrieval Module</strong></h4>
+<p>Implement a module that:<br />
+- Takes an initial query and retrieves an initial set of documents<br />
+- Analyzes the retrieved documents to identify relevant information<br />
+- Reformulates the query based on the relevant information<br />
+- Repeats this process for a specified number of iterations (3 for MINI_PILOT, 5 for PILOT, 10 for FULL_EXPERIMENT)<br />
+- Tracks the quality of retrieved documents at each iteration</p></p>
+<p><h4 class="custom-heading"><strong>2. Multi-hop Reasoning Framework</strong></h4>
+<p>Implement a framework that:<br />
+- Breaks down complex queries into sub-queries<br />
+- Retrieves relevant documents for each sub-query<br />
+- Integrates information across the retrieved documents<br />
+- Generates a comprehensive answer based on the integrated information</p></p>
+<p><h4 class="custom-heading"><strong>3. Contrastive Noise Introduction</strong></h4>
+<p>Implement a technique that:<br />
+- Adds controlled noise to the training data<br />
+- Creates contrastive examples by pairing relevant and irrelevant information<br />
+- Trains the model to distinguish between relevant and irrelevant information</p></p>
+<p><h4 class="custom-heading"><strong>Baseline Systems</strong></h4>
+<p>Implement three baseline systems for comparison:<br />
+1. <strong>Basic Retrieval</strong>: A simple retrieval system that uses the original query without refinement or multi-hop reasoning<br />
+2. <strong>Iterative Retrieval Only</strong>: A system that uses iterative query refinement but without multi-hop reasoning or contrastive noise<br />
+3. <strong>Multi-hop Reasoning Only</strong>: A system that uses multi-hop reasoning but without iterative refinement or contrastive noise</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Experimental System</strong></h4>
+<p>Implement the full integrated system that combines:<br />
+1. Iterative Retrieval<br />
+2. Multi-hop Reasoning<br />
+3. Contrastive Noise Introduction</p></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<p>Evaluate the systems using the following metrics:<br />
+1. <strong>Retrieval Accuracy</strong>:<br />
+   - Precision: The proportion of retrieved documents that are relevant<br />
+   - Recall: The proportion of relevant documents that are retrieved<br />
+   - F1 Score: The harmonic mean of precision and recall</p></p>
+<p><ol>
+<li><strong>Response Quality</strong>:</li>
+<li>Exact Match (EM): Whether the predicted answer exactly matches the ground truth</li>
+<li>F1 Score: The overlap between predicted and ground truth answers</li>
+<li>ROUGE-L: The longest common subsequence between predicted and ground truth answers</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experiment Procedure</strong></h4>
+<ol>
+<li><strong>Data Preparation</strong>:</li>
+<li>Load the HotpotQA dataset</li>
+<li>Create noisy versions of the dataset as described above</li>
+<li>Split the data into training, validation, and test sets</li>
+</ol></p>
+<p><ol>
+<li><strong>Model Training</strong>:</li>
+<li>Train the iterative retrieval module on the training set</li>
+<li>Train the multi-hop reasoning framework on the training set</li>
+<li>Apply contrastive noise introduction during training</li>
+</ol></p>
+<p><ol>
+<li><strong>Evaluation</strong>:</li>
+<li>Evaluate all systems (baseline and experimental) on the validation set (for PILOT) or test set (for FULL_EXPERIMENT)</li>
+<li>Calculate all evaluation metrics for each system</li>
+<li>Compare the performance of the systems across different noise levels</li>
+</ol></p>
+<p><ol>
+<li><strong>Analysis</strong>:</li>
+<li>Perform statistical significance tests to determine if the differences between systems are significant</li>
+<li>Analyze the performance of each system across different noise levels</li>
+<li>Identify the strengths and weaknesses of each approach</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4>
+<ol>
+<li>Generate a comprehensive report that includes:</li>
+<li>A description of the experimental setup</li>
+<li>The performance of each system on each metric</li>
+<li>Statistical significance of the results</li>
+<li>Analysis of the results and implications</li>
+</ol></p>
+<p><ol>
+<li>Create visualizations that show:</li>
+<li>The performance of each system across different noise levels</li>
+<li>The improvement in retrieval accuracy and response quality over iterations</li>
+<li>The relationship between retrieval accuracy and response quality</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4>
+<ul>
+<li>Use scikit-learn for evaluation metrics and statistical tests</li>
+<li>Use numpy for data processing and manipulation</li>
+<li>Implement proper logging to track the progress of the experiment</li>
+<li>Ensure reproducibility by setting random seeds</li>
+<li>Implement error handling to gracefully handle failures</li>
+</ul></p>
+<p><p>Please run the MINI_PILOT first, then if everything looks good, proceed to the PILOT. After the PILOT, stop and do not run the FULL_EXPERIMENT as human verification of the results is required before proceeding.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/a76209fea4627974b5e12d8b4942268eb17bc7df">Paper 0: Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation</a> (16 citations, 2024). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/cbc933e23e2c14747aab474a847fb730439938b5">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/03ae366d33290066edc41287f90fc67476d70bbc">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/bc898b37cd16f5681db13652b23368258f4c3c6e">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/18264e04721b87ca664e54cbd07e8ff1b2d683c1">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/8f224e484a058e335b28a67d73827b352b45f7b2">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/85a11bd16eeb169548764e1e2f699a563315dc34">Paper 6</a>. The analysis reveals a progression from practical improvements in RAG systems to theoretical frameworks and efficiency optimizations in reasoning processes. The source paper introduces the concept of LLMs as 'Information Refiners' in RAG, while subsequent papers explore theoretical trade-offs, reasoning enhancements, and efficiency improvements. A research idea that advances this field could focus on integrating these advancements to develop a comprehensive framework that optimizes both the effectiveness and efficiency of RAG systems, addressing limitations such as reasoning depth and token usage.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/a76209fea4627974b5e12d8b4942268eb17bc7df" target="_blank">Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/cbc933e23e2c14747aab474a847fb730439938b5" target="_blank">A Theory for Token-Level Harmonization in Retrieval-Augmented Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/03ae366d33290066edc41287f90fc67476d70bbc" target="_blank">How Much Can RAG Help the Reasoning of LLM?</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/bc898b37cd16f5681db13652b23368258f4c3c6e" target="_blank">Rethinking Chain-of-Thought from the Perspective of Self-Training</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/18264e04721b87ca664e54cbd07e8ff1b2d683c1" target="_blank">Hawkeye:Efficient Reasoning with Model Collaboration</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/8f224e484a058e335b28a67d73827b352b45f7b2" target="_blank">HAPO: Training Language Models to Reason Concisely via History-Aware Policy Optimization</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/85a11bd16eeb169548764e1e2f699a563315dc34" target="_blank">Hierarchical Budget Policy Optimization for Adaptive Reasoning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/e7bf315327da6619462130c19771e5db896a2d86" target="_blank">Synergizing RAG and Reasoning: A Systematic Review</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/0cbfeb8b10f029693932665d291066e331491c81" target="_blank">Credible plan-driven RAG method for Multi-hop Question Answering</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/c64681d1b8668b2c98331448691afe4ff46db1ec" target="_blank">Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/7afb80c8c0dc0c5f32d63a847a72b9bc8bada519" target="_blank">MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/bd18b584546309feecdf3b74c07709e45984ea09" target="_blank">RAG+: Enhancing Retrieval-Augmented Generation with Application-Aware Reasoning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/4bb714c74f722a5e4caa8825d3edcf1b726689ab" target="_blank">Towards Concise and Adaptive Thinking in Large Reasoning Models: A Survey</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/a3c65d490f635b4ad0675f52d67e08fa45fc30d3" target="_blank">The Role of Deductive and Inductive Reasoning in Large Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/a4c29dc3857004e054e93eede078f132946dd3cd" target="_blank">OThink-R1: Intrinsic Fast/Slow Thinking Mode Switching for Over-Reasoning Mitigation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/721149194c40b3d7034f88c391f851747680e2f7" target="_blank">Thinkless: LLM Learns When to Think</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/124b40ec883eb59e89be76e5da5489dbed89275c" target="_blank">RARE: Retrieval-Augmented Reasoning Enhancement for Large Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d" target="_blank">LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/eff086f0a6d66b6514322c6832f2469d057f33e3" target="_blank">CoRT: Code-integrated Reasoning within Thinking</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/5076bbbf831a92174c9cc1b347bd0584560435fc" target="_blank">Adaptive-Solver Framework for Dynamic Strategy Selection in Large Language Model Reasoning</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509" target="_blank">Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/f848c7cbf63bd8231bf4e0adfc6eda8ad2673868" target="_blank">CondAmbigQA: A Benchmark and Dataset for Conditional Ambiguous Question Answering</a> (2025)</li>
+</ol>
+</body>
+</html>

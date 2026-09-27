@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>0cfdd655100055f234fd23ebecd915504b8e00e3</p>
+<hr>
+<section><h2>Title</h2>
+<p>Cross-Domain Preference Distillation: Leveraging Large Language Models for Explainable and Interactive Recommendations</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current cross-domain recommender systems struggle to effectively transfer user preferences across diverse domains, especially when dealing with cold-start users or items with limited interactions. This leads to suboptimal recommendations and poor user experiences when users explore new domains.</p>
+<h3>Motivation</h3>
+<p>Existing methods often rely on shared user embeddings or domain-specific feature extraction, which can lead to suboptimal transfer and limited explainability. Large language models have demonstrated impressive zero-shot generalization capabilities across diverse tasks. By leveraging LLMs to distill domain-agnostic preference knowledge, we can potentially enable more effective and explainable cross-domain recommendations.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Cross-Domain Preference Distillation (CDPD), a novel framework that uses LLMs to extract and transfer domain-agnostic user preferences. The method consists of three main steps: 1) Fine-tuning an LLM on user reviews and item descriptions from multiple domains to learn a unified preference representation space. 2) For each user, prompting the LLM to generate abstract preference statements that capture their tastes independent of specific domains. These statements form a preference knowledge graph. 3) For recommendations, using a graph neural network to propagate information through this knowledge graph, combining it with domain-specific item embeddings. The LLM is also used to generate natural language explanations for recommendations by traversing paths in the preference graph.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use the Amazon review dataset across multiple product categories (e.g., Books, Electronics, Movies &amp; TV, Clothing). Preprocess the data to extract user reviews, item descriptions, and user-item interactions.</p><p><strong>Step 2: LLM Fine-tuning</strong></p><p>Fine-tune GPT-3.5 (text-davinci-003) on a subset of user reviews and item descriptions using prompt templates like 'Review: {review_text}\nItem: {item_description}\nPreference: {preference_statement}'. Use few-shot learning with manually crafted examples to guide the model.</p><p><strong>Step 3: Preference Statement Generation</strong></p><p>For each user, prompt the fine-tuned LLM with their reviews and generate abstract preference statements. Example prompt: 'Based on the following reviews, generate 5 abstract preference statements that capture the user's tastes across domains:\n{user_reviews}\nPreference statements:'</p><p><strong>Step 4: Preference Knowledge Graph Construction</strong></p><p>Create a graph where nodes are users, items, and preference statements. Connect users to their generated preference statements and items to relevant preference statements using the LLM's zero-shot classification capabilities.</p><p><strong>Step 5: Graph Neural Network Implementation</strong></p><p>Implement a Graph Attention Network (GAT) to propagate information through the preference knowledge graph. Use PyTorch Geometric library for efficient graph operations.</p><p><strong>Step 6: Recommendation Generation</strong></p><p>For a given user and target domain, use the GAT to generate embeddings for the user and candidate items. Rank items based on the cosine similarity between these embeddings.</p><p><strong>Step 7: Explanation Generation</strong></p><p>For each recommended item, prompt the LLM to generate an explanation by traversing the preference graph. Example prompt: 'Explain why {item_name} is recommended to the user based on the following preference path:\n{preference_path}'</p><p><strong>Step 8: Evaluation</strong></p><p>Evaluate the CDPD method on standard metrics like NDCG@k and Precision@k. Compare against baselines including domain-specific matrix factorization, cross-domain collaborative filtering, and LLM-based zero-shot recommenders.</p><p><strong>Step 9: Human Evaluation</strong></p><p>Conduct a small-scale human evaluation (e.g., 50 participants) to assess the quality of preference transfer and explanation relevance. Use a 5-point Likert scale for ratings.</p><p><strong>Step 10: Ablation Studies</strong></p><p>Perform ablation studies by removing components like the preference knowledge graph or explanation generation to analyze their impact on performance.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Domain-specific Matrix Factorization)</strong></p><p>User ID: 12345, Target Domain: Electronics</p><p><strong>Baseline Prompt Expected Output (Domain-specific Matrix Factorization)</strong></p><p>Recommended Items: [1. Smartphone X, 2. Laptop Y, 3. Headphones Z]</p><p><strong>Proposed Prompt Input (CDPD; Step 1: Preference Statement Generation)</strong></p><p>Generate abstract preference statements for User 12345 based on their reviews across Books and Movies domains:\n[Review 1: 'I love sci-fi novels with complex world-building.', Review 2: 'This action movie had great special effects but a weak plot.']</p><p><strong>Proposed Prompt Expected Output (CDPD; Step 1: Preference Statement Generation)</strong></p><ol>
+<li>Enjoys immersive and detailed fictional universes\n2. Appreciates visual spectacle in storytelling\n3. Values narrative depth and complexity\n4. Interested in futuristic and speculative concepts\n5. Critiques plot structure and storytelling elements</li>
+</ol><p><strong>Proposed Prompt Input (CDPD; Step 2: Recommendation Generation)</strong></p><p>Recommend Electronics items for User 12345 based on their preference statements and the preference knowledge graph</p><p><strong>Proposed Prompt Expected Output (CDPD; Step 2: Recommendation Generation)</strong></p><p>Recommended Items: [1. VR Headset A, 2. 4K HDR TV B, 3. High-fidelity Audio System C]</p><p><strong>Proposed Prompt Input (CDPD; Step 3: Explanation Generation)</strong></p><p>Explain why VR Headset A is recommended to User 12345</p><p><strong>Proposed Prompt Expected Output (CDPD; Step 3: Explanation Generation)</strong></p><p>VR Headset A is recommended because it aligns with your preference for immersive and detailed fictional universes. This device offers a highly immersive experience, allowing you to explore complex virtual worlds, which resonates with your enjoyment of sci-fi novels with intricate world-building. Additionally, the VR headset's advanced graphics capabilities cater to your appreciation for visual spectacle in storytelling, similar to your interest in movies with great special effects.</p><p><strong>Explanation</strong></p><p>The CDPD method generates more personalized and explainable recommendations by leveraging abstract preference statements that transfer across domains. Unlike the baseline, which relies solely on past interactions in the Electronics domain, CDPD can recommend items (like the VR headset) that align with the user's preferences inferred from other domains (Books and Movies).</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed CDPD method doesn't significantly outperform baselines, we can pivot the project to focus on analyzing the generated preference statements and explanations. We could investigate how well LLMs capture domain-agnostic preferences and identify patterns in successful vs. unsuccessful transfers. This analysis could provide insights into the challenges of cross-domain preference modeling and inform future research directions. Additionally, we could explore alternative graph structures or neural architectures for combining the preference knowledge with domain-specific information. Another approach would be to incorporate a self-supervised learning component, where the model tries to predict masked preference statements or item attributes, potentially improving the quality of the learned representations.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/47c7649f88123a67fe7703659add12e57f17ab05" target="_blank">TrackRec: Iterative Alternating Feedback with Chain-of-Thought via Preference Alignment for Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0cfdd655100055f234fd23ebecd915504b8e00e3" target="_blank">Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4113c669be04ec2957114f4ce523ebc7bc1d2537" target="_blank">LLM-Enhanced Multimodal Fusion for Cross-Domain Sequential Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e03319ab296aa0ae7ac2ebe761a31d9dd4973e1e" target="_blank">Research on Conversational Recommender System Considering Consumer Types</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ecef4fdbf413e3e7f749c83323c7290d06a94f38" target="_blank">Cross-Domain Recommendation Meets Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e33f51c13728bedeeb54a76b398949a381d6152f" target="_blank">LLMCDSR: Enhancing Cross-Domain Sequential Recommendation with Large Language Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/d12a368ad0aa485b129f400a374de85711e6f564" target="_blank">Refining Text Generation for Realistic Conversational Recommendation via Direct Preference Optimization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f22d543a68d56a4c7fe5c6d23508d6ec99c6ad0f" target="_blank">Beyond Single Labels: Improving Conversational Recommendation through LLM-Powered Data Augmentation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b339e74f5e88ed4fc34f0ce81eefc63757e30733" target="_blank">LLM-RecG: A Semantic Bias-Aware Framework for Zero-Shot Sequential Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/bd2df223a4522ca29f18180b6cf055a76d76bdaa" target="_blank">Towards Comprehensible Recommendation with Large Language Model Fine-tuning</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

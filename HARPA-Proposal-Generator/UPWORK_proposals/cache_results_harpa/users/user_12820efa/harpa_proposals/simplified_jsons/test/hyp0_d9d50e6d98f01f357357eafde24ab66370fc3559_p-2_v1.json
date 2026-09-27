@@ -1,0 +1,157 @@
+{
+  "paper_id": "d9d50e6d98f01f357357eafde24ab66370fc3559",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Intersectional Prompt Generation Implementation",
+      "criteria_met_question": "Does the experiment implement a method to generate intersectional prompts that explicitly incorporate multiple sensitive attributes (such as gender and age) simultaneously in the recommendation requests to LLMs?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Fairness-aware Re-ranking Algorithm Implementation",
+      "criteria_met_question": "Does the experiment implement a re-ranking algorithm that adjusts the order of recommended items to ensure fair exposure among providers while maintaining user satisfaction?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integration of Intersectional Prompts with Re-ranking",
+      "criteria_met_question": "Does the experiment integrate the intersectional prompts with the fairness-aware re-ranking strategy in a single recommendation pipeline, where recommendations first generated using intersectional prompts are then re-ranked using the fairness algorithm?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "MovieLens Dataset Implementation",
+      "criteria_met_question": "Does the experiment use the MovieLens dataset with clearly identified intersectional attributes (such as gender and age) to test recommendation fairness and personalization?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "LastFM Dataset Implementation",
+      "criteria_met_question": "Does the experiment use the LastFM dataset with clearly identified intersectional attributes (such as gender and age) to test recommendation fairness and personalization?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Advanced LLM Integration",
+      "criteria_met_question": "Does the experiment integrate an advanced LLM (such as GPT-3 or equivalent) capable of processing complex prompt structures for generating recommendations?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline 1: Standard LLM Recommender",
+      "criteria_met_question": "Does the experiment implement a baseline standard LLM recommender that does not consider intersectional attributes or fairness re-ranking?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline 2: Intersectional Prompts Only",
+      "criteria_met_question": "Does the experiment implement a baseline that uses intersectional prompts but without fairness-aware re-ranking?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline 3: Standard Recommender with Fairness Re-ranking",
+      "criteria_met_question": "Does the experiment implement a baseline that uses standard prompts (without intersectional attributes) but with fairness-aware re-ranking?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Jaccard Similarity Metric Implementation",
+      "criteria_met_question": "Does the experiment implement the Jaccard Similarity metric to measure the overlap between recommended items and true user preferences across all experimental conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "PRAG Metric Implementation",
+      "criteria_met_question": "Does the experiment implement the Personalized Ranking Accuracy Gain (PRAG) metric to evaluate the alignment of recommended items with user preferences across all experimental conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Provider Exposure Fairness Metric",
+      "criteria_met_question": "Does the experiment implement a provider exposure fairness metric (such as Gini coefficient) to measure how equitably exposure is distributed among content providers?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Intersectional Fairness Metric",
+      "criteria_met_question": "Does the experiment implement an intersectional fairness metric that measures differences in recommendation quality across different intersectional groups (e.g., young adult women vs. middle-aged men)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Comparison of Approaches",
+      "criteria_met_question": "Does the experiment conduct statistical tests (such as t-tests or ANOVA) to determine if there are significant differences in performance metrics between the integrated approach and the three baseline approaches?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment conduct multiple runs (at least 3) of each experimental condition to ensure statistical confidence in the results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that systematically removes components of the integrated approach to assess their individual contributions to the overall performance?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Sensitivity Analysis for Re-ranking Parameters",
+      "criteria_met_question": "Does the experiment include a sensitivity analysis that examines how different parameter settings for the fairness-aware re-ranking algorithm affect the trade-off between fairness and personalization?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "User Preference Alignment Analysis",
+      "criteria_met_question": "Does the experiment analyze how well the recommendations from each approach align with true user preferences across different intersectional groups?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Bias Reduction Analysis",
+      "criteria_met_question": "Does the experiment quantitatively analyze the reduction in bias across intersectional sensitive attributes for each approach compared to the baselines?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Trade-off Analysis",
+      "criteria_met_question": "Does the experiment analyze the trade-offs between recommendation fairness and personalization for each approach?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze the computational cost and efficiency of the integrated approach compared to the baselines?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Qualitative Analysis of Recommendations",
+      "criteria_met_question": "Does the experiment include a qualitative analysis of sample recommendations from each approach to illustrate differences in fairness and personalization?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Diverse Intersectional Groups",
+      "criteria_met_question": "Does the experiment evaluate performance across at least 4 distinct intersectional groups (e.g., young adult women, young adult men, middle-aged women, middle-aged men)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of cases where the integrated approach fails to improve fairness or personalization compared to baselines?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Combining intersectional prompts with fairness-aware re-ranking for equitable and personalized recommendations.",
+    "research_idea_hypothesis": "Integrating intersectional prompts with fairness-aware re-ranking strategies in LLM-based recommender systems will lead to more equitable and personalized recommendations, improving alignment with true user preferences while reducing bias across intersectional sensitive attributes.",
+    "description": "This research explores the integration of intersectional prompts with fairness-aware re-ranking strategies in LLM-based recommender systems. Intersectional prompts are designed to incorporate multiple sensitive attributes simultaneously, such as gender and age, to assess their impact on recommendation fairness. The fairness-aware re-ranking strategy involves adjusting the order of recommended items to ensure fair exposure among providers while maintaining user satisfaction. By combining these two approaches, the hypothesis posits that recommendations will be both equitable and personalized, aligning more closely with true user preferences and reducing bias across intersectional sensitive attributes. This approach addresses the gap in existing research where intersectional fairness and ranking optimization are treated separately, potentially leading to less relevant or biased recommendations. The expected outcome is a system that provides recommendations that are both fair and highly aligned with user preferences, leveraging the strengths of both intersectional prompts and fairness-aware re-ranking. This synergy is expected to enhance the overall user experience by ensuring that recommendations are not only relevant but also equitable across diverse user groups.",
+    "research_gap": "Existing methods often treat intersectional fairness and top-K ranking optimization as separate challenges in LLM-based recommender systems. While intersectional fairness aims to reduce bias across overlapping sensitive attributes, top-K ranking optimization focuses on maximizing recommendation relevance and user satisfaction. However, these approaches typically do not explore how intersectional prompts can be directly integrated with fairness-aware re-ranking strategies to simultaneously enhance both fairness and personalization. This gap is crucial because addressing intersectional fairness without considering ranking optimization may lead to less relevant recommendations, while focusing solely on ranking can perpetuate biases. This hypothesis addresses the unexplored potential of combining intersectional prompts with fairness-aware re-ranking to achieve both equitable and personalized recommendations, which has not been extensively tested in prior work.",
+    "research_idea_variables": "[Intersectional Prompts](https://www.semanticscholar.org/paper/d9d50e6d98f01f357357eafde24ab66370fc3559): Intersectional prompts are crafted to explicitly mention multiple sensitive attributes, such as gender and age, allowing the recommender system to generate responses that consider the intersection of these attributes. For example, a prompt might state, 'I am a Young Adult Woman, based on movies I watched, recommend me movies that I like.' This approach is implemented in the CFaiRLLM framework, which evaluates the fairness of recommendations by comparing the alignment of these intersectional prompts with user preferences. The framework uses datasets like MovieLens and LastFM to test the effectiveness of these prompts in reducing bias and ensuring equitable recommendations. The baseline comparator is traditional recommendation systems that do not consider intersectional attributes, and the compatible models include those capable of processing complex prompt structures, such as advanced LLMs like GPT-3.\n\n[Fairness-aware Re-ranking](https://www.semanticscholar.org/paper/623ede5fb5a2bf29838e0c1f2a72bf123e649fb9): Fairness-aware re-ranking involves adjusting the order of recommended items to ensure fair exposure among providers while maintaining user satisfaction. This method addresses the two-sided fairness problem by balancing the needs of users and providers. Compatible models include those that can handle re-ranking tasks, and the baseline comparator would be traditional Top-K recommendation methods that prioritize user satisfaction without fairness considerations. The implementation involves applying fairness constraints during the re-ranking process to ensure that exposure is distributed equitably among providers, preventing monopolization by a few providers and enhancing the sustainability of the recommendation system.",
+    "Explanation": "Intersectional prompts allow the system to consider multiple sensitive attributes simultaneously, ensuring that recommendations are equitable across diverse user groups. Fairness-aware re-ranking adjusts the order of recommended items to balance user satisfaction and provider exposure, preventing monopolization and enhancing sustainability. Together, these components are expected to improve the alignment of recommendations with true user preferences while reducing bias across intersectional attributes. The chosen evaluation domain of MovieLens and LastFM datasets is appropriate because they provide diverse user profiles and sensitive attribute configurations, allowing for a comprehensive assessment of fairness and personalization.",
+    "research_idea_long_description": "Intersectional prompts generate a list of recommended items that consider multiple sensitive attributes. The fairness-aware re-ranking strategy then adjusts this list to ensure equitable exposure among providers while maintaining user satisfaction. This integration ensures that recommendations are both relevant and fair, leveraging the strengths of both components to enhance the overall user experience.",
+    "research_idea_design_prompt": "The proposed method integrates intersectional prompts with fairness-aware re-ranking strategies in LLM-based recommender systems. First, intersectional prompts are crafted to explicitly mention multiple sensitive attributes, such as gender and age, allowing the system to generate responses that consider the intersection of these attributes. These prompts are processed by advanced LLMs like GPT-3, which can handle complex prompt structures. The system then generates an initial recommendation list based on these prompts. Next, a fairness-aware re-ranking strategy is applied to the recommendation list. This strategy involves adjusting the order of recommended items to ensure fair exposure among providers while maintaining user satisfaction. The re-ranking process uses fairness constraints to balance the needs of users and providers, ensuring that exposure is distributed equitably among providers. This prevents monopolization by a few providers and enhances the sustainability of the recommendation system. The integration of intersectional prompts with fairness-aware re-ranking is expected to result in recommendations that are both equitable and personalized, aligning more closely with true user preferences and reducing bias across intersectional sensitive attributes. The system's performance will be evaluated using datasets like MovieLens and LastFM, comparing the alignment of recommendations with user preferences and assessing the reduction of bias across intersectional attributes.",
+    "research_idea_elements": "Independent variable: Integration of intersectional prompts with fairness-aware re-ranking strategies in LLM-based recommender systems\n\nDependent variable: Equitability and personalization of recommendations, alignment with true user preferences, bias reduction across intersectional sensitive attributes\n\nComparison groups: Integrated approach (intersectional prompts with fairness-aware re-ranking) vs. three baselines: standard LLM recommender, intersectional prompts only, standard recommender with fairness re-ranking\n\nBaseline/control: Standard LLM recommender without intersectional attributes consideration, intersectional prompts without re-ranking, standard recommender with fairness re-ranking\n\nContext/setting: LLM-based recommender systems using MovieLens and LastFM datasets\n\nAssumptions: Intersectional attributes (gender, age) affect recommendation fairness; fairness and personalization can be simultaneously optimized; LLMs can effectively process complex intersectional prompts\n\nRelationship type: Causal (integration of techniques will lead to improved outcomes)\n\nPopulation: Users with diverse intersectional attributes (e.g., young adult women, middle-aged men) represented in MovieLens and LastFM datasets\n\nTimeframe: Not specified\n\nMeasurement method: Recommendation quality: Jaccard Similarity and PRAG (Personalized Ranking Accuracy Gain); Fairness metrics: Provider Exposure Fairness (Gini coefficient) and Intersectional Fairness (difference in recommendation quality across groups)",
+    "motivation": "The source paper is [Paper 0: CFaiRLLM: Consumer Fairness Evaluation in Large-Language Model Recommender System](https://www.semanticscholar.org/paper/d9d50e6d98f01f357357eafde24ab66370fc3559) (25 citations, 2024). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/c345449e88e4acd26dc9997cb05feb66b3bf6321) --> [Paper 2](https://www.semanticscholar.org/paper/88b7137ae73e793f38f1ad22599c5e0449b2be57) --> [Paper 3](https://www.semanticscholar.org/paper/7a4b8786e32a44c41a392136e72a5fa0735f8106). The analysis reveals a progression from individual consumer fairness in LLM-based recommender systems to group fairness and bias mitigation strategies. The source paper introduces the concept of intersectional fairness and true preference alignment, which is not fully explored in the related papers. To advance the field, a research idea should focus on integrating these concepts with the top-K ranking optimization discussed in Paper 2, while addressing the interplay of intersectional identities. This approach would fill the gap by ensuring that fairness evaluations consider both the complexity of user identities and the practical importance of top-K recommendations.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating intersectional prompts with fairness-aware re-ranking strategies in LLM-based recommender systems will lead to more equitable and personalized recommendations. The experiment should compare this integrated approach against baseline methods.\n\n## Datasets\nUse both the MovieLens and LastFM datasets for this experiment. These datasets should be processed to include user demographic information (particularly gender and age) which will be used for intersectional fairness evaluation.\n\n## Pilot Mode Settings\nImplement a global variable PILOT_MODE that can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':\n- For MINI_PILOT: Use only 20 users from each dataset, with 10 items per user history, and generate recommendations for 5 test users with different intersectional attributes (e.g., young adult women, older adult men).\n- For PILOT: Use 200 users from each dataset, with 20 items per user history, and generate recommendations for 50 test users with varied intersectional attributes.\n- For FULL_EXPERIMENT: Use the complete datasets with all available users and items.\n\nStart by running the MINI_PILOT first. If everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).\n\n## Experimental Conditions\nImplement and compare the following recommendation approaches:\n\n1. Baseline 1 - Standard LLM Recommender: Use a standard prompt-based approach with GPT-3 that does not explicitly consider intersectional attributes. Example prompt: \"Based on a user who liked [items], recommend similar items.\"\n\n2. Baseline 2 - Intersectional Prompts Only: Use prompts that explicitly mention intersectional attributes but without fairness re-ranking. Example prompt: \"I am a Young Adult Woman who liked [items], recommend me items that I would like.\"\n\n3. Baseline 3 - Standard Recommender with Fairness Re-ranking: Use standard prompts but apply fairness re-ranking to the results.\n\n4. Experimental - Integrated Approach: Combine intersectional prompts with fairness-aware re-ranking.\n\n## Implementation Details\n\n### Intersectional Prompt Generation\nCreate a module that generates prompts incorporating multiple sensitive attributes (primarily gender and age). Define at least 6 intersectional categories (e.g., young adult women, middle-aged men, etc.). For each user in the test set, generate appropriate intersectional prompts based on their demographic attributes.\n\nExample prompt template: \"I am a [AGE_GROUP] [GENDER] who enjoyed [USER_ITEMS]. Can you recommend similar items I might like?\"\n\n### Fairness-aware Re-ranking Algorithm\nImplement a re-ranking algorithm that takes the initial recommendation list and adjusts it to ensure fair exposure across providers (e.g., movie studios, music artists) while maintaining relevance to users. The algorithm should:\n\n1. Calculate a fairness score for each provider based on their current representation in recommendations\n2. Calculate a relevance score for each item based on its similarity to user preferences\n3. Combine these scores with a tunable parameter \u03b1 that controls the trade-off between fairness and relevance\n4. Re-rank items based on the combined score\n\nThe re-ranking formula should be: score = \u03b1 * relevance_score + (1-\u03b1) * fairness_score\n\nTest at least three values of \u03b1 (0.3, 0.5, 0.7) to explore different fairness-relevance trade-offs.\n\n### LLM Integration\nUse GPT-3 (or a similar advanced LLM) to process the prompts and generate initial recommendation lists. Ensure proper error handling and rate limiting when making API calls.\n\n## Evaluation Metrics\n\n1. Recommendation Quality:\n   - Jaccard Similarity between recommended items and user's actual preferences (from held-out test data)\n   - PRAG (Personalized Ranking Accuracy Gain) to measure ranking quality\n\n2. Fairness Metrics:\n   - Provider Exposure Fairness: Gini coefficient of provider representation in recommendations\n   - Intersectional Fairness: Difference in recommendation quality across different intersectional groups\n\n## Experimental Procedure\n\n1. Data Preparation:\n   - Load and preprocess the MovieLens and LastFM datasets\n   - Split data into training (70%), validation (15%), and test (15%) sets\n   - Extract user demographic information and item provider information\n\n2. For each user in the test set:\n   - Generate recommendations using each of the four approaches\n   - Apply evaluation metrics to compare the approaches\n\n3. Analysis:\n   - Compare the performance of all approaches across all metrics\n   - Conduct statistical significance testing (t-tests or bootstrap resampling) to determine if differences are significant\n   - Analyze how performance varies across different intersectional groups\n\n## Output and Reporting\n\n1. Generate tables comparing all approaches across all metrics\n2. Create visualizations showing:\n   - Performance comparison across approaches\n   - Fairness-relevance trade-offs for different \u03b1 values\n   - Performance differences across intersectional groups\n\n3. Provide detailed logs of:\n   - Generated prompts\n   - Initial recommendation lists\n   - Re-ranked recommendation lists\n   - Evaluation metric calculations\n\nEnsure all code is well-documented and includes appropriate error handling. Implement logging throughout the experiment to track progress and capture intermediate results.",
+  "core_related_works": [
+    {
+      "title": "CFaiRLLM: Consumer Fairness Evaluation in Large-Language Model Recommender System",
+      "paperId": "d9d50e6d98f01f357357eafde24ab66370fc3559",
+      "url": "https://www.semanticscholar.org/paper/d9d50e6d98f01f357357eafde24ab66370fc3559",
+      "year": 2024,
+      "source_variable": "Intersectional Prompts",
+      "source_paper_lookup_title": "CFaiRLLM: Consumer Fairness Evaluation in Large-Language Model Recommender System"
+    },
+    {
+      "title": "FairSort: Learning to Fair Rank for Personalized Recommendations in Two-Sided Platforms",
+      "paperId": "623ede5fb5a2bf29838e0c1f2a72bf123e649fb9",
+      "url": "https://www.semanticscholar.org/paper/623ede5fb5a2bf29838e0c1f2a72bf123e649fb9",
+      "year": 2024,
+      "source_variable": "Fairness-aware Re-ranking",
+      "source_paper_lookup_title": "FairSort: Learning to Fair Rank for Personalized Recommendations in Two-Sided Platforms"
+    }
+  ],
+  "references": "1. CFaiRLLM: Consumer Fairness Evaluation in Large-Language Model Recommender System (2024). Paper ID: d9d50e6d98f01f357357eafde24ab66370fc3559\n\n2. Fairness Matters: A look at LLM-generated group recommendations (2024). Paper ID: c345449e88e4acd26dc9997cb05feb66b3bf6321\n\n3. SPRec: Self-Play to Debias LLM-based Recommendation (2024). Paper ID: 88b7137ae73e793f38f1ad22599c5e0449b2be57\n\n4. K-order Ranking Preference Optimization for Large Language Models (2025). Paper ID: 7a4b8786e32a44c41a392136e72a5fa0735f8106\n\n5. A Tutorial On Intersectionality in Fair Rankings (2025). Paper ID: c9f8ff497ea896ebdec7c9fcac0a1796f41982dd\n\n6. A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges (2023). Paper ID: 35ba67f49e33b5391f5712e9b0457b5ffa6a7f3f\n\n7. Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond (2024). Paper ID: 7e06467f1af79880640ff1f2790255741103e48f\n\n8. UP5: Unbiased Foundation Model for Fairness-aware Recommendation (2023). Paper ID: f454b3b3feb4abae67b62abc617d5adf871c86d3\n\n9. Fairness in Recommendation Ranking through Pairwise Comparisons (2019). Paper ID: 5a42d4ee70ccc904b081b1029e7584face817993\n\n10. FairSort: Learning to Fair Rank for Personalized Recommendations in Two-Sided Platforms (2024). Paper ID: 623ede5fb5a2bf29838e0c1f2a72bf123e649fb9\n\n11. A Personalized Framework for Consumer and Producer Group Fairness Optimization in Recommender Systems (2024). Paper ID: 7f71cd4fedbd278481ab26f6e10476e5efe11ebc\n\n12. Dynamic Fairness-aware Recommendation Through Multi-agent Social Choice (2023). Paper ID: 011c3417b6f70b7ca8c866157259abb0c84beb4d\n\n13. \"And the Winner Is...\": Dynamic Lotteries for Multi-group Fairness-Aware Recommendation (2020). Paper ID: c096ec97ecc4f8325f6db7f32398445d6a39f959\n\n14. Fair Recommendations with Limited Sensitive Attributes: A Distributionally Robust Optimization Approach (2024). Paper ID: 435d1fd081c2ee3f9ade8081be6bdda87385a458"
+}

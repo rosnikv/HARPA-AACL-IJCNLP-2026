@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>4657c06d57cea792eab4f14e3a12f50d88109680</p>
+<hr>
+<section><h2>Title</h2>
+<p>MultiRoleFusion: Unsupervised Graph Embeddings for Structural Role Identification in Multi-View Networks</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Real-world networks often have multiple types of relationships between nodes, leading to multi-view graph data. Existing methods for structural role identification typically focus on single-view graphs, failing to leverage the rich information across different views. This limits our ability to capture comprehensive structural roles that account for diverse relationship types in complex networks.</p>
+<h3>Motivation</h3>
+<p>Current approaches like RolX and struc2vec are designed for single-view graphs and cannot directly handle multi-view data. Fusing information from multiple graph views can potentially lead to more robust and comprehensive structural role representations, capturing complementary aspects of node behaviors across different relationship types. By leveraging multi-view information, we can potentially identify more nuanced and accurate structural roles that are consistent across different types of relationships in the network.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce MultiRoleFusion, a novel unsupervised framework for learning structural role embeddings from multi-view graph data. The method consists of four main steps: 1) View-specific embedding: For each graph view, we compute initial embeddings using a heat wavelet diffusion process, capturing structural information at multiple scales. 2) Cross-view attention: We employ a graph attention mechanism to learn the importance of each view for every node, allowing for adaptive fusion of information. 3) Embedding fusion: The view-specific embeddings are combined using the learned attention weights, resulting in a unified representation for each node. 4) Role clustering: We apply a differentiable clustering layer that learns to group the fused embeddings into distinct structural roles. The entire pipeline is trained end-to-end using a combination of reconstruction loss (to preserve view-specific information), cross-view consistency loss (to encourage agreement between views), and clustering loss (to discover well-separated roles). We also incorporate a novel regularization term that encourages the learned roles to be interpretable by favoring sparse associations between nodes and roles.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess multi-view network datasets: a) Multi-relational social networks (e.g., DBLP, IMDb), b) Heterogeneous information networks (e.g., ACM, IMDB), c) Multi-layer biological networks (e.g., BioGRID). Ensure each dataset has at least 3 views. Split each dataset into training (70%), validation (15%), and test (15%) sets.</p><p><strong>Step 2: Implement Baselines</strong></p><p>Implement single-view baselines: a) RolX, b) struc2vec. Apply these methods to aggregated graphs (sum of adjacency matrices across views) as they cannot handle multi-view data directly. Implement multi-view baselines: c) MNE, d) DMGI. Use open-source implementations when available.</p><p><strong>Step 3: Implement MultiRoleFusion</strong></p><p>a) Implement view-specific embedding using heat wavelet diffusion. b) Implement cross-view attention mechanism. c) Implement embedding fusion layer. d) Implement differentiable clustering layer. e) Implement loss functions: reconstruction loss, cross-view consistency loss, clustering loss, and interpretability regularization.</p><p><strong>Step 4: Model Training</strong></p><p>Train MultiRoleFusion and baselines on each dataset. Use Adam optimizer with learning rate 0.001. Train for 200 epochs or until convergence. Use early stopping with patience of 20 epochs based on validation loss.</p><p><strong>Step 5: Evaluation</strong></p><p>Evaluate all methods on the following tasks: a) Node classification: Use learned embeddings as features for a logistic regression classifier. Report accuracy and F1-score. b) Link prediction: Train a logistic regression classifier on concatenated node embeddings to predict links. Report AUC-ROC and AUC-PR. c) Role-based community detection: Apply k-means clustering to the learned embeddings and evaluate using normalized mutual information (NMI) with ground truth communities. d) Interpretability: Measure sparsity of role assignments and qualitatively analyze the discovered roles.</p><p><strong>Step 6: Ablation Studies</strong></p><p>Conduct ablation studies to analyze the contribution of each component: a) Remove cross-view attention. b) Remove clustering layer. c) Remove interpretability regularization. d) Vary the number of views used.</p><p><strong>Step 7: Hyperparameter Tuning</strong></p><p>Perform grid search for key hyperparameters: a) Number of structural roles (K). b) Heat diffusion scales. c) Attention mechanism parameters. d) Weights for different loss components.</p><p><strong>Step 8: Visualization and Analysis</strong></p><p>a) Visualize learned embeddings using t-SNE. b) Analyze attention weights across views. c) Interpret discovered roles by examining top nodes and their characteristics in each role.</p><p><strong>Step 9: Comparison and Reporting</strong></p><p>Compare MultiRoleFusion against baselines across all evaluation metrics. Conduct statistical significance tests (e.g., paired t-tests) to validate improvements. Prepare tables and figures summarizing the results.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (RolX on aggregated graph)</strong></p><p>Input: Adjacency matrix of an aggregated graph (sum of adjacencies across views) for the DBLP dataset.</p><p><strong>Baseline Prompt Expected Output (RolX on aggregated graph)</strong></p><p>Output: A matrix R of size N x K, where N is the number of nodes and K is the number of roles (e.g., K=5). Each row represents the soft assignment of a node to different roles.</p><p><strong>Proposed Prompt Input (MultiRoleFusion)</strong></p><p>Input: List of adjacency matrices [A1, A2, A3] representing different views of the DBLP network (e.g., co-authorship, citation, venue co-occurrence).</p><p><strong>Proposed Prompt Expected Output (MultiRoleFusion)</strong></p><p>Output: 1) A matrix R of size N x K, where N is the number of nodes and K is the number of roles (e.g., K=5). Each row represents the soft assignment of a node to different roles. 2) A matrix A of size N x V, where V is the number of views (3 in this case). Each row represents the attention weights for different views for a node.</p><p><strong>Explanation</strong></p><p>MultiRoleFusion can leverage information from multiple views to produce more comprehensive role assignments. The attention weights provide insights into the importance of each view for different nodes. In contrast, RolX only works on the aggregated graph, potentially missing view-specific structural information.</p>
+<h3>Fallback Plan</h3>
+<p>If MultiRoleFusion doesn't significantly outperform baselines, we can pivot the project in several ways: 1) Conduct an in-depth analysis of where and why the method fails, focusing on specific network properties or node types that are challenging for our approach. This could lead to insights about the limitations of multi-view role identification. 2) Explore alternative fusion strategies, such as view-specific role identification followed by consensus clustering, or using graph neural networks for view integration. 3) Investigate the interpretability aspect more deeply, analyzing how different views contribute to role definitions and how this varies across different types of networks. This could turn the project into a comparative study of role structures in multi-view networks. 4) If computational efficiency is an issue, we could focus on developing approximation techniques or sampling strategies to scale the method to larger networks, potentially leading to a paper on scalable multi-view role identification.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/e24cdf73b3e7e590c2fe5ecac9ae8aa983801367" target="_blank">Neural Message Passing for Quantum Chemistry</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0f7f5679615effcc4c9b98cf2deb17c30744a6d7" target="_blank">struc2vec: Learning Node Representations from Structural Identity</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83" target="_blank">DeepWalk: online learning of social representations</a> (2014)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/36eff562f65125511b5dfab68ce7f7a943c27478" target="_blank">Semi-Supervised Classification with Graph Convolutional Networks</a> (2016)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d1bfeed240709725c78bc72ea40e55410b373dc" target="_blank">Convolutional Networks on Graphs for Learning Molecular Fingerprints</a> (2015)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d2e403358b845673783de0a774d97379f6f7376" target="_blank">RolX: Role Extraction and Mining in Large Networks</a> (2011)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e02f59cf876cb40233573ff78a1609f969d301cc" target="_blank">subgraph2vec: Learning Distributed Representations of Rooted Sub-graphs from Large Graphs</a> (2016)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1d0f007192db92d29b1cdf43aa9325ba0535b23a" target="_blank">Vertex similarity in networks.</a> (2005)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ecf6c42d84351f34e1625a6a2e4cc6526da45c74" target="_blank">Representation Learning on Graphs: Methods and Applications</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b00cea45c85e68002d34b608aecb4fddd18210aa" target="_blank">Learning Graph Representations with Embedding Propagation</a> (2017)
+</li>
+</ol>
+</section>
+</body></html>

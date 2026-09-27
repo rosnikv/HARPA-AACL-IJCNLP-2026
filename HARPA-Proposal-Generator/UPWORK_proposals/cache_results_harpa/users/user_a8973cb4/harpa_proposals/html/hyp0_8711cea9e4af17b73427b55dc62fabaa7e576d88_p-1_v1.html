@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8711cea9e4af17b73427b55dc62fabaa7e576d88</p>
+<hr>
+<h2>Title</h2>
+<p>Integrate FedAC with FedStar's structural embeddings to enhance federated graph learning on non-IID datasets.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating FedAC with structural embedding techniques from FedStar will improve model accuracy and generalization in federated graph learning on synthetic non-IID graph datasets compared to using FedAC alone.</p>
+<h3>Motivation</h3>
+<p>Existing federated graph learning methods often struggle with non-IID data distributions, which can lead to suboptimal model performance. While adaptive clustering strategies like FedAC have been proposed, they primarily focus on client grouping based on data distribution similarities. However, these methods do not fully leverage the structural information inherent in graph data, which can be crucial for improving model generalization and accuracy. Additionally, static clustering strategies like K-means do not adapt to the dynamic nature of federated learning environments, limiting their effectiveness. This hypothesis addresses the gap by exploring the integration of FedAC with structural embedding techniques from FedStar to enhance model performance on synthetic non-IID graph datasets. This combination has not been extensively tested and could provide a novel approach to improving federated graph learning outcomes by leveraging both adaptive clustering and structural information.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The proposed research idea involves integrating the Federated Adaptive Cluster (FedAC) algorithm with structural embedding techniques from the FedStar framework to enhance model accuracy and generalization in federated graph learning on synthetic non-IID graph datasets. FedAC is designed to group clients with similar data distributions to improve convergence and resource utilization. However, it does not fully utilize the structural information present in graph data, which can be critical for model performance. By incorporating structural embeddings from FedStar, which extracts shared structural knowledge from non-uniformly distributed graph data, the combined approach aims to enhance the encoding capacity of local models, leading to better clustering and generalization across diverse datasets. This integration is expected to address the limitations of existing methods by leveraging both adaptive clustering and structural information, providing a novel approach to improving federated graph learning outcomes. The hypothesis will be tested using synthetic non-IID graph datasets, with model accuracy and generalization as the primary evaluation metrics. The expected outcome is that the integrated approach will outperform FedAC alone, demonstrating the benefits of combining adaptive clustering with structural embedding techniques.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/af1a88b169ed00ab9dcdc860bc5b6b183fd7a3ab">FedAC</a>: FedAC is an adaptive clustered federated learning framework designed to group clients with similar data distributions for cluster-wise model training. It integrates global knowledge into intra-cluster learning by decoupling neural networks and using distinct aggregation methods for each submodule. FedAC includes a cost-effective online model similarity metric based on dimensionality reduction and a cluster number fine-tuning module for improved adaptability. In this research, FedAC will be used as the primary clustering strategy, with the expectation that its adaptive nature will improve model convergence and resource utilization. The integration with structural embedding techniques aims to further enhance its performance by leveraging the structural information present in graph data.</p>
+<p><a href="https://www.semanticscholar.org/paper/83b87e923b0847fe0cb09e2d86686e2e1a5079ea">FedStar Structural Embedding</a>: FedStar employs structural embedding and independent structure encoders for federated graph learning, aiming to extract shared structural knowledge from non-uniformly distributed graph data. This approach optimizes data distribution via computing offloading, reshaping edge datasets by strategically deploying computational tasks across devices. In this research, FedStar's structural embedding techniques will be integrated with FedAC to enhance the encoding capacity of local models, leading to better clustering and generalization across diverse datasets. The structural embeddings are expected to improve the model's ability to adapt to the characteristics of each data source, thereby improving accuracy on diverse data distributions.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates FedAC's adaptive clustering capabilities with FedStar's structural embedding techniques to enhance federated graph learning on synthetic non-IID graph datasets. The implementation involves the following steps: 1) Initialize the FedAC framework to group clients with similar data distributions for cluster-wise model training. 2) Incorporate structural embedding techniques from FedStar to extract shared structural knowledge from non-uniformly distributed graph data. This involves using independent structure encoders to optimize data distribution via computing offloading. 3) Perform federated learning within each cluster, leveraging the structural embeddings to enhance the encoding capacity of local models. 4) Aggregate the updated model parameters at the server, using FedAC's online model similarity metric to ensure efficient resource utilization. 5) Evaluate the integrated approach on synthetic non-IID graph datasets, comparing its performance to FedAC alone in terms of model accuracy and generalization. The integration is expected to improve model performance by leveraging both adaptive clustering and structural information, providing a novel approach to federated graph learning.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating FedAC (Federated Adaptive Clustering) with FedStar's structural embedding techniques improves model accuracy and generalization in federated graph learning on synthetic non-IID graph datasets compared to using FedAC alone.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare two federated learning approaches:<br />
+1. <strong>Baseline</strong>: Standard FedAC algorithm that groups clients with similar data distributions for cluster-wise model training<br />
+2. <strong>Experimental</strong>: An integrated approach that combines FedAC with structural embedding techniques from FedStar</p></p>
+<p><p>The hypothesis is that the integrated approach will outperform FedAC alone on synthetic non-IID graph datasets, as measured by model accuracy and generalization metrics.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Experiment Settings</strong></h4>
+<p>Implement three experiment modes controlled by a global variable <code>PILOT_MODE</code> with possible values: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use 3 clients with small synthetic graph datasets (50-100 nodes each). Run for 5 communication rounds. This should complete in a few minutes and is for code verification.</li>
+<li><strong>PILOT</strong>: Use 10 clients with medium-sized synthetic graph datasets (200-500 nodes each). Run for 20 communication rounds. This should complete in 1-2 hours and is to verify if the experimental approach shows promise.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use 50 clients with full-sized synthetic graph datasets (1000+ nodes each). Run for 100 communication rounds. This is the complete experiment.</li>
+</ul></p>
+<p><p>Start by running the MINI_PILOT. If successful, run the PILOT. Stop after the PILOT and do not run the FULL_EXPERIMENT (a human will verify results and manually change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Generation</strong></h4>
+<p>Generate synthetic non-IID graph datasets with the following characteristics:<br />
+1. Create graph data with node features and edge connections<br />
+2. Implement a node classification task (e.g., predicting node categories)<br />
+3. Distribute the data in a non-IID manner across clients by:<br />
+   - Varying the class distribution across clients (label skew)<br />
+   - Varying the graph structure across clients (structural skew)</p></p>
+<p><p>Split the data into training (70%), validation (15%), and test (15%) sets.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>1. FedAC Implementation (Baseline)</strong></h4>
+<p>Implement the Federated Adaptive Cluster algorithm with the following components:<br />
+- Client similarity measurement using dimensionality reduction<br />
+- Adaptive clustering of clients based on similarity<br />
+- Cluster-wise model training<br />
+- Parameter aggregation at the server</p></p>
+<p><h4 class="custom-heading"><strong>2. FedStar Structural Embedding Integration (Experimental)</strong></h4>
+<p>Extend the FedAC implementation by integrating FedStar's structural embedding techniques:<br />
+- Implement independent structure encoders for each client<br />
+- Extract shared structural knowledge from graph data<br />
+- Incorporate structural embeddings into the client similarity measurement<br />
+- Use structural information to enhance the encoding capacity of local models</p></p>
+<p><h4 class="custom-heading"><strong>3. Model Architecture</strong></h4>
+<p>For both approaches, use a Graph Neural Network (GNN) with:<br />
+- Graph convolutional layers<br />
+- Pooling layers<br />
+- Fully connected layers for classification</p></p>
+<p><h4 class="custom-heading"><strong>4. Training Process</strong></h4>
+<p>For both baseline and experimental approaches:<br />
+1. Initialize the server and client models<br />
+2. For each communication round:<br />
+   - Select a subset of clients<br />
+   - Perform local training on each client<br />
+   - Aggregate model updates at the server<br />
+   - Evaluate model performance on validation data<br />
+3. After training, evaluate final model performance on test data</p></p>
+<p><h4 class="custom-heading"><strong>5. Evaluation Metrics</strong></h4>
+<p>Evaluate both approaches using the following metrics:<br />
+- <strong>Accuracy</strong>: Overall classification accuracy<br />
+- <strong>Precision, Recall, F1-score</strong>: Calculated from the confusion matrix<br />
+- <strong>AUC-ROC</strong>: To measure model's ability to distinguish between classes<br />
+- <strong>Convergence rate</strong>: Number of rounds needed to reach a target accuracy<br />
+- <strong>Communication efficiency</strong>: Total communication cost</p></p>
+<p><h4 class="custom-heading"><strong>6. Statistical Analysis</strong></h4>
+<p>Perform the following statistical analyses:<br />
+- Calculate mean and standard deviation for all metrics<br />
+- Conduct paired t-tests to determine if differences are statistically significant (p &lt; 0.05)<br />
+- Use bootstrap resampling to establish 95% confidence intervals</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Output</strong></h4>
+<p>Generate the following outputs:<br />
+1. Training logs showing loss and accuracy per communication round<br />
+2. Final evaluation metrics for both approaches<br />
+3. Visualizations comparing performance (line charts for convergence, bar charts for final metrics)<br />
+4. Statistical analysis results<br />
+5. Summary report highlighting key findings</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4>
+<ul>
+<li>Use PyTorch for implementing the GNN models</li>
+<li>Use PyTorch Geometric for graph operations</li>
+<li>Implement a simulated federated learning environment</li>
+<li>Log all experimental results and model parameters</li>
+<li>Ensure reproducibility by setting random seeds</li>
+</ul></p>
+<p><p>Please implement this experiment and run it in MINI_PILOT mode first, then PILOT mode if successful. Do not proceed to FULL_EXPERIMENT without human verification.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/8711cea9e4af17b73427b55dc62fabaa7e576d88">Paper 0: Federated Graph Classification over Non-IID Graphs</a> (171 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/86ad9d1dd6626921297a8456b048f4bccafe967c">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/6a2cde371246ed0a6f87bd2fd1bf6c32971120e9">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/232596522b80ff400871c02c886184f598835364">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/243fe9503cf8985e047a7908e22a1079fc714c08">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/e566c649a5e410178e7fb413482ec14d10cbe2a3">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/f97cffecc42d4b1ced61dcb60fd9240b3538ce20">Paper 6</a> --&gt; <a href="https://www.semanticscholar.org/paper/201be4e27b0169c1c52dabef8bff2e23b39f824c">Paper 7</a>. The analysis reveals a consistent theme of addressing non-IID data challenges in federated learning, particularly in graph-based applications. The progression of research from the source paper to the related papers shows advancements in handling incomplete data, improving model performance, and developing personalized federated learning frameworks. A promising research idea would be to explore a novel approach that further enhances federated learning for graph data by integrating adaptive clustering techniques to dynamically adjust to non-IID data distributions, thereby improving model generalization and efficiency.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/8711cea9e4af17b73427b55dc62fabaa7e576d88" target="_blank">Federated Graph Classification over Non-IID Graphs</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/86ad9d1dd6626921297a8456b048f4bccafe967c" target="_blank">FedGraphNN: A Federated Learning System and Benchmark for Graph Neural Networks</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/6a2cde371246ed0a6f87bd2fd1bf6c32971120e9" target="_blank">Subgraph Federated Learning with Missing Neighbor Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/232596522b80ff400871c02c886184f598835364" target="_blank">FedNI: Federated Graph Learning With Network Inpainting for Population-Based Disease Prediction</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/243fe9503cf8985e047a7908e22a1079fc714c08" target="_blank">Federated Brain Graph Evolution Prediction Using Decentralized Connectivity Datasets With Temporally-Varying Acquisitions</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/e566c649a5e410178e7fb413482ec14d10cbe2a3" target="_blank">Personalized Federated Graph Learning on Non-IID Electronic Health Records</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/f97cffecc42d4b1ced61dcb60fd9240b3538ce20" target="_blank">Non-IID data in Federated Learning: A Survey with Taxonomy, Metrics, Methods, Frameworks and Future Directions</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/201be4e27b0169c1c52dabef8bff2e23b39f824c" target="_blank">Federated Adaptive Personalized Optimization (Fed-APO): A Meta-Learning Approach to Enhancing Healthcare for Non-IID Multi-Healthcare Data</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/da09179c27cfd44fc29f41014affcc29b6039291" target="_blank">Personalized Federated Learning Algorithm with Adaptive Clustering for Non-IID IoT Data Incorporating Multi-Task Learning and Neural Network Model Characteristics</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/6098e4e3513c54267a58bef883dde30fc2e3945f" target="_blank">Decentralized and Distributed Learning for AIoT: A Comprehensive Review, Emerging Challenges, and Opportunities</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/db2eb680bbef33b07c2f8b01a4245e3891d0270c" target="_blank">Reinforcement Federated Learning Method Based on Adaptive OPTICS Clustering</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/af1a88b169ed00ab9dcdc860bc5b6b183fd7a3ab" target="_blank">FedAC: An Adaptive Clustered Federated Learning Framework for Heterogeneous Data</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/860ae7d028df0a85d8f8b82fa2c7a817bcee10b7" target="_blank">SelfORE: Self-supervised Relational Feature Learning for Open Relation Extraction</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/7ded212ae70c536f3da6a80604dcb0853d2b3d16" target="_blank">Distributed Clustering and Learning Over Networks</a> (2014)</li>
+<li><a href="https://www.semanticscholar.org/paper/b26f107efd418f2ef949ae530ff9347d8d69e360" target="_blank">Clustering Items through Bandit Feedback: Finding the Right Feature out of Many</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/83b87e923b0847fe0cb09e2d86686e2e1a5079ea" target="_blank">FlocOff: Data Heterogeneity Resilient Federated Learning With Communication-Efficient Edge Offloading</a> (2024)</li>
+</ol>
+</body>
+</html>

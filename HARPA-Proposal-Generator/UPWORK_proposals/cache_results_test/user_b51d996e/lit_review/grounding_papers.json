@@ -1,0 +1,336 @@
+[
+  {
+    "id": "afd0541230b246928024f21d9c8b81f7c762d3f2",
+    "paperId": "afd0541230b246928024f21d9c8b81f7c762d3f2",
+    "title": "Inventory Optimization in Retail Supply Chains Using Deep Reinforcement Learning",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.62177/amit.v1i3.470?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.62177/amit.v1i3.470, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2369332479",
+        "name": "Min-Jae Park"
+      },
+      {
+        "authorId": "2369351319",
+        "name": "Olivia Turner"
+      },
+      {
+        "authorId": "2369351317",
+        "name": "Thomas Becker"
+      }
+    ],
+    "abstract": "Inventory management is a critical component of retail supply chains, directly affecting operational efficiency, customer satisfaction, and profitability. Traditional approaches to inventory optimization often rely on heuristic rules or static mathematical models, which struggle to cope with the high-dimensional, stochastic, and dynamic nature of modern retail environments. This paper proposes a novel framework utilizing deep reinforcement learning (DRL) to optimize inventory control decisions in end-to-end retail supply chains. The supply chain system is modeled as a Markov Decision Process (MDP), where the agent observes states such as stock levels, sales trends, supplier lead times, and demand forecasts. A DRL agent, trained with the Deep Deterministic Policy Gradient (DDPG) algorithm, learns to generate real-time replenishment and ordering strategies that maximize long-term performance by minimizing costs and avoiding stockouts. Experimental evaluations using both simulated and real-world retail data demonstrate that the proposed method outperforms classical baselines such as economic order quantity (EOQ) and safety stock models in terms of inventory turnover, service level, and total cost. The results suggest that DRL can serve as a robust and adaptive solution to inventory optimization under uncertainty.",
+    "score": 8
+  },
+  {
+    "id": "e217df918325bf13a8baa45603713af610474a98",
+    "paperId": "e217df918325bf13a8baa45603713af610474a98",
+    "title": "Deep Reinforcement Learning for Optimal Replenishment in Stochastic Assembly Systems",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/math13142229?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/math13142229, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2373021167",
+        "name": "Lativa Sid Ahmed Abdellahi"
+      },
+      {
+        "authorId": "2492450",
+        "name": "Zeinebou Zoubeir"
+      },
+      {
+        "authorId": "2328706846",
+        "name": "Yahya Mohamed"
+      },
+      {
+        "authorId": "2654818",
+        "name": "A. Haouba"
+      },
+      {
+        "authorId": "2373023909",
+        "name": "Sidi Hmetty"
+      }
+    ],
+    "abstract": "This study presents a reinforcement learning–based approach to optimize replenishment policies in the presence of uncertainty, with the objective of minimizing total costs, including inventory holding, shortage, and ordering costs. The focus is on single-level assembly systems, where both component delivery lead times and finished product demand are subject to randomness. The problem is formulated as a Markov decision process (MDP), in which an agent determines optimal order quantities for each component by accounting for stochastic lead times and demand variability. The Deep Q-Network (DQN) algorithm is adapted and employed to learn optimal replenishment policies over a fixed planning horizon. To enhance learning performance, we develop a tailored simulation environment that captures multi-component interactions, random lead times, and variable demand, along with a modular and realistic cost structure. The environment enables dynamic state transitions, lead time sampling, and flexible order reception modeling, providing a high-fidelity training ground for the agent. To further improve convergence and policy quality, we incorporate local search mechanisms and multiple action space discretizations per component. Simulation results show that the proposed method converges to stable ordering policies after approximately 100 episodes. The agent achieves an average service level of 96.93%, and stockout events are reduced by over 100% relative to early training phases. The system maintains component inventories within operationally feasible ranges, and cost components—holding, shortage, and ordering—are consistently minimized across 500 training episodes. These findings highlight the potential of deep reinforcement learning as a data-driven and adaptive approach to inventory management in complex and uncertain supply chains.",
+    "score": 6
+  },
+  {
+    "id": "67c9b3ac2748297ce2de06fd0464783932c0297c",
+    "paperId": "67c9b3ac2748297ce2de06fd0464783932c0297c",
+    "title": "Outbound Modeling for Inventory Management",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.10890, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2373441615",
+        "name": "Riccardo Savorgnan"
+      },
+      {
+        "authorId": "2324579770",
+        "name": "Udaya Ghai"
+      },
+      {
+        "authorId": "12210412",
+        "name": "Carson Eisenach"
+      },
+      {
+        "authorId": "2261495467",
+        "name": "Dean Foster"
+      }
+    ],
+    "abstract": "We study the problem of forecasting the number of units fulfilled (or ``drained'') from each inventory warehouse to meet customer demand, along with the associated outbound shipping costs. The actual drain and shipping costs are determined by complex production systems that manage the planning and execution of customers'orders fulfillment, i.e. from where and how to ship a unit to be delivered to a customer. Accurately modeling these processes is critical for regional inventory planning, especially when using Reinforcement Learning (RL) to develop control policies. For the RL usecase, a drain model is incorporated into a simulator to produce long rollouts, which we desire to be differentiable. While simulating the calls to the internal software systems can be used to recover this transition, they are non-differentiable and too slow and costly to run within an RL training environment. Accordingly, we frame this as a probabilistic forecasting problem, modeling the joint distribution of outbound drain and shipping costs across all warehouses at each time period, conditioned on inventory positions and exogenous customer demand. To ensure robustness in an RL environment, the model must handle out-of-distribution scenarios that arise from off-policy trajectories. We propose a validation scheme that leverages production systems to evaluate the drain model on counterfactual inventory states induced by RL policies. Preliminary results demonstrate the model's accuracy within the in-distribution setting.",
+    "score": 6
+  },
+  {
+    "id": "746c50f86e58210323d3ba01ffc7f8ad2343910c",
+    "paperId": "746c50f86e58210323d3ba01ffc7f8ad2343910c",
+    "title": "Computing optimal policies for managing inventories with noisy observations",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19765, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2373623827",
+        "name": "Eugene Feinberg"
+      },
+      {
+        "authorId": "2373595454",
+        "name": "Jefferson Huang"
+      },
+      {
+        "authorId": "2373602819",
+        "name": "Pavlo Kasyanov"
+      },
+      {
+        "authorId": "2373624253",
+        "name": "Thomas O'Neill"
+      }
+    ],
+    "abstract": "This paper implements the Deep Deterministic Policy Gradient (DDPG) algorithm for computing optimal policies for partially observable single-product periodic review inventory control problems with setup costs and backorders. The decision maker does not know the exact inventory level, but can obtain noise-corrupted observations of them. The goal is to maximize the expected total discounted costs incurred over a finite planning horizon. We also investigate the Gaussian version of this problem with normally distributed initial inventories, demands, and observation noise. We show that expected posterior observations of inventory levels, also called mean beliefs, provide sufficient statistics for the Gaussian problem. Moreover, they can be represented in the form of a Markov Decision Processes for an inventory control system with time-dependent holding costs and demands. Thus, for a Gaussian problem, the there exist (s_t,S_t)-optimal policies based on mean beliefs, and this fact explains the structure of the approximately optimal policies computed by DDPG. For the Gaussian case, we also numerically compare the performance of policies derived from DDPG to optimal policies for discretized versions of the original continuous problem.",
+    "score": 6
+  },
+  {
+    "id": "9aa4ba9affbbf577edaa41455269ceeca58a15f1",
+    "paperId": "9aa4ba9affbbf577edaa41455269ceeca58a15f1",
+    "title": "Two‐stage stochastic demand response in smart grid considering random appliance usage patterns",
+    "year": 2018,
+    "citationCount": 27,
+    "openAccessPdf": {
+      "url": "https://ietresearch.onlinelibrary.wiley.com/doi/pdfdirect/10.1049/iet-gtd.2018.5943",
+      "status": "BRONZE",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1049/IET-GTD.2018.5943?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1049/IET-GTD.2018.5943, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "To reduce the computational complexity caused by a large number of home appliances in distribution systems, scenario reduction technique is applied to reduce the number of possible scenarios while still retaining the essential features of the original scenario set."
+    },
+    "authors": [
+      {
+        "authorId": "2118461792",
+        "name": "Yue Wang"
+      },
+      {
+        "authorId": "50855146",
+        "name": "Hao Liang"
+      },
+      {
+        "authorId": "1940408",
+        "name": "V. Dinavahi"
+      }
+    ],
+    "abstract": "By effectively adjusting the appliance usage patterns of customers, demand response (DR) is expected to bring significant economic and environmental benefits to the future smart grid. Two kinds of appliances should be considered for DR, i.e. shiftable appliances such as dishwashers and laundry machines, and non-shiftable appliances such as lights and stoves. Although the shiftable appliances can be well controlled by energy management systems, the random usage patterns of non-shiftable appliances will result in uncertainties to electrical demands and thus, affect the efficiency and reliability of smart grid operation. A two-stage stochastic programming problem is formulated, for which the distribution system operation cost is minimised in the first stage, by considering various distribution system operation constraints. The scheduling of shiftable appliances is optimised in the second stage, by considering the random usage patterns of non-shiftable appliances. To reduce the computational complexity caused by a large number of home appliances in distribution systems, scenario reduction technique is applied to reduce the number of possible scenarios while still retaining the essential features of the original scenario set. Extensive simulations are performed to evaluate the proposed DR scheme in IEEE 33-bus and 119-bus test distribution systems based on real appliance usage pattern data.",
+    "score": 8
+  },
+  {
+    "id": "46672cba9fa38c878fd44643068534c7e1c05abb",
+    "paperId": "46672cba9fa38c878fd44643068534c7e1c05abb",
+    "title": "Fully dynamic reorder policies with deep reinforcement learning for multi-echelon inventory management",
+    "year": 2023,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "https://link.springer.com/content/pdf/10.1007/s00287-023-01556-6.pdf",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1007/s00287-023-01556-6?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/s00287-023-01556-6, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This paper evaluates state-of-the-art optimization approaches to determine whether Deep Reinforcement Learning can be applied to the multi-echelon inventory optimization framework in a practically feasible manner to generate fully dynamic reorder policies."
+    },
+    "authors": [
+      {
+        "authorId": "2275305979",
+        "name": "Patric Hammler"
+      },
+      {
+        "authorId": "2275308701",
+        "name": "Nicolas Riesterer"
+      },
+      {
+        "authorId": "2275306007",
+        "name": "Torsten Braun"
+      }
+    ],
+    "abstract": "The operation of inventory systems plays an important role in the success of manufacturing companies, making it a highly relevant domain for optimization. In particular, the domain lends itself to being approached via Deep Reinforcement Learning (DRL) models due to it requiring sequential reorder decisions based on uncertainty to minimize cost. In this paper, we evaluate state-of-the-art optimization approaches to determine whether Deep Reinforcement Learning can be applied to the multi-echelon inventory optimization (MEIO) framework in a practically feasible manner to generate fully dynamic reorder policies. We investigate how it performs in comparison to an optimized static reorder policy, how robust it is when it comes to structural changes in the environment, and whether the use of DRL is safe in terms of risk in real-world applications. Our results show promising performance for DRL with potential for improvement in terms of minimizing risky behavior.",
+    "score": 7
+  },
+  {
+    "id": "4e3cc81c58db72ba1b40eb062dc87feb6c2a6419",
+    "paperId": "4e3cc81c58db72ba1b40eb062dc87feb6c2a6419",
+    "title": "Two-Stage Stochastic Programming Method for Multi-Energy Microgrid System",
+    "year": 2020,
+    "citationCount": 2,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACPEE48638.2020.9136565?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACPEE48638.2020.9136565, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "The validity and economy of the two-stage Stochastic programming method proposed in this paper is verified by comparing the deterministic method with the stochastic method."
+    },
+    "authors": [
+      {
+        "authorId": "2145146544",
+        "name": "Lu Chen"
+      },
+      {
+        "authorId": "2108981144",
+        "name": "Hongbo Wang"
+      },
+      {
+        "authorId": "1806085484",
+        "name": "Duanchao Li"
+      },
+      {
+        "authorId": "8602051",
+        "name": "Kaiyi Huang"
+      },
+      {
+        "authorId": "1816765",
+        "name": "Q. Ai"
+      }
+    ],
+    "abstract": "To solve the problems of optimal dispatch of electric-thermal-gas multi-energy microgrid system and uncertainty of new energy output and load fluctuation, a two-stage stochastic programming method based on energy hub (EH) is proposed, and an optimal dispatch model of microgrid energy is established. The coupling relationship between electricity, heat and natural gas in the integrated energy system is studied, and a \"virtual port\" is added to the EH to realize the linearization of the model. In the first stage, the objective is to maximize the economic benefit. According to the known data and constraints, the dispatch quantity of energy bought/sold from the main grid and the input power of the EH in the microgrid are determined. In the second stage, considering the fluctuation of load and new energy, stochastic programming is adopted to deal with uncertainties, and adjustment is made on the basis of the first stage, and the combination of deterministic factors and random factors in scheduling optimization is realized, which is suitable for actual scheduling. Finally, taking a typical residential area with multi-energy system as an example, the validity and economy of the two-stage stochastic programming method proposed in this paper is verified by comparing the deterministic method with the stochastic method.",
+    "score": 7
+  },
+  {
+    "id": "be435a2e4f5e2a9f3d72aa7530c1a5cd20936d87",
+    "paperId": "be435a2e4f5e2a9f3d72aa7530c1a5cd20936d87",
+    "title": "Deep RL Dual Sourcing Inventory Management with Supply and Capacity Risk Awareness",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.14446, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2373673559",
+        "name": "Defeng Liu"
+      },
+      {
+        "authorId": "2159104794",
+        "name": "Ying Liu"
+      },
+      {
+        "authorId": "12210412",
+        "name": "Carson Eisenach"
+      }
+    ],
+    "abstract": "In this work, we study how to efficiently apply reinforcement learning (RL) for solving large-scale stochastic optimization problems by leveraging intervention models. The key of the proposed methodology is to better explore the solution space by simulating and composing the stochastic processes using pre-trained deep learning (DL) models. We demonstrate our approach on a challenging real-world application, the multi-sourcing multi-period inventory management problem in supply chain optimization. In particular, we employ deep RL models for learning and forecasting the stochastic supply chain processes under a range of assumptions. Moreover, we also introduce a constraint coordination mechanism, designed to forecast dual costs given the cross-products constraints in the inventory network. We highlight that instead of directly modeling the complex physical constraints into the RL optimization problem and solving the stochastic problem as a whole, our approach breaks down those supply chain processes into scalable and composable DL modules, leading to improved performance on large real-world datasets. We also outline open problems for future research to further investigate the efficacy of such models.",
+    "score": 7
+  },
+  {
+    "id": "00647a552e1de161e796fa61b2e0d0f0c1e1b860",
+    "paperId": "00647a552e1de161e796fa61b2e0d0f0c1e1b860",
+    "title": "Single-Site Perishable Inventory Management Under Uncertainties: A Deep Reinforcement Learning Approach",
+    "year": 2023,
+    "citationCount": 5,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TKDE.2023.3250249?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TKDE.2023.3250249, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "A reinforcement learning-based algorithm is developed to intelligently choose the supplier and decide the order quantity in each time period of the LS-PMU problem, which captures the inventory planning task in real life better than existing lot sizing problems."
+    },
+    "authors": [
+      {
+        "authorId": "2148359505",
+        "name": "Kaixin Wang"
+      },
+      {
+        "authorId": "2147481594",
+        "name": "Cheng Long"
+      },
+      {
+        "authorId": "2171364144",
+        "name": "Darrell Joshua Ong"
+      },
+      {
+        "authorId": "40539618",
+        "name": "J. Zhang"
+      },
+      {
+        "authorId": "2148273182",
+        "name": "Xue Yuan"
+      }
+    ],
+    "abstract": "Online lot sizing for perishable materials in an uncertain environment is a fundamental problem for inventory planning and has been studied for several decades. In this article, we study a novel setting of the <underline>l</underline>ot <underline>s</underline>izing problem, considering <underline>p</underline>erishable materials, <underline>m</underline>ultiple suppliers, <underline>u</underline>ncertain demands and lead time (LS-PMU), which captures the inventory planning task in real life better than existing lot sizing problems. We present theoretical results of the best possible competitive ratio an online algorithm can achieve for the LS-PMU problem. We then develop a reinforcement learning-based algorithm called <monospace>RL4LS</monospace> to intelligently choose the supplier and decide the order quantity in each time period. We conduct extensive experiments on both real and synthetic datasets to verify that <monospace>RL4LS</monospace> outperforms existing algorithms in terms of effectiveness and efficiency, e.g., <monospace>RL4LS</monospace> improves the effectiveness by 44% and runs two orders of magnitude faster than the state-of-the-art algorithm <monospace>IBFA</monospace>.",
+    "score": 6
+  },
+  {
+    "id": "ab2cacd24cf1c25adc325e1ef13b58bfacadb5f4",
+    "paperId": "ab2cacd24cf1c25adc325e1ef13b58bfacadb5f4",
+    "title": "Adaptive Inventory Strategies using Deep Reinforcement Learning for Dynamic Agri-Food Supply Chains",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.16670, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2347939192",
+        "name": "Amandeep Kaur"
+      },
+      {
+        "authorId": "2347951894",
+        "name": "Gyan Prakash"
+      }
+    ],
+    "abstract": "Agricultural products are often subject to seasonal fluctuations in production and demand. Predicting and managing inventory levels in response to these variations can be challenging, leading to either excess inventory or stockouts. Additionally, the coordination among stakeholders at various level of food supply chain is not considered in the existing body of literature. To bridge these research gaps, this study focuses on inventory management of agri-food products under demand and lead time uncertainties. By implementing effective inventory replenishment policy results in maximize the overall profit throughout the supply chain. However, the complexity of the problem increases due to these uncertainties and shelf-life of the product, that makes challenging to implement traditional approaches to generate optimal set of solutions. Thus, the current study propose a novel Deep Reinforcement Learning (DRL) algorithm that combines the benefits of both value- and policy-based DRL approaches for inventory optimization under uncertainties. The proposed algorithm can incentivize collaboration among stakeholders by aligning their interests and objectives through shared optimization goal of maximizing profitability along the agri-food supply chain while considering perishability, and uncertainty simultaneously. By selecting optimal order quantities with continuous action space, the proposed algorithm effectively addresses the inventory optimization challenges. To rigorously evaluate this algorithm, the empirical data from fresh agricultural products supply chain inventory is considered. Experimental results corroborate the improved performance of the proposed inventory replenishment policy under stochastic demand patterns and lead time scenarios. The research findings hold managerial implications for policymakers to manage the inventory of agricultural products more effectively under uncertainty.",
+    "score": 7
+  }
+]

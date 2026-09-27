@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>0de0a44b859a3719d11834479112314b4caba669</p>
+<hr>
+<section><h2>Title</h2>
+<p>AttentionLab: An Interactive Tool for Counterfactual Attention Manipulation in Transformer Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>While attention visualization tools provide insights into model behavior, they are primarily observational and don't allow for direct manipulation of attention to understand causal relationships within the model. This limits our ability to gain a deeper understanding of how attention mechanisms contribute to model decisions and to identify potential ways to improve model performance or mitigate biases.</p>
+<h3>Motivation</h3>
+<p>Current approaches to understanding model behavior typically involve ablation studies or probing tasks, which can be coarse-grained and may not capture the nuanced effects of attention mechanisms. By allowing researchers to directly manipulate attention patterns and observe the resulting changes in model output, we can gain a more causal understanding of how attention contributes to model decisions. This approach is inspired by counterfactual reasoning in causal inference, where we ask 'what if' questions to understand the impact of specific components on the overall system.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose 'AttentionLab', an interactive tool for counterfactual attention manipulation in transformer models. The core of AttentionLab is a novel differentiable attention manipulation layer that can be inserted into any transformer model without retraining. This layer allows users to specify custom attention patterns or modify existing ones in real-time. The tool provides a graphical interface where users can draw desired attention patterns or apply mathematical transformations to existing patterns (e.g., inversion, sharpening, smoothing). AttentionLab then computes the gradient of the output with respect to these manipulated attention patterns, allowing users to see how changes in attention affect the final prediction. We also implement an 'attention optimization' feature, where users can specify a desired output, and the tool will use gradient descent to find the attention patterns that maximize the likelihood of that output. To ensure manipulations remain realistic, we incorporate a novel 'attention plausibility' constraint that penalizes attention patterns that deviate too far from those typically produced by the model.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Implement AttentionLab</strong></p><p>Develop the core AttentionLab functionality, including the differentiable attention manipulation layer and the graphical interface for attention pattern manipulation. This will involve using a framework like PyTorch for the backend and a web framework like Flask for the frontend.</p><p><strong>Step 2: Integrate Models</strong></p><p>Integrate pre-trained BERT and GPT-2 models into AttentionLab. We'll use the Hugging Face Transformers library for this purpose.</p><p><strong>Step 3: Prepare Datasets</strong></p><p>Prepare datasets for sentiment analysis (SST-2), question answering (SQuAD), and text generation (WikiText-2). These datasets will be used to evaluate the impact of attention manipulations across different tasks.</p><p><strong>Step 4: Baseline Performance</strong></p><p>Establish baseline performance for BERT on sentiment analysis and question answering, and GPT-2 on text generation, using the prepared datasets.</p><p><strong>Step 5: Attention Manipulation Experiments</strong></p><p>Conduct a series of experiments using AttentionLab:<br />
+a) Inversion: Invert attention patterns and observe changes in model output.<br />
+b) Focusing: Sharpen attention on specific tokens and analyze the impact.<br />
+c) Smoothing: Apply Gaussian smoothing to attention patterns and evaluate the effect.<br />
+d) Cross-task Transfer: Apply attention patterns from one task to another and assess performance changes.<br />
+e) Attention Optimization: Given a desired output, use gradient descent to find optimal attention patterns.</p><p><strong>Step 6: Analyze Results</strong></p><p>Compare the performance of manipulated models against the baseline. Analyze how different types of attention manipulations affect model behavior across tasks.</p><p><strong>Step 7: Case Studies</strong></p><p>Conduct detailed case studies on specific phenomena:<br />
+a) Gender Bias: Manipulate attention patterns in coreference resolution tasks to understand and potentially mitigate gender bias.<br />
+b) Negation Handling: Analyze how attention to negation words affects sentiment analysis results.<br />
+c) Multi-hop Reasoning: Investigate how attention patterns contribute to multi-hop reasoning in complex QA tasks.</p><p><strong>Step 8: Tool Release</strong></p><p>Package AttentionLab as an open-source tool and release it to the research community. Prepare documentation and example use cases.</p><p><strong>Step 9: Shared Task</strong></p><p>Organize a shared task where researchers use AttentionLab to discover new insights about transformer models. This will involve creating a leaderboard, defining evaluation metrics, and setting up a submission system.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Sentiment analysis task: 'The movie was not as bad as I expected.'</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Negative sentiment (confidence: 0.65)</p><p><strong>Proposed Prompt Input</strong></p><p>Using AttentionLab, increase attention weight on the word 'not' by a factor of 2.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>Positive sentiment (confidence: 0.58)</p><p><strong>Explanation</strong></p><p>By increasing attention on the negation word 'not', the model's understanding of the sentence flips from negative to positive, demonstrating the impact of attention manipulation on sentiment analysis.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed attention manipulation methods don't yield significant insights or improvements, we can pivot the project towards an in-depth analysis of attention patterns across different tasks and model architectures. We could investigate questions like: How do attention patterns differ between BERT and GPT-2? How do attention patterns evolve during fine-tuning on specific tasks? Are there common attention patterns that emerge across different tasks or domains? This analysis could provide valuable insights into the inner workings of transformer models, even if direct manipulation doesn't lead to performance improvements. Additionally, we could explore combining AttentionLab with other interpretation techniques, such as integrated gradients or SHAP values, to provide a more comprehensive view of model behavior.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/1e83c20def5c84efa6d4a0d80aa3159f55cb9c3f" target="_blank">Attention is not Explanation</a> (2019)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1abec8d03b8d1435ae920edea9b437be913a30ca" target="_blank">Seq2seq-Vis: A Visual Debugging Tool for Sequence-to-Sequence Models</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a039ea239e37f53a2cb60c68e0a1967994353166" target="_blank">Analyzing the Structure of Attention in a Transformer Language Model</a> (2019)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2cc8d8a0bdb5c2d922a0304642a8f0d35eefc492" target="_blank">Back Attention: Understanding and Enhancing Multi-Hop Reasoning in Large Language Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/45fc7014fae3c73921ea3541ab405beb19e52637" target="_blank">Toward Practical Usage of the Attention Mechanism as a Tool for Interpretability</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/d8c37474aa0c755d925eec9c9f9856fa48a3e580" target="_blank">Who Reasons in the Large Language Models?</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/58695c4827c55b409e0151d9288675847a44d380" target="_blank">Visual Interrogation of Attention-Based Models for Natural Language Inference and Machine Comprehension</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8f3db9e062b2a5e0c3eab6997af2bad7f23fcd93" target="_blank">Interactive Visualization and Manipulation of Attention-based Neural Machine Translation</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0fa5f7a6769eed965bbfd6610b2068fedaff74e7" target="_blank">Naturalness of Attention: Revisiting Attention in Code Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1e58313d7d78548e8f289f4a0f8bd164032e77a0" target="_blank">Understanding Matching Mechanisms in Cross-Encoders</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

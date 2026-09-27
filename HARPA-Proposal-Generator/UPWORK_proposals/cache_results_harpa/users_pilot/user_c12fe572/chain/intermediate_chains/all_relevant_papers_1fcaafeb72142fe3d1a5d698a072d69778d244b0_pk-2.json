@@ -1,0 +1,29 @@
+[
+    {
+        "paperId": "6741581905dbedb481e06ed9bfc1e5ab4ad1f80c",
+        "title": "WebSynthesis: World-Model-Guided MCTS for Efficient WebUI-Trajectory Synthesis",
+        "abstract": "Recent advancements in large language models (LLMs) have significantly improved the capabilities of web agents. However, effectively navigating complex and dynamic web environments still requires more advanced trajectory-level planning and execution. Prior studies have addressed self-improving agents by collecting extensive GUI trajectories from real-environment interactions. Despite their effectiveness, these approaches encounter two critical challenges: (1) Uncontrollable environment states, where real or sandboxed web environments often yield unstable and non-deterministic feedback, complicating the reproduction and debugging of agent behaviors; and (2) High API costs, as generating even a single interaction trajectory can involve hundreds of queries, leading to considerable API usage and computational expenses. To address these limitations and enable scalable self-improvement for agents, we propose WebSynthesis, a novel framework for trajectory synthesis and training. WebSynthesis leverages a learned world model to simulate virtual web environments, allowing a policy agent to perform efficient and reversible tree-based planning. This approach supports the large-scale generation of diverse and high-quality trajectories, which are subsequently utilized to refine the agent's policy. Experimental results demonstrate that an agent trained using WebSynthesis on a small-scale synthetic dataset achieves performance comparable to or even surpassing that of models trained on large-scale real-world data.",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 2,
+        "explanation": "WebSynthesis addresses trajectory synthesis for web agents, which is related to the source paper's focus on web agents and trajectory generation. It builds on the idea of improving web agents' performance through efficient trajectory planning, partially depending on the source paper's findings regarding trajectory generation and task success."
+    },
+    {
+        "paperId": "99259d51eadfe2473fe8eb643625a6bd1c3c0a41",
+        "title": "WebCoT: Enhancing Web Agent Reasoning by Reconstructing Chain-of-Thought in Reflection, Branching, and Rollback",
+        "abstract": "Web agents powered by Large Language Models (LLMs) show promise for next-generation AI, but their limited reasoning in uncertain, dynamic web environments hinders robust deployment. In this paper, we identify key reasoning skills essential for effective web agents, i.e., reflection&lookahead, branching, and rollback, and curate trajectory data that exemplifies these abilities by reconstructing the agent's (inference-time) reasoning algorithms into chain-of-thought rationales. We conduct experiments in the agent self-improving benchmark, OpenWebVoyager, and demonstrate that distilling salient reasoning patterns into the backbone LLM via simple fine-tuning can substantially enhance its performance. Our approach yields significant improvements across multiple benchmarks, including WebVoyager, Mind2web-live, and SimpleQA (web search), highlighting the potential of targeted reasoning skill enhancement for web agents.",
+        "year": 2025,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "WebCoT enhances web agent reasoning by reconstructing chain-of-thought processes, which is closely related to the source paper's focus on reasoning and multi-turn interactions in web environments. It builds on the reasoning aspects highlighted in WebAgent-R1."
+    },
+    {
+        "paperId": "1d03586baa32b3d6ff657a180053821543e11abb",
+        "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+        "abstract": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplored. We propose StarPO (State-Thinking-Actions-Reward Policy Optimization), a general framework for trajectory-level agent RL, and introduce RAGEN, a modular system for training and evaluating LLM agents. Our study on four stylized environments reveals three core findings. First, our agent RL training shows a recurring mode of Echo Trap where reward variance cliffs and gradient spikes; we address this with StarPO-S, a stabilized variant with trajectory filtering, critic incorporation, and gradient stabilization. Second, we find the shaping of RL rollouts would benefit from diverse initial states, medium interaction granularity and more frequent sampling. Third, we show that without fine-grained, reasoning-aware reward signals, agent reasoning hardly emerge through multi-turn RL and they may show shallow strategies or hallucinated thoughts. Code and environments are available at https://github.com/RAGEN-AI/RAGEN.",
+        "year": 2025,
+        "citation_count": 39,
+        "relevance": 2,
+        "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making."
+    }
+]

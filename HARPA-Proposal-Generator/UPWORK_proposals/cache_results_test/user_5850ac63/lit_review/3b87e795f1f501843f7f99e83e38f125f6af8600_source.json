@@ -1,0 +1,2204 @@
+{
+    "topic_description": "story-to-image generation using sequential conditional GANs for visualizing multi-sentence narratives",
+    "all_queries": [
+        "KeywordQuery(\"story-to-image generation using sequential conditional gans for visualizing multi-sentence narratives\")",
+        "KeywordQuery(\"text to image synthesis sequential generation\")",
+        "PaperQuery(\"9f7914c2577626868e6a69f2c9605b38f941055b\")",
+        "GetReferences(\"9f7914c2577626868e6a69f2c9605b38f941055b\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "9f7914c2577626868e6a69f2c9605b38f941055b",
+            "paperId": "9f7914c2577626868e6a69f2c9605b38f941055b",
+            "title": "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation",
+            "year": 2022,
+            "citationCount": 85,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2209.06192",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2209.06192, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work enhances or 'retro-fit' the pretrained text-to-image synthesis models with task-specific modules for story continuation and facilitates copying of visual elements from the source image, thereby improving continuity in the generated visual story."
+            },
+            "authors": [
+                {
+                    "authorId": "8785371",
+                    "name": "Adyasha Maharana"
+                },
+                {
+                    "authorId": "153060461",
+                    "name": "Darryl Hannan"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                }
+            ],
+            "abstract": "Recent advances in text-to-image synthesis have led to large pretrained transformers with excellent capabilities to generate visualizations from a given text. However, these models are ill-suited for specialized tasks like story visualization, which requires an agent to produce a sequence of images given a corresponding sequence of captions, forming a narrative. Moreover, we find that the story visualization task fails to accommodate generalization to unseen plots and characters in new narratives. Hence, we first propose the task of story continuation, where the generated visual story is conditioned on a source image, allowing for better generalization to narratives with new characters. Then, we enhance or 'retro-fit' the pretrained text-to-image synthesis models with task-specific modules for (a) sequential image generation and (b) copying relevant elements from an initial frame. Then, we explore full-model finetuning, as well as prompt-based tuning for parameter-efficient adaptation, of the pre-trained model. We evaluate our approach StoryDALL-E on two existing datasets, PororoSV and FlintstonesSV, and introduce a new dataset DiDeMoSV collected from a video-captioning dataset. We also develop a model StoryGANc based on Generative Adversarial Networks (GAN) for story continuation, and compare it with the StoryDALL-E model to demonstrate the advantages of our approach. We show that our retro-fitting approach outperforms GAN-based models for story continuation and facilitates copying of visual elements from the source image, thereby improving continuity in the generated visual story. Finally, our analysis suggests that pretrained transformers struggle to comprehend narratives containing several characters. Overall, our work demonstrates that pretrained text-to-image synthesis models can be adapted for complex and low-resource tasks like story continuation.",
+            "score": 7
+        },
+        {
+            "id": "d0fca45b76c4fa0015a27a5764c9ab428c4bc2b2",
+            "paperId": "d0fca45b76c4fa0015a27a5764c9ab428c4bc2b2",
+            "title": "AgentStory: A Multi-Agent System for Story Visualization with Multi-Subject Consistent Text-to-Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3731715.3733271?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3731715.3733271, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2258983817",
+                    "name": "Tianchen Zhou"
+                },
+                {
+                    "authorId": "2187856394",
+                    "name": "Zhongjie Duan"
+                },
+                {
+                    "authorId": "2243324354",
+                    "name": "Cen Chen"
+                },
+                {
+                    "authorId": "2326984730",
+                    "name": "Wenming Zhou"
+                },
+                {
+                    "authorId": "2337826151",
+                    "name": "Yanhao Wang"
+                },
+                {
+                    "authorId": "2307553415",
+                    "name": "Yaliang Li"
+                }
+            ],
+            "abstract": "Story visualization aims to create visual content, such as images and videos, that is consistent, coherent, and complete with a given story. Despite significant advances in the application of diffusion models for general text-to-image generation tasks, they still encounter difficulties when directly used to produce consistent visual content that accurately aligns with the narrative text. In this paper, we propose a novel training-free automated story visualization framework called AgentStory that can generate image illustrations based on a story synopsis provided by users. Specifically, the framework employs multiple agents empowered by Large Language Models (LLMs) to create detailed descriptions of each subject and scene in the entire story. Then, it integrates a masking mechanism with a fine-grained consistency refinement adapter to incorporate different subjects in a scene. Furthermore, it utilizes the visual understanding capabilities of multimodal LLMs to include detailed features of different subjects in the refinement adapter, thus improving the consistency of each subject across multiple scenes. Finally, we compare the AgentStory framework with state-of-the-art baselines for story visualization on the DS-500 dataset and demonstrate its superior performance in terms of subject consistency, text-image alignment, and aesthetic quality. Our code is publicly available at https://github.com/tc2000731/AgentStory.",
+            "score": 7
+        },
+        {
+            "id": "31c0f38d20186e804a05c8432aa6591c5c2b6212",
+            "paperId": "31c0f38d20186e804a05c8432aa6591c5c2b6212",
+            "title": "Story2Board: A Training-Free Approach for Expressive Storyboard Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.09983, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375818417",
+                    "name": "David Dinkevich"
+                },
+                {
+                    "authorId": "14364010",
+                    "name": "Matan Levy"
+                },
+                {
+                    "authorId": "2375819146",
+                    "name": "Omri Avrahami"
+                },
+                {
+                    "authorId": "1612410686",
+                    "name": "Dvir Samuel"
+                },
+                {
+                    "authorId": "2257245437",
+                    "name": "Dani Lischinski"
+                }
+            ],
+            "abstract": "We present Story2Board, a training-free framework for expressive storyboard generation from natural language. Existing methods narrowly focus on subject identity, overlooking key aspects of visual storytelling such as spatial composition, background evolution, and narrative pacing. To address this, we introduce a lightweight consistency framework composed of two components: Latent Panel Anchoring, which preserves a shared character reference across panels, and Reciprocal Attention Value Mixing, which softly blends visual features between token pairs with strong reciprocal attention. Together, these mechanisms enhance coherence without architectural changes or fine-tuning, enabling state-of-the-art diffusion models to generate visually diverse yet consistent storyboards. To structure generation, we use an off-the-shelf language model to convert free-form stories into grounded panel-level prompts. To evaluate, we propose the Rich Storyboard Benchmark, a suite of open-domain narratives designed to assess layout diversity and background-grounded storytelling, in addition to consistency. We also introduce a new Scene Diversity metric that quantifies spatial and pose variation across storyboards. Our qualitative and quantitative results, as well as a user study, show that Story2Board produces more dynamic, coherent, and narratively engaging storyboards than existing baselines.",
+            "score": 7
+        },
+        {
+            "id": "04016d3bad1f15b09b94b970b58e4e7a23562532",
+            "paperId": "04016d3bad1f15b09b94b970b58e4e7a23562532",
+            "title": "Audit & Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.18900, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2187933398",
+                    "name": "Kiymet Akdemir"
+                },
+                {
+                    "authorId": "2336952973",
+                    "name": "Tahira Kazimi"
+                },
+                {
+                    "authorId": "3137679",
+                    "name": "Pinar Yanardag"
+                }
+            ],
+            "abstract": "Story visualization has become a popular task where visual scenes are generated to depict a narrative across multiple panels. A central challenge in this setting is maintaining visual consistency, particularly in how characters and objects persist and evolve throughout the story. Despite recent advances in diffusion models, current approaches often fail to preserve key character attributes, leading to incoherent narratives. In this work, we propose a collaborative multi-agent framework that autonomously identifies, corrects, and refines inconsistencies across multi-panel story visualizations. The agents operate in an iterative loop, enabling fine-grained, panel-level updates without re-generating entire sequences. Our framework is model-agnostic and flexibly integrates with a variety of diffusion models, including rectified flow transformers such as Flux and latent diffusion models such as Stable Diffusion. Quantitative and qualitative experiments show that our method outperforms prior approaches in terms of multi-panel consistency.",
+            "score": 7
+        },
+        {
+            "id": "dbec75d2309cca4b48389b6f3819b963f8b3b430",
+            "paperId": "dbec75d2309cca4b48389b6f3819b963f8b3b430",
+            "title": "StorySync: Training-Free Subject Consistency in Text-to-Image Generation via Region Harmonization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.03735, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375046407",
+                    "name": "Gopalji Gaur"
+                },
+                {
+                    "authorId": "2890820",
+                    "name": "M. Zolfaghari"
+                },
+                {
+                    "authorId": "2375045980",
+                    "name": "Thomas Brox"
+                }
+            ],
+            "abstract": "Generating a coherent sequence of images that tells a visual story, using text-to-image diffusion models, often faces the critical challenge of maintaining subject consistency across all story scenes. Existing approaches, which typically rely on fine-tuning or retraining models, are computationally expensive, time-consuming, and often interfere with the model's pre-existing capabilities. In this paper, we follow a training-free approach and propose an efficient consistent-subject-generation method. This approach works seamlessly with pre-trained diffusion models by introducing masked cross-image attention sharing to dynamically align subject features across a batch of images, and Regional Feature Harmonization to refine visually similar details for improved subject consistency. Experimental results demonstrate that our approach successfully generates visually consistent subjects across a variety of scenarios while maintaining the creative abilities of the diffusion model.",
+            "score": 6
+        },
+        {
+            "id": "4b0f3436810a5d8b3a8a557e0185d77a4ee38f74",
+            "paperId": "4b0f3436810a5d8b3a8a557e0185d77a4ee38f74",
+            "title": "Lay2Story: Extending Diffusion Transformers for Layout-Togglable Story Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.08949, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373660530",
+                    "name": "Ao Ma"
+                },
+                {
+                    "authorId": "2316175347",
+                    "name": "Jiasong Feng"
+                },
+                {
+                    "authorId": "2349479014",
+                    "name": "Ke Cao"
+                },
+                {
+                    "authorId": "2316205144",
+                    "name": "Jing Wang"
+                },
+                {
+                    "authorId": "2339337483",
+                    "name": "Yun Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Quanwei Zhang"
+                },
+                {
+                    "authorId": "2346411680",
+                    "name": "Zhanjie Zhang"
+                }
+            ],
+            "abstract": "Storytelling tasks involving generating consistent subjects have gained significant attention recently. However, existing methods, whether training-free or training-based, continue to face challenges in maintaining subject consistency due to the lack of fine-grained guidance and inter-frame interaction. Additionally, the scarcity of high-quality data in this field makes it difficult to precisely control storytelling tasks, including the subject's position, appearance, clothing, expression, and posture, thereby hindering further advancements. In this paper, we demonstrate that layout conditions, such as the subject's position and detailed attributes, effectively facilitate fine-grained interactions between frames. This not only strengthens the consistency of the generated frame sequence but also allows for precise control over the subject's position, appearance, and other key details. Building on this, we introduce an advanced storytelling task: Layout-Togglable Storytelling, which enables precise subject control by incorporating layout conditions. To address the lack of high-quality datasets with layout annotations for this task, we develop Lay2Story-1M, which contains over 1 million 720p and higher-resolution images, processed from approximately 11,300 hours of cartoon videos. Building on Lay2Story-1M, we create Lay2Story-Bench, a benchmark with 3,000 prompts designed to evaluate the performance of different methods on this task. Furthermore, we propose Lay2Story, a robust framework based on the Diffusion Transformers (DiTs) architecture for Layout-Togglable Storytelling tasks. Through both qualitative and quantitative experiments, we find that our method outperforms the previous state-of-the-art (SOTA) techniques, achieving the best results in terms of consistency, semantic correlation, and aesthetic quality.",
+            "score": 6
+        },
+        {
+            "id": "8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c",
+            "paperId": "8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c",
+            "title": "Automated Visual Generation using GAN with Textual Information Feeds",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "https://ijsrem.com/download/automated-visual-generation-using-gan-with-textual-information-feeds/?wpdmdl=36408&refresh=66763ce36ef5b1719024867",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/ijsrem36010?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/ijsrem36010, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This proposal suggests combining two methods, Text modification for Action Definition (TexAD) and SeQuential Image Generation for Video Synthesis (SQIGen), which synthesises a sequence of images from textual information feeds and combines these images to create a video."
+            },
+            "authors": [
+                {
+                    "authorId": "2298319923",
+                    "name": "Sibi Mathew"
+                }
+            ],
+            "abstract": "Visualising textual content could be helpful to pro- fessionals as well as amateurs across several fields. However, training a text-to-image generator in the mainstream domain requires large amounts of paired text-image and data, which is too expensive to collect since labeling millions of images and videos can be tiresome. GANs like StackGAN and StyleGAN can be considered as solutions to generate images from text. But the images generated may be of low accuracy and resolution, and the entire processing can be highly time-consuming. Moreover, image generation is a notion that is still being researched. Hence, the process of developing a Video Generation model necessitates substantial research. Despite the need for such a model, modern technology has lagged behind the solutions to this problem. This proposal suggests combining two methods, Text modification for Action Definition (TexAD) and SeQuential Image Generation for Video Synthesis (SQIGen). The proposed solution synthesises a sequence of images from textual information feeds and combines these images to create a video. TexAD uses Natural Language Processing and Deep Learning techniques to process, classify and modify text data. SQIGen is an extension of the VQGAN+CLIP neural network architecture that generates a sequence of images from the modified text data. Index Terms\u2014Visualization, Sequential Image Generation, GANs, Natural Language Processing and Deep Learning, TexAD, VQGAN+CLIP",
+            "score": 5
+        },
+        {
+            "id": "c25bd3625c6e18ca91fd8903f82703999e14bb90",
+            "paperId": "c25bd3625c6e18ca91fd8903f82703999e14bb90",
+            "title": "Captain Cinema: Towards Short Movie Generation",
+            "year": 2025,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.18634, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1384522627",
+                    "name": "Junfei Xiao"
+                },
+                {
+                    "authorId": "2338318606",
+                    "name": "Ceyuan Yang"
+                },
+                {
+                    "authorId": "2287850511",
+                    "name": "Lvmin Zhang"
+                },
+                {
+                    "authorId": "2170892427",
+                    "name": "Shengqu Cai"
+                },
+                {
+                    "authorId": "2372343063",
+                    "name": "Yang Zhao"
+                },
+                {
+                    "authorId": "2366317193",
+                    "name": "Yuwei Guo"
+                },
+                {
+                    "authorId": "2297763521",
+                    "name": "Gordon Wetzstein"
+                },
+                {
+                    "authorId": "1820412",
+                    "name": "Maneesh Agrawala"
+                },
+                {
+                    "authorId": "2250139492",
+                    "name": "Alan L. Yuille"
+                },
+                {
+                    "authorId": "2339721348",
+                    "name": "Lu Jiang"
+                }
+            ],
+            "abstract": "We present Captain Cinema, a generation framework for short movie generation. Given a detailed textual description of a movie storyline, our approach firstly generates a sequence of keyframes that outline the entire narrative, which ensures long-range coherence in both the storyline and visual appearance (e.g., scenes and characters). We refer to this step as top-down keyframe planning. These keyframes then serve as conditioning signals for a video synthesis model, which supports long context learning, to produce the spatio-temporal dynamics between them. This step is referred to as bottom-up video synthesis. To support stable and efficient generation of multi-scene long narrative cinematic works, we introduce an interleaved training strategy for Multimodal Diffusion Transformers (MM-DiT), specifically adapted for long-context video data. Our model is trained on a specially curated cinematic dataset consisting of interleaved data pairs. Our experiments demonstrate that Captain Cinema performs favorably in the automated creation of visually coherent and narrative consistent short movies in high quality and efficiency. Project page: https://thecinema.ai",
+            "score": 5
+        },
+        {
+            "id": "f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89",
+            "paperId": "f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89",
+            "title": "FairyGen: Storied Cartoon Video from a Single Child-Drawn Character",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21272, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2371080126",
+                    "name": "Jiayi Zheng"
+                },
+                {
+                    "authorId": "2355422738",
+                    "name": "Xiaodong Cun"
+                }
+            ],
+            "abstract": "We propose FairyGen, an automatic system for generating story-driven cartoon videos from a single child's drawing, while faithfully preserving its unique artistic style. Unlike previous storytelling methods that primarily focus on character consistency and basic motion, FairyGen explicitly disentangles character modeling from stylized background generation and incorporates cinematic shot design to support expressive and coherent storytelling. Given a single character sketch, we first employ an MLLM to generate a structured storyboard with shot-level descriptions that specify environment settings, character actions, and camera perspectives. To ensure visual consistency, we introduce a style propagation adapter that captures the character's visual style and applies it to the background, faithfully retaining the character's full visual identity while synthesizing style-consistent scenes. A shot design module further enhances visual diversity and cinematic quality through frame cropping and multi-view synthesis based on the storyboard. To animate the story, we reconstruct a 3D proxy of the character to derive physically plausible motion sequences, which are then used to fine-tune an MMDiT-based image-to-video diffusion model. We further propose a two-stage motion customization adapter: the first stage learns appearance features from temporally unordered frames, disentangling identity from motion; the second stage models temporal dynamics using a timestep-shift strategy with frozen identity weights. Once trained, FairyGen directly renders diverse and coherent video scenes aligned with the storyboard. Extensive experiments demonstrate that our system produces animations that are stylistically faithful, narratively structured natural motion, highlighting its potential for personalized and engaging story animation. The code will be available at https://github.com/GVCLab/FairyGen",
+            "score": 5
+        },
+        {
+            "id": "c50ac4de31f718353e718f096b59ac286fde1a3e",
+            "paperId": "c50ac4de31f718353e718f096b59ac286fde1a3e",
+            "title": "LVLM-Composer's Explicit Planning for Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04152, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2342415174",
+                    "name": "Spencer Ramsey"
+                },
+                {
+                    "authorId": "2342457469",
+                    "name": "Jeffrey Lee"
+                },
+                {
+                    "authorId": "2342414911",
+                    "name": "Amina Grant"
+                }
+            ],
+            "abstract": "The burgeoning field of generative artificial intelligence has fundamentally reshaped our approach to content creation, with Large Vision-Language Models (LVLMs) standing at its forefront. While current LVLMs have demonstrated impressive capabilities in text-to-image generation, they often falter when confronted with complex textual descriptions demanding precise compositional understanding and visual planning. This limitation particularly impacts the accurate rendering of multiple objects, their attributes, spatial relationships, and specific poses within intricate scenes, as evidenced by benchmarks like LongBench-T2I. To address these challenges, we introduce LVLM-Composer, a novel 10-billion parameter scale LVLM specifically engineered for enhanced compositional image synthesis. Our method incorporates a Hierarchical Semantic Planning Module for structured prompt decomposition and a Fine-Grained Feature Alignment Mechanism for precise visual guidance during generation. We propose a multi-stage training paradigm, featuring Hierarchical Semantic-Visual Grounding Pre-training and Compositional Planning Reinforcement Learning with Self-Correction, to instill robust compositional reasoning. Extensive experiments on the LongBench-T2I benchmark, utilizing automatic evaluation by Gemini-2.0-Flash and InternVL3-78B, demonstrate LVLM-Composer's superior performance across critical compositional dimensions including object accuracy, composition fidelity, and pose accuracy, significantly outperforming state-of-the-art baselines. An in-depth ablation study further validates the indispensable contribution of our proposed modules, while human evaluations confirm the perceptual superiority of our generated images. LVLM-Composer represents a significant step towards truly controllable and compositionally accurate open-ended text-to-image generation.",
+            "score": 5
+        },
+        {
+            "id": "87a0279c1d640b486dc5c9f1e0d3705ed87754cf",
+            "paperId": "87a0279c1d640b486dc5c9f1e0d3705ed87754cf",
+            "title": "Improving Generation and Evaluation of Visual Stories via Semantic Consistency",
+            "year": 2021,
+            "citationCount": 63,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.naacl-main.194.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2105.10026, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "8785371",
+                    "name": "Adyasha Maharana"
+                },
+                {
+                    "authorId": "153060461",
+                    "name": "Darryl Hannan"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                }
+            ],
+            "abstract": "Story visualization is an underexplored task that falls at the intersection of many important research directions in both computer vision and natural language processing. In this task, given a series of natural language captions which compose a story, an agent must generate a sequence of images that correspond to the captions. Prior work has introduced recurrent generative models which outperform text-to-image synthesis models on this task. However, there is room for improvement of generated images in terms of visual quality, coherence and relevance. We present a number of improvements to prior modeling approaches, including (1) the addition of a dual learning framework that utilizes video captioning to reinforce the semantic alignment between the story and generated images, (2) a copy-transform mechanism for sequentially-consistent story visualization, and (3) MART-based transformers to model complex interactions between frames. We present ablation studies to demonstrate the effect of each of these techniques on the generative power of the model for both individual images as well as the entire narrative. Furthermore, due to the complexity and generative nature of the task, standard evaluation metrics do not accurately reflect performance. Therefore, we also provide an exploration of evaluation metrics for the model, focused on aspects of the generated frames such as the presence/quality of generated characters, the relevance to captions, and the diversity of the generated images. We also present correlation experiments of our proposed automated metrics with human evaluations.",
+            "score": 5
+        },
+        {
+            "id": "b8f2ba261756ca551ba68940e08a9466c2602f79",
+            "paperId": "b8f2ba261756ca551ba68940e08a9466c2602f79",
+            "title": "Sequential Attention GAN for Interactive Image Editing",
+            "year": 2018,
+            "citationCount": 99,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/1812.08352",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1812.08352, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel Sequential Attention Generative Adversarial Network (SeqAttnGAN) is proposed, which applies a neural state tracker to encode the previous image and the textual description in each turn of the sequence, and uses a GAN framework to generate a modified version of the image that is consistent with the preceding images and coherent with the description."
+            },
+            "authors": [
+                {
+                    "authorId": "145215470",
+                    "name": "Yu Cheng"
+                },
+                {
+                    "authorId": "144702900",
+                    "name": "Zhe Gan"
+                },
+                {
+                    "authorId": "40609859",
+                    "name": "Yitong Li"
+                },
+                {
+                    "authorId": "46700348",
+                    "name": "Jingjing Liu"
+                },
+                {
+                    "authorId": "1800422",
+                    "name": "Jianfeng Gao"
+                }
+            ],
+            "abstract": "Most existing text-to-image synthesis tasks are static single-turn generation, based on pre-defined textual descriptions of images. To explore more practical and interactive real-life applications, we introduce a new task - Interactive Image Editing, where users can guide an agent to edit images via multi-turn textual commands on-the-fly. In each session, the agent takes a natural language description from the user as the input, and modifies the image generated in previous turn to a new design, following the user description. The main challenges in this sequential and interactive image generation task are two-fold: 1) contextual consistency between a generated image and the provided textual description; 2) step-by-step region-level modification to maintain visual consistency across the generated image sequence in each session. To address these challenges, we propose a novel Sequential Attention Generative Adversarial Network (SeqAttnGAN), which applies a neural state tracker to encode the previous image and the textual description in each turn of the sequence, and uses a GAN framework to generate a modified version of the image that is consistent with the preceding images and coherent with the description. To achieve better region-specific refinement, we also introduce a sequential attention mechanism into the model. To benchmark on the new task, we introduce two new datasets, Zap-Seq and DeepFashion-Seq, which contain multi-turn sessions with image-description sequences in the fashion domain. Experiments on both datasets show that the proposed SeqAttnGAN model outperforms state-of-the-art approaches on the interactive image editing task across all evaluation metrics including visual quality, image sequence coherence and text-image consistency.",
+            "score": 4
+        },
+        {
+            "id": "1034685492c53f60d6c351e73bb2cfcfb7db730b",
+            "paperId": "1034685492c53f60d6c351e73bb2cfcfb7db730b",
+            "title": "A STUDY ON A JOURNEY THROUGH STORIES IN SEQUENTIAL FRAMES",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/isjem03444?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/isjem03444, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This project is aimed at educating machines to narrate visual stories through creating descriptive and coherent text from image sequences to simulate human storytelling by extracting temporal and contextual relationships among images."
+            },
+            "authors": [
+                {
+                    "authorId": "2360102253",
+                    "name": "Mr.Md.Abdul Kalam"
+                }
+            ],
+            "abstract": "ABSTRACT: This project is aimed at educating machines to narrate visual stories through creating descriptive and coherent text from image sequences. Based on analyzing objects, actions, emotions, and scene changes, the system constructs narrative text reflecting the story in the images. It intends to simulate human storytelling by extracting temporal and contextual relationships among images. Applications are automatic photo album description, digital storytelling, and assistive technology for the visually impaired. By closing the gap between visual perception and language generation, this approach enhances the way machines interpret and describe sophisticated visual experiences.\n\nKeywords: Visual Storytelling, Image Sequence Analysis, Narrative Generation, Scene Understanding, Object and Action Recognition, Emotion Detection, Temporal Context Modeling, Multimodal Learning, Assistive Technology, Image-to-Text Synthesis",
+            "score": 4
+        },
+        {
+            "id": "b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea",
+            "paperId": "b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea",
+            "title": "Test-time Prompt Refinement for Text-to-Image Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.22076, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374337044",
+                    "name": "Mohammad Abdul Hafeez Khan"
+                },
+                {
+                    "authorId": "2336737368",
+                    "name": "Yash Jain"
+                },
+                {
+                    "authorId": "2374053470",
+                    "name": "Siddhartha Bhattacharyya"
+                },
+                {
+                    "authorId": "143729959",
+                    "name": "Vibhav Vineet"
+                }
+            ],
+            "abstract": "Text-to-image (T2I) generation models have made significant strides but still struggle with prompt sensitivity: even minor changes in prompt wording can yield inconsistent or inaccurate outputs. To address this challenge, we introduce a closed-loop, test-time prompt refinement framework that requires no additional training of the underlying T2I model, termed TIR. In our approach, each generation step is followed by a refinement step, where a pretrained multimodal large language model (MLLM) analyzes the output image and the user's prompt. The MLLM detects misalignments (e.g., missing objects, incorrect attributes) and produces a refined and physically grounded prompt for the next round of image generation. By iteratively refining the prompt and verifying alignment between the prompt and the image, TIR corrects errors, mirroring the iterative refinement process of human artists. We demonstrate that this closed-loop strategy improves alignment and visual coherence across multiple benchmark datasets, all while maintaining plug-and-play integration with black-box T2I models.",
+            "score": 4
+        },
+        {
+            "id": "7a6684eeacddfc065cc0139ce845dbc2671b764d",
+            "paperId": "7a6684eeacddfc065cc0139ce845dbc2671b764d",
+            "title": "VisualPrompter: Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.23138, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2340592981",
+                    "name": "Shiyu Wu"
+                },
+                {
+                    "authorId": "2242748260",
+                    "name": "Mingzhen Sun"
+                },
+                {
+                    "authorId": "2145532006",
+                    "name": "Weining Wang"
+                },
+                {
+                    "authorId": "2336568726",
+                    "name": "Yequan Wang"
+                },
+                {
+                    "authorId": "2340512241",
+                    "name": "Jing Liu"
+                }
+            ],
+            "abstract": "Since there exists a notable gap between user-provided and model-preferred prompts, generating high-quality and satisfactory images using diffusion models often requires prompt engineering to optimize user inputs. Current studies on text-to-image prompt engineering can effectively enhance the style and aesthetics of generated images. However, they often neglect the semantic alignment between generated images and user descriptions, resulting in visually appealing but content-wise unsatisfying outputs. In this work, we propose VisualPrompter, a novel training-free prompt engineering framework that refines user inputs to model-preferred sentences. In particular, VisualPrompter utilizes an automatic self-reflection module to identify the missing concepts in generated images and a target-specific prompt optimization mechanism to revise the prompts in a fine-grained manner. Extensive experiments demonstrate the effectiveness of our VisualPrompter, which achieves new state-of-the-art performance on multiple benchmarks for text-image alignment evaluation. Additionally, our framework features a plug-and-play design, making it highly adaptable to various generative models.",
+            "score": 4
+        },
+        {
+            "id": "e8910fbffc68e5ca1978f4cbb9a699b3a76667d8",
+            "paperId": "e8910fbffc68e5ca1978f4cbb9a699b3a76667d8",
+            "title": "LumiGen: An LVLM-Enhanced Iterative Framework for Fine-Grained Text-to-Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04732, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375395814",
+                    "name": "Xiaoqi Dong"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xiangyu Zhou"
+                },
+                {
+                    "authorId": "2375140653",
+                    "name": "Nicholas Evans"
+                },
+                {
+                    "authorId": "2375152046",
+                    "name": "Yujia Lin"
+                }
+            ],
+            "abstract": "Text-to-Image (T2I) generation has made significant advancements with diffusion models, yet challenges persist in handling complex instructions, ensuring fine-grained content control, and maintaining deep semantic consistency. Existing T2I models often struggle with tasks like accurate text rendering, precise pose generation, or intricate compositional coherence. Concurrently, Vision-Language Models (LVLMs) have demonstrated powerful capabilities in cross-modal understanding and instruction following. We propose LumiGen, a novel LVLM-enhanced iterative framework designed to elevate T2I model performance, particularly in areas requiring fine-grained control, through a closed-loop, LVLM-driven feedback mechanism. LumiGen comprises an Intelligent Prompt Parsing&Augmentation (IPPA) module for proactive prompt enhancement and an Iterative Visual Feedback&Refinement (IVFR) module, which acts as a\"visual critic\"to iteratively correct and optimize generated images. Evaluated on the challenging LongBench-T2I Benchmark, LumiGen achieves a superior average score of 3.08, outperforming state-of-the-art baselines. Notably, our framework demonstrates significant improvements in critical dimensions such as text rendering and pose expression, validating the effectiveness of LVLM integration for more controllable and higher-quality image generation.",
+            "score": 4
+        },
+        {
+            "id": "b1a5e147f8b4d4f750f8224ea2dcb0fdebb3ff73",
+            "paperId": "b1a5e147f8b4d4f750f8224ea2dcb0fdebb3ff73",
+            "title": "CLIPDraw: Exploring Text-to-Drawing Synthesis through Language-Image Encoders",
+            "year": 2021,
+            "citationCount": 220,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.14843, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "10728123",
+                    "name": "Kevin Frans"
+                },
+                {
+                    "authorId": "2917010",
+                    "name": "L. Soros"
+                },
+                {
+                    "authorId": "2366741372",
+                    "name": "Olaf Witkowski"
+                }
+            ],
+            "abstract": "This work presents CLIPDraw, an algorithm that synthesizes novel drawings based on natural language input. CLIPDraw does not require any training; rather a pre-trained CLIP language-image encoder is used as a metric for maximizing similarity between the given description and a generated drawing. Crucially, CLIPDraw operates over vector strokes rather than pixel images, a constraint that biases drawings towards simpler human-recognizable shapes. Results compare between CLIPDraw and other synthesis-through-optimization methods, as well as highlight various interesting behaviors of CLIPDraw, such as satisfying ambiguous text in multiple ways, reliably producing drawings in diverse artistic styles, and scaling from simple to complex visual representations as stroke count is increased. Code for experimenting with the method is available at: https://colab.research.google.com/github/kvfrans/clipdraw/blob/main/clipdraw.ipynb",
+            "score": 4
+        },
+        {
+            "id": "0925d3cc86a103fbd75e20a184876db9af751579",
+            "paperId": "0925d3cc86a103fbd75e20a184876db9af751579",
+            "title": "Layout-Bridging Text-to-Image Synthesis",
+            "year": 2022,
+            "citationCount": 16,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2208.06162",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2208.06162, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A new metric is designed specifically, dubbed Layout Quality Score, which considers both the absolute distribution errors of bounding boxes in the layout and the mutual spatial relationships between them, and builds the model upon Transformer to learn the spatial relationship between objects by modeling the sequential dependencies between them."
+            },
+            "authors": [
+                {
+                    "authorId": "2118674584",
+                    "name": "Jiadong Liang"
+                },
+                {
+                    "authorId": "1678473",
+                    "name": "Wenjie Pei"
+                },
+                {
+                    "authorId": "2151233362",
+                    "name": "Feng Lu"
+                }
+            ],
+            "abstract": "The crux of text-to-image synthesis stems from the difficulty of preserving the cross-modality semantic consistency between the input text and the synthesized image. Typical methods, which seek to model the text-to-image mapping directly, could only capture keywords in the text that indicates common objects or actions but fail to learn their spatial distribution patterns. An effective way to circumvent this limitation is to generate an image layout as guidance, which is attempted by a few methods. Nevertheless, these methods fail to generate practically effective layouts due to the diversity of input text and object location. In this paper we push for effective modeling in both text-to-layout generation and layout-to-image synthesis. Specifically, we formulate the text-to-layout generation as a sequence-to-sequence modeling task, and build our model upon Transformer to learn the spatial relationships between objects by modeling the sequential dependencies between them. In the stage of layout-to-image synthesis, we focus on learning the textual-visual semantic alignment per object in the layout to precisely incorporate the input text into the layout-to-image synthesizing process. To evaluate the quality of generated layout, we design a new metric specifically, dubbed Layout Quality Score, which considers both the absolute distribution errors of bounding boxes in the layout and the mutual spatial relationships between them. Extensive experiments on three datasets demonstrate the superior performance of our method over state-of-the-art methods on both predicting the layout and synthesizing the image from the given text.",
+            "score": 3
+        },
+        {
+            "id": "ebd4d665ddd29e67961e3041574cb1ecf9d31336",
+            "paperId": "ebd4d665ddd29e67961e3041574cb1ecf9d31336",
+            "title": "Progressive Text-to-Image Diffusion with Soft Latent Direction",
+            "year": 2023,
+            "citationCount": 5,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.09466",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.09466, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "An innovative progressive synthesis and editing operation that systematically incorporates entities into the target image, ensuring their adherence to spatial and relational constraints at each sequential step is introduced."
+            },
+            "authors": [
+                {
+                    "authorId": "2192689522",
+                    "name": "Yuteng Ye"
+                },
+                {
+                    "authorId": "2244145726",
+                    "name": "Jiale Cai"
+                },
+                {
+                    "authorId": "2243737713",
+                    "name": "Hang Zhou"
+                },
+                {
+                    "authorId": "2243556226",
+                    "name": "Guanwen Li"
+                },
+                {
+                    "authorId": "2243000579",
+                    "name": "Youjia Zhang"
+                },
+                {
+                    "authorId": "7576095",
+                    "name": "Zikai Song"
+                },
+                {
+                    "authorId": "2243086273",
+                    "name": "Chenxing Gao"
+                },
+                {
+                    "authorId": "2237947276",
+                    "name": "Junqing Yu"
+                },
+                {
+                    "authorId": "2243650023",
+                    "name": "Wei Yang"
+                }
+            ],
+            "abstract": "In spite of the rapidly evolving landscape of text-to-image generation, the synthesis and manipulation of multiple entities while adhering to specific relational constraints pose enduring challenges. This paper introduces an innovative progressive synthesis and editing operation that systematically incorporates entities into the target image, ensuring their adherence to spatial and relational constraints at each sequential step. Our key insight stems from the observation that while a pre-trained text-to-image diffusion model adeptly handles one or two entities, it often falters when dealing with a greater number. To address this limitation, we propose harnessing the capabilities of a Large Language Model (LLM) to decompose intricate and protracted text descriptions into coherent directives adhering to stringent formats. To facilitate the execution of directives involving distinct semantic operations\u2014namely insertion, editing, and erasing\u2014we formulate the Stimulus, Response, and Fusion (SRF) framework. Within this framework, latent regions are gently stimulated in alignment with each operation, followed by the fusion of the responsive latent components to achieve cohesive entity manipulation. Our proposed framework yields notable advancements in object synthesis, particularly when confronted with intricate and lengthy textual inputs. Consequently, it establishes a new benchmark for text-to-image generation tasks, further elevating the field's performance standards.",
+            "score": 3
+        },
+        {
+            "id": "0b721ad44412c5b708535acb62abf5b020330405",
+            "paperId": "0b721ad44412c5b708535acb62abf5b020330405",
+            "title": "Coherent Zero-Shot Visual Instruction Generation",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2406.04337, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A simple, training-free framework that systematically integrates text comprehension and image generation to ensure visual instructions are visually appealing and maintain consistency and accuracy throughout the instruction sequence is introduced."
+            },
+            "authors": [
+                {
+                    "authorId": "1576583542",
+                    "name": "Quynh Phung"
+                },
+                {
+                    "authorId": "2297191282",
+                    "name": "Songwei Ge"
+                },
+                {
+                    "authorId": "2238908937",
+                    "name": "Jia-Bin Huang"
+                }
+            ],
+            "abstract": "Despite the advances in text-to-image synthesis, particularly with diffusion models, generating visual instructions that require consistent representation and smooth state transitions of objects across sequential steps remains a formidable challenge. This paper introduces a simple, training-free framework to tackle the issues, capitalizing on the advancements in diffusion models and large language models (LLMs). Our approach systematically integrates text comprehension and image generation to ensure visual instructions are visually appealing and maintain consistency and accuracy throughout the instruction sequence. We validate the effectiveness by testing multi-step instructions and comparing the text alignment and consistency with several baselines. Our experiments show that our approach can visualize coherent and visually pleasing instructions",
+            "score": 3
+        },
+        {
+            "id": "b183e1e045769f893b9a3dcb5f3504dccdb2e82e",
+            "paperId": "b183e1e045769f893b9a3dcb5f3504dccdb2e82e",
+            "title": "DreamPoster: A Unified Framework for Image-Conditioned Generative Poster Design",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04218, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373524364",
+                    "name": "Xiwei Hu"
+                },
+                {
+                    "authorId": "2372448641",
+                    "name": "Haokun Chen"
+                },
+                {
+                    "authorId": "2374351035",
+                    "name": "Zhongqi Qi"
+                },
+                {
+                    "authorId": "2367563323",
+                    "name": "Hui Zhang"
+                },
+                {
+                    "authorId": "2333876733",
+                    "name": "Dexiang Hong"
+                },
+                {
+                    "authorId": "2297817778",
+                    "name": "Jie Shao"
+                },
+                {
+                    "authorId": "2297895500",
+                    "name": "Xinglong Wu"
+                }
+            ],
+            "abstract": "We present DreamPoster, a Text-to-Image generation framework that intelligently synthesizes high-quality posters from user-provided images and text prompts while maintaining content fidelity and supporting flexible resolution and layout outputs. Specifically, DreamPoster is built upon our T2I model, Seedream3.0 to uniformly process different poster generating types. For dataset construction, we propose a systematic data annotation pipeline that precisely annotates textual content and typographic hierarchy information within poster images, while employing comprehensive methodologies to construct paired datasets comprising source materials (e.g., raw graphics/text) and their corresponding final poster outputs. Additionally, we implement a progressive training strategy that enables the model to hierarchically acquire multi-task generation capabilities while maintaining high-quality generation. Evaluations on our testing benchmarks demonstrate DreamPoster's superiority over existing methods, achieving a high usability rate of 88.55\\%, compared to GPT-4o (47.56\\%) and SeedEdit3.0 (25.96\\%). DreamPoster will be online in Jimeng and other Bytedance Apps.",
+            "score": 3
+        },
+        {
+            "id": "addcd5cb5f5ff9a60aa9752846651d750c140e58",
+            "paperId": "addcd5cb5f5ff9a60aa9752846651d750c140e58",
+            "title": "TextPixs: Glyph-Conditioned Diffusion with Character-Aware Attention and OCR-Guided Supervision",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.06033, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2322433938",
+                    "name": "Syeda Anshrah Gillani"
+                },
+                {
+                    "authorId": "2322442317",
+                    "name": "Mirza Samad Ahmed Baig"
+                },
+                {
+                    "authorId": "2372666580",
+                    "name": "Osama Ahmed Khan"
+                },
+                {
+                    "authorId": "2322456510",
+                    "name": "Shahid Munir Shah"
+                },
+                {
+                    "authorId": "2373023906",
+                    "name": "Umema Mujeeb"
+                },
+                {
+                    "authorId": "2372451859",
+                    "name": "Maheen Ali"
+                }
+            ],
+            "abstract": "The modern text-to-image diffusion models boom has opened a new era in digital content production as it has proven the previously unseen ability to produce photorealistic and stylistically diverse imagery based on the semantics of natural-language descriptions. However, the consistent disadvantage of these models is that they cannot generate readable, meaningful, and correctly spelled text in generated images, which significantly limits the use of practical purposes like advertising, learning, and creative design. This paper introduces a new framework, namely Glyph-Conditioned Diffusion with Character-Aware Attention (GCDA), using which a typical diffusion backbone is extended by three well-designed modules. To begin with, the model has a dual-stream text encoder that encodes both semantic contextual information and explicit glyph representations, resulting in a character-aware representation of the input text that is rich in nature. Second, an attention mechanism that is aware of the character is proposed with a new attention segregation loss that aims to limit the attention distribution of each character independently in order to avoid distortion artifacts. Lastly, GCDA has an OCR-in-the-loop fine-tuning phase, where a full text perceptual loss, directly optimises models to be legible and accurately spell. Large scale experiments to benchmark datasets, such as MARIO-10M and T2I-CompBench, reveal that GCDA sets a new state-of-the-art on all metrics, with better character based metrics on text rendering (Character Error Rate: 0.08 vs 0.21 for the previous best; Word Error Rate: 0.15 vs 0.25), human perception, and comparable image synthesis quality on high-fidelity (FID: 14.3).",
+            "score": 3
+        },
+        {
+            "id": "d7baafb3cafc28f4a4f09c0fff7555ed6b5f65df",
+            "paperId": "d7baafb3cafc28f4a4f09c0fff7555ed6b5f65df",
+            "title": "S2Edit: Text-Guided Image Editing with Precise Semantic and Spatial Control",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04584, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2303516937",
+                    "name": "Xudong Liu"
+                },
+                {
+                    "authorId": "2257074951",
+                    "name": "Zi-Jiang Chen"
+                },
+                {
+                    "authorId": "2052890223",
+                    "name": "R. Jiang"
+                },
+                {
+                    "authorId": "2253894469",
+                    "name": "Ziyi Wu"
+                },
+                {
+                    "authorId": "2303471639",
+                    "name": "Kejia Yin"
+                },
+                {
+                    "authorId": "2257373877",
+                    "name": "Han Zhao"
+                },
+                {
+                    "authorId": "3241876",
+                    "name": "P. Aarabi"
+                },
+                {
+                    "authorId": "2262216913",
+                    "name": "Igor Gilitschenski"
+                }
+            ],
+            "abstract": "Recent advances in diffusion models have enabled high-quality generation and manipulation of images guided by texts, as well as concept learning from images. However, naive applications of existing methods to editing tasks that require fine-grained control, e.g., face editing, often lead to suboptimal solutions with identity information and high-frequency details lost during the editing process, or irrelevant image regions altered due to entangled concepts. In this work, we propose S$^2$Edit, a novel method based on a pre-trained text-to-image diffusion model that enables personalized editing with precise semantic and spatial control. We first fine-tune our model to embed the identity information into a learnable text token. During fine-tuning, we disentangle the learned identity token from attributes to be edited by enforcing an orthogonality constraint in the textual feature space. To ensure that the identity token only affects regions of interest, we apply object masks to guide the cross-attention maps. At inference time, our method performs localized editing while faithfully preserving the original identity with semantically disentangled and spatially focused identity token learned. Extensive experiments demonstrate the superiority of S$^2$Edit over state-of-the-art methods both quantitatively and qualitatively. Additionally, we showcase several compositional image editing applications of S$^2$Edit such as makeup transfer.",
+            "score": 3
+        },
+        {
+            "id": "654572f31e51bad219ceffbefd73c4b8b7b618bd",
+            "paperId": "654572f31e51bad219ceffbefd73c4b8b7b618bd",
+            "title": "RichControl: Structure- and Appearance-Rich Training-Free Spatial Control for Text-to-Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02792, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372296857",
+                    "name": "Liheng Zhang"
+                },
+                {
+                    "authorId": "2372254865",
+                    "name": "Lexi Pang"
+                },
+                {
+                    "authorId": "2305525491",
+                    "name": "Hang Ye"
+                },
+                {
+                    "authorId": "2136501721",
+                    "name": "Xiaoxuan Ma"
+                },
+                {
+                    "authorId": "2305557417",
+                    "name": "Yizhou Wang"
+                }
+            ],
+            "abstract": "Text-to-image (T2I) diffusion models have shown remarkable success in generating high-quality images from text prompts. Recent efforts extend these models to incorporate conditional images (e.g., depth or pose maps) for fine-grained spatial control. Among them, feature injection methods have emerged as a training-free alternative to traditional fine-tuning approaches. However, they often suffer from structural misalignment, condition leakage, and visual artifacts, especially when the condition image diverges significantly from natural RGB distributions. By revisiting existing methods, we identify a core limitation: the synchronous injection of condition features fails to account for the trade-off between domain alignment and structural preservation during denoising. Inspired by this observation, we propose a flexible feature injection framework that decouples the injection timestep from the denoising process. At its core is a structure-rich injection module, which enables the model to better adapt to the evolving interplay between alignment and structure preservation throughout the diffusion steps, resulting in more faithful structural generation. In addition, we introduce appearance-rich prompting and a restart refinement strategy to further enhance appearance control and visual quality. Together, these designs enable training-free generation that is both structure-rich and appearance-rich. Extensive experiments show that our approach achieves state-of-the-art performance across diverse zero-shot conditioning scenarios.",
+            "score": 3
+        },
+        {
+            "id": "ee1d0e141530190a2b0d834737096c5bfda6b304",
+            "paperId": "ee1d0e141530190a2b0d834737096c5bfda6b304",
+            "title": "Integrating Visuospatial, Linguistic, and Commonsense Structure into Story Visualization",
+            "year": 2021,
+            "citationCount": 63,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.emnlp-main.543.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2110.10834, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "8785371",
+                    "name": "Adyasha Maharana"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                }
+            ],
+            "abstract": "While much research has been done in text-to-image synthesis, little work has been done to explore the usage of linguistic structure of the input text. Such information is even more important for story visualization since its inputs have an explicit narrative structure that needs to be translated into an image sequence (or visual story). Prior work in this domain has shown that there is ample room for improvement in the generated image sequence in terms of visual quality, consistency and relevance. In this paper, we first explore the use of constituency parse trees using a Transformer-based recurrent architecture for encoding structured input. Second, we augment the structured input with commonsense information and study the impact of this external knowledge on the generation of visual story. Third, we also incorporate visual structure via bounding boxes and dense captioning to provide feedback about the characters/objects in generated images within a dual learning setup. We show that off-the-shelf dense-captioning models trained on Visual Genome can improve the spatial structure of images from a different target domain without needing fine-tuning. We train the model end-to-end using intra-story contrastive loss (between words and image sub-regions) and show significant improvements in visual quality. Finally, we provide an analysis of the linguistic and visuo-spatial information.",
+            "score": 3
+        },
+        {
+            "id": "2cd605106b88c85d7d8b865b1ef0f8c8293debf1",
+            "paperId": "2cd605106b88c85d7d8b865b1ef0f8c8293debf1",
+            "title": "Zero-Shot Text-to-Image Generation",
+            "year": 2021,
+            "citationCount": 5235,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2102.12092, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1992922591",
+                    "name": "A. Ramesh"
+                },
+                {
+                    "authorId": "2068123790",
+                    "name": "Mikhail Pavlov"
+                },
+                {
+                    "authorId": "40087786",
+                    "name": "Gabriel Goh"
+                },
+                {
+                    "authorId": "145565184",
+                    "name": "Scott Gray"
+                },
+                {
+                    "authorId": "153387869",
+                    "name": "Chelsea Voss"
+                },
+                {
+                    "authorId": "38909097",
+                    "name": "Alec Radford"
+                },
+                {
+                    "authorId": "2108828435",
+                    "name": "Mark Chen"
+                },
+                {
+                    "authorId": "1701686",
+                    "name": "I. Sutskever"
+                }
+            ],
+            "abstract": "Text-to-image generation has traditionally focused on finding better modeling assumptions for training on a fixed dataset. These assumptions might involve complex architectures, auxiliary losses, or side information such as object part labels or segmentation masks supplied during training. We describe a simple approach for this task based on a transformer that autoregressively models the text and image tokens as a single stream of data. With sufficient data and scale, our approach is competitive with previous domain-specific models when evaluated in a zero-shot fashion.",
+            "score": 3
+        },
+        {
+            "id": "652032fbb744da4f279e8f30eef2323155878ac4",
+            "paperId": "652032fbb744da4f279e8f30eef2323155878ac4",
+            "title": "Cross-Modal Contrastive Learning for Text-to-Image Generation",
+            "year": 2021,
+            "citationCount": 372,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2101.04702",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2101.04702, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2119079641",
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "23978705",
+                    "name": "Jing Yu Koh"
+                },
+                {
+                    "authorId": "1387994164",
+                    "name": "Jason Baldridge"
+                },
+                {
+                    "authorId": "1697141",
+                    "name": "Honglak Lee"
+                },
+                {
+                    "authorId": "2781059",
+                    "name": "Yinfei Yang"
+                }
+            ],
+            "abstract": "The output of text-to-image synthesis systems should be coherent, clear, photo-realistic scenes with high semantic fidelity to their conditioned text descriptions. Our Cross-Modal Contrastive Generative Adversarial Network (XMC-GAN) addresses this challenge by maximizing the mutual information between image and text. It does this via multiple contrastive losses which capture inter-modality and intra-modality correspondences. XMC-GAN uses an attentional self-modulation generator, which enforces strong text-image correspondence, and a contrastive discriminator, which acts as a critic as well as a feature encoder for contrastive learning. The quality of XMC-GAN\u2019s output is a major step up from previous models, as we show on three challenging datasets. On MS-COCO, not only does XMC-GAN improve state-of-the-art FID from 24.70 to 9.33, but\u2013 more importantly\u2013people prefer XMC-GAN by 77.3% for image quality and 74.1% for image-text alignment, compared to three other recent models. XMC-GAN also generalizes to the challenging Localized Narratives dataset (which has longer, more detailed descriptions), improving state-of-the-art FID from 48.70 to 14.12. Lastly, we train and evaluate XMC-GAN on the challenging Open Images data, establishing a strong benchmark FID score of 26.91.",
+            "score": 3
+        },
+        {
+            "id": "87d3803c80db193e5b942e41e9883e8801a8c8c1",
+            "paperId": "87d3803c80db193e5b942e41e9883e8801a8c8c1",
+            "title": "Imagination Made Real: Stable Diffusion for High-Fidelity Text-to-Image Tasks",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICSCSS60660.2024.10625113?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICSCSS60660.2024.10625113, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This research pushes the limits of what is possible in high-fidelity text-to-image applications, showcasing the adaptability and effectiveness of latent diffusion models (LDMs), which also perform significantly better than pixel-based DMs in text-to-image synthesis, unrestricted image generation, and super-resolution."
+            },
+            "authors": [
+                {
+                    "authorId": "2244538948",
+                    "name": "Balasaheb Jadhav"
+                },
+                {
+                    "authorId": "2261967889",
+                    "name": "Manas Jain"
+                },
+                {
+                    "authorId": "2214759785",
+                    "name": "Adhip Jajoo"
+                },
+                {
+                    "authorId": "2214759788",
+                    "name": "Devika Kadam"
+                },
+                {
+                    "authorId": "71373994",
+                    "name": "Harshvardhan Kadam"
+                },
+                {
+                    "authorId": "2230546783",
+                    "name": "Toshish Kakkad"
+                }
+            ],
+            "abstract": "By utilising the sophisticated features of diffusion models (DMs) for image synthesis, this work presents a novel method for high-fidelity text-to-image generation. Conventional deep learning approaches break down the image production process into a series of sequential denoising autoencoder applications. These applications typically operate in pixel space and result in significant computational costs due to the need for substantial GPU resources for training and inference. By exploiting the latent spaces of potent pretrained autoencoders, this method overcomes these difficulties and permits DM training with minimal computational resources while preserving great quality and adaptability. An ideal trade-off between preserving detail and reducing complexity is struck by using latent representations, which greatly improves visual fidelity over earlier techniques. Furthermore, the incorporation of cross-attention layers in the model converts diffusion models into flexible generators that can process a variety of conditioning inputs, including text and bounding boxes, so enabling convolutional high-resolution synthesis. State-of-the-art performance in image inpainting, class-specific image blending, and other tasks is demonstrated by latent diffusion models (LDMs), which also perform significantly better than pixel-based DMs in text-to-image synthesis, unrestricted image generation, and super-resolution. This research pushes the limits of what is possible in high-fidelity text-to-image applications, showcasing the adaptability and effectiveness of LDMs.",
+            "score": 2
+        },
+        {
+            "id": "69b911ca7e7ab1f3b89f672d3e8022d168f25161",
+            "paperId": "69b911ca7e7ab1f3b89f672d3e8022d168f25161",
+            "title": "Text2Layout: Layout Generation From Text Representation Using Transformer",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.1109/access.2024.3452957",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2024.3452957?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2024.3452957, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a layout generation from text instead of generating images directly, using Transformer-based deep neural networks to synthesize scene representations of multiple objects and experimentally compares the method\u2019s quality and computational cost against existing ones."
+            },
+            "authors": [
+                {
+                    "authorId": "2280055338",
+                    "name": "Haruka Takahashi"
+                },
+                {
+                    "authorId": "2279732845",
+                    "name": "Shigeru Kuriyama"
+                }
+            ],
+            "abstract": "Recent advanced Text-to-Image methods still require much work to specify all labels and detailed layouts of objects to obtain an accurate planned image. Layout-based synthesis is an alternative method enabling users to control detailed composition directly to avoid the trial-and-error often required in prompt-based editing. This paper proposes a layout generation from text instead of generating images directly. Our approach uses Transformer-based deep neural networks to synthesize scene representations of multiple objects. By focusing on layout information, we can make an explainable layout of what objects the image includes. Our end-to-end approach uses parallel decoding, differs from conventional layout synthesis, and introduces sequential object predictions and post-processing of duplicate bounding boxes. We experimentally compare our method\u2019s quality and computational cost against existing ones, demonstrating its effectiveness and efficiency in generating layouts from textual representations. Combined with Layout-to-Image, this approach has significant practical implications, allowing the practical authoring tools that make image generation explainable and computable using relatively lightweight networks.",
+            "score": 2
+        },
+        {
+            "id": "6ac9bea79de705dcda0acd1b2b362ae5055c6b82",
+            "paperId": "6ac9bea79de705dcda0acd1b2b362ae5055c6b82",
+            "title": "One Diffusion to Generate Them All",
+            "year": 2024,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2411.16318, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A versatile, large-scale diffusion model that seamlessly supports bidirectional image synthesis and understanding across diverse tasks, which removes the need for specialized architectures, supports scalable multi-task training, and adapts smoothly to any resolution, enhancing both generalization and scalability is introduced."
+            },
+            "authors": [
+                {
+                    "authorId": "2306427430",
+                    "name": "Duong H. Le"
+                },
+                {
+                    "authorId": "2309222193",
+                    "name": "Tuan Pham"
+                },
+                {
+                    "authorId": "2322783815",
+                    "name": "Sangho Lee"
+                },
+                {
+                    "authorId": "2332337056",
+                    "name": "Christopher Clark"
+                },
+                {
+                    "authorId": "2684226",
+                    "name": "Aniruddha Kembhavi"
+                },
+                {
+                    "authorId": "2306247999",
+                    "name": "Stephan Mandt"
+                },
+                {
+                    "authorId": "2262217505",
+                    "name": "Ranjay Krishna"
+                },
+                {
+                    "authorId": "2117718562",
+                    "name": "Jiasen Lu"
+                }
+            ],
+            "abstract": "We introduce OneDiffusion, a versatile, large-scale diffusion model that seamlessly supports bidirectional image synthesis and understanding across diverse tasks. It enables conditional generation from inputs such as text, depth, pose, layout, and semantic maps, while also handling tasks like image deblurring, upscaling, and reverse processes such as depth estimation and segmentation. Additionally, OneDiffusion allows for multi-view generation, camera pose estimation, and instant personalization using sequential image inputs. Our model takes a straightforward yet effective approach by treating all tasks as frame sequences with varying noise scales during training, allowing any frame to act as a conditioning image at inference time. Our unified training framework removes the need for specialized architectures, supports scalable multi-task training, and adapts smoothly to any resolution, enhancing both generalization and scalability. Experimental results demonstrate competitive performance across tasks in both generation and prediction such as text-to-image, multiview generation, ID preservation, depth estimation and camera pose estimation despite a relatively small training dataset. Our code and checkpoint are freely available at https://github.com/lehduong/OneDiffusion.",
+            "score": 2
+        },
+        {
+            "id": "0416f17036ca1aff1b9ae2bd8b1eda0f92ce4d7c",
+            "paperId": "0416f17036ca1aff1b9ae2bd8b1eda0f92ce4d7c",
+            "title": "The Cow of Rembrandt - Analyzing Artistic Prompt Interpretation in Text-to-Image Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.23313, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2316056791",
+                    "name": "Alfio Ferrara"
+                },
+                {
+                    "authorId": "2190434849",
+                    "name": "Sergio Picascia"
+                },
+                {
+                    "authorId": "2221319864",
+                    "name": "Elisabetta Rocchetti"
+                }
+            ],
+            "abstract": "Text-to-image diffusion models have demonstrated remarkable capabilities in generating artistic content by learning from billions of images, including popular artworks. However, the fundamental question of how these models internally represent concepts, such as content and style in paintings, remains unexplored. Traditional computer vision assumes content and style are orthogonal, but diffusion models receive no explicit guidance about this distinction during training. In this work, we investigate how transformer-based text-to-image diffusion models encode content and style concepts when generating artworks. We leverage cross-attention heatmaps to attribute pixels in generated images to specific prompt tokens, enabling us to isolate image regions influenced by content-describing versus style-describing tokens. Our findings reveal that diffusion models demonstrate varying degrees of content-style separation depending on the specific artistic prompt and style requested. In many cases, content tokens primarily influence object-related regions while style tokens affect background and texture areas, suggesting an emergent understanding of the content-style distinction. These insights contribute to our understanding of how large-scale generative models internally represent complex artistic concepts without explicit supervision. We share the code and dataset, together with an exploratory tool for visualizing attention maps at https://github.com/umilISLab/artistic-prompt-interpretation.",
+            "score": 2
+        },
+        {
+            "id": "d7990fa4191f907d9aa1087cbfdcb1d59e624527",
+            "paperId": "d7990fa4191f907d9aa1087cbfdcb1d59e624527",
+            "title": "UniGlyph: Unified Segmentation-Conditioned Diffusion for Precise Visual Text Synthesis",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00992, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2335666357",
+                    "name": "Yuanrui Wang"
+                },
+                {
+                    "authorId": "2310871983",
+                    "name": "Cong Han"
+                },
+                {
+                    "authorId": "2353919577",
+                    "name": "Yafei Li"
+                },
+                {
+                    "authorId": "2280926131",
+                    "name": "Zhipeng Jin"
+                },
+                {
+                    "authorId": "2373019507",
+                    "name": "Xiawei Li"
+                },
+                {
+                    "authorId": "2276425328",
+                    "name": "Sinan Du"
+                },
+                {
+                    "authorId": "2310823550",
+                    "name": "Wen Tao"
+                },
+                {
+                    "authorId": "2281277110",
+                    "name": "Yi Yang"
+                },
+                {
+                    "authorId": "2203249661",
+                    "name": "Shuanglong Li"
+                },
+                {
+                    "authorId": "2374388189",
+                    "name": "Chun Yuan"
+                },
+                {
+                    "authorId": "2373441857",
+                    "name": "Liu Lin"
+                }
+            ],
+            "abstract": "Text-to-image generation has greatly advanced content creation, yet accurately rendering visual text remains a key challenge due to blurred glyphs, semantic drift, and limited style control. Existing methods often rely on pre-rendered glyph images as conditions, but these struggle to retain original font styles and color cues, necessitating complex multi-branch designs that increase model overhead and reduce flexibility. To address these issues, we propose a segmentation-guided framework that uses pixel-level visual text masks -- rich in glyph shape, color, and spatial detail -- as unified conditional inputs. Our method introduces two core components: (1) a fine-tuned bilingual segmentation model for precise text mask extraction, and (2) a streamlined diffusion model augmented with adaptive glyph conditioning and a region-specific loss to preserve textual fidelity in both content and style. Our approach achieves state-of-the-art performance on the AnyText benchmark, significantly surpassing prior methods in both Chinese and English settings. To enable more rigorous evaluation, we also introduce two new benchmarks: GlyphMM-benchmark for testing layout and glyph consistency in complex typesetting, and MiniText-benchmark for assessing generation quality in small-scale text regions. Experimental results show that our model outperforms existing methods by a large margin in both scenarios, particularly excelling at small text rendering and complex layout preservation, validating its strong generalization and deployment readiness.",
+            "score": 2
+        },
+        {
+            "id": "e673966539c880ee0dac0525ae3fadfd328c7939",
+            "paperId": "e673966539c880ee0dac0525ae3fadfd328c7939",
+            "title": "Text-To-Image Generator Using Deeping Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/isjem04863?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/isjem04863, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373861868",
+                    "name": "A.TWINKLE Vanishree"
+                },
+                {
+                    "authorId": "2372027001",
+                    "name": "Pinnamraju T S Priya"
+                }
+            ],
+            "abstract": "Text-to-image generation is a transformative field in artificial intelligence that focuses on synthesizing realistic images from natural language descriptions. This paper explores the integration of diffusion models and transformer-based architectures to achieve high-quality, semantically aligned image generation from textual prompts. Diffusion models, known for their superior generative capabilities, gradually transform noise into images through a learned denoising process. Meanwhile, transformers, particularly pre-trained language and vision-language models like CLIP, are employed to understand and encode textual semantics into meaningful embeddings. By conditioning the diffusion process on these embeddings, the system generates images that accurately reflect the input text. This combination has led to significant advancements in image quality, diversity, and text-image alignment, as demonstrated by state-of-the-art systems such as DALL\u00b7E 2, Imagen, and Stable Diffusion. The study presents an in-depth overview of the underlying architecture, training methodology, and real-world applications, highlighting the potential of these models in creative design, digital content generation, and human-computer interaction.\n\nIndex Terms:\u00a0 Text-to-Image Generation, Django, Hugging Face API, AI-generated image, Digital Art, Creative Assistant, User-Friendly UI.",
+            "score": 2
+        },
+        {
+            "id": "9418f452a9bc288d98debe4335d10c2527f62942",
+            "paperId": "9418f452a9bc288d98debe4335d10c2527f62942",
+            "title": "PromptSafe: Gated Prompt Tuning for Safe Text-to-Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01272, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2342406209",
+                    "name": "Zonglei Jing"
+                },
+                {
+                    "authorId": "2374476648",
+                    "name": "Xiao Yang"
+                },
+                {
+                    "authorId": "2374474104",
+                    "name": "Xiaoqian Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Siyuan Liang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Aishan Liu"
+                },
+                {
+                    "authorId": "2356573372",
+                    "name": "Mingchuan Zhang"
+                },
+                {
+                    "authorId": "2237942988",
+                    "name": "Xianglong Liu"
+                }
+            ],
+            "abstract": "Text-to-image (T2I) models have demonstrated remarkable generative capabilities but remain vulnerable to producing not-safe-for-work (NSFW) content, such as violent or explicit imagery. While recent moderation efforts have introduced soft prompt-guided tuning by appending defensive tokens to the input, these approaches often rely on large-scale curated image-text datasets and apply static, one-size-fits-all defenses at inference time. However, this results not only in high computational cost and degraded benign image quality, but also in limited adaptability to the diverse and nuanced safety requirements of real-world prompts. To address these challenges, we propose PromptSafe, a gated prompt tuning framework that combines a lightweight, text-only supervised soft embedding with an inference-time gated control network. Instead of training on expensive image-text datasets, we first rewrite unsafe prompts into semantically aligned but safe alternatives using an LLM, constructing an efficient text-only training corpus. Based on this, we optimize a universal soft prompt that repels unsafe and attracts safe embeddings during the diffusion denoising process. To avoid over-suppressing benign prompts, we introduce a gated mechanism that adaptively adjusts the defensive strength based on estimated prompt toxicity, thereby aligning defense intensity with prompt risk and ensuring strong protection for harmful inputs while preserving benign generation quality. Extensive experiments across multiple benchmarks and T2I models show that PromptSafe achieves a SOTA unsafe generation rate (2.36%), while preserving high benign fidelity. Furthermore, PromptSafe demonstrates strong generalization to unseen harmful categories, robust transferability across diffusion model architectures, and resilience under adaptive adversarial attacks, highlighting its practical value for safe and scalable deployment.",
+            "score": 2
+        },
+        {
+            "id": "2d9ae4c167510ed78803735fc57ea67c3cc55a35",
+            "paperId": "2d9ae4c167510ed78803735fc57ea67c3cc55a35",
+            "title": "VideoGPT: Video Generation using VQ-VAE and Transformers",
+            "year": 2021,
+            "citationCount": 547,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.10157, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "46705049",
+                    "name": "Wilson Yan"
+                },
+                {
+                    "authorId": "2369217398",
+                    "name": "Yunzhi Zhang"
+                },
+                {
+                    "authorId": "1689992",
+                    "name": "P. Abbeel"
+                },
+                {
+                    "authorId": "41207614",
+                    "name": "A. Srinivas"
+                }
+            ],
+            "abstract": "We present VideoGPT: a conceptually simple architecture for scaling likelihood based generative modeling to natural videos. VideoGPT uses VQ-VAE that learns downsampled discrete latent representations of a raw video by employing 3D convolutions and axial self-attention. A simple GPT-like architecture is then used to autoregressively model the discrete latents using spatio-temporal position encodings. Despite the simplicity in formulation and ease of training, our architecture is able to generate samples competitive with state-of-the-art GAN models for video generation on the BAIR Robot dataset, and generate high fidelity natural videos from UCF-101 and Tumbler GIF Dataset (TGIF). We hope our proposed architecture serves as a reproducible reference for a minimalistic implementation of transformer based video generation models. Samples and code are available at https://wilson1yan.github.io/videogpt/index.html",
+            "score": 2
+        },
+        {
+            "id": "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+            "paperId": "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+            "title": "Learning Transferable Visual Models From Natural Language Supervision",
+            "year": 2021,
+            "citationCount": 32405,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2103.00020, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "38909097",
+                    "name": "Alec Radford"
+                },
+                {
+                    "authorId": "2110935237",
+                    "name": "Jong Wook Kim"
+                },
+                {
+                    "authorId": "2004021329",
+                    "name": "Chris Hallacy"
+                },
+                {
+                    "authorId": "1992922591",
+                    "name": "A. Ramesh"
+                },
+                {
+                    "authorId": "40087786",
+                    "name": "Gabriel Goh"
+                },
+                {
+                    "authorId": "144517868",
+                    "name": "Sandhini Agarwal"
+                },
+                {
+                    "authorId": "144864359",
+                    "name": "Girish Sastry"
+                },
+                {
+                    "authorId": "119609682",
+                    "name": "Amanda Askell"
+                },
+                {
+                    "authorId": "2051714782",
+                    "name": "Pamela Mishkin"
+                },
+                {
+                    "authorId": "2115193883",
+                    "name": "Jack Clark"
+                },
+                {
+                    "authorId": "2064404342",
+                    "name": "Gretchen Krueger"
+                },
+                {
+                    "authorId": "1701686",
+                    "name": "I. Sutskever"
+                }
+            ],
+            "abstract": "State-of-the-art computer vision systems are trained to predict a fixed set of predetermined object categories. This restricted form of supervision limits their generality and usability since additional labeled data is needed to specify any other visual concept. Learning directly from raw text about images is a promising alternative which leverages a much broader source of supervision. We demonstrate that the simple pre-training task of predicting which caption goes with which image is an efficient and scalable way to learn SOTA image representations from scratch on a dataset of 400 million (image, text) pairs collected from the internet. After pre-training, natural language is used to reference learned visual concepts (or describe new ones) enabling zero-shot transfer of the model to downstream tasks. We study the performance of this approach by benchmarking on over 30 different existing computer vision datasets, spanning tasks such as OCR, action recognition in videos, geo-localization, and many types of fine-grained object classification. The model transfers non-trivially to most tasks and is often competitive with a fully supervised baseline without the need for any dataset specific training. For instance, we match the accuracy of the original ResNet-50 on ImageNet zero-shot without needing to use any of the 1.28 million training examples it was trained on. We release our code and pre-trained model weights at https://github.com/OpenAI/CLIP.",
+            "score": 2
+        },
+        {
+            "id": "47f7ec3d0a5e6e83b6768ece35206a94dc81919c",
+            "paperId": "47f7ec3d0a5e6e83b6768ece35206a94dc81919c",
+            "title": "Taming Transformers for High-Resolution Image Synthesis",
+            "year": 2020,
+            "citationCount": 3209,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2012.09841",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.09841, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "35175531",
+                    "name": "Patrick Esser"
+                },
+                {
+                    "authorId": "1660819540",
+                    "name": "Robin Rombach"
+                },
+                {
+                    "authorId": "1796707",
+                    "name": "B. Ommer"
+                }
+            ],
+            "abstract": "Designed to learn long-range interactions on sequential data, transformers continue to show state-of-the-art results on a wide variety of tasks. In contrast to CNNs, they contain no inductive bias that prioritizes local interactions. This makes them expressive, but also computationally infeasible for long sequences, such as high-resolution images. We demonstrate how combining the effectiveness of the inductive bias of CNNs with the expressivity of transformers enables them to model and thereby synthesize high-resolution images. We show how to (i) use CNNs to learn a context-rich vocabulary of image constituents, and in turn (ii) utilize transformers to efficiently model their composition within high-resolution images. Our approach is readily applied to conditional synthesis tasks, where both non-spatial information, such as object classes, and spatial information, such as segmentations, can control the generated image. In particular, we present the first results on semantically-guided synthesis of megapixel images with transformers. Project page at https://git.io/JLlvY.",
+            "score": 2
+        },
+        {
+            "id": "0ea7ec64cf6103f94c74308bd9c2a12ccb0cff63",
+            "paperId": "0ea7ec64cf6103f94c74308bd9c2a12ccb0cff63",
+            "title": "A Comparative Study of Text-to-Image Generative Models",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ISIVC61350.2024.10577779?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ISIVC61350.2024.10577779, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A comparison and analysis of generative adversarial networks (GANs) and diffusion models within the domain of \u201ctext-to-image generation\u201d to understand the strength and weaknesses of different models in specific contexts is provided."
+            },
+            "authors": [
+                {
+                    "authorId": "2305676872",
+                    "name": "Imran Ahmad"
+                },
+                {
+                    "authorId": "2309838499",
+                    "name": "Nazia Siddiqui"
+                },
+                {
+                    "authorId": "1869978",
+                    "name": "B. Boufama"
+                }
+            ],
+            "abstract": "Recent advancements of deep learning (DL) techniques have revolutionized various fields such as computer vision, image processing, artificial intelligence, and natural language processing. One notable application that showcases the power of these algorithms is the field of image synthesis, where new images are created from textual descriptions. Generative models play a crucial role in this process, enabling the generation of novel data based on patterns learned from the training set. Diffusion models are a distinctive class of generative models that operate by introducing random noise to existing data, and subsequently learning to reverse this diffusion process. This technique is particularly valuable in scenarios where the transformation of data over time or through sequential steps is a critical aspect of the generation process. The ability to translate textual descriptions into visual representations offers new possibilities for human-computer interaction and creative expressions. This paper provides a comparison and analysis of generative adversarial networks (GANs) and diffusion models within the domain of \u201ctext-to-image generation\u201d to understand the strength and weaknesses of different models in specific contexts. For this purpose, we are using a combination of Vector-Quantized GAN (VQGAN) and Contrastive Language-Image Pre-training (CLIP) model. This combination provides a powerful integration of two distinct machine learning (ML) techniques for the purpose of creating images from textual input. Guided Language to Image Diffusion for Generation and Editing (GLIDE) is the diffusion model used in this study. For both models, text input from the MS-COCO data set is used. Evaluation of generated images is performed using Fr\u00e9chet Inception Distance (FID) and Inception Score (IS) metrics. Semantic object accuracy score (SOA) is also used as a metric to add an additional layer for analysis by considering the relevance of the generated images to the provided captions during the image generation process. This metric is helpful not only to assessing visual quality of the generated images but also their alignment with the intended semantic content.",
+            "score": 1
+        },
+        {
+            "id": "da2fe6cd385194b0274d04d04ee72e8caf3854d4",
+            "paperId": "da2fe6cd385194b0274d04d04ee72e8caf3854d4",
+            "title": "Learning Universal Policies via Text-Guided Video Generation",
+            "year": 2023,
+            "citationCount": 292,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2302.00111",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2302.00111, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work casts the sequential decision making problem as a text-conditioned video generation problem, where a planner synthesizes a set of future frames depicting its planned actions in the future, after which control actions are extracted from the generated video."
+            },
+            "authors": [
+                {
+                    "authorId": "15394275",
+                    "name": "Yilun Du"
+                },
+                {
+                    "authorId": "2111076891",
+                    "name": "Mengjiao Yang"
+                },
+                {
+                    "authorId": "144445937",
+                    "name": "Bo Dai"
+                },
+                {
+                    "authorId": "2791430",
+                    "name": "H. Dai"
+                },
+                {
+                    "authorId": "7624658",
+                    "name": "Ofir Nachum"
+                },
+                {
+                    "authorId": "1763295",
+                    "name": "J. Tenenbaum"
+                },
+                {
+                    "authorId": "50319359",
+                    "name": "D. Schuurmans"
+                },
+                {
+                    "authorId": "1689992",
+                    "name": "P. Abbeel"
+                }
+            ],
+            "abstract": "A goal of artificial intelligence is to construct an agent that can solve a wide variety of tasks. Recent progress in text-guided image synthesis has yielded models with an impressive ability to generate complex novel images, exhibiting combinatorial generalization across domains. Motivated by this success, we investigate whether such tools can be used to construct more general-purpose agents. Specifically, we cast the sequential decision making problem as a text-conditioned video generation problem, where, given a text-encoded specification of a desired goal, a planner synthesizes a set of future frames depicting its planned actions in the future, after which control actions are extracted from the generated video. By leveraging text as the underlying goal specification, we are able to naturally and combinatorially generalize to novel goals. The proposed policy-as-video formulation can further represent environments with different state and action spaces in a unified space of images, which, for example, enables learning and generalization across a variety of robot manipulation tasks. Finally, by leveraging pretrained language embeddings and widely available videos from the internet, the approach enables knowledge transfer through predicting highly realistic video plans for real robots.",
+            "score": 1
+        },
+        {
+            "id": "7b62f316317252f9a2fc9bf53791ad5b6ceb92d4",
+            "paperId": "7b62f316317252f9a2fc9bf53791ad5b6ceb92d4",
+            "title": "Text-Guided 3D Face Synthesis - From Generation to Editing",
+            "year": 2023,
+            "citationCount": 11,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2312.00375",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2312.00375, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A unified text-guided framework from face generation to editing, with a geometry-texture decoupled generation to miti-gate the loss of geometric details caused by coupling, and a self-guided consis-tency weight strategy to improve editing efficacy while pre-serving consistency."
+            },
+            "authors": [
+                {
+                    "authorId": "2269414261",
+                    "name": "Yunjie Wu"
+                },
+                {
+                    "authorId": "2190935945",
+                    "name": "Yapeng Meng"
+                },
+                {
+                    "authorId": "2269224083",
+                    "name": "Zhipeng Hu"
+                },
+                {
+                    "authorId": "2141830553",
+                    "name": "Lincheng Li"
+                },
+                {
+                    "authorId": "1484389076",
+                    "name": "Haoqian Wu"
+                },
+                {
+                    "authorId": "2269146569",
+                    "name": "Kun Zhou"
+                },
+                {
+                    "authorId": "2269147869",
+                    "name": "Weiwei Xu"
+                },
+                {
+                    "authorId": "2151420175",
+                    "name": "Xin Yu"
+                }
+            ],
+            "abstract": "Text-guided 3D face synthesis has achieved remarkable results by leveraging text-to-image (T2I) diffusion models. However, most existing works focus solely on the direct gen-eration, ignoring the editing, restricting them from synthe-sizing customized 3D faces through iterative adjustments. In this paper, we propose a unified text-guided framework from face generation to editing. In the generation stage, we propose a geometry-texture decoupled generation to miti-gate the loss of geometric details caused by coupling. Be-sides, decoupling enables us to utilize the generated geom-etry as a condition for texture generation, yielding highly geometry-texture aligned results. We further employ a fine-tuned texture diffusion model to enhance texture quality in both RGB and YUV space. In the editing stage, we first em-ploy a pre-trained diffusion model to update facial geometry or texture based on the texts. To enable sequential editing, we introduce a UV domain consistency preservation reg-ularization, preventing unintentional changes to irrelevant facial attributes. Besides, we propose a self-guided consis-tency weight strategy to improve editing efficacy while pre-serving consistency. Through comprehensive experiments, we showcase our method's superiority in face synthesis. Project page: https://faceg2e.github.io/.",
+            "score": 1
+        },
+        {
+            "id": "63154c5f79d597b024789fa63911fb3bc3cbd407",
+            "paperId": "63154c5f79d597b024789fa63911fb3bc3cbd407",
+            "title": "Waveform Generation for Text-to-speech Synthesis Using Pitch-synchronous Multi-scale Generative Adversarial Networks",
+            "year": 2018,
+            "citationCount": 23,
+            "openAccessPdf": {
+                "url": "https://www.pure.ed.ac.uk/ws/files/100009448/Waveform_generation_for_text_JUVELA_DoA020219_AFV.pdf",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1810.12598, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Listening test results show that while direct waveform generation with GAN is still far behind WaveNet, a GAN-based glottal excitation model can achieve quality and voice similarity on par with a WaveNet vocoder."
+            },
+            "authors": [
+                {
+                    "authorId": "3218867",
+                    "name": "Lauri Juvela"
+                },
+                {
+                    "authorId": "1740356",
+                    "name": "Bajibabu Bollepalli"
+                },
+                {
+                    "authorId": "1716857",
+                    "name": "J. Yamagishi"
+                },
+                {
+                    "authorId": "1721937",
+                    "name": "P. Alku"
+                }
+            ],
+            "abstract": "The state-of-the-art in text-to-speech (TTS) synthesis has recently improved considerably due to novel neural waveform generation methods, such as WaveNet. However, these methods suffer from their slow sequential inference process, while their parallel versions are difficult to train and even more computationally expensive. Meanwhile, generative adversarial networks (GANs) have achieved impressive results in image generation and are making their way into audio applications; parallel inference is among their lucrative properties. By adopting recent advances in GAN training techniques, this investigation studies waveform generation for TTS in two domains (speech signal and glottal excitation). Listening test results show that while direct waveform generation with GAN is still far behind WaveNet, a GAN-based glottal excitation model can achieve quality and voice similarity on par with a WaveNet vocoder.",
+            "score": 1
+        },
+        {
+            "id": "a10f78dfa22983410dfbf854c530fe7ad9d599e7",
+            "paperId": "a10f78dfa22983410dfbf854c530fe7ad9d599e7",
+            "title": "Exploring Generative AI: Models, Applications, and Challenges in Data Synthesis",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.9734/ajrcos/2024/v17i12533?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.9734/ajrcos/2024/v17i12533, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Key areas of focus include models (VAE, GAN, auto-regressive, flow-based), applications, evaluation techniques, challenges, and recent advances, which identifies emerging trends, novel methods, and critical gaps in the field."
+            },
+            "authors": [
+                {
+                    "authorId": "2264356348",
+                    "name": "S. Ramalakshmi"
+                },
+                {
+                    "authorId": "2264386420",
+                    "name": "G. Asha"
+                }
+            ],
+            "abstract": "Generative AI has emerged as a transformative field within artificial intelligence, enabling the creation of new data that mimics real-world information and expands the boundaries of what machines can autonomously generate. This study discuss the various models of generative AI, focusing on Variational Autoencoders (VAEs), Generative Adversarial Networks (GANs), and Auto-Regressive models, each offering distinct approaches and strengths in data generation. VAEs excel in learning latent representations, making them ideal for applications like anomaly detection and data imputation. GANs, renowned for their high-quality image synthesis, have found extensive use in tasks ranging from text-to-image conversion to super-resolution. Auto-Regressive models, on the other hand, are particularly effective in sequential data generation, such as text generation, music composition, and time series prediction. \nThe paper highlights key applications of these models across diverse domains, including image synthesis, text generation, drug discovery, and simulation tasks in fields like healthcare, finance, and entertainment. Additionally, the study emphasizes the evaluation metrics are also called the comparitive parameters crucial for assessing the performance of generative models, such as perceptual quality metrics, Inception Score (IS), and Fr\u00e9chet Inception Distance (FID), which provide quantitative insights into the quality and diversity of generated data. \nThis study employs a systematic methodology comprising a comprehensive literature review, strategic search queries, and thematic data synthesis to explore generative AI. Key areas of focus include models (VAE, GAN, auto-regressive, flow-based), applications, evaluation techniques, challenges, and recent advances. The analysis identifies emerging trends, novel methods, and critical gaps in the field. \nThis study also compares the performance of three Gen \u2013AI models along with the comparative parameters like data type, Data Type, Applications, Training Complexity, Output Quality, Interpretability, Limitations, Advantages, Computational Cost and Scalability. \nGenerative AI raises ethical concerns, including biases in training data that perpetuate stereotypes and marginalization. It can be misused for harmful purposes like creating deepfakes or spreading misinformation, impacting trust and privacy. Questions of accountability and ownership arise when AI-generated content infringes on intellectual property or causes harm. Addressing these issues is essential for responsible AI deployment.",
+            "score": 1
+        },
+        {
+            "id": "0cc324fdedb8ddad200281b5e8fcf881758975bc",
+            "paperId": "0cc324fdedb8ddad200281b5e8fcf881758975bc",
+            "title": "Sequential DNA Coding for Programmable Information Encryption.",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1002/adma.202418688?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1002/adma.202418688, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed hairpin-mediated primer exchange reaction (HAMER) system enables the generation of DNA keys and the recording of encoded information, offering strong potential to meet the confidentiality, integrity, and availability demands of future information security systems."
+            },
+            "authors": [
+                {
+                    "authorId": "2348708849",
+                    "name": "Wenhao Fu"
+                },
+                {
+                    "authorId": "2116811014",
+                    "name": "Yue Zhao"
+                },
+                {
+                    "authorId": "2352070532",
+                    "name": "Jingtao Cao"
+                },
+                {
+                    "authorId": "2352482794",
+                    "name": "Xueqi Zhao"
+                },
+                {
+                    "authorId": "92730439",
+                    "name": "Feng Chen"
+                },
+                {
+                    "authorId": "2153501082",
+                    "name": "Chunhai Fan"
+                },
+                {
+                    "authorId": "38051431",
+                    "name": "Yongxi Zhao"
+                }
+            ],
+            "abstract": "DNA molecules, with highly variable sequences and inherent programmability, emerge as a promising material for next-generation information storage and data encryption. However, due to the singular encryption method or limited randomness of the secret key, current encryptions remain vulnerable to brute-force attacks and the need for enhanced information security persists. This study introduces a programmable encryption strategy based on long-chain DNA synthesis and sequential encoding. The proposed hairpin-mediated primer exchange reaction (HAMER) system enables the generation of DNA keys and the recording of encoded information. Ultimately, encrypted text and image data can be decoded and retrieved through sequencing with customized access based on user permissions. This approach positions DNA as a high-performance information material and establishes a programmable encryption framework, offering strong potential to meet the confidentiality, integrity, and availability demands of future information security systems.",
+            "score": 1
+        },
+        {
+            "id": "b800eaf42586836c80de26adc9825a940d8a03ca",
+            "paperId": "b800eaf42586836c80de26adc9825a940d8a03ca",
+            "title": "LayerTracer: Cognitive-Aligned Layered SVG Synthesis via Diffusion Transformer",
+            "year": 2025,
+            "citationCount": 7,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2502.01105, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": null
+            },
+            "authors": [
+                {
+                    "authorId": "2115714518",
+                    "name": "Yiren Song"
+                },
+                {
+                    "authorId": "2343725888",
+                    "name": "Danze Chen"
+                },
+                {
+                    "authorId": "2297767798",
+                    "name": "Mike Zheng Shou"
+                }
+            ],
+            "abstract": "Generating cognitive-aligned layered SVGs remains challenging due to existing methods'tendencies toward either oversimplified single-layer outputs or optimization-induced shape redundancies. We propose LayerTracer, a diffusion transformer based framework that bridges this gap by learning designers'layered SVG creation processes from a novel dataset of sequential design operations. Our approach operates in two phases: First, a text-conditioned DiT generates multi-phase rasterized construction blueprints that simulate human design workflows. Second, layer-wise vectorization with path deduplication produces clean, editable SVGs. For image vectorization, we introduce a conditional diffusion mechanism that encodes reference images into latent tokens, guiding hierarchical reconstruction while preserving structural integrity. Extensive experiments demonstrate LayerTracer's superior performance against optimization-based and neural baselines in both generation quality and editability, effectively aligning AI-generated vectors with professional design cognition.",
+            "score": 1
+        },
+        {
+            "id": "bc2e994c5786fea5d3e7abe035b6dd736ddaa5f6",
+            "paperId": "bc2e994c5786fea5d3e7abe035b6dd736ddaa5f6",
+            "title": "Anchor Token Matching: Implicit Structure Locking for Training-free AR Image Editing",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2504.10434, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces Implicit Structure Locking (ISLock), the first training-free editing strategy for AR visual models and pioneer the way for efficient and flexible AR-based image editing, further bridging the performance gap between diffusion and autoregressive generative models."
+            },
+            "authors": [
+                {
+                    "authorId": "2212806702",
+                    "name": "Taihang Hu"
+                },
+                {
+                    "authorId": "2275027590",
+                    "name": "Linxuan Li"
+                },
+                {
+                    "authorId": "2330608319",
+                    "name": "Kai Wang"
+                },
+                {
+                    "authorId": "2273827651",
+                    "name": "Yaxing Wang"
+                },
+                {
+                    "authorId": "2237372719",
+                    "name": "Jian Yang"
+                },
+                {
+                    "authorId": "2275569993",
+                    "name": "Ming-Ming Cheng"
+                }
+            ],
+            "abstract": "Text-to-image generation has seen groundbreaking advancements with diffusion models, enabling high-fidelity synthesis and precise image editing through cross-attention manipulation. Recently, autoregressive (AR) models have re-emerged as powerful alternatives, leveraging next-token generation to match diffusion models. However, existing editing techniques designed for diffusion models fail to translate directly to AR models due to fundamental differences in structural control. Specifically, AR models suffer from spatial poverty of attention maps and sequential accumulation of structural errors during image editing, which disrupt object layouts and global consistency. In this work, we introduce Implicit Structure Locking (ISLock), the first training-free editing strategy for AR visual models. Rather than relying on explicit attention manipulation or fine-tuning, ISLock preserves structural blueprints by dynamically aligning self-attention patterns with reference images through the Anchor Token Matching (ATM) protocol. By implicitly enforcing structural consistency in latent space, our method ISLock enables structure-aware editing while maintaining generative autonomy. Extensive experiments demonstrate that ISLock achieves high-quality, structure-consistent edits without additional training and is superior or comparable to conventional editing techniques. Our findings pioneer the way for efficient and flexible AR-based image editing, further bridging the performance gap between diffusion and autoregressive generative models. The code will be publicly available at https://github.com/hutaiHang/ATM",
+            "score": 1
+        },
+        {
+            "id": "55a19318cc93714802c7ac59e07651789749b20c",
+            "paperId": "55a19318cc93714802c7ac59e07651789749b20c",
+            "title": "VL-ADAPTER: Parameter-Efficient Transfer Learning for Vision-and-Language Tasks",
+            "year": 2021,
+            "citationCount": 378,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2112.06825",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2112.06825, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "31238770",
+                    "name": "Yi-Lin Sung"
+                },
+                {
+                    "authorId": "2706729",
+                    "name": "Jaemin Cho"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                }
+            ],
+            "abstract": "Recently, fine-tuning language models pre-trained on large text corpora have provided huge improvements on vision-and-language (V&L) tasks as well as on pure language tasks. However, fine-tuning the entire parameter set of pre-trained models becomes impractical since the model size is growing rapidly. Hence, in this paper, we introduce adapter-based parameter-efficient transfer learning techniques to V&L models such as VL-BART and VL-T5. We evaluate our methods in a unified multi-task setup on both image-text and video-text benchmarks. For the image-text tasks, we use four diverse V&L datasets: VQAv2, GQA, NLVR2, and MSCOCO image captioning. For video-text tasks, we use TVQA, How2QA, TVC, and YC2C. With careful training and thorough experiments, we benchmark three popular adapter-based methods (Adapter, Hyperformer, Compacter) against the standard full fine-tuning and the recently proposed prompt-tuning approach. We also enhance the efficiency and performance of adapters by sharing their weights to attain knowledge across tasks. Our results demonstrate that training the adapter with the weight-sharing technique (4.18% of total parameters for image-text tasks and 3.39% for video-text tasks) can match the performance of fine-tuning the entire model. Lastly, we present a comprehensive analysis including the combination of adapter and task-specific prompts and the impact of V&L pre-training on adapters. 11The code for our CVPR 2022 paper is available at: https://github.com/ylsung/VL_adapter.",
+            "score": 1
+        },
+        {
+            "id": "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+            "paperId": "002c256d30d6be4b23d365a8de8ae0e67e4c9641",
+            "title": "Improving language models by retrieving from trillions of tokens",
+            "year": 2021,
+            "citationCount": 1156,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2112.04426, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "148016269",
+                    "name": "Sebastian Borgeaud"
+                },
+                {
+                    "authorId": "1697879",
+                    "name": "A. Mensch"
+                },
+                {
+                    "authorId": "46616544",
+                    "name": "Jordan Hoffmann"
+                },
+                {
+                    "authorId": "2072572294",
+                    "name": "Trevor Cai"
+                },
+                {
+                    "authorId": "2143538252",
+                    "name": "Eliza Rutherford"
+                },
+                {
+                    "authorId": "2143434227",
+                    "name": "Katie Millican"
+                },
+                {
+                    "authorId": "47568983",
+                    "name": "George van den Driessche"
+                },
+                {
+                    "authorId": "143783339",
+                    "name": "Jean-Baptiste Lespiau"
+                },
+                {
+                    "authorId": "2143374656",
+                    "name": "Bogdan Damoc"
+                },
+                {
+                    "authorId": "31993415",
+                    "name": "Aidan Clark"
+                },
+                {
+                    "authorId": "40550616",
+                    "name": "Diego de Las Casas"
+                },
+                {
+                    "authorId": "40895205",
+                    "name": "Aurelia Guy"
+                },
+                {
+                    "authorId": "10698483",
+                    "name": "Jacob Menick"
+                },
+                {
+                    "authorId": "81387328",
+                    "name": "Roman Ring"
+                },
+                {
+                    "authorId": "4629007",
+                    "name": "T. Hennigan"
+                },
+                {
+                    "authorId": "2148653469",
+                    "name": "Saffron Huang"
+                },
+                {
+                    "authorId": "108173905",
+                    "name": "Lorenzo Maggiore"
+                },
+                {
+                    "authorId": "2115601070",
+                    "name": "Chris Jones"
+                },
+                {
+                    "authorId": "51042571",
+                    "name": "Albin Cassirer"
+                },
+                {
+                    "authorId": "2065040422",
+                    "name": "Andy Brock"
+                },
+                {
+                    "authorId": "35550664",
+                    "name": "Michela Paganini"
+                },
+                {
+                    "authorId": "2060655766",
+                    "name": "G. Irving"
+                },
+                {
+                    "authorId": "1689108",
+                    "name": "O. Vinyals"
+                },
+                {
+                    "authorId": "2217144",
+                    "name": "Simon Osindero"
+                },
+                {
+                    "authorId": "34838386",
+                    "name": "K. Simonyan"
+                },
+                {
+                    "authorId": "34269227",
+                    "name": "Jack W. Rae"
+                },
+                {
+                    "authorId": "152585800",
+                    "name": "Erich Elsen"
+                },
+                {
+                    "authorId": "2175946",
+                    "name": "L. Sifre"
+                }
+            ],
+            "abstract": "We enhance auto-regressive language models by conditioning on document chunks retrieved from a large corpus, based on local similarity with preceding tokens. With a $2$ trillion token database, our Retrieval-Enhanced Transformer (RETRO) obtains comparable performance to GPT-3 and Jurassic-1 on the Pile, despite using 25$\\times$ fewer parameters. After fine-tuning, RETRO performance translates to downstream knowledge-intensive tasks such as question answering. RETRO combines a frozen Bert retriever, a differentiable encoder and a chunked cross-attention mechanism to predict tokens based on an order of magnitude more data than what is typically consumed during training. We typically train RETRO from scratch, yet can also rapidly RETROfit pre-trained transformers with retrieval and still achieve good performance. Our work opens up new avenues for improving language models through explicit memory at unprecedented scale.",
+            "score": 1
+        },
+        {
+            "id": "ad471be93216ddbf8544721d50ee5aed14f07cae",
+            "paperId": "ad471be93216ddbf8544721d50ee5aed14f07cae",
+            "title": "UniPELT: A Unified Framework for Parameter-Efficient Language Model Tuning",
+            "year": 2021,
+            "citationCount": 202,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2022.acl-long.433.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2110.07577, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3375249",
+                    "name": "Yuning Mao"
+                },
+                {
+                    "authorId": "36299222",
+                    "name": "Lambert Mathias"
+                },
+                {
+                    "authorId": "2132302721",
+                    "name": "Rui Hou"
+                },
+                {
+                    "authorId": "2634674",
+                    "name": "Amjad Almahairi"
+                },
+                {
+                    "authorId": "2110815489",
+                    "name": "Hao Ma"
+                },
+                {
+                    "authorId": "2111759643",
+                    "name": "Jiawei Han"
+                },
+                {
+                    "authorId": "2072801764",
+                    "name": "Wen-tau Yih"
+                },
+                {
+                    "authorId": "2072010",
+                    "name": "Madian Khabsa"
+                }
+            ],
+            "abstract": "Recent parameter-efficient language model tuning (PELT) methods manage to match the performance of fine-tuning with much fewer trainable parameters and perform especially well when training data is limited. However, different PELT methods may perform rather differently on the same task, making it nontrivial to select the most appropriate method for a specific task, especially considering the fast-growing number of new PELT methods and tasks. In light of model diversity and the difficulty of model selection, we propose a unified framework, UniPELT, which incorporates different PELT methods as submodules and learns to activate the ones that best suit the current data or task setup via gating mechanism. On the GLUE benchmark, UniPELT consistently achieves 1 4% gains compared to the best individual PELT method that it incorporates and even outperforms fine-tuning under different setups. Moreover, UniPELT generally surpasses the upper bound that takes the best performance of all its submodules used individually on each task, indicating that a mixture of multiple PELT methods may be inherently more effective than single methods.",
+            "score": 1
+        },
+        {
+            "id": "43a87867fe6bf4eb920f97fc753be4b727308923",
+            "paperId": "43a87867fe6bf4eb920f97fc753be4b727308923",
+            "title": "Towards a Unified View of Parameter-Efficient Transfer Learning",
+            "year": 2021,
+            "citationCount": 987,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2110.04366, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "6215698",
+                    "name": "Junxian He"
+                },
+                {
+                    "authorId": "2384711",
+                    "name": "Chunting Zhou"
+                },
+                {
+                    "authorId": "2378954",
+                    "name": "Xuezhe Ma"
+                },
+                {
+                    "authorId": "1400419309",
+                    "name": "Taylor Berg-Kirkpatrick"
+                },
+                {
+                    "authorId": "1700325",
+                    "name": "Graham Neubig"
+                }
+            ],
+            "abstract": "Fine-tuning large pre-trained language models on downstream tasks has become the de-facto learning paradigm in NLP. However, conventional approaches fine-tune all the parameters of the pre-trained model, which becomes prohibitive as the model size and the number of tasks grow. Recent work has proposed a variety of parameter-efficient transfer learning methods that only fine-tune a small number of (extra) parameters to attain strong performance. While effective, the critical ingredients for success and the connections among the various methods are poorly understood. In this paper, we break down the design of state-of-the-art parameter-efficient transfer learning methods and present a unified framework that establishes connections between them. Specifically, we re-frame them as modifications to specific hidden states in pre-trained models, and define a set of design dimensions along which different methods vary, such as the function to compute the modification and the position to apply the modification. Through comprehensive empirical studies across machine translation, text summarization, language understanding, and text classification benchmarks, we utilize the unified view to identify important design choices in previous methods. Furthermore, our unified framework enables the transfer of design elements across different approaches, and as a result we are able to instantiate new parameter-efficient fine-tuning methods that tune less parameters than previous methods while being more effective, achieving comparable results to fine-tuning all parameters on all four tasks.",
+            "score": 1
+        },
+        {
+            "id": "339b2b711fb5b228d097b03ebc3e62a521779235",
+            "paperId": "339b2b711fb5b228d097b03ebc3e62a521779235",
+            "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+            "year": 2021,
+            "citationCount": 1314,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2022.acl-short.1.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.10199, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2082648761",
+                    "name": "Elad Ben-Zaken"
+                },
+                {
+                    "authorId": "51432464",
+                    "name": "Shauli Ravfogel"
+                },
+                {
+                    "authorId": "79775260",
+                    "name": "Yoav Goldberg"
+                }
+            ],
+            "abstract": "We introduce BitFit, a sparse-finetuning method where only the bias-terms of the model (or a subset of them) are being modified. We show that with small-to-medium training data, applying BitFit on pre-trained BERT models is competitive with (and sometimes better than) fine-tuning the entire model. For larger data, the method is competitive with other sparse fine-tuning methods.Besides their practical utility, these findings are relevant for the question of understanding the commonly-used process of finetuning: they support the hypothesis that finetuning is mainly about exposing knowledge induced by language-modeling training, rather than learning new task-specific linguistic knowledge.",
+            "score": 1
+        },
+        {
+            "id": "a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+            "paperId": "a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+            "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+            "year": 2021,
+            "citationCount": 11560,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.09685, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2157840220",
+                    "name": "J. E. Hu"
+                },
+                {
+                    "authorId": "1752875",
+                    "name": "Yelong Shen"
+                },
+                {
+                    "authorId": "104100507",
+                    "name": "Phillip Wallis"
+                },
+                {
+                    "authorId": "1388725932",
+                    "name": "Zeyuan Allen-Zhu"
+                },
+                {
+                    "authorId": "2110486765",
+                    "name": "Yuanzhi Li"
+                },
+                {
+                    "authorId": "2135571585",
+                    "name": "Shean Wang"
+                },
+                {
+                    "authorId": "2109136147",
+                    "name": "Weizhu Chen"
+                }
+            ],
+            "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+            "score": 1
+        },
+        {
+            "id": "656ed155c2d345c19d9bff4b50f2ae00db8407cc",
+            "paperId": "656ed155c2d345c19d9bff4b50f2ae00db8407cc",
+            "title": "Compacter: Efficient Low-Rank Hypercomplex Adapter Layers",
+            "year": 2021,
+            "citationCount": 512,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.04647, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Joe Davison"
+                }
+            ],
+            "abstract": "Adapting large-scale pretrained language models to downstream tasks via fine-tuning is the standard method for achieving state-of-the-art performance on NLP benchmarks. However, fine-tuning all weights of models with millions or billions of parameters is sample-inefficient, unstable in low-resource settings, and wasteful as it requires storing a separate copy of the model for each task. Recent work has developed parameter-efficient fine-tuning methods, but these approaches either still require a relatively large number of parameters or underperform standard fine-tuning. In this work, we propose Compacter, a method for fine-tuning large-scale language models with a better trade-off between task performance and the number of trainable parameters than prior work. Compacter accomplishes this by building on top of ideas from adapters, low-rank optimization, and parameterized hypercomplex multiplication layers. Specifically, Compacter inserts task-specific weight matrices into a pretrained model's weights, which are computed efficiently as a sum of Kronecker products between shared\"slow\"weights and\"fast\"rank-one matrices defined per Compacter layer. By only training 0.047% of a pretrained model's parameters, Compacter performs on par with standard fine-tuning on GLUE and outperforms standard fine-tuning on SuperGLUE and low-resource settings. Our code is publicly available at~\\url{https://github.com/rabeehk/compacter}.",
+            "score": 1
+        },
+        {
+            "id": "bb3425318de7eed5641cda147d61c9a057b9d054",
+            "paperId": "bb3425318de7eed5641cda147d61c9a057b9d054",
+            "title": "Parameter-efficient Multi-task Fine-tuning for Transformers via Shared Hypernetworks",
+            "year": 2021,
+            "citationCount": 319,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.acl-long.47.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.04489, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2363901",
+                    "name": "Rabeeh Karimi Mahabadi"
+                },
+                {
+                    "authorId": "2884561",
+                    "name": "Sebastian Ruder"
+                },
+                {
+                    "authorId": "3226635",
+                    "name": "Mostafa Dehghani"
+                },
+                {
+                    "authorId": "46712043",
+                    "name": "J. Henderson"
+                }
+            ],
+            "abstract": "State-of-the-art parameter-efficient fine-tuning methods rely on introducing adapter modules between the layers of a pretrained language model. However, such modules are trained separately for each task and thus do not enable sharing information across tasks. In this paper, we show that we can learn adapter parameters for all layers and tasks by generating them using shared hypernetworks, which condition on task, adapter position, and layer id in a transformer model. This parameter-efficient multi-task learning framework allows us to achieve the best of both worlds by sharing knowledge across tasks via hypernetworks while enabling the model to adapt to each individual task through task-specific adapters. Experiments on the well-known GLUE benchmark show improved performance in multi-task learning while adding only 0.29% parameters per task. We additionally demonstrate substantial performance improvements in few-shot domain generalization across a variety of tasks. Our code is publicly available in https://github.com/rabeehk/hyperformer.",
+            "score": 1
+        },
+        {
+            "id": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "year": 2021,
+            "citationCount": 4316,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.emnlp-main.243.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.08691, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "144104130",
+                    "name": "Brian Lester"
+                },
+                {
+                    "authorId": "1388360943",
+                    "name": "Rami Al-Rfou"
+                },
+                {
+                    "authorId": "40832517",
+                    "name": "Noah Constant"
+                }
+            ],
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "score": 1
+        },
+        {
+            "id": "394be105b87e9bfe72c20efe6338de10604e1a11",
+            "paperId": "394be105b87e9bfe72c20efe6338de10604e1a11",
+            "title": "Conceptual 12M: Pushing Web-Scale Image-Text Pre-Training To Recognize Long-Tail Visual Concepts",
+            "year": 2021,
+            "citationCount": 1193,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2102.08981",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2102.08981, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2059199",
+                    "name": "Soravit Changpinyo"
+                },
+                {
+                    "authorId": "46756891",
+                    "name": "P. Sharma"
+                },
+                {
+                    "authorId": "2066767241",
+                    "name": "Nan Ding"
+                },
+                {
+                    "authorId": "1737285",
+                    "name": "Radu Soricut"
+                }
+            ],
+            "abstract": "The availability of large-scale image captioning and visual question answering datasets has contributed significantly to recent successes in vision-and-language pretraining. However, these datasets are often collected with overrestrictive requirements inherited from their original target tasks (e.g., image caption generation), which limit the resulting dataset scale and diversity. We take a step further in pushing the limits of vision-and-language pretraining data by relaxing the data collection pipeline used in Conceptual Captions 3M (CC3M) [54] and introduce the Conceptual 12M (CC12M), a dataset with 12 million image-text pairs specifically meant to be used for visionand-language pre-training. We perform an analysis of this dataset and benchmark its effectiveness against CC3M on multiple downstream tasks with an emphasis on long-tail visual recognition. Our results clearly illustrate the benefit of scaling up pre-training data for vision-and-language tasks, as indicated by the new state-of-the-art results on both the nocaps and Conceptual Captions benchmarks.1",
+            "score": 1
+        },
+        {
+            "id": "d22e4cc3a501c17881b9478621f29760e429e76e",
+            "paperId": "d22e4cc3a501c17881b9478621f29760e429e76e",
+            "title": "Parameter-Efficient Transfer Learning with Diff Pruning",
+            "year": 2020,
+            "citationCount": 424,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.acl-long.378.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.07463, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "35578711",
+                    "name": "Demi Guo"
+                },
+                {
+                    "authorId": "2531268",
+                    "name": "Alexander M. Rush"
+                },
+                {
+                    "authorId": "152847918",
+                    "name": "Yoon Kim"
+                }
+            ],
+            "abstract": "The large size of pretrained networks makes them difficult to deploy for multiple tasks in storage-constrained settings. Diff pruning enables parameter-efficient transfer learning that scales well with new tasks. The approach learns a task-specific \u201cdiff\u201d vector that extends the original pretrained parameters. This diff vector is adaptively pruned during training with a differentiable approximation to the L0-norm penalty to encourage sparsity. As the number of tasks increases, diff pruning remains parameter-efficient, as it requires storing only a small diff vector for each task. Since it does not require access to all tasks during training, it is attractive in on-device deployment settings where tasks arrive in stream or even from different providers. Diff pruning can match the performance of finetuned baselines on the GLUE benchmark while only modifying 0.5% of the pretrained model\u2019s parameters per task and scales favorably in comparison to popular pruning approaches.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.108189
+}

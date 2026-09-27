@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8711cea9e4af17b73427b55dc62fabaa7e576d88</p>
+<hr>
+<section><h2>Title</h2>
+<p>Graph-DTW-Fed: A Federated Learning Framework for Non-IID Graph Classification with Dynamic Time Warping</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing federated learning approaches for graph classification struggle with non-IID graph data across clients, especially when the graph structures and temporal dynamics vary significantly. This challenge hinders the effective collaboration of distributed clients in learning a global model for graph classification tasks.</p>
+<h3>Motivation</h3>
+<p>Current federated learning methods for graph classification typically use graph neural networks (GNNs) with federated averaging, but fail to capture complex temporal dependencies in dynamic graphs. Dynamic Time Warping (DTW) has shown promise in aligning temporal sequences but has not been effectively integrated into federated graph learning frameworks. Combining DTW with graph-aware federated learning could better handle non-IID graph data with varying temporal dynamics, leading to improved performance and generalization across diverse graph distributions.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Graph-DTW-Fed, a novel federated learning framework for non-IID graph classification. The key components are: 1) A graph-aware DTW layer that aligns temporal graph sequences across clients before aggregation. 2) A hierarchical attention mechanism that learns to focus on important nodes, edges, and time steps when performing DTW. 3) A federated optimization strategy that alternates between local graph DTW updates and global model aggregation. 4) A clustering module that groups clients with similar graph dynamics to enable more effective knowledge transfer. The local models use graph neural networks augmented with our graph-DTW layers. During training, clients perform local updates using their private graph data. The server then clusters clients and performs aggregation within each cluster using our hierarchical attention mechanism.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use DYNGRAPH2VEC and JODIE datasets for dynamic graph classification. Preprocess the data to create non-IID distributions across simulated clients by varying temporal dynamics and graph structures.</p><p><strong>Step 2: Model Implementation</strong></p><p>Implement the Graph-DTW-Fed model using PyTorch Geometric for graph neural networks and tslearn for DTW operations. The model should include: (a) A graph neural network backbone (e.g., GCN or GAT), (b) A graph-aware DTW layer, (c) A hierarchical attention mechanism, and (d) A clustering module.</p><p><strong>Step 3: Federated Learning Setup</strong></p><p>Implement the federated learning framework using PySyft or FedML libraries. Set up a central server and multiple client nodes. Implement the federated optimization strategy that alternates between local updates and global aggregation.</p><p><strong>Step 4: Baseline Implementation</strong></p><p>Implement baseline methods for comparison: (a) Federated GNN with FedAvg, (b) Centralized GNN, (c) Local GNN training without federation.</p><p><strong>Step 5: Hyperparameter Tuning</strong></p><p>Perform grid search for key hyperparameters: learning rate, number of GNN layers, DTW window size, number of client clusters, and local update steps per round.</p><p><strong>Step 6: Training and Evaluation</strong></p><p>Train the Graph-DTW-Fed model and baselines for multiple federated rounds. Evaluate performance using classification accuracy, F1 score, and communication efficiency (measured by the number of rounds to convergence).</p><p><strong>Step 7: Ablation Studies</strong></p><p>Conduct ablation studies to analyze the impact of each component: (a) Graph-DTW layer, (b) Hierarchical attention mechanism, (c) Client clustering.</p><p><strong>Step 8: Non-IID Analysis</strong></p><p>Analyze how performance varies with different levels of graph structural differences and temporal misalignment between clients.</p><p><strong>Step 9: Visualization</strong></p><p>Create visualizations of learned DTW alignments and attention weights to provide insights into the model's behavior.</p><p><strong>Step 10: Results Compilation and Analysis</strong></p><p>Compile all results, generate plots, and perform statistical tests to compare Graph-DTW-Fed with baselines.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Input (Federated GNN with FedAvg)</strong></p><p>A set of dynamic graphs from the JODIE dataset distributed across 10 clients, with varying temporal dynamics.</p><p><strong>Baseline Expected Output (Federated GNN with FedAvg)</strong></p><p>Classification accuracy: 75%, F1 score: 0.73, Convergence: 100 rounds</p><p><strong>Proposed Method Input (Graph-DTW-Fed)</strong></p><p>The same set of dynamic graphs from the JODIE dataset distributed across 10 clients.</p><p><strong>Proposed Method Expected Output (Graph-DTW-Fed)</strong></p><p>Classification accuracy: 82%, F1 score: 0.80, Convergence: 80 rounds</p><p><strong>Explanation</strong></p><p>Graph-DTW-Fed outperforms the baseline by better aligning temporal sequences across clients and focusing on important graph elements, leading to improved accuracy, F1 score, and faster convergence.</p>
+<h3>Fallback Plan</h3>
+<p>If Graph-DTW-Fed does not significantly outperform baselines, we can pivot the project to an in-depth analysis of why DTW and hierarchical attention do not improve federated graph learning as expected. We can investigate the learned DTW alignments and attention weights to understand if they are capturing meaningful patterns. Additionally, we can explore alternative time series alignment techniques or graph representation methods that might be more suitable for federated learning scenarios. Another direction could be to analyze how different types of non-IID distributions affect federated graph learning performance, which could provide valuable insights for future research in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/a85c45ce7c893388e8eafa8a653b042e1497db48" target="_blank">Cross-Node Federated Graph Neural Network for Spatio-Temporal Data Modeling</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b32aab492727412e73185b45fa8c166b1c080b33" target="_blank">Optimizing Federated Graph Learning with Inherent Structural Knowledge and Dual-Densely Connected GNNs</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a56609e82d466abb700cd0369e8c26fe8a173e32" target="_blank">S2FGL: Spatial Spectral Federated Graph Learning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b9352582346d7205c708766fb19a6c1d4f317bda" target="_blank">FedSA-GCL: A Semi-Asynchronous Federated Graph Learning Framework with Personalized Aggregation and Cluster-Aware Broadcasting</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7cbd1434f4346359cdaad8f0cf606cd2fedbca35" target="_blank">Learning to Collaborate Over Graphs: A Selective Federated Multi-Task Learning Approach</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/33f036f3dc345b1f09e24e781e58869005e3bcf9" target="_blank">FL-AGCNS: Federated Learning Framework for Automatic Graph Convolutional Network Search</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5458d45895ae767b5fd6248612b7abbfd1f1e39e" target="_blank">Privacy-Preserving Federated Graph Neural Network Learning on Non-IID Graph Data</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0436dcacc8809c6e277299b97519339f592116ba" target="_blank">Federated Learning with Graph-Based Aggregation for Traffic Forecasting</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/26d353c131d58a9b92b4877bac49c81df643a3a8" target="_blank">AdaFGL: A New Paradigm for Federated Node Classification with Topology Heterogeneity</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/06bc35120d2775bb4c26d6fd1ba68d1befcd84cb" target="_blank">An Efficient Framework for Clustered Federated Learning</a> (2020)
+</li>
+</ol>
+</section>
+</body></html>

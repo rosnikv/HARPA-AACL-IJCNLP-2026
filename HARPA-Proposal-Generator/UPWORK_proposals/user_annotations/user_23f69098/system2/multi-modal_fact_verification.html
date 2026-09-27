@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>45653ad43124f02dc2cf2db3357be1d1d78ddb18</p>
+<hr>
+<section><h2>Title</h2>
+<p>Multi-Modal Fact Verification: Integrating Text, Image, and Audio for Robust Misinformation Detection</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current fact verification systems primarily rely on textual information, but many claims involve visual or auditory elements that are challenging to verify using text alone. This limitation hinders the effectiveness of fact-checking in real-world scenarios where misinformation often combines multiple modalities.</p>
+<h3>Motivation</h3>
+<p>Existing benchmarks like FEVER and FEVEROUS focus on text-based fact-checking, while some work has been done on image-text fact verification. However, comprehensive multi-modal fact-checking remains largely unexplored. Real-world misinformation often combines text, images, and audio, making a system that can integrate and reason across multiple modalities more robust and applicable to real-world scenarios. By leveraging the strengths of large language models in processing and reasoning across different modalities, we aim to create a more effective fact verification system.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a Multi-Modal Fact Verification (MMFV) framework that fuses information from text, images, and audio to verify claims. The system consists of three main components: (1) A multi-modal encoder that processes text, images, and audio separately using pre-trained models (e.g., BERT for text, ViT for images, Wav2Vec for audio) and then fuses the representations. (2) A cross-modal attention mechanism that allows each modality to attend to relevant information in other modalities. (3) A verification head that takes the fused representation and predicts the veracity of the claim. We will use a large language model (LLM) as the backbone for our system, leveraging its ability to process and reason across different modalities through prompting.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Creation</strong></p><p>Create a new Multi-Modal Fact Verification dataset by collecting claims from social media that involve text, images, and/or audio. Annotate these claims for veracity (true, false, or partially true). Aim for a dataset of at least 1000 multi-modal claims.</p><p><strong>Step 2: Data Preprocessing</strong></p><p>Process the collected data into a format suitable for LLM input. For text, use standard tokenization. For images, use CLIP to generate image embeddings. For audio, use Wav2Vec to generate audio embeddings. Store these preprocessed inputs alongside the original data.</p><p><strong>Step 3: Baseline Models</strong></p><p>Implement three baseline models: (1) Text-only model using GPT-3.5, (2) Image-text model using CLIP + GPT-3.5, (3) Simple concatenation of all modalities using GPT-3.5.</p><p><strong>Step 4: MMFV Model Implementation</strong></p><p>Implement the MMFV model using GPT-4 as the backbone. Create prompts that instruct the model to consider all available modalities and their interactions. Use few-shot examples in the prompt to guide the model.</p><p><strong>Step 5: Training and Evaluation</strong></p><p>Split the dataset into train, validation, and test sets. Use the train set for few-shot prompting. Evaluate all models on the test set using accuracy, F1 score, and a new 'cross-modal consistency' metric that measures how well the system's predictions align across different modalities for the same claim.</p><p><strong>Step 6: Analysis</strong></p><p>Perform error analysis to identify strengths and weaknesses of the MMFV model compared to baselines. Analyze performance across different types of claims and modality combinations.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Text-only)</strong></p><p>Claim: The video shows a politician giving a speech about climate change. Verify if this claim is true or false.</p><p><strong>Baseline Prompt Expected Output (Text-only)</strong></p><p>I'm sorry, but I cannot verify the claim based solely on the text provided. To accurately verify if the video shows a politician giving a speech about climate change, I would need to see the video itself or have more detailed information about its content.</p><p><strong>Proposed Prompt Input (MMFV)</strong></p><p>Claim: The video shows a politician giving a speech about climate change. [IMAGE_EMBEDDING] [AUDIO_EMBEDDING] Analyze the text, image, and audio to verify if this claim is true or false.</p><p><strong>Proposed Prompt Expected Output (MMFV)</strong></p><p>After analyzing the provided text, image embedding, and audio embedding, I can verify that the claim is true. The image embedding shows a person standing at a podium, which is consistent with giving a speech. The audio embedding contains patterns typical of human speech. The content of the speech, as evidenced by the audio analysis, includes keywords related to climate change such as 'global warming', 'emissions', and 'renewable energy'. Therefore, based on the multi-modal evidence, I conclude that the video indeed shows a politician giving a speech about climate change.</p><p><strong>Explanation</strong></p><p>The MMFV model successfully integrates information from all three modalities to verify the claim, while the text-only baseline is unable to make a determination due to lack of visual and auditory information.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed MMFV method doesn't significantly outperform the baselines, we can pivot to an analysis paper exploring the challenges of multi-modal fact verification. We would conduct ablation studies to understand the contribution of each modality and the effectiveness of different fusion techniques. We could also investigate cases where multi-modal information leads to incorrect conclusions, analyzing whether this is due to limitations in the model's reasoning capabilities or inherent ambiguities in multi-modal data. Additionally, we could explore alternative architectures, such as using separate LLMs for each modality and then combining their outputs, or fine-tuning smaller open-source models on our dataset to compare with the prompting-based approach.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/579a0b9fae3adf0e18aaf155640db87f09783930" target="_blank">Reinforcement Retrieval Leveraging Fine-grained Feedback for Fact Checking News Claims with Black-Box LLM</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/77bed54f6769eeaa153a617c4ca73941558f7c51" target="_blank">Debating Truth: Debate-driven Claim Verification with Multiple Large Language Model Agents</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/792f5bf93d5e43b51a3f9ad4c1bb5af48bd69b2e" target="_blank">Improving Large-Scale Fact-Checking using Decomposable Attention Models and Lexical Tagging</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/974f0e1a85c1ece2555718342ff2abb6bcb6a825" target="_blank">KG-GPT: A General Framework for Reasoning on Knowledge Graphs Using Large Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/98bb75dcb7dfe8e675781fe2008170e8f00a5dee" target="_blank">FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e03dc5bd72bea7d1db03de380d4c43b7e610fbee" target="_blank">Evaluating Verifiability in Generative Search Engines</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2eceee276d64f134890c5be1242ca1fbc24df476" target="_blank">FACTORY: A Challenging Human-Verified Prompt Set for Long-Form Factuality</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c6c4aa461e42cd9a370e6799501489a1df2c1d2b" target="_blank">If We May De-Presuppose: Robustly Verifying Claims through Presupposition-Free Question Decomposition</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7a5b44ea10a51708e18786595c8d70b18950da11" target="_blank">FacTool: Factuality Detection in Generative AI - A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18" target="_blank">Language Models Hallucinate, but May Excel at Fact Verification</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

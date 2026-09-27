@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>ffdbd7f0b03b85747b001b4734d5ee31b5229aa4</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating Hierarchical Prompt Tuning with Domain-specific Semantic Features for improved text classification.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Combining Hierarchical Prompt Tuning with Domain-specific Semantic Features will improve the accuracy and recall of language models in medical and legal text classification tasks compared to using either method alone.</p>
+<h3>Motivation</h3>
+<p>Existing methods for integrating domain-specific semantic knowledge into prompt tuning have primarily focused on either embedding knowledge directly into prompts or using external knowledge bases. However, these approaches often overlook the potential of combining hierarchical prompt tuning (HPT) with domain-specific semantic features to enhance the performance of language models in specialized domains like medical and legal. This gap is significant because hierarchical structures can capture complex relationships and nuances within domain-specific data, which are crucial for tasks requiring deep understanding and precise information retrieval. No prior work has extensively tested the combination of HPT with domain-specific semantic features in these contexts, leaving a gap in understanding how these methods can synergistically improve model performance.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Hierarchical Prompt Tuning (HPT) with Domain-specific Semantic Features to enhance language model performance in medical and legal text classification tasks. HPT involves a multi-level prompt structure that captures relationships among key elements, implicit semantics, and task-specific knowledge. By combining this with domain-specific semantic features, which adapt prompts to capture domain-specific patterns, the model can better understand and classify complex texts. This approach addresses the gap in existing research by leveraging the strengths of both methods to improve accuracy and recall. The expected outcome is a more nuanced understanding of domain-specific texts, leading to improved classification performance. This hypothesis will be tested using datasets from medical and legal domains, with accuracy and recall as primary metrics. The integration of these methods is expected to provide a comprehensive framework for handling complex domain-specific tasks, offering a novel approach that has not been extensively explored in prior work.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/3ad899df69a4d10d99e9e9bce9f194542847f156">Hierarchical Prompt Tuning (HPT)</a>: HPT utilizes a multi-level prompt structure to capture relationships among key elements, implicit semantics, and task-specific knowledge. It involves designing low-level prompts for relationships, high-level prompts for implicit semantics, and global-level prompts for task-specific knowledge. This method enhances the model's ability to understand complex relationships and long-term dependencies, which are crucial for tasks requiring deep reasoning. HPT is selected for its ability to model structured knowledge, making it particularly relevant for domains like medical and legal where such structures are prevalent.</p>
+<p><a href="https://www.semanticscholar.org/paper/0f8991ab48aabfd1ce8f036873e835b6827897e9">Domain-specific Semantic Features</a>: This involves adapting prompts to capture domain-specific semantic patterns while maintaining general language capabilities. Implementation includes designing prompts that reflect domain-specific terminology and concepts, and fine-tuning the language model to align with these prompts. This approach enhances the model's ability to generalize across different tasks within the domain, providing an efficient solution for complex domain-specific tasks. The success of this method relies on the careful design and tuning of prompts to accurately represent domain knowledge, providing a robust framework for task completion.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating Hierarchical Prompt Tuning (HPT) with Domain-specific Semantic Features to enhance language model performance in medical and legal text classification tasks. The process begins with designing a multi-level prompt structure for HPT, where low-level prompts capture relationships among key elements, high-level prompts derive implicit semantics, and global-level prompts incorporate task-specific knowledge. These prompts are then combined with domain-specific semantic features, which adapt prompts to capture domain-specific terminology and concepts. The integration involves aligning the outputs of HPT with domain-specific prompts, ensuring that the model can leverage both structured and semantic knowledge effectively. The implementation requires building a relationship-guided attention module to model correspondences among entities and attributes, integrating these into the text encoder. Cross-level self-attention is used to handle complex relationships, allowing for a comprehensive understanding of the domain. The final model is evaluated on medical and legal text classification tasks, with accuracy and recall as primary metrics. The expected outcome is an improved ability to classify complex texts, leveraging the strengths of both HPT and domain-specific semantic features.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that 'Combining Hierarchical Prompt Tuning with Domain-specific Semantic Features will improve the accuracy and recall of language models in medical and legal text classification tasks compared to using either method alone.' This experiment will involve creating three different approaches to prompt tuning for text classification and comparing their performance.</p></p>
+<p><p>The experiment should include the following components:</p></p>
+<p><ol>
+<li>EXPERIMENT SETUP:</li>
+<li>Create a global variable PILOT_MODE that can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'</li>
+<li>For MINI_PILOT: Use 10 examples from each domain (medical and legal) from the training set</li>
+<li>For PILOT: Use 200 examples from each domain from the training set for training, and 50 examples from the validation set for evaluation</li>
+<li>For FULL_EXPERIMENT: Use the complete datasets with proper train/validation/test splits</li>
+<li>The experiment should first run in MINI_PILOT mode, then PILOT mode if successful, but stop before FULL_EXPERIMENT (which will require manual verification and approval)</li>
+</ol></p>
+<p><ol>
+<li>DATASETS:</li>
+<li>Medical text classification dataset: Use the MedNLI dataset (medical natural language inference) or MIMIC-III clinical notes classification</li>
+<li>Legal text classification dataset: Use the LEDGAR dataset (legal document categorization) or LexGLUE benchmark</li>
+<li>For each dataset, preprocess the text and split into train/validation/test sets (80/10/10 split)</li>
+</ol></p>
+<p><ol>
+<li>BASELINE MODELS:</li>
+<li>Baseline 1: Standard prompt tuning with a pretrained language model (e.g., T5, BERT, or RoBERTa)</li>
+<li>Baseline 2: Hierarchical Prompt Tuning (HPT) only</li>
+<li>Baseline 3: Domain-specific Semantic Features only</li>
+<li>Experimental: Combined Hierarchical Prompt Tuning with Domain-specific Semantic Features</li>
+</ol></p>
+<p><ol>
+<li>HIERARCHICAL PROMPT TUNING MODULE:</li>
+<li>Implement a multi-level prompt structure with:<br />
+     a) Low-level prompts: Design prompts that capture relationships among key elements in the text<br />
+     b) High-level prompts: Design prompts that derive implicit semantics from the text<br />
+     c) Global-level prompts: Design prompts that incorporate task-specific knowledge</li>
+<li>Implement a relationship-guided attention module to model correspondences among entities and attributes</li>
+<li>Implement cross-level self-attention to handle complex relationships</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>DOMAIN-SPECIFIC SEMANTIC FEATURES MODULE:</li>
+<li>Create domain-specific vocabulary lists for medical and legal domains</li>
+<li>Design prompts that reflect domain-specific terminology and concepts</li>
+<li>Implement a mechanism to adapt prompts to capture domain-specific semantic patterns</li>
+<li>Fine-tune the language model to align with these domain-specific prompts</li>
+</ol></p>
+<p><ol>
+<li>INTEGRATION MODULE:</li>
+<li>Combine the outputs of HPT with domain-specific prompts</li>
+<li>Align the structured knowledge from HPT with the semantic knowledge from domain-specific features</li>
+<li>Implement a fusion mechanism that leverages both types of knowledge effectively</li>
+</ol></p>
+<p><ol>
+<li>TRAINING PROCEDURE:</li>
+<li>For each model (baselines and experimental):<br />
+     a) Initialize with a pretrained language model<br />
+     b) Fine-tune on the training set with appropriate hyperparameters<br />
+     c) Use validation set for hyperparameter tuning and early stopping<br />
+     d) Evaluate on the test set</li>
+</ol></p>
+<p><ol>
+<li>EVALUATION:</li>
+<li>Calculate the following metrics for each model on both domains:<br />
+     a) Accuracy<br />
+     b) Recall (per class and macro-averaged)<br />
+     c) Precision (per class and macro-averaged)<br />
+     d) F1-score (per class and macro-averaged)</li>
+<li>Perform statistical significance testing (bootstrap resampling) to compare the experimental model against each baseline</li>
+<li>Generate confusion matrices for each model</li>
+<li>Analyze performance differences across different categories/classes</li>
+</ol></p>
+<p><ol>
+<li>REPORTING:</li>
+<li>Generate tables comparing all metrics across all models for both domains</li>
+<li>Create visualizations showing performance differences</li>
+<li>Provide detailed analysis of where the combined approach performs better or worse than individual approaches</li>
+<li>Include examples of correctly and incorrectly classified instances for each model</li>
+</ol></p>
+<p><p>The experiment should be implemented in a modular way, with separate components for data loading, model implementation, training, evaluation, and reporting. All code should be well-documented and include appropriate error handling.</p></p>
+<p><p>Please start by implementing the MINI_PILOT version to verify that all components work correctly, then proceed to the PILOT version if successful. The FULL_EXPERIMENT version will be run manually after reviewing the PILOT results.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4">Paper 0: The Power of Scale for Parameter-Efficient Prompt Tuning</a> (4242 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/7613e3b52b5a66f0e229320d1b632a22883a3583">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/d85e272528ef12b12e62c2a776b54795adb84e76">Paper 2</a>. The analysis reveals a progression from the source paper's introduction of prompt tuning to more advanced methods like SK-Tuning, which incorporates semantic knowledge for improved performance. The subsequent paper explores prompt engineering in a different domain, indicating the versatility of prompt-based methods. However, there is a gap in exploring how semantic knowledge can be systematically integrated into prompt tuning across various domains without relying on domain-specific optimizations. Addressing this gap could advance the field by providing a more generalized approach to parameter-efficient tuning.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4" target="_blank">The Power of Scale for Parameter-Efficient Prompt Tuning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/7613e3b52b5a66f0e229320d1b632a22883a3583" target="_blank">Parameter-efficient fine-tuning of large language models using semantic knowledge tuning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/d85e272528ef12b12e62c2a776b54795adb84e76" target="_blank">Optimizing GPT for Video Understanding: Zero-Shot Performance and Prompt Engineering</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/b0ab55bf67e98a18d4f7ace7a1cf8479dce2f7e8" target="_blank">Alleviating the medical strain: a triage method via cross-domain text classification</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/0f8991ab48aabfd1ce8f036873e835b6827897e9" target="_blank">Construction of a Tibetan Medicine Typical Disease Knowledge Graph</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/ea65fa15105dd701a7fc836f8910ca028732746f" target="_blank">A Comprehensive Framework for Reliable Legal AI: Combining Specialized Expert Systems and Adaptive Refinement</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/1dc382f81ea304b185f54bb723e707911e9d5857" target="_blank">An overview of domain-specific foundation model: key technologies, applications and challenges</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/f892e58beec68f8fd0a13a9b63233b1ccec43f2c" target="_blank">Semantic-enhanced Co-attention Prompt Learning for Non-overlapping Cross-Domain Recommendation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/6aba7a1246dbc9c9d468fdd9d94cab545c2ba9c7" target="_blank">Adapting Knowledge Prompt Tuning for Enhanced Automated Program Repair</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/a26623d52d24e03044a158cddad931ec5ab7304c" target="_blank">A Survey of Knowledge Enhanced Pre-Trained Language Models</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/a5843a1fe01e3020d8609e1a681b8374d1ea369b" target="_blank">BayesPrompt: Prompting Large-Scale Pre-Trained Language Models on Few-shot Inference via Debiased Domain Abstraction</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/3ad899df69a4d10d99e9e9bce9f194542847f156" target="_blank">Learning Hierarchical Prompt with Structured Linguistic Knowledge for Vision-Language Models</a> (2023)</li>
+</ol>
+</body>
+</html>

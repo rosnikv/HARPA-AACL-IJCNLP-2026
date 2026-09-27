@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3eedfc92689a99f468c562e41e8b7ee6e19e673d</p>
+<hr>
+<section><h2>Title</h2>
+<p>HiGRL: Hierarchical Graph Reinforcement Learning for Dynamic Job Shop Scheduling</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current approaches to dynamic job shop scheduling often struggle to adapt to real-time changes in the production environment, such as machine breakdowns, rush orders, or varying processing times. Existing methods lack the ability to make globally optimal decisions while considering local constraints and dynamic factors simultaneously.</p>
+<h3>Motivation</h3>
+<p>Traditional heuristics and meta-heuristics, as well as recent deep reinforcement learning approaches, often fail to capture the hierarchical nature of the job shop scheduling problem and struggle with scalability to large, dynamic environments. By decomposing the problem into hierarchical levels and leveraging graph neural networks to capture complex relationships between jobs and machines, we can develop a more flexible and scalable approach to dynamic job shop scheduling that can adapt to real-time changes while maintaining global optimization objectives.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a Hierarchical Graph-based Reinforcement Learning (HiGRL) framework for dynamic job shop scheduling. The framework consists of three levels: (1) A high-level policy network that makes global decisions on job prioritization and resource allocation using a graph attention network to process the entire factory state. (2) A mid-level policy network that handles scheduling decisions for individual work centers, using localized graph convolutions to process subgraphs of related jobs and machines. (3) A low-level execution module that handles real-time adjustments and rescheduling in response to disruptions. The framework uses a novel hierarchical action space that allows for both coarse-grained and fine-grained decision-making. We introduce a dynamic graph structure that can be updated in real-time to reflect changes in the environment, such as new job arrivals or machine breakdowns. The learning process utilizes a multi-objective reward function that balances makespan, tardiness, and stability of schedules.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Prepare the benchmark datasets: (a) Taillard instances for static job shop scheduling. (b) Create dynamic scenarios by introducing random disruptions (e.g., machine breakdowns, new job arrivals) to the Taillard instances. (c) Implement a simulation environment that can handle these dynamic scenarios.</p><p><strong>Step 2: Implement Baseline Methods</strong></p><p>Implement state-of-the-art methods for comparison: (a) Traditional heuristics: Shortest Processing Time (SPT), Earliest Due Date (EDD). (b) Meta-heuristics: Genetic Algorithm (GA), Simulated Annealing (SA). (c) Deep Reinforcement Learning: Graph Attention Network (GAT) based RL.</p><p><strong>Step 3: Implement HiGRL Framework</strong></p><p>(a) Implement the high-level policy network using a graph attention network. (b) Implement the mid-level policy network using graph convolutions for local decision making. (c) Implement the low-level execution module for real-time adjustments. (d) Design the hierarchical action space and state representation. (e) Implement the dynamic graph structure update mechanism.</p><p><strong>Step 4: Design Reward Function</strong></p><p>Implement a multi-objective reward function that considers: (a) Makespan minimization. (b) Tardiness minimization. (c) Schedule stability (penalize frequent changes).</p><p><strong>Step 5: Training Process</strong></p><p>(a) Implement curriculum learning by gradually increasing the complexity of scheduling scenarios. (b) Train the HiGRL model using the dynamic scenarios created in Step 1. (c) Use Proximal Policy Optimization (PPO) as the RL algorithm for training.</p><p><strong>Step 6: Evaluation</strong></p><p>(a) Evaluate HiGRL and baseline methods on both static Taillard instances and dynamic scenarios. (b) Measure performance using metrics: makespan, tardiness, robustness to disruptions (stability), and computational efficiency. (c) Conduct statistical significance tests to compare HiGRL with baselines.</p><p><strong>Step 7: Ablation Studies</strong></p><p>(a) Evaluate the contribution of each component in the hierarchical framework. (b) Compare different graph neural network architectures for the policy networks. (c) Analyze the impact of the curriculum learning approach on performance.</p><p><strong>Step 8: Visualization and Analysis</strong></p><p>(a) Visualize the learned policies and decision-making process. (b) Analyze how HiGRL adapts to different types of disruptions. (c) Investigate the scalability of HiGRL to larger problem instances.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Method (SPT) Input</strong></p><p>Job shop with 5 machines and 10 jobs, each job has 5 operations. Processing times and machine assignments are given. A machine breakdown occurs on machine 3 after 50% of the schedule is executed.</p><p><strong>Baseline Method (SPT) Expected Output</strong></p><p>A schedule that prioritizes jobs with shorter processing times. When machine 3 breaks down, it simply delays all subsequent operations on that machine, leading to increased makespan and tardiness.</p><p><strong>Proposed Method (HiGRL) Input</strong></p><p>Same input as the baseline method.</p><p><strong>Proposed Method (HiGRL) Expected Output</strong></p><p>HiGRL generates an initial schedule considering global objectives. When machine 3 breaks down, the high-level policy network reassesses job priorities, the mid-level network redistributes operations to other machines where possible, and the low-level execution module makes real-time adjustments to minimize the impact on makespan and tardiness.</p><p><strong>Explanation</strong></p><p>HiGRL outperforms SPT by considering the global state of the shop floor and adapting dynamically to the machine breakdown. It can redistribute workload and adjust priorities in real-time, leading to better overall performance in terms of makespan and tardiness.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed HiGRL method doesn't meet the success criteria, we can pursue several alternative directions. First, we can conduct a detailed analysis of the decision-making process at each level of the hierarchy to identify bottlenecks or inefficiencies. This could involve visualizing attention weights in the graph neural networks to understand what information the model is prioritizing. Second, we can explore hybrid approaches that combine HiGRL with traditional heuristics, using the heuristics to guide the exploration during reinforcement learning. Third, we can investigate more sophisticated reward shaping techniques or alternative RL algorithms like Soft Actor-Critic for improved stability. If these approaches don't yield significant improvements, we can pivot the project towards an analysis paper, focusing on the challenges of applying hierarchical RL to dynamic scheduling problems. This could include a comprehensive comparison of different graph neural network architectures, an investigation into the impact of different types of disruptions on learning performance, and a study on the scalability limitations of current approaches.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/813af2ec9f1785bec9021f328487ae7dabe1ad4f" target="_blank">Solving Flexible Job-Shop Scheduling Problem with Heterogeneous Graph Neural Network Based on Relation and Deep Reinforcement Learning</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/332cbec25743f36d4de6475d84dcb4211c0c47ef" target="_blank">Deep Reinforcement Learning Based on Graph Neural Networks for Job-shop Scheduling</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/27fac6147325b49638ff08a93cabf176c95e1b08" target="_blank">Dynamic Job-Shop Scheduling via Graph Attention Networks and Deep Reinforcement Learning</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f33ae0a89bef53ad92f1dbdc59f11e2b6eb1165f" target="_blank">Residual Scheduling: A New Reinforcement Learning Approach to Solving Job Shop Scheduling Problem</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1a2da39accfd8045a88e87053f5780d8a4e14454" target="_blank">Dynamic Job-Shop Scheduling Problems Using Graph Neural Network and Deep Reinforcement Learning</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/eaf4bcc91fa73f5ca286c2b47edac1c7ba01f03a" target="_blank">Scheduling for the Flexible Job-Shop Problem with a Dynamic Number of Machines Using Deep Reinforcement Learning</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c22d90514ddc1e8edbf77af6306ade36cd3b20b2" target="_blank">A Reinforcement Learning Control Framework Based on Scalable Graph Transformer for Large-Scale Fuzzy Job Shop Scheduling Problems.</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/011c2e5d7f06d722bedfb321cb89069c9cc6dd6b" target="_blank">Multi-Agent Reinforcement Learning for Distributed Flexible Job Shop Scheduling With Random Job Arrival</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0e568d742ca0670556d396d0db0aa5c147b9ac6c" target="_blank">Multi-Objective Scheduling for Green Flexible Assembly Job-Shop System via Multi-Agent Deep Reinforcement Learning With Game Theory</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b0e9dfec2316a9cb188a31402d5ae9c824358256" target="_blank">Multi-Task Multi-Agent Reinforcement Learning for Real-Time Scheduling of a Dual-Resource Flexible Job Shop with Robots</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

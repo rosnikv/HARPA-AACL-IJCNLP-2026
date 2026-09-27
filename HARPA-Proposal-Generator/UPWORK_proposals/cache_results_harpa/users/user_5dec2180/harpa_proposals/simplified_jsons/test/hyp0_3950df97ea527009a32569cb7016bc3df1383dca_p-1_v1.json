@@ -1,0 +1,157 @@
+{
+  "paper_id": "3950df97ea527009a32569cb7016bc3df1383dca",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Dual-Metric Complexity Evaluation System Implementation",
+      "criteria_met_question": "Does the experiment implement a complexity evaluation system that specifically combines both Littlestone dimension (for measuring structural complexity/decision points) and information entropy (for measuring instance-level uncertainty) metrics?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Adaptive Reasoning Strategy Implementation",
+      "criteria_met_question": "Does the experiment implement a mechanism that dynamically adjusts reasoning strategies (switching between inductive and deductive reasoning) based on the complexity metrics provided by the dual-metric system?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Static Reasoning Baseline - Inductive",
+      "criteria_met_question": "Does the experiment implement a baseline that uses only static inductive reasoning strategies (without adaptation based on complexity metrics) for comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Static Reasoning Baseline - Deductive",
+      "criteria_met_question": "Does the experiment implement a baseline that uses only static deductive reasoning strategies (without adaptation based on complexity metrics) for comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Static Reasoning Baseline - Random Selection",
+      "criteria_met_question": "Does the experiment implement a baseline that randomly selects between inductive and deductive reasoning (without adaptation based on complexity metrics) for comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "AIW Benchmark Evaluation",
+      "criteria_met_question": "Does the experiment evaluate all models (adaptive and baseline) on the AIW benchmark dataset for complex reasoning tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "MR-GSM8K Benchmark Evaluation",
+      "criteria_met_question": "Does the experiment evaluate all models (adaptive and baseline) on the MR-GSM8K benchmark dataset for complex reasoning tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Accuracy Measurement - Exact Match",
+      "criteria_met_question": "Does the experiment measure and report exact match accuracy for all models on both benchmarks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Accuracy Measurement - Numerical Answer",
+      "criteria_met_question": "Does the experiment measure and report numerical answer accuracy for all models on both benchmarks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Efficiency Measurement - Token Usage",
+      "criteria_met_question": "Does the experiment measure and report the total tokens used per question and average tokens per correct answer for all models?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Efficiency Measurement - Reasoning Steps",
+      "criteria_met_question": "Does the experiment measure and report the number of reasoning steps required for all models?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance testing to determine if the differences in performance between the adaptive reasoning approach and the baseline approaches are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Reinforcement Learning Framework Integration",
+      "criteria_met_question": "Does the experiment integrate a reinforcement learning framework to train models to optimize reasoning paths based on complexity assessments?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Reasoning Path Analysis",
+      "criteria_met_question": "Does the experiment include qualitative analysis of reasoning paths to assess the effectiveness of the adaptive strategies compared to static strategies?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Complexity-Performance Correlation Analysis",
+      "criteria_met_question": "Does the experiment analyze the correlation between task complexity (as measured by the dual metrics) and model performance to validate the effectiveness of the complexity assessment?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study - Single Metric vs. Dual Metric",
+      "criteria_met_question": "Does the experiment include an ablation study comparing the performance of systems using only Littlestone dimension, only information entropy, and the combined dual-metric approach?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment include multiple runs (at least 3) with different random seeds to ensure statistical confidence in the results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Task Difficulty Stratification",
+      "criteria_met_question": "Does the experiment stratify results by task difficulty to show how the adaptive approach performs differently across easy, medium, and difficult problems?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis by Reasoning Type",
+      "criteria_met_question": "Does the experiment include an analysis of errors categorized by reasoning type (inductive vs. deductive) to identify which types of problems benefit most from the adaptive approach?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Resource Analysis",
+      "criteria_met_question": "Does the experiment analyze and report the computational resources (e.g., GPU hours, memory usage) required for the adaptive approach compared to the baselines?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of Reasoning Paths",
+      "criteria_met_question": "Does the experiment include visualizations of reasoning paths for different approaches to illustrate how the adaptive strategy changes reasoning based on complexity?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Generalization to Unseen Tasks",
+      "criteria_met_question": "Does the experiment evaluate how well the adaptive reasoning approach generalizes to unseen task types or domains not included in the training data?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Human Evaluation of Reasoning Quality",
+      "criteria_met_question": "Does the experiment include human evaluation of the quality and interpretability of reasoning paths generated by the adaptive approach compared to baselines?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Threshold Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment analyze how sensitive the adaptive approach is to different thresholds for switching between reasoning strategies?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrating dual-metric complexity evaluation with adaptive reasoning for improved accuracy and efficiency.",
+    "research_idea_hypothesis": "Integrating a dual-metric complexity evaluation system that combines Littlestone dimension and information entropy with adaptive reasoning strategies will significantly improve both accuracy and efficiency in complex reasoning tasks compared to static reasoning strategies.",
+    "description": "The research explores the integration of a dual-metric complexity evaluation system with adaptive reasoning strategies to enhance the performance of question-answering systems on complex reasoning tasks. The dual-metric system assesses task complexity using Littlestone dimension and information entropy, providing a comprehensive view of both structural and instance complexity. This system guides the dynamic adjustment of reasoning strategies, allowing models to switch between inductive and deductive reasoning as needed. The hypothesis posits that this integration will lead to significant improvements in both accuracy and efficiency compared to static reasoning strategies. The expected outcome is a more adaptable reasoning process that optimizes computational resources while maintaining high performance across varied task complexities. This approach addresses gaps in existing research by providing a novel combination of complexity assessment and dynamic reasoning adjustments, offering a more nuanced understanding of task difficulty and enabling more effective reasoning pathways.",
+    "research_gap": "Existing methods for reasoning in question-answering systems often rely on static or semi-static reasoning strategies that do not fully leverage task complexity metrics like Littlestone dimension and information entropy. While some approaches dynamically adjust reasoning strategies, they often do not integrate these metrics comprehensively to guide reasoning adjustments. This gap is crucial because it limits the ability of models to optimize reasoning pathways based on both structural and instance complexity, potentially leading to suboptimal performance on complex tasks. Our hypothesis addresses this by proposing a novel integration of a dual-metric complexity evaluation system with adaptive reasoning strategies, which has not been extensively tested in prior work.",
+    "research_idea_variables": "[Dual-Metric Complexity Evaluation System](https://www.semanticscholar.org/paper/a3c65d490f635b4ad0675f52d67e08fa45fc30d3): This system combines Littlestone dimension and information entropy to assess task complexity. It evaluates structural complexity using the Littlestone dimension, which measures decision points or branching factors, and instance complexity using information entropy, which quantifies uncertainty in reasoning steps. This dual-metric approach guides the decomposition strategy, allowing for adaptive reasoning adjustments. The system is implemented within the De-In-Ductive framework and is compatible with models that handle both inductive and deductive reasoning processes. It is expected to enhance reasoning performance by providing a comprehensive assessment of task difficulty, enabling more precise adjustments to reasoning strategies.\n\n[Adaptive Reasoning Strategies](https://www.semanticscholar.org/paper/a3c65d490f635b4ad0675f52d67e08fa45fc30d3): Adaptive reasoning strategies involve dynamically adjusting the reasoning process based on task complexity metrics. This approach uses the dual-metric system to control reasoning chain length and decomposition granularity, allowing models to switch between inductive and deductive reasoning as needed. The strategies are implemented within reinforcement learning frameworks, where models are trained to optimize reasoning paths based on complexity assessments. This method is expected to improve both accuracy and efficiency by tailoring reasoning processes to the specific demands of each task, reducing unnecessary computation while maintaining high performance.",
+    "Explanation": "The dual-metric complexity evaluation system provides a comprehensive assessment of task difficulty, enabling precise adjustments to reasoning strategies. Littlestone dimension measures structural complexity, while information entropy quantifies instance complexity. Adaptive reasoning strategies dynamically adjust reasoning processes based on these metrics, optimizing computational resources while maintaining high performance. This integration is expected to enhance reasoning accuracy and efficiency by tailoring reasoning processes to the specific demands of each task.",
+    "research_idea_long_description": "The dual-metric system informs the adaptive reasoning strategies by providing complexity metrics that guide the selection of reasoning modes and the extent of reasoning steps. For example, a high Littlestone dimension may trigger a switch to deductive reasoning, while high information entropy may prompt more exploratory reasoning. This synergy ensures that reasoning processes are optimized for each task's complexity, enhancing both accuracy and efficiency.",
+    "research_idea_design_prompt": "The proposed method integrates a dual-metric complexity evaluation system with adaptive reasoning strategies to optimize reasoning processes in question-answering systems. The dual-metric system first assesses task complexity using Littlestone dimension and information entropy, providing a comprehensive view of both structural and instance complexity. This assessment guides the dynamic adjustment of reasoning strategies, allowing models to switch between inductive and deductive reasoning as needed. The implementation involves setting up a reinforcement learning framework where models are trained to optimize reasoning paths based on complexity assessments. The dual-metric system is used to control reasoning chain length and decomposition granularity, enabling more precise adjustments to reasoning strategies. The integration occurs at the reasoning adjustment stage, where the complexity metrics inform the selection of reasoning modes and the extent of reasoning steps. The expected outcome is a more adaptable reasoning process that optimizes computational resources while maintaining high performance across varied task complexities. This approach addresses gaps in existing research by providing a novel combination of complexity assessment and dynamic reasoning adjustments, offering a more nuanced understanding of task difficulty and enabling more effective reasoning pathways.",
+    "research_idea_elements": "Independent variable: Integration of a dual-metric complexity evaluation system (combining Littlestone dimension and information entropy) with adaptive reasoning strategies\n\nDependent variable: Accuracy and efficiency in complex reasoning tasks\n\nComparison groups: Dual-metric adaptive reasoning approach vs. static reasoning strategies\n\nBaseline/control: Static reasoning strategies (pure inductive reasoning, pure deductive reasoning, and random selection between inductive and deductive)\n\nContext/setting: Complex reasoning tasks in question-answering systems\n\nAssumptions: The dual-metric system can accurately assess task complexity; models can effectively switch between inductive and deductive reasoning; complexity metrics can guide appropriate reasoning strategy selection\n\nRelationship type: Causal (the integration 'will significantly improve' the dependent variables)\n\nPopulation: Question-answering systems evaluated on AIW and MR-GSM8K benchmarks\n\nTimeframe: Not specified\n\nMeasurement method: Accuracy metrics (exact match accuracy, numerical answer accuracy) and efficiency metrics (total tokens used per question, average tokens per correct answer, reasoning steps required)",
+    "motivation": "The source paper is [Paper 0: QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering](https://www.semanticscholar.org/paper/3950df97ea527009a32569cb7016bc3df1383dca) (628 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/83c4b8fcef3c214cfae45818a5b4b637372f3083) --> [Paper 2](https://www.semanticscholar.org/paper/ad3dfb2514cb0c899fcb9a14d229ff2a6018892f) --> [Paper 3](https://www.semanticscholar.org/paper/79950179d60ba39a74d5fe2aedc47a57c0bf4c03) --> [Paper 4](https://www.semanticscholar.org/paper/0979695b5d74016e97ab8f306f632114e98bd6d9) --> [Paper 5](https://www.semanticscholar.org/paper/84886c484a0b04029fa8352a19297fd712b2afdc). The progression of research from QA-GNN to UniPCM shows a clear trajectory of improving the integration and reasoning capabilities of language models and knowledge graphs. Each paper builds on the previous by enhancing joint reasoning, pretraining, multi-task learning, and task-aware strategies. However, a gap remains in exploring the dynamic adaptation of reasoning strategies based on the complexity of the question or task. This presents an opportunity to advance the field by developing a model that can dynamically adjust its reasoning approach based on the complexity of the input, potentially improving performance on complex reasoning tasks.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the 'Dual-Metric Adaptive Reasoning' hypothesis, which proposes that integrating a dual-metric complexity evaluation system with adaptive reasoning strategies will significantly improve both accuracy and efficiency in complex reasoning tasks compared to static reasoning strategies.\n\n## EXPERIMENT OVERVIEW\n\nThis experiment will compare two reasoning approaches on complex question-answering tasks:\n1. **Baseline**: A static reasoning approach that uses a fixed strategy (either inductive or deductive) regardless of question complexity\n2. **Experimental**: A dual-metric adaptive reasoning approach that dynamically switches between inductive and deductive reasoning based on complexity metrics\n\n## PILOT MODE SETTINGS\n\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`.\n\n- **MINI_PILOT**: Use 10 questions from each benchmark's training set. Run for quick debugging and verification.\n- **PILOT**: Use 100 questions from each benchmark's training set for training and 50 questions from the validation set for evaluation. This should run in under 2 hours.\n- **FULL_EXPERIMENT**: Use the complete datasets as specified in the detailed instructions below.\n\nStart by running the MINI_PILOT. If successful, proceed to the PILOT mode. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will verify results and manually change to FULL_EXPERIMENT if appropriate).\n\n## DETAILED IMPLEMENTATION INSTRUCTIONS\n\n### 1. Dual-Metric Complexity Evaluation System\n\nImplement a system that evaluates question complexity using two metrics:\n\na) **Littlestone Dimension Approximation**:\n   - Estimate the decision tree depth needed to solve the problem\n   - Analyze the question structure to identify decision points/branching factors\n   - Implement using a heuristic approach that counts logical steps and decision points\n   - Output a normalized score (0-1) representing structural complexity\n\nb) **Information Entropy Calculation**:\n   - Calculate the uncertainty in reasoning steps\n   - Use token-level entropy from an LLM's predictions when processing the question\n   - Implement by measuring the entropy of token distributions at key reasoning points\n   - Output a normalized score (0-1) representing instance complexity\n\nc) **Combined Complexity Score**:\n   - Combine the two metrics using a weighted average: \u03b1*Littlestone + (1-\u03b1)*Entropy\n   - Implement \u03b1 as a tunable hyperparameter (default: 0.5)\n   - Output a final complexity score between 0-1\n\n### 2. Adaptive Reasoning Strategies\n\nImplement a system that dynamically adjusts reasoning strategies based on complexity metrics:\n\na) **Reasoning Mode Selection**:\n   - Implement both inductive (bottom-up) and deductive (top-down) reasoning approaches\n   - Create a selection mechanism that chooses between them based on complexity scores\n   - High Littlestone dimension \u2192 prefer deductive reasoning\n   - High entropy \u2192 prefer more exploratory/inductive reasoning\n\nb) **Reasoning Chain Control**:\n   - Dynamically adjust reasoning chain length based on complexity\n   - Implement decomposition granularity control (how finely to break down problems)\n   - Higher complexity \u2192 more detailed decomposition and longer chains\n\nc) **Reinforcement Learning Framework**:\n   - Implement a simple policy gradient approach to optimize strategy selection\n   - Use accuracy and token efficiency as reward signals\n   - Train the policy to select optimal reasoning strategies based on complexity metrics\n   - In MINI_PILOT and PILOT modes, use a simplified version with fewer training iterations\n\n### 3. Benchmark Datasets\n\nUse the following datasets for evaluation:\n\na) **AIW Benchmark**:\n   - Load the dataset using the existing codeblock\n   - For MINI_PILOT: Use 10 randomly selected questions\n   - For PILOT: Use 100 training questions and 50 validation questions\n   - For FULL_EXPERIMENT: Use the complete dataset as specified in the benchmark\n\nb) **MR-GSM8K Benchmark**:\n   - Load the dataset using the existing codeblock\n   - For MINI_PILOT: Use 10 randomly selected questions\n   - For PILOT: Use 100 training questions and 50 validation questions\n   - For FULL_EXPERIMENT: Use the complete dataset as specified in the benchmark\n\n### 4. Experimental Setup\n\na) **Model Configuration**:\n   - Use GPT-4 as the base language model for all experiments\n   - Implement consistent prompting templates for both baseline and experimental conditions\n   - Set a consistent maximum token limit for all reasoning chains\n\nb) **Baseline Implementation**:\n   - Implement three baseline approaches:\n     1. Pure inductive reasoning (bottom-up)\n     2. Pure deductive reasoning (top-down)\n     3. Random selection between inductive and deductive\n   - Each baseline uses a fixed reasoning strategy regardless of question complexity\n\nc) **Experimental Implementation**:\n   - Implement the dual-metric adaptive reasoning system as described above\n   - Ensure the system dynamically selects reasoning strategies based on complexity metrics\n   - Log all complexity scores, strategy selections, and reasoning chains\n\n### 5. Evaluation Metrics\n\na) **Accuracy Metrics**:\n   - Implement exact match accuracy for both benchmarks\n   - For MR-GSM8K, also implement numerical answer accuracy (allowing for equivalent expressions)\n   - Calculate accuracy for each reasoning strategy and the adaptive approach\n\nb) **Efficiency Metrics**:\n   - Track total tokens used per question\n   - Calculate average tokens per correct answer\n   - Measure reasoning steps required for each approach\n\nc) **Statistical Analysis**:\n   - Implement bootstrap resampling to calculate confidence intervals\n   - Perform significance testing between baseline and experimental approaches\n   - Generate p-values for accuracy and efficiency differences\n\n### 6. Logging and Visualization\n\na) **Detailed Logging**:\n   - Log complexity scores for each question\n   - Record reasoning strategy selections and transitions\n   - Save complete reasoning chains for qualitative analysis\n\nb) **Visualization**:\n   - Generate plots comparing accuracy across complexity levels\n   - Create efficiency comparison charts (tokens vs. accuracy)\n   - Visualize the relationship between complexity metrics and strategy selection\n\nc) **Results Summary**:\n   - Generate a comprehensive results table with all metrics\n   - Include statistical significance indicators\n   - Summarize qualitative findings from reasoning chain analysis\n\n## EXPECTED OUTPUTS\n\n1. Trained dual-metric complexity evaluation system\n2. Trained adaptive reasoning policy\n3. Complete results comparing baseline and experimental approaches\n4. Statistical analysis of performance differences\n5. Visualizations of key metrics and relationships\n6. Sample reasoning chains demonstrating adaptive strategy selection\n\nPlease implement this experiment starting with the MINI_PILOT mode, then proceed to PILOT if successful. The code should be modular, well-documented, and include appropriate error handling.",
+  "core_related_works": [
+    {
+      "title": "The Role of Deductive and Inductive Reasoning in Large Language Models",
+      "paperId": "a3c65d490f635b4ad0675f52d67e08fa45fc30d3",
+      "url": "https://www.semanticscholar.org/paper/a3c65d490f635b4ad0675f52d67e08fa45fc30d3",
+      "year": 2024,
+      "source_variable": "Dual-Metric Complexity Evaluation System",
+      "source_paper_lookup_title": "The Role of Deductive and Inductive Reasoning in Large Language Models"
+    },
+    {
+      "title": "The Role of Deductive and Inductive Reasoning in Large Language Models",
+      "paperId": "a3c65d490f635b4ad0675f52d67e08fa45fc30d3",
+      "url": "https://www.semanticscholar.org/paper/a3c65d490f635b4ad0675f52d67e08fa45fc30d3",
+      "year": 2024,
+      "source_variable": "Adaptive Reasoning Strategies",
+      "source_paper_lookup_title": "The Role of Deductive and Inductive Reasoning in Large Language Models"
+    }
+  ],
+  "references": "1. QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering (2021). Paper ID: 3950df97ea527009a32569cb7016bc3df1383dca\n\n2. JointLK: Joint Reasoning with Language Models and Knowledge Graphs for Commonsense Question Answering (2021). Paper ID: 83c4b8fcef3c214cfae45818a5b4b637372f3083\n\n3. Deep Bidirectional Language-Knowledge Graph Pretraining (2022). Paper ID: ad3dfb2514cb0c899fcb9a14d229ff2a6018892f\n\n4. UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models (2022). Paper ID: 79950179d60ba39a74d5fe2aedc47a57c0bf4c03\n\n5. Task Compass: Scaling Multi-task Pre-training with Task Prefix (2022). Paper ID: 0979695b5d74016e97ab8f306f632114e98bd6d9\n\n6. UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt (2023). Paper ID: 84886c484a0b04029fa8352a19297fd712b2afdc\n\n7. The Role of Deductive and Inductive Reasoning in Large Language Models (2024). Paper ID: a3c65d490f635b4ad0675f52d67e08fa45fc30d3\n\n8. Think or Not? Exploring Thinking Efficiency in Large Reasoning Models via an Information-Theoretic Lens (2024). Paper ID: 4a3e43c146cfeb8a62cd45de25af1ea41cb48b34\n\n9. Dynamic Multistep Reasoning based on Video Scene Graph for Video Question Answering (2022). Paper ID: 0978b1c041e246ae311d2eef0ae8faf72019ea04\n\n10. T2: An Adaptive Test-Time Scaling Strategy for Contextual Question Answering (2025). Paper ID: 8fce39be1351646f2e3df77700d734fbe863f740\n\n11. PATS: Process-Level Adaptive Thinking Mode Switching (2025). Paper ID: ad2dd887283870a50425d208768dd3d56b931885\n\n12. Fast, Slow, and Tool-augmented Thinking for LLMs: A Review (2025). Paper ID: 7bdda23a6e293ff03db8be0a19fa51855e7de51c\n\n13. A Multi-Agent Approach to Neurological Clinical Reasoning (2025). Paper ID: fa74623973b197e439bf46b933512aa14135d7d3"
+}

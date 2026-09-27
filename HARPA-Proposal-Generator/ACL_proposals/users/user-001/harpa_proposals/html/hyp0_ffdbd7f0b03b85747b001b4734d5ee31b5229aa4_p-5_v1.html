@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>ffdbd7f0b03b85747b001b4734d5ee31b5229aa4</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating task-heterogeneous batches with gradient-based prompt optimization for enhanced robustness.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating task-heterogeneous batches with task-rebalancing loss scaling and gradient-based prompt optimization will enhance prompt robustness and transferability in GPT-3 and BERT for sentiment analysis and question answering.</p>
+<h3>Motivation</h3>
+<p>Existing methods for integrating multi-task learning with gradient-based prompt optimization often overlook the specific interaction between task heterogeneity and gradient dynamics. While prior work has explored modular prompt composition and gradient-based optimization separately, there is a lack of research on how task-rebalancing loss scaling can be combined with gradient-based prompt optimization to enhance robustness and transferability. This gap is crucial because understanding this interaction could lead to more stable and effective prompt optimization across diverse tasks, especially in scenarios with varying task difficulties.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research explores the integration of task-heterogeneous batches with task-rebalancing loss scaling and gradient-based prompt optimization to improve prompt robustness and transferability in language models like GPT-3 and BERT. Task-heterogeneous batches ensure diversity in training by including data from multiple tasks, while task-rebalancing loss scaling adjusts the loss contributions based on task difficulty, stabilizing training. This is combined with gradient-based prompt optimization, which uses task loss gradients to refine prompts, enhancing their adaptability across tasks. This combination is expected to improve performance in sentiment analysis and question answering by leveraging the strengths of both approaches. The hypothesis addresses the gap in existing research by focusing on the interaction between task heterogeneity and gradient dynamics, which has not been extensively explored. The expected outcome is improved robustness and transferability of prompts, leading to better performance across tasks. The evaluation will involve comparing the proposed method against traditional prompt optimization techniques using metrics like accuracy and F1-score on benchmark datasets.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/6e8627662e66a797be56f473f9bee76451d5eb48">Task-Heterogeneous Batches with Task-Rebalancing Loss Scaling</a>: This approach involves creating batches with data from multiple tasks and applying task-rebalancing loss scaling to stabilize training. It ensures diversity and adjusts loss contributions based on task difficulty. This method is implemented in frameworks like PyTorch, requiring dynamic adjustment of loss scaling factors. It is selected for its ability to improve training stability and performance across tasks. The expected role is to enhance robustness by leveraging shared knowledge while maintaining task-specific adaptability. It will be assessed using task-specific loss curves to adjust scaling dynamically.</p>
+<p><a href="https://www.semanticscholar.org/paper/26b84d62ceb16c5490bda6a3f3cf5fcda1358a86">Gradient-Based Prompt Optimization</a>: This technique uses task loss gradients to optimize prompts, allowing self-optimization without large language models. It involves calculating gradients over task-specific reasoning to guide prompt adjustments. This method is implemented in frameworks like PyTorch, focusing on reasoning tasks. It is selected for its effectiveness in enhancing prompt robustness and transferability. The expected role is to improve prompt adaptability across tasks by leveraging finer-grained gradient information. It will be assessed using metrics like task accuracy and transferability.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating task-heterogeneous batches with task-rebalancing loss scaling and gradient-based prompt optimization. The process begins by creating task-heterogeneous batches, ensuring each batch contains data from multiple tasks. Task-rebalancing loss scaling is applied to these batches, dynamically adjusting the loss contributions based on task difficulty. This setup is implemented in a deep learning framework like PyTorch, requiring monitoring of task-specific loss curves to adjust scaling factors. Concurrently, gradient-based prompt optimization is employed, where task loss gradients are calculated to refine prompts iteratively. This involves using a framework that supports gradient-based optimization, such as PyTorch, to guide prompt adjustments based on task-specific reasoning. The integration occurs at the training phase, where both methods work synergistically to enhance prompt robustness and transferability. The outputs from task-rebalancing loss scaling inform the gradient-based optimization process, ensuring prompts are optimized for diverse task conditions. The hypothesis will be tested using language models like GPT-3 and BERT on tasks such as sentiment analysis and question answering, with performance evaluated using metrics like accuracy and F1-score. The implementation involves setting up the training pipeline, configuring the models, and executing the training process with the integrated methods. The expected outcome is improved prompt robustness and transferability, leading to better performance across tasks.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating task-heterogeneous batches with task-rebalancing loss scaling and gradient-based prompt optimization will enhance prompt robustness and transferability in language models for sentiment analysis and question answering tasks.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare a novel approach (experimental condition) that integrates task-heterogeneous batches with task-rebalancing loss scaling and gradient-based prompt optimization against a traditional prompt optimization approach (baseline condition). We will evaluate both approaches on sentiment analysis and question answering tasks using BERT models.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. The experiment should default to <code>MINI_PILOT</code> mode.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use 10 examples from each task (sentiment analysis and QA) for training and 10 for evaluation. Run for 5 optimization steps. This should complete in a few minutes and is for code verification only.</li>
+<li><strong>PILOT</strong>: Use 100 examples from each task for training and 50 for evaluation. Run for 20 optimization steps. This should complete in 1-2 hours and is to verify if the approach shows promising results.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the full datasets for both tasks. Run for 100 optimization steps. This is the complete experiment.</li>
+</ul></p>
+<p><p>Run the MINI_PILOT first, then if everything looks good, run the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Datasets</strong></h4>
+<ol>
+<li><strong>Sentiment Analysis</strong>: Use the SST-2 (Stanford Sentiment Treebank) dataset from Hugging Face datasets.</li>
+<li><strong>Question Answering</strong>: Use the SQuAD (Stanford Question Answering Dataset) from Hugging Face datasets.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Models</strong></h4>
+<p>Use BERT-base-uncased from Hugging Face transformers for both tasks.</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Baseline Condition: Traditional Prompt Optimization</strong></h4>
+<ol>
+<li>Create separate dataloaders for sentiment analysis and QA tasks.</li>
+<li>Initialize a set of prompt templates for each task (e.g., "Is the sentiment of this review positive or negative? {text}" for sentiment analysis).</li>
+<li>Implement a simple gradient-based optimization for the prompts without task-heterogeneous batches or task-rebalancing.</li>
+<li>Train the model on each task separately using the optimized prompts.</li>
+<li>Evaluate performance on both tasks using accuracy for sentiment analysis and F1-score for QA.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experimental Condition: Task-Gradient Prompt Integration</strong></h4>
+<ol>
+<li>Create task-heterogeneous batches by combining examples from both sentiment analysis and QA tasks in each batch.</li>
+<li>Implement task-rebalancing loss scaling:</li>
+<li>Calculate task-specific losses for each example in the batch.</li>
+<li>Compute the average loss for each task.</li>
+<li>Dynamically adjust scaling factors based on the relative difficulty of each task (higher loss = higher scaling factor).</li>
+<li>Apply these scaling factors to the task-specific losses before aggregation.</li>
+<li>Implement gradient-based prompt optimization:</li>
+<li>Make prompts trainable by converting them to embeddings.</li>
+<li>Calculate gradients of the loss with respect to the prompt embeddings.</li>
+<li>Update prompts using gradient descent.</li>
+<li>Integrate the task-rebalancing loss scaling with gradient-based prompt optimization:</li>
+<li>Use the rebalanced losses to calculate gradients for prompt optimization.</li>
+<li>Update prompts based on these gradients.</li>
+<li>Train the model on the combined tasks using the integrated approach.</li>
+<li>Evaluate performance on both tasks using accuracy for sentiment analysis and F1-score for QA.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>Compare the performance of the baseline and experimental conditions on both tasks.</li>
+<li>Measure prompt transferability by evaluating prompts optimized on one task on the other task.</li>
+<li>Calculate and report the following metrics:</li>
+<li>Accuracy for sentiment analysis</li>
+<li>F1-score for question answering</li>
+<li>Cross-task performance (using prompts optimized on one task for the other)</li>
+<li>Training stability (loss curves)</li>
+<li>Perform statistical significance testing using bootstrap resampling to determine if the differences between baseline and experimental conditions are significant.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4>
+<ol>
+<li>Set up the PyTorch environment and load the required datasets.</li>
+<li>Implement the baseline prompt optimization approach.</li>
+<li>Implement the task-heterogeneous batching mechanism.</li>
+<li>Implement the task-rebalancing loss scaling module.</li>
+<li>Implement the gradient-based prompt optimization module.</li>
+<li>Integrate all components for the experimental condition.</li>
+<li>Train and evaluate both conditions.</li>
+<li>Compare results and generate visualizations.</li>
+<li>Report findings with appropriate statistical analysis.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output</strong></h4>
+<p>Generate a comprehensive report including:<br />
+1. Experimental setup details<br />
+2. Performance metrics for both conditions on both tasks<br />
+3. Statistical analysis of the results<br />
+4. Visualizations of loss curves and performance metrics<br />
+5. Analysis of prompt transferability<br />
+6. Discussion of findings and implications</p></p>
+<p><p>Ensure all code is well-documented and modular to facilitate future extensions or modifications.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4">Paper 0: The Power of Scale for Parameter-Efficient Prompt Tuning</a> (4242 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/26b84d62ceb16c5490bda6a3f3cf5fcda1358a86">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/d72b83093248d19c410e27d753aa5a13ec1b2060">Paper 2</a>. The progression from the source paper to the related papers highlights the evolution of prompt tuning and optimization techniques. The source paper introduces the concept of prompt tuning with soft prompts, which is further refined by GReaTer through gradient-based optimization, allowing smaller models to perform effective prompt optimization. GREATERPROMPT then unifies these techniques into a comprehensive toolkit, addressing issues of standardization and accessibility. A research idea that advances this field could focus on enhancing the robustness and transferability of prompt optimization techniques across diverse tasks and model architectures, building on the gradient-based optimization approach.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4" target="_blank">The Power of Scale for Parameter-Efficient Prompt Tuning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/26b84d62ceb16c5490bda6a3f3cf5fcda1358a86" target="_blank">GReaTer: Gradients over Reasoning Makes Smaller Language Models Strong Prompt Optimizers</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/d72b83093248d19c410e27d753aa5a13ec1b2060" target="_blank">GREATERPROMPT: A Unified, Customizable, and High-Performing Open-Source Toolkit for Prompt Optimization</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/4acc241c01f048570befe4bfe13297484cfde4d7" target="_blank">Enhancing Few-Shot Transfer Learning with Optimized Multi-Task Prompt Tuning through Modular Prompt Composition</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/8dbd0e063f9ee22b43c77dc3162e49b7853a2423" target="_blank">Autonomous Prompt Engineering in Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/6f75404b0d01f9a09afe428f9efd5cbcd7825469" target="_blank">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/55b88be46c22232a5923ce20c745d99bb9562325" target="_blank">Bayesian Multi-Task Transfer Learning for Soft Prompt Tuning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/95836ab367a351b32253d3a2b6c834ad15c984b4" target="_blank">Parameter-Efficient Continual Fine-Tuning: A Survey</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/f22b23a355d3f65300c1b43dd5bf04d3fe679d40" target="_blank">Learning Optimal Prompt Ensemble for Multi-source Visual Prompt Transfer</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/6e8627662e66a797be56f473f9bee76451d5eb48" target="_blank">Soft Prompt Decoding for Multilingual Dense Retrieval</a> (2023)</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3950df97ea527009a32569cb7016bc3df1383dca</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating AMKOR and DySK-Attn to enhance QA systems in multimodal contexts.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Adaptive Multi-source Knowledge-Oriented Reasoning with Dynamic Sparse Knowledge Attention will improve the accuracy and adaptability of question answering systems in multimodal contexts compared to static reasoning models.</p>
+<h3>Motivation</h3>
+<p>Existing methods for question answering systems often lack the ability to dynamically adapt reasoning strategies based on the complexity of the question and the context provided by multimodal data. While some approaches integrate knowledge graphs and language models, they typically do not leverage the full potential of adaptive reasoning models that can dynamically adjust their reasoning processes in real-time. This gap is particularly evident in scenarios requiring the integration of multimodal data, where static models fail to efficiently handle the complexity and variability of inputs. The proposed hypothesis addresses this gap by exploring the combination of Adaptive Multi-source Knowledge-Oriented Reasoning (AMKOR) with Dynamic Sparse Knowledge Attention (DySK-Attn) to enhance reasoning accuracy and adaptability in question answering systems.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research explores the integration of Adaptive Multi-source Knowledge-Oriented Reasoning (AMKOR) with Dynamic Sparse Knowledge Attention (DySK-Attn) to enhance the performance of question answering systems. AMKOR is a generative framework that dynamically fuses parametric and retrieved knowledge, optimizing reasoning trajectories using probabilistic beam reasoning. DySK-Attn employs a sparse attention mechanism over structured knowledge graphs to retrieve and integrate precise facts, allowing the system to reason with fresh context without altering its core parametric knowledge. This integration aims to improve reasoning accuracy and adaptability, particularly in scenarios involving multimodal data. The hypothesis posits that combining these two approaches will enable the system to dynamically adjust its reasoning strategies based on the complexity of the input, leading to improved performance on benchmark datasets like HotpotQA and MuSiQue. The expected outcome is a more robust and adaptable question answering system that can efficiently handle complex queries by leveraging the strengths of both AMKOR and DySK-Attn.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/b029a4551116e029316aa42475e7b3809da43230">Adaptive Multi-source Knowledge-Oriented Reasoning</a>: AMKOR is a generative framework that dynamically fuses parametric and retrieved knowledge, optimizing both local reasoning steps and global answer accuracy. It uses probabilistic beam reasoning to explore reasoning trajectories, making it particularly effective in multi-hop question answering tasks. AMKOR's ability to handle complex multi-hop tasks by combining reasoning quality and efficiency makes it a suitable choice for this research. The framework's compatibility with large language models allows it to dynamically integrate heterogeneous knowledge sources, enhancing the system's adaptability and robustness.</p>
+<p><a href="https://www.semanticscholar.org/paper/65a75d75c44c83f2f5ec973c41aae304580a6b72">Dynamic Sparse Knowledge Attention</a>: DySK-Attn uses a sparse attention mechanism over structured knowledge graphs to retrieve and integrate precise facts more effectively than standard dense graph reasoning models. This approach allows the system to reason with fresh context, externalizing dynamic knowledge without altering its core parametric knowledge. DySK-Attn's ability to handle real-time knowledge updates and its compatibility with models like GPT-3 make it an ideal choice for improving reasoning accuracy in question answering systems. The framework's focus on retrieving precise facts and integrating them into the reasoning process enhances the system's ability to handle both seen and unseen knowledge.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating Adaptive Multi-source Knowledge-Oriented Reasoning (AMKOR) with Dynamic Sparse Knowledge Attention (DySK-Attn) to enhance question answering systems. The process begins with AMKOR dynamically fusing parametric and retrieved knowledge using probabilistic beam reasoning. This allows the system to explore reasoning trajectories and optimize both local reasoning steps and global answer accuracy. DySK-Attn is then employed to retrieve and integrate precise facts from structured knowledge graphs using a sparse attention mechanism. This integration allows the system to reason with fresh context, externalizing dynamic knowledge without altering its core parametric knowledge. The combined approach enables the system to dynamically adjust its reasoning strategies based on the complexity of the input, leading to improved performance on benchmark datasets like HotpotQA and MuSiQue. The implementation involves configuring AMKOR to handle multi-hop reasoning tasks and integrating DySK-Attn to enhance the retrieval and integration of precise facts. The system's outputs are linked through a probabilistic reasoning framework, allowing data to flow seamlessly from one component to another. The expected outcome is a more robust and adaptable question answering system that can efficiently handle complex queries by leveraging the strengths of both AMKOR and DySK-Attn.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Adaptive Multi-source Knowledge-Oriented Reasoning (AMKOR) with Dynamic Sparse Knowledge Attention (DySK-Attn) will improve the accuracy and adaptability of question answering systems in multimodal contexts compared to static reasoning models.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three systems:<br />
+1. <strong>Baseline 1 (Static Reasoning)</strong>: A traditional multi-hop QA system that uses a fixed reasoning approach without dynamic knowledge integration<br />
+2. <strong>Baseline 2 (AMKOR-only)</strong>: A system using only the AMKOR framework for dynamic knowledge fusion<br />
+3. <strong>Experimental (AMKOR+DySK-Attn)</strong>: The integrated system combining AMKOR's dynamic knowledge fusion with DySK-Attn's sparse attention mechanism</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. The experiment should start with <code>MINI_PILOT</code> mode, then proceed to <code>PILOT</code> if successful, but stop before <code>FULL_EXPERIMENT</code> (which will be manually triggered after human verification).</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use 10 questions from each dataset's training set</li>
+<li><strong>PILOT</strong>: Use 200 questions from the training set for training and 100 questions from the validation set for evaluation</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the complete datasets with proper train/validation/test splits</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>System Components</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. AMKOR Framework Implementation</strong></h4>
+<p>Implement the Adaptive Multi-source Knowledge-Oriented Reasoning framework with the following components:<br />
+- Knowledge fusion module that combines parametric (model-based) and retrieved knowledge<br />
+- Probabilistic beam reasoning module that explores multiple reasoning trajectories<br />
+- Beam width parameter (set to 3 for MINI_PILOT, 5 for PILOT, and 10 for FULL_EXPERIMENT)<br />
+- Reasoning step optimization that balances local step quality with global answer accuracy</p></p>
+<p><h4 class="custom-heading"><strong>2. DySK-Attn Module Implementation</strong></h4>
+<p>Implement the Dynamic Sparse Knowledge Attention mechanism with these components:<br />
+- Sparse attention mechanism over structured knowledge graphs<br />
+- Knowledge retrieval component that extracts relevant facts based on query context<br />
+- Integration mechanism that incorporates retrieved facts into the reasoning process<br />
+- Sparsity parameter (set to 0.3 for MINI_PILOT, 0.2 for PILOT, and tuned optimally for FULL_EXPERIMENT)</p></p>
+<p><h4 class="custom-heading"><strong>3. Integration Layer</strong></h4>
+<p>Implement an integration layer that:<br />
+- Connects AMKOR's output to DySK-Attn's input<br />
+- Uses a probabilistic reasoning framework to combine the strengths of both approaches<br />
+- Allows for dynamic adjustment of reasoning strategies based on input complexity<br />
+- Implements a feedback mechanism where DySK-Attn's retrieved facts inform AMKOR's reasoning process</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Processing</strong></h4></p>
+<p><h4 class="custom-heading"><strong>HotpotQA Dataset</strong></h4>
+<ul>
+<li>Load and preprocess the HotpotQA dataset</li>
+<li>Extract questions, supporting facts, and answers</li>
+<li>For multimodal enhancement, augment text data with relevant images where available</li>
+<li>Split into appropriate train/validation/test sets based on the PILOT_MODE</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>MuSiQue Dataset</strong></h4>
+<ul>
+<li>Load and preprocess the MuSiQue dataset</li>
+<li>Extract questions, supporting facts, and answers</li>
+<li>Handle the noisy and heterogeneous knowledge sources appropriately</li>
+<li>Split into appropriate train/validation/test sets based on the PILOT_MODE</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4></p>
+<p><p>Implement the following evaluation metrics:<br />
+1. <strong>Accuracy</strong>: Percentage of questions answered correctly<br />
+2. <strong>F1 Score</strong>: Harmonic mean of precision and recall for answer spans<br />
+3. <strong>Reasoning Path Quality</strong>: Measure of how logical and coherent the reasoning steps are<br />
+4. <strong>Adaptability Score</strong>: Measure of performance difference between simple and complex questions<br />
+5. <strong>Inference Time</strong>: Time taken to answer each question</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Procedure</strong></h4></p>
+<p><ol>
+<li><strong>Setup Phase</strong>:</li>
+<li>Initialize all three systems (Baseline 1, Baseline 2, and Experimental)</li>
+<li>Load and preprocess datasets according to the current PILOT_MODE</li>
+<li>Set up logging and result tracking</li>
+</ol></p>
+<p><ol>
+<li><strong>Training Phase</strong>:</li>
+<li>Train each system on the training portion of the datasets</li>
+<li>For MINI_PILOT, use 5 epochs; for PILOT, use 10 epochs; for FULL_EXPERIMENT, use optimal epochs determined by validation performance</li>
+<li>Log training metrics including loss and accuracy</li>
+</ol></p>
+<p><ol>
+<li><strong>Evaluation Phase</strong>:</li>
+<li>Evaluate all three systems on the validation/test data</li>
+<li>Record all metrics for each system</li>
+<li>Generate detailed logs of reasoning paths for qualitative analysis</li>
+</ol></p>
+<p><ol>
+<li><strong>Analysis Phase</strong>:</li>
+<li>Compare performance across all three systems</li>
+<li>Conduct statistical significance testing (t-tests and bootstrap resampling)</li>
+<li>Generate visualizations of performance differences</li>
+<li>Analyze reasoning paths to identify qualitative differences</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4></p>
+<p><p>Generate a comprehensive report including:<br />
+1. Summary statistics for all metrics across all systems<br />
+2. Statistical significance tests comparing the experimental system to baselines<br />
+3. Visualizations of performance differences<br />
+4. Sample reasoning paths from each system for the same questions<br />
+5. Analysis of where and why the experimental system performs better or worse<br />
+6. Recommendations for further improvements</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4></p>
+<p><ul>
+<li>Use PyTorch for implementing the neural network components</li>
+<li>Implement the probabilistic beam reasoning using the probabilistic_beam_reasoning library</li>
+<li>Implement the sparse attention mechanism using the sparse_attention_library</li>
+<li>Ensure proper error handling and logging throughout the experiment</li>
+<li>Save checkpoints regularly during training</li>
+<li>Implement early stopping based on validation performance</li>
+</ul></p>
+<p><p>Please run the MINI_PILOT first, then if everything looks good, proceed to the PILOT. After the PILOT completes successfully, stop and do not run the FULL_EXPERIMENT as human verification of the results will be required first.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3950df97ea527009a32569cb7016bc3df1383dca">Paper 0: QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering</a> (628 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/ed02d4a08a50d23709b7ce5df9878a8bc34ac12c">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/ad3dfb2514cb0c899fcb9a14d229ff2a6018892f">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/ef98395632e38e0e742695b6e7dbae32c78cc76b">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/6ea22d9c0b63cb2478d53370688a2349dd313850">Paper 4</a>. The progression of research from the source paper through the related papers highlights a clear trajectory towards more sophisticated integration and reasoning capabilities between language models and knowledge graphs. The initial critique of GNNs' reasoning abilities led to the development of models like DRAGON, which deeply integrate text and KG. Subsequent works extended these concepts to multimodal contexts, enhancing reasoning through bidirectional fusion and hypergraph structures. However, a gap remains in effectively leveraging these advancements for real-time, dynamic question answering scenarios, where the reasoning process must adapt to evolving contexts and knowledge bases.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3950df97ea527009a32569cb7016bc3df1383dca" target="_blank">QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/ed02d4a08a50d23709b7ce5df9878a8bc34ac12c" target="_blank">GNN is a Counter? Revisiting GNN for Question Answering</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/ad3dfb2514cb0c899fcb9a14d229ff2a6018892f" target="_blank">Deep Bidirectional Language-Knowledge Graph Pretraining</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/ef98395632e38e0e742695b6e7dbae32c78cc76b" target="_blank">VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/6ea22d9c0b63cb2478d53370688a2349dd313850" target="_blank">Hypergraph-Based Model for Visual Question Answering with External Knowledge Integration</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/1e706b7f994feaa20316cd28ac503b39090de75e" target="_blank">A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ff5a9394f9cf22850af9f84decf396ffd6034c94" target="_blank">Application of large language models based on knowledge graphs in question-answering systems: A review</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/3bd74a98ecdd45755f0edfeaea2293216c996893" target="_blank">Dynamic-KGQA: A Scalable Framework for Generating Adaptive Question Answering Datasets</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/a80ec38f88386eb0131fed95c30b2f82b0a02dbd" target="_blank">Dynamically Adaptive Reasoning via LLM-Guided MCTS for Efficient and Context-Aware KGQA</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/8fce39be1351646f2e3df77700d734fbe863f740" target="_blank">T2: An Adaptive Test-Time Scaling Strategy for Contextual Question Answering</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/2b8fababedb34cded34f47722b13cf193cdcc92f" target="_blank">Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/0327c53ce0c6f39e9f029ca32699bd6afff70f9c" target="_blank">Adaptive Orchestration of Modular Generative Information Access Systems</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/97126bb7be3797ab21ef938ab886ad66a555aa86" target="_blank">Adaption-of-Thought: Learning Question Difficulty Improves Large Language Models for Reasoning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/74dadd23073faf65cb767f1f9467a0fc965ca7b3" target="_blank">ARM: Adaptive Reasoning Model</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/017516fe07604414dc07663f5ef63f9260cd9875" target="_blank">AT-RAG: An Adaptive RAG Model Enhancing Query Efficiency with Topic Filtering and Iterative Reasoning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/b029a4551116e029316aa42475e7b3809da43230" target="_blank">Multi-granular Training Strategies for Robust Multi-hop Reasoning Over Noisy and Heterogeneous Knowledge Sources</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/65a75d75c44c83f2f5ec973c41aae304580a6b72" target="_blank">DySK-Attn: A Framework for Efficient, Real-Time Knowledge Updating in Large Language Models via Dynamic Sparse Knowledge Attention</a> (2025)</li>
+</ol>
+</body>
+</html>

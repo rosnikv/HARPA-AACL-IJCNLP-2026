@@ -1,0 +1,37 @@
+[
+    {
+        "paperId": "45653ad43124f02dc2cf2db3357be1d1d78ddb18",
+        "pmid": "2310.14564",
+        "title": "Language Models Hallucinate, but May Excel at Fact Verification",
+        "abstract": "Recent progress in natural language processing (NLP) owes much to remarkable advances in large language models (LLMs). Nevertheless, LLMs frequently \u201challucinate,\u201d resulting in non-factual outputs. Our carefully-designed human evaluation substantiates the serious hallucination issue, revealing that even GPT-3.5 produces factual outputs less than 25% of the time. This underscores the importance of fact verifiers in order to measure and incentivize progress. Our systematic investigation affirms that LLMs can be repurposed as effective fact verifiers with strong correlations with human judgments. Surprisingly, FLAN-T5-11B , the least factual generator in our study, performs the best as a fact verifier, even outperforming more capable LLMs like GPT3.5 and ChatGPT. Delving deeper, we analyze the reliance of these LLMs on high-quality evidence, as well as their deficiencies in robustness and generalization ability. Our study presents insights for developing trustworthy generation models.",
+        "year": 2023,
+        "citation_count": 36
+    },
+    {
+        "paperId": "2495700b4303512784fbdbfccc58c6c4f7771ac2",
+        "title": "Language Models with Conformal Factuality Guarantees",
+        "abstract": "Guaranteeing the correctness and factuality of language model (LM) outputs is a major open problem. In this work, we propose conformal factuality, a framework that can ensure high probability correctness guarantees for LMs by connecting language modeling and conformal prediction. We observe that the correctness of an LM output is equivalent to an uncertainty quantification problem, where the uncertainty sets are defined as the entailment set of an LM's output. Using this connection, we show that conformal prediction in language models corresponds to a back-off algorithm that provides high probability correctness guarantees by progressively making LM outputs less specific (and expanding the associated uncertainty sets). This approach applies to any black-box LM and requires very few human-annotated samples. Evaluations of our approach on closed book QA (FActScore, NaturalQuestions) and reasoning tasks (MATH) show that our approach can provide 80-90% correctness guarantees while retaining the majority of the LM's original output.",
+        "year": 2024,
+        "citation_count": 57,
+        "relevance": 2,
+        "explanation": "This paper is relevant as it proposes a framework for ensuring factuality in LLM outputs, which is closely related to the source paper's focus on hallucination and fact verification."
+    },
+    {
+        "paperId": "2c85de293de93582e3d457ab9a5760a5ac71aa11",
+        "title": "Large language model validity via enhanced conformal prediction methods",
+        "abstract": "We develop new conformal inference methods for obtaining validity guarantees on the output of large language models (LLMs). Prior work in conformal language modeling identifies a subset of the text that satisfies a high-probability guarantee of correctness. These methods work by filtering claims from the LLM's original response if a scoring function evaluated on the claim fails to exceed a threshold calibrated via split conformal prediction. Existing methods in this area suffer from two deficiencies. First, the guarantee stated is not conditionally valid. The trustworthiness of the filtering step may vary based on the topic of the response. Second, because the scoring function is imperfect, the filtering step can remove many valuable and accurate claims. We address both of these challenges via two new conformal methods. First, we generalize the conditional conformal procedure of Gibbs et al. (2023) in order to adaptively issue weaker guarantees when they are required to preserve the utility of the output. Second, we show how to systematically improve the quality of the scoring function via a novel algorithm for differentiating through the conditional conformal procedure. We demonstrate the efficacy of our approach on biography and medical question-answering datasets.",
+        "year": 2024,
+        "citation_count": 48,
+        "relevance": 2,
+        "explanation": "This paper builds on the source paper by addressing deficiencies in existing conformal methods for language models and proposing enhancements, making it partially dependent on the findings of the source paper."
+    },
+    {
+        "paperId": "00d4e5bccaba9248538295f4e117c9620f676ec1",
+        "title": "K-QA: A Real-World Medical Q&A Benchmark",
+        "abstract": "Ensuring the accuracy of responses provided by large language models (LLMs) is crucial, particularly in clinical settings where incorrect information may directly impact patient health. To address this challenge, we construct K-QA, a dataset containing 1,212 patient questions originating from real-world conversations held on a popular clinical online platform. We employ a panel of in-house physicians to answer and manually decompose a subset of K-QA into self-contained statements. Additionally, we formulate two NLI-based evaluation metrics approximating recall and precision: (1) comprehensiveness, measuring the percentage of essential clinical information in the generated answer and (2) hallucination rate, measuring the number of statements from the physician-curated response contradicted by the LLM answer. Finally, we use K-QA along with these metrics to evaluate several state-of-the-art models, as well as the effect of in-context learning and medically-oriented augmented retrieval schemes developed by the authors. Our findings indicate that in-context learning improves the comprehensiveness of the models, and augmented retrieval is effective in reducing hallucinations. We will make K-QA available to to the community to spur research into medically accurate NLP applications.",
+        "year": 2024,
+        "citation_count": 14,
+        "relevance": 2,
+        "explanation": "This paper is relevant as it focuses on ensuring the accuracy of LLM responses in clinical settings, which aligns with the source paper's focus on validity guarantees for LLM outputs. The use of evaluation metrics to assess model performance is related to the source paper's methods for improving scoring functions."
+    }
+]

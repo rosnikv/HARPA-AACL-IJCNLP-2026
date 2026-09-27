@@ -1,0 +1,91 @@
+[
+    {
+        "paperId": "cb5323ef22a5a38cfba318abadcadee822ccf8a9",
+        "pmid": "2106.04399",
+        "title": "Flow Network based Generative Models for Non-Iterative Diverse Candidate Generation",
+        "abstract": "This paper is about the problem of learning a stochastic policy for generating an object (like a molecular graph) from a sequence of actions, such that the probability of generating an object is proportional to a given positive reward for that object. Whereas standard return maximization tends to converge to a single return-maximizing sequence, there are cases where we would like to sample a diverse set of high-return solutions. These arise, for example, in black-box function optimization when few rounds are possible, each with large batches of queries, where the batches should be diverse, e.g., in the design of new molecules. One can also see this as a problem of approximately converting an energy function to a generative distribution. While MCMC methods can achieve that, they are expensive and generally only perform local exploration. Instead, training a generative policy amortizes the cost of search during training and yields to fast generation. Using insights from Temporal Difference learning, we propose GFlowNet, based on a view of the generative process as a flow network, making it possible to handle the tricky case where different trajectories can yield the same final state, e.g., there are many ways to sequentially add atoms to generate some molecular graph. We cast the set of trajectories as a flow and convert the flow consistency equations into a learning objective, akin to the casting of the Bellman equations into Temporal Difference methods. We prove that any global minimum of the proposed objectives yields a policy which samples from the desired distribution, and demonstrate the improved performance and diversity of GFlowNet on a simple domain where there are many modes to the reward function, and on a molecule synthesis task.",
+        "year": 2021,
+        "citation_count": 352
+    },
+    {
+        "paperId": "b0c63b16f9f519b631a46ce95fbe296d30b53896",
+        "title": "GFlowNet Foundations",
+        "abstract": "Generative Flow Networks (GFlowNets) have been introduced as a method to sample a diverse set of candidates in an active learning context, with a training objective that makes them approximately sample in proportion to a given reward function. In this paper, we show a number of additional theoretical properties of GFlowNets. They can be used to estimate joint probability distributions and the corresponding marginal distributions where some variables are unspecified and, of particular interest, can represent distributions over composite objects like sets and graphs. GFlowNets amortize the work typically done by computationally expensive MCMC methods in a single but trained generative pass. They could also be used to estimate partition functions and free energies, conditional probabilities of supersets (supergraphs) given a subset (subgraph), as well as marginal distributions over all supersets (supergraphs) of a given set (graph). We introduce variations enabling the estimation of entropy and mutual information, sampling from a Pareto frontier, connections to reward-maximizing policies, and extensions to stochastic environments, continuous actions and modular energy functions.",
+        "year": 2021,
+        "citation_count": 249,
+        "relevance": 2,
+        "explanation": "This paper builds directly on the source paper by expanding on the theoretical properties of GFlowNets, which were introduced in the source paper. It explores additional applications and theoretical extensions of the GFlowNet framework, making it highly relevant."
+    },
+    {
+        "paperId": "cdf4a982bf6dc373eb6463263ab5fd147c61c8ca",
+        "title": "Bayesian Structure Learning with Generative Flow Networks",
+        "abstract": "In Bayesian structure learning, we are interested in inferring a distribution over the directed acyclic graph (DAG) structure of Bayesian networks, from data. Defining such a distribution is very challenging, due to the combinatorially large sample space, and approximations based on MCMC are often required. Recently, a novel class of probabilistic models, called Generative Flow Networks (GFlowNets), have been introduced as a general framework for generative modeling of discrete and composite objects, such as graphs. In this work, we propose to use a GFlowNet as an alternative to MCMC for approximating the posterior distribution over the structure of Bayesian networks, given a dataset of observations. Generating a sample DAG from this approximate distribution is viewed as a sequential decision problem, where the graph is constructed one edge at a time, based on learned transition probabilities. Through evaluation on both simulated and real data, we show that our approach, called DAG-GFlowNet, provides an accurate approximation of the posterior over DAGs, and it compares favorably against other methods based on MCMC or variational inference.",
+        "year": 2022,
+        "citation_count": 158,
+        "relevance": 2,
+        "explanation": "This paper directly applies the GFlowNet framework to Bayesian structure learning, using the theoretical properties and methods discussed in the source paper."
+    },
+    {
+        "paperId": "0116eb4208e9abff3064934d178e655e716d92ad",
+        "title": "Trajectory Balance: Improved Credit Assignment in GFlowNets",
+        "abstract": "Generative flow networks (GFlowNets) are a method for learning a stochastic policy for generating compositional objects, such as graphs or strings, from a given unnormalized density by sequences of actions, where many possible action sequences may lead to the same object. We find previously proposed learning objectives for GFlowNets, flow matching and detailed balance, which are analogous to temporal difference learning, to be prone to inefficient credit propagation across long action sequences. We thus propose a new learning objective for GFlowNets, trajectory balance, as a more efficient alternative to previously used objectives. We prove that any global minimizer of the trajectory balance objective can define a policy that samples exactly from the target distribution. In experiments on four distinct domains, we empirically demonstrate the benefits of the trajectory balance objective for GFlowNet convergence, diversity of generated samples, and robustness to long action sequences and large action spaces.",
+        "year": 2022,
+        "citation_count": 191,
+        "relevance": 2,
+        "explanation": "This paper proposes a new learning objective for GFlowNets, which is relevant to the source paper's use of GFlowNets for Bayesian structure learning. The trajectory balance objective improves the training of GFlowNets, making it partially dependent on the source paper's exploration of GFlowNets."
+    },
+    {
+        "paperId": "72ead40f0e8969f8081ec263a6271562da189033",
+        "title": "Bayesian learning of Causal Structure and Mechanisms with GFlowNets and Variational Bayes",
+        "abstract": "Bayesian causal structure learning aims to learn a posterior distribution over directed acyclic graphs (DAGs), and the mechanisms that define the relationship between parent and child variables. By taking a Bayesian approach, it is possible to reason about the uncertainty of the causal model. The notion of modelling the uncertainty over models is particularly crucial for causal structure learning since the model could be unidentifiable when given only a finite amount of observational data. In this paper, we introduce a novel method to jointly learn the structure and mechanisms of the causal model using Variational Bayes, which we call Variational Bayes-DAG-GFlowNet (VBG). We extend the method of Bayesian causal structure learning using GFlowNets to learn not only the posterior distribution over the structure, but also the parameters of a linear-Gaussian model. Our results on simulated data suggest that VBG is competitive against several baselines in modelling the posterior over DAGs and mechanisms, while offering several advantages over existing methods, including the guarantee to sample acyclic graphs, and the flexibility to generalize to non-linear causal mechanisms.",
+        "year": 2022,
+        "citation_count": 29,
+        "relevance": 2,
+        "explanation": "This paper extends GFlowNets to Bayesian causal structure learning, building on the GFlowNet framework. It partially depends on the findings of the source paper, which discusses improvements in GFlowNet objectives."
+    },
+    {
+        "paperId": "6e5e65ec544bc7ec1c18954f678ae586dc553ea1",
+        "title": "Joint Bayesian Inference of Graphical Structure and Parameters with a Single Generative Flow Network",
+        "abstract": "Generative Flow Networks (GFlowNets), a class of generative models over discrete and structured sample spaces, have been previously applied to the problem of inferring the marginal posterior distribution over the directed acyclic graph (DAG) of a Bayesian Network, given a dataset of observations. Based on recent advances extending this framework to non-discrete sample spaces, we propose in this paper to approximate the joint posterior over not only the structure of a Bayesian Network, but also the parameters of its conditional probability distributions. We use a single GFlowNet whose sampling policy follows a two-phase process: the DAG is first generated sequentially one edge at a time, and then the corresponding parameters are picked once the full structure is known. Since the parameters are included in the posterior distribution, this leaves more flexibility for the local probability models of the Bayesian Network, making our approach applicable even to non-linear models parametrized by neural networks. We show that our method, called JSP-GFN, offers an accurate approximation of the joint posterior, while comparing favorably against existing methods on both simulated and real data.",
+        "year": 2023,
+        "citation_count": 46,
+        "relevance": 2,
+        "explanation": "This paper extends the use of GFlowNets to jointly infer graphical structure and parameters, similar to the source paper's approach. It builds on the source paper's method by proposing a single GFlowNet for joint inference, making it highly relevant."
+    },
+    {
+        "paperId": "caf0d9240495e87937020a874ce017588908e2ea",
+        "title": "Delta-AI: Local objectives for amortized inference in sparse graphical models",
+        "abstract": "We present a new algorithm for amortized inference in sparse probabilistic graphical models (PGMs), which we call $\\Delta$-amortized inference ($\\Delta$-AI). Our approach is based on the observation that when the sampling of variables in a PGM is seen as a sequence of actions taken by an agent, sparsity of the PGM enables local credit assignment in the agent's policy learning objective. This yields a local constraint that can be turned into a local loss in the style of generative flow networks (GFlowNets) that enables off-policy training but avoids the need to instantiate all the random variables for each parameter update, thus speeding up training considerably. The $\\Delta$-AI objective matches the conditional distribution of a variable given its Markov blanket in a tractable learned sampler, which has the structure of a Bayesian network, with the same conditional distribution under the target PGM. As such, the trained sampler recovers marginals and conditional distributions of interest and enables inference of partial subsets of variables. We illustrate $\\Delta$-AI's effectiveness for sampling from synthetic PGMs and training latent variable models with sparse factor structure.",
+        "year": 2023,
+        "citation_count": 7,
+        "relevance": 2,
+        "explanation": "This paper introduces a new algorithm for amortized inference in sparse PGMs, using local objectives inspired by GFlowNets. It is partially dependent on the source paper's exploration of Bayesian networks and GFlowNets."
+    },
+    {
+        "paperId": "cd2e39c7909ab1c144b62c806650b597a1b83d77",
+        "title": "Discrete Probabilistic Inference as Control in Multi-path Environments",
+        "abstract": "We consider the problem of sampling from a discrete and structured distribution as a sequential decision problem, where the objective is to find a stochastic policy such that objects are sampled at the end of this sequential process proportionally to some predefined reward. While we could use maximum entropy Reinforcement Learning (MaxEnt RL) to solve this problem for some distributions, it has been shown that in general, the distribution over states induced by the optimal policy may be biased in cases where there are multiple ways to generate the same object. To address this issue, Generative Flow Networks (GFlowNets) learn a stochastic policy that samples objects proportionally to their reward by approximately enforcing a conservation of flows across the whole Markov Decision Process (MDP). In this paper, we extend recent methods correcting the reward in order to guarantee that the marginal distribution induced by the optimal MaxEnt RL policy is proportional to the original reward, regardless of the structure of the underlying MDP. We also prove that some flow-matching objectives found in the GFlowNet literature are in fact equivalent to well-established MaxEnt RL algorithms with a corrected reward. Finally, we study empirically the performance of multiple MaxEnt RL and GFlowNet algorithms on multiple problems involving sampling from discrete distributions.",
+        "year": 2024,
+        "citation_count": 32,
+        "relevance": 1,
+        "explanation": "This paper discusses using GFlowNets for probabilistic inference in structured environments, which aligns with the source paper's focus on using GFlowNets for inference in sparse graphical models. The paper extends methods related to flow-matching objectives, which are relevant to the source paper's approach, but it does not directly depend on the specific findings of the source paper."
+    },
+    {
+        "paperId": "4da96a97a09dab8181c90a3cb195ee0ccb7e8601",
+        "title": "Improving GFlowNets for Text-to-Image Diffusion Alignment",
+        "abstract": "Diffusion models have become the de-facto approach for generating visual data, which are trained to match the distribution of the training dataset. In addition, we also want to control generation to fulfill desired properties such as alignment to a text description, which can be specified with a black-box reward function. Prior works fine-tune pretrained diffusion models to achieve this goal through reinforcement learning-based algorithms. Nonetheless, they suffer from issues including slow credit assignment as well as low quality in their generated samples. In this work, we explore techniques that do not directly maximize the reward but rather generate high-reward images with relatively high probability -- a natural scenario for the framework of generative flow networks (GFlowNets). To this end, we propose the Diffusion Alignment with GFlowNet (DAG) algorithm to post-train diffusion models with black-box property functions. Extensive experiments on Stable Diffusion and various reward specifications corroborate that our method could effectively align large-scale text-to-image diffusion models with given reward information.",
+        "year": 2024,
+        "citation_count": 10,
+        "relevance": 2,
+        "explanation": "This paper applies GFlowNets to the domain of text-to-image diffusion models, exploring how GFlowNets can improve alignment with reward functions. It builds on the foundational concepts of GFlowNets discussed in the source paper, particularly in terms of sampling and reward alignment."
+    },
+    {
+        "paperId": "4857c1fee45ac205f02bb6ca620894994ca711e0",
+        "title": "Efficient Diversity-Preserving Diffusion Alignment via Gradient-Informed GFlowNets",
+        "abstract": "While one commonly trains large diffusion models by collecting datasets on target downstream tasks, it is often desired to align and finetune pretrained diffusion models with some reward functions that are either designed by experts or learned from small-scale datasets. Existing post-training methods for reward finetuning of diffusion models typically suffer from lack of diversity in generated samples, lack of prior preservation, and/or slow convergence in finetuning. In response to this challenge, we take inspiration from recent successes in generative flow networks (GFlowNets) and propose a reinforcement learning method for diffusion model finetuning, dubbed Nabla-GFlowNet (abbreviated as $\\nabla$-GFlowNet), that leverages the rich signal in reward gradients for probabilistic diffusion finetuning. We show that our proposed method achieves fast yet diversity- and prior-preserving finetuning of Stable Diffusion, a large-scale text-conditioned image diffusion model, on different realistic reward functions.",
+        "year": 2024,
+        "citation_count": 7,
+        "relevance": 2,
+        "explanation": "This paper builds on the concept of aligning and fine-tuning pretrained diffusion models with reward functions, similar to the source paper. It specifically addresses the challenge of diversity preservation and convergence speed in the context of GFlowNets, which is a continuation of the source paper's exploration of GFlowNets for diffusion alignment."
+    }
+]

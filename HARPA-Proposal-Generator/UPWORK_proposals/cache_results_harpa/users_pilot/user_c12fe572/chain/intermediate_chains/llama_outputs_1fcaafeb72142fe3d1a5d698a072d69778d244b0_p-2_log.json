@@ -1,0 +1,437 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "a343a24a0d47e0acf4d71bfd0215924bc76d0256",
+            "pmid": "2505.16421",
+            "title": "WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning",
+            "abstract": "While reinforcement learning (RL) has demonstrated remarkable success in enhancing large language models (LLMs), it has primarily focused on single-turn tasks such as solving math problems. Training effective web agents for multi-turn interactions remains challenging due to the complexity of long-horizon decision-making across dynamic web interfaces. In this work, we present WebAgent-R1, a simple yet effective end-to-end multi-turn RL framework for training web agents. It learns directly from online interactions with web environments by asynchronously generating diverse trajectories, entirely guided by binary rewards depending on task success. Experiments on the WebArena-Lite benchmark demonstrate the effectiveness of WebAgent-R1, boosting the task success rate of Qwen-2.5-3B from 6.1% to 33.9% and Llama-3.1-8B from 8.5% to 44.8%, significantly outperforming existing state-of-the-art methods and strong proprietary models such as OpenAI o3. In-depth analyses reveal the effectiveness of the thinking-based prompting strategy and test-time scaling through increased interactions for web tasks. We further investigate different RL initialization policies by introducing two variants, namely WebAgent-R1-Zero and WebAgent-R1-CoT, which highlight the importance of the warm-up training stage (i.e., behavior cloning) and provide insights on incorporating long chain-of-thought (CoT) reasoning in web agents.",
+            "year": 2025,
+            "citation_count": 9
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. MobileGUI-RL: Advancing Mobile GUI Agent through Reinforcement Learning in Online Environment": {
+                    "explanation": "This paper focuses on GUI agents for mobile environments using reinforcement learning in an online setting. While it shares the theme of reinforcement learning for agents, it does not specifically build on the multi-turn web agent framework or findings from WebAgent-R1.",
+                    "relevance": 0
+                },
+                "2. WebSynthesis: World-Model-Guided MCTS for Efficient WebUI-Trajectory Synthesis": {
+                    "explanation": "WebSynthesis addresses trajectory synthesis for web agents, which is related to the source paper's focus on web agents and trajectory generation. It builds on the idea of improving web agents' performance through efficient trajectory planning, partially depending on the source paper's findings regarding trajectory generation and task success.",
+                    "relevance": 2
+                },
+                "3. From Web Search towards Agentic Deep Research: Incentivizing Search with Reasoning Agents": {
+                    "explanation": "This paper discusses the evolution of search engines into agent-based systems with reasoning capabilities. While it touches on the use of LLMs and reasoning, it does not directly relate to the multi-turn RL framework for web agents in the source paper.",
+                    "relevance": 0
+                },
+                "4. PersonaAgent: When Large Language Model Agents Meet Personalization at Test Time": {
+                    "explanation": "PersonaAgent focuses on personalizing LLM agents, which is a different aspect compared to the multi-turn web agent training in the source paper. It does not directly build on or depend on the findings of WebAgent-R1.",
+                    "relevance": 0
+                },
+                "5. Pangu DeepDiver: Adaptive Search Intensity Scaling via Open-Web Reinforcement Learning": {
+                    "explanation": "Pangu DeepDiver explores adaptive search intensity in open-web environments using reinforcement learning. While it shares the RL theme, it does not specifically depend on the multi-turn web agent framework or findings from WebAgent-R1.",
+                    "relevance": 0
+                },
+                "6. WebCoT: Enhancing Web Agent Reasoning by Reconstructing Chain-of-Thought in Reflection, Branching, and Rollback": {
+                    "explanation": "WebCoT enhances web agent reasoning by reconstructing chain-of-thought processes, which is closely related to the source paper's focus on reasoning and multi-turn interactions in web environments. It builds on the reasoning aspects highlighted in WebAgent-R1.",
+                    "relevance": 2
+                },
+                "7. RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning": {
+                    "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making.",
+                    "relevance": 2
+                },
+                "8. SelfElicit: Your Language Model Secretly Knows Where is the Relevant Evidence": {
+                    "explanation": "SelfElicit focuses on improving LMs' ability to utilize evidence in context, which is not directly related to the multi-turn RL framework for web agents in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. WebSynthesis: World-Model-Guided MCTS for Efficient WebUI-Trajectory Synthesis": {
+                    "explanation": "WebSynthesis addresses trajectory synthesis for web agents, which is related to the source paper's focus on web agents and trajectory generation. It builds on the idea of improving web agents' performance through efficient trajectory planning, partially depending on the source paper's findings regarding trajectory generation and task success.",
+                    "relevance": 2
+                },
+                "2. WebCoT: Enhancing Web Agent Reasoning by Reconstructing Chain-of-Thought in Reflection, Branching, and Rollback": {
+                    "explanation": "WebCoT enhances web agent reasoning by reconstructing chain-of-thought processes, which is closely related to the source paper's focus on reasoning and multi-turn interactions in web environments. It builds on the reasoning aspects highlighted in WebAgent-R1.",
+                    "relevance": 2
+                },
+                "3. RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning": {
+                    "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1d03586baa32b3d6ff657a180053821543e11abb",
+            "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+            "abstract": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplored. We propose StarPO (State-Thinking-Actions-Reward Policy Optimization), a general framework for trajectory-level agent RL, and introduce RAGEN, a modular system for training and evaluating LLM agents. Our study on four stylized environments reveals three core findings. First, our agent RL training shows a recurring mode of Echo Trap where reward variance cliffs and gradient spikes; we address this with StarPO-S, a stabilized variant with trajectory filtering, critic incorporation, and gradient stabilization. Second, we find the shaping of RL rollouts would benefit from diverse initial states, medium interaction granularity and more frequent sampling. Third, we show that without fine-grained, reasoning-aware reward signals, agent reasoning hardly emerge through multi-turn RL and they may show shallow strategies or hallucinated thoughts. Code and environments are available at https://github.com/RAGEN-AI/RAGEN.",
+            "year": 2025,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Multi-module GRPO: Composing Policy Gradients and Prompt Optimization for Language Model Programs": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for language models, similar to the source paper. However, it focuses on a different approach (GRPO) and does not directly depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Agent Lightning: Train ANY AI Agents with Reinforcement Learning": {
+                    "explanation": "This paper introduces a framework for training LLMs with RL, similar to the source paper's focus on RL for LLM agents. It shares the theme of decoupling agent execution and training, which is related to the source paper's exploration of multi-turn RL, but it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "3.Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper proposes an RL algorithm for multi-turn LLM-based agents, directly related to the source paper's exploration of multi-turn RL for LLM agents. The paper's hypothesis is partially dependent on the findings of the source paper, as it addresses the balance between long-horizon reasoning and multi-turn interactions.",
+                    "relevance": 2
+                },
+                "4.AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents": {
+                    "explanation": "AgentFly explores RL for LM agents, which is related to the source paper's focus on RL for LLM agents. However, it does not specifically build on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "5.Multi-Agent Synergy-Driven Iterative Visual Narrative Synthesis": {
+                    "explanation": "This paper focuses on visual narrative synthesis and does not relate to the source paper's focus on RL for LLM agents.",
+                    "relevance": 0
+                },
+                "6.SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning": {
+                    "explanation": "SPIRAL explores multi-turn RL in a self-play setting, which is related to the source paper's focus on multi-turn RL for LLM agents. However, it uses a different approach (self-play) and does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7.L0: Reinforcement Learning to Become General Agents": {
+                    "explanation": "L0 introduces a framework for training general-purpose agents with RL, which is related to the source paper's exploration of RL for LLM agents. It does not directly build on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "8.SEEA-R1: Tree-Structured Reinforcement Fine-Tuning for Self-Evolving Embodied Agents": {
+                    "explanation": "SEEA-R1 focuses on embodied agents and tree-structured reinforcement fine-tuning, which is different from the source paper's focus on LLM agents and multi-turn RL.",
+                    "relevance": 0
+                },
+                "9.Why Do Open-Source LLMs Struggle with Data Analysis? A Systematic Empirical Study": {
+                    "explanation": "This paper is a systematic empirical study and does not propose new RL methods or directly relate to the source paper's focus on RL for LLM agents.",
+                    "relevance": 0
+                },
+                "10.PAG: Multi-Turn Reinforced LLM Self-Correction with Policy as Generative Verifier": {
+                    "explanation": "PAG explores multi-turn RL for LLM self-correction, which is related to the source paper's exploration of multi-turn RL for LLM agents. It builds on the idea of multi-turn interactions and self-correction, partially depending on the source paper's findings.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper proposes an RL algorithm for multi-turn LLM-based agents, directly related to the source paper's exploration of multi-turn RL for LLM agents. The paper's hypothesis is partially dependent on the findings of the source paper, as it addresses the balance between long-horizon reasoning and multi-turn interactions.",
+                    "relevance": 2
+                },
+                "2.PAG: Multi-Turn Reinforced LLM Self-Correction with Policy as Generative Verifier": {
+                    "explanation": "PAG explores multi-turn RL for LLM self-correction, which is related to the source paper's exploration of multi-turn RL for LLM agents. It builds on the idea of multi-turn interactions and self-correction, partially depending on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.Agent Lightning: Train ANY AI Agents with Reinforcement Learning": {
+                    "explanation": "This paper introduces a framework for training LLMs with RL, similar to the source paper's focus on RL for LLM agents. It shares the theme of decoupling agent execution and training, which is related to the source paper's exploration of multi-turn RL, but it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1d03586baa32b3d6ff657a180053821543e11abb",
+            "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+            "abstract": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplored. We propose StarPO (State-Thinking-Actions-Reward Policy Optimization), a general framework for trajectory-level agent RL, and introduce RAGEN, a modular system for training and evaluating LLM agents. Our study on four stylized environments reveals three core findings. First, our agent RL training shows a recurring mode of Echo Trap where reward variance cliffs and gradient spikes; we address this with StarPO-S, a stabilized variant with trajectory filtering, critic incorporation, and gradient stabilization. Second, we find the shaping of RL rollouts would benefit from diverse initial states, medium interaction granularity and more frequent sampling. Third, we show that without fine-grained, reasoning-aware reward signals, agent reasoning hardly emerge through multi-turn RL and they may show shallow strategies or hallucinated thoughts. Code and environments are available at https://github.com/RAGEN-AI/RAGEN.",
+            "year": 2025,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. From Passive to Active Reasoning: Can Large Language Models Ask the Right Questions under Incomplete Information?": {
+                    "explanation": "This paper addresses active reasoning in LLMs, which is related to the source paper's exploration of multi-turn RL for LLM agents. Both papers focus on improving LLMs' interactive capabilities, but the connection is more thematic than direct, as the source paper does not specifically address active reasoning.",
+                    "relevance": 1
+                },
+                "2. Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library": {
+                    "explanation": "This paper introduces a library for scalable RL optimization, which could be relevant for implementing the RL strategies discussed in the source paper. However, the connection is more about providing tools rather than building on specific findings or hypotheses from the source paper.",
+                    "relevance": 1
+                },
+                "3. SPARTA ALIGNMENT: Collectively Aligning Multiple Language Models through Combat": {
+                    "explanation": "SPARTA ALIGNMENT focuses on aligning multiple LLMs through competition, which is conceptually related to the source paper's exploration of LLM agents and self-evolution. However, it does not directly depend on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "4. MedAgentGym: Training LLM Agents for Code-Based Medical Reasoning at Scale": {
+                    "explanation": "MedAgentGym provides a training environment for LLM agents, similar to the environments discussed in the source paper. However, it focuses on medical reasoning, which is a different application domain, and does not directly build on the source paper's findings.",
+                    "relevance": 1
+                },
+                "5. Towards Effective Code-Integrated Reasoning": {
+                    "explanation": "This paper explores code-integrated reasoning using RL, which is related to the source paper's focus on RL for LLM agents. However, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "6. REASONING GYM: Reasoning Environments for Reinforcement Learning with Verifiable Rewards": {
+                    "explanation": "Reasoning Gym provides environments for RL with verifiable rewards, which aligns with the source paper's focus on RL environments for LLM agents. However, it does not directly depend on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "7. Table-R1: Inference-Time Scaling for Table Reasoning": {
+                    "explanation": "Table-R1 focuses on inference-time scaling for table reasoning tasks, which is not directly related to the source paper's focus on multi-turn RL for LLM agents.",
+                    "relevance": 0
+                },
+                "8. ToMAP: Training Opponent-Aware LLM Persuaders with Theory of Mind": {
+                    "explanation": "ToMAP explores training LLM persuaders with Theory of Mind, which is a different focus from the source paper's exploration of multi-turn RL for LLM agents.",
+                    "relevance": 0
+                },
+                "9. Pitfalls of Rule- and Model-based Verifiers - A Case Study on Mathematical Reasoning": {
+                    "explanation": "This paper analyzes verifiers in RL training, which could be relevant to the source paper's discussion on reward signals and RL training. However, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "10. VRAG-RL: Empower Vision-Perception-Based RAG for Visually Rich Information Understanding via Iterative Reasoning with Reinforcement Learning": {
+                    "explanation": "VRAG-RL focuses on RL for visually rich information understanding, which is a different application domain from the source paper's focus on LLM agents and multi-turn RL.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. From Passive to Active Reasoning: Can Large Language Models Ask the Right Questions under Incomplete Information?": {
+                    "explanation": "This paper addresses active reasoning in LLMs, which is related to the source paper's exploration of multi-turn RL for LLM agents. Both papers focus on improving LLMs' interactive capabilities, but the connection is more thematic than direct, as the source paper does not specifically address active reasoning.",
+                    "relevance": 1
+                },
+                "2. Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library": {
+                    "explanation": "This paper introduces a library for scalable RL optimization, which could be relevant for implementing the RL strategies discussed in the source paper. However, the connection is more about providing tools rather than building on specific findings or hypotheses from the source paper.",
+                    "relevance": 1
+                },
+                "3. SPARTA ALIGNMENT: Collectively Aligning Multiple Language Models through Combat": {
+                    "explanation": "SPARTA ALIGNMENT focuses on aligning multiple LLMs through competition, which is conceptually related to the source paper's exploration of LLM agents and self-evolution. However, it does not directly depend on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1d03586baa32b3d6ff657a180053821543e11abb",
+            "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+            "abstract": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplored. We propose StarPO (State-Thinking-Actions-Reward Policy Optimization), a general framework for trajectory-level agent RL, and introduce RAGEN, a modular system for training and evaluating LLM agents. Our study on four stylized environments reveals three core findings. First, our agent RL training shows a recurring mode of Echo Trap where reward variance cliffs and gradient spikes; we address this with StarPO-S, a stabilized variant with trajectory filtering, critic incorporation, and gradient stabilization. Second, we find the shaping of RL rollouts would benefit from diverse initial states, medium interaction granularity and more frequent sampling. Third, we show that without fine-grained, reasoning-aware reward signals, agent reasoning hardly emerge through multi-turn RL and they may show shallow strategies or hallucinated thoughts. Code and environments are available at https://github.com/RAGEN-AI/RAGEN.",
+            "year": 2025,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Reinforced Reasoning for Embodied Planning": {
+                    "explanation": "This paper focuses on embodied planning using reinforcement learning, which is related to the source paper's exploration of multi-turn reinforcement learning for LLM agents. However, it specifically targets embodied tasks and does not directly build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "2.WorkForceAgent-R1: Incentivizing Reasoning Capability in LLM-based Web Agents via Reinforcement Learning": {
+                    "explanation": "This paper explores reinforcement learning to enhance reasoning capabilities in LLM-based web agents, which aligns with the source paper's focus on improving LLM agents through reinforcement learning. However, it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "3.SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution": {
+                    "explanation": "SPA-RL addresses the challenge of delayed rewards in RL for LLM agents, which is a topic related to the source paper's exploration of multi-turn RL challenges. The approach of stepwise progress attribution could be seen as partially dependent on the source paper's findings regarding reward shaping in RL for LLM agents.",
+                    "relevance": 2
+                },
+                "4.DoctorAgent-RL: A Multi-Agent Collaborative Reinforcement Learning System for Multi-Turn Clinical Dialogue": {
+                    "explanation": "This paper applies reinforcement learning to multi-turn clinical dialogues, which is a different domain from the source paper. Although it uses RL for multi-turn interactions, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "5.Behavior Injection: Preparing Language Models for Reinforcement Learning": {
+                    "explanation": "Behavior Injection focuses on preparing LLMs for reinforcement learning by enhancing their reasoning capabilities, which is related to the source paper's exploration of RL for LLM agents. However, it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "6.VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable Reinforcement Learning": {
+                    "explanation": "VLA-RL applies reinforcement learning to robotic manipulation tasks, which is a different application area from the source paper. While it uses RL, it does not directly build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "7.The Real Barrier to LLM Agent Usability is Agentic ROI": {
+                    "explanation": "This paper is a position paper discussing the usability of LLM agents, focusing on agentic ROI rather than reinforcement learning techniques. It does not directly relate to the source paper's focus on multi-turn RL for LLM agents.",
+                    "relevance": 0
+                },
+                "8.Tool-Star: Empowering LLM-Brained Multi-Tool Reasoner via Reinforcement Learning": {
+                    "explanation": "Tool-Star explores multi-tool reasoning in LLMs using reinforcement learning, which is related to the source paper's focus on RL for LLM agents. However, it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "9.WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning": {
+                    "explanation": "WebAgent-R1 focuses on training web agents using multi-turn reinforcement learning, which aligns with the source paper's exploration of multi-turn RL for LLM agents. The approach is partially dependent on the source paper's findings regarding multi-turn RL challenges.",
+                    "relevance": 2
+                },
+                "10.ARPO:End-to-End Policy Optimization for GUI Agents with Experience Replay": {
+                    "explanation": "ARPO explores policy optimization for GUI agents using reinforcement learning, which is related to the source paper's focus on RL for LLM agents. However, it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution": {
+                    "explanation": "SPA-RL addresses the challenge of delayed rewards in RL for LLM agents, which is a topic related to the source paper's exploration of multi-turn RL challenges. The approach of stepwise progress attribution could be seen as partially dependent on the source paper's findings regarding reward shaping in RL for LLM agents.",
+                    "relevance": 2
+                },
+                "2.WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning": {
+                    "explanation": "WebAgent-R1 focuses on training web agents using multi-turn reinforcement learning, which aligns with the source paper's exploration of multi-turn RL for LLM agents. The approach is partially dependent on the source paper's findings regarding multi-turn RL challenges.",
+                    "relevance": 2
+                },
+                "3.WorkForceAgent-R1: Incentivizing Reasoning Capability in LLM-based Web Agents via Reinforcement Learning": {
+                    "explanation": "This paper explores reinforcement learning to enhance reasoning capabilities in LLM-based web agents, which aligns with the source paper's focus on improving LLM agents through reinforcement learning. However, it does not directly depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1d03586baa32b3d6ff657a180053821543e11abb",
+            "title": "RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning",
+            "abstract": "Training large language models (LLMs) as interactive agents presents unique challenges including long-horizon decision making and interacting with stochastic environment feedback. While reinforcement learning (RL) has enabled progress in static tasks, multi-turn agent RL training remains underexplored. We propose StarPO (State-Thinking-Actions-Reward Policy Optimization), a general framework for trajectory-level agent RL, and introduce RAGEN, a modular system for training and evaluating LLM agents. Our study on four stylized environments reveals three core findings. First, our agent RL training shows a recurring mode of Echo Trap where reward variance cliffs and gradient spikes; we address this with StarPO-S, a stabilized variant with trajectory filtering, critic incorporation, and gradient stabilization. Second, we find the shaping of RL rollouts would benefit from diverse initial states, medium interaction granularity and more frequent sampling. Third, we show that without fine-grained, reasoning-aware reward signals, agent reasoning hardly emerge through multi-turn RL and they may show shallow strategies or hallucinated thoughts. Code and environments are available at https://github.com/RAGEN-AI/RAGEN.",
+            "year": 2025,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "RAGEN explores multi-turn reinforcement learning for LLM agents, which is directly related to the source paper's focus on multi-turn RL for web agents. It builds on the challenges and findings of WebAgent-R1 regarding long-horizon decision-making."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. lmgame-Bench: How Good are LLMs at Playing Games?": {
+                    "explanation": "This paper focuses on evaluating LLMs in the context of video games, which involves perception, memory, and planning. While it mentions reinforcement learning, the primary focus is on evaluation rather than training LLM agents using RL frameworks like StarPO. Thus, it is not directly connected to the source paper's exploration of multi-turn RL in LLM agents.",
+                    "relevance": 0
+                },
+                "2. An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper explores RL for LLMs in the context of reasoning and search, which aligns with the source paper's focus on RL for LLM agents. It discusses reward formulation and RL dynamics, which are relevant to the source paper's findings on reward signals and agent reasoning. Therefore, it is partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "3. From Problem-Solving to Teaching Problem-Solving: Aligning LLMs with Pedagogy using Reinforcement Learning": {
+                    "explanation": "This paper uses RL to align LLMs with pedagogical goals, focusing on educational applications rather than multi-turn RL agent training. While it involves RL, the specific context and objectives differ from those in the source paper, making it less directly connected.",
+                    "relevance": 0
+                },
+                "4. NOVER: Incentive Training for Language Models via Verifier-Free Reinforcement Learning": {
+                    "explanation": "NOVER proposes a verifier-free RL framework, which relates to the source paper's exploration of RL for LLM agents. The focus on incentive training and RL without external verifiers could be seen as partially dependent on the source paper's findings on RL training dynamics.",
+                    "relevance": 1
+                },
+                "5. Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment": {
+                    "explanation": "This paper directly addresses multi-turn reasoning in LLM agents using RL, which is a core aspect of the source paper. The focus on turn-level credit assignment aligns with the source paper's exploration of multi-turn RL challenges and solutions, making it highly relevant.",
+                    "relevance": 2
+                },
+                "6. Group-in-Group Policy Optimization for LLM Agent Training": {
+                    "explanation": "This paper introduces a new RL algorithm for LLM agent training, focusing on credit assignment in long-horizon tasks. It is relevant to the source paper's exploration of multi-turn RL and trajectory-level optimization, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "7. BLEUBERI: BLEU is a surprisingly effective reward for instruction following": {
+                    "explanation": "BLEUBERI explores the use of BLEU as a reward metric in RL-based alignment, which is a different focus from the source paper's exploration of multi-turn RL training for LLM agents. The connection is minimal as it does not address multi-turn RL challenges or solutions.",
+                    "relevance": 0
+                },
+                "8. Sailing by the Stars: A Survey on Reward Models and Learning Strategies for Learning from Rewards": {
+                    "explanation": "This is a survey paper that provides an overview of learning from rewards in LLMs. It does not present novel hypotheses or findings directly related to the source paper's exploration of multi-turn RL training.",
+                    "relevance": 0
+                },
+                "9. Sailing AI by the Stars: A Survey of Learning from Rewards in Post-Training and Test-Time Scaling of Large Language Models": {
+                    "explanation": "This is a survey paper that discusses learning from rewards in LLMs. It does not provide new hypotheses or findings related to the source paper's focus on multi-turn RL training.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper explores RL for LLMs in the context of reasoning and search, which aligns with the source paper's focus on RL for LLM agents. It discusses reward formulation and RL dynamics, which are relevant to the source paper's findings on reward signals and agent reasoning.",
+                    "relevance": 2
+                },
+                "2. Reinforcing Multi-Turn Reasoning in LLM Agents via Turn-Level Credit Assignment": {
+                    "explanation": "This paper directly addresses multi-turn reasoning in LLM agents using RL, which is a core aspect of the source paper. The focus on turn-level credit assignment aligns with the source paper's exploration of multi-turn RL challenges and solutions.",
+                    "relevance": 2
+                },
+                "3. Group-in-Group Policy Optimization for LLM Agent Training": {
+                    "explanation": "This paper introduces a new RL algorithm for LLM agent training, focusing on credit assignment in long-horizon tasks. It is relevant to the source paper's exploration of multi-turn RL and trajectory-level optimization.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "742d9c80b2ca4d01f8a8675cfe98487e0783d3d7",
+            "title": "Group-in-Group Policy Optimization for LLM Agent Training",
+            "abstract": "Recent advances in group-based reinforcement learning (RL) have driven frontier large language models (LLMs) in single-turn tasks like mathematical reasoning. However, their scalability to long-horizon LLM agent training remains limited. Unlike static tasks, agent-environment interactions unfold over many steps and often yield sparse or delayed rewards, making credit assignment across individual steps significantly more challenging. In this work, we propose Group-in-Group Policy Optimization (GiGPO), a novel RL algorithm that achieves fine-grained credit assignment for LLM agents while preserving the appealing properties of group-based RL: critic-free, low memory, and stable convergence. GiGPO introduces a two-level structure for estimating relative advantage: (i) At the episode-level, GiGPO computes macro relative advantages based on groups of complete trajectories; (ii) At the step-level, GiGPO introduces an anchor state grouping mechanism that retroactively constructs step-level groups by identifying repeated environment states across trajectories. Actions stemming from the same state are grouped together, enabling micro relative advantage estimation. This hierarchical structure effectively captures both global trajectory quality and local step effectiveness without relying on auxiliary models or additional rollouts. We evaluate GiGPO on two challenging agent benchmarks, ALFWorld and WebShop, using Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct. Crucially, GiGPO delivers fine-grained per-step credit signals and achieves performance gains of>12\\% on ALFWorld and>9\\% on WebShop over the GRPO baseline: all while maintaining the same GPU memory overhead, identical LLM rollout, and incurring little to no additional time cost.",
+            "year": 2025,
+            "citation_count": 11,
+            "relevance": 2,
+            "explanation": "This paper introduces a new RL algorithm for LLM agent training, focusing on credit assignment in long-horizon tasks. It is relevant to the source paper's exploration of multi-turn RL and trajectory-level optimization."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Beyond Policy Optimization: A Data Curation Flywheel for Sparse-Reward Long-Horizon Planning": {
+                    "explanation": "This paper addresses the challenges of long-horizon planning in sparse-reward environments, similar to the source paper's focus on long-horizon LLM agent training. However, it introduces a new framework with different techniques, such as a data flywheel and planning quaternions, which are not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.From Stimuli to Minds: Enhancing Psychological Reasoning in LLMs via Bilateral Reinforcement Learning": {
+                    "explanation": "This paper focuses on enhancing psychological reasoning in LLMs, which is a different domain from the source paper's focus on policy optimization for agent training. It does not build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "3.A Survey on AgentOps: Categorization, Challenges, and Future Directions": {
+                    "explanation": "This is a survey paper that categorizes and discusses challenges in agent operations. It does not propose novel hypotheses or findings related to the source paper's focus on policy optimization for LLM agent training.",
+                    "relevance": 0
+                },
+                "4.Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper proposes a novel RL algorithm (ARPO) for training multi-turn LLM-based agents, similar to the source paper's focus on GiGPO for LLM agent training. It builds on the idea of optimizing agentic RL algorithms, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "5.AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents": {
+                    "explanation": "AgentFly introduces a framework for integrating RL with LM agents, which aligns with the source paper's focus on RL for LLM agents. However, it primarily focuses on the framework rather than specific policy optimization techniques, making it inspired by the source paper's domain.",
+                    "relevance": 1
+                },
+                "6.MobileGUI-RL: Advancing Mobile GUI Agent through Reinforcement Learning in Online Environment": {
+                    "explanation": "This paper focuses on GUI agents and their training in online environments, which is a different application domain from the source paper's focus on LLM agent training. It does not build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "7.Deep Research Comparator: A Platform For Fine-grained Human Annotations of Deep Research Agents": {
+                    "explanation": "This paper introduces a platform for evaluating deep research agents, which is unrelated to the source paper's focus on policy optimization for LLM agent training.",
+                    "relevance": 0
+                },
+                "8.MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent": {
+                    "explanation": "MemAgent focuses on handling long-context tasks with memory agents, which is a different approach from the source paper's policy optimization for LLM agents. It does not directly build on the source paper's findings.",
+                    "relevance": 0
+                },
+                "9.L0: Reinforcement Learning to Become General Agents": {
+                    "explanation": "L0 introduces a scalable training pipeline for general-purpose agents, which aligns with the source paper's focus on RL for LLM agents. However, it uses a different approach and does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "10.Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library": {
+                    "explanation": "This paper introduces ROLL, a library for RL optimization, which is related to the source paper's domain but focuses on scaling and efficiency rather than policy optimization techniques specific to LLM agents.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper proposes a novel RL algorithm (ARPO) for training multi-turn LLM-based agents, similar to the source paper's focus on GiGPO for LLM agent training. It builds on the idea of optimizing agentic RL algorithms, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.Beyond Policy Optimization: A Data Curation Flywheel for Sparse-Reward Long-Horizon Planning": {
+                    "explanation": "This paper addresses the challenges of long-horizon planning in sparse-reward environments, similar to the source paper's focus on long-horizon LLM agent training. However, it introduces a new framework with different techniques, such as a data flywheel and planning quaternions, which are not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.AgentFly: Extensible and Scalable Reinforcement Learning for LM Agents": {
+                    "explanation": "AgentFly introduces a framework for integrating RL with LM agents, which aligns with the source paper's focus on RL for LLM agents. However, it primarily focuses on the framework rather than specific policy optimization techniques, making it inspired by the source paper's domain.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "742d9c80b2ca4d01f8a8675cfe98487e0783d3d7",
+            "title": "Group-in-Group Policy Optimization for LLM Agent Training",
+            "abstract": "Recent advances in group-based reinforcement learning (RL) have driven frontier large language models (LLMs) in single-turn tasks like mathematical reasoning. However, their scalability to long-horizon LLM agent training remains limited. Unlike static tasks, agent-environment interactions unfold over many steps and often yield sparse or delayed rewards, making credit assignment across individual steps significantly more challenging. In this work, we propose Group-in-Group Policy Optimization (GiGPO), a novel RL algorithm that achieves fine-grained credit assignment for LLM agents while preserving the appealing properties of group-based RL: critic-free, low memory, and stable convergence. GiGPO introduces a two-level structure for estimating relative advantage: (i) At the episode-level, GiGPO computes macro relative advantages based on groups of complete trajectories; (ii) At the step-level, GiGPO introduces an anchor state grouping mechanism that retroactively constructs step-level groups by identifying repeated environment states across trajectories. Actions stemming from the same state are grouped together, enabling micro relative advantage estimation. This hierarchical structure effectively captures both global trajectory quality and local step effectiveness without relying on auxiliary models or additional rollouts. We evaluate GiGPO on two challenging agent benchmarks, ALFWorld and WebShop, using Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct. Crucially, GiGPO delivers fine-grained per-step credit signals and achieves performance gains of>12\\% on ALFWorld and>9\\% on WebShop over the GRPO baseline: all while maintaining the same GPU memory overhead, identical LLM rollout, and incurring little to no additional time cost.",
+            "year": 2025,
+            "citation_count": 11,
+            "relevance": 2,
+            "explanation": "This paper introduces a new RL algorithm for LLM agent training, focusing on credit assignment in long-horizon tasks. It is relevant to the source paper's exploration of multi-turn RL and trajectory-level optimization."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Large Language Models for Planning: A Comprehensive and Systematic Survey": {
+                    "explanation": "This paper is a systematic review of LLM-based planning methodologies. It does not present novel hypotheses or findings but rather summarizes existing literature, categorizes methodologies, and discusses evaluation frameworks. As such, it does not directly build upon or depend on the findings of the source paper, which introduces a novel RL algorithm for LLM agent training.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

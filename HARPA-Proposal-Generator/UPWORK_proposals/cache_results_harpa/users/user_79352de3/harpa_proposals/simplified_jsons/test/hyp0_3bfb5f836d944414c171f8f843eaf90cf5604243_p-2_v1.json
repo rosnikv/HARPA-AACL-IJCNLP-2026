@@ -1,0 +1,157 @@
+{
+  "paper_id": "3bfb5f836d944414c171f8f843eaf90cf5604243",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "CoNLL-2003 Dataset Loading",
+      "criteria_met_question": "Does the experiment successfully load and preprocess the CoNLL-2003 dataset for named entity recognition, including proper train/validation/test splits?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "BiLSTM-CRF Baseline Model Implementation",
+      "criteria_met_question": "Does the experiment implement a BiLSTM-CRF model architecture specifically for named entity recognition that can serve as the baseline for all noise distribution experiments?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Gaussian Noise Implementation",
+      "criteria_met_question": "Does the experiment implement a differentiable perturbed optimizer with Gaussian noise distribution that can be applied to the BiLSTM-CRF model?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Chi-square Noise Implementation",
+      "criteria_met_question": "Does the experiment implement a differentiable perturbed optimizer with Chi-square noise distribution, including proper sampling and injection into the gradient calculations?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cauchy Noise Implementation",
+      "criteria_met_question": "Does the experiment implement a differentiable perturbed optimizer with Cauchy noise distribution, including proper sampling and application to model inputs?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "No-Noise Control Implementation",
+      "criteria_met_question": "Does the experiment implement a control condition where the BiLSTM-CRF model is trained without any noise injection?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Precision Metric Calculation",
+      "criteria_met_question": "Does the experiment calculate precision metrics for each noise distribution condition (Gaussian, Chi-square, Cauchy, and no-noise) on the CoNLL-2003 test set?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Recall Metric Calculation",
+      "criteria_met_question": "Does the experiment calculate recall metrics for each noise distribution condition (Gaussian, Chi-square, Cauchy, and no-noise) on the CoNLL-2003 test set?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance testing (e.g., t-tests or ANOVA) to compare the precision and recall metrics across the different noise distribution conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Confidence Intervals",
+      "criteria_met_question": "Does the experiment calculate and report confidence intervals for the precision and recall metrics for each noise distribution condition?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment conduct multiple runs (at least 3) with different random seeds to ensure statistical reliability of the results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Effect Size Calculation",
+      "criteria_met_question": "Does the experiment calculate effect sizes (e.g., Cohen's d) to quantify the magnitude of differences in precision and recall between noise distribution conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Hyperparameter Tuning",
+      "criteria_met_question": "Does the experiment perform hyperparameter tuning for each noise distribution condition to ensure fair comparison (e.g., tuning learning rate, noise scale, etc.)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Entity Type Analysis",
+      "criteria_met_question": "Does the experiment analyze and report precision and recall metrics broken down by entity type (e.g., person, location, organization) for each noise distribution condition?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "F1 Score Calculation",
+      "criteria_met_question": "Does the experiment calculate and report F1 scores (harmonic mean of precision and recall) for each noise distribution condition?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Training Convergence Analysis",
+      "criteria_met_question": "Does the experiment analyze and compare the training convergence rates (e.g., loss curves, validation metrics over epochs) across different noise distribution conditions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Comparison",
+      "criteria_met_question": "Does the experiment measure and compare the computational efficiency (e.g., training time, memory usage) of the different noise distribution implementations?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include a qualitative error analysis examining specific cases where one noise distribution performs better than others?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Noise Distribution Parameter Sensitivity",
+      "criteria_met_question": "Does the experiment analyze the sensitivity of model performance to different parameter settings of the Chi-square and Cauchy distributions (e.g., degrees of freedom, scale parameters)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of Results",
+      "criteria_met_question": "Does the experiment include visualizations (e.g., bar charts, box plots) comparing precision and recall across noise distribution conditions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Cross-Dataset Validation",
+      "criteria_met_question": "Does the experiment validate the findings on an additional NER dataset beyond CoNLL-2003 (e.g., OntoNotes, WNUT)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Ablation Studies",
+      "criteria_met_question": "Does the experiment include ablation studies to isolate the effects of specific components of the noise distribution implementations?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Skewed Data Analysis",
+      "criteria_met_question": "Does the experiment specifically analyze performance on subsets of the data with skewed distributions to test the hypothesis about Chi-square noise's effectiveness?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Outlier Analysis",
+      "criteria_met_question": "Does the experiment specifically analyze performance on data points with outlier characteristics to test the hypothesis about Cauchy noise's effectiveness with outliers?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Explores Chi-square and Cauchy noise in optimizers for improved NER precision and recall.",
+    "research_idea_hypothesis": "The use of Chi-square and Cauchy noise distributions in differentiable perturbed optimizers will result in improved precision and recall for named entity recognition tasks compared to Gaussian noise distribution.",
+    "description": "This research explores the impact of Chi-square and Cauchy noise distributions in differentiable perturbed optimizers on named entity recognition (NER) tasks. While Gaussian noise is commonly used for its smoothness and symmetry, Chi-square and Cauchy distributions offer unique characteristics that may enhance model performance in specific scenarios. The Chi-square distribution, with its skewness, could improve model robustness in datasets with skewed distributions, while the Cauchy distribution, known for its heavy tails, may provide resilience against extreme outliers. This study will implement these noise distributions in a BiLSTM-CRF model for NER, evaluating their effects on precision and recall using the CoNLL-2003 dataset. The hypothesis posits that these alternative noise distributions will enhance precision and recall compared to Gaussian noise, addressing gaps in handling skewed data and outliers. The expected outcome is a deeper understanding of how different noise distributions can be leveraged to improve sequence labeling tasks, providing a foundation for further exploration in noise-aware training strategies.",
+    "research_gap": "Existing methods predominantly explore Gaussian, Laplace, and Uniform noise distributions in differentiable perturbed optimizers for sequence labeling tasks. However, the potential of Chi-square and Cauchy distributions remains underexplored, particularly in scenarios requiring robustness to skewness and extreme outliers. This hypothesis addresses the gap by investigating the impact of Chi-square and Cauchy noise distributions on precision and recall in named entity recognition tasks, offering insights into their suitability for handling skewed data and outlier resistance.",
+    "research_idea_variables": "[Chi-square Noise Distribution](https://www.semanticscholar.org/paper/171ac4e960362ea4383abaf9985e282317257eb1): The Chi-square distribution is characterized by its skewness, making it suitable for scenarios where noise needs to reflect specific statistical properties. In this experiment, Chi-square noise will be applied to the gradient calculations in differentiable perturbed optimizers. This distribution is expected to improve model robustness in datasets with skewed distributions, potentially enhancing precision and recall in NER tasks. The implementation involves sampling noise from a Chi-square distribution and injecting it into the model parameters. The effectiveness of this approach will be measured by comparing precision and recall metrics against those obtained with Gaussian noise.\n\n[Cauchy Noise Distribution](https://www.semanticscholar.org/paper/2991d639e7c4a135d87a21001e318c60abcd2fde): The Cauchy distribution is known for its heavy tails and undefined variance, providing robustness against extreme outliers. In this study, Cauchy noise will be injected into differentiable perturbed optimizers to assess its impact on NER tasks. The heavy-tailed nature of the Cauchy distribution is expected to enhance model performance in datasets with significant outliers, potentially improving precision and recall. The implementation involves sampling noise from a Cauchy distribution and applying it to the model inputs. The success of this approach will be evaluated by comparing precision and recall metrics to those achieved with Gaussian noise.",
+    "Explanation": "Chi-square noise, with its skewness, is expected to improve model robustness in skewed datasets by better reflecting statistical properties. Cauchy noise, known for its heavy tails, enhances resilience against extreme outliers, potentially improving precision and recall. The CoNLL-2003 dataset provides a suitable benchmark for evaluating these effects, given its established use in NER tasks.",
+    "research_idea_long_description": "Chi-square noise is expected to enhance precision by aligning with skewed data distributions, while Cauchy noise improves recall by mitigating outlier effects. These distributions are integrated into the optimizer's noise injection process, influencing gradient calculations and input perturbations, respectively.",
+    "research_idea_design_prompt": "The proposed method involves implementing Chi-square and Cauchy noise distributions in differentiable perturbed optimizers for NER tasks. The process begins by selecting a BiLSTM-CRF model as the baseline, which will be trained on the CoNLL-2003 dataset. The Chi-square noise distribution will be applied by sampling noise from a Chi-square distribution and injecting it into the model's gradient calculations. This involves replacing the Gaussian noise sampling process with Chi-square sampling, ensuring the noise reflects the distribution's skewness. Similarly, the Cauchy noise distribution will be implemented by sampling noise from a Cauchy distribution and applying it to the model inputs. This step leverages the heavy-tailed nature of the Cauchy distribution to enhance robustness against outliers. The model's performance will be evaluated by measuring precision and recall, comparing results across Gaussian, Chi-square, and Cauchy noise distributions. The hypothesis will be tested by analyzing the impact of these noise distributions on NER tasks, focusing on improvements in precision and recall. The expected outcome is a demonstration of the benefits of using Chi-square and Cauchy noise distributions in scenarios requiring robustness to skewness and outliers.",
+    "research_idea_elements": "Independent variable: Chi-square and Cauchy noise distributions in differentiable perturbed optimizers\n\nDependent variable: precision and recall for named entity recognition tasks\n\nComparison groups: BiLSTM-CRF models with different noise distributions (Chi-square, Cauchy, Gaussian, and no noise)\n\nBaseline/control: Gaussian noise distribution in differentiable perturbed optimizers\n\nContext/setting: Named entity recognition tasks using BiLSTM-CRF model on CoNLL-2003 dataset\n\nAssumptions: Different noise distributions affect model performance differently based on their statistical properties; Chi-square's skewness improves handling of skewed data; Cauchy's heavy tails provide resilience against outliers\n\nRelationship type: Causal (the noise distributions will cause improved performance)\n\nPopulation: Named entity recognition models using BiLSTM-CRF architecture\n\nTimeframe: Training periods varying from 2-20 epochs depending on experiment phase (mini-pilot, pilot, or full experiment)\n\nMeasurement method: Precision and recall metrics calculated on the CoNLL-2003 dataset with statistical significance testing and confidence intervals",
+    "motivation": "The source paper is [Paper 0: Learning with Differentiable Perturbed Optimizers](https://www.semanticscholar.org/paper/3bfb5f836d944414c171f8f843eaf90cf5604243) (109 citations, 2020). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/261d452ee4fed6a0b4e791f7efe63df8257e51da). The analysis reveals a progression from the source paper's introduction of differentiable perturbed optimizers to the application of these concepts in structured prediction with randomized score functions. The existing work has demonstrated the potential of using noise to enable differentiability and improve learning in structured tasks. However, there remains an opportunity to explore the impact of different noise distributions on the performance of these systems. By investigating how various noise distributions affect the balance between signal and noise in differentiable optimizers, we can potentially enhance the robustness and adaptability of machine learning models in structured prediction tasks.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test whether Chi-square and Cauchy noise distributions in differentiable perturbed optimizers improve precision and recall for named entity recognition (NER) tasks compared to Gaussian noise distribution.\n\n## Experiment Overview\nThis experiment will compare three different noise distributions (Gaussian, Chi-square, and Cauchy) in differentiable perturbed optimizers for a BiLSTM-CRF model on the CoNLL-2003 NER dataset. The hypothesis is that Chi-square and Cauchy noise distributions will outperform Gaussian noise in terms of precision and recall metrics.\n\n## Pilot Mode Settings\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`. The experiment should start in `MINI_PILOT` mode, and only proceed to `PILOT` if the mini-pilot is successful. Do not run the `FULL_EXPERIMENT` automatically - this will be manually triggered after human verification.\n\n- **MINI_PILOT**: Use only 100 sentences from the CoNLL-2003 training set for training and 50 sentences from the development set for evaluation. Train for 2 epochs with a batch size of 16.\n- **PILOT**: Use 2000 sentences from the CoNLL-2003 training set for training and 500 sentences from the development set for evaluation. Train for 5 epochs with a batch size of 32.\n- **FULL_EXPERIMENT**: Use the entire CoNLL-2003 dataset (training, development, and test sets). Train for 20 epochs with a batch size of 64. Perform final evaluation on the test set.\n\n## Model Implementation\n1. Implement a BiLSTM-CRF model for NER using PyTorch:\n   - Use pre-trained word embeddings (GloVe or similar)\n   - Implement a bidirectional LSTM layer\n   - Add a CRF layer for sequence labeling\n\n2. Implement three different noise distributions for the optimizer:\n   - **Baseline 1**: Standard BiLSTM-CRF model without noise injection\n   - **Baseline 2**: BiLSTM-CRF model with Gaussian noise injection\n   - **Experimental 1**: BiLSTM-CRF model with Chi-square noise injection\n   - **Experimental 2**: BiLSTM-CRF model with Cauchy noise injection\n\n3. For each noise distribution, implement the following:\n   - **Gaussian Noise**: Sample noise from a normal distribution with mean 0 and standard deviation 0.01\n   - **Chi-square Noise**: Sample noise from a Chi-square distribution with degrees of freedom k=2 (scaled appropriately to match the magnitude of Gaussian noise)\n   - **Cauchy Noise**: Sample noise from a Cauchy distribution with location parameter x0=0 and scale parameter \u03b3=0.01\n\n4. Inject the noise into the optimizer in two ways:\n   - For gradient calculations: Add noise to the gradients before the parameter update\n   - For model inputs: Add noise to the input embeddings during training\n\n## Data Processing\n1. Load and preprocess the CoNLL-2003 dataset:\n   - Split into training, development, and test sets (if not already split)\n   - Convert text and labels to appropriate tensor formats\n   - Create data loaders for batch processing\n\n2. Implement data sampling based on the current PILOT_MODE\n\n## Training Procedure\n1. For each noise distribution (None, Gaussian, Chi-square, Cauchy):\n   - Initialize the BiLSTM-CRF model with the same random seed\n   - Train the model on the training set for the specified number of epochs\n   - Evaluate on the development set after each epoch\n   - Save the model with the best performance on the development set\n\n2. Training parameters:\n   - Learning rate: 0.001\n   - Optimizer: Adam\n   - Early stopping: If no improvement in F1 score for 3 consecutive epochs\n\n## Evaluation\n1. Calculate the following metrics for each model:\n   - Precision (overall and per entity type)\n   - Recall (overall and per entity type)\n   - F1 score (overall and per entity type)\n\n2. Perform statistical analysis:\n   - Calculate confidence intervals for precision and recall using bootstrap resampling\n   - Perform significance testing to compare the performance of different noise distributions\n   - Calculate effect sizes to quantify the magnitude of improvements\n\n## Output and Visualization\n1. Generate tables comparing the performance of different noise distributions\n2. Create plots showing:\n   - Training and validation loss curves\n   - Precision, recall, and F1 scores for each model\n   - Confidence intervals for the metrics\n\n3. Generate a detailed report including:\n   - Experimental setup and methodology\n   - Results and statistical analysis\n   - Discussion of findings and implications\n\n## Implementation Details\n1. For Chi-square noise sampling:\n   - Use scipy.stats.chi2.rvs to generate samples\n   - Scale the samples to match the magnitude of Gaussian noise\n   - Apply the noise to gradients during backpropagation\n\n2. For Cauchy noise sampling:\n   - Use scipy.stats.cauchy.rvs to generate samples\n   - Apply the noise to model inputs during training\n\n3. For the BiLSTM-CRF model:\n   - Use a bidirectional LSTM with hidden size 256\n   - Add dropout with probability 0.5\n   - Use a CRF layer for sequence labeling\n\n## Required Libraries\n- PyTorch for model implementation\n- NumPy for numerical computations\n- SciPy for statistical functions and noise sampling\n- Matplotlib and Seaborn for visualization\n- scikit-learn for additional evaluation metrics\n\nPlease implement this experiment and run it first in MINI_PILOT mode. If successful, proceed to PILOT mode, but stop before FULL_EXPERIMENT mode. Report all results, including training curves, evaluation metrics, and statistical analyses.",
+  "core_related_works": [
+    {
+      "title": "Maximum Correntropy Criterion With Variable Center",
+      "paperId": "171ac4e960362ea4383abaf9985e282317257eb1",
+      "url": "https://www.semanticscholar.org/paper/171ac4e960362ea4383abaf9985e282317257eb1",
+      "year": 2019,
+      "source_variable": "Chi-square Noise Distribution",
+      "source_paper_lookup_title": "Maximum Correntropy Criterion With Variable Center"
+    },
+    {
+      "title": "Effortless, Simulation-Efficient Bayesian Inference using Tabular Foundation Models",
+      "paperId": "2991d639e7c4a135d87a21001e318c60abcd2fde",
+      "url": "https://www.semanticscholar.org/paper/2991d639e7c4a135d87a21001e318c60abcd2fde",
+      "year": 2025,
+      "source_variable": "Cauchy Noise Distribution",
+      "source_paper_lookup_title": "Effortless, Simulation-Efficient Bayesian Inference using Tabular Foundation Models"
+    }
+  ],
+  "references": "1. Learning with Differentiable Perturbed Optimizers (2020). Paper ID: 3bfb5f836d944414c171f8f843eaf90cf5604243\n\n2. Learning Randomly Perturbed Structured Predictors for Direct Loss Minimization (2020). Paper ID: 261d452ee4fed6a0b4e791f7efe63df8257e51da\n\n3. A diffusion enhanced CRF and BiLSTM framework for accurate entity recognition (2023). Paper ID: 8131b1667f29597d5781fb414fbc89f2d0de2683\n\n4. GIFT-SW: Gaussian noise Injected Fine-Tuning of Salient Weights for LLMs (2024). Paper ID: d29e8cc00b8467380a46646858fa3c87b76881a1\n\n5. NAT: Noise-Aware Training for Robust Neural Sequence Labeling (2020). Paper ID: 99314a532a3358cb86064fc8917ed2c283227539\n\n6. Not All Noises Are Created Equally: Diffusion Noise Selection and Optimization (2024). Paper ID: e43aecf29442607d3d8efa7d5d0b7be1e084e706\n\n7. Adaptive Resampling with Bootstrap for Noisy Multi-Objective Optimization Problems (2025). Paper ID: 20c39951cdb5d486eb27cd98ffbb7f3cb498d940\n\n8. Maximum Correntropy Criterion With Variable Center (2019). Paper ID: 171ac4e960362ea4383abaf9985e282317257eb1\n\n9. Effortless, Simulation-Efficient Bayesian Inference using Tabular Foundation Models (2025). Paper ID: 2991d639e7c4a135d87a21001e318c60abcd2fde"
+}

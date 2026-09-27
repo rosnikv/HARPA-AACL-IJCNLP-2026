@@ -1,0 +1,739 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "09b2a0f0d7c1164ab334e13e70eb0d65b5b96393",
+            "pmid": "2505.03335",
+            "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+            "abstract": "Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works that operate under the zero setting avoid supervision in labeling the reasoning process, but still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision, a challenge already evident in the domain of language model pretraining. Furthermore, in a hypothetical future where AI surpasses human intelligence, tasks provided by humans may offer limited learning potential for a superintelligent system. To address these concerns, we propose a new RLVR paradigm called Absolute Zero, in which a single model learns to propose tasks that maximize its own learning progress and improves reasoning by solving them, without relying on any external data. Under this paradigm, we introduce the Absolute Zero Reasoner (AZR), a system that self-evolves its training curriculum and reasoning ability by using a code executor to both validate proposed code reasoning tasks and verify answers, serving as an unified source of verifiable reward to guide open-ended yet grounded learning. Despite being trained entirely without external data, AZR achieves overall SOTA performance on coding and mathematical reasoning tasks, outperforming existing zero-setting models that rely on tens of thousands of in-domain human-curated examples. Furthermore, we demonstrate that AZR can be effectively applied across different model scales and is compatible with various model classes.",
+            "year": 2025,
+            "citation_count": 41
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Maximizing Prefix-Confidence at Test-Time Efficiently Improves Mathematical Reasoning": {
+                    "explanation": "This paper explores a method for improving mathematical reasoning in language models by maximizing the model's own confidence, which is a different approach from the self-evolving curriculum and reasoning in the Absolute Zero paradigm. It does not rely on the findings or hypotheses from the source paper.",
+                    "relevance": 0
+                },
+                "2. The Invisible Leash: Why RLVR May Not Escape Its Origin": {
+                    "explanation": "This paper critically examines the limitations of RLVR, which is directly related to the source paper's exploration of RLVR without external data. It provides theoretical and empirical insights into RLVR's constraints, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. ExCyTIn-Bench: Evaluating LLM agents on Cyber Threat Investigation": {
+                    "explanation": "This paper introduces a benchmark for evaluating LLMs in cyber threat investigation, which is unrelated to the self-evolving reasoning and RLVR paradigm discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination": {
+                    "explanation": "This paper addresses the reliability of reinforcement learning results due to data contamination, which is not directly related to the self-evolving reasoning paradigm of the source paper.",
+                    "relevance": 0
+                },
+                "5. SciMaster: Towards General-Purpose Scientific AI Agents, Part I. X-Master as Foundation: Can We Lead on Humanity's Last Exam?": {
+                    "explanation": "This paper discusses the development of general-purpose scientific AI agents, which is a broader topic not directly connected to the specific RLVR paradigm of the source paper.",
+                    "relevance": 0
+                },
+                "6. RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents": {
+                    "explanation": "While this paper explores RLVR in the context of emotional intelligence, it does not build upon or depend on the specific self-evolving reasoning paradigm introduced in the source paper.",
+                    "relevance": 0
+                },
+                "7. Can Large Language Models Develop Strategic Reasoning? Post-training Insights from Learning Chess": {
+                    "explanation": "This paper investigates strategic reasoning in LLMs using RL in chess, which is not directly related to the self-evolving reasoning paradigm of the source paper.",
+                    "relevance": 0
+                },
+                "8. SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning": {
+                    "explanation": "SPIRAL introduces a self-play framework for reasoning development, which is similar in spirit to the self-evolving curriculum of the Absolute Zero paradigm, but it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "9. Objective-Free Local Learning and Emergent Language Structure in Thinking Machines": {
+                    "explanation": "This paper presents a neuro-symbolic framework for language modeling, which is unrelated to the RLVR and self-evolving reasoning paradigm discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. Direct Reasoning Optimization: LLMs Can Reward And Refine Their Own Reasoning for Open-Ended Tasks": {
+                    "explanation": "This paper proposes a framework for reasoning optimization in open-ended tasks, which aligns with the source paper's focus on self-improvement without external data, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. The Invisible Leash: Why RLVR May Not Escape Its Origin": {
+                    "explanation": "This paper critically examines RLVR, directly related to the source paper's exploration of RLVR without external data, providing insights into RLVR's constraints.",
+                    "relevance": 2
+                },
+                "2. Direct Reasoning Optimization: LLMs Can Reward And Refine Their Own Reasoning for Open-Ended Tasks": {
+                    "explanation": "This paper proposes a reasoning optimization framework that aligns with the source paper's focus on self-improvement without external data.",
+                    "relevance": 2
+                },
+                "3. SPIRAL: Self-Play on Zero-Sum Games Incentivizes Reasoning via Multi-Agent Multi-Turn Reinforcement Learning": {
+                    "explanation": "SPIRAL introduces a self-play framework for reasoning development, similar in spirit to the self-evolving curriculum of the Absolute Zero paradigm.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "09b2a0f0d7c1164ab334e13e70eb0d65b5b96393",
+            "pmid": "2505.03335",
+            "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+            "abstract": "Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works that operate under the zero setting avoid supervision in labeling the reasoning process, but still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision, a challenge already evident in the domain of language model pretraining. Furthermore, in a hypothetical future where AI surpasses human intelligence, tasks provided by humans may offer limited learning potential for a superintelligent system. To address these concerns, we propose a new RLVR paradigm called Absolute Zero, in which a single model learns to propose tasks that maximize its own learning progress and improves reasoning by solving them, without relying on any external data. Under this paradigm, we introduce the Absolute Zero Reasoner (AZR), a system that self-evolves its training curriculum and reasoning ability by using a code executor to both validate proposed code reasoning tasks and verify answers, serving as an unified source of verifiable reward to guide open-ended yet grounded learning. Despite being trained entirely without external data, AZR achieves overall SOTA performance on coding and mathematical reasoning tasks, outperforming existing zero-setting models that rely on tens of thousands of in-domain human-curated examples. Furthermore, we demonstrate that AZR can be effectively applied across different model scales and is compatible with various model classes.",
+            "year": 2025,
+            "citation_count": 41
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. From Emergence to Control: Probing and Modulating Self-Reflection in Language Models": {
+                    "explanation": "This paper explores self-reflection in language models, a concept that is related to reinforcement learning with verifiable rewards (RLVR). While it builds on the idea of RLVR, it does not directly depend on the Absolute Zero paradigm or its findings.",
+                    "relevance": 1
+                },
+                "2. Spurious Rewards: Rethinking Training Signals in RLVR": {
+                    "explanation": "This paper directly discusses RLVR and explores the effects of spurious rewards, which is closely related to the source paper's focus on RLVR without external data. The findings about spurious rewards could be partially dependent on the Absolute Zero framework's approach to learning without traditional supervision.",
+                    "relevance": 2
+                },
+                "3. RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling": {
+                    "explanation": "While this paper discusses reinforcement learning and reasoning, it focuses on rule-based reasoning and dynamic sampling, which are not directly related to the Absolute Zero paradigm of self-evolving training without external data.",
+                    "relevance": 0
+                },
+                "4. Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models": {
+                    "explanation": "This paper focuses on safety alignment through self-play reinforcement learning, which is a different application of reinforcement learning compared to the Absolute Zero paradigm. It does not directly relate to the source paper's focus on self-evolving reasoning without external data.",
+                    "relevance": 0
+                },
+                "5. Confidence Is All You Need: Few-Shot RL Fine-Tuning of Language Models": {
+                    "explanation": "This paper introduces a novel RL method using self-confidence as reward signals, which aligns with the source paper's theme of reducing reliance on external data. However, it does not directly build on the Absolute Zero paradigm.",
+                    "relevance": 1
+                },
+                "6. SAGE:Specification-Aware Grammar Extraction for Automated Test Case Generation with LLMs": {
+                    "explanation": "This paper focuses on grammar extraction and test case generation using reinforcement learning, which is not directly related to the Absolute Zero paradigm of self-evolving reasoning without external data.",
+                    "relevance": 0
+                },
+                "7. Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning": {
+                    "explanation": "This paper explores token entropy in RLVR, which is relevant to the source paper's focus on RLVR. The findings about token entropy could be partially dependent on the Absolute Zero framework's approach to learning without traditional supervision.",
+                    "relevance": 2
+                },
+                "8. REASONING GYM: Reasoning Environments for Reinforcement Learning with Verifiable Rewards": {
+                    "explanation": "This paper introduces a library for RLVR environments, which could be used in the context of the Absolute Zero paradigm. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "9. Jigsaw-R1: A Study of Rule-based Visual Reinforcement Learning with Jigsaw Puzzles": {
+                    "explanation": "This paper focuses on rule-based visual reinforcement learning in a multimodal context, which is not directly related to the Absolute Zero paradigm of self-evolving reasoning without external data.",
+                    "relevance": 0
+                },
+                "10. Can Large Reasoning Models Self-Train?": {
+                    "explanation": "This paper explores self-training in large reasoning models, which aligns with the source paper's theme of reducing reliance on human supervision. It is partially dependent on the Absolute Zero paradigm's approach to self-evolving reasoning.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Spurious Rewards: Rethinking Training Signals in RLVR": {
+                    "explanation": "This paper directly discusses RLVR and explores the effects of spurious rewards, which is closely related to the source paper's focus on RLVR without external data. The findings about spurious rewards could be partially dependent on the Absolute Zero framework's approach to learning without traditional supervision.",
+                    "relevance": 2
+                },
+                "2. Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning": {
+                    "explanation": "This paper explores token entropy in RLVR, which is relevant to the source paper's focus on RLVR. The findings about token entropy could be partially dependent on the Absolute Zero framework's approach to learning without traditional supervision.",
+                    "relevance": 2
+                },
+                "3. Can Large Reasoning Models Self-Train?": {
+                    "explanation": "This paper explores self-training in large reasoning models, which aligns with the source paper's theme of reducing reliance on human supervision. It is partially dependent on the Absolute Zero paradigm's approach to self-evolving reasoning.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "09b2a0f0d7c1164ab334e13e70eb0d65b5b96393",
+            "pmid": "2505.03335",
+            "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+            "abstract": "Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works that operate under the zero setting avoid supervision in labeling the reasoning process, but still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision, a challenge already evident in the domain of language model pretraining. Furthermore, in a hypothetical future where AI surpasses human intelligence, tasks provided by humans may offer limited learning potential for a superintelligent system. To address these concerns, we propose a new RLVR paradigm called Absolute Zero, in which a single model learns to propose tasks that maximize its own learning progress and improves reasoning by solving them, without relying on any external data. Under this paradigm, we introduce the Absolute Zero Reasoner (AZR), a system that self-evolves its training curriculum and reasoning ability by using a code executor to both validate proposed code reasoning tasks and verify answers, serving as an unified source of verifiable reward to guide open-ended yet grounded learning. Despite being trained entirely without external data, AZR achieves overall SOTA performance on coding and mathematical reasoning tasks, outperforming existing zero-setting models that rely on tens of thousands of in-domain human-curated examples. Furthermore, we demonstrate that AZR can be effectively applied across different model scales and is compatible with various model classes.",
+            "year": 2025,
+            "citation_count": 41
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Learning to Reason without External Rewards": {
+                    "explanation": "This paper explores a framework that enables learning from intrinsic signals without external rewards, which is conceptually similar to the Absolute Zero paradigm that avoids external data. However, it does not directly rely on the findings of the source paper, but rather shares a thematic connection.",
+                    "relevance": 1
+                },
+                "2. DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning": {
+                    "explanation": "While this paper discusses automated curricula for sparse-reward RL, it does not directly build upon the Absolute Zero paradigm or its findings. The focus is more on exploration strategies rather than self-evolving training curricula without external data.",
+                    "relevance": 0
+                },
+                "3. Get Experience from Practice: LLM Agents with Record & Replay": {
+                    "explanation": "This paper introduces a record-and-replay mechanism for AI agents, which is not directly related to the self-evolving, data-independent learning approach of the Absolute Zero Reasoner.",
+                    "relevance": 0
+                },
+                "4. Outcome-based Reinforcement Learning to Predict the Future": {
+                    "explanation": "This paper extends RLVR to real-world forecasting, which is related to the source paper's RLVR context. However, it focuses on a different application domain (forecasting) and does not depend on the specific findings of the Absolute Zero paradigm.",
+                    "relevance": 1
+                },
+                "5. Self-Training Large Language Models with Confident Reasoning": {
+                    "explanation": "The paper explores self-training methods for LLMs using confidence-based reasoning, which aligns with the self-improving aspect of the Absolute Zero Reasoner. However, it does not rely on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. Dynamic Risk Assessments for Offensive Cybersecurity Agents": {
+                    "explanation": "This paper focuses on cybersecurity risk assessments, which is unrelated to the self-evolving, data-independent learning approach of the Absolute Zero Reasoner.",
+                    "relevance": 0
+                },
+                "7. SSR-Zero: Simple Self-Rewarding Reinforcement Learning for Machine Translation": {
+                    "explanation": "SSR-Zero explores a self-rewarding RL framework for machine translation, which shares the self-rewarding aspect with Absolute Zero. However, it does not rely on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "8. Advancing the Scientific Method with Large Language Models: From Hypothesis to Discovery": {
+                    "explanation": "This is a review paper discussing the role of LLMs in scientific research, which does not present novel hypotheses or findings directly related to the Absolute Zero paradigm.",
+                    "relevance": 0
+                },
+                "9. Reasoning Model is Stubborn: Diagnosing Instruction Overriding in Reasoning Models": {
+                    "explanation": "This paper investigates reasoning rigidity in LLMs, which is not directly related to the self-evolving, data-independent learning approach of the Absolute Zero Reasoner.",
+                    "relevance": 0
+                },
+                "10. Thought-Augmented Policy Optimization: Bridging External Guidance and Internal Capabilities": {
+                    "explanation": "TAPO introduces external guidance into RL, which contrasts with the Absolute Zero approach of avoiding external data. It does not rely on the findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Learning to Reason without External Rewards": {
+                    "explanation": "This paper explores a framework that enables learning from intrinsic signals without external rewards, which is conceptually similar to the Absolute Zero paradigm that avoids external data. However, it does not directly rely on the findings of the source paper, but rather shares a thematic connection.",
+                    "relevance": 1
+                },
+                "2. Outcome-based Reinforcement Learning to Predict the Future": {
+                    "explanation": "This paper extends RLVR to real-world forecasting, which is related to the source paper's RLVR context. However, it focuses on a different application domain (forecasting) and does not depend on the specific findings of the Absolute Zero paradigm.",
+                    "relevance": 1
+                },
+                "3. Self-Training Large Language Models with Confident Reasoning": {
+                    "explanation": "The paper explores self-training methods for LLMs using confidence-based reasoning, which aligns with the self-improving aspect of the Absolute Zero Reasoner. However, it does not rely on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "09b2a0f0d7c1164ab334e13e70eb0d65b5b96393",
+            "pmid": "2505.03335",
+            "title": "Absolute Zero: Reinforced Self-play Reasoning with Zero Data",
+            "abstract": "Reinforcement learning with verifiable rewards (RLVR) has shown promise in enhancing the reasoning capabilities of large language models by learning directly from outcome-based rewards. Recent RLVR works that operate under the zero setting avoid supervision in labeling the reasoning process, but still depend on manually curated collections of questions and answers for training. The scarcity of high-quality, human-produced examples raises concerns about the long-term scalability of relying on human supervision, a challenge already evident in the domain of language model pretraining. Furthermore, in a hypothetical future where AI surpasses human intelligence, tasks provided by humans may offer limited learning potential for a superintelligent system. To address these concerns, we propose a new RLVR paradigm called Absolute Zero, in which a single model learns to propose tasks that maximize its own learning progress and improves reasoning by solving them, without relying on any external data. Under this paradigm, we introduce the Absolute Zero Reasoner (AZR), a system that self-evolves its training curriculum and reasoning ability by using a code executor to both validate proposed code reasoning tasks and verify answers, serving as an unified source of verifiable reward to guide open-ended yet grounded learning. Despite being trained entirely without external data, AZR achieves overall SOTA performance on coding and mathematical reasoning tasks, outperforming existing zero-setting models that rely on tens of thousands of in-domain human-curated examples. Furthermore, we demonstrate that AZR can be effectively applied across different model scales and is compatible with various model classes.",
+            "year": 2025,
+            "citation_count": 41
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. The Hallucination Tax of Reinforcement Finetuning": {
+                    "explanation": "This paper explores the side effects of reinforcement finetuning on language models, particularly focusing on hallucination. While it deals with reinforcement learning, it does not specifically build on the Absolute Zero paradigm of self-evolving training without external data.",
+                    "relevance": 0
+                },
+                "2. Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space": {
+                    "explanation": "This paper discusses enhancing reasoning in LLMs through test-time scaling in latent space, which is a different approach from the self-evolving curriculum of Absolute Zero. It does not depend on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "3. Synthetic Data RL: Task Definition Is All You Need": {
+                    "explanation": "This paper introduces a framework using synthetic data for RL, which aligns with the source paper's theme of reducing reliance on human data. However, it does not directly build on the Absolute Zero paradigm of self-evolving tasks without external data.",
+                    "relevance": 1
+                },
+                "4. AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges": {
+                    "explanation": "This is a review paper that provides a taxonomy and analysis of AI agents and agentic AI. It does not introduce novel hypotheses or findings directly related to the Absolute Zero paradigm.",
+                    "relevance": 0
+                },
+                "5. Measuring General Intelligence with Generated Games": {
+                    "explanation": "This paper presents a benchmark using generated games to evaluate reasoning capabilities, which is related to the source paper's focus on evaluating reasoning but does not depend on the Absolute Zero paradigm.",
+                    "relevance": 0
+                },
+                "6. Reinforcement Learning for Reasoning in Large Language Models with One Training Example": {
+                    "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data.",
+                    "relevance": 2
+                },
+                "7. TTRL: Test-Time Reinforcement Learning": {
+                    "explanation": "This paper introduces a method for training LLMs using RL on unlabeled data, which aligns with the source paper's theme of training without external data. It partially builds on the source paper's findings about self-evolving training.",
+                    "relevance": 2
+                },
+                "8. Learning to Reason under Off-Policy Guidance": {
+                    "explanation": "This paper enhances RLVR by incorporating off-policy guidance, which is a different approach from the self-evolving curriculum of Absolute Zero. It does not directly depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "9. Learning to Reason at the Frontier of Learnability": {
+                    "explanation": "This paper addresses efficient reinforcement learning by prioritizing learnable questions, which is related to the source paper's theme of optimizing learning processes but does not directly build on the Absolute Zero paradigm.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Reinforcement Learning for Reasoning in Large Language Models with One Training Example": {
+                    "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data.",
+                    "relevance": 2
+                },
+                "2. TTRL: Test-Time Reinforcement Learning": {
+                    "explanation": "This paper introduces a method for training LLMs using RL on unlabeled data, which aligns with the source paper's theme of training without external data. It partially builds on the source paper's findings about self-evolving training.",
+                    "relevance": 2
+                },
+                "3. Synthetic Data RL: Task Definition Is All You Need": {
+                    "explanation": "This paper introduces a framework using synthetic data for RL, which aligns with the source paper's theme of reducing reliance on human data. However, it does not directly build on the Absolute Zero paradigm of self-evolving tasks without external data.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. The Policy Cliff: A Theoretical Analysis of Reward-Policy Maps in Large Language Models": {
+                    "explanation": "This paper provides a theoretical framework for understanding policy brittleness in reinforcement learning, which is relevant to the source paper's exploration of reinforcement learning with verifiable reward (RLVR). However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "2. Agentic Reinforced Policy Optimization": {
+                    "explanation": "This paper introduces a new RL algorithm (ARPO) for multi-turn reasoning tasks in LLMs, which is relevant to the source paper's focus on reinforcement learning for reasoning in LLMs. However, it does not specifically build upon the 1-shot RLVR findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "3. Reinforcement Learning Fine-Tunes a Sparse Subnetwork in Large Language Models": {
+                    "explanation": "This paper discusses RL-induced parameter update sparsity, which is a different aspect of RL fine-tuning compared to the source paper's focus on 1-shot RLVR. It does not directly depend on or extend the findings of the source paper.",
+                    "relevance": 0
+                },
+                "4. Supervised Fine Tuning on Curated Data is Reinforcement Learning (and can be improved)": {
+                    "explanation": "This paper explores the connection between supervised fine-tuning and RL, which is conceptually related to the source paper's exploration of RLVR. However, it does not build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "5. Inverse Reinforcement Learning Meets Large Language Model Post-Training: Basics, Advances, and Opportunities": {
+                    "explanation": "This is a review paper discussing advances in LLM alignment through inverse reinforcement learning, which does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. Logit Arithmetic Elicits Long Reasoning Capabilities Without Training": {
+                    "explanation": "This paper explores a decoding-time approach to enhance reasoning capabilities in LLMs without training, which is related to the source paper's focus on improving reasoning in LLMs through RLVR. However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "7. The Serial Scaling Hypothesis": {
+                    "explanation": "This paper discusses the limitations of parallel computation for inherently serial tasks, which is conceptually related to the source paper's focus on reasoning tasks in LLMs. However, it does not build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "8. Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination": {
+                    "explanation": "This paper critiques the reliability of RL results due to data contamination, specifically mentioning the Qwen2.5 model family and MATH-500 benchmark, which are directly related to the source paper's experiments and findings. It builds upon the source paper's findings by addressing potential issues with data contamination.",
+                    "relevance": 2
+                },
+                "9. CriticLean: Critic-Guided Reinforcement Learning for Mathematical Formalization": {
+                    "explanation": "This paper introduces a critic-guided RL framework for mathematical formalization, which is related to the source paper's focus on mathematical reasoning in LLMs. However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "10. Can Prompt Difficulty be Online Predicted for Accelerating RL Finetuning of Reasoning Models?": {
+                    "explanation": "This paper investigates prompt selection methods to accelerate RL finetuning for reasoning models, which is related to the source paper's focus on RL for reasoning in LLMs. However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Reasoning or Memorization? Unreliable Results of Reinforcement Learning Due to Data Contamination": {
+                    "explanation": "This paper critiques the reliability of RL results due to data contamination, specifically mentioning the Qwen2.5 model family and MATH-500 benchmark, which are directly related to the source paper's experiments and findings. It builds upon the source paper's findings by addressing potential issues with data contamination.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Technical Survey of Reinforcement Learning Techniques for Large Language Models": {
+                    "explanation": "This paper is a review paper that provides a comprehensive overview of reinforcement learning techniques for large language models, including RLVR. It does not present novel hypotheses or findings directly inspired by the source paper.",
+                    "relevance": 0
+                },
+                "2. ExPO: Unlocking Hard Reasoning with Self-Explanation-Guided Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for reasoning in large language models, similar to the source paper. It explores self-explanation-guided reinforcement learning, which is partially dependent on the findings of the source paper regarding RLVR and reasoning capabilities.",
+                    "relevance": 2
+                },
+                "3. RLVER: Reinforcement Learning with Verifiable Emotion Rewards for Empathetic Agents": {
+                    "explanation": "While this paper uses reinforcement learning with verifiable rewards (RLVR), its focus is on emotional intelligence in dialogue, which is a different application domain than the mathematical reasoning focus of the source paper.",
+                    "relevance": 0
+                },
+                "4. Generalizing Verifiable Instruction Following": {
+                    "explanation": "This paper discusses reinforcement learning with verifiable rewards (RLVR) for instruction following, which is related to the source paper's focus on RLVR for reasoning. However, it applies the concept to a different task, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "5. Can Large Language Models Develop Strategic Reasoning? Post-training Insights from Learning Chess": {
+                    "explanation": "This paper explores strategic reasoning in LLMs using reinforcement learning, which is a different domain from the mathematical reasoning focus of the source paper. It does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. Hierarchical Reasoning Model": {
+                    "explanation": "This paper introduces a novel architecture for reasoning in LLMs, which does not directly relate to the reinforcement learning with verifiable rewards (RLVR) approach discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. OctoThinker: Mid-training Incentivizes Reinforcement Learning Scaling": {
+                    "explanation": "This paper investigates mid-training strategies for reinforcement learning in LLMs, which is related to the source paper's exploration of RLVR for reasoning, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "8. SRFT: A Single-Stage Method with Supervised and Reinforcement Fine-Tuning for Reasoning": {
+                    "explanation": "This paper discusses a method that integrates supervised fine-tuning and reinforcement learning for reasoning tasks, which is inspired by the source paper's focus on RLVR for reasoning.",
+                    "relevance": 1
+                },
+                "9. EvoLM: In Search of Lost Language Model Training Dynamics": {
+                    "explanation": "This paper provides an analysis of language model training dynamics across various stages, including reinforcement learning, but does not directly build on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "10. Reasoning with Exploration: An Entropy Perspective": {
+                    "explanation": "This paper explores the role of entropy in reinforcement learning for reasoning, which is related to the source paper's discussion on exploration in RLVR. It is partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. ExPO: Unlocking Hard Reasoning with Self-Explanation-Guided Reinforcement Learning": {
+                    "explanation": "This paper builds on the concept of reinforcement learning for reasoning in large language models, similar to the source paper. It explores self-explanation-guided reinforcement learning, which is partially dependent on the findings of the source paper regarding RLVR and reasoning capabilities.",
+                    "relevance": 2
+                },
+                "2. Generalizing Verifiable Instruction Following": {
+                    "explanation": "This paper discusses reinforcement learning with verifiable rewards (RLVR) for instruction following, which is related to the source paper's focus on RLVR for reasoning. However, it applies the concept to a different task, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. OctoThinker: Mid-training Incentivizes Reinforcement Learning Scaling": {
+                    "explanation": "This paper investigates mid-training strategies for reinforcement learning in LLMs, which is related to the source paper's exploration of RLVR for reasoning, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs": {
+                    "explanation": "This paper builds upon the concept of RLVR introduced in the source paper by addressing a paradox in its efficacy and proposing a new evaluation metric. It is partially dependent on the findings of the source paper as it further explores the implications of RLVR on reasoning capabilities.",
+                    "relevance": 2
+                },
+                "2.From Emergence to Control: Probing and Modulating Self-Reflection in Language Models": {
+                    "explanation": "This paper explores self-reflection in LLMs, a phenomenon noted in the source paper as part of the effects of RLVR. It builds on the source paper's findings about self-reflection and expands on them, making it partially dependent on the source paper.",
+                    "relevance": 2
+                },
+                "3.Can Mixture-of-Experts Surpass Dense LLMs Under Strictly Equal Resources?": {
+                    "explanation": "This paper focuses on Mixture-of-Experts models and their performance under resource constraints, which is not directly related to the RLVR or reasoning improvements discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Spurious Rewards: Rethinking Training Signals in RLVR": {
+                    "explanation": "This paper directly investigates the RLVR framework discussed in the source paper, specifically examining the effects of spurious rewards. It is highly relevant as it explores the robustness and peculiarities of RLVR, building on the source paper's findings.",
+                    "relevance": 2
+                },
+                "5.Too Big to Think: Capacity, Memorization, and Generalization in Pre-Trained Transformers": {
+                    "explanation": "This paper examines the trade-offs between memorization and generalization in LLMs, which is a broader topic not specifically tied to the RLVR framework or its findings in the source paper.",
+                    "relevance": 0
+                },
+                "6.e3: Learning to Explore Enables Extrapolation of Test-Time Compute for LLMs": {
+                    "explanation": "This paper discusses test-time scaling and exploration in LLMs, which is not directly related to the RLVR framework or its specific findings in the source paper.",
+                    "relevance": 0
+                },
+                "7.A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search": {
+                    "explanation": "This paper introduces a framework for inference compute scaling, which is not directly related to the RLVR framework or its specific findings in the source paper.",
+                    "relevance": 0
+                },
+                "8.Reinforcement Pre-Training": {
+                    "explanation": "This paper introduces a new paradigm for pre-training LLMs using reinforcement learning, which is conceptually related to the source paper's focus on RLVR but does not directly build on its specific findings.",
+                    "relevance": 1
+                },
+                "9.How Far Are We from Optimal Reasoning Efficiency?": {
+                    "explanation": "This paper addresses reasoning efficiency in LLMs, which is a broader topic not specifically tied to the RLVR framework or its findings in the source paper.",
+                    "relevance": 0
+                },
+                "10.Learning-at-Criticality in Large Language Models for Quantum Field Theory and Beyond": {
+                    "explanation": "This paper applies reinforcement learning to a different domain (quantum field theory) and does not directly build on the RLVR framework or its findings in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs": {
+                    "explanation": "This paper builds upon the concept of RLVR introduced in the source paper by addressing a paradox in its efficacy and proposing a new evaluation metric. It is partially dependent on the findings of the source paper as it further explores the implications of RLVR on reasoning capabilities.",
+                    "relevance": 2
+                },
+                "2.From Emergence to Control: Probing and Modulating Self-Reflection in Language Models": {
+                    "explanation": "This paper explores self-reflection in LLMs, a phenomenon noted in the source paper as part of the effects of RLVR. It builds on the source paper's findings about self-reflection and expands on them, making it partially dependent on the source paper.",
+                    "relevance": 2
+                },
+                "3.Spurious Rewards: Rethinking Training Signals in RLVR": {
+                    "explanation": "This paper directly investigates the RLVR framework discussed in the source paper, specifically examining the effects of spurious rewards. It is highly relevant as it explores the robustness and peculiarities of RLVR, building on the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Training a Scientific Reasoning Model for Chemistry": {
+                    "explanation": "This paper explores the generalization of reasoning models to the domain of chemistry, using reinforcement learning techniques. While it discusses reinforcement learning, it does not specifically build on the findings of the source paper about 1-shot RLVR in mathematical reasoning.",
+                    "relevance": 0
+                },
+                "2.StreamBP: Memory-Efficient Exact Backpropagation for Long Sequence Training of LLMs": {
+                    "explanation": "This paper focuses on a memory-efficient backpropagation method for training LLMs on long sequences. It does not directly relate to the source paper's focus on reinforcement learning with verifiable rewards for reasoning tasks.",
+                    "relevance": 0
+                },
+                "3.Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts": {
+                    "explanation": "This paper discusses efficient reinforcement learning techniques for LLM reasoning, specifically using selective rollouts to improve training efficiency. It builds on the source paper's findings about reinforcement learning for reasoning in LLMs, particularly in terms of optimizing training processes.",
+                    "relevance": 2
+                },
+                "4.Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning": {
+                    "explanation": "This paper investigates the role of token entropy in reinforcement learning with verifiable rewards, which is directly related to the source paper's exploration of RLVR for reasoning in LLMs. It expands on the source paper's findings by analyzing token-level contributions to reasoning performance.",
+                    "relevance": 2
+                },
+                "5.The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning": {
+                    "explanation": "This paper explores the effectiveness of negative reinforcement in RLVR, which is relevant to the source paper's focus on RLVR for reasoning tasks. It provides insights into the mechanisms of RLVR that could complement the source paper's findings.",
+                    "relevance": 2
+                },
+                "6.Reasoning Like an Economist: Post-Training on Economic Problems Induces Strategic Generalization in LLMs": {
+                    "explanation": "This paper applies RLVR to economic reasoning tasks, which is related to the source paper's focus on RLVR for reasoning but in a different domain. It does not specifically depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "7.HardTests: Synthesizing High-Quality Test Cases for LLM Coding": {
+                    "explanation": "This paper focuses on test case synthesis for coding tasks, which is not directly related to the source paper's focus on reinforcement learning for reasoning in LLMs.",
+                    "relevance": 0
+                },
+                "8.REASONING GYM: Reasoning Environments for Reinforcement Learning with Verifiable Rewards": {
+                    "explanation": "This paper introduces a library of reasoning environments for RLVR, which is relevant to the source paper's exploration of RLVR for reasoning tasks. It provides tools that could be used to further investigate the phenomena observed in the source paper.",
+                    "relevance": 1
+                },
+                "9.ProxyThinker: Test-Time Guidance through Small Visual Reasoners": {
+                    "explanation": "This paper discusses an inference-time technique for visual reasoning, which is not directly related to the source paper's focus on RLVR for mathematical reasoning tasks.",
+                    "relevance": 0
+                },
+                "10.Training LLMs for EHR-Based Reasoning Tasks via Reinforcement Learning": {
+                    "explanation": "This paper applies RLVR to clinical reasoning tasks, which is related to the source paper's focus on RLVR for reasoning but in a different domain. It does not specifically depend on the source paper's findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts": {
+                    "explanation": "This paper discusses efficient reinforcement learning techniques for LLM reasoning, specifically using selective rollouts to improve training efficiency. It builds on the source paper's findings about reinforcement learning for reasoning in LLMs, particularly in terms of optimizing training processes.",
+                    "relevance": 2
+                },
+                "2.Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning": {
+                    "explanation": "This paper investigates the role of token entropy in reinforcement learning with verifiable rewards, which is directly related to the source paper's exploration of RLVR for reasoning in LLMs. It expands on the source paper's findings by analyzing token-level contributions to reasoning performance.",
+                    "relevance": 2
+                },
+                "3.The Surprising Effectiveness of Negative Reinforcement in LLM Reasoning": {
+                    "explanation": "This paper explores the effectiveness of negative reinforcement in RLVR, which is relevant to the source paper's focus on RLVR for reasoning tasks. It provides insights into the mechanisms of RLVR that could complement the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Robot-R1: Reinforcement Learning for Enhanced Embodied Reasoning in Robotics": {
+                    "explanation": "This paper applies reinforcement learning to embodied reasoning in robotics, drawing inspiration from the DeepSeek-R1 learning approach mentioned in the source paper. However, it does not directly depend on the specific findings or hypotheses of the source paper related to 1-shot RLVR.",
+                    "relevance": 1
+                },
+                "2.Decomposing Elements of Problem Solving: What 'Math' Does RL Teach?": {
+                    "explanation": "This paper explores the capabilities enhanced by reinforcement learning in mathematical reasoning tasks, specifically mentioning GRPO, which is also discussed in the source paper. It partially depends on the findings of the source paper regarding the impact of RL on mathematical reasoning skills.",
+                    "relevance": 2
+                },
+                "3.Can Large Reasoning Models Self-Train?": {
+                    "explanation": "This paper investigates self-training in LLMs using reinforcement learning from automated verification, which is related to the source paper's discussion on RLVR. However, it focuses more on self-training rather than the specific 1-shot RLVR findings of the source paper.",
+                    "relevance": 1
+                },
+                "4.One-shot Entropy Minimization": {
+                    "explanation": "This paper discusses a novel approach to entropy minimization using one-shot learning, which is conceptually related to the source paper's focus on 1-shot RLVR. However, it does not directly build upon the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "5.Enigmata: Scaling Logical Reasoning in Large Language Models with Synthetic Verifiable Puzzles": {
+                    "explanation": "This paper introduces a framework for improving LLMs with puzzle reasoning skills using RLVR, directly building upon the source paper's findings on RLVR's effectiveness in reasoning tasks.",
+                    "relevance": 2
+                },
+                "6.DISCOVER: Automated Curricula for Sparse-Reward Reinforcement Learning": {
+                    "explanation": "This paper focuses on sparse-reward reinforcement learning and does not directly relate to the specific findings or hypotheses of the source paper regarding 1-shot RLVR.",
+                    "relevance": 0
+                },
+                "7.The Limits of Preference Data for Post-Training": {
+                    "explanation": "This paper discusses the limitations of preference data in reinforcement learning, which is tangentially related to the source paper's focus on RLVR but does not directly build upon its findings.",
+                    "relevance": 0
+                },
+                "8.A Snapshot of Influence: A Local Data Attribution Framework for Online Reinforcement Learning": {
+                    "explanation": "This paper introduces a data attribution framework for online RL, which is not directly connected to the source paper's findings on 1-shot RLVR.",
+                    "relevance": 0
+                },
+                "9.Can MLLMs Guide Me Home? A Benchmark Study on Fine-Grained Visual Reasoning from Transit Maps": {
+                    "explanation": "This paper focuses on visual reasoning in multimodal LLMs, which is not directly related to the source paper's findings on 1-shot RLVR in mathematical reasoning.",
+                    "relevance": 0
+                },
+                "10.OpenReview Should be Protected and Leveraged as a Community Asset for Research in the Era of Large Language Models": {
+                    "explanation": "This position paper discusses the use of OpenReview as a community asset and does not present new hypotheses or findings related to the source paper's focus on 1-shot RLVR.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Decomposing Elements of Problem Solving: What 'Math' Does RL Teach?": {
+                    "explanation": "This paper explores the capabilities enhanced by reinforcement learning in mathematical reasoning tasks, specifically mentioning GRPO, which is also discussed in the source paper. It partially depends on the findings of the source paper regarding the impact of RL on mathematical reasoning skills.",
+                    "relevance": 2
+                },
+                "2.Enigmata: Scaling Logical Reasoning in Large Language Models with Synthetic Verifiable Puzzles": {
+                    "explanation": "This paper introduces a framework for improving LLMs with puzzle reasoning skills using RLVR, directly building upon the source paper's findings on RLVR's effectiveness in reasoning tasks.",
+                    "relevance": 2
+                },
+                "3.Robot-R1: Reinforcement Learning for Enhanced Embodied Reasoning in Robotics": {
+                    "explanation": "This paper applies reinforcement learning to embodied reasoning in robotics, drawing inspiration from the DeepSeek-R1 learning approach mentioned in the source paper. However, it does not directly depend on the specific findings or hypotheses of the source paper related to 1-shot RLVR.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Get Experience from Practice: LLM Agents with Record & Replay": {
+                    "explanation": "This paper introduces a new paradigm for AI agents using a record-and-replay mechanism, which is not directly related to the reinforcement learning with verifiable reward (RLVR) approach discussed in the source paper. The focus is on agent interaction and experience replay rather than on mathematical reasoning or RLVR.",
+                    "relevance": 0
+                },
+                "2.Bridging Supervised Learning and Reinforcement Learning in Math Reasoning": {
+                    "explanation": "This paper explores the intersection of supervised learning and reinforcement learning in math reasoning, which is directly relevant to the source paper's focus on RL for mathematical reasoning. The paper's hypothesis is inspired by the source paper's findings on RLVR, as it challenges the exclusivity of RL in self-improvement and proposes a supervised approach.",
+                    "relevance": 1
+                },
+                "3.Tool-Star: Empowering LLM-Brained Multi-Tool Reasoner via Reinforcement Learning": {
+                    "explanation": "Tool-Star focuses on leveraging RL to empower LLMs with multi-tool reasoning capabilities. While it involves RL, the emphasis is on tool integration rather than the specific RLVR approach or mathematical reasoning improvements discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning": {
+                    "explanation": "This paper explores entropy minimization as a method to improve LLM reasoning capabilities, which is a distinct approach from the RLVR method in the source paper. It does not rely on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "5.An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper investigates RL in the context of reasoning-search interleaved LLM agents, which aligns with the source paper's focus on RL for reasoning. The findings on reward formulation and LLM characteristics are partially dependent on the source paper's exploration of RLVR.",
+                    "relevance": 2
+                },
+                "6.Thought-Augmented Policy Optimization: Bridging External Guidance and Internal Capabilities": {
+                    "explanation": "Thought-Augmented Policy Optimization (TAPO) introduces external guidance into RL, which is a different approach from the RLVR method in the source paper. It does not directly build upon the source paper's findings.",
+                    "relevance": 0
+                },
+                "7.Reinforcement Learning vs. Distillation: Understanding Accuracy and Capability in LLM Reasoning": {
+                    "explanation": "This paper directly investigates the mechanisms of RLVR, as discussed in the source paper, and compares it with distillation. It builds upon the source paper's findings by analyzing the effects of RLVR on accuracy and capability.",
+                    "relevance": 2
+                },
+                "8.Reward Reasoning Model": {
+                    "explanation": "The Reward Reasoning Model paper focuses on enhancing reward model performance through reasoning processes, which is not directly related to the RLVR approach or mathematical reasoning improvements discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.Synthetic Data RL: Task Definition Is All You Need": {
+                    "explanation": "This paper introduces a framework for RL using synthetic data, which is not directly related to the RLVR approach or the specific focus on mathematical reasoning improvements in the source paper.",
+                    "relevance": 0
+                },
+                "10.BLEUBERI: BLEU is a surprisingly effective reward for instruction following": {
+                    "explanation": "BLEUBERI explores using BLEU as a reward metric for instruction following, which is not directly related to the RLVR approach or mathematical reasoning improvements discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Bridging Supervised Learning and Reinforcement Learning in Math Reasoning": {
+                    "explanation": "This paper explores the intersection of supervised learning and reinforcement learning in math reasoning, which is directly relevant to the source paper's focus on RL for mathematical reasoning. The paper's hypothesis is inspired by the source paper's findings on RLVR, as it challenges the exclusivity of RL in self-improvement and proposes a supervised approach.",
+                    "relevance": 1
+                },
+                "2.An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents": {
+                    "explanation": "This paper investigates RL in the context of reasoning-search interleaved LLM agents, which aligns with the source paper's focus on RL for reasoning. The findings on reward formulation and LLM characteristics are partially dependent on the source paper's exploration of RLVR.",
+                    "relevance": 2
+                },
+                "3.Reinforcement Learning vs. Distillation: Understanding Accuracy and Capability in LLM Reasoning": {
+                    "explanation": "This paper directly investigates the mechanisms of RLVR, as discussed in the source paper, and compares it with distillation. It builds upon the source paper's findings by analyzing the effects of RLVR on accuracy and capability.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0",
+            "title": "Reinforcement Learning for Reasoning in Large Language Models with One Training Example",
+            "abstract": "We show that reinforcement learning with verifiable reward using one training example (1-shot RLVR) is effective in incentivizing the mathematical reasoning capabilities of large language models (LLMs). Applying RLVR to the base model Qwen2.5-Math-1.5B, we identify a single example that elevates model performance on MATH500 from 36.0% to 73.6%, and improves the average performance across six common mathematical reasoning benchmarks from 17.6% to 35.7%. This result matches the performance obtained using the 1.2k DeepScaleR subset (MATH500: 73.6%, average: 35.9%), which includes the aforementioned example. Furthermore, RLVR with only two examples even slightly exceeds these results (MATH500: 74.8%, average: 36.6%). Similar substantial improvements are observed across various models (Qwen2.5-Math-7B, Llama3.2-3B-Instruct, DeepSeek-R1-Distill-Qwen-1.5B), RL algorithms (GRPO and PPO), and different math examples (when employed as a single training example). In addition, we identify some interesting phenomena during 1-shot RLVR, including cross-domain generalization, increased frequency of self-reflection, and sustained test performance improvement even after the training accuracy has saturated, a phenomenon we term post-saturation generalization. Moreover, we verify that the effectiveness of 1-shot RLVR primarily arises from the policy gradient loss, distinguishing it from the\"grokking\"phenomenon. We also show the critical role of promoting exploration (e.g., by incorporating entropy loss with an appropriate coefficient) in 1-shot RLVR training. We also further discuss related observations about format correction, label robustness and prompt modification. These findings can inspire future work on RLVR efficiency and encourage a re-examination of recent progress and the underlying mechanisms in RLVR. Our code, model, and data are open source at https://github.com/ypwang61/One-Shot-RLVR.",
+            "year": 2025,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper explores RLVR with minimal data, which is closely related to the Absolute Zero paradigm of reducing reliance on external data. It partially depends on the source paper's findings about self-evolving training without external data."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Using Reinforcement Learning to Train Large Language Models to Explain Human Decisions": {
+                    "explanation": "This paper uses reinforcement learning to guide LLMs, similar to the source paper's use of RLVR, but focuses on explaining human decisions rather than mathematical reasoning. The connection is thematic rather than dependent on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Absolute Zero: Reinforced Self-play Reasoning with Zero Data": {
+                    "explanation": "This paper builds on the concept of reinforcement learning with verifiable rewards (RLVR) as introduced in the source paper but extends it to a zero-data setting. It partially depends on the findings of the source paper regarding the effectiveness of RLVR.",
+                    "relevance": 2
+                },
+                "3.TTRL: Test-Time Reinforcement Learning": {
+                    "explanation": "TTRL explores reinforcement learning without explicit labels, which is a different approach from the source paper's 1-shot RLVR. While both papers focus on improving LLMs through RL, TTRL does not directly depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "4.Efficient Reinforcement Finetuning via Adaptive Curriculum Learning": {
+                    "explanation": "This paper focuses on improving the efficiency of reinforcement finetuning, which is related to the source paper's exploration of RLVR efficiency. However, it does not directly build upon the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Absolute Zero: Reinforced Self-play Reasoning with Zero Data": {
+                    "explanation": "This paper builds on the concept of reinforcement learning with verifiable rewards (RLVR) as introduced in the source paper but extends it to a zero-data setting. It partially depends on the findings of the source paper regarding the effectiveness of RLVR.",
+                    "relevance": 2
+                },
+                "2.Efficient Reinforcement Finetuning via Adaptive Curriculum Learning": {
+                    "explanation": "This paper focuses on improving the efficiency of reinforcement finetuning, which is related to the source paper's exploration of RLVR efficiency. However, it does not directly build upon the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    }
+]

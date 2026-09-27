@@ -1,0 +1,160 @@
+{
+  "paper_id": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "MLP Implementation for Prefix Vectors",
+      "criteria_met_question": "Does the experiment implement a multi-layer perceptron (MLP) with down-projection and up-projection layers, layer normalization, and skip connection specifically for generating prefix vectors with shared structure reparameterization?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Task-Specific Prompt Pools Implementation",
+      "criteria_met_question": "Does the experiment implement separate prompt pools for each task that capture intra-task variations and maintain distinct sets of prompts to reduce interference between tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Generative Model for Latent Representation",
+      "criteria_met_question": "Does the experiment implement a generative model that produces latent data representations (not natural language text) for replay to mitigate catastrophic forgetting during shared parameter learning?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integration of Components",
+      "criteria_met_question": "Does the experiment integrate the three main components (MLP-generated prefix vectors, task-specific prompt pools, and generative model) into a unified framework where MLP-generated vectors enhance prompt pools and the generative model supports knowledge retention across tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Continual Learning Benchmark Datasets",
+      "criteria_met_question": "Does the experiment use established continual learning benchmark datasets (such as Split-MNIST, Permuted-MNIST, or GLUE tasks) to evaluate the framework?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline Implementation",
+      "criteria_met_question": "Does the experiment implement a standard prompt-tuning approach without the integrated components as a baseline/control condition?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Experimental System 1 Implementation",
+      "criteria_met_question": "Does the experiment implement a comparison system using prompt-tuning with only MLP-based shared structure reparameterization (without task-specific prompt pools and generative model)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Experimental System 2 Implementation",
+      "criteria_met_question": "Does the experiment implement the full integrated framework with all three components (MLP-based shared structure reparameterization, task-specific prompt pools, and generative model)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Task Success Rate Measurement",
+      "criteria_met_question": "Does the experiment measure and report task success rate metrics including per-task accuracy, average accuracy across tasks, and a forgetting measure to quantify catastrophic forgetting?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Reasoning Accuracy Measurement",
+      "criteria_met_question": "Does the experiment measure and report reasoning accuracy to assess the model's ability to make correct inferences across tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Analysis",
+      "criteria_met_question": "Does the experiment conduct statistical analysis across 5 independent runs to determine if performance improvements are statistically significant compared to the baseline?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Sequential Task Learning Setup",
+      "criteria_met_question": "Does the experiment implement a sequential task learning setup where previous task data is not accessible during training on new tasks (except through generative model replay)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Pre-trained Transformer Model Selection",
+      "criteria_met_question": "Does the experiment use appropriate pre-trained transformer models (e.g., BERT-base or RoBERTa-base) as the foundation for the prompt-tuning experiments?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Training Epochs Configuration",
+      "criteria_met_question": "Does the experiment configure appropriate training epochs for different experimental phases (5 epochs for mini-pilot, 10 for pilot, 20 for full experiment)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Task Identity Identification Evaluation",
+      "criteria_met_question": "Does the experiment specifically evaluate and report metrics on how well the framework identifies task identity compared to baseline approaches?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Studies",
+      "criteria_met_question": "Does the experiment include ablation studies that systematically remove or modify components of the integrated framework to understand their individual contributions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include analysis of how sensitive the framework is to different hyperparameter settings (e.g., prompt pool size, MLP dimensions, generative model capacity)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Metrics",
+      "criteria_met_question": "Does the experiment report computational efficiency metrics such as training time, inference time, and memory usage for the different approaches?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of Learned Prompts",
+      "criteria_met_question": "Does the experiment include visualizations of the learned prompt vectors or their relationships to understand how the framework captures task-specific knowledge?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Cross-Domain Generalization",
+      "criteria_met_question": "Does the experiment evaluate how well the framework generalizes across different domains or types of tasks beyond the primary benchmark datasets?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Sample Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze and report how sample-efficient the framework is compared to baselines (i.e., performance as a function of training examples)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include a detailed analysis of error patterns to identify specific strengths and weaknesses of the integrated framework?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Qualitative Case Studies",
+      "criteria_met_question": "Does the experiment include qualitative case studies that demonstrate specific examples of how the framework handles catastrophic forgetting or task identity identification?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrating shared structure reparameterization with task-specific prompt pools and generative models to enhance prompt-tuning adaptability.",
+    "research_idea_hypothesis": "Integrating shared structure-based reparameterization using MLP for prefix vectors with task-specific prompt pools and a generative model will enhance prompt-tuning adaptability and efficiency, reducing catastrophic forgetting and improving task identity identification.",
+    "description": "The proposed research explores the integration of shared structure-based reparameterization using a multi-layer perceptron (MLP) for prefix vectors with task-specific prompt pools and a generative model. This approach aims to enhance prompt-tuning adaptability and efficiency, specifically addressing the challenges of catastrophic forgetting and task identity identification. The shared structure-based reparameterization encodes a shared structure between prefix key and value vectors, significantly improving sample efficiency in parameter estimation. Task-specific prompt pools allow for capturing intra-task variations, while the generative model consolidates prior knowledge within shared parameters. This combination is expected to provide a robust framework for continual learning, enabling the model to adapt to new tasks while retaining knowledge from previous ones. The hypothesis will be tested using benchmark datasets in continual learning scenarios, with metrics such as task success rate and reasoning accuracy to evaluate performance improvements.",
+    "research_gap": "Current methods for enhancing prompt-tuning adaptability and efficiency often overlook the potential of combining shared structure-based reparameterization with task-specific prompt pools and generative models. While individual components like shared structure reparameterization and task-specific prompt pools have been explored, their combined effect, particularly in mitigating catastrophic forgetting and improving task identity identification, remains underexplored. This hypothesis addresses the gap by proposing a novel integration of these components to leverage their synergistic benefits, providing a more robust solution to continual learning challenges.",
+    "research_idea_variables": "[Shared Structure-Based Reparameterization](https://www.semanticscholar.org/paper/74fcfb150e319d83479314e44dbc89eb31db9e06): This variable involves using a multi-layer perceptron (MLP) to generate prefix vectors, encoding a shared structure between prefix key and value vectors. The MLP consists of down-projection and up-projection layers, followed by layer normalization and a skip connection. This approach improves sample efficiency in parameter estimation and is particularly effective in fine-tuning large pre-trained models across diverse tasks. The shared structure allows for efficient parameter sharing, reducing the need for extensive retraining and enhancing prompt-tuning adaptability.\n\n[Task-Specific Prompt Pools](https://www.semanticscholar.org/paper/07059e01668b69cc5e9b032b10ff30aa222fb053): Task-specific prompt pools involve creating a distinct set of prompts for each task, capturing intra-task variations and reducing interference between tasks. This approach leverages generative models for latent representation, ensuring that the model can adapt to new tasks while retaining knowledge from previous ones. The task-specific prompt pools are maintained separately to avoid cross-task interference and are updated as new tasks are introduced.\n\n[Generative Model](https://www.semanticscholar.org/paper/07059e01668b69cc5e9b032b10ff30aa222fb053): The generative model generates latent data representations for replay, helping mitigate catastrophic forgetting during the shared parameter learning process between tasks. It learns the underlying distribution of the data and generates continuous latent representations instead of natural language text. The generative model is integrated with task-specific prompt pools, allowing it to capture intra-task variations effectively.",
+    "Explanation": "Each component contributes to enhancing prompt-tuning adaptability and efficiency. The MLP-generated prefix vectors improve sample efficiency in parameter estimation, task-specific prompt pools capture intra-task variations, and the generative model consolidates prior knowledge. The combination addresses challenges in continual learning by reducing catastrophic forgetting and improving task identity identification.",
+    "research_idea_long_description": "The MLP-generated prefix vectors enhance the task-specific prompt pools by providing efficient parameter estimation, while the generative model ensures knowledge retention across tasks. This integration occurs at the data flow level, with the generative model's latent representations supporting the task-specific prompt pools.",
+    "research_idea_design_prompt": "The proposed method integrates shared structure-based reparameterization using an MLP for prefix vectors with task-specific prompt pools and a generative model. The MLP generates prefix vectors by encoding a shared structure between prefix key and value vectors, improving sample efficiency in parameter estimation. Task-specific prompt pools are created for each task, capturing intra-task variations and reducing interference between tasks. The generative model generates latent data representations for replay, consolidating prior knowledge within shared parameters. The integration occurs by using the MLP-generated prefix vectors to enhance the task-specific prompt pools, while the generative model ensures knowledge retention across tasks. The hypothesis will be implemented using Python-based experiments, with the ASD Agent executing the experiments in containers. The evaluation will involve benchmark datasets in continual learning scenarios, with metrics such as task success rate and reasoning accuracy to assess performance improvements.",
+    "research_idea_elements": "Independent variable: Integration of shared structure-based reparameterization using MLP for prefix vectors with task-specific prompt pools and a generative model\n\nDependent variable: Prompt-tuning adaptability and efficiency, catastrophic forgetting reduction, and task identity identification improvement\n\nComparison groups: Baseline System (standard prompt-tuning), Experimental System 1 (prompt-tuning with MLP-based shared structure reparameterization only), and Experimental System 2 (full integrated framework)\n\nBaseline/control: Standard prompt-tuning approach without the integrated components\n\nContext/setting: Continual learning scenarios using benchmark datasets such as Split-MNIST, Permuted-MNIST, or GLUE tasks\n\nAssumptions: Sequential task learning where previous task data is not accessible during training on new tasks (except through generative model replay)\n\nRelationship type: Causation (integration will enhance/improve outcomes)\n\nPopulation: Pre-trained transformer models (e.g., BERT-base or RoBERTa-base)\n\nTimeframe: Training across multiple epochs (5 epochs for mini-pilot, 10 for pilot, 20 for full experiment)\n\nMeasurement method: Task success rate (per-task accuracy, average accuracy, forgetting measure) and reasoning accuracy, with statistical analysis across 5 runs",
+    "motivation": "The source paper is [Paper 0: The Power of Scale for Parameter-Efficient Prompt Tuning](https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4) (4242 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/74fcfb150e319d83479314e44dbc89eb31db9e06) --> [Paper 2](https://www.semanticscholar.org/paper/07059e01668b69cc5e9b032b10ff30aa222fb053) --> [Paper 3](https://www.semanticscholar.org/paper/912bebbd5cc0c6df735ed8c20fd5609c64d834a6). The analysis reveals a progression from understanding the theoretical foundations of prompt-based methods to applying these methods in specific domains like Continual Relation Extraction. The existing work has identified key challenges such as catastrophic forgetting and task identity identification in CRE, and has proposed innovative solutions like prompt pools and generative models. However, there is still room to explore how these methods can be generalized across other domains or tasks, and how the theoretical insights can be leveraged to optimize prompt selection and adaptation further. A research idea that builds on these advancements could focus on developing a unified framework for adaptive prompt-tuning that can be applied across various domains, leveraging the shared structures identified in the theoretical work.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the 'Integrated Prompt-Tuning Framework' hypothesis, which proposes that integrating shared structure-based reparameterization using MLP for prefix vectors with task-specific prompt pools and a generative model will enhance prompt-tuning adaptability and efficiency in continual learning scenarios.\n\n## Experiment Overview\nThis experiment will compare three systems:\n1. **Baseline System**: A standard prompt-tuning approach without the integrated components\n2. **Experimental System 1**: Prompt-tuning with MLP-based shared structure reparameterization only\n3. **Experimental System 2**: The full integrated framework with all three components (MLP-based reparameterization, task-specific prompt pools, and generative model)\n\n## Implementation Details\n\n### 1. Pilot Mode Configuration\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`.\n- **MINI_PILOT**: Use 2 tasks with 10 examples per task, run for 5 epochs\n- **PILOT**: Use 3 tasks with 100 examples per task, run for 10 epochs\n- **FULL_EXPERIMENT**: Use all 5 tasks with full dataset, run for 20 epochs\n\nStart with MINI_PILOT, then proceed to PILOT if successful. Do not run FULL_EXPERIMENT automatically - wait for human verification of PILOT results.\n\n### 2. Dataset Preparation\nUse a continual learning benchmark dataset such as Split-MNIST or Permuted-MNIST for the experiment. For text-based tasks, consider using a subset of GLUE tasks presented sequentially.\n- For MINI_PILOT: Use 2 tasks (e.g., SST-2 and QNLI from GLUE) with 10 examples each\n- For PILOT: Use 3 tasks (e.g., SST-2, QNLI, and MNLI from GLUE) with 100 examples each\n- For FULL_EXPERIMENT: Use 5 tasks (e.g., all GLUE tasks) with full datasets\n\n### 3. Model Architecture\n\n#### 3.1 Base Model\nUse a pre-trained transformer model (e.g., BERT-base or RoBERTa-base) as the foundation for all systems.\n\n#### 3.2 MLP for Prefix Vectors (Component 1)\nImplement a multi-layer perceptron for generating prefix vectors with the following structure:\n- Input layer: Takes a small set of parameters as input\n- Down-projection layer: Projects to a smaller dimension\n- Up-projection layer: Projects back to the original prefix dimension\n- Layer normalization and skip connection\n\nThe MLP should generate both key and value prefix vectors, encoding a shared structure between them.\n\n#### 3.3 Task-Specific Prompt Pools (Component 2)\nImplement task-specific prompt pools with the following features:\n- Create a distinct set of prompts for each task\n- Each prompt pool should contain multiple prompt candidates (e.g., 10 prompts per task)\n- Implement a selection mechanism to choose the most appropriate prompt based on the input\n\n#### 3.4 Generative Model (Component 3)\nImplement a simple autoencoder or variational autoencoder (VAE) as the generative model:\n- Encoder: Compresses input data into latent representations\n- Decoder: Reconstructs input data from latent representations\n- The model should be trained to generate latent representations for replay\n\n### 4. Training Procedure\n\n#### 4.1 Continual Learning Setup\nImplement a sequential task learning procedure:\n- Train on Task 1, then Task 2, and so on\n- Do not allow access to previous task data during training on a new task (except through the generative model's replay mechanism)\n\n#### 4.2 Training Algorithm\nFor each task:\n1. For the baseline: Fine-tune the model using standard prompt-tuning\n2. For Experimental System 1: Use MLP-generated prefix vectors for prompt-tuning\n3. For Experimental System 2:\n   - Use MLP-generated prefix vectors\n   - Select appropriate prompts from the task-specific prompt pool\n   - Use the generative model to replay latent representations from previous tasks\n\n### 5. Evaluation Metrics\n\n#### 5.1 Task Success Rate\nMeasure the accuracy of each model on all tasks after training is complete. Report:\n- Per-task accuracy\n- Average accuracy across all tasks\n- Forgetting measure: difference between peak accuracy during training and final accuracy for each task\n\n#### 5.2 Reasoning Accuracy\nIf applicable, evaluate the model's reasoning capabilities using appropriate datasets or tasks that require multi-step reasoning.\n\n#### 5.3 Statistical Analysis\nPerform statistical analysis to determine if differences between systems are significant:\n- Run each experiment configuration 5 times with different random seeds\n- Compute mean and standard deviation for each metric\n- Perform t-tests or bootstrap resampling to assess statistical significance\n\n### 6. Implementation Requirements\n\n#### 6.1 Code Structure\nOrganize the code into the following modules:\n- `main.py`: Entry point for the experiment\n- `models/`: Contains implementations of all model components\n  - `mlp_prefix.py`: MLP for prefix vectors\n  - `prompt_pools.py`: Task-specific prompt pools\n  - `generative_model.py`: Generative model implementation\n- `data/`: Data loading and processing\n- `training/`: Training loops and procedures\n- `evaluation/`: Evaluation metrics and analysis\n- `utils/`: Utility functions\n\n#### 6.2 Logging and Visualization\nImplement comprehensive logging and visualization:\n- Log training and validation metrics for each epoch and task\n- Create visualizations comparing performance across systems\n- Generate plots showing forgetting curves for each task\n\n### 7. Expected Outputs\nThe experiment should produce the following outputs:\n1. Trained model checkpoints for each system\n2. Detailed logs of training and evaluation metrics\n3. Visualizations comparing performance across systems\n4. Statistical analysis of results\n5. A summary report highlighting key findings\n\n### 8. Specific Implementation Notes\n\n#### 8.1 MLP for Prefix Vectors\nThe MLP should have the following architecture:\n```python\nclass PrefixMLP(nn.Module):\n    def __init__(self, prefix_length, hidden_dim, prefix_dim):\n        super().__init__()\n        self.down_proj = nn.Linear(prefix_dim, hidden_dim)\n        self.up_proj = nn.Linear(hidden_dim, prefix_dim * prefix_length * 2)  # *2 for key and value\n        self.layer_norm = nn.LayerNorm(prefix_dim * prefix_length * 2)\n        self.prefix_length = prefix_length\n        self.prefix_dim = prefix_dim\n    \n    def forward(self, x):\n        # x is a small set of input parameters\n        down = self.down_proj(x)\n        up = self.up_proj(down)\n        normalized = self.layer_norm(up)\n        # Reshape to get separate key and value vectors\n        prefix = normalized.view(-1, self.prefix_length, 2, self.prefix_dim)\n        prefix_key = prefix[:, :, 0]\n        prefix_value = prefix[:, :, 1]\n        return prefix_key, prefix_value\n```\n\n#### 8.2 Task-Specific Prompt Pools\nImplement the prompt pools as follows:\n```python\nclass PromptPool(nn.Module):\n    def __init__(self, num_tasks, num_prompts_per_task, prompt_length, prompt_dim):\n        super().__init__()\n        self.prompt_pool = nn.Parameter(\n            torch.randn(num_tasks, num_prompts_per_task, prompt_length, prompt_dim)\n        )\n        self.prompt_selector = nn.Linear(input_dim, num_prompts_per_task)\n    \n    def forward(self, x, task_id):\n        # Select prompts for the current task\n        task_prompts = self.prompt_pool[task_id]\n        # Compute selection weights based on input\n        selection_weights = F.softmax(self.prompt_selector(x), dim=-1)\n        # Weight and combine prompts\n        selected_prompt = torch.sum(task_prompts * selection_weights.unsqueeze(-1).unsqueeze(-1), dim=1)\n        return selected_prompt\n```\n\n#### 8.3 Generative Model\nImplement a simple VAE for the generative model:\n```python\nclass VAE(nn.Module):\n    def __init__(self, input_dim, latent_dim):\n        super().__init__()\n        self.encoder = nn.Sequential(\n            nn.Linear(input_dim, 256),\n            nn.ReLU(),\n            nn.Linear(256, 128),\n            nn.ReLU()\n        )\n        self.mu = nn.Linear(128, latent_dim)\n        self.logvar = nn.Linear(128, latent_dim)\n        self.decoder = nn.Sequential(\n            nn.Linear(latent_dim, 128),\n            nn.ReLU(),\n            nn.Linear(128, 256),\n            nn.ReLU(),\n            nn.Linear(256, input_dim)\n        )\n    \n    def encode(self, x):\n        h = self.encoder(x)\n        return self.mu(h), self.logvar(h)\n    \n    def reparameterize(self, mu, logvar):\n        std = torch.exp(0.5 * logvar)\n        eps = torch.randn_like(std)\n        return mu + eps * std\n    \n    def decode(self, z):\n        return self.decoder(z)\n    \n    def forward(self, x):\n        mu, logvar = self.encode(x)\n        z = self.reparameterize(mu, logvar)\n        return self.decode(z), mu, logvar\n    \n    def generate(self, num_samples):\n        z = torch.randn(num_samples, self.mu.out_features)\n        return self.decode(z)\n```\n\n#### 8.4 Integration\nIntegrate the components as follows:\n```python\nclass IntegratedPromptTuningFramework(nn.Module):\n    def __init__(self, base_model, mlp, prompt_pool, generative_model):\n        super().__init__()\n        self.base_model = base_model\n        self.mlp = mlp\n        self.prompt_pool = prompt_pool\n        self.generative_model = generative_model\n    \n    def forward(self, x, task_id):\n        # Generate prefix vectors using MLP\n        prefix_key, prefix_value = self.mlp(x)\n        \n        # Select task-specific prompts\n        task_prompt = self.prompt_pool(x, task_id)\n        \n        # Combine prefix vectors with task-specific prompts\n        combined_prompt = combine_prompts(prefix_key, prefix_value, task_prompt)\n        \n        # Apply prompts to the base model\n        output = self.base_model(x, combined_prompt)\n        \n        return output\n    \n    def replay(self, batch_size, task_id):\n        # Generate latent representations for replay\n        latent_samples = self.generative_model.generate(batch_size)\n        return latent_samples\n```\n\nPlease implement this experiment following the detailed specifications above. Start with the MINI_PILOT configuration to verify the implementation, then proceed to the PILOT configuration if successful. Do not run the FULL_EXPERIMENT until human verification of the PILOT results.",
+  "core_related_works": [
+    {
+      "title": "Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts",
+      "paperId": "74fcfb150e319d83479314e44dbc89eb31db9e06",
+      "url": "https://www.semanticscholar.org/paper/74fcfb150e319d83479314e44dbc89eb31db9e06",
+      "year": 2024,
+      "source_variable": "Shared Structure-Based Reparameterization",
+      "source_paper_lookup_title": "Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts"
+    },
+    {
+      "title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective",
+      "paperId": "07059e01668b69cc5e9b032b10ff30aa222fb053",
+      "url": "https://www.semanticscholar.org/paper/07059e01668b69cc5e9b032b10ff30aa222fb053",
+      "year": 2024,
+      "source_variable": "Task-Specific Prompt Pools",
+      "source_paper_lookup_title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective"
+    },
+    {
+      "title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective",
+      "paperId": "07059e01668b69cc5e9b032b10ff30aa222fb053",
+      "url": "https://www.semanticscholar.org/paper/07059e01668b69cc5e9b032b10ff30aa222fb053",
+      "year": 2024,
+      "source_variable": "Generative Model",
+      "source_paper_lookup_title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective"
+    }
+  ],
+  "references": "1. The Power of Scale for Parameter-Efficient Prompt Tuning (2021). Paper ID: ffdbd7f0b03b85747b001b4734d5ee31b5229aa4\n\n2. Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts (2024). Paper ID: 74fcfb150e319d83479314e44dbc89eb31db9e06\n\n3. Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective (2024). Paper ID: 07059e01668b69cc5e9b032b10ff30aa222fb053\n\n4. Towards Rehearsal-Free Continual Relation Extraction: Capturing Within-Task Variance with Adaptive Prompting (2025). Paper ID: 912bebbd5cc0c6df735ed8c20fd5609c64d834a6\n\n5. Progressive Prompts: Continual Learning for Language Models (2023). Paper ID: 86478f285356b5c8d27423e6b939634d9e010fba\n\n6. A Comprehensive Survey on Continual Learning in Generative Models (2025). Paper ID: f4f1d4ad7d95b0fc6c198b191d8d873dba6020c4\n\n7. Dynamic Context-Aware Prompt Recommendation for Domain-Specific AI Applications (2023). Paper ID: cc65bc2afee2c08c2d49b6b394bbb3b71f423a10"
+}

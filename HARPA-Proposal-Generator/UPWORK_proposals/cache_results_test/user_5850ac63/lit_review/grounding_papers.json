@@ -1,0 +1,376 @@
+[
+  {
+    "id": "4b0f3436810a5d8b3a8a557e0185d77a4ee38f74",
+    "paperId": "4b0f3436810a5d8b3a8a557e0185d77a4ee38f74",
+    "title": "Lay2Story: Extending Diffusion Transformers for Layout-Togglable Story Generation",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.08949, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2373660530",
+        "name": "Ao Ma"
+      },
+      {
+        "authorId": "2316175347",
+        "name": "Jiasong Feng"
+      },
+      {
+        "authorId": "2349479014",
+        "name": "Ke Cao"
+      },
+      {
+        "authorId": "2316205144",
+        "name": "Jing Wang"
+      },
+      {
+        "authorId": "2339337483",
+        "name": "Yun Wang"
+      },
+      {
+        "authorId": null,
+        "name": "Quanwei Zhang"
+      },
+      {
+        "authorId": "2346411680",
+        "name": "Zhanjie Zhang"
+      }
+    ],
+    "abstract": "Storytelling tasks involving generating consistent subjects have gained significant attention recently. However, existing methods, whether training-free or training-based, continue to face challenges in maintaining subject consistency due to the lack of fine-grained guidance and inter-frame interaction. Additionally, the scarcity of high-quality data in this field makes it difficult to precisely control storytelling tasks, including the subject's position, appearance, clothing, expression, and posture, thereby hindering further advancements. In this paper, we demonstrate that layout conditions, such as the subject's position and detailed attributes, effectively facilitate fine-grained interactions between frames. This not only strengthens the consistency of the generated frame sequence but also allows for precise control over the subject's position, appearance, and other key details. Building on this, we introduce an advanced storytelling task: Layout-Togglable Storytelling, which enables precise subject control by incorporating layout conditions. To address the lack of high-quality datasets with layout annotations for this task, we develop Lay2Story-1M, which contains over 1 million 720p and higher-resolution images, processed from approximately 11,300 hours of cartoon videos. Building on Lay2Story-1M, we create Lay2Story-Bench, a benchmark with 3,000 prompts designed to evaluate the performance of different methods on this task. Furthermore, we propose Lay2Story, a robust framework based on the Diffusion Transformers (DiTs) architecture for Layout-Togglable Storytelling tasks. Through both qualitative and quantitative experiments, we find that our method outperforms the previous state-of-the-art (SOTA) techniques, achieving the best results in terms of consistency, semantic correlation, and aesthetic quality.",
+    "score": 6
+  },
+  {
+    "id": "9f7914c2577626868e6a69f2c9605b38f941055b",
+    "paperId": "9f7914c2577626868e6a69f2c9605b38f941055b",
+    "title": "StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation",
+    "year": 2022,
+    "citationCount": 85,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/2209.06192",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2209.06192, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This work enhances or 'retro-fit' the pretrained text-to-image synthesis models with task-specific modules for story continuation and facilitates copying of visual elements from the source image, thereby improving continuity in the generated visual story."
+    },
+    "authors": [
+      {
+        "authorId": "8785371",
+        "name": "Adyasha Maharana"
+      },
+      {
+        "authorId": "153060461",
+        "name": "Darryl Hannan"
+      },
+      {
+        "authorId": "143977268",
+        "name": "Mohit Bansal"
+      }
+    ],
+    "abstract": "Recent advances in text-to-image synthesis have led to large pretrained transformers with excellent capabilities to generate visualizations from a given text. However, these models are ill-suited for specialized tasks like story visualization, which requires an agent to produce a sequence of images given a corresponding sequence of captions, forming a narrative. Moreover, we find that the story visualization task fails to accommodate generalization to unseen plots and characters in new narratives. Hence, we first propose the task of story continuation, where the generated visual story is conditioned on a source image, allowing for better generalization to narratives with new characters. Then, we enhance or 'retro-fit' the pretrained text-to-image synthesis models with task-specific modules for (a) sequential image generation and (b) copying relevant elements from an initial frame. Then, we explore full-model finetuning, as well as prompt-based tuning for parameter-efficient adaptation, of the pre-trained model. We evaluate our approach StoryDALL-E on two existing datasets, PororoSV and FlintstonesSV, and introduce a new dataset DiDeMoSV collected from a video-captioning dataset. We also develop a model StoryGANc based on Generative Adversarial Networks (GAN) for story continuation, and compare it with the StoryDALL-E model to demonstrate the advantages of our approach. We show that our retro-fitting approach outperforms GAN-based models for story continuation and facilitates copying of visual elements from the source image, thereby improving continuity in the generated visual story. Finally, our analysis suggests that pretrained transformers struggle to comprehend narratives containing several characters. Overall, our work demonstrates that pretrained text-to-image synthesis models can be adapted for complex and low-resource tasks like story continuation.",
+    "score": 7
+  },
+  {
+    "id": "b8f2ba261756ca551ba68940e08a9466c2602f79",
+    "paperId": "b8f2ba261756ca551ba68940e08a9466c2602f79",
+    "title": "Sequential Attention GAN for Interactive Image Editing",
+    "year": 2018,
+    "citationCount": 99,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/1812.08352",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1812.08352, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "A novel Sequential Attention Generative Adversarial Network (SeqAttnGAN) is proposed, which applies a neural state tracker to encode the previous image and the textual description in each turn of the sequence, and uses a GAN framework to generate a modified version of the image that is consistent with the preceding images and coherent with the description."
+    },
+    "authors": [
+      {
+        "authorId": "145215470",
+        "name": "Yu Cheng"
+      },
+      {
+        "authorId": "144702900",
+        "name": "Zhe Gan"
+      },
+      {
+        "authorId": "40609859",
+        "name": "Yitong Li"
+      },
+      {
+        "authorId": "46700348",
+        "name": "Jingjing Liu"
+      },
+      {
+        "authorId": "1800422",
+        "name": "Jianfeng Gao"
+      }
+    ],
+    "abstract": "Most existing text-to-image synthesis tasks are static single-turn generation, based on pre-defined textual descriptions of images. To explore more practical and interactive real-life applications, we introduce a new task - Interactive Image Editing, where users can guide an agent to edit images via multi-turn textual commands on-the-fly. In each session, the agent takes a natural language description from the user as the input, and modifies the image generated in previous turn to a new design, following the user description. The main challenges in this sequential and interactive image generation task are two-fold: 1) contextual consistency between a generated image and the provided textual description; 2) step-by-step region-level modification to maintain visual consistency across the generated image sequence in each session. To address these challenges, we propose a novel Sequential Attention Generative Adversarial Network (SeqAttnGAN), which applies a neural state tracker to encode the previous image and the textual description in each turn of the sequence, and uses a GAN framework to generate a modified version of the image that is consistent with the preceding images and coherent with the description. To achieve better region-specific refinement, we also introduce a sequential attention mechanism into the model. To benchmark on the new task, we introduce two new datasets, Zap-Seq and DeepFashion-Seq, which contain multi-turn sessions with image-description sequences in the fashion domain. Experiments on both datasets show that the proposed SeqAttnGAN model outperforms state-of-the-art approaches on the interactive image editing task across all evaluation metrics including visual quality, image sequence coherence and text-image consistency.",
+    "score": 4
+  },
+  {
+    "id": "8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c",
+    "paperId": "8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c",
+    "title": "Automated Visual Generation using GAN with Textual Information Feeds",
+    "year": 2024,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "https://ijsrem.com/download/automated-visual-generation-using-gan-with-textual-information-feeds/?wpdmdl=36408&refresh=66763ce36ef5b1719024867",
+      "status": "BRONZE",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/ijsrem36010?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/ijsrem36010, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This proposal suggests combining two methods, Text modification for Action Definition (TexAD) and SeQuential Image Generation for Video Synthesis (SQIGen), which synthesises a sequence of images from textual information feeds and combines these images to create a video."
+    },
+    "authors": [
+      {
+        "authorId": "2298319923",
+        "name": "Sibi Mathew"
+      }
+    ],
+    "abstract": "Visualising textual content could be helpful to pro- fessionals as well as amateurs across several fields. However, training a text-to-image generator in the mainstream domain requires large amounts of paired text-image and data, which is too expensive to collect since labeling millions of images and videos can be tiresome. GANs like StackGAN and StyleGAN can be considered as solutions to generate images from text. But the images generated may be of low accuracy and resolution, and the entire processing can be highly time-consuming. Moreover, image generation is a notion that is still being researched. Hence, the process of developing a Video Generation model necessitates substantial research. Despite the need for such a model, modern technology has lagged behind the solutions to this problem. This proposal suggests combining two methods, Text modification for Action Definition (TexAD) and SeQuential Image Generation for Video Synthesis (SQIGen). The proposed solution synthesises a sequence of images from textual information feeds and combines these images to create a video. TexAD uses Natural Language Processing and Deep Learning techniques to process, classify and modify text data. SQIGen is an extension of the VQGAN+CLIP neural network architecture that generates a sequence of images from the modified text data. Index Terms—Visualization, Sequential Image Generation, GANs, Natural Language Processing and Deep Learning, TexAD, VQGAN+CLIP",
+    "score": 5
+  },
+  {
+    "id": "b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea",
+    "paperId": "b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea",
+    "title": "Test-time Prompt Refinement for Text-to-Image Models",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.22076, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2374337044",
+        "name": "Mohammad Abdul Hafeez Khan"
+      },
+      {
+        "authorId": "2336737368",
+        "name": "Yash Jain"
+      },
+      {
+        "authorId": "2374053470",
+        "name": "Siddhartha Bhattacharyya"
+      },
+      {
+        "authorId": "143729959",
+        "name": "Vibhav Vineet"
+      }
+    ],
+    "abstract": "Text-to-image (T2I) generation models have made significant strides but still struggle with prompt sensitivity: even minor changes in prompt wording can yield inconsistent or inaccurate outputs. To address this challenge, we introduce a closed-loop, test-time prompt refinement framework that requires no additional training of the underlying T2I model, termed TIR. In our approach, each generation step is followed by a refinement step, where a pretrained multimodal large language model (MLLM) analyzes the output image and the user's prompt. The MLLM detects misalignments (e.g., missing objects, incorrect attributes) and produces a refined and physically grounded prompt for the next round of image generation. By iteratively refining the prompt and verifying alignment between the prompt and the image, TIR corrects errors, mirroring the iterative refinement process of human artists. We demonstrate that this closed-loop strategy improves alignment and visual coherence across multiple benchmark datasets, all while maintaining plug-and-play integration with black-box T2I models.",
+    "score": 4
+  },
+  {
+    "id": "ebd4d665ddd29e67961e3041574cb1ecf9d31336",
+    "paperId": "ebd4d665ddd29e67961e3041574cb1ecf9d31336",
+    "title": "Progressive Text-to-Image Diffusion with Soft Latent Direction",
+    "year": 2023,
+    "citationCount": 5,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2309.09466",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.09466, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "An innovative progressive synthesis and editing operation that systematically incorporates entities into the target image, ensuring their adherence to spatial and relational constraints at each sequential step is introduced."
+    },
+    "authors": [
+      {
+        "authorId": "2192689522",
+        "name": "Yuteng Ye"
+      },
+      {
+        "authorId": "2244145726",
+        "name": "Jiale Cai"
+      },
+      {
+        "authorId": "2243737713",
+        "name": "Hang Zhou"
+      },
+      {
+        "authorId": "2243556226",
+        "name": "Guanwen Li"
+      },
+      {
+        "authorId": "2243000579",
+        "name": "Youjia Zhang"
+      },
+      {
+        "authorId": "7576095",
+        "name": "Zikai Song"
+      },
+      {
+        "authorId": "2243086273",
+        "name": "Chenxing Gao"
+      },
+      {
+        "authorId": "2237947276",
+        "name": "Junqing Yu"
+      },
+      {
+        "authorId": "2243650023",
+        "name": "Wei Yang"
+      }
+    ],
+    "abstract": "In spite of the rapidly evolving landscape of text-to-image generation, the synthesis and manipulation of multiple entities while adhering to specific relational constraints pose enduring challenges. This paper introduces an innovative progressive synthesis and editing operation that systematically incorporates entities into the target image, ensuring their adherence to spatial and relational constraints at each sequential step. Our key insight stems from the observation that while a pre-trained text-to-image diffusion model adeptly handles one or two entities, it often falters when dealing with a greater number. To address this limitation, we propose harnessing the capabilities of a Large Language Model (LLM) to decompose intricate and protracted text descriptions into coherent directives adhering to stringent formats. To facilitate the execution of directives involving distinct semantic operations—namely insertion, editing, and erasing—we formulate the Stimulus, Response, and Fusion (SRF) framework. Within this framework, latent regions are gently stimulated in alignment with each operation, followed by the fusion of the responsive latent components to achieve cohesive entity manipulation. Our proposed framework yields notable advancements in object synthesis, particularly when confronted with intricate and lengthy textual inputs. Consequently, it establishes a new benchmark for text-to-image generation tasks, further elevating the field's performance standards.",
+    "score": 3
+  },
+  {
+    "id": "04016d3bad1f15b09b94b970b58e4e7a23562532",
+    "paperId": "04016d3bad1f15b09b94b970b58e4e7a23562532",
+    "title": "Audit & Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.18900, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2187933398",
+        "name": "Kiymet Akdemir"
+      },
+      {
+        "authorId": "2336952973",
+        "name": "Tahira Kazimi"
+      },
+      {
+        "authorId": "3137679",
+        "name": "Pinar Yanardag"
+      }
+    ],
+    "abstract": "Story visualization has become a popular task where visual scenes are generated to depict a narrative across multiple panels. A central challenge in this setting is maintaining visual consistency, particularly in how characters and objects persist and evolve throughout the story. Despite recent advances in diffusion models, current approaches often fail to preserve key character attributes, leading to incoherent narratives. In this work, we propose a collaborative multi-agent framework that autonomously identifies, corrects, and refines inconsistencies across multi-panel story visualizations. The agents operate in an iterative loop, enabling fine-grained, panel-level updates without re-generating entire sequences. Our framework is model-agnostic and flexibly integrates with a variety of diffusion models, including rectified flow transformers such as Flux and latent diffusion models such as Stable Diffusion. Quantitative and qualitative experiments show that our method outperforms prior approaches in terms of multi-panel consistency.",
+    "score": 7
+  },
+  {
+    "id": "c25bd3625c6e18ca91fd8903f82703999e14bb90",
+    "paperId": "c25bd3625c6e18ca91fd8903f82703999e14bb90",
+    "title": "Captain Cinema: Towards Short Movie Generation",
+    "year": 2025,
+    "citationCount": 2,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.18634, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "1384522627",
+        "name": "Junfei Xiao"
+      },
+      {
+        "authorId": "2338318606",
+        "name": "Ceyuan Yang"
+      },
+      {
+        "authorId": "2287850511",
+        "name": "Lvmin Zhang"
+      },
+      {
+        "authorId": "2170892427",
+        "name": "Shengqu Cai"
+      },
+      {
+        "authorId": "2372343063",
+        "name": "Yang Zhao"
+      },
+      {
+        "authorId": "2366317193",
+        "name": "Yuwei Guo"
+      },
+      {
+        "authorId": "2297763521",
+        "name": "Gordon Wetzstein"
+      },
+      {
+        "authorId": "1820412",
+        "name": "Maneesh Agrawala"
+      },
+      {
+        "authorId": "2250139492",
+        "name": "Alan L. Yuille"
+      },
+      {
+        "authorId": "2339721348",
+        "name": "Lu Jiang"
+      }
+    ],
+    "abstract": "We present Captain Cinema, a generation framework for short movie generation. Given a detailed textual description of a movie storyline, our approach firstly generates a sequence of keyframes that outline the entire narrative, which ensures long-range coherence in both the storyline and visual appearance (e.g., scenes and characters). We refer to this step as top-down keyframe planning. These keyframes then serve as conditioning signals for a video synthesis model, which supports long context learning, to produce the spatio-temporal dynamics between them. This step is referred to as bottom-up video synthesis. To support stable and efficient generation of multi-scene long narrative cinematic works, we introduce an interleaved training strategy for Multimodal Diffusion Transformers (MM-DiT), specifically adapted for long-context video data. Our model is trained on a specially curated cinematic dataset consisting of interleaved data pairs. Our experiments demonstrate that Captain Cinema performs favorably in the automated creation of visually coherent and narrative consistent short movies in high quality and efficiency. Project page: https://thecinema.ai",
+    "score": 5
+  },
+  {
+    "id": "dbec75d2309cca4b48389b6f3819b963f8b3b430",
+    "paperId": "dbec75d2309cca4b48389b6f3819b963f8b3b430",
+    "title": "StorySync: Training-Free Subject Consistency in Text-to-Image Generation via Region Harmonization",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.03735, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2375046407",
+        "name": "Gopalji Gaur"
+      },
+      {
+        "authorId": "2890820",
+        "name": "M. Zolfaghari"
+      },
+      {
+        "authorId": "2375045980",
+        "name": "Thomas Brox"
+      }
+    ],
+    "abstract": "Generating a coherent sequence of images that tells a visual story, using text-to-image diffusion models, often faces the critical challenge of maintaining subject consistency across all story scenes. Existing approaches, which typically rely on fine-tuning or retraining models, are computationally expensive, time-consuming, and often interfere with the model's pre-existing capabilities. In this paper, we follow a training-free approach and propose an efficient consistent-subject-generation method. This approach works seamlessly with pre-trained diffusion models by introducing masked cross-image attention sharing to dynamically align subject features across a batch of images, and Regional Feature Harmonization to refine visually similar details for improved subject consistency. Experimental results demonstrate that our approach successfully generates visually consistent subjects across a variety of scenarios while maintaining the creative abilities of the diffusion model.",
+    "score": 6
+  },
+  {
+    "id": "f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89",
+    "paperId": "f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89",
+    "title": "FairyGen: Storied Cartoon Video from a Single Child-Drawn Character",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21272, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2371080126",
+        "name": "Jiayi Zheng"
+      },
+      {
+        "authorId": "2355422738",
+        "name": "Xiaodong Cun"
+      }
+    ],
+    "abstract": "We propose FairyGen, an automatic system for generating story-driven cartoon videos from a single child's drawing, while faithfully preserving its unique artistic style. Unlike previous storytelling methods that primarily focus on character consistency and basic motion, FairyGen explicitly disentangles character modeling from stylized background generation and incorporates cinematic shot design to support expressive and coherent storytelling. Given a single character sketch, we first employ an MLLM to generate a structured storyboard with shot-level descriptions that specify environment settings, character actions, and camera perspectives. To ensure visual consistency, we introduce a style propagation adapter that captures the character's visual style and applies it to the background, faithfully retaining the character's full visual identity while synthesizing style-consistent scenes. A shot design module further enhances visual diversity and cinematic quality through frame cropping and multi-view synthesis based on the storyboard. To animate the story, we reconstruct a 3D proxy of the character to derive physically plausible motion sequences, which are then used to fine-tune an MMDiT-based image-to-video diffusion model. We further propose a two-stage motion customization adapter: the first stage learns appearance features from temporally unordered frames, disentangling identity from motion; the second stage models temporal dynamics using a timestep-shift strategy with frozen identity weights. Once trained, FairyGen directly renders diverse and coherent video scenes aligned with the storyboard. Extensive experiments demonstrate that our system produces animations that are stylistically faithful, narratively structured natural motion, highlighting its potential for personalized and engaging story animation. The code will be available at https://github.com/GVCLab/FairyGen",
+    "score": 5
+  }
+]

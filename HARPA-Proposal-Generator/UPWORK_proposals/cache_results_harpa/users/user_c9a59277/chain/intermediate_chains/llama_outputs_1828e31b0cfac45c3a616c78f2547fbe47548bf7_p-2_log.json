@@ -1,0 +1,82 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "59a35a90a1e71417a519fab635ef547ea3bf2002",
+            "pmid": "None",
+            "title": "Unleashing the Retrieval Potential of Large Language Models in Conversational Recommender Systems",
+            "abstract": "Conversational recommender systems (CRSs) aim to capture user preferences and provide personalized recommendations through interactive natural language interaction. The recent advent of large language models (LLMs) has revolutionized human engagement in natural conversation, driven by their extensive world knowledge and remarkable natural language understanding and generation capabilities. However, introducing LLMs into CRSs presents new technical challenges. Directly prompting LLMs for recommendation generation requires understanding a large and evolving item corpus, as well as grounding the generated recommendations in the real item space. On the other hand, generating recommendations based on external recommendation engines or directly integrating their suggestions into responses may constrain the overall performance of LLMs, since these engines generally have inferior representation abilities compared to LLMs. To address these challenges, we propose an end-to-end large-scale CRS model, named as ReFICR, a novel LLM-enhanced conversational recommender that empowers a retrievable large language model to perform conversational recommendation by following retrieval and generation instructions through lightweight tuning. By decomposing the complex CRS task into multiple subtasks, we formulate these subtasks into two types of instruction formats: retrieval and generation. The hidden states of ReFICR are utilized for generating text embeddings for retrieval, and simultaneously ReFICR is fine-tuned to handle generation subtasks. We optimize the contrastive objective to enhance text embeddings for retrieval and jointly fine-tune the large language model objective for generation. Our experimental results on public datasets demonstrate that ReFICR significantly outperforms baselines in terms of recommendation accuracy and response quality. Our code is publicly available at the link: https://github.com/yt556677/ReFICR.",
+            "year": 2024,
+            "citation_count": 10
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Generative Approach for Alleviating Filter Bubbles in Collaborative Filtering": {
+                    "explanation": "This paper focuses on addressing filter bubbles in collaborative filtering systems using LLMs, which is a different aspect of recommender systems than the conversational focus of the source paper. While it uses LLMs, it does not directly build on the source paper's hypothesis or findings.",
+                    "relevance": 0
+                },
+                "2. Search-Based Interaction For Conversation Recommendation via Generative Reward Model Based Simulated User": {
+                    "explanation": "This paper addresses challenges in conversational recommendation systems by proposing a generative reward model for simulated user interaction. It shares the focus on conversational recommendation with the source paper, but it does not directly depend on the findings of the source paper, as it introduces a different approach to user interaction.",
+                    "relevance": 1
+                },
+                "3. From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System": {
+                    "explanation": "This paper proposes a framework for synthesizing conversational training data for LLM-based CRS, which aligns with the source paper's focus on enhancing conversational recommendation systems using LLMs. It partially depends on the source paper's findings regarding the use of LLMs in CRSs.",
+                    "relevance": 2
+                },
+                "4. In-context Ranking Preference Optimization": {
+                    "explanation": "This paper focuses on optimizing ranking preferences in LLMs, which is a broader topic of LLM optimization and not specifically tied to conversational recommender systems as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. Harmonizing Large Language Models with Collaborative Behavioral Signals for Conversational Recommendation": {
+                    "explanation": "This paper proposes a framework for integrating behavioral signals with conversational interactions in CRSs, which directly relates to the source paper's focus on enhancing CRSs with LLMs. It builds on the source paper's findings regarding LLMs' role in CRSs.",
+                    "relevance": 2
+                },
+                "6. Graph Retrieval-Augmented LLM for Conversational Recommendation Systems": {
+                    "explanation": "This paper presents a graph retrieval-augmented LLM framework for CRSs, which aligns with the source paper's focus on enhancing CRSs with LLMs. It partially depends on the source paper's findings about LLMs' capabilities in CRSs.",
+                    "relevance": 2
+                },
+                "7. TALKPLAY: Multimodal Music Recommendation with Large Language Models": {
+                    "explanation": "This paper discusses a multimodal music recommendation system using LLMs, which is a specific application of LLMs in recommendation systems but not directly related to the conversational recommendation focus of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. From Reviews to Dialogues: Active Synthesis for Zero-Shot LLM-based Conversational Recommender System": {
+                    "explanation": "This paper proposes a framework for synthesizing conversational training data for LLM-based CRS, which aligns with the source paper's focus on enhancing conversational recommendation systems using LLMs. It partially depends on the source paper's findings regarding the use of LLMs in CRSs.",
+                    "relevance": 2
+                },
+                "2. Harmonizing Large Language Models with Collaborative Behavioral Signals for Conversational Recommendation": {
+                    "explanation": "This paper proposes a framework for integrating behavioral signals with conversational interactions in CRSs, which directly relates to the source paper's focus on enhancing CRSs with LLMs. It builds on the source paper's findings regarding LLMs' role in CRSs.",
+                    "relevance": 2
+                },
+                "3. Graph Retrieval-Augmented LLM for Conversational Recommendation Systems": {
+                    "explanation": "This paper presents a graph retrieval-augmented LLM framework for CRSs, which aligns with the source paper's focus on enhancing CRSs with LLMs. It partially depends on the source paper's findings about LLMs' capabilities in CRSs.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "6fbf26121566ac9dbbffe0b278c96fa4b0ed5f88",
+            "title": "Graph Retrieval-Augmented LLM for Conversational Recommendation Systems",
+            "abstract": "Conversational Recommender Systems (CRSs) have emerged as a transformative paradigm for offering personalized recommendations through natural language dialogue. However, they face challenges with knowledge sparsity, as users often provide brief, incomplete preference statements. While recent methods have integrated external knowledge sources to mitigate this, they still struggle with semantic understanding and complex preference reasoning. Recent Large Language Models (LLMs) demonstrate promising capabilities in natural language understanding and reasoning, showing significant potential for CRSs. Nevertheless, due to the lack of domain knowledge, existing LLM-based CRSs either produce hallucinated recommendations or demand expensive domain-specific training, which largely limits their applicability. In this work, we present G-CRS (Graph Retrieval-Augmented Large Language Model for Conversational Recommender Systems), a novel training-free framework that combines graph retrieval-augmented generation and in-context learning to enhance LLMs' recommendation capabilities. Specifically, G-CRS employs a two-stage retrieve-and-recommend architecture, where a GNN-based graph reasoner first identifies candidate items, followed by Personalized PageRank exploration to jointly discover potential items and similar user interactions. These retrieved contexts are then transformed into structured prompts for LLM reasoning, enabling contextually grounded recommendations without task-specific training. Extensive experiments on two public datasets show that G-CRS achieves superior recommendation performance compared to existing methods without requiring task-specific training.",
+            "year": 2025,
+            "citation_count": 2,
+            "relevance": 2,
+            "explanation": "This paper presents a graph retrieval-augmented LLM framework for CRSs, which aligns with the source paper's focus on enhancing CRSs with LLMs. It partially depends on the source paper's findings about LLMs' capabilities in CRSs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. LumiCRS: Asymmetric Contrastive Prototype Learning for Long-Tail Conversational Recommender Systems": {
+                    "explanation": "This paper addresses the long-tail distribution problem in conversational recommender systems, which is a different aspect of CRSs compared to the source paper. While both papers focus on improving CRS performance, LumiCRS does not directly build upon the graph retrieval-augmented approach or the specific challenges addressed by the source paper. Instead, it introduces a new framework for handling long-tail data using prototype learning and dialogue augmentation, which is not directly related to the source paper's hypothesis or findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

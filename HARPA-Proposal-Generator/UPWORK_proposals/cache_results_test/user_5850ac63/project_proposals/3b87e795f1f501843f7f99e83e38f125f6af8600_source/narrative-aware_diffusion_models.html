@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3b87e795f1f501843f7f99e83e38f125f6af8600</p>
+<hr>
+<section><h2>Title</h2>
+<p>Coherent Visual Storytelling: Sequential Conditional Diffusion Models for Multi-Sentence Narrative Visualization</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing story-to-image generation models often fail to capture the temporal dynamics and causal relationships inherent in multi-sentence narratives, leading to disconnected or illogical image sequences. This problem is particularly evident when generating visual representations for complex, multi-sentence stories where the coherence and logical progression of images are crucial for effective storytelling.</p>
+<h3>Motivation</h3>
+<p>Current approaches typically treat each sentence independently or use simple concatenation of text embeddings, losing important narrative structure. By incorporating narrative understanding directly into the image generation process, we can produce more coherent and causally-aligned visual stories. This approach is inspired by human cognitive processes, where we naturally understand the flow and interconnections within a story, and can visualize it as a coherent sequence rather than disjointed scenes.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a novel diffusion model architecture that integrates narrative comprehension: 1) A narrative encoder processes the full text sequence, producing hierarchical embeddings that capture sentence-level and story-level semantics. 2) We introduce 'narrative tokens' - learnable embeddings that represent key story elements (e.g., characters, locations, events) and are updated throughout the diffusion process. 3) A cross-attention mechanism allows the image generation to attend to relevant parts of the narrative structure at each diffusion step. 4) We employ a curriculum learning strategy, starting with single-sentence generation and gradually increasing to full story generation, to help the model learn temporal dependencies.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Create a large-scale dataset by pairing multi-sentence stories from books with corresponding image sequences from movies and TV shows. Use GPT-4 to generate 10,000 short stories (3-5 sentences each) across various genres. For each story, use CLIP to retrieve 3-5 relevant images from a large image database (e.g., LAION-5B) to create image sequences.</p><p><strong>Step 2: Baseline Model Implementation</strong></p><p>Implement and fine-tune state-of-the-art text-to-image models (e.g., Stable Diffusion) on our dataset. Use a simple concatenation of sentence embeddings as input.</p><p><strong>Step 3: Narrative Encoder Implementation</strong></p><p>Implement a hierarchical Transformer-based encoder that processes the full story text and outputs sentence-level and story-level embeddings.</p><p><strong>Step 4: Narrative Tokens Implementation</strong></p><p>Design and implement learnable narrative tokens that represent key story elements. Initialize these tokens using a pre-trained language model's embeddings.</p><p><strong>Step 5: Cross-Attention Mechanism</strong></p><p>Modify the diffusion model's U-Net architecture to incorporate cross-attention layers that attend to the narrative encoder's outputs and narrative tokens.</p><p><strong>Step 6: Curriculum Learning Strategy</strong></p><p>Implement a curriculum learning approach that gradually increases the complexity of the generation task, from single sentences to full stories.</p><p><strong>Step 7: Training</strong></p><p>Train the model using the Adam optimizer with a learning rate of 1e-4 and a batch size of 32. Use a cosine learning rate schedule with 1000 warmup steps. Train for 100,000 steps or until convergence.</p><p><strong>Step 8: Evaluation</strong></p><p>Evaluate the model using both automated metrics and human evaluation. For automated metrics, use FID score to assess image quality and CLIP score to measure text-image alignment. For human evaluation, recruit 100 participants to rate the coherence, relevance, and quality of generated image sequences on a 5-point Likert scale.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Conduct ablation studies to assess the impact of each component (narrative encoder, narrative tokens, cross-attention, curriculum learning) on the final performance.</p><p><strong>Step 10: Comparison with Baselines</strong></p><p>Compare our model's performance against the baseline models implemented in Step 2, as well as other state-of-the-art methods if available.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>John walked into the bustling cafe. He ordered a steaming latte and found a cozy corner seat. As he sipped his coffee, he noticed an old friend entering the cafe.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Three disconnected images: 1) A generic cafe interior, 2) A close-up of a latte, 3) Two people greeting each other, but without clear continuity or shared setting.</p><p><strong>Proposed Prompt Input</strong></p><p>John walked into the bustling cafe. He ordered a steaming latte and found a cozy corner seat. As he sipped his coffee, he noticed an old friend entering the cafe.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>A sequence of three coherent images: 1) A man (John) entering a busy cafe, with focus on the entrance and the crowded interior. 2) The same man sitting in a corner seat with a steaming latte on the table, the cafe interior still visible but blurred in the background. 3) The man looking up from his seat, with a surprised expression, as another person (the old friend) is seen entering the cafe in the background, maintaining the same cafe setting and John's position.</p><p><strong>Explanation</strong></p><p>The proposed method generates a more coherent and causally-aligned sequence of images that better captures the narrative flow and maintains consistency in characters and setting across the story.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed method doesn't significantly outperform baselines, we can pivot to an analysis paper focusing on the challenges of maintaining narrative coherence in visual storytelling. We would conduct a detailed error analysis to identify common failure modes, such as character inconsistency, setting discontinuity, or temporal misalignment. We could also explore the relationship between text complexity and visual coherence, analyzing how different story elements (e.g., number of characters, scene changes, abstract concepts) impact the model's performance. Additionally, we might investigate how different components of our architecture (narrative encoder, narrative tokens, cross-attention) contribute to or hinder performance in various scenarios. This analysis could provide valuable insights for future research directions in narrative-aware image generation.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/4b0f3436810a5d8b3a8a557e0185d77a4ee38f74" target="_blank">Lay2Story: Extending Diffusion Transformers for Layout-Togglable Story Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/9f7914c2577626868e6a69f2c9605b38f941055b" target="_blank">StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b8f2ba261756ca551ba68940e08a9466c2602f79" target="_blank">Sequential Attention GAN for Interactive Image Editing</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c" target="_blank">Automated Visual Generation using GAN with Textual Information Feeds</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea" target="_blank">Test-time Prompt Refinement for Text-to-Image Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ebd4d665ddd29e67961e3041574cb1ecf9d31336" target="_blank">Progressive Text-to-Image Diffusion with Soft Latent Direction</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/04016d3bad1f15b09b94b970b58e4e7a23562532" target="_blank">Audit & Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c25bd3625c6e18ca91fd8903f82703999e14bb90" target="_blank">Captain Cinema: Towards Short Movie Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dbec75d2309cca4b48389b6f3819b963f8b3b430" target="_blank">StorySync: Training-Free Subject Consistency in Text-to-Image Generation via Region Harmonization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89" target="_blank">FairyGen: Storied Cartoon Video from a Single Child-Drawn Character</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

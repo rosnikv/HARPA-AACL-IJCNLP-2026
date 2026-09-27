@@ -1,0 +1,37 @@
+[
+    {
+        "paperId": "53d8b356551a2361020a948f64454a6d599af69f",
+        "pmid": "2101.00190",
+        "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "abstract": "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were \u201cvirtual tokens\u201d. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+        "year": 2021,
+        "citation_count": 4442
+    },
+    {
+        "paperId": "74fcfb150e319d83479314e44dbc89eb31db9e06",
+        "title": "Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts",
+        "abstract": "Prompt-based techniques, such as prompt-tuning and prefix-tuning, have gained prominence for their efficiency in fine-tuning large pre-trained models. Despite their widespread adoption, the theoretical foundations of these methods remain limited. For instance, in prefix-tuning, we observe that a key factor in achieving performance parity with full fine-tuning lies in the reparameterization strategy. However, the theoretical principles underpinning the effectiveness of this approach have yet to be thoroughly examined. Our study demonstrates that reparameterization is not merely an engineering trick but is grounded in deep theoretical foundations. Specifically, we show that the reparameterization strategy implicitly encodes a shared structure between prefix key and value vectors. Building on recent insights into the connection between prefix-tuning and mixture of experts models, we further illustrate that this shared structure significantly improves sample efficiency in parameter estimation compared to non-shared alternatives. The effectiveness of prefix-tuning across diverse tasks is empirically confirmed to be enhanced by the shared structure, through extensive experiments in both visual and language domains. Additionally, we uncover similar structural benefits in prompt-tuning, offering new perspectives on its success. Our findings provide theoretical and empirical contributions, advancing the understanding of prompt-based methods and their underlying mechanisms.",
+        "year": 2024,
+        "citation_count": 8,
+        "relevance": 2,
+        "explanation": "This paper revisits prefix-tuning and explores its theoretical foundations, directly building on and expanding the findings of the source paper."
+    },
+    {
+        "paperId": "07059e01668b69cc5e9b032b10ff30aa222fb053",
+        "title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective",
+        "abstract": "To address catastrophic forgetting in Continual Relation Extraction (CRE), many current approaches rely on memory buffers to rehearse previously learned knowledge while acquiring new tasks. Recently, prompt-based methods have emerged as potent alternatives to rehearsal-based strategies, demonstrating strong empirical performance. However, upon analyzing existing prompt-based approaches for CRE, we identified several critical limitations, such as inaccurate prompt selection, inadequate mechanisms for mitigating forgetting in shared parameters, and suboptimal handling of cross-task and within-task variances. To overcome these challenges, we draw inspiration from the relationship between prefix tuning and mixture of experts, proposing a novel approach that employs a prompt pool for each task, capturing variations within each task while enhancing cross-task variances. Furthermore, we incorporate a generative model to consolidate prior knowledge within shared parameters, eliminating the need for explicit data storage. Extensive experiments validate the efficacy of our approach, demonstrating superior performance over state-of-the-art prompt-based and rehearsal-free methods in continual relation extraction.",
+        "year": 2024,
+        "citation_count": 5,
+        "relevance": 1,
+        "explanation": "This paper is inspired by the source paper's findings on the relationship between prefix tuning and mixture of experts. It builds on this by proposing a novel approach for continual relation extraction that addresses limitations in existing prompt-based methods, drawing from the insights on shared structures in prefix tuning."
+    },
+    {
+        "paperId": "912bebbd5cc0c6df735ed8c20fd5609c64d834a6",
+        "title": "Towards Rehearsal-Free Continual Relation Extraction: Capturing Within-Task Variance with Adaptive Prompting",
+        "abstract": "Memory-based approaches have shown strong performance in Continual Relation Extraction (CRE). However, storing examples from previous tasks increases memory usage and raises privacy concerns. Recently, prompt-based methods have emerged as a promising alternative, as they do not rely on storing past samples. Despite this progress, current prompt-based techniques face several core challenges in CRE, particularly in accurately identifying task identities and mitigating catastrophic forgetting. Existing prompt selection strategies often suffer from inaccuracies, lack robust mechanisms to prevent forgetting in shared parameters, and struggle to handle both cross-task and within-task variations. In this paper, we propose WAVE++, a novel approach inspired by the connection between prefix-tuning and mixture of experts. Specifically, we introduce task-specific prompt pools that enhance flexibility and adaptability across diverse tasks while avoiding boundary-spanning risks; this design more effectively captures variations within each task and across tasks. To further refine relation classification, we incorporate label descriptions that provide richer, more global context, enabling the model to better distinguish among different relations. We also propose a training-free mechanism to improve task prediction during inference. Moreover, we integrate a generative model to consolidate prior knowledge within the shared parameters, thereby removing the need for explicit data storage. Extensive experiments demonstrate that WAVE++ outperforms state-of-the-art prompt-based and rehearsal-based methods, offering a more robust solution for continual relation extraction. Our code is publicly available at https://github.com/PiDinosauR2804/WAVE-CRE-PLUS-PLUS.",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 2,
+        "explanation": "This paper builds directly on the source paper by proposing WAVE++, which is inspired by the same challenges addressed in the source paper, such as within-task variance and the use of prompt-based methods. It extends the source paper's approach by refining prompt selection and task prediction, making it highly relevant."
+    }
+]

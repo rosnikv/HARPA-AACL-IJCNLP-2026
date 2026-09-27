@@ -1,0 +1,412 @@
+[
+  {
+    "id": "e866b9e877712008edb4ebaaad10c9d0b3621800",
+    "paperId": "e866b9e877712008edb4ebaaad10c9d0b3621800",
+    "title": "Revisiting Continual Semantic Segmentation with Pre-trained Vision Models",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04267, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2363671208",
+        "name": "Duzhen Zhang"
+      },
+      {
+        "authorId": "2372140048",
+        "name": "Yong Ren"
+      },
+      {
+        "authorId": "2211546159",
+        "name": "Wei Cong"
+      },
+      {
+        "authorId": "2346999877",
+        "name": "Junhao Zheng"
+      },
+      {
+        "authorId": "2375049966",
+        "name": "Qiaoyi Su"
+      },
+      {
+        "authorId": "1990801834",
+        "name": "Shuncheng Jia"
+      },
+      {
+        "authorId": null,
+        "name": "Zhong-Zhi Li"
+      },
+      {
+        "authorId": "2267913873",
+        "name": "Xuanle Zhao"
+      },
+      {
+        "authorId": "2375086720",
+        "name": "Ye Bai"
+      },
+      {
+        "authorId": "2375335898",
+        "name": "Feilong Chen"
+      },
+      {
+        "authorId": "2375049577",
+        "name": "Qi Tian"
+      },
+      {
+        "authorId": "2363687784",
+        "name": "Tielin Zhang"
+      }
+    ],
+    "abstract": "Continual Semantic Segmentation (CSS) seeks to incrementally learn to segment novel classes while preserving knowledge of previously encountered ones. Recent advancements in CSS have been largely driven by the adoption of Pre-trained Vision Models (PVMs) as backbones. Among existing strategies, Direct Fine-Tuning (DFT), which sequentially fine-tunes the model across classes, remains the most straightforward approach. Prior work often regards DFT as a performance lower bound due to its presumed vulnerability to severe catastrophic forgetting, leading to the development of numerous complex mitigation techniques. However, we contend that this prevailing assumption is flawed. In this paper, we systematically revisit forgetting in DFT across two standard benchmarks, Pascal VOC 2012 and ADE20K, under eight CSS settings using two representative PVM backbones: ResNet101 and Swin-B. Through a detailed probing analysis, our findings reveal that existing methods significantly underestimate the inherent anti-forgetting capabilities of PVMs. Even under DFT, PVMs retain previously learned knowledge with minimal forgetting. Further investigation of the feature space indicates that the observed forgetting primarily arises from the classifier's drift away from the PVM, rather than from degradation of the backbone representations. Based on this insight, we propose DFT*, a simple yet effective enhancement to DFT that incorporates strategies such as freezing the PVM backbone and previously learned classifiers, as well as pre-allocating future classifiers. Extensive experiments show that DFT* consistently achieves competitive or superior performance compared to sixteen state-of-the-art CSS methods, while requiring substantially fewer trainable parameters and less training time.",
+    "score": 5
+  },
+  {
+    "id": "4857062751b922c7ce3d166dd1c54d627b2056b8",
+    "paperId": "4857062751b922c7ce3d166dd1c54d627b2056b8",
+    "title": "DuET: Dual Incremental Object Detection via Exemplar-Free Task Arithmetic",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21260, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "116501551",
+        "name": "Munish Monga"
+      },
+      {
+        "authorId": "2279568073",
+        "name": "Vishal M. Chudasama"
+      },
+      {
+        "authorId": "2279566647",
+        "name": "Pankaj Wasnik"
+      },
+      {
+        "authorId": "2350512552",
+        "name": "Biplab Banerjee"
+      }
+    ],
+    "abstract": "Real-world object detection systems, such as those in autonomous driving and surveillance, must continuously learn new object categories and simultaneously adapt to changing environmental conditions. Existing approaches, Class Incremental Object Detection (CIOD) and Domain Incremental Object Detection (DIOD) only address one aspect of this challenge. CIOD struggles in unseen domains, while DIOD suffers from catastrophic forgetting when learning new classes, limiting their real-world applicability. To overcome these limitations, we introduce Dual Incremental Object Detection (DuIOD), a more practical setting that simultaneously handles class and domain shifts in an exemplar-free manner. We propose DuET, a Task Arithmetic-based model merging framework that enables stable incremental learning while mitigating sign conflicts through a novel Directional Consistency Loss. Unlike prior methods, DuET is detector-agnostic, allowing models like YOLO11 and RT-DETR to function as real-time incremental object detectors. To comprehensively evaluate both retention and adaptation, we introduce the Retention-Adaptability Index (RAI), which combines the Average Retention Index (Avg RI) for catastrophic forgetting and the Average Generalization Index for domain adaptability into a common ground. Extensive experiments on the Pascal Series and Diverse Weather Series demonstrate DuET's effectiveness, achieving a +13.12% RAI improvement while preserving 89.3% Avg RI on the Pascal Series (4 tasks), as well as a +11.39% RAI improvement with 88.57% Avg RI on the Diverse Weather Series (3 tasks), outperforming existing methods.",
+    "score": 7
+  },
+  {
+    "id": "c194730a4fc21650d252a7ebf4d37e203f0c25ca",
+    "paperId": "c194730a4fc21650d252a7ebf4d37e203f0c25ca",
+    "title": "Alleviating Catastrophic Forgetting of Incremental Object Detection via Within-Class and Between-Class Knowledge Distillation",
+    "year": 2023,
+    "citationCount": 14,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICCV51070.2023.01732?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICCV51070.2023.01732, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2279792646",
+        "name": "Mengxue Kang"
+      },
+      {
+        "authorId": "2280196439",
+        "name": "Jinpeng Zhang"
+      },
+      {
+        "authorId": "2280370410",
+        "name": "Jinming Zhang"
+      },
+      {
+        "authorId": "2238889402",
+        "name": "Xiashuang Wang"
+      },
+      {
+        "authorId": "2279834840",
+        "name": "Yang Chen"
+      },
+      {
+        "authorId": "2130780811",
+        "name": "Zhe Ma"
+      },
+      {
+        "authorId": "2157613643",
+        "name": "Xuhui Huang"
+      }
+    ],
+    "abstract": "Incremental object detection (IOD) task requires a model to learn continually from newly added data. However, directly fine-tuning a well-trained detection model on a new task will sharply decrease the performance on old tasks, which is known as catastrophic forgetting. Knowledge distillation, including feature distillation and response distillation, has been proven to be an effective way to alleviate catastrophic forgetting. However, previous works on feature distillation heavily rely on low-level feature information, while under-exploring the importance of high-level semantic information. In this paper, we discuss the cause of catastrophic forgetting in IOD task as destruction of semantic feature space. We propose a method that dynamically distills both semantic and feature information with consideration of both between-class discriminativeness and within-class consistency on Transformer-based detector. Between-class discriminativeness is preserved by distilling class-level semantic distance and feature distance among various categories, while within-class consistency is preserved by distilling instance-level semantic information and feature information within each category. Extensive experiments are conducted on both Pascal VOC and MS COCO benchmarks. Our method outperforms all the previous CNN-based SOTA methods under various experimental scenarios, with a remarkable mAP improvement from 36.90% to 39.80% under one-step IOD task.",
+    "score": 8
+  },
+  {
+    "id": "cbe2300f89abdc49fda49ea5047d0e337e4347ed",
+    "paperId": "cbe2300f89abdc49fda49ea5047d0e337e4347ed",
+    "title": "Pseudo Object Replay and Mining for Incremental Object Detection",
+    "year": 2023,
+    "citationCount": 8,
+    "openAccessPdf": {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3581783.3611952",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3581783.3611952?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3581783.3611952, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "8697322",
+        "name": "Dongbao Yang"
+      },
+      {
+        "authorId": "49454803",
+        "name": "Yu ZHOU"
+      },
+      {
+        "authorId": "2112812398",
+        "name": "Xiaopeng Hong"
+      },
+      {
+        "authorId": "2262140435",
+        "name": "Aoting Zhang"
+      },
+      {
+        "authorId": "2261941820",
+        "name": "Xin Wei"
+      },
+      {
+        "authorId": "2187312421",
+        "name": "Linchengxi Zeng"
+      },
+      {
+        "authorId": "2057901994",
+        "name": "Zhi Qiao"
+      },
+      {
+        "authorId": "2261898429",
+        "name": "Weipinng Wang"
+      }
+    ],
+    "abstract": "Incremental object detection (IOD) aims to mitigate catastrophic forgetting for object detectors when incrementally learning to detect new emerging object classes without using original training data. Most existing IOD methods benefit from the assumption that unlabeled old-class objects may co-occur with labeled new-class objects in the new training data. However, in practical scenarios, old-class objects may be absent, which is called non co-occurrence IOD. In this paper, we propose a pseudo object replay and mining method (PseudoRM) to handle the co-occurrence dependent problem, reducing the performance degradation caused by the absence of old-class objects. The new training data can be augmented by co-occurring fake (old-class) and real (new-class) objects with a patch-level data-free generation method in the pseudo object replay stage. To fully use existing training data, we propose pseudo object mining to explore false positives for transferring useful instance-level knowledge. In the incremental learning procedure, a generative distillation is introduced to distill image-level knowledge for balancing stability and plasticity. Experimental results on PASCAL VOC and COCO demonstrate that PseudoRM can effectively boost the performance on both co-occurrence and non co-occurrence scenarios without using old samples or extra wild data.",
+    "score": 7
+  },
+  {
+    "id": "078ad37a11445c44b6a68f3b514cefb29ee60cf4",
+    "paperId": "078ad37a11445c44b6a68f3b514cefb29ee60cf4",
+    "title": "Overcoming Catastrophic Forgetting in Incremental Object Detection via Elastic Response Distillation",
+    "year": 2022,
+    "citationCount": 94,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2204.02136",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2204.02136, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": null,
+        "name": "Tao Feng"
+      },
+      {
+        "authorId": "2124703537",
+        "name": "Mang Wang"
+      },
+      {
+        "authorId": "2151334837",
+        "name": "Hangjie Yuan"
+      }
+    ],
+    "abstract": "Traditional object detectors are ill-equipped for incremental learning. However, fine-tuning directly on a well-trained detection model with only new data will lead to catastrophic forgetting. Knowledge distillation is a flexible way to mitigate catastrophic forgetting. In Incremental Object Detection (IOD), previous work mainly focuses on distilling for the combination of features and responses. However, they under-explore the information that contains in responses. In this paper, we propose a response-based incremental distillation method, dubbed Elastic Response Distillation (ERD), which focuses on elastically learning responses from the classification head and the regression head. Firstly, our method transfers category knowledge while equipping student detector with the ability to retain localization information during incremental learning. In addition, we further evaluate the quality of all locations and provide valuable responses by the Elastic Response Selection (ERS) strategy. Finally, we elucidate that the knowledge from different responses should be assigned with different importance during incremental distillation. Extensive experiments conducted on MS COCO demonstrate our method achieves state-of-the-art result, which substantially narrows the performance gap towards full training. Code is available at https://github.com/Hi-FT/ERD.",
+    "score": 7
+  },
+  {
+    "id": "8d1fbde83749f61e1a385f2c380ea134d65b52f2",
+    "paperId": "8d1fbde83749f61e1a385f2c380ea134d65b52f2",
+    "title": "Continual Detection Transformer for Incremental Object Detection",
+    "year": 2023,
+    "citationCount": 57,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2304.03110",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2304.03110, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "3035233",
+        "name": "Yaoyao Liu"
+      },
+      {
+        "authorId": "48920094",
+        "name": "B. Schiele"
+      },
+      {
+        "authorId": "1687524",
+        "name": "A. Vedaldi"
+      },
+      {
+        "authorId": "49359942",
+        "name": "C. Rupprecht"
+      }
+    ],
+    "abstract": "Incremental object detection (IOD) aims to train an object detector in phases, each with annotations for new object categories. As other incremental settings, IOD is subject to catastrophic forgetting, which is often addressed by techniques such as knowledge distillation (KD) and exem-plar replay (ER). However, KD and ER do not work well if applied directly to state-of-the-art transformer-based object detectors such as Deformable DETR [59] and UP-DETR [9]. In this paper, we solve these issues by proposing a ContinuaL DEtection TRansformer (CL-DETR), a new method for transformer-based IOD which enables effective usage of KD and ER in this context. First, we introduce a Detector Knowledge Distillation (DKD) loss, focusing on the most informative and reliable predictions from old versions of the model, ignoring redundant background predictions, and ensuring compatibility with the available ground-truth labels. We also improve ER by proposing a calibration strategy to preserve the label distribution of the training set, therefore better matching training and testing statistics. We conduct extensive experiments on COCO 2017 and demonstrate that CL-DETR achieves state-of-the-art results in the IOD setting.11Code: https://1yy.mpi-inf.mpg.de/CL-DETR/",
+    "score": 9
+  },
+  {
+    "id": "591b4f4b4f2b000b119f1cd2db265abb9e4e4b04",
+    "paperId": "591b4f4b4f2b000b119f1cd2db265abb9e4e4b04",
+    "title": "Incremental Few-Shot Object Detection via Simple Fine-Tuning Approach",
+    "year": 2023,
+    "citationCount": 6,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2302.09779",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2302.09779, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "A simple fine-tuning-based approach to incremental few-shot object detection (iFSD), which incrementally learns novel classes using only a few examples without revisiting base classes, which achieves competitive performance in COCO and shows a 30% higher AP accuracy than meta-learning methods in the LVIS dataset."
+    },
+    "authors": [
+      {
+        "authorId": "148187107",
+        "name": "Taehyean Choi"
+      },
+      {
+        "authorId": "2188268558",
+        "name": "Jong-Hwan Kim"
+      }
+    ],
+    "abstract": "In this paper, we explore incremental few-shot object detection (iFSD), which incrementally learns novel classes using only a few examples without revisiting base classes. Previous iFSD works achieved the desired results by applying metalearning. However, meta-learning approaches show insufficient performance that is difficult to apply to practical problems. In this light, we propose a simple fine-tuning-based approach, the Incremental Two-stage Fine-tuning Approach (iTFA) for iFSD, which contains three steps: 1) base training using abundant base classes with the class-agnostic box regressor, 2) separation of the RoI feature extractor and classifier into the base and novel class branches for preserving base knowledge, and 3) fine-tuning the novel branch using only a few novel class examples. We evaluate our iTFA on the real-world datasets PASCAL VOC, COCO, and LVIS. iTFA achieves competitive performance in COCO and shows a 30% higher AP accuracy than meta-learning methods in the LVIS dataset. Experimental results show the effectiveness and applicability of our proposed method11Code is available at https://github.com/TMIU/iTFA.",
+    "score": 7
+  },
+  {
+    "id": "597159544be7ca16821760cc9332880a1cb5b42f",
+    "paperId": "597159544be7ca16821760cc9332880a1cb5b42f",
+    "title": "EGOR: Efficient Generated Objects Replay for incremental object detection",
+    "year": 2024,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.48550/arXiv.2406.04829?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.48550/arXiv.2406.04829, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This paper proposes Efficient Generated Object Replay (EGOR), which generates old-class samples by inversing the original detectors, thus eliminating the necessity of training and storing additional generative models, and proposes augmented replay to reuse the objects in generated samples, thereby reducing the redundant generation."
+    },
+    "authors": [
+      {
+        "authorId": "2305486646",
+        "name": "Zijia An"
+      },
+      {
+        "authorId": "3070516",
+        "name": "Boyu Diao"
+      },
+      {
+        "authorId": "2247874007",
+        "name": "Libo Huang"
+      },
+      {
+        "authorId": "2248213913",
+        "name": "Ruiqi Liu"
+      },
+      {
+        "authorId": "2127813",
+        "name": "Zhulin An"
+      },
+      {
+        "authorId": "2146648122",
+        "name": "Yongjun Xu"
+      }
+    ],
+    "abstract": "Incremental object detection aims to simultaneously maintain old-class accuracy and detect emerging new-class objects in incremental data. Most existing distillation-based methods underperform when unlabeled old-class objects are absent in the incremental dataset. While the absence can be mitigated by generating old-class samples, it also incurs high computational costs. In this paper, we argue that the extra computational cost stems from the inconsistency between the detector and the generative model, along with redundant generation. To overcome this problem, we propose Efficient Generated Object Replay (EGOR). Specifically, we generate old-class samples by inversing the original detectors, thus eliminating the necessity of training and storing additional generative models. We also propose augmented replay to reuse the objects in generated samples, thereby reducing the redundant generation. In addition, we propose high-response knowledge distillation focusing on the knowledge related to the old class, which transfers the knowledge in generated objects to the incremental detector. With the addition of the generated objects and losses, we observe a bias towards old classes in the detector. We balance the losses for old and new classes to alleviate the bias, thereby increasing the overall detection accuracy. Extensive experiments conducted on MS COCO 2017 demonstrate that our method can efficiently improve detection performance in the absence of old-class objects.",
+    "score": 8
+  },
+  {
+    "id": "4af5ac57d6df79dd457c80d90bac170906b5185b",
+    "paperId": "4af5ac57d6df79dd457c80d90bac170906b5185b",
+    "title": "Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection",
+    "year": 2024,
+    "citationCount": 7,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2407.11499, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "A method called ``Bridge Past and Future'' (BPF), which aligns models across stages, ensuring consistent optimization directions, and a novel Distillation with Future (DwF) loss, fully leveraging the background probability to mitigate the forgetting of old classes while ensuring a high level of adaptability in learning new classes."
+    },
+    "authors": [
+      {
+        "authorId": "2311509461",
+        "name": "Qijie Mo"
+      },
+      {
+        "authorId": "2118544431",
+        "name": "Yipeng Gao"
+      },
+      {
+        "authorId": "2312009121",
+        "name": "Shenghao Fu"
+      },
+      {
+        "authorId": "2193182543",
+        "name": "Junkai Yan"
+      },
+      {
+        "authorId": "2084013",
+        "name": "Ancong Wu"
+      },
+      {
+        "authorId": "2287763327",
+        "name": "Wei-Shi Zheng"
+      }
+    ],
+    "abstract": "In incremental object detection, knowledge distillation has been proven to be an effective way to alleviate catastrophic forgetting. However, previous works focused on preserving the knowledge of old models, ignoring that images could simultaneously contain categories from past, present, and future stages. The co-occurrence of objects makes the optimization objectives inconsistent across different stages since the definition for foreground objects differs across various stages, which limits the model's performance greatly. To overcome this problem, we propose a method called ``Bridge Past and Future'' (BPF), which aligns models across stages, ensuring consistent optimization directions. In addition, we propose a novel Distillation with Future (DwF) loss, fully leveraging the background probability to mitigate the forgetting of old classes while ensuring a high level of adaptability in learning new classes. Extensive experiments are conducted on both Pascal VOC and MS COCO benchmarks. Without memory, BPF outperforms current state-of-the-art methods under various settings. The code is available at https://github.com/iSEE-Laboratory/BPF.",
+    "score": 9
+  },
+  {
+    "id": "4f78d2ef7f18907c04c7ab77b88172784e342f40",
+    "paperId": "4f78d2ef7f18907c04c7ab77b88172784e342f40",
+    "title": "Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection",
+    "year": 2023,
+    "citationCount": 29,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/2307.12427",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2307.12427, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2224651503",
+        "name": "Liu Yuyang"
+      },
+      {
+        "authorId": "46961961",
+        "name": "Cong Yang"
+      },
+      {
+        "authorId": "2141570174",
+        "name": "Dipam Goswami"
+      },
+      {
+        "authorId": "10762884",
+        "name": "Liu Xialei"
+      },
+      {
+        "authorId": "2820687",
+        "name": "Joost van de Weijer"
+      }
+    ],
+    "abstract": "In incremental learning, replaying stored samples from previous tasks together with current task samples is one of the most efficient approaches to address catastrophic forgetting. However, unlike incremental classification, image replay has not been successfully applied to incremental object detection (IOD). In this paper, we identify the overlooked problem of foreground shift as the main reason for this. Foreground shift only occurs when replaying images of previous tasks and refers to the fact that their background might contain foreground objects of the current task. To overcome this problem, a novel and efficient Augmented Box Replay (ABR) method is developed that only stores and replays foreground objects and thereby circumvents the foreground shift problem. In addition, we propose an innovative Attentive RoI Distillation loss that uses spatial attention from region-of-interest (RoI) features to constrain current model to focus on the most important information from old model. ABR significantly reduces forgetting of previous classes while maintaining high plasticity in current classes. Moreover, it considerably reduces the storage requirements when compared to standard image replay. Comprehensive experiments on Pascal-VOC and COCO datasets support the state-of-the-art performance of our model1.",
+    "score": 7
+  }
+]

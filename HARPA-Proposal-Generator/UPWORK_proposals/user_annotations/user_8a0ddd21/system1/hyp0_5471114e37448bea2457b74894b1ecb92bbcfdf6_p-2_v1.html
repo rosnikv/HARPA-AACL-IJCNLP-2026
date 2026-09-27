@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>5471114e37448bea2457b74894b1ecb92bbcfdf6</p>
+<hr>
+<h2>Title</h2>
+<p>Exploring bias propagation in LLMs using non-binary gender inclusion and synthetic persona-based prompting.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>The combination of non-binary gender inclusion and synthetic persona-based prompting significantly influences the propagation of social identity biases in large language models, leading to a distinct pattern of bias compared to congruous persona configurations.</p>
+<h3>Motivation</h3>
+<p>Existing research has extensively explored the biases in language models when adopting personas with congruous traits, such as aligned political, gender, or racial characteristics. However, there is a lack of investigation into how specific combinations of incongruous persona traits, particularly those involving non-binary gender inclusion and synthetic persona-based prompting, influence bias propagation in large language models. This gap is critical because understanding these interactions could reveal new dimensions of bias and steerability in LLMs, which are not apparent when considering congruous personas alone. By exploring these under-researched combinations, we can better understand the complexities of bias in LLMs and develop more effective strategies for bias mitigation.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research investigates the impact of combining non-binary gender inclusion with synthetic persona-based prompting on the propagation of social identity biases in large language models (LLMs). The study aims to explore how these specific incongruous persona traits affect bias propagation, which has not been extensively tested in prior research. By using non-binary gender inclusion, we expand the gender representation beyond traditional binary categories, allowing for a more comprehensive analysis of gender-related biases. Synthetic persona-based prompting is employed to dynamically adopt diverse political orientations, providing a flexible framework to simulate various social identities. This combination is expected to reveal unique bias patterns that are not apparent in congruous persona configurations. The research will utilize bias amplification scores to quantify the extent of bias propagation and compare it against baseline models with congruous persona traits. The expected outcome is a deeper understanding of how incongruous persona traits interact to influence bias in LLMs, offering insights into more effective bias mitigation strategies.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/b858aa64fb7d0572a4de19c8c4e75ff128bbb170">Non-Binary Gender Inclusion</a>: Non-binary gender inclusion involves expanding gender representation in language models beyond traditional male and female categories. This is implemented using datasets that include non-binary gender identities, allowing models to generate text that reflects a broader range of gender expressions. The expected role of this variable is to influence the model's gender-related bias patterns, providing a more inclusive framework for evaluating bias propagation. The inclusion of non-binary identities is crucial for understanding the full spectrum of gender biases in LLMs, as it challenges traditional binary representations and highlights potential areas for bias mitigation.</p>
+<p><a href="https://www.semanticscholar.org/paper/72f1fce1ba2e1002b5ea75c37fd3746541c47239">Synthetic Persona-Based Prompting</a>: Synthetic persona-based prompting involves using predefined persona descriptions to influence the political orientation of LLMs. This method leverages the adaptability of LLMs to adopt different perspectives based on the personas they are prompted with. By using synthetic personas, researchers can explore how different political orientations affect model outputs. The expected role of this variable is to dynamically simulate diverse political views, providing insights into the malleability of LLMs' political biases. This approach is particularly relevant for tasks requiring the representation of varied political ideologies and can be used to assess the impact of persona congruity on model steerability.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves a systematic evaluation of how non-binary gender inclusion and synthetic persona-based prompting affect bias propagation in LLMs. The experiment will begin by configuring the language model to include non-binary gender identities using a dataset that represents a broad spectrum of gender expressions. This setup will allow the model to generate text that reflects non-binary gender perspectives. Next, synthetic persona-based prompting will be implemented by using predefined persona descriptions from the PersonaHub collection to influence the model's political orientation. These personas will be selected to represent a range of political views, ensuring a diverse set of inputs for the model. The experiment will then proceed to evaluate the model's outputs using bias amplification scores, which quantify the extent of bias propagation in response to different persona prompts. The outputs will be compared against baseline models configured with congruous persona traits to identify any distinct patterns of bias. The integration of non-binary gender inclusion and synthetic persona-based prompting is expected to reveal unique interactions between gender and political biases, providing a deeper understanding of how these factors influence bias propagation in LLMs. The results will offer insights into more effective strategies for bias mitigation, particularly in scenarios involving incongruous persona traits.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please build an experiment to investigate how the combination of non-binary gender inclusion and synthetic persona-based prompting influences bias propagation in large language models (LLMs). The experiment should compare incongruous persona configurations (e.g., non-binary gender identity combined with conservative political views) against congruous persona configurations (e.g., binary gender identity with matching political views).</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Structure</strong></h4></p>
+<p><p>Implement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'. The code should run in MINI_PILOT mode first, then PILOT mode if successful, but stop before FULL_EXPERIMENT (which would require manual verification and approval).</p></p>
+<p><ul>
+<li>MINI_PILOT: Use 5 scenarios with 3 different personas per scenario (15 total prompts)</li>
+<li>PILOT: Use 20 scenarios with 5 different personas per scenario (100 total prompts)</li>
+<li>FULL_EXPERIMENT: Use 100 scenarios with 10 different personas per scenario (1000 total prompts)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Experimental Conditions</strong></h4></p>
+<p><ol>
+<li>Create four experimental conditions:<br />
+   a) Congruous Binary Gender + Matching Political View (baseline 1)<br />
+   b) Congruous Non-Binary Gender + Progressive Political View (baseline 2)<br />
+   c) Incongruous Binary Gender + Mismatched Political View (control)<br />
+   d) Incongruous Non-Binary Gender + Conservative Political View (experimental)</li>
+</ol></p>
+<p><ol>
+<li>For each condition, create synthetic personas with the following components:</li>
+<li>Gender identity (binary: male/female or non-binary: they/them, ze/zir, etc.)</li>
+<li>Political orientation (conservative, moderate, progressive)</li>
+<li>Basic demographic information (age, occupation, location)</li>
+<li>Brief personality description</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Dataset Creation</strong></h4></p>
+<p><ol>
+<li>Create a dataset of scenarios that might elicit social biases, covering topics such as:</li>
+<li>Workplace situations</li>
+<li>Healthcare access</li>
+<li>Education opportunities</li>
+<li>Housing discrimination</li>
+<li>Political participation</li>
+</ol></p>
+<p><ol>
+<li>For each scenario, formulate a neutral question that the LLM will respond to from the perspective of the assigned persona.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>Persona Creation:</li>
+<li>Create a set of synthetic personas for each experimental condition</li>
+<li>Each persona should have a clear gender identity and political orientation</li>
+<li>Store personas in a structured format (JSON) for consistent use</li>
+</ol></p>
+<p><ol>
+<li>Prompt Construction:</li>
+<li>For each scenario and persona combination, construct a prompt that:<br />
+     a) Establishes the persona ("You are [name], a [age]-year-old [gender identity] who [political orientation description]")<br />
+     b) Presents the scenario in a neutral manner<br />
+     c) Asks for the persona's perspective or response</li>
+</ol></p>
+<p><ol>
+<li>LLM Interaction:</li>
+<li>Use the LLM API to generate responses for each prompt</li>
+<li>Ensure consistent parameters across all conditions (temperature, max_tokens, etc.)</li>
+<li>Store the complete prompts and responses</li>
+</ol></p>
+<p><ol>
+<li>Bias Measurement:</li>
+<li>Implement bias amplification score calculation:<br />
+     a) Define a set of bias dimensions to measure (gender bias, political bias, etc.)<br />
+     b) For each dimension, create a list of bias-indicating terms or phrases<br />
+     c) Calculate the frequency and intensity of bias indicators in responses<br />
+     d) Normalize scores for comparison across conditions</li>
+</ol></p>
+<p><ol>
+<li>Analysis:</li>
+<li>Compare bias amplification scores across the four conditions</li>
+<li>Perform statistical analysis to determine significance of differences</li>
+<li>Generate visualizations of bias patterns</li>
+<li>Analyze interactions between gender identity and political orientation</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4></p>
+<p><ol>
+<li>Generate a comprehensive report including:</li>
+<li>Experimental setup and methodology</li>
+<li>Summary statistics for each condition</li>
+<li>Statistical analysis results</li>
+<li>Visualizations of bias patterns</li>
+<li>Discussion of findings and implications</li>
+</ol></p>
+<p><ol>
+<li>Save all raw data, including:</li>
+<li>Personas used</li>
+<li>Prompts sent to the LLM</li>
+<li>Complete LLM responses</li>
+<li>Calculated bias scores</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Technical Requirements</strong></h4></p>
+<p><ol>
+<li>Use a consistent LLM for all experiments (e.g., GPT-4 or similar)</li>
+<li>Implement proper error handling and logging</li>
+<li>Ensure reproducibility by setting random seeds</li>
+<li>Use statistical tests appropriate for the data distribution</li>
+<li>Include bootstrap resampling for confidence intervals</li>
+</ol></p>
+<p><p>Please run the experiment in MINI_PILOT mode first, then proceed to PILOT mode if successful. After completing the PILOT mode, stop and do not proceed to FULL_EXPERIMENT without explicit approval. The MINI_PILOT should take less than 30 minutes to run, while the PILOT should complete within 2 hours.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/5471114e37448bea2457b74894b1ecb92bbcfdf6">Paper 0: From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models</a> (266 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/9bee647cd2999fcd2b68b964bbe128a471d3707c">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/f503b95c0a64f6a84eb1d90e5ea1e094b1e1892b">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/6b86326016fc7b900deac073e119c543daa0bafd">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/ae03f10729959435ecefc0e90cba4cbe8438a10b">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/0fc3091301f8b269cdc2c38bad050a3ad91635cf">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/aeaf287733a97296b2e80374cbab96f1bcc94a98">Paper 6</a>. The analysis of the related papers reveals a consistent focus on understanding and mitigating biases in large language models (LLMs), particularly in the context of social identity and persona variables. The progression of research highlights the challenges LLMs face in accurately simulating human interactions and the potential for bias mitigation through data curation and persona prompting. To advance the field, a novel research idea should address the limitations of previous work by exploring new dimensions of bias in LLMs, such as the interaction between multiple persona variables and their impact on bias propagation. This approach can provide deeper insights into the mechanisms of bias in LLMs and inform the development of more equitable AI systems.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/5471114e37448bea2457b74894b1ecb92bbcfdf6" target="_blank">From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/9bee647cd2999fcd2b68b964bbe128a471d3707c" target="_blank">Generative language models exhibit social identity biases</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/f503b95c0a64f6a84eb1d90e5ea1e094b1e1892b" target="_blank">Systematic Biases in LLM Simulations of Debates</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/6b86326016fc7b900deac073e119c543daa0bafd" target="_blank">Quantifying the Persona Effect in LLM Simulations</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ae03f10729959435ecefc0e90cba4cbe8438a10b" target="_blank">Evaluating Large Language Model Biases in Persona-Steered Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/0fc3091301f8b269cdc2c38bad050a3ad91635cf" target="_blank">Persona Setting Pitfall: Persistent Outgroup Biases in Large Language Models Arising from Social Identity Adoption</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/aeaf287733a97296b2e80374cbab96f1bcc94a98" target="_blank">Language Models Predict Empathy Gaps Between Social In-groups and Out-groups</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/039b1c1210c437f3b3ce6e0275ee2137bf5b951c" target="_blank">Assessing Social and Intersectional Biases in Contextualized Word Representations</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/23120fd865eca3dffe0ef2e07f247bdf5e9a7238" target="_blank">Large Language Models Portray Socially Subordinate Groups as More Homogeneous, Consistent with a Bias Observed in Humans</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/72f1fce1ba2e1002b5ea75c37fd3746541c47239" target="_blank">Mapping and Influencing the Political Ideology of Large Language Models using Synthetic Personas</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ba1b0fbc0c3ae7ec12f08074de10856ebd6cb0c8" target="_blank">Are Economists Always More Introverted? Analyzing Consistency in Persona-Assigned LLMs</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/c25406f6586680cea63c26a139493d90812f07d5" target="_blank">Helpful assistant or fruitful facilitator? Investigating how personas affect language model behavior</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/34be38f7f18f3fb4a58256ddf96365f2934551dd" target="_blank">Revealing Persona Biases in Dialogue Systems</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/7e2c689801f77a2a57ae58cdf15947b65a2e5078" target="_blank">From n-gram to Attention: How Model Architectures Learn and Propagate Bias in Language Modeling</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/3cfa17df7b06f479711af421911b6eb3de38fc4c" target="_blank">Biases Propagate in Encoder-based Vision-Language Models: A Systematic Analysis From Intrinsic Measures to Zero-shot Retrieval Outcomes</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/60999ddb99aea5a93bd2ba16fb7671dc76bf3ba5" target="_blank">Causal-Debias: Unifying Debiasing in Pretrained Language Models and Fine-tuning via Causal Invariant Learning</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/b858aa64fb7d0572a4de19c8c4e75ff128bbb170" target="_blank">LLMs are Biased Teachers: Evaluating LLM Bias in Personalized Education</a> (2024)</li>
+</ol>
+</body>
+</html>

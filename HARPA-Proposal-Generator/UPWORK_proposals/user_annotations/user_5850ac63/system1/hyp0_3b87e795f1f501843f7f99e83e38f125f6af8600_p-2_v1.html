@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3b87e795f1f501843f7f99e83e38f125f6af8600</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating user feedback with diffusion models to enhance story visualization consistency.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Interactive User-in-the-loop Refinements with a Multi-Subject Consistent Diffusion Model will enhance both multi-subject and scene consistency in story visualization, compared to models that do not incorporate real-time user feedback.</p>
+<h3>Motivation</h3>
+<p>Existing methods for story visualization often struggle with maintaining both multi-subject and scene consistency, particularly when integrating real-time user feedback. Most approaches focus on either narrative coherence or visual fidelity but rarely achieve both simultaneously. Current models like PororoGAN and AR-LDM do not effectively utilize user feedback to refine visual outputs dynamically. This hypothesis addresses the gap by exploring the integration of Interactive User-in-the-loop Refinements with a Multi-Subject Consistent Diffusion Model (MSD) to enhance both subject and scene consistency in story visualization. This combination has not been extensively tested, especially under conditions where user feedback is parsed into localized edit instructions, allowing for dynamic adjustments without affecting unaffected regions. This approach aims to fill the gap by leveraging user feedback to achieve higher fidelity and narrative consistency, which existing models overlook.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Interactive User-in-the-loop Refinements with a Multi-Subject Consistent Diffusion Model (MSD) to enhance story visualization. The hypothesis posits that this combination will improve both multi-subject and scene consistency by leveraging real-time user feedback to make dynamic adjustments. The Interactive User-in-the-loop Refinements allow users to provide feedback after initial story panel generation, enabling fine-grained tweaks or coarse semantic replacements. This feedback is parsed into localized edit instructions, which are then applied to the MSD. The MSD employs Masked Mutual Self-Attention (MMSA) and Masked Mutual Cross-Attention (MMCA) modules to maintain appearance and semantic consistency. By combining these elements, the system can dynamically adjust visual outputs based on user input, ensuring high fidelity and narrative consistency. This approach addresses the gap in existing models, which often fail to integrate user feedback effectively, leading to inconsistencies in multi-subject and scene representation. The expected outcome is a significant improvement in FID scores and semantic similarity metrics, demonstrating the effectiveness of this integrated approach.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/04016d3bad1f15b09b94b970b58e4e7a23562532">Interactive User-in-the-loop Refinements</a>: This variable represents a mechanism where users provide feedback after initial story panel generation. It allows for fine-grained tweaks or coarse semantic replacements, which are parsed into localized edit instructions. This mechanism is crucial for dynamically adjusting visual outputs based on user input, ensuring high fidelity and narrative consistency. The feedback is processed using natural language processing techniques to interpret user input and apply localized edits, ensuring that unaffected regions remain intact. This approach is novel as it allows for real-time adjustments, which are not extensively explored in existing models.</p>
+<p><a href="https://www.semanticscholar.org/paper/9d4292f60a1935812054f7d655e3586a0016d45a">Multi-Subject Consistent Diffusion Model (MSD)</a>: The MSD is designed to maintain consistency across multiple subjects in story visualization. It employs MMSA and MMCA modules to ensure appearance and semantic consistency with reference images and text. The model uses multimodal anchors to guide the generation process, preventing subject blending and ensuring high fidelity. This variable is critical for maintaining narrative coherence in open-domain story visualization. The MSD's ability to integrate user feedback dynamically is a novel aspect that addresses the gap in existing models, which often fail to maintain consistency across multiple subjects and scenes.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates Interactive User-in-the-loop Refinements with a Multi-Subject Consistent Diffusion Model (MSD) to enhance story visualization. Initially, story panels are generated using the MSD, which employs MMSA and MMCA modules to ensure consistency across multiple subjects. Users then provide feedback on these panels, suggesting fine-grained tweaks or coarse semantic replacements. This feedback is parsed into localized edit instructions using natural language processing techniques. The MSD then re-invokes the diffusion editor to apply these edits, ensuring that only necessary regions are modified while maintaining overall scene consistency. The integration occurs at the feedback processing stage, where user input is mapped to specific edit instructions that are compatible with the MSD's architecture. This approach allows for dynamic adjustments based on user feedback, enhancing both multi-subject and scene consistency. The system's outputs are evaluated using FID scores and semantic similarity metrics to measure improvements in visual coherence and narrative alignment. This method leverages the ASD Agent's capabilities to automate experiment execution and result analysis, ensuring feasibility and scalability.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating Interactive User-in-the-loop Refinements with a Multi-Subject Consistent Diffusion Model (MSD) enhances story visualization consistency. The experiment should compare a baseline model (MSD without user feedback) against an experimental model (MSD with user feedback integration).</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will test the hypothesis that integrating user feedback with a Multi-Subject Consistent Diffusion Model will significantly improve multi-subject and scene consistency in story visualization compared to models without user feedback.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement a global variable PILOT_MODE that can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':<br />
+- MINI_PILOT: Use only 5 story prompts from each dataset, generate 3 panels per story, and run 3 feedback iterations<br />
+- PILOT: Use 20 story prompts from each dataset, generate 5 panels per story, and run 5 feedback iterations<br />
+- FULL_EXPERIMENT: Use all available story prompts, generate all panels per story, and run 10 feedback iterations</p></p>
+<p><p>Start by running the MINI_PILOT first. If successful, proceed to the PILOT. Do not run the FULL_EXPERIMENT without human verification of the PILOT results.</p></p>
+<p><h4 class="custom-heading"><strong>Datasets</strong></h4>
+<ol>
+<li>PororoSV dataset: A collection of story prompts featuring cartoon characters from the Pororo series</li>
+<li>FlintstonesSV dataset: A collection of story prompts featuring characters from The Flintstones</li>
+</ol></p>
+<p><p>For the MINI_PILOT and PILOT, use only training set samples. For evaluation in the PILOT, use validation set samples. The FULL_EXPERIMENT should use the test set for final evaluation.</p></p>
+<p><h4 class="custom-heading"><strong>Model Implementation</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Baseline Model: Multi-Subject Consistent Diffusion Model (MSD)</strong></h4>
+<p>Implement a diffusion-based model for story visualization with the following components:<br />
+1. Masked Mutual Self-Attention (MMSA) module to maintain appearance consistency<br />
+2. Masked Mutual Cross-Attention (MMCA) module to maintain semantic consistency<br />
+3. Multimodal anchors to guide the generation process</p></p>
+<p><p>The baseline model should generate story panels based on text prompts without any user feedback mechanism.</p></p>
+<p><h4 class="custom-heading"><strong>Experimental Model: MSD with Interactive User-in-the-loop Refinements</strong></h4>
+<p>Extend the baseline model to incorporate user feedback:<br />
+1. Generate initial story panels using the baseline MSD<br />
+2. Implement a feedback collection mechanism that allows for:<br />
+   - Fine-grained tweaks (e.g., "make the character's shirt blue")<br />
+   - Coarse semantic replacements (e.g., "replace the car with a bicycle")<br />
+3. Parse feedback into localized edit instructions using NLP techniques<br />
+4. Re-invoke the diffusion editor to apply these edits while maintaining overall scene consistency<br />
+5. Ensure that only necessary regions are modified based on the feedback</p></p>
+<p><h4 class="custom-heading"><strong>Simulated User Feedback</strong></h4>
+<p>For experimental purposes, implement a simulated user feedback mechanism:<br />
+1. Define a set of common feedback types (color changes, object replacements, character pose adjustments, etc.)<br />
+2. Randomly select feedback types and generate specific feedback for each story panel<br />
+3. Ensure the feedback is relevant to the content of the panel<br />
+4. For the MINI_PILOT, manually define 3-5 specific feedback examples per panel to ensure consistency</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Experimental Procedure</strong></h4></p>
+<p><ol>
+<li>For each story prompt in the dataset:<br />
+   a. Generate a sequence of story panels using both the baseline and experimental models<br />
+   b. For the experimental model, apply simulated user feedback after initial generation<br />
+   c. Re-generate panels based on the feedback<br />
+   d. Repeat the feedback-regeneration cycle for the number of iterations specified by the PILOT_MODE</li>
+</ol></p>
+<p><ol>
+<li>Evaluate the quality and consistency of the generated panels using:<br />
+   a. Fréchet Inception Distance (FID) scores to measure visual quality<br />
+   b. Semantic similarity metrics to assess narrative alignment<br />
+   c. Character consistency metrics to evaluate multi-subject consistency</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Metrics and Evaluation</strong></h4></p>
+<p><ol>
+<li>FID Score: Calculate the FID between generated images and reference images</li>
+<li>Semantic Similarity: Use CLIP or similar models to measure text-image alignment</li>
+<li>Character Consistency: Measure the consistency of character appearances across panels</li>
+<li>Scene Consistency: Evaluate the coherence of scene elements across panels</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Analysis</strong></h4></p>
+<p><ol>
+<li>Compare the metrics between baseline and experimental models</li>
+<li>Perform statistical significance testing using bootstrap resampling</li>
+<li>Generate visualizations showing the progression of panel quality through feedback iterations</li>
+<li>Create side-by-side comparisons of baseline vs. experimental outputs</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4></p>
+<p><ol>
+<li>Save all generated images with clear labeling of model, story, panel number, and iteration</li>
+<li>Create a comprehensive results table with all metrics</li>
+<li>Generate plots showing the comparison between baseline and experimental models</li>
+<li>Provide qualitative examples of how user feedback improved specific panels</li>
+<li>Report statistical significance of the differences between models</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4></p>
+<p><ol>
+<li>Use PyTorch for implementing the diffusion models</li>
+<li>Leverage pre-trained models where possible (e.g., CLIP for semantic similarity)</li>
+<li>Implement efficient data loading and processing to handle the datasets</li>
+<li>Use a consistent random seed for reproducibility</li>
+<li>Log all experimental parameters and results</li>
+</ol></p>
+<p><p>Please implement this experiment with careful attention to the pilot mode settings, ensuring that the code can scale from the MINI_PILOT to the FULL_EXPERIMENT without significant changes.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3b87e795f1f501843f7f99e83e38f125f6af8600">Paper 0: StoryGAN: A Sequential Conditional GAN for Story Visualization</a> (241 citations, 2018). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/2d06caf8353882a62ba7993c66839c3ceb27ffd4">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/ee1d0e141530190a2b0d834737096c5bfda6b304">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/444d7286e421839aeb7731127bbaedd29d8b401b">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/33ef78737ba57ecc1ff98c22369a8e17ed90eb98">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/493472c37e55eb8e9023880cb89ce3f108aeb3d9">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/638d8d1f3865ebf065605535a7aa50727d5ffabe">Paper 6</a> --&gt; <a href="https://www.semanticscholar.org/paper/9d4292f60a1935812054f7d655e3586a0016d45a">Paper 7</a> --&gt; <a href="https://www.semanticscholar.org/paper/88520d52782c7db00cabfd8eace9cd1dabd9aecb">Paper 8</a> --&gt; <a href="https://www.semanticscholar.org/paper/0fa050e3669b4d62ea430f3396716a99e752b1ae">Paper 9</a>. The analysis reveals a progression from improving visual quality and consistency in story visualization to integrating linguistic structures and leveraging diffusion models for enhanced coherence and automation. Despite these advancements, challenges remain in achieving holistic consistency across multiple subjects and scenes. A novel research idea could focus on developing a framework that combines the strengths of diffusion models and large language models to achieve multi-subject and scene consistency, while also incorporating user feedback mechanisms for iterative refinement without manual ratings.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3b87e795f1f501843f7f99e83e38f125f6af8600" target="_blank">StoryGAN: A Sequential Conditional GAN for Story Visualization</a> (2018)</li>
+<li><a href="https://www.semanticscholar.org/paper/2d06caf8353882a62ba7993c66839c3ceb27ffd4" target="_blank">PororoGAN: An Improved Story Visualization Model on Pororo-SV Dataset</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/ee1d0e141530190a2b0d834737096c5bfda6b304" target="_blank">Integrating Visuospatial, Linguistic, and Commonsense Structure into Story Visualization</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/444d7286e421839aeb7731127bbaedd29d8b401b" target="_blank">Make-A-Story: Visual Memory Conditioned Consistent Story Generation</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/33ef78737ba57ecc1ff98c22369a8e17ed90eb98" target="_blank">Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/493472c37e55eb8e9023880cb89ce3f108aeb3d9" target="_blank">AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/638d8d1f3865ebf065605535a7aa50727d5ffabe" target="_blank">TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9d4292f60a1935812054f7d655e3586a0016d45a" target="_blank">DreamStory: Open-Domain Story Visualization by LLM-Guided Multi-Subject Consistent Diffusion</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/88520d52782c7db00cabfd8eace9cd1dabd9aecb" target="_blank">StoryMaker: Towards Holistic Consistent Characters in Text-to-image Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/0fa050e3669b4d62ea430f3396716a99e752b1ae" target="_blank">Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/04016d3bad1f15b09b94b970b58e4e7a23562532" target="_blank">Audit & Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4efbd122fb59f94701cbfeca5b2ca82bb5f8bd65" target="_blank">VisAgent: Narrative-Preserving Story Visualization Framework</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/64aa75843010bdebe1209a1d7dc8bbb801f4bdd2" target="_blank">Integrating Human Feedback into a Reinforcement Learning-Based Framework for Adaptive User Interfaces</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/e1b38b805aed74166c723e56a55334f4e2f5c1a3" target="_blank">TaleForge: Interactive Multimodal System for Personalized Story Creation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/a95c8a77f2ba47d0c94a0b397fd0d21391e82e1b" target="_blank">HAIChart: Human and AI Paired Visualization System</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/e53b9183882fed689b420f331dd54fb31e78206e" target="_blank">Visualizationary: Automating Design Feedback for Visualization Designers using LLMs</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/bbb2baf68b9e408a4ee55bf0b1ccbe222b3556db" target="_blank">Human-Computer Interaction and Visualization in Natural Language Generation Models: Applications, Challenges, and Opportunities</a> (2024)</li>
+</ol>
+</body>
+</html>

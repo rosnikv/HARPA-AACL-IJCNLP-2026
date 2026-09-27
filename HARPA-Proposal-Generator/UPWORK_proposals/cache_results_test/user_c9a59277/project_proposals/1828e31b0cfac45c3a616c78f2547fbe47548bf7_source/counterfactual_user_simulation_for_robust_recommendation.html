@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>1828e31b0cfac45c3a616c78f2547fbe47548bf7</p>
+<hr>
+<section><h2>Title</h2>
+<p>CURUS: Counterfactual User Representation and Simulation for Robust Conversational Recommendation</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Conversational recommender systems often struggle to generalize to diverse user behaviors and preferences, particularly for cold-start scenarios or when encountering unexpected user feedback. This limitation hinders their ability to provide accurate and personalized recommendations in real-world applications.</p>
+<h3>Motivation</h3>
+<p>Current approaches typically rely on static datasets or simple user simulators that fail to capture the complexity and diversity of real-world user interactions. By leveraging large language models to generate diverse, realistic user personas and interaction trajectories, including counterfactual scenarios, we aim to create a more robust and adaptable recommender system capable of handling a wide range of user behaviors and preferences.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce CURUS (Counterfactual User Representation and Simulation), a framework for training and evaluating conversational recommender systems using LLM-generated user simulations. Key components include: (1) A Persona Generator that creates diverse user profiles with complex preference structures and behavioral traits; (2) An Interaction Simulator that generates realistic dialogue trajectories, including coherent responses to system recommendations and questions; (3) A Counterfactual Engine that introduces unexpected events or preference shifts during conversations. We fine-tune a large language model on a combination of real conversation logs and expert-written scenarios to create these components. The recommender system is then trained using reinforcement learning, with the simulated users providing rewards based on their satisfaction with recommendations and the overall conversation.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess real conversation logs from existing recommender systems. Gather expert-written scenarios that capture diverse user behaviors and preferences. Combine these datasets for fine-tuning the LLM.</p><p><strong>Step 2: LLM Fine-tuning</strong></p><p>Fine-tune GPT-3.5 (text-davinci-003) on the combined dataset to create the base model for CURUS components. Use prompt engineering to guide the model in generating personas, interactions, and counterfactual scenarios.</p><p><strong>Step 3: Implement CURUS Components</strong></p><p>Develop the Persona Generator, Interaction Simulator, and Counterfactual Engine using the fine-tuned LLM. Create prompts for each component to guide the generation process.</p><p><strong>Step 4: Baseline Recommender System</strong></p><p>Implement a baseline conversational recommender system using a standard approach (e.g., neural collaborative filtering with a dialogue management module).</p><p><strong>Step 5: CURUS Training Loop</strong></p><p>Implement the reinforcement learning loop where the recommender system interacts with CURUS-generated users. Use a reward function based on user satisfaction and conversation quality.</p><p><strong>Step 6: Evaluation</strong></p><p>Compare the CURUS-trained recommender system against the baseline on both simulated interactions and a held-out set of real-world user interactions. Metrics include recommendation accuracy, conversation efficiency, and system robustness to unexpected user behaviors or preference changes.</p><p><strong>Step 7: Analysis</strong></p><p>Conduct ablation studies to assess the impact of each CURUS component. Analyze the system's performance on cold-start scenarios and its ability to adapt to individual users over time.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Input</strong></p><p>User: I'm looking for a new sci-fi book to read. I enjoy stories with complex world-building and political intrigue.</p><p><strong>Baseline Output</strong></p><p>System: Based on your preferences, I recommend 'Dune' by Frank Herbert. It's a classic sci-fi novel known for its intricate world-building and political themes. Would you like more information about it?</p><p><strong>CURUS Input</strong></p><p>Persona: 35-year-old software engineer, enjoys hard sci-fi and cyberpunk. Recently watched and disliked the Dune movie adaptation. Tends to be skeptical of popular recommendations.<br />
+User: I'm looking for a new sci-fi book to read. I enjoy stories with complex world-building and political intrigue.</p><p><strong>CURUS Output</strong></p><p>System: I understand you're interested in sci-fi with complex world-building and political intrigue. Before I make a recommendation, may I ask if you have any preferences regarding classic vs. contemporary sci-fi, or if there are any specific themes or subgenres you particularly enjoy or want to avoid?</p><p><strong>Explanation</strong></p><p>The CURUS-trained system demonstrates a more nuanced approach by first gathering additional information based on the user's persona, avoiding the potential misstep of recommending a book related to a movie the user disliked, and showing awareness of the user's tendency to be skeptical of popular recommendations.</p>
+<h3>Fallback Plan</h3>
+<p>If the CURUS-trained system doesn't show significant improvements over the baseline, we can pivot to an analysis paper focusing on the challenges of simulating diverse user behaviors in conversational recommender systems. We could conduct a detailed examination of the generated personas, interaction trajectories, and counterfactual scenarios to identify patterns and limitations in the LLM's ability to simulate realistic user behavior. Additionally, we could explore alternative reward structures for the reinforcement learning process, such as incorporating multi-objective optimization to balance different aspects of recommendation quality and conversation naturalness. Finally, we could investigate the potential of few-shot learning techniques to improve the system's ability to quickly adapt to new users or domains without extensive retraining.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/f7ea50dea238913894dde804d696f22b13c7cbdf" target="_blank">Multi-Objective Intrinsic Reward Learning for Conversational Recommender Systems</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/490b66fbd697d82c1542d1f43be243e8d8ff7fbb" target="_blank">Chain-of-Choice Hierarchical Policy Learning for Conversational Recommendation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/849175924b095347002dd73920288d3c30036927" target="_blank">AgentTOD: A Task-Oriented Dialogue Agent with a Flexible and Adaptive API Calling Paradigm</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b358c4986679b49b85925a265896f22de7d683ad" target="_blank">Tailored Conversations beyond LLMs: A RL-Based Dialogue Manager</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0e07768e8dff74c8bb5eb3e42998c6198a0ca0bb" target="_blank">Leveraging Long Short-Term User Preference in Conversational Recommendation via Multi-agent Reinforcement Learning</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/080b2aa6b9b819f14d6ec4e66c4ad83714caf3ba" target="_blank">Expectation Confirmation Preference Optimization for Multi-Turn Conversational Recommendation Agent</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/389a1735f67a7c210c90098d1de0c3440e44c815" target="_blank">On Mitigating Data Sparsity in Conversational Recommender Systems</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/59c62abbe629c80e8a1928e6e868e967a63db677" target="_blank">Vaiage: A Multi-Agent Solution to Personalized Travel Planning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/280857f4ce62db55de7ec585f4030ab6c2a5ef86" target="_blank">The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/894a733ff2ca3ec77f8385a6ac65bd17b42896c1" target="_blank">Towards Hierarchical Policy Learning for Conversational Recommendation with Hypergraph-based Reinforcement Learning</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

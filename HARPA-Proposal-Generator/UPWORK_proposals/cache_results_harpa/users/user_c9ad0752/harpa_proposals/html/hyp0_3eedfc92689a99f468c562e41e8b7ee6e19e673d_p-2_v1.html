@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3eedfc92689a99f468c562e41e8b7ee6e19e673d</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating PGIB with HGNN for efficient, interpretable job-shop scheduling.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating a Prototype-based Graph Information Bottleneck (PGIB) with a Heterogeneous Graph Neural Network (HGNN) in a reinforcement learning framework will enhance scheduling efficiency and reduce carbon emissions while providing interpretable decision-making insights.</p>
+<h3>Motivation</h3>
+<p>Existing methods in job-shop scheduling using reinforcement learning and graph neural networks often focus on optimizing scheduling efficiency or reducing energy consumption independently, without integrating explainability into the framework. This leaves a gap in understanding how scheduling decisions impact both efficiency and environmental outcomes. Most prior work does not combine prototype-based explainability with heterogeneous graph neural networks to simultaneously address scheduling efficiency and carbon emissions. This hypothesis aims to fill this gap by integrating explainability directly into the decision-making process, providing insights into the trade-offs between efficiency and emissions.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of a Prototype-based Graph Information Bottleneck (PGIB) with a Heterogeneous Graph Neural Network (HGNN) within a reinforcement learning framework to address job-shop scheduling challenges. The PGIB component enhances explainability by identifying key subgraphs that influence scheduling decisions, while the HGNN models complex relationships in the scheduling environment to optimize both efficiency and carbon emissions. By combining these components, the framework aims to provide interpretable insights into scheduling decisions, highlighting the trade-offs between efficiency and emissions. The PGIB ensures that only relevant substructures are considered, improving both interpretability and performance. The HGNN captures the intricate dependencies between operations and machines, allowing for more informed decision-making. This approach addresses gaps in prior work by providing a holistic view of scheduling impacts, making it suitable for environments where understanding the rationale behind decisions is crucial. The expected outcome is a framework that not only optimizes scheduling efficiency and reduces emissions but also provides clear explanations for the decisions made, enhancing trust and transparency in the scheduling process.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/cebd5b9f659d1f93d95524158e104e6b7c330bfc">Prototype-based Graph Information Bottleneck (PGIB)</a>: The PGIB framework integrates prototype learning within an information bottleneck framework to enhance the explainability of GNNs. It identifies key subgraphs from input graphs that significantly impact model predictions, thereby improving both interpretability and performance. The framework involves learning prototypes that imply training graphs affecting predictions, ensuring that only relevant substructures are considered. This method is particularly useful for tasks requiring high interpretability, as it provides transparent explanations for the decision-making process of GNNs.</p>
+<p><a href="https://www.semanticscholar.org/paper/813af2ec9f1785bec9021f328487ae7dabe1ad4f">Heterogeneous Graph Neural Network (HGNN)</a>: The HGNN is designed to model the complex relationships in flexible job-shop scheduling problems using heterogeneous graphs. Operations and machines are represented as nodes, with directed and undirected arcs indicating dependencies and compatibilities. The HGNN framework includes relation-specific subgraph decomposition, data preprocessing, feature extraction through graph convolution, and cross-relation feature fusion using a multi-head attention mechanism. This approach enhances the model's understanding and adaptability to the complex dynamics of the shop floor, significantly improving optimization and generalization capabilities.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates a Prototype-based Graph Information Bottleneck (PGIB) with a Heterogeneous Graph Neural Network (HGNN) in a reinforcement learning framework. The PGIB is responsible for enhancing explainability by identifying key subgraphs that influence scheduling decisions. It operates by learning prototypes that capture essential graph features, filtering out irrelevant information. The HGNN models the complex relationships in the job-shop scheduling environment, using heterogeneous graphs to represent operations and machines as nodes. It employs graph convolution and multi-head attention mechanisms to extract and integrate features, optimizing scheduling efficiency and reducing carbon emissions. The integration occurs at the decision-making stage, where the PGIB's outputs inform the HGNN's feature extraction and decision processes. The framework is implemented using Python-based experiments, leveraging existing codeblocks for graph neural networks and reinforcement learning. The ASD agent executes the experiments, analyzing results across multiple runs to ensure robustness. The expected outcome is a framework that not only optimizes scheduling efficiency and reduces emissions but also provides clear explanations for the decisions made, enhancing trust and transparency in the scheduling process.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating a Prototype-based Graph Information Bottleneck (PGIB) with a Heterogeneous Graph Neural Network (HGNN) in a reinforcement learning framework will enhance job-shop scheduling efficiency and reduce carbon emissions while providing interpretable decision-making insights.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three approaches to job-shop scheduling:<br />
+1. Baseline 1: A standard GNN-based scheduler without explainability components<br />
+2. Baseline 2: A reinforcement learning-based scheduler without explainability components<br />
+3. Experimental: The integrated PGIB-HGNN approach in a reinforcement learning framework</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Experiment Settings</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use 2-3 small job-shop scheduling instances with 5-10 jobs and 3-5 machines. Run for a maximum of 100 training steps. This should complete in under 10 minutes and is for code verification only.</li>
+<li><strong>PILOT</strong>: Use 10-15 medium-sized job-shop scheduling instances with 15-30 jobs and 5-10 machines. Run for a maximum of 1000 training steps. This should complete in 1-2 hours and is for preliminary result analysis.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the complete benchmark dataset with all available instances. Run for the full training regimen (10,000+ steps as needed for convergence).</li>
+</ul></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then if successful, proceed to PILOT mode. After the PILOT completes, it should stop and not automatically proceed to FULL_EXPERIMENT mode (a human will verify results and manually change to FULL_EXPERIMENT if appropriate).</p></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<p>Use the Taillard benchmark dataset for job-shop scheduling problems, which is widely used in scheduling research. For the MINI_PILOT and PILOT modes, use a subset of this dataset as specified above.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Job-Shop Scheduling Environment</strong></h4>
+<ul>
+<li>Implement a job-shop scheduling environment that represents jobs, operations, and machines as a graph structure.</li>
+<li>Each job consists of a sequence of operations that must be processed in order.</li>
+<li>Each operation requires a specific machine and has a processing time.</li>
+<li>The environment should track makespan (total completion time) and energy consumption (as a proxy for carbon emissions).</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Prototype-based Graph Information Bottleneck (PGIB)</strong></h4>
+<ul>
+<li>Implement the PGIB component to identify key subgraphs that influence scheduling decisions.</li>
+<li>The PGIB should learn a set of prototypes that capture essential graph features.</li>
+<li>It should filter out irrelevant information using an information bottleneck approach.</li>
+<li>The PGIB should output explanations for its decisions in the form of identified key subgraphs.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Heterogeneous Graph Neural Network (HGNN)</strong></h4>
+<ul>
+<li>Implement the HGNN to model the complex relationships in the job-shop scheduling environment.</li>
+<li>Represent operations and machines as different types of nodes in a heterogeneous graph.</li>
+<li>Use directed edges to represent dependencies between operations and undirected edges to represent machine-operation compatibility.</li>
+<li>Implement relation-specific graph convolution for feature extraction.</li>
+<li>Use a multi-head attention mechanism for cross-relation feature fusion.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Reinforcement Learning Framework</strong></h4>
+<ul>
+<li>Implement a reinforcement learning framework that uses the HGNN for state representation and action selection.</li>
+<li>The state should be the current schedule and available operations.</li>
+<li>Actions should be assignments of operations to machines.</li>
+<li>The reward function should balance makespan reduction and energy consumption minimization.</li>
+<li>For the experimental condition, integrate the PGIB to guide the HGNN's feature extraction and decision processes.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>5. Integration of PGIB and HGNN</strong></h4>
+<ul>
+<li>The PGIB should identify key subgraphs from the current state.</li>
+<li>These subgraphs should inform the HGNN's feature extraction process.</li>
+<li>The HGNN should use this information to make more informed scheduling decisions.</li>
+<li>The integration should occur at the decision-making stage, where PGIB outputs guide the HGNN's optimization process.</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>6. Baseline Implementations</strong></h4>
+<ul>
+<li>Baseline 1: Implement a standard GNN-based scheduler without the PGIB component.</li>
+<li>Baseline 2: Implement a reinforcement learning-based scheduler with a standard GNN (not heterogeneous) and without the PGIB component.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Scheduling Efficiency</strong></h4>
+<ul>
+<li>Makespan: The total completion time of all jobs.</li>
+<li>Throughput: The number of jobs completed per unit time.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Energy Consumption</strong></h4>
+<ul>
+<li>Implement an energy consumption model based on machine utilization and idle time.</li>
+<li>Track the total energy consumption for each scheduling solution.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Explainability Metrics</strong></h4>
+<ul>
+<li>Qualitative analysis of the PGIB's explanations.</li>
+<li>User study (simulated for the pilot) to assess the interpretability of the explanations.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Statistical Analysis</strong></h4>
+<ul>
+<li>Conduct multiple runs (at least 5 for MINI_PILOT, 10 for PILOT, 30 for FULL_EXPERIMENT) to ensure statistical confidence.</li>
+<li>Use bootstrap resampling to assess the statistical significance of differences between methods.</li>
+<li>Report mean, standard deviation, and confidence intervals for all metrics.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Output and Visualization</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Performance Metrics</strong></h4>
+<ul>
+<li>Generate tables and plots comparing the three approaches on makespan, throughput, and energy consumption.</li>
+<li>Include statistical significance indicators.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Explainability Visualization</strong></h4>
+<ul>
+<li>Visualize the key subgraphs identified by the PGIB.</li>
+<li>Create heatmaps showing the importance of different parts of the graph for decision-making.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Decision Process Visualization</strong></h4>
+<ul>
+<li>Create step-by-step visualizations of the scheduling process for selected instances.</li>
+<li>Highlight the decisions made and the explanations provided.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Logging and Reporting</strong></h4>
+<ul>
+<li>Log all experimental parameters, metrics, and results.</li>
+<li>Generate a comprehensive report summarizing the findings.</li>
+<li>Include visualizations and statistical analyses in the report.</li>
+</ul></p>
+<p><p>Please implement this experiment and run it first in MINI_PILOT mode, then in PILOT mode if successful. After the PILOT completes, stop and await human verification before proceeding to FULL_EXPERIMENT mode.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3eedfc92689a99f468c562e41e8b7ee6e19e673d">Paper 0: Learning to schedule job-shop problems: representation and policy learning using graph neural network and reinforcement learning</a> (228 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/63e2c2e1283d9214c1e8702dfd2e746b87aa96e2">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/cd3b160a3a6e487f5186179dea2e53b2eac55506">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/a7c66941f02bb93c86f08ed5deef0a48099e757d">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/ef4b7c54cf680e6b52ad255c25126ac05111158e">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/912ba25c6e15ef2cafd83a2ef382e911eb21cf83">Paper 5</a>. The progression of research from the source paper through the related papers demonstrates a trend towards incorporating more complex and realistic constraints into job-shop scheduling problems, such as multi-resource constraints and environmental considerations. While these advancements have improved the adaptability and sustainability of scheduling models, they also introduce new challenges in terms of computational complexity and the need for more sophisticated representation learning. A promising research direction would be to explore the integration of explainability into these advanced scheduling models, allowing for better understanding and trust in the decision-making process, especially in industrial applications where interpretability is crucial.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3eedfc92689a99f468c562e41e8b7ee6e19e673d" target="_blank">Learning to schedule job-shop problems: representation and policy learning using graph neural network and reinforcement learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/63e2c2e1283d9214c1e8702dfd2e746b87aa96e2" target="_blank">Multi-resource constrained dynamic workshop scheduling based on proximal policy optimisation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/cd3b160a3a6e487f5186179dea2e53b2eac55506" target="_blank">Deep reinforcement learning for dynamic scheduling of a flexible job shop</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/a7c66941f02bb93c86f08ed5deef0a48099e757d" target="_blank">CEA-FJSP: Carbon emission-aware flexible job-shop scheduling based on deep reinforcement learning</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/ef4b7c54cf680e6b52ad255c25126ac05111158e" target="_blank">Low-Carbon Flexible Job Shop Scheduling Problem Based on Deep Reinforcement Learning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/912ba25c6e15ef2cafd83a2ef382e911eb21cf83" target="_blank">Carbon reduction effective advanced planning and scheduling (C-APS) system: framework, functions and empirical results</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/d99487d2dfa8e6f13512ecc216a9e7e1e2cee237" target="_blank">Combining Reinforcement Learning Algorithms with Graph Neural Networks to Solve Dynamic Job Shop Scheduling Problems</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384" target="_blank">Multi-Agent Reinforcement Learning for Job Shop Scheduling in Dynamic Environments</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/4a6f3a911b46a5e2bc0670d0b9ba1ece344ab727" target="_blank">Learning Interpretable Scheduling Algorithms for Data Processing Clusters</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/1bfe5ce1077b6bdd22ac8111edf3895eddeeb41f" target="_blank">Multi-level Explanation of Deep Reinforcement Learning-based Scheduling</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/241a6f7c7cf0156a8050f597ad4b5cdab48805ff" target="_blank">MIXRTs: Toward Interpretable Multi-Agent Reinforcement Learning via Mixing Recurrent Soft Decision Trees</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/75c8466a0c1c3b9fe595efc83671984ef95bd679" target="_blank">XGNN: Towards Model-Level Explanations of Graph Neural Networks</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/87b4e9efc783c0504631e7d2b0ee47c95b229bcb" target="_blank">A survey of reinforcement learning theories in autonomous vehicles</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/e9b7ea6d3aa2b403c233f3ec2d6d5ac40bcf87a7" target="_blank">14. Explainable artificial intelligence for spectroscopy data: a review (0). Paper ID: e9b7ea6d3aa2b403c233f3ec2d6d5ac40bcf87a7</a> (n.d.)</li>
+<li><a href="https://www.semanticscholar.org/paper/834757bf9175e43f62a484cc422bc7651c449477" target="_blank">15. Leveraging machine learning for environmental cost management in green accounting (0). Paper ID: 834757bf9175e43f62a484cc422bc7651c449477</a> (n.d.)</li>
+<li><a href="https://www.semanticscholar.org/paper/637f7b7ffc69473dc8fc05a91a8f7ed77e9c3218" target="_blank">16. A Comprehensive Review of Green Computing: Past, Present, and Future Research (0). Paper ID: 637f7b7ffc69473dc8fc05a91a8f7ed77e9c3218</a> (n.d.)</li>
+<li><a href="https://www.semanticscholar.org/paper/a78db5b7d863dfb4526a2f3a92fbc8d359adab56" target="_blank">17. AI driven automation for enhancing sustainability efforts in CDP report analysis (0). Paper ID: a78db5b7d863dfb4526a2f3a92fbc8d359adab56</a> (n.d.)</li>
+<li><a href="https://www.semanticscholar.org/paper/cebd5b9f659d1f93d95524158e104e6b7c330bfc" target="_blank">Interpretable Prototype-based Graph Information Bottleneck</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/813af2ec9f1785bec9021f328487ae7dabe1ad4f" target="_blank">Solving Flexible Job-Shop Scheduling Problem with Heterogeneous Graph Neural Network Based on Relation and Deep Reinforcement Learning</a> (2024)</li>
+</ol>
+</body>
+</html>

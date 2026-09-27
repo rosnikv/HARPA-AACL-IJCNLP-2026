@@ -1,0 +1,19 @@
+[
+    {
+        "paperId": "53d8b356551a2361020a948f64454a6d599af69f",
+        "pmid": "2101.00190",
+        "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "abstract": "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were \u201cvirtual tokens\u201d. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+        "year": 2021,
+        "citation_count": 4442
+    },
+    {
+        "paperId": "341cdab5b85415123fac782642639132c3cbf65e",
+        "title": "LONG EXPOSURE: Accelerating Parameter-Efficient Fine-Tuning for LLMs under Shadowy Sparsity",
+        "abstract": "The adaptation of pre-trained large language models (LLMs) to diverse downstream tasks via fine-tuning is critical for numerous applications. However, the inefficiency of parameterefficient fine-tuning (PEFT) techniques presents significant challenges in terms of time investments and operational costs. In this paper, we first introduce a nuanced form of sparsity, termed Shadowy Sparsity, which is distinctive in fine-tuning and has not been adequately addressed for acceleration. Under Shadowy Sparsity, we propose Long Exposure 1, an efficient system to accelerate PEFT for LLMs. Long Exposure comprises three key components: Shadowy-sparsity Exposer employs a prolonged sensing range to capture more sparsity details under shadowy sparsity; Sequence-oriented Predictor provides efficient yet accurate predictions to handle large sequence inputs and constantly-evolving parameters; and Dynamic-aware Operator facilitates more structured computational patterns and coalesced memory accesses, addressing dynamic sparse operations. Extensive evaluations show that Long Exposure outperforms state-of-the-arts with up to a $2.49 \\times$ speedup in end-to-end fine-tuning, offering promising advancements in accelerating PEFT for LLMs.1Long Exposure is available at https://github.com/HPHEX/LongExposure.",
+        "year": 2024,
+        "citation_count": 1,
+        "relevance": 2,
+        "explanation": "This paper addresses parameter-efficient fine-tuning, which is closely related to prefix-tuning's goal of optimizing LLMs with minimal parameter updates. It likely builds on the concept of prefix-tuning by exploring efficient fine-tuning strategies."
+    }
+]

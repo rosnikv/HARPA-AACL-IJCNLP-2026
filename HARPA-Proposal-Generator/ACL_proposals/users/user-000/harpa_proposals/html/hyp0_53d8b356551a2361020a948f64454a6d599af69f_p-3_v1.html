@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>53d8b356551a2361020a948f64454a6d599af69f</p>
+<hr>
+<h2>Title</h2>
+<p>Evaluating prefix-tuning's precision and recall on mini-ImageNet for few-shot classification.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Prefix-tuning will achieve comparable precision and recall to traditional fine-tuning methods on the mini-ImageNet dataset in few-shot image classification tasks, while significantly reducing trainable parameters.</p>
+<h3>Motivation</h3>
+<p>Existing methods for few-shot learning, particularly those using prefix-tuning, have primarily focused on metrics like top-1 accuracy, often overlooking the potential of alternative metrics such as precision and recall in scenarios where class imbalance or false positives are significant concerns. Additionally, while parameter-efficient techniques like prefix-tuning reduce computational demands, their comparative performance against traditional fine-tuning methods using these alternative metrics remains underexplored. This hypothesis addresses the gap by evaluating prefix-tuning using precision and recall metrics, providing insights into its efficacy in imbalanced datasets and its ability to minimize false positives.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research aims to evaluate the performance of prefix-tuning in few-shot image classification tasks on the mini-ImageNet dataset, focusing on precision and recall as primary metrics. Unlike traditional approaches that emphasize top-1 accuracy, this study will explore how prefix-tuning performs in scenarios where class imbalance or false positives are critical. Prefix-tuning, which appends trainable prefix embeddings to input representations while keeping main model parameters frozen, will be compared to traditional fine-tuning methods that update all model parameters. The mini-ImageNet dataset, a standard benchmark for few-shot learning, will be used to ensure comparability with existing literature. By focusing on precision and recall, this study will provide insights into the efficacy of prefix-tuning in minimizing false positives and capturing relevant instances, addressing gaps in current research that predominantly focus on accuracy metrics. This approach is expected to demonstrate that prefix-tuning can achieve competitive performance with fewer trainable parameters, making it a viable alternative in resource-constrained environments.</p>
+<h3>Background</h3>
+<p>Precision: Precision measures the proportion of true positive results in relation to the total number of positive predictions made. In this experiment, precision will be calculated using a confusion matrix to track true positives, false positives, and false negatives. This metric is crucial in scenarios where the cost of false positives is high, such as in imbalanced datasets. Precision will be assessed by dividing the number of correctly identified images as a specific class by the total number of images predicted to be in that class. This metric was chosen over others due to its relevance in evaluating the model's ability to avoid false alarms.</p>
+<p>Recall: Recall focuses on the proportion of true positive results in relation to the total number of actual positive instances. It will be calculated by dividing the number of correctly identified images of a class by the total number of actual images in that class. Recall is particularly important in scenarios where missing a positive instance is more costly than a false positive. This metric complements precision and will be used to calculate the F1 score, providing a balanced view of model performance. Recall was selected for its ability to highlight the model's effectiveness in capturing relevant instances.</p>
+<p>Prefix Tuning: Prefix Tuning involves appending trainable prefix embeddings to input representations while keeping the main model parameters frozen. This method significantly reduces the number of trainable parameters compared to full fine-tuning. In this experiment, prefix-tuning will be implemented to evaluate its performance in terms of precision and recall on the mini-ImageNet dataset. This approach was chosen for its efficiency in resource-constrained scenarios and its potential to achieve competitive performance with fewer parameter updates.</p>
+<p>Traditional Fine-Tuning: Traditional fine-tuning involves updating all parameters of a pre-trained model to adapt it to a specific downstream task. In this experiment, traditional fine-tuning will serve as a baseline to compare against prefix-tuning. The focus will be on evaluating precision and recall metrics to assess the effectiveness of each method in capturing relevant instances and minimizing false positives. Traditional fine-tuning was selected as a baseline due to its established performance in achieving high accuracy across tasks.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves a comparative analysis of prefix-tuning and traditional fine-tuning on the mini-ImageNet dataset, focusing on precision and recall metrics. The experiment will be conducted using Python-based scripts executed in containers, with five independent runs to ensure statistical significance. The process begins with data preprocessing, where images from the mini-ImageNet dataset are resized to 84x84 pixels. For prefix-tuning, trainable prefix embeddings are appended to input representations, and the main model parameters remain frozen. In contrast, traditional fine-tuning updates all model parameters. Both methods will be evaluated using a confusion matrix to calculate precision and recall. The experiment will involve training the models on a few-shot learning setup, with 1-shot and 5-shot tasks. Precision will be calculated by dividing the number of true positives by the sum of true positives and false positives, while recall will be calculated by dividing the number of true positives by the sum of true positives and false negatives. The F1 score, a harmonic mean of precision and recall, will also be calculated to provide a balanced view of model performance. The hypothesis will be tested by comparing the precision and recall of prefix-tuning against traditional fine-tuning, with the expectation that prefix-tuning will achieve comparable results with significantly fewer trainable parameters.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to evaluate the performance of prefix-tuning compared to traditional fine-tuning on few-shot image classification tasks using the mini-ImageNet dataset. The experiment should focus on precision and recall metrics rather than just accuracy.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare two approaches for few-shot image classification:<br />
+1. <strong>Experimental Condition</strong>: Prefix-tuning - appending trainable prefix embeddings to input representations while keeping the main model parameters frozen<br />
+2. <strong>Baseline Condition</strong>: Traditional fine-tuning - updating all parameters of a pre-trained model</p></p>
+<p><p>The hypothesis is that prefix-tuning will achieve comparable precision and recall to traditional fine-tuning while significantly reducing the number of trainable parameters.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<p>Use the mini-ImageNet dataset, which is a standard benchmark for few-shot learning. The dataset should be processed as follows:<br />
+- Resize all images to 84x84 pixels<br />
+- Split into train, validation, and test sets following standard mini-ImageNet protocols<br />
+- Implement both 1-shot and 5-shot learning tasks</p></p>
+<p><h4 class="custom-heading"><strong>Model Architecture</strong></h4>
+<p>For both conditions, use a ResNet-18 pre-trained on ImageNet as the base model. For the prefix-tuning condition, implement a trainable prefix that is prepended to the input features at each layer, while keeping the main model parameters frozen. For the traditional fine-tuning condition, allow all parameters of the model to be updated during training.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4>
+<ol>
+<li><strong>Prefix-Tuning Implementation</strong>:</li>
+<li>Add trainable prefix embeddings to the input of each transformer/network layer</li>
+<li>Freeze the main model parameters</li>
+<li>Only update the prefix parameters during training</li>
+<li>Track and report the number of trainable parameters</li>
+</ol></p>
+<p><ol>
+<li><strong>Traditional Fine-Tuning Implementation</strong>:</li>
+<li>Allow all model parameters to be updated during training</li>
+<li>Track and report the number of trainable parameters</li>
+</ol></p>
+<p><ol>
+<li><strong>Few-Shot Learning Setup</strong>:</li>
+<li>Implement both 1-shot and 5-shot classification tasks</li>
+<li>Use episodic training with support and query sets</li>
+<li>For each episode, randomly sample N classes (N-way classification) with K examples per class (K-shot learning)</li>
+</ol></p>
+<p><ol>
+<li><strong>Evaluation Metrics</strong>:</li>
+<li>Calculate precision, recall, and F1 score for each class</li>
+<li>Compute macro-averaged precision, recall, and F1 score across all classes</li>
+<li>Report the number of trainable parameters for each method</li>
+<li>Generate confusion matrices for visual inspection</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Pilot Mode Implementation</strong></h4>
+<p>Implement three experimental modes controlled by a global variable <code>PILOT_MODE</code>:</p></p>
+<p><ol>
+<li><strong>MINI_PILOT</strong>: </li>
+<li>Use only 5 classes from mini-ImageNet</li>
+<li>Run 10 episodes for training and 5 for evaluation</li>
+<li>Use 5-way classification with both 1-shot and 5-shot settings</li>
+<li>Maximum of 5 epochs</li>
+</ol></p>
+<p><ol>
+<li><strong>PILOT</strong>:</li>
+<li>Use 20 classes from mini-ImageNet</li>
+<li>Run 100 episodes for training and 50 for evaluation</li>
+<li>Use 5-way classification with both 1-shot and 5-shot settings</li>
+<li>Maximum of 10 epochs</li>
+</ol></p>
+<p><ol>
+<li><strong>FULL_EXPERIMENT</strong>:</li>
+<li>Use all classes from mini-ImageNet</li>
+<li>Run 600 episodes for training and 200 for evaluation</li>
+<li>Use 5-way classification with both 1-shot and 5-shot settings</li>
+<li>Maximum of 50 epochs</li>
+</ol></p>
+<p><p>Start by running the MINI_PILOT first. If everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to run the FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Statistical Analysis</strong></h4>
+<ol>
+<li>Run 5 independent trials for each condition to ensure statistical significance</li>
+<li>Perform paired t-tests to compare the precision, recall, and F1 scores between prefix-tuning and traditional fine-tuning</li>
+<li>Calculate confidence intervals for all metrics</li>
+<li>Create visualizations comparing the performance metrics and parameter counts</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Expected Output</strong></h4>
+<p>The experiment should produce the following outputs:<br />
+1. Tables showing precision, recall, and F1 scores for both methods across all pilot modes<br />
+2. Confusion matrices for visual inspection<br />
+3. Graphs comparing the performance metrics between the two methods<br />
+4. Analysis of the number of trainable parameters for each method<br />
+5. Statistical significance tests comparing the two methods<br />
+6. Detailed logs of the training and evaluation process</p></p>
+<p><p>The final report should include a discussion of whether the hypothesis was supported, i.e., whether prefix-tuning achieved comparable precision and recall to traditional fine-tuning while significantly reducing the number of trainable parameters.</p></p>
+<p><p>Please ensure all code is well-documented and includes appropriate error handling. The implementation should be modular to allow for easy modification and extension.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/53d8b356551a2361020a948f64454a6d599af69f">Paper 0: Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> (4442 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/f0758d90baec455e2eb375d1fb0528107faed586">Paper 1</a>. The analysis reveals that while the source paper introduced prefix-tuning as a parameter-efficient alternative to fine-tuning for natural language generation, the related paper extended this concept to molecular property prediction, addressing the challenge of data scarcity. This progression highlights the potential of parameter-efficient tuning methods in diverse domains. However, there remains an opportunity to explore the application of prefix-tuning in other areas where data scarcity and model adaptability are critical issues. By leveraging the strengths of prefix-tuning and addressing its limitations in new contexts, we can further advance the field of parameter-efficient tuning methods.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+</body>
+</html>

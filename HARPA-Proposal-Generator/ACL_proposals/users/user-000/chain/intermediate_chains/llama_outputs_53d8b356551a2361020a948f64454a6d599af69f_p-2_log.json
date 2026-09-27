@@ -1,0 +1,128 @@
+[
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "75e185aa6f5e248685d4f178293279c086c656f8",
+            "pmid": "2411.02462",
+            "title": "Parameter-Efficient Fine-Tuning of Large Language Models for Unit Test Generation: An Empirical Study",
+            "abstract": "The advent of large language models (LLMs) like GitHub Copilot has significantly enhanced programmers' productivity, particularly in code generation. However, these models often struggle with real-world tasks without fine-tuning. As LLMs grow larger and more performant, fine-tuning for specialized tasks becomes increasingly expensive. Parameter-efficient fine-tuning (PEFT) methods, which fine-tune only a subset of model parameters, offer a promising solution by reducing the computational costs of tuning LLMs while maintaining their performance. Existing studies have explored using PEFT and LLMs for various code-related tasks and found that the effectiveness of PEFT techniques is task-dependent. The application of PEFT techniques in unit test generation remains underexplored. The state-of-the-art is limited to using LLMs with full fine-tuning to generate unit tests. This paper investigates both full fine-tuning and various PEFT methods, including LoRA, (IA)^3, and prompt tuning, across different model architectures and sizes. We use well-established benchmark datasets to evaluate their effectiveness in unit test generation. Our findings show that PEFT methods can deliver performance comparable to full fine-tuning for unit test generation, making specialized fine-tuning more accessible and cost-effective. Notably, prompt tuning is the most effective in terms of cost and resource utilization, while LoRA approaches the effectiveness of full fine-tuning in several cases.",
+            "year": 2024,
+            "citation_count": 3
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. MTLoRA: A Low-Rank Adaptation Approach for Efficient Multi-Task Learning": {
+                    "explanation": "This paper introduces MTLoRA, a parameter-efficient fine-tuning method for multi-task learning, which is related to the source paper's exploration of parameter-efficient fine-tuning methods like LoRA. However, the focus here is on multi-task learning rather than unit test generation. While both papers discuss parameter-efficient fine-tuning, the specific application and context differ. The source paper's exploration of LoRA as a PEFT method is relevant, but MTLoRA is applied in a different domain.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. MTLoRA: A Low-Rank Adaptation Approach for Efficient Multi-Task Learning": {
+                    "explanation": "This paper introduces MTLoRA, a parameter-efficient fine-tuning method for multi-task learning, which is related to the source paper's exploration of parameter-efficient fine-tuning methods like LoRA. However, the focus here is on multi-task learning rather than unit test generation. While both papers discuss parameter-efficient fine-tuning, the specific application and context differ. The source paper's exploration of LoRA as a PEFT method is relevant, but MTLoRA is applied in a different domain.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "8787164d9961ae8c22a1e33e2ed89554f4213432",
+            "title": "MTLoRA: A Low-Rank Adaptation Approach for Efficient Multi-Task Learning",
+            "abstract": "Adapting models pre-trained on large-scale datasets to a variety of downstream tasks is a common strategy in deep learning. Consequently, parameter-efficient fine-tuning methods have emerged as a promising way to adapt pretrained models to different tasks while training only a minimal number of parameters. While most of these methods are designed for single-task adaptation, parameter-efficient training in Multi-Task Learning (MTL) architectures is still unexplored. In this paper, we introduce MTLoRA, a novel framework for parameter-efficient training of MTL models. MTLoRA employs Task-Agnostic and Task-Specific Low-Rank Adaptation modules, which effectively disentangle the parameter space in MTL fine-tuning, thereby enabling the model to adeptly handle both task specialization and interaction within MTL contexts. We applied MTLoRA to hierarchical-transformer-based MTL architectures, adapting them to multiple downstream dense prediction tasks. Our extensive experiments on the PASCAL dataset show that MTLoRA achieves higher accuracy on downstream tasks compared to fully fine-tuning the MTL model while reducing the number of trainable parameters by 3.6\u00d7. Furthermore, MTLoRA establishes a Pareto-optimal trade-off between the number of trainable parameters and the accuracy of the downstream tasks, outperforming current state-of-the-art parameter-efficient training methods in both accuracy and efficiency. Our code is publicly available. 11https://github.com/scale-lab/MTLoRA.git",
+            "year": 2024,
+            "citation_count": 25,
+            "relevance": 1,
+            "explanation": "This paper introduces MTLoRA, a parameter-efficient fine-tuning method for multi-task learning, which is related to the source paper's exploration of parameter-efficient fine-tuning methods like LoRA. However, the focus here is on multi-task learning rather than unit test generation. While both papers discuss parameter-efficient fine-tuning, the specific application and context differ. The source paper's exploration of LoRA as a PEFT method is relevant, but MTLoRA is applied in a different domain."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Parameter Efficient Mamba Tuning via Projector-targeted Diagonal-centric Linear Transformation": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning (PEFT) in Mamba architecture, which is a different architecture than the one discussed in the source paper. While both papers address PEFT, the focus on Mamba architecture and the specific methods used do not directly depend on or extend the findings of the source paper on MTLoRA.",
+                    "relevance": 0
+                },
+                "2.Parameter-Efficient Fine-Tuning in Large Models: A Survey of Methodologies": {
+                    "explanation": "This paper is a review of parameter-efficient fine-tuning methodologies. It does not present novel hypotheses or findings that are inspired by or dependent on the source paper's specific contributions to MTLoRA.",
+                    "relevance": 0
+                },
+                "3.Swiss Army Knife: Synergizing Biases in Knowledge from Vision Foundation Models for Multi-Task Learning": {
+                    "explanation": "This paper addresses multi-task learning with a focus on vision foundation models, proposing a novel method for synergizing biases. While it shares the multi-task learning context with the source paper, it does not directly build upon or depend on the specific findings or hypotheses of MTLoRA.",
+                    "relevance": 0
+                },
+                "4.Uni-Med: A Unified Medical Generalist Foundation Model For Multi-Task Learning Via Connector-MoE": {
+                    "explanation": "Uni-Med presents a multi-task learning model in the medical domain using a connector mixture-of-experts approach. Although it shares the multi-task learning theme, it does not directly relate to the low-rank adaptation approach or findings of the source paper on MTLoRA.",
+                    "relevance": 0
+                },
+                "5.Low-rank Adaptation for Spatio-Temporal Forecasting": {
+                    "explanation": "This paper introduces a low-rank adaptation framework for spatio-temporal forecasting, which is conceptually similar to the low-rank adaptation approach in MTLoRA. However, it focuses on a different application domain (spatio-temporal forecasting) and does not directly build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6.Parameter-Efficient Fine-Tuning for Pre-Trained Vision Models: A Survey and Benchmark": {
+                    "explanation": "This paper is a survey of parameter-efficient fine-tuning methods for vision models and does not present new hypotheses or findings that are directly inspired by or dependent on the source paper's contributions to MTLoRA.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Low-rank Adaptation for Spatio-Temporal Forecasting": {
+                    "explanation": "This paper introduces a low-rank adaptation framework, similar in concept to MTLoRA, but applied to spatio-temporal forecasting. It shares the low-rank adaptation approach, making it conceptually related to the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "5de65a413140ec11b05f8d5d6ff1d8f5f2f9ddf3",
+            "title": "Low-rank Adaptation for Spatio-Temporal Forecasting",
+            "abstract": "Spatio-temporal forecasting is essential for understanding future dynamics within real-world systems by leveraging historical data from multiple locations. Existing methods often prioritize the development of intricate neural networks to capture the complex dependencies of the data. These methods neglect node-level heterogeneity and face over-parameterization when attempting to model node-specific characteristics. In this paper, we present a novel low-rank adaptation framework for existing spatio-temporal prediction models, termed \\model, which alleviates the aforementioned problems through node-level adjustments. Specifically, we introduce the node-adaptive low-rank layer and node-specific predictor, capturing the complex functional characteristics of nodes while maintaining computational efficiency. Extensive experiments on multiple real-world datasets demonstrate that our method consistently achieves superior performance across various forecasting models with minimal computational overhead, improving performance by 7% with only 1% additional parameter cost. The source code is available at https://github.com/RWLinno/ST-LoRA.",
+            "year": 2024,
+            "citation_count": 3,
+            "relevance": 1,
+            "explanation": "This paper introduces a low-rank adaptation framework, similar in concept to MTLoRA, but applied to spatio-temporal forecasting. It shares the low-rank adaptation approach, making it conceptually related to the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Expand and Compress: Exploring Tuning Principles for Continual Spatio-Temporal Graph Forecasting": {
+                    "explanation": "This paper addresses challenges in spatio-temporal forecasting in streaming scenarios by proposing a prompt tuning-based method. While it focuses on continual learning and catastrophic forgetting, it does not directly build upon or depend on the low-rank adaptation framework proposed in the source paper. The source paper's focus on node-level heterogeneity and low-rank adaptation is distinct from the continual learning and prompt tuning approach of this paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "5de65a413140ec11b05f8d5d6ff1d8f5f2f9ddf3",
+            "title": "Low-rank Adaptation for Spatio-Temporal Forecasting",
+            "abstract": "Spatio-temporal forecasting is essential for understanding future dynamics within real-world systems by leveraging historical data from multiple locations. Existing methods often prioritize the development of intricate neural networks to capture the complex dependencies of the data. These methods neglect node-level heterogeneity and face over-parameterization when attempting to model node-specific characteristics. In this paper, we present a novel low-rank adaptation framework for existing spatio-temporal prediction models, termed \\model, which alleviates the aforementioned problems through node-level adjustments. Specifically, we introduce the node-adaptive low-rank layer and node-specific predictor, capturing the complex functional characteristics of nodes while maintaining computational efficiency. Extensive experiments on multiple real-world datasets demonstrate that our method consistently achieves superior performance across various forecasting models with minimal computational overhead, improving performance by 7% with only 1% additional parameter cost. The source code is available at https://github.com/RWLinno/ST-LoRA.",
+            "year": 2024,
+            "citation_count": 3,
+            "relevance": 1,
+            "explanation": "This paper introduces a low-rank adaptation framework, similar in concept to MTLoRA, but applied to spatio-temporal forecasting. It shares the low-rank adaptation approach, making it conceptually related to the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting": {
+                    "explanation": "This paper is relevant to the source paper as it also focuses on improving spatio-temporal forecasting models through parameter-efficient methods. Both papers address the challenge of model adaptation with minimal computational overhead, and the use of low-rank adapters in PETSA is conceptually similar to the low-rank adaptation framework in the source paper. Thus, the hypothesis in this paper is inspired by the hypothesis of the source paper.",
+                    "relevance": 1
+                },
+                "2. Vision-Enhanced Time Series Forecasting via Latent Diffusion Models": {
+                    "explanation": "This paper explores a different approach by integrating visual information into time series forecasting using diffusion models. While it shares the common goal of improving time series forecasting, it does not directly build upon or rely on the low-rank adaptation framework or node-level adjustments proposed in the source paper. Therefore, it has no direct connection with the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting": {
+                    "explanation": "This paper is relevant to the source paper as it also focuses on improving spatio-temporal forecasting models through parameter-efficient methods. Both papers address the challenge of model adaptation with minimal computational overhead, and the use of low-rank adapters in PETSA is conceptually similar to the low-rank adaptation framework in the source paper. Thus, the hypothesis in this paper is inspired by the hypothesis of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    }
+]

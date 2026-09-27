@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8d1fbde83749f61e1a385f2c380ea134d65b52f2</p>
+<hr>
+<section><h2>Title</h2>
+<p>Multi-Scale Attention Alignment for Transformer-Based Incremental Object Detection</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Transformer-based object detectors struggle to maintain consistent attention patterns across incremental learning stages, leading to degraded performance on both old and new classes. This issue hinders the ability of these models to adapt to new object categories while retaining knowledge of previously learned classes.</p>
+<h3>Motivation</h3>
+<p>Existing methods often focus on feature-level or output-level knowledge distillation, neglecting the importance of preserving attention mechanisms in transformer architectures. The self-attention mechanism is crucial for transformer-based detectors, and by aligning attention patterns across incremental stages, we can better preserve the model's ability to focus on relevant object features for both old and new classes. Our proposed Multi-Scale Attention Alignment (MSAA) approach addresses this gap by directly targeting the preservation and adaptation of attention patterns throughout the incremental learning process.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Multi-Scale Attention Alignment (MSAA), a novel approach for incremental object detection that focuses on preserving and adapting attention patterns. MSAA consists of three main components: 1) A hierarchical attention distillation module that aligns attention maps at multiple scales, from low-level features to high-level semantic representations. This module uses a pyramid structure to capture and align attention at different abstraction levels. 2) An adaptive attention fusion mechanism that combines old and new class attention patterns, allowing for gradual adaptation of attention. This mechanism employs a gating network to determine the optimal combination of old and new attention patterns. 3) A contrastive attention learning objective that encourages discriminative attention patterns between classes, pushing the model to learn class-specific attention patterns that are distinct yet coherent across incremental stages.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Use the COCO dataset for incremental object detection. Split the dataset into base classes and incremental classes. Create multiple incremental learning scenarios with varying numbers of classes added in each stage.</p><p><strong>Step 2: Baseline Model Implementation</strong></p><p>Implement a transformer-based object detector (e.g., DETR or Deformable DETR) as the base model. Train this model on the base classes.</p><p><strong>Step 3: Implement MSAA Components</strong></p><p>a) Develop the hierarchical attention distillation module using a pyramid structure. b) Implement the adaptive attention fusion mechanism with a gating network. c) Design the contrastive attention learning objective.</p><p><strong>Step 4: Incremental Learning Setup</strong></p><p>Set up the incremental learning pipeline, including data loaders for new classes and exemplar replay for old classes.</p><p><strong>Step 5: Training Process</strong></p><p>For each incremental stage: a) Fine-tune the model on new classes and exemplars. b) Apply MSAA during training to align attention patterns. c) Use the contrastive attention learning objective in the loss function.</p><p><strong>Step 6: Evaluation</strong></p><p>Evaluate the model after each incremental stage using: a) Mean Average Precision (mAP) for object detection performance. b) Attention consistency metrics (e.g., cosine similarity between attention maps of old and new models). c) Visualization of attention maps for qualitative analysis.</p><p><strong>Step 7: Ablation Studies</strong></p><p>Conduct ablation studies to assess the impact of each MSAA component: a) Remove hierarchical attention distillation. b) Replace adaptive fusion with simple averaging. c) Remove contrastive attention learning.</p><p><strong>Step 8: Comparison with Baselines</strong></p><p>Compare MSAA with: a) Fine-tuning without any incremental learning techniques. b) Feature-level knowledge distillation methods. c) Output-level knowledge distillation methods.</p><p><strong>Step 9: Robustness Analysis</strong></p><p>Test MSAA's performance under different incremental class distributions and varying numbers of incremental stages.</p><p><strong>Step 10: Generalization Study</strong></p><p>Apply MSAA to different transformer architectures (e.g., Swin Transformer) to assess its generalization capability.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Method Input</strong></p><p>Image containing a person, a car, and a newly introduced class 'traffic light'</p><p><strong>Baseline Method Expected Output</strong></p><p>Detected: person, car. Missed: traffic light. Attention maps show weak activation for the traffic light region.</p><p><strong>Proposed Method Input</strong></p><p>Image containing a person, a car, and a newly introduced class 'traffic light'</p><p><strong>Proposed Method Expected Output</strong></p><p>Detected: person, car, traffic light. Attention maps show strong and consistent activation for all objects, including the newly introduced traffic light.</p><p><strong>Explanation</strong></p><p>The baseline method struggles with the newly introduced class, showing weak attention and missing the detection. MSAA, through its multi-scale attention alignment and adaptive fusion, maintains strong attention patterns for both old and new classes, leading to successful detection of all objects.</p>
+<h3>Fallback Plan</h3>
+<p>If MSAA does not significantly outperform baselines, we will conduct a thorough analysis to understand the limitations. We will examine the attention maps at different scales to identify where the alignment process may be failing. If the issue lies in the hierarchical attention distillation, we could explore alternative pyramid structures or incorporate cross-attention mechanisms. If the adaptive fusion is not effective, we might investigate more sophisticated fusion techniques, such as learnable attention pooling. Additionally, we could expand our study to include an in-depth analysis of how attention patterns evolve across incremental stages, potentially uncovering insights into the challenges of preserving transformer attention in incremental learning scenarios. This analysis could lead to a valuable contribution in understanding the behavior of attention mechanisms in incremental learning, even if our initial approach does not yield the expected performance improvements.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/e866b9e877712008edb4ebaaad10c9d0b3621800" target="_blank">Revisiting Continual Semantic Segmentation with Pre-trained Vision Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4857062751b922c7ce3d166dd1c54d627b2056b8" target="_blank">DuET: Dual Incremental Object Detection via Exemplar-Free Task Arithmetic</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c194730a4fc21650d252a7ebf4d37e203f0c25ca" target="_blank">Alleviating Catastrophic Forgetting of Incremental Object Detection via Within-Class and Between-Class Knowledge Distillation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/cbe2300f89abdc49fda49ea5047d0e337e4347ed" target="_blank">Pseudo Object Replay and Mining for Incremental Object Detection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/078ad37a11445c44b6a68f3b514cefb29ee60cf4" target="_blank">Overcoming Catastrophic Forgetting in Incremental Object Detection via Elastic Response Distillation</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8d1fbde83749f61e1a385f2c380ea134d65b52f2" target="_blank">Continual Detection Transformer for Incremental Object Detection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/591b4f4b4f2b000b119f1cd2db265abb9e4e4b04" target="_blank">Incremental Few-Shot Object Detection via Simple Fine-Tuning Approach</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/597159544be7ca16821760cc9332880a1cb5b42f" target="_blank">EGOR: Efficient Generated Objects Replay for incremental object detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4af5ac57d6df79dd457c80d90bac170906b5185b" target="_blank">Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4f78d2ef7f18907c04c7ab77b88172784e342f40" target="_blank">Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

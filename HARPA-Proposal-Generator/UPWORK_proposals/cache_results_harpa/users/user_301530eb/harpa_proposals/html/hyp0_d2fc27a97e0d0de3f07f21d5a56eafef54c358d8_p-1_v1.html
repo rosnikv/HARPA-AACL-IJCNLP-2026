@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>d2fc27a97e0d0de3f07f21d5a56eafef54c358d8</p>
+<hr>
+<h2>Title</h2>
+<p>Integrate workshop energy data with dynamic parameter adjustment in MARL for efficient job shop scheduling.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>In a dynamic flexible job shop environment, integrating workshop energy consumption with dynamic adjustment of algorithm parameters in a multi-agent reinforcement learning framework will reduce makespan and energy usage compared to static parameter settings.</p>
+<h3>Motivation</h3>
+<p>Existing methods for dynamic flexible job shop scheduling often focus on either energy consumption or makespan reduction, but rarely optimize both simultaneously in a dynamic environment. While multi-agent reinforcement learning (MARL) has been applied to scheduling, the integration of specific energy consumption metrics like workshop energy consumption with dynamic algorithm parameter adjustment remains underexplored. This gap is significant because optimizing both energy and time in real-time can lead to substantial operational cost savings and environmental benefits. Current literature lacks a comprehensive approach that dynamically adjusts scheduling parameters based on real-time energy consumption data, particularly at the workshop level, which can lead to more efficient and adaptive scheduling strategies.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research aims to explore the integration of workshop energy consumption data with dynamic adjustment of algorithm parameters within a multi-agent reinforcement learning (MARL) framework for flexible job shop scheduling. The hypothesis is that by using real-time workshop energy consumption data to inform the dynamic adjustment of scheduling algorithm parameters, the system can achieve lower makespan and energy consumption compared to traditional static parameter settings. The MARL framework will utilize a Q-learning algorithm to adjust parameters such as weight vectors and search scopes dynamically, based on real-time feedback from workshop energy consumption metrics. This approach addresses the gap in existing research by focusing on the real-time adaptability of scheduling strategies to both energy and time objectives, which is crucial for modern manufacturing environments. The expected outcome is a more efficient and sustainable scheduling system that can adapt to changing conditions and optimize multiple objectives simultaneously.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/bcad4261c2498c8db0ea0556ccd495f980c48cdc">Workshop Energy Consumption</a>: Workshop energy consumption refers to the total energy used by all machines and processes within the job shop, including operational energy of machines and auxiliary processes like lighting and climate control. In this experiment, workshop energy consumption will be measured using aggregated data from energy meters and sensors throughout the workshop. This data will be used to inform the dynamic adjustment of scheduling algorithm parameters, allowing the system to optimize for both energy efficiency and makespan. The choice of workshop energy consumption over machine-level metrics is due to its comprehensive nature, capturing the holistic energy profile of the job shop. The expected role of this variable is to provide real-time feedback that guides the dynamic adjustment of algorithm parameters, leading to more efficient scheduling decisions.</p>
+<p><a href="https://www.semanticscholar.org/paper/bcad4261c2498c8db0ea0556ccd495f980c48cdc">Dynamic Adjustment of Algorithm Parameters</a>: This involves using reinforcement learning to dynamically adjust scheduling algorithm parameters, such as weight vectors and search scopes, to optimize energy consumption and makespan. The Q-learning algorithm will be employed to learn from the environment and adjust parameters in real-time based on feedback from workshop energy consumption data. This dynamic adjustment is expected to enhance the adaptability of the scheduling strategy, allowing it to remain efficient under varying conditions. The advantage of this approach is its ability to continuously optimize scheduling decisions in response to real-time changes in energy consumption, which is not possible with static parameter settings.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating workshop energy consumption data with a multi-agent reinforcement learning framework to dynamically adjust scheduling algorithm parameters. The process begins with the setup of energy meters and sensors throughout the workshop to collect real-time energy consumption data. This data is fed into a Q-learning-based MARL framework, where agents are responsible for making scheduling decisions. The Q-learning algorithm uses the energy consumption data as feedback to adjust parameters such as weight vectors and search scopes dynamically. The agents interact with the environment, receiving rewards based on the reduction in makespan and energy consumption. The dynamic adjustment mechanism ensures that the scheduling strategy adapts to real-time changes in energy consumption, optimizing both energy efficiency and makespan. The integration of workshop energy consumption data allows for a holistic approach to scheduling, considering both operational and auxiliary energy usage. The expected outcome is a scheduling system that is more efficient and sustainable, capable of adapting to changing conditions in real-time. The implementation will involve coding the Q-learning algorithm to process energy data and adjust parameters, setting up the MARL framework to manage agent interactions, and configuring the environment to simulate a dynamic job shop setting.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating workshop energy consumption with dynamic adjustment of algorithm parameters in a multi-agent reinforcement learning (MARL) framework will reduce makespan and energy usage compared to static parameter settings in a dynamic flexible job shop environment.</p></p>
+<p><h4 class="custom-heading"><strong>Environment Setup</strong></h4></p>
+<p><ol>
+<li>Create a simulated flexible job shop scheduling environment with the following components:</li>
+<li>Multiple machines with different capabilities and energy consumption profiles</li>
+<li>A set of jobs, each consisting of multiple operations with specific machine requirements</li>
+<li>Dynamic job arrivals and machine availability changes</li>
+<li>Energy consumption metrics for each machine and the overall workshop</li>
+<li>The ability to track makespan (total completion time) and total energy consumption</li>
+</ol></p>
+<p><ol>
+<li>Implement energy consumption modeling:</li>
+<li>Each machine should have an operational energy consumption rate (kWh) when processing jobs</li>
+<li>Include idle energy consumption for machines when they're on but not processing</li>
+<li>Model auxiliary energy consumption (lighting, climate control, etc.) as a baseline workshop consumption</li>
+<li>Aggregate these metrics into a total workshop energy consumption value</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>MARL Framework</strong></h4></p>
+<p><ol>
+<li>Implement a multi-agent reinforcement learning framework where:</li>
+<li>Each agent represents a machine or a job dispatcher</li>
+<li>The state space includes current job queue, machine status, and energy consumption metrics</li>
+<li>The action space includes job assignment decisions and parameter adjustments</li>
+<li>The reward function balances makespan reduction and energy consumption minimization</li>
+</ol></p>
+<p><ol>
+<li>Implement Q-learning for each agent:</li>
+<li>State-action value function Q(s,a) initialization</li>
+<li>Exploration-exploitation strategy (e.g., ε-greedy)</li>
+<li>Learning rate and discount factor parameters</li>
+<li>Experience replay buffer for training stability</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Dynamic Parameter Adjustment</strong></h4></p>
+<p><ol>
+<li>Implement the following adjustable parameters in the scheduling algorithm:</li>
+<li>Weight vectors for balancing makespan vs. energy objectives</li>
+<li>Search scope parameters that determine how many scheduling options to consider</li>
+<li>Learning rate adaptation based on energy feedback</li>
+</ol></p>
+<p><ol>
+<li>Create a mechanism for dynamic parameter adjustment:</li>
+<li>Use energy consumption feedback to adjust parameters in real-time</li>
+<li>Implement a meta-learning approach where the Q-learning algorithm learns to adjust these parameters</li>
+<li>Ensure parameters can adapt to changing workshop conditions</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Baseline Methods</strong></h4></p>
+<p><ol>
+<li>Implement the following baseline methods for comparison:</li>
+<li>Static Parameter MARL: Same MARL framework but with fixed parameters throughout execution</li>
+<li>Genetic Algorithm: A traditional energy-aware scheduling approach using genetic algorithms</li>
+<li>Random Scheduling: A simple baseline that randomly assigns jobs to available machines</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4></p>
+<p><ol>
+<li>Track and report the following metrics:</li>
+<li>Makespan: Total time to complete all jobs</li>
+<li>Total energy consumption (kWh)</li>
+<li>Energy efficiency: Energy consumed per job</li>
+<li>Convergence time of the learning algorithms</li>
+<li>Stability of the scheduling solutions</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experiment Configuration</strong></h4></p>
+<p><p>Implement three experiment modes controlled by a global variable PILOT_MODE which can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':</p></p>
+<p><ol>
+<li>MINI_PILOT:</li>
+<li>5 machines with 3 different types</li>
+<li>20 jobs with 2-4 operations each</li>
+<li>10 episodes with 100 timesteps each</li>
+<li>Simple energy consumption model</li>
+<li>Run each baseline once for comparison</li>
+<li>Purpose: Quick code verification and debugging (should run in &lt;10 minutes)</li>
+</ol></p>
+<p><ol>
+<li>PILOT:</li>
+<li>10 machines with 5 different types</li>
+<li>50 jobs with 3-6 operations each</li>
+<li>30 episodes with 500 timesteps each</li>
+<li>More detailed energy consumption model</li>
+<li>Run each baseline 5 times and average results</li>
+<li>Statistical significance testing between methods</li>
+<li>Purpose: Preliminary results assessment (should run in &lt;2 hours)</li>
+</ol></p>
+<p><ol>
+<li>FULL_EXPERIMENT:</li>
+<li>20+ machines with 8+ different types</li>
+<li>200+ jobs with varying complexity</li>
+<li>100 episodes with 2000+ timesteps each</li>
+<li>Comprehensive energy consumption model with stochasticity</li>
+<li>Run each baseline 30 times for robust statistical analysis</li>
+<li>Detailed performance analysis across different scenarios</li>
+<li>Purpose: Complete experimental evaluation</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Requirements</strong></h4></p>
+<p><ol>
+<li>Set PILOT_MODE = 'MINI_PILOT' by default</li>
+<li>Run the experiment in MINI_PILOT mode first</li>
+<li>If successful, automatically proceed to PILOT mode</li>
+<li>After PILOT completes, stop and wait for manual verification before running FULL_EXPERIMENT</li>
+<li>Save all results, models, and parameters at each stage</li>
+<li>Generate visualizations comparing the performance of different methods</li>
+<li>Perform statistical significance testing (t-tests or bootstrap resampling) to validate improvements</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Data Collection and Analysis</strong></h4></p>
+<p><ol>
+<li>For each experiment run, collect:</li>
+<li>Complete job scheduling history</li>
+<li>Energy consumption over time</li>
+<li>Parameter adjustment trajectories</li>
+<li>Learning curves for the MARL agents</li>
+</ol></p>
+<p><ol>
+<li>Analyze and report:</li>
+<li>Average and standard deviation of makespan and energy consumption</li>
+<li>Statistical significance of differences between methods</li>
+<li>Correlation between parameter adjustments and performance improvements</li>
+<li>Visualizations of scheduling solutions and energy profiles</li>
+</ol></p>
+<p><p>Please implement this experiment following best practices for reinforcement learning research, ensuring reproducibility by setting random seeds and documenting all hyperparameters. The code should be modular to allow for easy modification and extension of the methods and environment.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/d2fc27a97e0d0de3f07f21d5a56eafef54c358d8">Paper 0: Dynamic multi-objective scheduling for flexible job shop by deep reinforcement learning</a> (169 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/759efac6127304d3de8f992c230dc17ebec94c32">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/6dbedbc41303f941c83e6f301d00e83fb13c630e">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/493821fdcdfda663aaa03c5150013688be6712ed">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/4bd397e907d69cc5a632ddcbaff2bd54bf037c4a">Paper 4</a>. The analysis reveals a progression from basic deep reinforcement learning approaches to more sophisticated hierarchical and multi-objective optimization techniques for scheduling problems in manufacturing. The existing literature has focused on improving algorithmic efficiency and adaptability to dynamic environments, but there remains a gap in addressing the integration of energy efficiency with real-time scheduling decisions. A novel research idea could involve developing a framework that not only optimizes scheduling objectives but also dynamically adjusts energy consumption based on real-time data, leveraging the advancements in reinforcement learning architectures.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/d2fc27a97e0d0de3f07f21d5a56eafef54c358d8" target="_blank">Dynamic multi-objective scheduling for flexible job shop by deep reinforcement learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/759efac6127304d3de8f992c230dc17ebec94c32" target="_blank">Hierarchical Reinforcement Learning for Multi-Objective Real-Time Flexible Scheduling in a Smart Shop Floor</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/6dbedbc41303f941c83e6f301d00e83fb13c630e" target="_blank">Efficient Multi-Objective Optimization on Dynamic Flexible Job Shop Scheduling Using Deep Reinforcement Learning Approach</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/493821fdcdfda663aaa03c5150013688be6712ed" target="_blank">Multi-Objective Flexible Flow Shop Production Scheduling Problem Based on the Double Deep Q-Network Algorithm</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4bd397e907d69cc5a632ddcbaff2bd54bf037c4a" target="_blank">Flexible Job Shop Scheduling Based on Energy Consumption of Method Research</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/bcad4261c2498c8db0ea0556ccd495f980c48cdc" target="_blank">An Enhanced Multi-Objective Evolutionary Algorithm with Reinforcement Learning for Energy-Efficient Scheduling in the Flexible Job Shop</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/f25e706833aa4b5bdabd6003d52804364a9328bb" target="_blank">A multi objective collaborative reinforcement learning algorithm for flexible job shop scheduling</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/f3cd12dae40248fb180535c3ef130e7757ee9107" target="_blank">Dynamic Agent-based Bi-objective Robustness for Tardiness and Energy in a Dynamic Flexible Job Shop</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/70775f522c028f7d720f20189c5d33db33a88148" target="_blank">A Q-Learning Proposal for Tuning Genetic Algorithms in Flexible Job Shop Scheduling Problems</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/ff5f3d7fe2d05770f025af5de6a31f67f9f83252" target="_blank">A Q-Learning Rescheduling Approach to the Flexible Job Shop Problem Combining Energy and Productivity Objectives</a> (2023)</li>
+</ol>
+</body>
+</html>

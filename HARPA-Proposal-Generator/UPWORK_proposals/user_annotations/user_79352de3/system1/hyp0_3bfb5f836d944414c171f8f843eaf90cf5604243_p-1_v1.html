@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3bfb5f836d944414c171f8f843eaf90cf5604243</p>
+<hr>
+<h2>Title</h2>
+<p>Combining stochastic softmax tricks with control variates for improved spanning tree optimization.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating stochastic softmax tricks with control variates will significantly improve convergence speed and stability in spanning tree optimization problems compared to using stochastic softmax tricks alone.</p>
+<h3>Motivation</h3>
+<p>Existing methods for variance reduction in discrete optimization problems often focus on individual techniques like Rao-Blackwellization or stochastic softmax tricks in isolation. However, these approaches do not fully exploit the potential synergies between different variance reduction techniques, particularly in complex combinatorial spaces like spanning trees and arborescences. No prior work has explored the integration of stochastic softmax tricks with control variates specifically for spanning tree problems, which could offer significant improvements in convergence speed and stability by leveraging structured relaxations and variance reduction simultaneously.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research aims to explore the integration of stochastic softmax tricks with control variates to enhance variance reduction in spanning tree optimization problems. Stochastic softmax tricks provide structured relaxations that allow for gradient estimation in combinatorial spaces, while control variates reduce the variance of these gradient estimators by incorporating additional information. By combining these two techniques, the hypothesis posits that the model will achieve faster convergence and more stable performance. This approach addresses the gap in existing research where these techniques are typically applied in isolation. The expected outcome is a more efficient optimization process, particularly in graph-based problems like spanning trees, where maintaining the graph structure is crucial for accurate gradient computation. This combination is expected to reduce the variance of gradient estimates more effectively than either technique alone, leading to improved model performance metrics such as convergence speed and stability.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/0b02da8ba8c024850d4ee3ca3d1b0bddf6bf54f1">Stochastic Softmax Tricks</a>: Stochastic softmax tricks are used to create structured relaxations for combinatorial optimization problems, such as spanning trees. This involves using the Gumbel-Max trick to reparameterize distributions over one-hot binary vectors, allowing for gradient estimation in discrete distributions. The structured relaxation maintains the graph structure, enabling efficient gradient computation. This technique was selected for its ability to handle complex combinatorial spaces and its compatibility with gradient-based optimization methods.</p>
+<p><a href="https://www.semanticscholar.org/paper/56b624f65a506d73a70684ab6550f3ff72724444">Control Variates</a>: Control variates are used to reduce the variance of gradient estimators by incorporating additional information into the estimation process. This involves constructing a control variate based on an analytical linear approximation to the gradient estimator, which is then combined with a naïve gradient estimate. This method remains unbiased while achieving lower variance, particularly effective in Gaussian approximating families. The control variate is expected to enhance the efficiency of the stochastic softmax tricks by further reducing the variance of the gradient estimates.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating stochastic softmax tricks with control variates to optimize spanning tree problems. First, the stochastic softmax tricks are applied to create a structured relaxation of the spanning tree problem, allowing for gradient estimation in a differentiable manner. This is achieved by representing the problem as a linear program and applying a softmax function to approximate the selection of edges. Next, control variates are introduced to further reduce the variance of the gradient estimators. This involves constructing a control variate based on an analytical linear approximation to the gradient estimator, which is then combined with the gradient estimates obtained from the stochastic softmax tricks. The integration occurs at the gradient computation stage, where the control variate is used to adjust the gradient estimates, leading to lower variance and improved convergence. The data flows from the structured relaxation to the control variate adjustment, with the final output being a more stable and efficient gradient estimate. This method is implemented using libraries that support automatic differentiation, such as TensorFlow or PyTorch, and is evaluated against baseline methods like the vanilla Gumbel-Softmax estimator.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating stochastic softmax tricks with control variates will significantly improve convergence speed and stability in spanning tree optimization problems compared to using stochastic softmax tricks alone.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three methods for spanning tree optimization:<br />
+1. <strong>Baseline 1</strong>: Vanilla Gumbel-Softmax estimator<br />
+2. <strong>Baseline 2</strong>: Stochastic softmax tricks without control variates<br />
+3. <strong>Experimental</strong>: Stochastic softmax tricks integrated with control variates</p></p>
+<p><p>The experiment should measure convergence speed (iterations to reach a predefined accuracy threshold) and stability (variance of predictions across different runs) for each method.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.<br />
+- <strong>MINI_PILOT</strong>: Use 5 small random graphs (10-15 nodes) and run 10 optimization iterations with 3 independent runs per method<br />
+- <strong>PILOT</strong>: Use 20 medium-sized random graphs (20-50 nodes) and run 50 optimization iterations with 10 independent runs per method<br />
+- <strong>FULL_EXPERIMENT</strong>: Use 100 graphs of varying sizes (up to 100 nodes) and run 200 optimization iterations with 30 independent runs per method</p></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then PILOT mode if successful, but stop before FULL_EXPERIMENT (which will be manually triggered after human verification).</p></p>
+<p><h4 class="custom-heading"><strong>Graph Dataset Generation</strong></h4>
+<p>Use NetworkX to generate the following types of random graphs for the experiment:<br />
+1. Erdős–Rényi random graphs<br />
+2. Barabási–Albert preferential attachment graphs<br />
+3. Watts–Strogatz small-world graphs</p></p>
+<p><p>For each graph, assign random edge weights from a uniform distribution [0.1, 10.0].</p></p>
+<p><h4 class="custom-heading"><strong>Method Implementations</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Vanilla Gumbel-Softmax Estimator (Baseline 1)</strong></h4>
+<p>Implement the standard Gumbel-Softmax trick for spanning tree optimization:<br />
+- Represent the graph as an edge selection problem<br />
+- Apply the Gumbel-Max trick to sample spanning trees<br />
+- Use the softmax temperature parameter to control the discreteness of the distribution<br />
+- Implement straight-through estimation for the backward pass</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>2. Stochastic Softmax Tricks without Control Variates (Baseline 2)</strong></h4>
+<p>Implement structured relaxations for spanning trees:<br />
+- Represent the spanning tree polytope using the cycle constraints<br />
+- Apply stochastic softmax tricks to maintain the graph structure<br />
+- Use automatic differentiation to compute gradients<br />
+- Implement a projection step to ensure the solution is a valid spanning tree</p></p>
+<p><h4 class="custom-heading"><strong>3. Integrated Approach with Control Variates (Experimental)</strong></h4>
+<p>Extend the stochastic softmax tricks implementation with control variates:<br />
+- Construct a control variate based on an analytical linear approximation to the gradient estimator<br />
+- Combine the control variate with the naïve gradient estimate from the stochastic softmax tricks<br />
+- Implement the optimal scaling parameter for the control variate<br />
+- Apply the adjusted gradient in the optimization process</p></p>
+<p><h4 class="custom-heading"><strong>Optimization Task</strong></h4>
+<p>Implement a minimum spanning tree optimization task where the objective is to find the spanning tree with minimum total edge weight. Additionally, implement a maximum spanning tree task as a secondary objective.</p></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<ol>
+<li><strong>Convergence Speed</strong>: Measure the number of iterations required to reach 95% of the optimal solution</li>
+<li><strong>Stability</strong>: Calculate the variance of the solutions across multiple independent runs</li>
+<li><strong>Solution Quality</strong>: Compare the final solution to the true optimal spanning tree (computed using standard MST algorithms)</li>
+<li><strong>Gradient Variance</strong>: Measure the variance of the gradient estimates during optimization</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experiment Procedure</strong></h4>
+<ol>
+<li>For each graph in the dataset:<br />
+   a. Run each method (Baseline 1, Baseline 2, Experimental) multiple times with different random seeds<br />
+   b. Record the optimization trajectory (objective value vs. iteration)<br />
+   c. Measure the gradient variance at each iteration<br />
+   d. Calculate the final solution quality</li>
+</ol></p>
+<p><ol>
+<li>Aggregate results across all graphs and runs:<br />
+   a. Calculate average convergence speed for each method<br />
+   b. Calculate average stability for each method<br />
+   c. Perform statistical significance tests (bootstrap resampling) to compare methods</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Visualization and Reporting</strong></h4>
+<ol>
+<li>Generate convergence plots showing objective value vs. iteration for each method</li>
+<li>Create box plots showing the distribution of convergence speeds and stability metrics</li>
+<li>Generate tables with summary statistics for each method</li>
+<li>Visualize example spanning trees produced by each method on selected graphs</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4>
+<ul>
+<li>Use PyTorch for automatic differentiation and gradient computation</li>
+<li>Use NetworkX for graph manipulation and visualization</li>
+<li>Implement proper seeding for reproducibility</li>
+<li>Use a learning rate scheduler to improve convergence</li>
+<li>Save intermediate results to allow for experiment resumption</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Expected Output</strong></h4>
+<p>The experiment should produce:<br />
+1. A comprehensive report comparing the three methods<br />
+2. Convergence plots for each method<br />
+3. Statistical analysis of the differences between methods<br />
+4. Visualizations of example spanning trees<br />
+5. Raw data for further analysis</p></p>
+<p><p>Please implement this experiment and run it first in MINI_PILOT mode, then in PILOT mode if successful. Do not proceed to FULL_EXPERIMENT mode without human verification.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3bfb5f836d944414c171f8f843eaf90cf5604243">Paper 0: Learning with Differentiable Perturbed Optimizers</a> (109 citations, 2020). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/0b02da8ba8c024850d4ee3ca3d1b0bddf6bf54f1">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/e61db54fe46bd13e1ef7a6ce293f4db202e3317e">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/928b7aa25c4de5f697a576eff29cf45e14094a40">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/64c36adaeb803ff1d49771ed6a7ae7271e17b35d">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/8f92edfc54c2292bd86169190447db86dea3c053">Paper 5</a>. The analysis reveals a consistent theme of addressing the high variance in gradient estimation for discrete latent variables, a challenge initially highlighted in the source paper. The progression of research has introduced various techniques like stochastic softmax tricks, Rao-Blackwellization, and coupled gradient estimators to tackle this issue. However, these approaches often focus on specific applications or settings, such as combinatorial spaces or categorical variables. A novel research idea could involve developing a generalized framework that unifies these variance reduction techniques, making them adaptable to a broader range of discrete optimization problems. This would advance the field by providing a more versatile tool for training models with discrete components, addressing the limitations of existing methods that are often application-specific.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3bfb5f836d944414c171f8f843eaf90cf5604243" target="_blank">Learning with Differentiable Perturbed Optimizers</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/0b02da8ba8c024850d4ee3ca3d1b0bddf6bf54f1" target="_blank">Gradient Estimation with Stochastic Softmax Tricks</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/e61db54fe46bd13e1ef7a6ce293f4db202e3317e" target="_blank">Rao-Blackwellizing the Straight-Through Gumbel-Softmax Gradient Estimator</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/928b7aa25c4de5f697a576eff29cf45e14094a40" target="_blank">Coupled Gradient Estimators for Discrete Latent Variables</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/64c36adaeb803ff1d49771ed6a7ae7271e17b35d" target="_blank">Training Discrete Deep Generative Models via Gapped Straight-Through Estimator</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/8f92edfc54c2292bd86169190447db86dea3c053" target="_blank">Revisiting the Gumbel-Softmax in MADDPG</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/a5255a58da92c943d8f1f3cd22b61d448ef3bfff" target="_blank">Rao-Blackwellized Stochastic Gradients for Discrete Distributions</a> (2018)</li>
+<li><a href="https://www.semanticscholar.org/paper/ae6d2927119206d04cd13e38b4d9870da65446cb" target="_blank">Tackling Data Heterogeneity: A New Unified Framework for Decentralized SGD with Sample-induced Topology</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/4f972d802af1bef8e3faac1cb49a123ef5be46a4" target="_blank">A generalized approximate control variate framework for multifidelity uncertainty quantification</a> (2018)</li>
+<li><a href="https://www.semanticscholar.org/paper/8d7c11d8263505730607a40eb84c5de07fc1bc5b" target="_blank">Adaptive Variance Reduction for Stochastic Optimization under Weaker Assumptions</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/f7b02884d4f3a19cc5607224531c2cf4350b302d" target="_blank">On Variance Reduction in Stochastic Gradient Descent and its Asynchronous Variants</a> (2015)</li>
+<li><a href="https://www.semanticscholar.org/paper/361c4452d6537a4d99c50737604be0eb7b85d677" target="_blank">Partial Variance Reduction improves Non-Convex Federated learning on heterogeneous data</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/92b4728954680ba91941c94749976659e57ac40c" target="_blank">Improved Analysis and Rates for Variance Reduction under Without-replacement Sampling Orders</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/4ce25912f8f0b7bcac53cbc4d8e0ca867f2109bb" target="_blank">Stochastic Variance Reduction Methods for Policy Evaluation</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/56b624f65a506d73a70684ab6550f3ff72724444" target="_blank">Reducing Reparameterization Gradient Variance</a> (2017)</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7b581c9ce200b031451f592478c7c34b5fc47898</p>
+<hr>
+<h2>Title</h2>
+<p>Integrate wavelet denoising, Bi-LSTM, and scenario optimization for enhanced maritime trajectory prediction.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating wavelet threshold denoising with Bi-LSTM networks and scenario-based optimization will significantly enhance ship trajectory prediction accuracy and decision-making efficiency in maritime transportation compared to traditional static models.</p>
+<h3>Motivation</h3>
+<p>Existing methods for maritime trajectory prediction often overlook the potential of integrating real-time data preprocessing techniques with advanced neural network architectures to enhance decision-making efficiency and accuracy. While previous studies have explored individual components like Bi-LSTM networks and wavelet threshold denoising, they have not combined these with stochastic optimization frameworks to address the challenges of noisy and incomplete AIS data. This hypothesis addresses the gap by proposing a novel combination of wavelet threshold denoising, Bi-LSTM networks, and scenario-based optimization to improve trajectory prediction accuracy and decision-making efficiency in maritime transportation. This approach is expected to outperform existing baselines by effectively handling data noise and uncertainty, leading to more reliable and efficient maritime operations.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research proposes a novel approach to ship trajectory prediction by integrating wavelet threshold denoising, Bi-LSTM networks, and scenario-based optimization. The hypothesis is that this combination will significantly improve prediction accuracy and decision-making efficiency in maritime transportation. Wavelet threshold denoising will be used to preprocess AIS data, removing noise and enhancing data quality. This high-quality data will then be fed into Bi-LSTM networks, which are adept at capturing temporal dependencies in sequence data, to predict ship trajectories. Finally, scenario-based optimization will be employed to manage uncertainty by considering multiple future scenarios, allowing for robust decision-making. This approach addresses the limitations of existing methods that either do not effectively handle noisy data or fail to incorporate uncertainty into predictions. The expected outcome is a more accurate and efficient trajectory prediction model that can adapt to dynamic maritime environments, ultimately enhancing navigational safety and operational efficiency.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/0d463bcc217bad0d819efe75d96b1e15045dca51">Wavelet Threshold Denoising</a>: Wavelet threshold denoising is a preprocessing technique that enhances the quality of AIS data by removing noise. It involves decomposing the data into wavelet components, applying a threshold to eliminate noise, and reconstructing the signal. This method is crucial for improving the accuracy of models like Bi-LSTM, which rely on high-quality input data. By providing cleaner data, the denoising process is expected to lead to better convergence speed and prediction accuracy in trajectory forecasting tasks. The choice of wavelet threshold denoising over other preprocessing methods is due to its proven effectiveness in enhancing data quality and model performance in noisy environments.</p>
+<p><a href="https://www.semanticscholar.org/paper/0d463bcc217bad0d819efe75d96b1e15045dca51">Bi-Directional LSTM (Bi-LSTM)</a>: Bi-LSTM networks are used for trajectory forecasting by processing data in both forward and backward directions, capturing dependencies from both past and future contexts. This architecture is particularly effective in scenarios where the sequence order is crucial, such as predicting ship trajectories. The Bi-LSTM model will be configured to process denoised AIS data, leveraging its ability to learn complex temporal patterns and improve prediction accuracy. The choice of Bi-LSTM over standard LSTM is due to its superior performance in capturing bidirectional dependencies, which are essential for accurate trajectory predictions.</p>
+<p><a href="https://www.semanticscholar.org/paper/011f0183f55d11dc44898215179eba3b8a357f27">Scenario-Based Optimization</a>: Scenario-based optimization involves creating multiple scenarios based on different assumptions about future conditions and optimizing decisions for each scenario. This approach helps in managing uncertainty by considering a range of possible future states and developing strategies that are robust across these scenarios. In the context of ship trajectory prediction, scenario-based optimization will be used to evaluate the impact of different variables on decision outcomes, allowing for more informed and reliable predictions. The choice of scenario-based optimization is due to its ability to incorporate uncertainty into decision-making processes, which is crucial for dynamic maritime environments.</p>
+<h3>Implementation</h3>
+<p>The proposed method begins with preprocessing AIS data using wavelet threshold denoising to remove noise and enhance data quality. This step involves decomposing the AIS data into wavelet components, applying a threshold to eliminate noise, and reconstructing the signal. The denoised data is then fed into a Bi-LSTM network, which processes the data in both forward and backward directions to capture temporal dependencies from both past and future contexts. The Bi-LSTM network is configured to learn complex temporal patterns in the data, improving prediction accuracy. Finally, scenario-based optimization is applied to the predictions generated by the Bi-LSTM network. This involves creating multiple scenarios based on different assumptions about future conditions and optimizing decisions for each scenario. The optimization process evaluates the impact of different variables on decision outcomes, allowing for more informed and reliable predictions. The integration of these components is expected to enhance ship trajectory prediction accuracy and decision-making efficiency by effectively handling data noise and uncertainty. The method will be implemented using Python, with existing libraries for wavelet threshold denoising, Bi-LSTM networks, and scenario-based optimization. The ASD agent will automate the execution of experiments, analyzing results across multiple runs to ensure robustness and reliability.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating wavelet threshold denoising with Bi-LSTM networks and scenario-based optimization will significantly enhance ship trajectory prediction accuracy and decision-making efficiency in maritime transportation compared to traditional static models.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare a novel approach for ship trajectory prediction (combining wavelet denoising, Bi-LSTM, and scenario optimization) against two baseline methods: Support Vector Regression (SVR) and standard LSTM networks. The experiment will use AIS (Automatic Identification System) data from maritime vessels.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4>
+<p>Implement a global variable PILOT_MODE that can be set to one of three values: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.</p></p>
+<p><ul>
+<li>MINI_PILOT: Use only 10 vessel trajectories, with each trajectory containing 20-30 AIS data points. Run for 5 epochs with a small batch size (e.g., 4). This should complete in under 10 minutes and is meant for code verification and debugging.</li>
+</ul></p>
+<p><ul>
+<li>PILOT: Use 50 vessel trajectories, with each trajectory containing 50-100 AIS data points. Run for 20 epochs with a moderate batch size (e.g., 16). This should complete in 1-2 hours and is meant to verify if the experimental approach shows promise compared to baselines.</li>
+</ul></p>
+<p><ul>
+<li>FULL_EXPERIMENT: Use the complete dataset (or at least 500+ vessel trajectories). Run for 100 epochs with an appropriate batch size (e.g., 32 or 64). This is the final experiment that will produce publishable results.</li>
+</ul></p>
+<p><p>Start by running the MINI_PILOT mode first. If everything looks good, proceed to the PILOT mode. After the PILOT completes, stop and do not automatically run the FULL_EXPERIMENT (a human will verify the results and manually change to FULL_EXPERIMENT if appropriate).</p></p>
+<p><h4 class="custom-heading"><strong>Data Preparation</strong></h4>
+<ol>
+<li>Load the AIS dataset, which should contain vessel trajectories with at least the following fields: timestamp, vessel ID, latitude, longitude, speed, and course.</li>
+<li>Split the dataset into training (70%), validation (15%), and test (15%) sets.</li>
+<li>Add synthetic noise to a copy of the dataset to better evaluate the denoising component (add Gaussian noise with different standard deviations: 0.001, 0.01, and 0.1).</li>
+<li>Normalize all features to the range [0, 1] or standardize them to have zero mean and unit variance.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Preprocessing with Wavelet Threshold Denoising</strong></h4>
+<ol>
+<li>Apply wavelet threshold denoising to the noisy AIS data:<br />
+   a. Decompose the AIS data (latitude, longitude, speed, course) into wavelet components using PyWavelets library.<br />
+   b. Apply soft thresholding to remove noise components.<br />
+   c. Reconstruct the signal from the denoised wavelet components.</li>
+<li>Compare the denoised data with the original (non-noisy) data using Mean Squared Error (MSE) to verify the effectiveness of the denoising process.</li>
+<li>Prepare both the denoised data and the original noisy data for the next steps (to compare models with and without denoising).</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Model Implementation</strong></h4>
+<p>Implement the following models:</p></p>
+<p><ol>
+<li>Proposed Model (Experimental):<br />
+   a. Preprocess data with wavelet threshold denoising.<br />
+   b. Feed the denoised data into a Bi-LSTM network with the following architecture:<ul>
+<li>Input layer matching the feature dimensions</li>
+<li>2-3 Bi-LSTM layers with 64-128 units each</li>
+<li>Dropout layers (0.2-0.3) between Bi-LSTM layers</li>
+<li>Dense output layer for predicting future positions (latitude, longitude)<br />
+   c. Apply scenario-based optimization to the Bi-LSTM predictions:</li>
+<li>Generate multiple future scenarios (at least 5) by varying input parameters</li>
+<li>Evaluate each scenario based on historical patterns and physical constraints</li>
+<li>Select the optimal prediction or create an ensemble of predictions</li>
+</ul>
+</li>
+</ol></p>
+<p><ol>
+<li>Baseline 1 - Support Vector Regression (SVR):<br />
+   a. Use the same features as the experimental model<br />
+   b. Apply standard SVR with RBF kernel<br />
+   c. Train separate models for predicting latitude and longitude</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>Baseline 2 - Standard LSTM:<br />
+   a. Use the same features as the experimental model<br />
+   b. Implement a standard LSTM network (not bidirectional) with similar architecture to the Bi-LSTM<br />
+   c. No scenario-based optimization</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Training Process</strong></h4>
+<ol>
+<li>Train all models using the training dataset.</li>
+<li>Use early stopping based on validation loss to prevent overfitting.</li>
+<li>For the LSTM and Bi-LSTM models, use Adam optimizer with an initial learning rate of 0.001.</li>
+<li>Use Mean Squared Error (MSE) as the loss function.</li>
+<li>Log training and validation losses for each epoch.</li>
+<li>Save the best model based on validation performance.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>Evaluate all models on the test dataset.</li>
+<li>Calculate the following metrics for each model:<br />
+   a. Mean Squared Error (MSE) for prediction accuracy<br />
+   b. Mean Absolute Error (MAE) for prediction accuracy<br />
+   c. Root Mean Squared Error (RMSE) for prediction accuracy<br />
+   d. Time taken to generate predictions (efficiency)<br />
+   e. Robustness across different scenarios (for the experimental model)</li>
+</ol></p>
+<p><ol>
+<li>Perform statistical significance testing:<br />
+   a. Use bootstrap resampling to establish confidence intervals for the performance metrics<br />
+   b. Perform paired t-tests to compare the experimental model against each baseline</li>
+</ol></p>
+<p><ol>
+<li>Visualize the results:<br />
+   a. Plot actual vs. predicted trajectories for a sample of test cases<br />
+   b. Create box plots or violin plots to compare the distribution of errors across models<br />
+   c. Generate time series plots showing prediction error over time</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Scenario-Based Optimization Details</strong></h4>
+<ol>
+<li>Generate multiple scenarios by varying the following parameters:<br />
+   a. Weather conditions (if available in the dataset)<br />
+   b. Traffic density (if available in the dataset)<br />
+   c. Different possible intentions of the vessel (e.g., maintaining course, turning, accelerating)</li>
+</ol></p>
+<p><ol>
+<li>For each scenario:<br />
+   a. Generate trajectory predictions using the Bi-LSTM model<br />
+   b. Assign probabilities to each scenario based on historical patterns<br />
+   c. Calculate a weighted average of predictions or select the most probable scenario</li>
+</ol></p>
+<p><ol>
+<li>Compare the performance of the Bi-LSTM with and without scenario-based optimization</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Reporting</strong></h4>
+<ol>
+<li>Generate a comprehensive report including:<br />
+   a. Summary of the experimental setup<br />
+   b. Comparison of performance metrics across all models<br />
+   c. Statistical significance of the results<br />
+   d. Visualizations of the predictions and errors<br />
+   e. Analysis of the impact of wavelet denoising and scenario-based optimization<br />
+   f. Recommendations for future improvements</li>
+</ol></p>
+<p><ol>
+<li>Include detailed logs of the training process and evaluation results</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Required Libraries</strong></h4>
+<ul>
+<li>numpy and pandas for data manipulation</li>
+<li>tensorflow for implementing the LSTM and Bi-LSTM models</li>
+<li>scikit-learn for implementing SVR and evaluation metrics</li>
+<li>pywavelets for wavelet threshold denoising</li>
+<li>matplotlib and seaborn for visualization</li>
+</ul></p>
+<p><p>Please implement this experiment following the described methodology and report the results as specified.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/7b581c9ce200b031451f592478c7c34b5fc47898">Paper 0: Task-based End-to-end Model Learning in Stochastic Optimization</a> (351 citations, 2017). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/9f18f575a20e069e81e0487bb3d41205d24f54a7">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/5ea7b31cb862129dc1cf47cdf3ea6e834e967060">Paper 2</a>. The analysis reveals a progression from general frameworks of prediction and optimization to specific applications in maritime transportation, particularly focusing on ship inspection planning. The existing research has effectively integrated prediction with optimization but primarily in deterministic or basic stochastic settings. A potential research idea could explore more advanced stochastic optimization techniques that incorporate real-time data and adaptive learning to further enhance decision-making under uncertainty. This would address the limitations of static models and build upon the existing work by introducing dynamic and adaptive strategies.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/7b581c9ce200b031451f592478c7c34b5fc47898" target="_blank">Task-based End-to-end Model Learning in Stochastic Optimization</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/9f18f575a20e069e81e0487bb3d41205d24f54a7" target="_blank">A smart predict-then-optimize method for targeted and cost-effective maritime transportation</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5ea7b31cb862129dc1cf47cdf3ea6e834e967060" target="_blank">Stochastic optimization model for ship inspection planning under uncertainty in maritime transportation</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/0d463bcc217bad0d819efe75d96b1e15045dca51" target="_blank">Enhancing Maritime Navigational Safety: Ship Trajectory Prediction Using ACoAtt-LSTM and AIS Data</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/af4375fe33eac4a6cc4896fad8ab3a4fa5f35b30" target="_blank">FLP-XR: Future Location Prediction on Extreme Scale Maritime Data in Real-time</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/e65d8e89a321675fcff752c953ab60bfb3889d3a" target="_blank">A Novel & Efficient LR LSTM AIS Route Data Prediction for Longer Range</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/0ccebdb72320f50cce2df31f5aacab71f9a9fc79" target="_blank">A Decision-Focused Learning Framework for Vessel Selection Problem</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/6a1350cdc33accf61c19a0ba3b3089ff282c38b2" target="_blank">A Multi-Type Ship Allocation and Routing Model for Multi-Product Oil Distribution in Indonesia with Inventory and Cost Minimization Considerations: A Mixed-Integer Linear Programming Approach</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/24e68ffd5a62508a168a21c86638e4a571c1d5b2" target="_blank">Vehicle Intersections Prediction Based on Markov Model with Variable Weight Optimization</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/460c5c9fbfa572caccab5f67ce034f78e2f5cbce" target="_blank">Intelligent shipping: integrating autonomous maneuvering and maritime knowledge in the Singapore-Rotterdam Corridor</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/fcc7aa0e6739bcc13812b9a5ec70923f4bc7a149" target="_blank">Advancing School Bus Routing: a Machine Learning Approach for Enhanced Efficiency, Safety, and Sustainability</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/c127126c51f8e2b79eb63fbce6c9f4a14a9f5039" target="_blank">Integration of Decentralized Graph-Based Multi-Agent Reinforcement Learning with Digital Twin for Traffic Signal Optimization</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/36ee085dae1d0dd97191531b0b814569c9e7f8c7" target="_blank">The Use of Artificial Intelligence to Optimize the Routing of Vehicles and Reduce Traffic Congestion in Urban Areas</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/2a3cab384e761c4f5e54fffba67f8aa0bad6cd9c" target="_blank">Development of Intellectual Decision Making System for Logistic Business Process Management</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/b73103fbc268006b2f9e70b0ee44e9ed95cd051e" target="_blank">Smart Traffic Control System Using AI</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ada91056f0c83b3b7ab60b31176767ce7a22a172" target="_blank">Predicting Transport Mode in the Rabat Region: A Machine Learning Approach</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/011f0183f55d11dc44898215179eba3b8a357f27" target="_blank">Integrated Smart Risk Management for Siwa Solar Energy Systems: A Case Study and Strategies</a> (2024)</li>
+</ol>
+</body>
+</html>

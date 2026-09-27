@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>0cfdd655100055f234fd23ebecd915504b8e00e3</p>
+<hr>
+<h2>Title</h2>
+<p>Combining dynamic updates with RAG for improved adaptability and accuracy in LLM-enhanced recommendations.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating dynamic updates with retrieval-augmented generation (RAG) in LLM-enhanced recommendation systems will improve adaptability and accuracy compared to using either method alone.</p>
+<h3>Motivation</h3>
+<p>Current recommendation systems integrating LLMs with collaborative filtering often overlook the potential of combining dynamic updates with retrieval-augmented generation (RAG) to enhance adaptability and accuracy. Existing methods typically focus on either dynamic updates or retrieval augmentation separately, failing to explore their combined effect. This gap is significant because dynamic updates allow systems to adapt to real-time changes, while RAG can enhance reasoning over collaborative signals. By integrating these methods, we can potentially achieve a more responsive and accurate recommendation system that addresses both adaptability and accuracy challenges in dynamic environments.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of dynamic updates with retrieval-augmented generation (RAG) in LLM-enhanced recommendation systems to improve adaptability and accuracy. Dynamic updates allow the system to respond to real-time changes in user preferences by continuously incorporating new data, while RAG enhances the reasoning capabilities of LLMs by providing relevant user-item interaction information during inference. The combination of these methods is expected to create a more responsive and accurate recommendation system, addressing the limitations of existing approaches that typically focus on either dynamic updates or retrieval augmentation separately. By leveraging the strengths of both methods, the proposed system aims to provide timely and contextually relevant recommendations, improving user satisfaction and engagement. This approach is particularly relevant in environments with rapidly changing data, such as e-commerce and social media platforms, where user preferences and interactions evolve quickly. The expected outcome is a recommendation system that not only adapts to changes in user behavior but also provides more accurate and relevant recommendations by reasoning over collaborative signals.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f">Dynamic Updates</a>: Dynamic updates involve continuously integrating new user interaction data into the recommendation system, allowing it to adapt to real-time changes in user preferences. This is implemented using continuous time dynamic graphs, which model user-item interactions over time. The advantage of dynamic updates is their ability to maintain the relevance and accuracy of recommendations in rapidly changing environments. By continuously updating the model with new data, the system can quickly adapt to shifts in user behavior, ensuring that recommendations remain timely and personalized. This variable directly influences the system's adaptability, as it enables the model to respond to changes in user preferences as they occur.</p>
+<p><a href="https://www.semanticscholar.org/paper/47f80291ae79b21d0f70796b3bfe741932f100dd">Retrieval-Augmented Generation (RAG)</a>: RAG enhances the reasoning capabilities of LLMs by providing relevant user-item interaction information during inference. This is achieved by augmenting the LLM with retrieval mechanisms that supply collaborative signals at inference time. The advantage of RAG is its ability to improve the accuracy of recommendations by enabling the LLM to reason over collaborative patterns. By integrating relevant interaction data, RAG allows the LLM to generate more contextually relevant recommendations, addressing the limitations of standalone LLMs that may struggle with reasoning over collaborative signals. This variable directly influences the system's accuracy, as it enhances the LLM's ability to provide relevant recommendations by leveraging collaborative information.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates dynamic updates with retrieval-augmented generation (RAG) in an LLM-enhanced recommendation system. The process begins with the continuous collection of user interaction data, which is modeled using continuous time dynamic graphs. These graphs allow the system to update user-item interactions in real-time, maintaining the relevance of recommendations. Simultaneously, the RAG mechanism is employed to enhance the LLM's reasoning capabilities. During inference, the RAG module retrieves relevant user-item interaction data and augments the LLM with this information, enabling it to reason over collaborative signals. The integration occurs at the inference stage, where the dynamic updates provide the latest interaction data, and the RAG module supplies this data to the LLM. The LLM then uses the augmented information to generate recommendations that are both timely and contextually relevant. This approach ensures that the system can adapt to changes in user behavior while providing accurate recommendations by reasoning over collaborative patterns. The implementation involves configuring the LLM to accept dynamic graph inputs and integrating the RAG module to retrieve and supply relevant interaction data during inference. The expected outcome is a recommendation system that combines the adaptability of dynamic updates with the accuracy of RAG, providing improved user satisfaction and engagement.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating dynamic updates with retrieval-augmented generation (RAG) in LLM-enhanced recommendation systems will improve adaptability and accuracy compared to using either method alone.</p></p>
+<p><h4 class="custom-heading"><strong>EXPERIMENT OVERVIEW</strong></h4>
+<p>This experiment will compare four recommendation system approaches:<br />
+1. Baseline: A standalone LLM-based recommendation system without dynamic updates or RAG<br />
+2. Dynamic Updates Only: A system that incorporates continuous time dynamic graphs for real-time updates<br />
+3. RAG Only: A system that uses retrieval-augmented generation without dynamic updates<br />
+4. Combined Approach (Experimental): A system that integrates both dynamic updates and RAG</p></p>
+<p><h4 class="custom-heading"><strong>DATASET</strong></h4>
+<p>Use the MovieLens-100K dataset (or a similar recommendation dataset) that includes timestamped user-item interactions. This will allow us to simulate a dynamic environment where user preferences change over time.</p></p>
+<p><h4 class="custom-heading"><strong>PILOT EXPERIMENT SETTINGS</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. The experiment should start with <code>MINI_PILOT</code> mode.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use only 20 users and 50 items with 100 interactions, split chronologically (80% training, 20% testing). Run for 5 simulated time steps with 10 new interactions per step. This should complete in a few minutes and is for code verification.</li>
+<li><strong>PILOT</strong>: Use 200 users and 500 items with 2000 interactions, split chronologically (80% training, 20% testing). Run for 20 simulated time steps with 50 new interactions per step. This should complete in 1-2 hours and is to verify if the experimental approach shows promise.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the entire dataset with all users, items, and interactions. Run for 50 simulated time steps with all available interactions. This is the complete experiment but should only be run after manual verification of the PILOT results.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>IMPLEMENTATION DETAILS</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Continuous Time Dynamic Graph Implementation</strong></h4>
+<ul>
+<li>Use a graph library (like NetworkX or DGL) to model user-item interactions as a dynamic graph</li>
+<li>Implement a time-based sliding window that updates the graph as new interactions arrive</li>
+<li>For each time step, add new interactions to the graph and optionally remove old interactions</li>
+<li>Extract features from the graph that represent the current state of user preferences</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Retrieval-Augmented Generation Module</strong></h4>
+<ul>
+<li>Implement a retrieval mechanism that identifies relevant user-item interactions based on the current query</li>
+<li>The retrieval should consider both similarity to the current user's history and collaborative patterns</li>
+<li>Augment the LLM prompt with the retrieved information in a structured format</li>
+<li>Configure the LLM to generate recommendations based on both the user query and the retrieved context</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. LLM Configuration</strong></h4>
+<ul>
+<li>Use an appropriate LLM (e.g., GPT-3.5-Turbo or similar) for generating recommendations</li>
+<li>Create a prompt template that includes:</li>
+<li>User information and query</li>
+<li>Retrieved context (for RAG-based approaches)</li>
+<li>Dynamic graph features (for dynamic update approaches)</li>
+<li>Instructions for generating recommendations</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. System Integration</strong></h4>
+<ul>
+<li>For the baseline, use only basic user information in the LLM prompt</li>
+<li>For dynamic updates only, include graph features in the LLM prompt without retrieval</li>
+<li>For RAG only, include retrieved information without dynamic graph updates</li>
+<li>For the combined approach, include both dynamic graph features and retrieved information</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>EVALUATION METRICS</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Adaptability Metrics</strong></h4>
+<ul>
+<li><strong>Response Time to Preference Changes</strong>: Measure how quickly each system adapts to simulated changes in user preferences</li>
+<li><strong>Novelty</strong>: Calculate the proportion of recommended items that are new to the user</li>
+<li><strong>Diversity</strong>: Measure the variety of recommended items</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Accuracy Metrics</strong></h4>
+<ul>
+<li><strong>Precision@K</strong>: The proportion of recommended items that are relevant</li>
+<li><strong>Recall@K</strong>: The proportion of relevant items that are recommended</li>
+<li><strong>F1-Score</strong>: The harmonic mean of precision and recall</li>
+<li><strong>NDCG@K</strong>: Normalized Discounted Cumulative Gain at K</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>EXPERIMENTAL PROCEDURE</strong></h4></p>
+<p><ol>
+<li>Initialize the system with historical data (training set)</li>
+<li>For each time step:</li>
+<li>Process new interactions (simulating real-time data)</li>
+<li>Update the dynamic graph (for systems with dynamic updates)</li>
+<li>Generate recommendations for a sample of users using each system</li>
+<li>Evaluate the recommendations against the held-out interactions</li>
+<li>Record metrics for each system</li>
+</ol></p>
+<p><ol>
+<li>After all time steps, calculate aggregate metrics and perform statistical analysis</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>STATISTICAL ANALYSIS</strong></h4>
+<ul>
+<li>Calculate mean and standard deviation for each metric across all time steps</li>
+<li>Perform paired t-tests or Wilcoxon signed-rank tests to compare the experimental system against each baseline</li>
+<li>Generate confidence intervals for the differences between systems</li>
+<li>Create visualizations showing the performance trends over time</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>OUTPUT</strong></h4>
+<ul>
+<li>Generate a comprehensive report with tables and visualizations comparing all systems</li>
+<li>Include detailed logs of the recommendation process for sample users</li>
+<li>Save model states and evaluation results at each time step</li>
+<li>Provide a summary of statistical findings and conclusions</li>
+</ul></p>
+<p><p>Please run the MINI_PILOT first, then if everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT as human verification of the results will be required before proceeding to the full experiment.</p></p>
+<p><p>Ensure all code is well-documented and includes appropriate error handling. Log all important steps and metrics to facilitate debugging and analysis.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/0cfdd655100055f234fd23ebecd915504b8e00e3">Paper 0: Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System</a> (324 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/ca7bd64d372e3bcb3f4633ca4a20291ff57de3c3">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/0383e049e98c9eedbc61be728d4ef037300bbedf">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/5aa3b1009955ce2c8f896e0d5e94e06155ef1e43">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/c5481668f78ab0c8ef2de9230f2fc1ce27eea6e4">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/cb085ce72c1647d23da2514dc45e74fbf88f9224">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/4ae3a1c77e55cf78115a212b9ef6222db233ffd9">Paper 6</a>. The progression of research from the source paper to the related papers highlights the increasing integration of LLMs in recommender systems to enhance interactivity, explainability, and performance. However, challenges such as data sparsity, effective knowledge integration, and the alignment of semantic spaces between LLMs and traditional models remain. A novel research idea could focus on addressing these challenges by developing a framework that dynamically adapts LLMs to changing user preferences and item attributes in real-time, leveraging the strengths of both LLMs and traditional collaborative filtering models.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/0cfdd655100055f234fd23ebecd915504b8e00e3" target="_blank">Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/ca7bd64d372e3bcb3f4633ca4a20291ff57de3c3" target="_blank">Is ChatGPT a Good Recommender? A Preliminary Study</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/0383e049e98c9eedbc61be728d4ef037300bbedf" target="_blank">Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5aa3b1009955ce2c8f896e0d5e94e06155ef1e43" target="_blank">LLMRec: Large Language Models with Graph Augmentation for Recommendation</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/c5481668f78ab0c8ef2de9230f2fc1ce27eea6e4" target="_blank">Towards Open-World Recommendation with Knowledge Augmentation from Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/cb085ce72c1647d23da2514dc45e74fbf88f9224" target="_blank">Language Representations Can be What Recommenders Need: Findings and Potentials</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/4ae3a1c77e55cf78115a212b9ef6222db233ffd9" target="_blank">Enhancing LLM-based Recommendation through Semantic-Aligned Collaborative Knowledge</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/de9e9cf6740f58fd1c0d5c4730a304158d7a5380" target="_blank">Enhanced Recommendation Combining Collaborative Filtering and Large Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/12bd7d6b646211d9b9328499df6fd12040277dea" target="_blank">Large Language Models Enhanced Collaborative Filtering</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f" target="_blank">Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/afc6190cccc893e0857ada501dbc988c735cc42b" target="_blank">Emerging Synergies Between Large Language Models and Machine Learning in Ecommerce Recommendations</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/91d70c7f8c114d3b9056835316ffaee527fc4f53" target="_blank">Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/b77b611a5f2d9bc05087b6c6e72fe61bd2fb44c5" target="_blank">A Personalized Hybrid Tourist Destination Recommendation System: An Integration of Emotion and Sentiment Approach</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/331282a6532597070f9fd9bec606901c54ba2331" target="_blank">Optimization of news dissemination push mode by intelligent edge computing technology for deep learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/7437518acb0c2271bdd8b32048c233f434a8f11a" target="_blank">Semantic Codebook Learning for Dynamic Recommendation Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/47f80291ae79b21d0f70796b3bfe741932f100dd" target="_blank">What LLMs Miss in Recommendations: Bridging the Gap with Retrieval-Augmented Collaborative Signals</a> (2025)</li>
+</ol>
+</body>
+</html>

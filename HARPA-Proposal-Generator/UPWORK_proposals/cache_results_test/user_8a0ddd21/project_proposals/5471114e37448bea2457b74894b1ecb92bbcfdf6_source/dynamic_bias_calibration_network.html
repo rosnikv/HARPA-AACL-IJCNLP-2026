@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>5471114e37448bea2457b74894b1ecb92bbcfdf6</p>
+<hr>
+<section><h2>Title</h2>
+<p>Dynamic Bias Calibration Networks: Adaptive Media Bias Detection in Language Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Language models often exhibit inconsistent bias detection capabilities across different domains and struggle to adapt to evolving forms of media bias and misinformation. This inconsistency hampers their effectiveness in critical applications such as hate speech detection and fact-checking.</p>
+<h3>Motivation</h3>
+<p>Current approaches typically involve static fine-tuning or prompting strategies that may not generalize well to new domains or emerging bias patterns. Drawing inspiration from meta-learning and dynamic neural networks, we propose a flexible architecture that can rapidly adapt to new bias detection scenarios and maintain consistent performance across diverse contexts. This approach aims to overcome the limitations of existing methods by enabling continuous adaptation to evolving bias patterns without the need for extensive retraining.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce the Dynamic Bias Calibration Network (DBCN), a novel architecture consisting of a base language model augmented with a set of lightweight, task-specific calibration modules. These modules are trained to recognize and adjust for different types of bias (e.g., political, racial, gender) and misinformation patterns. During inference, a meta-controller network dynamically selects and combines the most relevant calibration modules based on the input context. To train this system, we develop a multi-task curriculum that exposes the model to a wide range of bias scenarios. We also incorporate a continual learning mechanism that allows the model to efficiently update its calibration modules with new examples without catastrophic forgetting. Additionally, we propose a novel 'bias amplification' technique that artificially exaggerates biased language in the training data, making it easier for the model to learn to detect subtle forms of bias. To improve interpretability, we add an attention visualization layer that highlights the specific text segments and calibration modules most influential in the bias detection decision.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess datasets for media bias and misinformation detection tasks. Use datasets such as MBIC (Media Bias/Fact Check), AllSides, and FakeNewsNet. Split each dataset into train, validation, and test sets.</p><p><strong>Step 2: Baseline Model Implementation</strong></p><p>Implement baseline models including: (1) Fine-tuned BERT, (2) GPT-3.5 with zero-shot prompting, (3) GPT-3.5 with few-shot prompting. Use the OpenAI API for GPT-3.5.</p><p><strong>Step 3: DBCN Architecture Implementation</strong></p><p>Implement the DBCN architecture using a pre-trained language model (e.g., BERT) as the base. Create separate calibration modules for different bias types (political, racial, gender). Implement the meta-controller network using a small transformer.</p><p><strong>Step 4: Multi-task Curriculum Design</strong></p><p>Design a curriculum that gradually introduces different types of bias detection tasks. Start with simple cases and progressively increase complexity.</p><p><strong>Step 5: Bias Amplification Technique</strong></p><p>Implement the bias amplification technique. For each training example, create an artificially exaggerated version by replacing neutral words with more biased alternatives using a predefined dictionary.</p><p><strong>Step 6: Training Process</strong></p><p>Train the DBCN using the multi-task curriculum. Implement continual learning by periodically updating the model with new examples while preserving performance on previous tasks.</p><p><strong>Step 7: Evaluation</strong></p><p>Evaluate the DBCN and baseline models on the test sets of all datasets. Use metrics such as accuracy, F1 score, and AUC-ROC. Also evaluate on a set of out-of-domain examples to test generalization.</p><p><strong>Step 8: Interpretability Analysis</strong></p><p>Implement the attention visualization layer. Generate heatmaps highlighting the most influential text segments and calibration modules for each prediction.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Conduct ablation studies to assess the impact of each component (calibration modules, meta-controller, bias amplification, continual learning) on the overall performance.</p><p><strong>Step 10: Error Analysis</strong></p><p>Analyze cases where DBCN fails or performs significantly differently from baselines. Categorize error types and identify potential areas for improvement.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (GPT-3.5 Zero-shot)</strong></p><p>Classify the following news headline as either biased or unbiased: 'Radical leftist agenda threatens American values'</p><p><strong>Baseline Prompt Expected Output (GPT-3.5 Zero-shot)</strong></p><p>Biased</p><p><strong>Proposed Prompt Input (DBCN)</strong></p><p>Classify the following news headline as either biased or unbiased, and explain which calibration modules were most active: 'Radical leftist agenda threatens American values'</p><p><strong>Proposed Prompt Expected Output (DBCN)</strong></p><p>Classification: Biased<br />
+Explanation: The political bias calibration module was highly active for this input. The phrase 'radical leftist agenda' indicates a strong political bias against left-leaning ideologies. The term 'threatens American values' further amplifies this bias by framing the subject negatively and appealing to patriotic sentiments. The language used is emotionally charged and lacks objectivity, which are key indicators of media bias.</p><p><strong>Explanation</strong></p><p>The DBCN provides a more detailed and nuanced analysis of the bias, explaining which specific calibration module was activated and why. This demonstrates the model's ability to not only classify bias but also provide interpretable insights into its decision-making process.</p>
+<h3>Fallback Plan</h3>
+<p>If the DBCN does not significantly outperform baselines, we can pivot the project to focus on analyzing the patterns of bias detection across different domains and bias types. We could investigate which types of bias are most challenging for language models to detect and why. This could involve creating a taxonomy of bias types and conducting a comprehensive error analysis across various datasets. Additionally, we could explore the effectiveness of different prompt engineering techniques for bias detection, comparing them to the DBCN approach. Another direction could be to focus on the interpretability aspects, analyzing how different types of bias activate different parts of the language model, which could provide insights into how these models process and detect bias internally. These analyses could form the basis of a paper on the challenges and future directions in automated media bias detection.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/eed651fccf53b1ba5f93a8aeb819808b1c1720ed" target="_blank">MAGPIE: Multi-Task Analysis of Media-Bias Generalization with Pre-Trained Identification of Expressions</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6e2e48ea6bdf5ed01c067e154c4bd1b212c7ca39" target="_blank">IndiTag: An Online Media Bias Analysis and Annotation System Using Fine-Grained Bias Indicators</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/44a322995fee92b592ee1a9c08a1221a3edc400c" target="_blank">Detection of Conspiracy Theories Beyond Keyword Bias in German-Language Telegram Using Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/37aae94e2105f1c1db5e00804ce10ff6876e0aa2" target="_blank">CEA-LIST at CheckThat! 2025: Evaluating LLMs as Detectors of Bias and Opinion in Text</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5da5c2c910c9b566959c337f647af92ffc3f36da" target="_blank">Is External Information Useful for Stance Detection with LLMs?</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b95de885eac4000b98449afc4c69c86972693bc2" target="_blank">ChatGPT v.s. Media Bias: A Comparative Study of GPT-3.5 and Fine-tuned Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0fd73d32176189f7980847206a9d797c3b0f4e1d" target="_blank">Investigating Bias in LLM-Based Bias Detection: Disparities between LLMs and Human Perception</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8a36bde6c15a2dc06079a0fb41a4be35be4ef51b" target="_blank">IndiVec: An Exploration of Leveraging Large Language Models for Media Bias Detection with Fine-Grained Bias Indicators</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/14ba788bf3b55ddcb515aad2deb45c6a4422e473" target="_blank">ROBBIE: Robust Bias Evaluation of Large Generative Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2b45f31315ac29bead83431f1f22206f2719ef32" target="_blank">Ceasefire at FIGNEWS 2024 Shared Task: Automated Detection and Annotation of Media Bias Using Large Language Models</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

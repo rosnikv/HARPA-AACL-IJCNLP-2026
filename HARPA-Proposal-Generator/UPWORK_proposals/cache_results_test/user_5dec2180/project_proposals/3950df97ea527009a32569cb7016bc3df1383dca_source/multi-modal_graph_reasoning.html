@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3950df97ea527009a32569cb7016bc3df1383dca</p>
+<hr>
+<section><h2>Title</h2>
+<p>Multi-Modal Graph Reasoning for Enhanced Knowledge Graph Question Answering</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current graph-based reasoning systems for question answering primarily focus on textual information, overlooking the rich multimodal content often associated with knowledge graphs, leading to limited understanding and reasoning capabilities.</p>
+<h3>Motivation</h3>
+<p>Existing approaches typically process text-based knowledge graphs or incorporate limited visual information as separate modalities, failing to fully integrate diverse data types in the reasoning process. By seamlessly integrating multiple modalities (text, images, audio) within the graph structure and reasoning process, we can enable more comprehensive and nuanced understanding, potentially leading to more accurate and contextually rich answers.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Multi-Modal Graph Reasoning (MMGR), a novel framework that unifies diverse data types within a single graph structure for question answering. MMGR represents each node in the graph as a composite of different modalities (e.g., text description, image, audio clip). We develop a new graph neural network architecture that can process these multi-modal nodes, using modality-specific encoders (e.g., CLIP for images, wav2vec for audio) to create unified node representations. The edge relationships in the graph are also extended to capture cross-modal connections. For reasoning, we introduce a multi-modal attention mechanism that allows the model to focus on relevant modalities for each reasoning step. This is coupled with a modality fusion layer that dynamically combines information across modalities based on the query requirements. To handle queries that may involve multiple modalities, we design a multi-modal query encoder that can process questions containing text, images, or audio clips. The final answer generation module is capable of producing responses in the most appropriate modality or a combination thereof.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Create a multi-modal KGQA dataset by augmenting the WebQuestionsSP benchmark with relevant images and audio clips. Use web scraping and APIs (e.g., Flickr API for images, Freesound API for audio) to collect related media for entities in the knowledge graph. Ensure proper licensing and attribution for all collected media.</p><p><strong>Step 2: Data Preprocessing</strong></p><p>Process the collected data to create a unified multi-modal knowledge graph. For text, use BERT embeddings. For images, use CLIP embeddings. For audio, use wav2vec embeddings. Store the processed data in a format suitable for graph neural networks (e.g., PyTorch Geometric data format).</p><p><strong>Step 3: Model Implementation</strong></p><p>Implement the MMGR model using PyTorch and PyTorch Geometric. Create custom layers for multi-modal attention and fusion. Implement the multi-modal query encoder and answer generation module.</p><p><strong>Step 4: Training Setup</strong></p><p>Set up the training pipeline using the prepared dataset. Use cross-entropy loss for answer prediction. Implement batch processing for efficient training. Use Adam optimizer with learning rate scheduling.</p><p><strong>Step 5: Baseline Models</strong></p><p>Implement baseline models for comparison: (1) Text-only KGQA model (e.g., GRAFT-Net), (2) Simple multi-modal fusion model (late fusion of separate modality embeddings).</p><p><strong>Step 6: Evaluation Metrics</strong></p><p>Implement standard KGQA metrics: Hits@1, Hits@3, Hits@10, and Mean Reciprocal Rank (MRR). Additionally, implement a new Multi-Modal Answer Quality (MMAQ) metric that assesses the relevance and coherence of multi-modal answers.</p><p><strong>Step 7: Experiments</strong></p><p>Train and evaluate MMGR and baseline models on the prepared dataset. Conduct ablation studies by removing different components of MMGR (e.g., multi-modal attention, cross-modal edges) to analyze their impact.</p><p><strong>Step 8: Analysis</strong></p><p>Perform qualitative analysis by visualizing attention weights across modalities for different types of questions. Analyze performance across different question types and entity categories.</p><p><strong>Step 9: Report Generation</strong></p><p>Compile results, generate visualizations, and prepare a comprehensive report detailing the methodology, experiments, and findings.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Q: What is the capital of France?</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Paris</p><p><strong>Proposed Prompt Input</strong></p><p>Q: What is the capital of France? [Image: Eiffel Tower] [Audio: French national anthem]</p><p><strong>Proposed Prompt Expected Output</strong></p><p>The capital of France is Paris. [Image: Aerial view of Paris showing the Eiffel Tower and other landmarks] Paris is known for its iconic Eiffel Tower, as shown in the input image. The audio clip you provided is 'La Marseillaise', the national anthem of France, which is often associated with official events in the capital.</p><p><strong>Explanation</strong></p><p>The baseline model only provides a text answer, while MMGR leverages the multi-modal input to provide a more comprehensive and contextually rich answer, incorporating relevant visual and audio information.</p>
+<h3>Fallback Plan</h3>
+<p>If MMGR doesn't significantly outperform baselines, we can pivot to an analysis paper focusing on the challenges of multi-modal integration in KGQA. We would conduct extensive error analysis to identify where and why the model fails. This could involve categorizing errors by modality, question type, and reasoning complexity. We could also investigate the model's behavior on different subsets of the data, such as questions that require single vs. multiple modalities to answer correctly. Additionally, we could explore the impact of different fusion strategies and attention mechanisms on performance. This analysis could provide valuable insights into the limitations of current multi-modal reasoning approaches and guide future research directions in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/9ef5f1c54f254589541ae63c33408ea1d3ad899a" target="_blank">Graph-constrained Reasoning: Faithful Reasoning on Knowledge Graphs with Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/10955e63aa49fab146267949f8ebc9ebe8275183" target="_blank">Knowledge-Driven CoT: Exploring Faithful Reasoning in LLMs for Knowledge-intensive Question Answering</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a681b1085c088c51347cdb9358dd344081d29c99" target="_blank">Think-on-Graph 2.0: Deep and Faithful Large Language Model Reasoning with Knowledge-guided Retrieval Augmented Generation</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dffb86781047f64315df45a1081ed0a1352733e2" target="_blank">KARPA: A Training-free Method of Adapting Knowledge Graph as References for Large Language Model's Reasoning Path Aggregation</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f8d9decb348a2a6daeb54c8cad82350bfec3e1b0" target="_blank">FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/13483e7c1834487ca2163c42d2a89d53b6e6007f" target="_blank">QAVSA: Question Answering using Vector Symbolic Algebras</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ae0839885c0317560cf8c1c286fe2aad65f4aba6" target="_blank">Graph Reasoning for Question Answering with Triplet Retrieval</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8074a5421d77b63bdd8fe9cca2b49e5f4a4de277" target="_blank">Dynamic Heterogeneous-Graph Reasoning with Language Models and Knowledge Representation Learning for Commonsense Question Answering</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/9b31288d4aba4858dd143646b33b4ad58c3bb6d5" target="_blank">Memory-augmented Query Reconstruction for LLM-based Knowledge Graph Reasoning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/59395cf4f9346ef4ccb37499a3a7e52c2978fc61" target="_blank">Right for Right Reasons: Large Language Models for Verifiable Commonsense Knowledge Graph Question Answering</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

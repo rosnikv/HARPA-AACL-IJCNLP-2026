@@ -1,0 +1,2805 @@
+{
+    "topic_description": "prompting and fine-tuning for consumer health prediction using physiological data and contextual information",
+    "all_queries": [
+        "KeywordQuery(\"prompting and fine-tuning for consumer health prediction using physiological data and contextual information\")",
+        "KeywordQuery(\"physiological data consumer health prediction\")",
+        "PaperQuery(\"3a6d34a21e9c7344c564dc502e117b6769f10c47\")",
+        "GetReferences(\"3a6d34a21e9c7344c564dc502e117b6769f10c47\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "3a6d34a21e9c7344c564dc502e117b6769f10c47",
+            "paperId": "3a6d34a21e9c7344c564dc502e117b6769f10c47",
+            "title": "Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data",
+            "year": 2024,
+            "citationCount": 78,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.06866, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper investigates the capacity of LLMs to make inferences about health based on contextual information and physiological data and presents a comprehensive evaluation of 12 state-of-the-art LLMs with prompting and fine-tuning techniques on four public health datasets."
+            },
+            "authors": [
+                {
+                    "authorId": "2107937893",
+                    "name": "Y. Kim"
+                },
+                {
+                    "authorId": "2268804791",
+                    "name": "Xuhai Xu"
+                },
+                {
+                    "authorId": "2266474644",
+                    "name": "Daniel McDuff"
+                },
+                {
+                    "authorId": "2266253563",
+                    "name": "C. Breazeal"
+                },
+                {
+                    "authorId": "2756001",
+                    "name": "Hae Won Park"
+                }
+            ],
+            "abstract": "Large language models (LLMs) are capable of many natural language tasks, yet they are far from perfect. In health applications, grounding and interpreting domain-specific and non-linguistic data is crucial. This paper investigates the capacity of LLMs to make inferences about health based on contextual information (e.g. user demographics, health knowledge) and physiological data (e.g. resting heart rate, sleep minutes). We present a comprehensive evaluation of 12 state-of-the-art LLMs with prompting and fine-tuning techniques on four public health datasets (PMData, LifeSnaps, GLOBEM and AW_FB). Our experiments cover 10 consumer health prediction tasks in mental health, activity, metabolic, and sleep assessment. Our fine-tuned model, HealthAlpaca exhibits comparable performance to much larger models (GPT-3.5, GPT-4 and Gemini-Pro), achieving the best performance in 8 out of 10 tasks. Ablation studies highlight the effectiveness of context enhancement strategies. Notably, we observe that our context enhancement can yield up to 23.8% improvement in performance. While constructing contextually rich prompts (combining user context, health knowledge and temporal information) exhibits synergistic improvement, the inclusion of health knowledge context in prompts significantly enhances overall performance.",
+            "score": 9
+        },
+        {
+            "id": "590d619dbb4b62f9f0f525135339e5100ae80feb",
+            "paperId": "590d619dbb4b62f9f0f525135339e5100ae80feb",
+            "title": "High-Resolution Digital Phenotypes from Consumer Wearables Enhance Prediction of Cardiometabolic Risk Markers",
+            "year": 2021,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "https://www.jmir.org/2022/7/e34669/PDF",
+                "status": "GREEN",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1101/2021.10.29.21265547?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1101/2021.10.29.21265547, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "High resolution digital phenotypes recorded by consumer wearables in free-living states have the potential to enhance prediction of cardiometabolic disease risk, and could enable more proactive and personalized health management."
+            },
+            "authors": [
+                {
+                    "authorId": "2107306289",
+                    "name": "W. Zhou"
+                },
+                {
+                    "authorId": "2151840960",
+                    "name": "Y. E. Chan"
+                },
+                {
+                    "authorId": "2034067",
+                    "name": "C. S. Foo"
+                },
+                {
+                    "authorId": "6258487",
+                    "name": "J. Zhang"
+                },
+                {
+                    "authorId": "3058790",
+                    "name": "J. X. Teo"
+                },
+                {
+                    "authorId": "47944802",
+                    "name": "S. Davila"
+                },
+                {
+                    "authorId": "2107220450",
+                    "name": "W. Huang"
+                },
+                {
+                    "authorId": "2069272694",
+                    "name": "J. Yap"
+                },
+                {
+                    "authorId": "2323912338",
+                    "name": "S. Cook"
+                },
+                {
+                    "authorId": "119734650",
+                    "name": "P. Tan"
+                },
+                {
+                    "authorId": "20254799",
+                    "name": "C. Chin"
+                },
+                {
+                    "authorId": "153499625",
+                    "name": "K. Yeo"
+                },
+                {
+                    "authorId": "3500282",
+                    "name": "W. K. Lim"
+                },
+                {
+                    "authorId": "145924854",
+                    "name": "P. Krishnaswamy"
+                }
+            ],
+            "abstract": "Background: Consumer-grade wearable devices enable detailed recordings of heart rate and step counts in free-living conditions. Recent studies have shown that summary statistics from these wearable recordings have potential uses for longitudinal monitoring of health and disease states. However, the relationship between higher resolution physiological dynamics from wearables and known markers of health and disease remains largely uncharacterized. Objective: We aimed to (i) derive high resolution digital phenotypes from observational wearable recordings, (ii) characterize their ability to predict modifiable markers of cardiometabolic disease, and (iii) study their connections with genetic predispositions for cardiometabolic disease and with lifestyle factors. Methods: We introduce a principled framework to extract interpretable high resolution phenotypes from wearable data recorded in free-living conditions. The proposed framework standardizes handling of data irregularities, encodes contextual information about underlying physiological state at any given time, and generates a set of 66 minimally redundant features across active, sedentary and sleep states. We applied our approach on a multimodal dataset, from the SingHEART study (NCT02791152), that comprises of heart rate and step count time series from wearables, clinical screening profiles, whole genome sequences and lifestyle survey responses from 692 healthy volunteers. We employed machine learning to model non-linear relationships between the high resolution phenotypes and clinical risk markers for blood pressure, lipid and weight abnormalities. For each risk type, we performed model comparisons based on Brier Skill Scores (BSS) to assess predictive value of the high resolution features over and beyond typical baselines. We then examined associations between the wearable-derived features, polygenic risk for cardiometabolic disease, and lifestyle habits and health perceptions. Results: Compared to typical summary statistic measures like resting heart rate, we find that the high-resolution features collectively have greater predictive value for modifiable clinical markers associated with cardiometabolic disease risk (average improvement in Brier Skill Score=52.3%, P<.001). Further, we show that heart rate dynamics from different activity states contain distinct information about type of cardiometabolic risk, with dynamics in sedentary states being most predictive of lipid abnormalities and patterns in active states being most predictive of blood pressure abnormalities (P<.001). Finally, our results reveal that subtle heart rate dynamics in wearable recordings serve as physiological correlates of genetic predisposition for cardiometabolic disease, lifestyle habits and health perceptions. Conclusions: High resolution digital phenotypes recorded by consumer wearables in free-living states have the potential to enhance prediction of cardiometabolic disease risk, and could enable more proactive and personalized health management. Clinical Trial Registration ID #NCT02791152. Keywords: Wearable device, heart rate, cardiometabolic disease, risk prediction, digital phenotypes, polygenic risk scores, time series analysis, machine learning, free-living",
+            "score": 4
+        },
+        {
+            "id": "357ce99bf8b56c6c4b21db79ceebdaef63e16186",
+            "paperId": "357ce99bf8b56c6c4b21db79ceebdaef63e16186",
+            "title": "CovidRhythm: A Deep Learning Model for Passive Prediction of Covid-19 Using Biobehavioral Rhythms Derived From Wearable Physiological Data",
+            "year": 2023,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "https://ieeexplore.ieee.org/ielx7/8782705/8937520/10079194.pdf",
+                "status": "GOLD",
+                "license": "CCBYNCND",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2301.10168, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "To the best of the knowledge, this work is the first to detect Covid-19 using deep learning and biobehavioral rhythms features derived from consumer-grade wearable data."
+            },
+            "authors": [
+                {
+                    "authorId": "2139849447",
+                    "name": "Atifa Sarwar"
+                },
+                {
+                    "authorId": "2064661066",
+                    "name": "Emmanuel O. Agu"
+                },
+                {
+                    "authorId": "2025849645",
+                    "name": "Abdulsalam Almadani"
+                }
+            ],
+            "abstract": "Goal: To investigate whether a deep learning model can detect Covid-19 from disruptions in the human body's physiological (heart rate) and rest-activity rhythms (rhythmic dysregulation) caused by the SARS-CoV-2 virus. Methods: We propose CovidRhythm, a novel Gated Recurrent Unit (GRU) Network with Multi-Head Self-Attention (MHSA) that combines sensor and rhythmic features extracted from heart rate and activity (steps) data gathered passively using consumer-grade smart wearable to predict Covid-19. A total of 39 features were extracted (standard deviation, mean, min/max/avg length of sedentary and active bouts) from wearable sensor data. Biobehavioral rhythms were modeled using nine parameters (mesor, amplitude, acrophase, and intra-daily variability). These features were then input to CovidRhythm for predicting Covid-19 in the incubation phase (one day before biological symptoms manifest). Results: A combination of sensor and biobehavioral rhythm features achieved the highest AUC-ROC of 0.79 [Sensitivity = 0.69, Specificity = 0.89, F$_{0.1}$ = 0.76], outperforming prior approaches in discriminating Covid-positive patients from healthy controls using 24 hours of historical wearable physiological. Rhythmic features were the most predictive of Covid-19 infection when utilized either alone or in conjunction with sensor features. Sensor features predicted healthy subjects best. Circadian rest-activity rhythms that combine 24 h activity and sleep information were the most disrupted. Conclusions: CovidRhythm demonstrates that biobehavioral rhythms derived from consumer-grade wearable data can facilitate timely Covid-19 detection. To the best of our knowledge, our work is the first to detect Covid-19 using deep learning and biobehavioral rhythms features derived from consumer-grade wearable data.",
+            "score": 4
+        },
+        {
+            "id": "66315d04823e7523d57994ad3bf98b819b6c074c",
+            "paperId": "66315d04823e7523d57994ad3bf98b819b6c074c",
+            "title": "Predicting dominant hand from spatiotemporal context varying physiological data",
+            "year": 2022,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2212.04077",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2212.04077, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Evaluated physiological and spatiotemporal context information from a two-hand experiment to predict the wrist placement of a commercial smartwatch shows an effective dominant hand prediction using data from a single subject under real-life conditions."
+            },
+            "authors": [
+                {
+                    "authorId": "2194646678",
+                    "name": "Jorge Neira-Garcia"
+                },
+                {
+                    "authorId": "2989357",
+                    "name": "Sudip Vhaduri"
+                }
+            ],
+            "abstract": "Health metrics from wrist-worn devices demand an automatic dominant hand prediction to keep an accurate operation. The prediction would improve reliability, enhance the consumer experience, and encourage further development of healthcare applications. This paper aims to evaluate the use of physiological and spatiotemporal context information from a two-hand experiment to predict the wrist placement of a commercial smartwatch. The main contribution is a methodology to obtain an effective model and features from low sample rate physiological sensors and a self-reported context survey. Results show an effective dominant hand prediction using data from a single subject under real-life conditions.",
+            "score": 3
+        },
+        {
+            "id": "27092d5ac5a77de00921ff13dbd80da7de1a6609",
+            "paperId": "27092d5ac5a77de00921ff13dbd80da7de1a6609",
+            "title": "Prediction of the efficacy of group cognitive behavioral therapy using heart rate variability based smart wearable devices: a randomized controlled study",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "https://bmcpsychiatry.biomedcentral.com/counter/pdf/10.1186/s12888-024-05638-x",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10916138, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Heart rate variability (HRV) may serve as a useful predictor of efficacy of GCBT treatment, facilitating personalized treatment approaches for individuals with depression and anxiety."
+            },
+            "authors": [
+                {
+                    "authorId": "2258670150",
+                    "name": "Zexin Lin"
+                },
+                {
+                    "authorId": "2243313282",
+                    "name": "Junjie Zheng"
+                },
+                {
+                    "authorId": "2256979063",
+                    "name": "Yang Wang"
+                },
+                {
+                    "authorId": "2263807110",
+                    "name": "Zhao Su"
+                },
+                {
+                    "authorId": "2243014990",
+                    "name": "Rongxin Zhu"
+                },
+                {
+                    "authorId": "2298008761",
+                    "name": "Rongxun Liu"
+                },
+                {
+                    "authorId": "9394274",
+                    "name": "Yan-ge Wei"
+                },
+                {
+                    "authorId": "2258605369",
+                    "name": "Xizhe Zhang"
+                },
+                {
+                    "authorId": "2258698249",
+                    "name": "Fei Wang"
+                }
+            ],
+            "abstract": "Background Depression and anxiety are common and disabling mental health problems in children and young adults. Group cognitive behavioral therapy (GCBT) is considered that an efficient and effective treatment for these significant public health concerns, but not all participants respond equally well. The aim of this study was to examine the predictive ability of heart rate variability (HRV), based on sensor data from consumer-grade wearable devices to detect GCBT effectiveness in early intervention. Methods In a study of 33 college students with depression and anxiety, participants were randomly assigned to either GCBT group or a wait-list control (WLC) group. They wore smart wearable devices to measure their physiological activities and signals in daily life. The HRV parameters were calculated and compared between the groups. The study also assessed correlations between participants\u2019 symptoms, HRV, and GCBT outcomes. Results The study showed that participants in GCBT had significant improvement in depression and anxiety symptoms after four weeks. Higher HRV was associated with greater improvement in depressive and anxious symptoms following GCBT. Additionally, HRV played a noteworthy role in determining how effective GCBT was in improve anxiety(P\u2009=\u20090.002) and depression(P\u2009=\u20090.020), and its predictive power remained significant even when considering other factors. Conclusion HRV may be a useful predictor of GCBT treatment efficacy. Identifying predictors of treatment response can help personalize treatment and improve outcomes for individuals with depression and anxiety. Trial registration The trial has been retrospectively registered on [22/06/2023] with the registration number [NCT05913349] in the ClinicalTrials.gov. Condensed abstract Variations in heart rate variability (HRV) have been associated with depression and anxiety, but the relationship of baseline HRV to treatment outcome in depression and anxiety is unclear. This study predicted GCBT effectiveness using HRV measured by wearable devices. 33 students with depression and anxiety participated in a trial comparing GCBT and wait-list control. HRV parameters from wearables correlated with symptoms (PHQ, PSS) and GCBT effectiveness. Baseline HRV levels are strongly associated with GCBT treatment outcomes. HRV may serve as a useful predictor of efficacy of GCBT treatment,facilitating personalized treatment approaches for individuals with depression and anxiety. Supplementary Information The online version contains supplementary material available at 10.1186/s12888-024-05638-x.",
+            "score": 3
+        },
+        {
+            "id": "007fe6b94d33270242cddb9475fbc6dbc3724904",
+            "paperId": "007fe6b94d33270242cddb9475fbc6dbc3724904",
+            "title": "Use of consumer wearables to monitor and predict pain in patients with sickle cell disease",
+            "year": 2023,
+            "citationCount": 4,
+            "openAccessPdf": {
+                "url": "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2023.1285207/pdf",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10634543, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The random forest model accurately predicts high pain scores during admission for VOC and after discharge and the Apple Watch was a feasible method to collect physiologic data and provided accuracy in prediction of pain scores."
+            },
+            "authors": [
+                {
+                    "authorId": "32704535",
+                    "name": "C. Vuong"
+                },
+                {
+                    "authorId": "2098193095",
+                    "name": "K. Utkarsh"
+                },
+                {
+                    "authorId": "2170648238",
+                    "name": "R. Stojancic"
+                },
+                {
+                    "authorId": "2053243331",
+                    "name": "Arvind P. Subramaniam"
+                },
+                {
+                    "authorId": "2204066140",
+                    "name": "Olivia Fernandez"
+                },
+                {
+                    "authorId": "2262037945",
+                    "name": "Tanvi Banerjee"
+                },
+                {
+                    "authorId": "2060371436",
+                    "name": "Daniel M. Abrams"
+                },
+                {
+                    "authorId": "2069792608",
+                    "name": "K. Fijnvandraat"
+                },
+                {
+                    "authorId": "2257501194",
+                    "name": "Nirmish Shah"
+                }
+            ],
+            "abstract": "Background In sickle cell disease (SCD), unpredictable episodes of acute severe pain, known as vaso-occlusive crises (VOC), disrupt school, work activities and family life and ultimately lead to multiple hospitalizations. The ability to predict VOCs would allow a timely and adequate intervention. The first step towards this ultimate goal is to use patient-friendly and accessible technology to collect relevant data that helps infer a patient's pain experience during VOC. This study aims to: (1) determine the feasibility of remotely monitoring with a consumer wearable during hospitalization for VOC and up to 30 days after discharge, and (2) evaluate the accuracy of pain prediction using machine learning models based on physiological parameters measured by a consumer wearable. Methods Patients with SCD (\u226518 years) who were admitted for a vaso-occlusive crisis were enrolled at a single academic center. Participants were instructed to report daily pain scores (0\u201310) in a mobile app (Nanbar) and to continuously wear an Apple Watch up to 30 days after discharge. Data included heart rate (in rest, average and variability) and step count. Demographics, SCD genotype, and details of hospitalization including pain scores reported to nurses, were extracted from electronic medical records. Physiological data from the wearable were associated with pain scores to fit 3 different machine learning classification models. The performance of the machine learning models was evaluated using: accuracy, F1, root-mean-square error and area under the receiver-operating curve. Results Between April and June 2022, 19 patients (74% HbSS genotype) were included in this study and followed for a median time of 28 days [IQR 22\u201334], yielding a dataset of 2,395 pain data points. Ten participants were enrolled while hospitalized for VOC. The metrics of the best performing model, the random forest model, were micro-averaged accuracy of 92%, micro-averaged F1-score of 0.63, root-mean-square error of 1.1, and area under the receiving operating characteristic curve of 0.9. Conclusion Our random forest model accurately predicts high pain scores during admission for VOC and after discharge. The Apple Watch was a feasible method to collect physiologic data and provided accuracy in prediction of pain scores.",
+            "score": 3
+        },
+        {
+            "id": "95468ec57652332b780f59731aa75f805eadcd27",
+            "paperId": "95468ec57652332b780f59731aa75f805eadcd27",
+            "title": "Modeling Biological Rhythms to Predict Mental and Physical Readiness",
+            "year": 2020,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/SIEDS49339.2020.9106683?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/SIEDS49339.2020.9106683, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The results of the exploratory study of modeling human rhythms with longitudinal physiological data collected from consumer devices in the wild provide insights into the feasibility of using consumer devices to model biological rhythms and use them to assess human and performance and health."
+            },
+            "authors": [
+                {
+                    "authorId": "1739483893",
+                    "name": "Ben Carper"
+                },
+                {
+                    "authorId": "1739149226",
+                    "name": "Dillon McGowan"
+                },
+                {
+                    "authorId": "2107201478",
+                    "name": "S. Miller"
+                },
+                {
+                    "authorId": "2117447644",
+                    "name": "Joe Nelson"
+                },
+                {
+                    "authorId": "1737828308",
+                    "name": "Leah Palombi"
+                },
+                {
+                    "authorId": "1738659050",
+                    "name": "Lina Romeo"
+                },
+                {
+                    "authorId": "1739149215",
+                    "name": "Kayla Spigelman"
+                },
+                {
+                    "authorId": "2781152",
+                    "name": "Afsaneh Doryab"
+                }
+            ],
+            "abstract": "The human body is composed of various biological clocks that impact physical and mental health functioning. Modeling biological rhythms provides the means to understand the effect of internal and external factors on human mental and physical performance. So far, biological rhythms have mostly been studied in controlled laboratory settings thus limiting the long term study and modeling of these rhythms. This paper presents the results of our exploratory study of modeling human rhythms with longitudinal physiological data collected from consumer devices in the wild. We used data from four people continuously wearing Empatica (E4) wristbands and Oura smart rings for approximately four months to build models of human rhythms. We then used those model parameters in a machine learning approach to predict mental and physical readiness. Our results showed that most models built with a combination of sensors and rhythmic features obtained a prediction accuracy above the baseline measure of 66% (Max accuracy = 82.7%). These results provide insights into the feasibility of using consumer devices to model biological rhythms and use them to assess human and performance and health.",
+            "score": 3
+        },
+        {
+            "id": "994d85bae14925d0dd1a1b1518bfff86450782eb",
+            "paperId": "994d85bae14925d0dd1a1b1518bfff86450782eb",
+            "title": "Decisional Support System with Artificial Intelligence oriented on Health Prediction using a Wearable Device and Big Data",
+            "year": 2020,
+            "citationCount": 11,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/MetroInd4.0IoT48571.2020.9138258?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/MetroInd4.0IoT48571.2020.9138258, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed work describes a decision support system (DSS) based on artificial intelligence algorithms and health wearable sensors predicting health status that is suitable for the implementation of multi-dimensional risk map of health status."
+            },
+            "authors": [
+                {
+                    "authorId": "144275192",
+                    "name": "A. Massaro"
+                },
+                {
+                    "authorId": "2058641591",
+                    "name": "Giuseppe Ricci"
+                },
+                {
+                    "authorId": "3102586",
+                    "name": "S. Selicato"
+                },
+                {
+                    "authorId": "1820800835",
+                    "name": "Sarah Raminelli"
+                },
+                {
+                    "authorId": "48651977",
+                    "name": "A. Galiano"
+                }
+            ],
+            "abstract": "The proposed work describes a decision support system (DSS) based on artificial intelligence algorithms and health wearable sensors predicting health status. The discussion is mainly focused on the description of the innovative architecture of the prototype platform related to a research industry project. The platform is able to control different wearable sensors storing data into a Cassandra Big Data system. Support Vector machine (SVM) and Long Short Term Memory (LSTM) algorithms have been applied to experimental datasets, proving the basic function of physiological data prediction. The work is suitable for the implementation of multi-dimensional risk map of health status.",
+            "score": 3
+        },
+        {
+            "id": "dd2076e1ff48b423f4c3bc8135c74c4b354c8b08",
+            "paperId": "dd2076e1ff48b423f4c3bc8135c74c4b354c8b08",
+            "title": "Bias Reducing Multitask Learning on Mental Health Prediction",
+            "year": 2022,
+            "citationCount": 20,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2208.03621",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2208.03621, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work aims to perform a fairness analysis and implement a multi-task learning based bias mitigation method on anxiety prediction models using ECG data, based on the idea of epistemic uncertainty and its relationship with model weights and feature space representation."
+            },
+            "authors": [
+                {
+                    "authorId": "2276456898",
+                    "name": "Khadija Zanna"
+                },
+                {
+                    "authorId": "153183442",
+                    "name": "K. Sridhar"
+                },
+                {
+                    "authorId": "2110983770",
+                    "name": "Han Yu"
+                },
+                {
+                    "authorId": "2804453",
+                    "name": "Akane Sano"
+                }
+            ],
+            "abstract": "There has been an increase in research in developing machine learning models for mental health detection or prediction in recent years due to increased mental health issues in society. Effective use of mental health prediction or detection models can help mental health practitioners re-define mental illnesses more objectively than currently done, and identify illnesses at an earlier stage when interventions may be more effective. However, there is still a lack of standard in evaluating bias in such machine learning models in the field, which leads to challenges in providing reliable predictions and in addressing disparities. This lack of standards persists due to factors such as technical difficulties, complexities of high dimensional clinical health data, etc., which are especially true for physiological signals. This along with prior evidence of relations between some physiological signals with certain demographic identities restates the importance of exploring bias in mental health prediction models that utilize physiological signals. In this work, we aim to perform a fairness analysis and implement a multi-task learning based bias mitigation method on anxiety prediction models using ECG data. Our method is based on the idea of epistemic uncertainty and its relationship with model weights and feature space representation. Our analysis showed that our anxiety prediction base model introduced some bias with regards to age, income, ethnicity, and whether a participant is born in the U.S. or not, and our bias mitigation method performed better at reducing the bias in the model, when compared to the reweighting mitigation technique. Our analysis on feature importance also helped identify relationships between heart rate variability and multiple demographic groupings.",
+            "score": 3
+        },
+        {
+            "id": "4882a2fd6bca482f6377e472366905725ef80ff1",
+            "paperId": "4882a2fd6bca482f6377e472366905725ef80ff1",
+            "title": "From Lab to Wrist: Bridging Metabolic Monitoring and Consumer Wearables for Heart Rate and Oxygen Consumption Modeling",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2505.00101, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This framework democratizes advanced metabolic monitoring, bridging laboratory-grade accuracy and everyday accessibility, thus empowering both elite athletes and recreational fitness enthusiasts, thus empowering both elite athletes and recreational fitness enthusiasts."
+            },
+            "authors": [
+                {
+                    "authorId": "2160632444",
+                    "name": "Barak Gahtan"
+                },
+                {
+                    "authorId": "32204028",
+                    "name": "S. Vedula"
+                },
+                {
+                    "authorId": "2358452273",
+                    "name": "Gil Samuelly Leichtag"
+                },
+                {
+                    "authorId": "2255436428",
+                    "name": "Einat Kodesh"
+                },
+                {
+                    "authorId": "2311840390",
+                    "name": "Alexander M Bronstein"
+                }
+            ],
+            "abstract": "Understanding physiological responses during running is critical for performance optimization, tailored training prescriptions, and athlete health management. We introduce a comprehensive framework -- what we believe to be the first capable of predicting instantaneous oxygen consumption (VO$_{2}$) trajectories exclusively from consumer-grade wearable data. Our approach employs two complementary physiological models: (1) accurate modeling of heart rate (HR) dynamics via a physiologically constrained ordinary differential equation (ODE) and neural Kalman filter, trained on over 3 million HR observations, achieving 1-second interval predictions with mean absolute errors as low as 2.81\\,bpm (correlation 0.87); and (2) leveraging the principles of precise HR modeling, a novel VO$_{2}$ prediction architecture requiring only the initial second of VO$_{2}$ data for calibration, enabling robust, sequence-to-sequence metabolic demand estimation. Despite relying solely on smartwatch and chest-strap data, our method achieves mean absolute percentage errors of approximately 13\\%, effectively capturing rapid physiological transitions and steady-state conditions across diverse running intensities. Our synchronized dataset, complemented by blood lactate measurements, further lays the foundation for future noninvasive metabolic zone identification. By embedding physiological constraints within modern machine learning, this framework democratizes advanced metabolic monitoring, bridging laboratory-grade accuracy and everyday accessibility, thus empowering both elite athletes and recreational fitness enthusiasts.",
+            "score": 2
+        },
+        {
+            "id": "2b6a4dc20b9b0e6c5cf9bfe15928b430cb8fbdfd",
+            "paperId": "2b6a4dc20b9b0e6c5cf9bfe15928b430cb8fbdfd",
+            "title": "Predicting stress levels using physiological data: Real-time stress prediction models utilizing wearable devices",
+            "year": 2024,
+            "citationCount": 7,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.3934/neuroscience.2024006",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC11230864, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The synthesis of findings aimed to contribute to a better understanding of the potential of wearable technology in objectively assessing and predicting stress levels in real time, thereby informing the design of effective interventions and personalized stress management approaches."
+            },
+            "authors": [
+                {
+                    "authorId": "2297914011",
+                    "name": "Evgenia Lazarou"
+                },
+                {
+                    "authorId": "1716899",
+                    "name": "T. Exarchos"
+                }
+            ],
+            "abstract": "Stress has emerged as a prominent and multifaceted health concern in contemporary society, manifesting detrimental effects on individuals' physical and mental health and well-being. The ability to accurately predict stress levels in real time holds significant promise for facilitating timely interventions and personalized stress management strategies. The increasing incidence of stress-related physical and mental health issues highlights the importance of thoroughly understanding stress prediction mechanisms. Given that stress is a contributing factor to a wide array of mental and physical health problems, objectively assessing stress is crucial for behavioral and physiological studies. While numerous studies have assessed stress levels in controlled environments, the objective evaluation of stress in everyday settings still needs to be explored, primarily due to contextual factors and limitations in self-report adherence. This short review explored the emerging field of real-time stress prediction, focusing on utilizing physiological data collected by wearable devices. Stress was examined from a comprehensive standpoint, acknowledging its effects on both physical and mental well-being. The review synthesized existing research on the development and application of stress prediction models, underscoring advancements, challenges, and future directions in this rapidly evolving domain. Emphasis was placed on examining and critically evaluating the existing research and literature on stress prediction, physiological data analysis, and wearable devices for stress monitoring. The synthesis of findings aimed to contribute to a better understanding of the potential of wearable technology in objectively assessing and predicting stress levels in real time, thereby informing the design of effective interventions and personalized stress management approaches.",
+            "score": 2
+        },
+        {
+            "id": "1f3638575caf18e68c91242e8613149e23c3fd8d",
+            "paperId": "1f3638575caf18e68c91242e8613149e23c3fd8d",
+            "title": "Hybrid disease prediction approach leveraging digital twin and metaverse technologies for health consumer",
+            "year": 2024,
+            "citationCount": 16,
+            "openAccessPdf": {
+                "url": "https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-024-02495-2",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10996111, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "DAE-BLS is introduced, a novel hybrid model that marries Denoising AutoEncoder (DAE) noise reduction with the efficiency of BLS that excels in robust feature extraction, particularly within the intricate and multifaceted world of medical data."
+            },
+            "authors": [
+                {
+                    "authorId": "2295112191",
+                    "name": "Chaitanya Kulkarni"
+                },
+                {
+                    "authorId": "2294962844",
+                    "name": "Aadam Quraishi"
+                },
+                {
+                    "authorId": "2275111503",
+                    "name": "Mohan Raparthi"
+                },
+                {
+                    "authorId": "2274111783",
+                    "name": "Mohammad Shabaz"
+                },
+                {
+                    "authorId": "2265379954",
+                    "name": "Muhammad Attique Khan"
+                },
+                {
+                    "authorId": "2287838950",
+                    "name": "Raj A. Varma"
+                },
+                {
+                    "authorId": "2237345555",
+                    "name": "Ismail Keshta"
+                },
+                {
+                    "authorId": "2237345949",
+                    "name": "Mukesh Soni"
+                },
+                {
+                    "authorId": "2266560584",
+                    "name": "Haewon Byeon"
+                }
+            ],
+            "abstract": "Emerging from the convergence of digital twin technology and the metaverse, consumer health (MCH) is witnessing a transformative shift. The amalgamation of bioinformatics with healthcare Big Data has ushered in a new era of disease prediction models that harness comprehensive medical data, enabling the anticipation of illnesses even before the onset of symptoms. In this model, deep neural networks stand out because they improve accuracy remarkably by increasing network depth and making weight changes using gradient descent. Nonetheless, traditional methods face their own set of challenges, including the issues of gradient instability and slow training. In this case, the Broad Learning System (BLS) stands out as a good alternative. It gets around the problems with gradient descent and lets you quickly rebuild a model through incremental learning. One problem with BLS is that it has trouble extracting complex features from complex medical data. This makes it less useful in a wide range of healthcare situations. In response to these challenges, we introduce DAE-BLS, a novel hybrid model that marries Denoising AutoEncoder (DAE) noise reduction with the efficiency of BLS. This hybrid approach excels in robust feature extraction, particularly within the intricate and multifaceted world of medical data. Validation using diverse datasets yields impressive results, with accuracies reaching as high as 98.50%. DAE-BLS\u2019s ability to rapidly adapt through incremental learning holds great promise for accurate and agile disease prediction, especially within the complex and dynamic healthcare scenarios of today.",
+            "score": 2
+        },
+        {
+            "id": "e55f26c176c847e561e2629d3718f8e5a373008e",
+            "paperId": "e55f26c176c847e561e2629d3718f8e5a373008e",
+            "title": "IoT-Dew Computing-Inspired Real-Time Monitoring of Indoor Environment for Irregular Health Prediction",
+            "year": 2024,
+            "citationCount": 13,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TEM.2023.3338458?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TEM.2023.3338458, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study proposes a novel cyber-physical approach using DT to monitor the health and environment of individuals in low-density rural areas using IoT-cloud-based monitoring solutions to collect environmental data, physiological signals, and their relationship."
+            },
+            "authors": [
+                {
+                    "authorId": "114498698",
+                    "name": "Ankush Manocha"
+                },
+                {
+                    "authorId": "2149025214",
+                    "name": "S. Sood"
+                },
+                {
+                    "authorId": "35071481",
+                    "name": "Munish Bhatia"
+                }
+            ],
+            "abstract": "Internet of Things (IoT)-based monitoring, using smart sensors to gather contextual data, is becoming the norm for making informed decisions. cyber-physical systems (CPS) play a crucial role in the digitization of monitoring systems and fostering collaboration. Nevertheless, traditional monitoring techniques are insufficient in capturing all environmental and health-related factors. Smart monitoring is enhanced by digital twin (DT) technology, which creates a precise digital replica of a physical object and its interactions with the environment. The DT is constantly updated and allows for real-time simulations and accurate control. This study proposes a novel cyber-physical approach using DT to monitor the health and environment of individuals in low-density rural areas. DT is integrated with IoT-cloud-based monitoring solutions to collect environmental data, physiological signals, and their relationship. The dew layer determines the irregularity of health and meteorological events in real-time and alerts caretakers. Cloud space determines health severity using the seasonal autoregressive integrated moving average (SARIMA) model, with emergency notifications sent accordingly. KeySharing mechanism ensures data security during information transmission. A case study on the establishment of DT is conducted to validate the proposed approach, with findings emphasizing the importance of understanding the environmental and healthcare sectors for future research.",
+            "score": 2
+        },
+        {
+            "id": "abaa6787b8758aeed42f90519cdf508a0cec4f72",
+            "paperId": "abaa6787b8758aeed42f90519cdf508a0cec4f72",
+            "title": "Prediction of Continuous Emotional Measures through Physiological and Visual Data",
+            "year": 2023,
+            "citationCount": 4,
+            "openAccessPdf": {
+                "url": "https://www.mdpi.com/1424-8220/23/12/5613/pdf?version=1687255671",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10303095, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The potential of using advanced machine learning techniques with diverse data sources to enhance the personalization of VR environments is highlighted, and an innovative solution based on a combination of machine learning models alongside a series of preprocessing steps is implemented."
+            },
+            "authors": [
+                {
+                    "authorId": "1412929805",
+                    "name": "I. O. Joudeh"
+                },
+                {
+                    "authorId": "2119728000",
+                    "name": "Ana-Maria Cre\u0163u"
+                },
+                {
+                    "authorId": "144981172",
+                    "name": "S. Bouchard"
+                },
+                {
+                    "authorId": "37853256",
+                    "name": "S. Guimond"
+                }
+            ],
+            "abstract": "The affective state of a person can be measured using arousal and valence values. In this article, we contribute to the prediction of arousal and valence values from various data sources. Our goal is to later use such predictive models to adaptively adjust virtual reality (VR) environments and help facilitate cognitive remediation exercises for users with mental health disorders, such as schizophrenia, while avoiding discouragement. Building on our previous work on physiological, electrodermal activity (EDA) and electrocardiogram (ECG) recordings, we propose improving preprocessing and adding novel feature selection and decision fusion processes. We use video recordings as an additional data source for predicting affective states. We implement an innovative solution based on a combination of machine learning models alongside a series of preprocessing steps. We test our approach on RECOLA, a publicly available dataset. The best results are obtained with a concordance correlation coefficient (CCC) of 0.996 for arousal and 0.998 for valence using physiological data. Related work in the literature reported lower CCCs on the same data modality; thus, our approach outperforms the state-of-the-art approaches for RECOLA. Our study underscores the potential of using advanced machine learning techniques with diverse data sources to enhance the personalization of VR environments.",
+            "score": 2
+        },
+        {
+            "id": "d1971c0085e02d5bbb21ad64782e0a5d6f39ca68",
+            "paperId": "d1971c0085e02d5bbb21ad64782e0a5d6f39ca68",
+            "title": "The Importance of Time-Domain HRV Analysis in Cardiac Health Prediction",
+            "year": 2023,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.54178/2768-5985.2022a5",
+                "status": "CLOSED",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.54178/2768-5985.2022a5?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.54178/2768-5985.2022a5, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Six types of THDs, e.g., mean-HR, mean-RR, SDNN, SDHR, RMSSD, and pNN50 are discussed in this article."
+            },
+            "authors": [
+                {
+                    "authorId": "2777003",
+                    "name": "S. Chattopadhyay"
+                }
+            ],
+            "abstract": "Heart rate variability (HRV) is defined as the momentary variation in the end heart rate (EHR) estimated at various intervals (time domains), such as from 2 min (ultra-short HRV) to 24 h (long HRV) intervals. The R peak interval (RRI) between two consecutive beats called momentary heart rate (MHR) provides insight into the impending cardiovascular risk and not the EHR. The autonomic nervous system (ANS) is in charge of maintaining physiological homeostasis by keeping the MHR and in turn the EHR within the normal range of 60\u2013100 bpm. ANS has two components \u2013 the sympathetic nervous system (SNS) and the parasympathetic nervous system (PNS). The former increases HR (reduces RRI) while the latter reduces it. Therefore, the RR time-domain-HRV-data (THD) provides better insight into overall health than the EHR. Six types of THDs, e.g., mean-HR, mean-RR, SDNN, SDHR, RMSSD, and pNN50 are discussed in this article.",
+            "score": 2
+        },
+        {
+            "id": "db3ea18e8830b42f82ef479f78698765ae1135f6",
+            "paperId": "db3ea18e8830b42f82ef479f78698765ae1135f6",
+            "title": "Multi-Feature Fusion-Based Convolutional Neural Networks for EEG Epileptic Seizure Prediction in Consumer Internet of Things",
+            "year": 2024,
+            "citationCount": 9,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TCE.2024.3363166?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TCE.2024.3363166, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed study presents a novel patient-specific seizure prediction framework with the Consumer Internet of Things (CIoT) for the smart healthcare system to anticipate the onset of upcoming seizures and improve the quality of healthcare and early treatment."
+            },
+            "authors": [
+                {
+                    "authorId": "2146890323",
+                    "name": "Ijaz Ahmad"
+                },
+                {
+                    "authorId": "46694717",
+                    "name": "Mingxing Zhu"
+                },
+                {
+                    "authorId": "2109150346",
+                    "name": "Zhenzhen Liu"
+                },
+                {
+                    "authorId": "66402249",
+                    "name": "Mohammad Shabaz"
+                },
+                {
+                    "authorId": "2269174762",
+                    "name": "Inam Ullah"
+                },
+                {
+                    "authorId": "2275045894",
+                    "name": "M. C. Tong"
+                },
+                {
+                    "authorId": "3419579",
+                    "name": "A. Sambas"
+                },
+                {
+                    "authorId": "2068048074",
+                    "name": "Lina Men"
+                },
+                {
+                    "authorId": "2275598066",
+                    "name": "Yan Chen"
+                },
+                {
+                    "authorId": "2108760206",
+                    "name": "Shixiong Chen"
+                }
+            ],
+            "abstract": "Early epileptic seizure prediction (ESP) has informative challenges due to the complexity of electroencephalogram (EEG) signals, patient variability, privacy and security issues regarding consumer health data, and the on-time alarm triggers before an upcoming seizure to provide sufficient time for the patients and caregivers to take appropriate action. Therefore, the proposed study presents a novel patient-specific seizure prediction framework with the Consumer Internet of Things (CIoT) for the smart healthcare system to anticipate the onset of upcoming seizures and improve the quality of healthcare and early treatment. Initially, the multi-handicraft and deep features are extracted in feature engineering modules and then concatenated in the fusion module. The fused feature fed into the Bidirectional Long Short-term Memory (BiLSTM) network to present the temporal dependency of the EEG signals. The Attention Mechanism is applied to reduce the dimension of the feature. Moreover, the CIoT module is integrated for real-time seizure prediction and sending alerts to doctors and emergency units through the cloud platform. Testing via the Leave-One-Out cross-validation method revealed the model\u2019s consistent performance across various seizure types, emphasizing real-time clinical applications. The model achieved 91.39\u00b13.34% accuracy, 91.30\u00b12.80% sensitivity, 90.06\u00b14.84% specificity, and a false positive rate (FPR) of 0.12 $\\pm 0.04~h^{-1}$ in the case of Seizure Alarm Horizon (SAH) of 10 minutes. The CIoT remotely monitoring the patients ensures timely treatment, maintains data security, privacy, and improves the performance of real-time applications in smart consumer healthcare systems.",
+            "score": 2
+        },
+        {
+            "id": "24a80877e00c2efb6d50f8479c9d6e8fb57e9d1f",
+            "paperId": "24a80877e00c2efb6d50f8479c9d6e8fb57e9d1f",
+            "title": "A Cloud-Edge Collaboration Framework for Cancer Survival Prediction to Develop Medical Consumer Electronic Devices",
+            "year": 2024,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TCE.2024.3413732?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TCE.2024.3413732, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Experimental results demonstrate that the proposed cloud-edge collaboration framework is highly effective in both survival prediction performance and patient privacy preservation, with the potential to develop medical consumer electronics."
+            },
+            "authors": [
+                {
+                    "authorId": "2279963782",
+                    "name": "Suixue Wang"
+                },
+                {
+                    "authorId": "2240098264",
+                    "name": "Zhigao Zheng"
+                },
+                {
+                    "authorId": "2306468368",
+                    "name": "Xinghong Wang"
+                },
+                {
+                    "authorId": "2289813877",
+                    "name": "Qingchen Zhang"
+                },
+                {
+                    "authorId": "2193636830",
+                    "name": "Zhuo Liu"
+                }
+            ],
+            "abstract": "Consumer electronics, together with artificial intelligence technology, are being widely applied in the medical field, aiding medical data collecting, health monitoring, disease diagnosis, and survival prediction. Training an effective and robust medical artificial intelligence model for cancer survival prediction deployed in consumer electronic devices requires a large amount of high-quality annotated data. However, due to limitations in computing resources and energy, it is impractical to train artificial intelligence models on large-scale medical data directly in the cloud. To address the above problem, we propose a cloud-edge collaboration framework to develop medical electronic devices for cancer survival prediction. The framework trains local models on edge medical electronic devices and aggregates the model weights on the cloud server. Furthermore, when transmitting model weights between cloud and edge, we introduce differential privacy technology to ensure security concerns. We evaluate our proposed cloud-edge collaboration framework on two cancer datasets from The Cancer Genome Atlas (TCGA). Experimental results demonstrate that our cloud-edge collaboration framework is highly effective in both survival prediction performance and patient privacy preservation, with the potential to develop medical consumer electronics.",
+            "score": 2
+        },
+        {
+            "id": "071c76b22aa70cbb758d1c4153b0d5ca9e735aa7",
+            "paperId": "071c76b22aa70cbb758d1c4153b0d5ca9e735aa7",
+            "title": "Internet of Things-enabled Smart Devices, Biomedical Big Data, and Real-Time Clinical Monitoring in COVID-19 Patient Health Prediction",
+            "year": 2020,
+            "citationCount": 8,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22381/ajmr7220209?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22381/ajmr7220209, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study examined the demographic composition of the population of the United States using the Census Bureau's American Community Survey to reflect reliably and accurately the demographics of the country."
+            },
+            "authors": [
+                {
+                    "authorId": "1742351986",
+                    "name": "Gavin Sheares"
+                }
+            ],
+            "abstract": "(Patan et al , 2020) Wireless sensor devices are deployed to incessantly gather and communicate the physiological vital signs with the purpose of monitoring patients' health and provide prompt intervention and medical services (Thomford et al , 2020) Remote health monitoring systems offer expeditious medical services throughout remote locations while harnessing telecommunication technologies by cloud computing, wireless networking, and data storage (Dananjayan and Raj, 2020) Survey method The interviews were conducted online and data were weighted by five variables (age, race/ethnicity, gender, education, and geographic region) using the Census Bureau's American Community Survey to reflect reliably and accurately the demographic composition of the United States",
+            "score": 2
+        },
+        {
+            "id": "7b01cfae88657f2771ef91d86611fed56d5505a3",
+            "paperId": "7b01cfae88657f2771ef91d86611fed56d5505a3",
+            "title": "Beyond Sensor Data: Foundation Models of Behavioral Data from Wearables Improve Health Predictions",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00191, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372569910",
+                    "name": "Eray Erturk"
+                },
+                {
+                    "authorId": "2372553492",
+                    "name": "Fahad Kamran"
+                },
+                {
+                    "authorId": "2273554655",
+                    "name": "Salar Abbaspourazad"
+                },
+                {
+                    "authorId": "2372563584",
+                    "name": "Sean Jewell"
+                },
+                {
+                    "authorId": "2372399697",
+                    "name": "Harsh Sharma"
+                },
+                {
+                    "authorId": "2373325899",
+                    "name": "Yujie Li"
+                },
+                {
+                    "authorId": "2346835694",
+                    "name": "Sinead Williamson"
+                },
+                {
+                    "authorId": "40135449",
+                    "name": "N. Foti"
+                },
+                {
+                    "authorId": "2585470",
+                    "name": "Joseph D. Futoma"
+                }
+            ],
+            "abstract": "Wearable devices record physiological and behavioral signals that can improve health predictions. While foundation models are increasingly used for such predictions, they have been primarily applied to low-level sensor data, despite behavioral data often being more informative due to their alignment with physiologically relevant timescales and quantities. We develop foundation models of such behavioral signals using over 2.5B hours of wearable data from 162K individuals, systematically optimizing architectures and tokenization strategies for this unique dataset. Evaluated on 57 health-related tasks, our model shows strong performance across diverse real-world applications including individual-level classification and time-varying health state prediction. The model excels in behavior-driven tasks like sleep prediction, and improves further when combined with representations of raw sensor data. These results underscore the importance of tailoring foundation model design to wearables and demonstrate the potential to enable new health applications.",
+            "score": 2
+        },
+        {
+            "id": "f91793909fa8342f87933196cdcacbd26749e8c2",
+            "paperId": "f91793909fa8342f87933196cdcacbd26749e8c2",
+            "title": "Beyond Scale: Small Language Models are Comparable to GPT-4 in Mental Health Understanding",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.08031, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Hong Jia"
+                },
+                {
+                    "authorId": "2373649525",
+                    "name": "Shiya Fu"
+                },
+                {
+                    "authorId": "2372781941",
+                    "name": "Feng Xia"
+                },
+                {
+                    "authorId": "1781697",
+                    "name": "V. Kostakos"
+                },
+                {
+                    "authorId": "2316051686",
+                    "name": "Ting Dang"
+                }
+            ],
+            "abstract": "The emergence of Small Language Models (SLMs) as privacy-preserving alternatives for sensitive applications raises a fundamental question about their inherent understanding capabilities compared to Large Language Models (LLMs). This paper investigates the mental health understanding capabilities of current SLMs through systematic evaluation across diverse classification tasks. Employing zero-shot and few-shot learning paradigms, we benchmark their performance against established LLM baselines to elucidate their relative strengths and limitations in this critical domain. We assess five state-of-the-art SLMs (Phi-3, Phi-3.5, Qwen2.5, Llama-3.2, Gemma2) against three LLMs (GPT-4, FLAN-T5-XXL, Alpaca-7B) on six mental health understanding tasks. Our findings reveal that SLMs achieve mean performance within 2\\% of LLMs on binary classification tasks (F1 scores of 0.64 vs 0.66 in zero-shot settings), demonstrating notable competence despite orders of magnitude fewer parameters. Both model categories experience similar degradation on multi-class severity tasks (a drop of over 30\\%), suggesting that nuanced clinical understanding challenges transcend model scale. Few-shot prompting provides substantial improvements for SLMs (up to 14.6\\%), while LLM gains are more variable. Our work highlights the potential of SLMs in mental health understanding, showing they can be effective privacy-preserving tools for analyzing sensitive online text data. In particular, their ability to quickly adapt and specialize with minimal data through few-shot learning positions them as promising candidates for scalable mental health screening tools.",
+            "score": 1
+        },
+        {
+            "id": "0ae3befa33ca7a4a7dc188d1c790b3c5a78042aa",
+            "paperId": "0ae3befa33ca7a4a7dc188d1c790b3c5a78042aa",
+            "title": "Mobility Functional Status Ascertainment in Electronic Health Records using Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12324587, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2278394763",
+                    "name": "Xingyi Liu"
+                },
+                {
+                    "authorId": "2258141722",
+                    "name": "Muskan Garg"
+                },
+                {
+                    "authorId": null,
+                    "name": "Heling Jia"
+                },
+                {
+                    "authorId": "2195734756",
+                    "name": "Jennifer S. St. Sauver"
+                },
+                {
+                    "authorId": "2238496194",
+                    "name": "Sandeep R. Pagali"
+                },
+                {
+                    "authorId": "2267490593",
+                    "name": "Sunghwan Sohn"
+                }
+            ],
+            "abstract": "With global aging, assessing functional status is vital for precision medicine. Electronic Health Records (EHRs), particularly unstructured data, hold abundant information on patient mobility. This study explores using Large Language Models (LLMs) to extract and standardize mobility status from unstructured EHR data (i.e., clinical notes). We annotated 600 clinical notes from three health care institutions located in southeastern Minnesota and west-central Wisconsin, focusing on expressions of mobility and associated impairment. Leveraging the open-source Llama 3 model, we tested various prompting strategies\u2014including zero-shot, few-shot, and task decomposition\u2014and evaluated their performance. Error analysis showed that while the model sometimes inferred impairments without explicit evidence, most errors were clinically reasonable, often reflecting borderline or ambiguous cases. While considering reasonable inference as correct, at the patient-level, Mobility Extraction achieves a micro-average accuracy of 0.952 with an F1-score of 0.962, and Impairment Classification produces a micro-average accuracy of 0.912 and an F1-score of 0.948. A local, deterministic setup improved trustworthiness by ensuring consistent outputs, safeguarding privacy, and demonstrating cross-institution generalizability. These findings highlight the feasibility of LLM-based solutions for extracting mobility functional status from unstructured EHR data, supporting both clinical applications and research.",
+            "score": 1
+        },
+        {
+            "id": "f7e2152d64c84d8fc7f3b80865399c09bf456031",
+            "paperId": "f7e2152d64c84d8fc7f3b80865399c09bf456031",
+            "title": "Evaluation of large language models on mental health: from knowledge test to illness diagnosis",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3389/fpsyt.2025.1646974?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3389/fpsyt.2025.1646974, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375694093",
+                    "name": "Yijun Xu"
+                },
+                {
+                    "authorId": "2376095426",
+                    "name": "Zhaoxi Fang"
+                },
+                {
+                    "authorId": "2375767263",
+                    "name": "Weinan Lin"
+                },
+                {
+                    "authorId": "2375730775",
+                    "name": "Yue Jiang"
+                },
+                {
+                    "authorId": "2376061052",
+                    "name": "Wen Jin"
+                },
+                {
+                    "authorId": "2066203352",
+                    "name": "P. Balaji"
+                },
+                {
+                    "authorId": "2375913228",
+                    "name": "Jiangda Wang"
+                },
+                {
+                    "authorId": "2375472399",
+                    "name": "Ting Xia"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have opened up new possibilities in the field of mental health, offering applications in areas such as mental health assessment, psychological counseling, and education. This study systematically evaluates 15 state-of-the-art LLMs, including DeepSeekR1/V3 (March 24, 2025), GPT-4.1 (April 15, 2025), Llama4 (April 5, 2025), and QwQ (March 6, 2025, developed by Alibaba), on two key tasks: mental health knowledge testing and mental illness diagnosis in the Chinese context. We use publicly available datasets, including Dreaddit, SDCNL, and questions from the CAS Counsellor Qualification Exam. Results indicate that DeepSeek-R1, QwQ, and GPT-4.1 outperform other models in both knowledge accuracy and diagnostic performance. Our findings highlight the strengths and limitations of current LLMs in Chinese mental health scenarios and provide clear guidance for selecting and improving models in this sensitive domain.",
+            "score": 1
+        },
+        {
+            "id": "1dc625f69150ae447d5ad029231988f6386e070d",
+            "paperId": "1dc625f69150ae447d5ad029231988f6386e070d",
+            "title": "Advances and Applications of Natural Language Processing in Healthcare",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22214/ijraset.2025.73380?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22214/ijraset.2025.73380, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374513520",
+                    "name": "Vrushali Ravindra Patil"
+                },
+                {
+                    "authorId": "2374507177",
+                    "name": "Sahana Rajendra Golbhavi"
+                }
+            ],
+            "abstract": "Natural Language Processing (NLP) has emerged as a transformative technology in the healthcare sector, offering\ntools to efficiently analyze and extract insights from the vast amount of unstructuredclinical data. This reviewpresents a\ncomprehensive examination of recent advancements in NLP applications within healthcare, covering a spectrum of approaches\nfrom early symbolic and statistical models to state-of-the-art deep learning techniques, including\nTransformerarchitecturessuchas BERT, Clinical BERT,and Med-BERT. These models have significantly enhanced\nperformance in various healthcare-related NLP tasksdue to their ability to capture contextual semantics and medical- specific\nlanguage features.\nKey application areas discussed include electronic health record (EHR) mining, clinical decision support, medical coding,\nsentiment analysis in patient feedback, and disease prediction. NLP methods are increasingly used to support diagnosis,\nautomate clinical documentation, monitor public healthtrends,andfacilitatepersonalizedtreatmentplanning. Despite theirpromise,\nseveral methodological and practical challenges remain. These include limited annotated medical data,domainspecificterminologyvariation,privacy,ethical concerns, explainability of model outputs, and integration into existing healthcare\nsystems.\nThis review synthesizes insights from over 30 studies to identify current trends and potential research gaps. It highlights the\ngrowing shift toward interpretable and explainable NLP models, especially in high-stakes clinical environments. Furthermore,\nthe paper underscores the importance of interdisciplinary collaboration between computer scientists and healthcare\nprofessionals to ensure responsible and effective deployment. Future work must focus on building robust, transparent, and\nscalable NLP systems that can be reliably integrated into diverse healthcare workflows, particularly in resource-constrained\nsettings. [4,5,8]",
+            "score": 1
+        },
+        {
+            "id": "3e9425a41a0bae97d222ef560c9c8ccec47121b7",
+            "paperId": "3e9425a41a0bae97d222ef560c9c8ccec47121b7",
+            "title": "Foundation Models for Clinical Records at Health System Scale",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00574, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1470808847",
+                    "name": "H. Rajamohan"
+                },
+                {
+                    "authorId": "2372841104",
+                    "name": "Xiang Gao"
+                },
+                {
+                    "authorId": "48506952",
+                    "name": "Weicheng Zhu"
+                },
+                {
+                    "authorId": "2301405423",
+                    "name": "Shih-Lun Huang"
+                },
+                {
+                    "authorId": "2344487168",
+                    "name": "Long Chen"
+                },
+                {
+                    "authorId": "145000829",
+                    "name": "K. Cho"
+                },
+                {
+                    "authorId": "2226185874",
+                    "name": "Cem M. Deniz"
+                },
+                {
+                    "authorId": "2339440941",
+                    "name": "Narges Razavian"
+                }
+            ],
+            "abstract": "Large-scale pretraining has transformed modeling of language and other data types, but its potential remains underexplored in healthcare with structured electronic health records (EHRs). We present a novel generative pretraining strategy for sequential EHR data using next-visit event prediction. Our model learns to autoregressively generate various tokenized clinical events for the next visit based on patient history and inherently handles the joint prediction of heterogeneous data types. Additionally, we introduce regularization on predicting repeated events and highlight a key pitfall in EHR-based foundation model evaluations: repeated event tokens can inflate performance metrics when new onsets are not distinguished from subsequent occurrences. Our model is evaluated via zero-shot prediction for forecasting dementia and knee osteoarthritis incidence within 2 and 5 years, and the model performance rivals a fully fine-tuned masked pretrained Transformer baseline, demonstrating that our approach captures complex clinical dependencies without requiring costly task-specific fine-tuning.",
+            "score": 1
+        },
+        {
+            "id": "d0deb3ffd586a886b435d67c1b3aad89eeeaf358",
+            "paperId": "d0deb3ffd586a886b435d67c1b3aad89eeeaf358",
+            "title": "Leveraging large language models for automated depression screening",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12303271, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2151626961",
+                    "name": "Bazen Gashaw Teferra"
+                },
+                {
+                    "authorId": "2113650045",
+                    "name": "Argyrios Perivolaris"
+                },
+                {
+                    "authorId": "2373656759",
+                    "name": "Wei-Ni Hsiang"
+                },
+                {
+                    "authorId": "2373656353",
+                    "name": "Christian Kevin Sidharta"
+                },
+                {
+                    "authorId": "2277608705",
+                    "name": "Alice Rueda"
+                },
+                {
+                    "authorId": "6035859",
+                    "name": "Karisa B. Parkington"
+                },
+                {
+                    "authorId": "2359165866",
+                    "name": "Yuqi Wu"
+                },
+                {
+                    "authorId": "2319131081",
+                    "name": "Achint Soni"
+                },
+                {
+                    "authorId": "2261169140",
+                    "name": "Reza Samavi"
+                },
+                {
+                    "authorId": "2298025714",
+                    "name": "Rakesh Jetly"
+                },
+                {
+                    "authorId": "2321660013",
+                    "name": "Yanbo Zhang"
+                },
+                {
+                    "authorId": "2301672109",
+                    "name": "Bo Cao"
+                },
+                {
+                    "authorId": "2267664",
+                    "name": "Sirisha Rambhatla"
+                },
+                {
+                    "authorId": "2332343710",
+                    "name": "Sri Krishnan"
+                },
+                {
+                    "authorId": "2342966703",
+                    "name": "Venkat Bhat"
+                }
+            ],
+            "abstract": "Mental health diagnoses possess unique challenges that often lead to nuanced difficulties in managing an individual\u2019s well-being and daily functioning. Self-report questionnaires are a common practice in clinical settings to help mitigate the challenges involved in mental health disorder screening. However, these questionnaires rely on an individual\u2019s subjective response which can be influenced by various factors. Despite the advancements of Large Language Models (LLMs), quantifying self-reported experiences with natural language processing has resulted in imperfect accuracy. This project aims to demonstrate the effectiveness of zero-shot learning LLMs for screening and assessing item scales for depression using LLMs. The DAIC-WOZ is a publicly available mental health dataset that contains textual data from clinical interviews and self-report questionnaires with relevant mental health disorder labels. The RISEN prompt engineering framework was utilized to evaluate LLMs\u2019 effectiveness in predicting depression symptoms based on individual PHQ-8 items. Various LLMs, including GPT models, Llama3_8B, Cohere, and Gemini were assessed based on performance. The GPT models, especially GPT-4o, were consistently better than other LLMs (Llama3_8B, Cohere, Gemini) across all eight items of the PHQ-8 scale in accuracy (M\u2009=\u200975.9%), and F1 score (0.74). GPT models were able to predict PHQ-8 items related to emotional and cognitive states. Llama 3_8B demonstrated superior detection of anhedonia-related symptoms and the Cohere LLM\u2019s strength was identifying and predicting psychomotor activity symptoms. This study provides a novel outlook on the potential of LLMs for predicting self-reported questionnaire scores from textual interview data. The promising preliminary performance of the various models indicates there is potential that these models could effectively assist in the screening of depression. Further research is needed to establish a framework for which LLM can be used for specific mental health symptoms and other disorders. As well, analysis of additional datasets while fine-tuning models should be explored.",
+            "score": 1
+        },
+        {
+            "id": "2d9dc24093a0d74f7fe1e1c8c55d020f24a1c500",
+            "paperId": "2d9dc24093a0d74f7fe1e1c8c55d020f24a1c500",
+            "title": "Data-Driven Predictive Modelling of Lifestyle Risk Factors for Cardiovascular Health",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/electronics14142906?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/electronics14142906, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373134075",
+                    "name": "Solomon Agyiri Kissi"
+                },
+                {
+                    "authorId": "2372392347",
+                    "name": "Md Golam Muttaquee Talukder"
+                },
+                {
+                    "authorId": "145122014",
+                    "name": "M. Iqbal"
+                }
+            ],
+            "abstract": "Cardiovascular disease (CVD) remains the foremost global cause of mortality, driven significantly by modifiable lifestyle factors. This study employs a data-driven approach to identify and evaluate these risk factors using advanced machine learning techniques. Analysing a large publicly available dataset of over 300,000 adult health records containing lifestyle behaviours, clinical risk factors, and self-reported health indicators, this research implemented traditional classifiers, ensemble methods, and deep learning architectures to examine the impact of behaviours such as smoking, diet, physical activity, and alcohol consumption on CVD risk. The Random Forest model demonstrated superior performance, achieving high accuracy, recall, and ROC-AUC scores. To demonstrate real-world utility, the model was deployed as an interactive Streamlit web application. This tool allows individuals to input lifestyle and health data to receive real-time CVD risk predictions, offering a novel, user-friendly prototype that bridges machine learning insights with personalised digital health engagement. This tool can facilitate personalised health monitoring and supports early detection by providing actionable insights. The findings underscore the efficacy of predictive modelling in informing targeted interventions and public health strategies. By bridging advanced analytics with practical applications, this research offers a scalable framework for reducing CVD burden, paving the way for precision medicine and improved population health outcomes through data-driven decision-making.",
+            "score": 1
+        },
+        {
+            "id": "ef9678b094c7ad6ae6efa1ed587731b19f4fb5cd",
+            "paperId": "ef9678b094c7ad6ae6efa1ed587731b19f4fb5cd",
+            "title": "Empowering Healthcare Practitioners with Language Models: Structuring Speech Transcripts in Two Real-World Clinical Applications",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.05517, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2298043096",
+                    "name": "Jean-Philippe Corbeil"
+                },
+                {
+                    "authorId": "2127117221",
+                    "name": "Asma Ben Abacha"
+                },
+                {
+                    "authorId": "153246940",
+                    "name": "George Michalopoulos"
+                },
+                {
+                    "authorId": "2373006420",
+                    "name": "Phillip Swazinna"
+                },
+                {
+                    "authorId": "2373009533",
+                    "name": "Miguel Del-Agua"
+                },
+                {
+                    "authorId": "2373013863",
+                    "name": "Jerome Tremblay"
+                },
+                {
+                    "authorId": "2372449686",
+                    "name": "Akila Jeeson Daniel"
+                },
+                {
+                    "authorId": "2373006923",
+                    "name": "Cari Bader"
+                },
+                {
+                    "authorId": "2373544015",
+                    "name": "Yu-Cheng Cho"
+                },
+                {
+                    "authorId": "2372808082",
+                    "name": "Pooja Krishnan"
+                },
+                {
+                    "authorId": "3277829",
+                    "name": "Nathan Bodenstab"
+                },
+                {
+                    "authorId": "2268318167",
+                    "name": "Thomas Lin"
+                },
+                {
+                    "authorId": "2372380053",
+                    "name": "Wenxuan Teng"
+                },
+                {
+                    "authorId": "2373010329",
+                    "name": "Francois Beaulieu"
+                },
+                {
+                    "authorId": "1752755",
+                    "name": "Paul Vozila"
+                }
+            ],
+            "abstract": "Large language models (LLMs) such as GPT-4o and o1 have demonstrated strong performance on clinical natural language processing (NLP) tasks across multiple medical benchmarks. Nonetheless, two high-impact NLP tasks - structured tabular reporting from nurse dictations and medical order extraction from doctor-patient consultations - remain underexplored due to data scarcity and sensitivity, despite active industry efforts. Practical solutions to these real-world clinical tasks can significantly reduce the documentation burden on healthcare providers, allowing greater focus on patient care. In this paper, we investigate these two challenging tasks using private and open-source clinical datasets, evaluating the performance of both open- and closed-weight LLMs, and analyzing their respective strengths and limitations. Furthermore, we propose an agentic pipeline for generating realistic, non-sensitive nurse dictations, enabling structured extraction of clinical observations. To support further research in both areas, we release SYNUR and SIMORD, the first open-source datasets for nurse observation extraction and medical order extraction.",
+            "score": 1
+        },
+        {
+            "id": "cbf78dbb6ac139200eae132a5403d8bcf54ade18",
+            "paperId": "cbf78dbb6ac139200eae132a5403d8bcf54ade18",
+            "title": "LLM-Augmented Symptom Analysis for Cardiovascular Disease Risk Prediction: A Clinical NLP",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11052, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373725432",
+                    "name": "Haowei Yang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Ziyu Shen"
+                },
+                {
+                    "authorId": "2367560097",
+                    "name": "Junli Shao"
+                },
+                {
+                    "authorId": "2372411981",
+                    "name": "Luyao Men"
+                },
+                {
+                    "authorId": "2372712652",
+                    "name": "Xinyue Han"
+                },
+                {
+                    "authorId": "2372532594",
+                    "name": "Jing Dong"
+                }
+            ],
+            "abstract": "Timely identification and accurate risk stratification of cardiovascular disease (CVD) remain essential for reducing global mortality. While existing prediction models primarily leverage structured data, unstructured clinical notes contain valuable early indicators. This study introduces a novel LLM-augmented clinical NLP pipeline that employs domain-adapted large language models for symptom extraction, contextual reasoning, and correlation from free-text reports. Our approach integrates cardiovascular-specific fine-tuning, prompt-based inference, and entity-aware reasoning. Evaluations on MIMIC-III and CARDIO-NLP datasets demonstrate improved performance in precision, recall, F1-score, and AUROC, with high clinical relevance (kappa = 0.82) assessed by cardiologists. Challenges such as contextual hallucination, which occurs when plausible information contracts with provided source, and temporal ambiguity, which is related with models struggling with chronological ordering of events are addressed using prompt engineering and hybrid rule-based verification. This work underscores the potential of LLMs in clinical decision support systems (CDSS), advancing early warning systems and enhancing the translation of patient narratives into actionable risk assessments.",
+            "score": 1
+        },
+        {
+            "id": "04452c62b5716d632cc1088433fdd3cf542fd998",
+            "paperId": "04452c62b5716d632cc1088433fdd3cf542fd998",
+            "title": "Comparing traditional natural language processing and large language models for mental health status classification: a multi-model evaluation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12230148, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370584634",
+                    "name": "Thomas Kallstenius"
+                },
+                {
+                    "authorId": "4543873",
+                    "name": "A. Capusan"
+                },
+                {
+                    "authorId": "2241267562",
+                    "name": "G. Andersson"
+                },
+                {
+                    "authorId": "2370586332",
+                    "name": "Adam Williamson"
+                }
+            ],
+            "abstract": "The substantial increase in mental health disorders globally necessitates scalable, accurate tools for detecting and classifying these conditions in digital environments. This study addresses the critical challenge of automated mental health classification by comparing three distinct computational approaches: (1) Traditional Natural Language Processing (NLP) with advanced feature engineering, (2) Prompt-engineered large language models (LLMs), and (3) Fine-tuned LLMs. The dataset consisted of over 51,000 publicly available text statements from social media platforms, tagged with seven mental health conditions: Normal, Depression, Suicidal, Anxiety, Stress, Bipolar Disorder, and Personality Disorder. The dataset was stratified into training, validation, and test sets for model evaluation. The primary outcome was classification accuracy across these seven mental health conditions. Additional metrics like precision, recall, and F1-score were analyzed. We compared the results of the three computational approaches and overfitting was monitored through validation loss across epochs for the fine-tuned LLM. The NLP model with advanced feature engineering achieved an overall accuracy of 95%, surpassing both the prompt-engineered LLM (65%) and the fine-tuned LLM (91%). This model performed exceptionally well in terms of accuracy and precision. While fine-tuning for three epochs yielded optimal results, further training led to overfitting and decreased performance. This study demonstrates the significant benefits of applying advanced text preprocessing and feature engineering techniques to traditional NLP models, alongside fine-tuning LLMs, such as GPT-4o-mini, for mental health classification tasks. The results clearly indicate that off-the-shelf LLM chatbots using prompt engineering are inadequate for mental health classification, performing 30% points below specialized NLP approaches. Despite the popularity of general-purpose LLMs, specialized approaches remain superior for critical healthcare applications like mental health classification.",
+            "score": 1
+        },
+        {
+            "id": "c11512d5dfb38c849ebce3453e8d4bc8cf7f9bb9",
+            "paperId": "c11512d5dfb38c849ebce3453e8d4bc8cf7f9bb9",
+            "title": "A self-supervised framework for laboratory data imputation in electronic health records",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBYNCND",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12216283, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2364168090",
+                    "name": "Samuel P. Heilbroner"
+                },
+                {
+                    "authorId": "2263773676",
+                    "name": "Curtis Carter"
+                },
+                {
+                    "authorId": "2273550708",
+                    "name": "D. Vidmar"
+                },
+                {
+                    "authorId": "2369607486",
+                    "name": "Erik T Mueller"
+                },
+                {
+                    "authorId": "47175997",
+                    "name": "M. Stumpe"
+                },
+                {
+                    "authorId": "2273567170",
+                    "name": "Riccardo Miotto"
+                }
+            ],
+            "abstract": "Background Laboratory data in electronic health records (EHRs) is an effective source of information to characterize patient populations, inform accurate diagnostics and treatment decisions, and fuel research studies. However, despite their value, laboratory values are underutilized due to high levels of missingness. Existing imputation methods fall short, as they do not fully leverage patient clinical histories and are commonly not scalable to the large number of tests available in real-world data (RWD). Methods To address these shortcomings, we present Laboratory Imputation Framework for EHRs (LIFE), a self-supervised learning framework based on multi-head attention that is trained to impute any laboratory test value at any point in time in the patient\u2019s journey using their complete EHRs. This architecture (1) eliminates the need to train a different model for each laboratory test by jointly modeling all laboratory data of interest; and (2) better clinically contextualizes the predictions by leveraging additional EHR variables, such as diagnosis, medications, and discrete laboratory results. Results We validate our framework using a large-scale, real-world dataset encompassing over 1 million oncology patients. Our results demonstrate that LIFE obtains superior or equivalent results compared to state-of-the-art baseline methods in 23 out of 25 evaluated laboratory tests and better enhances a downstream adverse event detection task in 7 out of 9 cases. Conclusions LIFE shows promise in accurately estimating missing laboratory values and enhancing the utilization of large-scale RWD in healthcare. This advancement could lead to better clinical models, more informed decision-making and improved patient outcomes.",
+            "score": 1
+        },
+        {
+            "id": "b85b242c21242c96c87e461dd9ec34d53ad63191",
+            "paperId": "b85b242c21242c96c87e461dd9ec34d53ad63191",
+            "title": "Predicting Health-Related Physical Fitness From Smartwatch Data",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/LSENS.2025.3585718?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/LSENS.2025.3585718, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370333642",
+                    "name": "Maiko Lie"
+                },
+                {
+                    "authorId": "2370335000",
+                    "name": "Thomas Beltrame"
+                },
+                {
+                    "authorId": "2370281840",
+                    "name": "Vinicius T.D.M. da Costa"
+                },
+                {
+                    "authorId": "2370330382",
+                    "name": "Gabriel T. Alves"
+                },
+                {
+                    "authorId": "2370335037",
+                    "name": "Mariana de O. Gois"
+                },
+                {
+                    "authorId": "2370334877",
+                    "name": "Eduardo K. Chikui"
+                },
+                {
+                    "authorId": "2370605697",
+                    "name": "Juscelino L. de O. Junior"
+                },
+                {
+                    "authorId": "2370339121",
+                    "name": "Paula R. Pinto"
+                },
+                {
+                    "authorId": "2370334868",
+                    "name": "Marcus de Assis Angeloni"
+                }
+            ],
+            "abstract": "Measuring health-related physical fitness (HRPF) is important due to its association with overall health, enabling disease prevention, personalized exercise prescription, among other applications. HRPF measurement is often performed on a laboratory setting, using clinical equipment under professional supervision, but has become more accessible due to wearable technology. For instance, current generation smartwatches are capable of predicting two of the five HRPF components acknowledged by the American College of Sports Medicine, namely, cardiorespiratory fitness ($\\dot{V}O_{2}$max) and body composition (body fat %). In this letter, we present approaches for prediction of the remaining three HRPF components i.e., muscular endurance, muscular strength, and flexibility, allowing a complete characterization of HRPF solely from smartwatch data. We adopted a component-specific approach, as opposed to more general approaches used in previous work, and show that our approach is more effective on data from wearable devices. Furthermore, we show that free-living activity data, exclusively accessible through wearables, is highly discriminative for HRPF prediction. This demonstrates that current consumer-grade wearables enable more than merely approximating clinical data\u2014they also complement it with real-world activity information.",
+            "score": 1
+        },
+        {
+            "id": "3fc44c876d9e9b578fed11016e849f4bad7eb10f",
+            "paperId": "3fc44c876d9e9b578fed11016e849f4bad7eb10f",
+            "title": "Assessing the Accuracy of Diagnostic Capabilities of Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12248924, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1410791026",
+                    "name": "A. Urda-C\u00eempean"
+                },
+                {
+                    "authorId": "3612254",
+                    "name": "D. Leucu\u021ba"
+                },
+                {
+                    "authorId": "40487791",
+                    "name": "C. Drugan"
+                },
+                {
+                    "authorId": "39290995",
+                    "name": "A. Du\u021bu"
+                },
+                {
+                    "authorId": "1855145",
+                    "name": "Tudor C\u0103linici"
+                },
+                {
+                    "authorId": "3820698",
+                    "name": "T. Drugan"
+                }
+            ],
+            "abstract": "Background: In recent years, numerous artificial intelligence applications, especially generative large language models, have evolved in the medical field. This study conducted a structured comparative analysis of four leading generative large language models (LLMs)\u2014ChatGPT-4o (OpenAI), Grok-3 (xAI), Gemini-2.0 Flash (Google), and DeepSeek-V3 (DeepSeek)\u2014to evaluate their diagnostic performance in clinical case scenarios. Methods: We assessed medical knowledge recall and clinical reasoning capabilities through staged, progressively complex cases, with responses graded by expert raters using a 0\u20135 scale. Results: All models performed better on knowledge-based questions than on reasoning tasks, highlighting the ongoing limitations in contextual diagnostic synthesis. Overall, DeepSeek outperformed the other models, achieving significantly higher scores across all evaluation dimensions (p < 0.05), particularly in regards to medical reasoning tasks. Conclusions: While these findings support the feasibility of using LLMs for medical training and decision support, the study emphasizes the need for improved interpretability, prompt optimization, and rigorous benchmarking to ensure clinical reliability. This structured, comparative approach contributes to ongoing efforts to establish standardized evaluation frameworks for integrating LLMs into diagnostic workflows.",
+            "score": 1
+        },
+        {
+            "id": "62a0c29559d09884c1763c8ea57a00c28ccb2984",
+            "paperId": "62a0c29559d09884c1763c8ea57a00c28ccb2984",
+            "title": "Large Language Models Predict Human Well-being - But Not Equally Everywhere",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.06141, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "24637418",
+                    "name": "Pat Pataranutaporn"
+                },
+                {
+                    "authorId": "6111882",
+                    "name": "Nattavudh Powdthavee"
+                },
+                {
+                    "authorId": "2302564306",
+                    "name": "Chayapatr Archiwaranguprok"
+                },
+                {
+                    "authorId": "2253574849",
+                    "name": "Pattie Maes"
+                }
+            ],
+            "abstract": "Subjective well-being is a key metric in economic, medical, and policy decision-making. As artificial intelligence provides scalable tools for modelling human outcomes, it is crucial to evaluate whether large language models (LLMs) can accurately predict well-being across diverse global populations. We evaluate four leading LLMs using data from 64,000 individuals in 64 countries. While LLMs capture broad correlates such as income and health, their predictive accuracy decreases in countries underrepresented in the training data, highlighting systematic biases rooted in global digital and economic inequality. A pre-registered experiment demonstrates that LLMs rely on surface-level linguistic similarity rather than conceptual understanding, leading to systematic misestimations in unfamiliar or resource-limited settings. Injecting findings from underrepresented contexts substantially enhances performance, but a significant gap remains. These results highlight both the promise and limitations of LLMs in predicting global well-being, underscoring the importance of robust validation prior to their implementation across these areas.",
+            "score": 1
+        },
+        {
+            "id": "5df27bd43cd48438cd57e7f0dd3b14ec9ec9d97f",
+            "paperId": "5df27bd43cd48438cd57e7f0dd3b14ec9ec9d97f",
+            "title": "Exploring the potential of lightweight large language models for AI-based mental health counselling task: a novel comparative study",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12214774, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "151188924",
+                    "name": "Ritesh Maurya"
+                },
+                {
+                    "authorId": "2369578091",
+                    "name": "Nikhil Rajput"
+                },
+                {
+                    "authorId": "2369611847",
+                    "name": "M. G. Diviit"
+                },
+                {
+                    "authorId": "2314352210",
+                    "name": "Satyajit Mahapatra"
+                },
+                {
+                    "authorId": "2369579887",
+                    "name": "Manish Kumar Ojha"
+                }
+            ],
+            "abstract": "In recent years, Transformer-based large language models (LLMs) have significantly improved upon their text generation capability. Mental health is a serious concern that can be addressed using LLM-based automated mental health counselors. These systems can provide empathetic responses to individuals in need while considering the negative beliefs, stigma, and taboos associated with mental health issues. Considering the large size of these LLMs makes it difficult to deploy these automated counselors on low cost/resource devices such as edge devices. Therefore, the motivation of the present study to analyze the effectiveness of lightweight LLMs in the development of automated mental health counseling systems. In this study, lightweight open source LLMs such as Google\u2019s T5s (small variant), BARTB (base variant), FLAN-T5s (small variant), and Microsoft\u2019s GODELB (base variant) have been fine-tuned for automated mental health counseling task utilizing a diverse set of datasets publicly available online. The experimental results reveal that BART\u2019s base variant outperformed the other models across all key metrics such as ROUGE-1, ROUGE-2, ROUGE-L, and BLEU with scores of 0.4727, 0.2665, 0.3554, and 25.3993 respectively. In comparison to other models, BART-base model generated empathetic, and emotionally supportive responses. These findings highlight the potential of lightweight LLMs (small size LLMs), in advancing the field of LLM-based mental health counseling solutions and underscore the need for exploration of lightweight LLMs for this mental health counseling use case. The code for this work is available at the following link: https://github.com/diviitmg03/Comparative-analysis-of-LLMs-.git.",
+            "score": 1
+        },
+        {
+            "id": "76ab9bc1cbf529d1cfe5963f24069539c3199745",
+            "paperId": "76ab9bc1cbf529d1cfe5963f24069539c3199745",
+            "title": "Towards accurate differential diagnosis with large language models",
+            "year": 2023,
+            "citationCount": 124,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2312.00164, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2266474644",
+                    "name": "Daniel McDuff"
+                },
+                {
+                    "authorId": "10685155",
+                    "name": "M. Schaekermann"
+                },
+                {
+                    "authorId": "2244651851",
+                    "name": "Tao Tu"
+                },
+                {
+                    "authorId": "2266472373",
+                    "name": "Anil Palepu"
+                },
+                {
+                    "authorId": "2217861514",
+                    "name": "Amy Wang"
+                },
+                {
+                    "authorId": "2239097601",
+                    "name": "Jake Garrison"
+                },
+                {
+                    "authorId": "2268759673",
+                    "name": "Karan Singhal"
+                },
+                {
+                    "authorId": "2269148436",
+                    "name": "Yash Sharma"
+                },
+                {
+                    "authorId": "40151244",
+                    "name": "Shekoofeh Azizi"
+                },
+                {
+                    "authorId": "2269148145",
+                    "name": "Kavita Kulkarni"
+                },
+                {
+                    "authorId": "2269258459",
+                    "name": "Le Hou"
+                },
+                {
+                    "authorId": "2269173133",
+                    "name": "Yong Cheng"
+                },
+                {
+                    "authorId": "2269299912",
+                    "name": "Yun Liu"
+                },
+                {
+                    "authorId": "2268760043",
+                    "name": "S. Mahdavi"
+                },
+                {
+                    "authorId": "28612243",
+                    "name": "Sushant Prakash"
+                },
+                {
+                    "authorId": "2261090875",
+                    "name": "Anupam Pathak"
+                },
+                {
+                    "authorId": "52326632",
+                    "name": "Christopher Semturs"
+                },
+                {
+                    "authorId": "2261277652",
+                    "name": "Shwetak N. Patel"
+                },
+                {
+                    "authorId": "47191829",
+                    "name": "D. Webster"
+                },
+                {
+                    "authorId": "1896724",
+                    "name": "Ewa Dominowska"
+                },
+                {
+                    "authorId": "2051681709",
+                    "name": "Juraj Gottweis"
+                },
+                {
+                    "authorId": "2269147696",
+                    "name": "Joelle Barral"
+                },
+                {
+                    "authorId": "2269148566",
+                    "name": "Katherine Chou"
+                },
+                {
+                    "authorId": "102388768",
+                    "name": "G. Corrado"
+                },
+                {
+                    "authorId": "2269148232",
+                    "name": "Yossi Matias"
+                },
+                {
+                    "authorId": "2219035823",
+                    "name": "Jacob Sunshine"
+                },
+                {
+                    "authorId": "2213433382",
+                    "name": "A. Karthikesalingam"
+                },
+                {
+                    "authorId": "144223091",
+                    "name": "Vivek Natarajan"
+                }
+            ],
+            "abstract": "A comprehensive differential diagnosis is a cornerstone of medical care that is often reached through an iterative process of interpretation that combines clinical history, physical examination, investigations and procedures. Interactive interfaces powered by large language models present new opportunities to assist and automate aspects of this process1. Here we introduce the Articulate Medical Intelligence Explorer (AMIE), a large language model that is optimized for diagnostic reasoning, and evaluate its ability to generate a differential diagnosis alone or as an aid to clinicians. Twenty clinicians evaluated 302 challenging, real-world medical cases sourced from published case reports. Each case report was read by two clinicians, who were randomized to one of two assistive conditions: assistance from search engines and standard medical resources; or assistance from AMIE in addition to these tools. All clinicians provided a baseline, unassisted differential diagnosis prior to using the respective assistive tools. AMIE exhibited standalone performance that exceeded that of unassisted clinicians (top-10 accuracy 59.1% versus 33.6%, P\u2009=\u20090.04). Comparing the two assisted study arms, the differential diagnosis quality score was higher for clinicians assisted by AMIE (top-10 accuracy 51.7%) compared with clinicians without its assistance (36.1%; McNemar\u2019s test: 45.7, P\u2009<\u20090.01) and clinicians with search (44.4%; McNemar\u2019s test: 4.75, P\u2009=\u20090.03). Further, clinicians assisted by AMIE arrived at more comprehensive differential lists than those without assistance from AMIE. Our study suggests that AMIE has potential to improve clinicians\u2019 diagnostic reasoning and accuracy in challenging cases, meriting further real-world evaluation for its ability to empower physicians and widen patients\u2019 access to specialist-level expertise.",
+            "score": 1
+        },
+        {
+            "id": "09680030630dbbc4dc1c9b6d4aeed9857a769007",
+            "paperId": "09680030630dbbc4dc1c9b6d4aeed9857a769007",
+            "title": "From Classification to Clinical Insights",
+            "year": 2023,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3659604",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2311.13063, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2148323643",
+                    "name": "Zachary Englhardt"
+                },
+                {
+                    "authorId": "2108786845",
+                    "name": "Chengqian Ma"
+                },
+                {
+                    "authorId": "2070130024",
+                    "name": "Margaret E. Morris"
+                },
+                {
+                    "authorId": "2295778579",
+                    "name": "Chun-Cheng Chang"
+                },
+                {
+                    "authorId": "2268804791",
+                    "name": "Xuhai Xu"
+                },
+                {
+                    "authorId": "2267901975",
+                    "name": "Lianhui Qin"
+                },
+                {
+                    "authorId": "2266474644",
+                    "name": "Daniel McDuff"
+                },
+                {
+                    "authorId": "2120101568",
+                    "name": "Xin Liu"
+                },
+                {
+                    "authorId": "2267868297",
+                    "name": "Shwetak Patel"
+                },
+                {
+                    "authorId": "2221547732",
+                    "name": "Vikram Iyer"
+                }
+            ],
+            "abstract": "Passively collected behavioral health data from ubiquitous sensors could provide mental health professionals valuable insights into patient's daily lives, but such efforts are impeded by disparate metrics, lack of interoperability, and unclear correlations between the measured signals and an individual's mental health. To address these challenges, we pioneer the exploration of large language models (LLMs) to synthesize clinically relevant insights from multi-sensor data. We develop chain-of-thought prompting methods to generate LLM reasoning on how data pertaining to activity, sleep and social interaction relate to conditions such as depression and anxiety. We then prompt the LLM to perform binary classification, achieving accuracies of 61.1%, exceeding the state of the art. We find models like GPT-4 correctly reference numerical data 75% of the time. While we began our investigation by developing methods to use LLMs to output binary classifications for conditions like depression, we find instead that their greatest potential value to clinicians lies not in diagnostic classification, but rather in rigorous analysis of diverse self-tracking data to generate natural language summaries that synthesize multiple data streams and identify potential concerns. Clinicians envisioned using these insights in a variety of ways, principally for fostering collaborative investigation with patients to strengthen the therapeutic alliance and guide treatment. We describe this collaborative engagement, additional envisioned uses, and associated concerns that must be addressed before adoption in real-world contexts.",
+            "score": 1
+        },
+        {
+            "id": "44d16a076c00ecada3d425203377e4ec951c4ed0",
+            "paperId": "44d16a076c00ecada3d425203377e4ec951c4ed0",
+            "title": "MedAgents: Large Language Models as Collaborators for Zero-shot Medical Reasoning",
+            "year": 2023,
+            "citationCount": 198,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2311.10537, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "47274259",
+                    "name": "Xiangru Tang"
+                },
+                {
+                    "authorId": "2187586628",
+                    "name": "Anni Zou"
+                },
+                {
+                    "authorId": "3322871",
+                    "name": "Zhuosheng Zhang"
+                },
+                {
+                    "authorId": "46316984",
+                    "name": "Yilun Zhao"
+                },
+                {
+                    "authorId": "2267545169",
+                    "name": "Xingyao Zhang"
+                },
+                {
+                    "authorId": "2266838179",
+                    "name": "Arman Cohan"
+                },
+                {
+                    "authorId": "2201323142",
+                    "name": "Mark B. Gerstein"
+                }
+            ],
+            "abstract": "Large language models (LLMs), despite their remarkable progress across various general domains, encounter significant barriers in medicine and healthcare. This field faces unique challenges such as domain-specific terminologies and reasoning over specialized knowledge. To address these issues, we propose MedAgents, a novel multi-disciplinary collaboration framework for the medical domain. MedAgents leverages LLM-based agents in a role-playing setting that participate in a collaborative multi-round discussion, thereby enhancing LLM proficiency and reasoning capabilities. This training-free framework encompasses five critical steps: gathering domain experts, proposing individual analyses, summarising these analyses into a report, iterating over discussions until a consensus is reached, and ultimately making a decision. Our work focuses on the zero-shot setting, which is applicable in real-world scenarios. Experimental results on nine datasets (MedQA, MedMCQA, PubMedQA, and six subtasks from MMLU) establish that our proposed MedAgents framework excels at mining and harnessing the medical expertise within LLMs, as well as extending its reasoning abilities. Our code can be found at https://github.com/gersteinlab/MedAgents.",
+            "score": 1
+        },
+        {
+            "id": "2b35579ecf8b487ed7e24bab4fc53941051f4dd0",
+            "paperId": "2b35579ecf8b487ed7e24bab4fc53941051f4dd0",
+            "title": "MindShift: Leveraging Large Language Models for Mental-States-Based Problematic Smartphone Use Intervention",
+            "year": 2023,
+            "citationCount": 29,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3613904.3642790",
+                "status": "HYBRID",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.16639, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2209530383",
+                    "name": "Ruolan Wu"
+                },
+                {
+                    "authorId": "2265952293",
+                    "name": "Chun Yu"
+                },
+                {
+                    "authorId": "2248834172",
+                    "name": "Xiaole Pan"
+                },
+                {
+                    "authorId": "2247775088",
+                    "name": "Yujia Liu"
+                },
+                {
+                    "authorId": "2291015956",
+                    "name": "Ningning Zhang"
+                },
+                {
+                    "authorId": "2257139682",
+                    "name": "Yue Fu"
+                },
+                {
+                    "authorId": "2247789527",
+                    "name": "Yuhan Wang"
+                },
+                {
+                    "authorId": "2256386334",
+                    "name": "Zhi Zheng"
+                },
+                {
+                    "authorId": "2247970182",
+                    "name": "Li Chen"
+                },
+                {
+                    "authorId": "2113804713",
+                    "name": "Qiaolei Jiang"
+                },
+                {
+                    "authorId": "2247941519",
+                    "name": "Xuhai Xu"
+                },
+                {
+                    "authorId": "2152861676",
+                    "name": "Yuanchun Shi"
+                }
+            ],
+            "abstract": "Problematic smartphone use negatively affects physical and mental health. Despite the wide range of prior research, existing persuasive techniques are not flexible enough to provide dynamic persuasion content based on users\u2019 physical contexts and mental states. We first conducted a Wizard-of-Oz study (N=12) and an interview study (N=10) to summarize the mental states behind problematic smartphone use: boredom, stress, and inertia. This informs our design of four persuasion strategies: understanding, comforting, evoking, and scaffolding habits. We leveraged large language models (LLMs) to enable the automatic and dynamic generation of effective persuasion content. We developed MindShift, a novel LLM-powered problematic smartphone use intervention technique. MindShift takes users\u2019 in-the-moment app usage behaviors, physical contexts, mental states, goals & habits as input, and generates personalized and dynamic persuasive content with appropriate persuasion strategies. We conducted a 5-week field experiment (N=25) to compare MindShift with its simplified version (remove mental states) and baseline techniques (fixed reminder). The results show that MindShift improves intervention acceptance rates by 4.7-22.5% and reduces smartphone usage duration by 7.4-9.8%. Moreover, users have a significant drop in smartphone addiction scale scores and a rise in self-efficacy scale scores. Our study sheds light on the potential of leveraging LLMs for context-aware persuasion in other behavior change domains.",
+            "score": 1
+        },
+        {
+            "id": "c5fa173e6f52dbc2e5156e2e7c9e6d3c0f1c4aa0",
+            "paperId": "c5fa173e6f52dbc2e5156e2e7c9e6d3c0f1c4aa0",
+            "title": "DRG-LLaMA : tuning LLaMA model to predict diagnosis-related group for hospitalized patients",
+            "year": 2023,
+            "citationCount": 77,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.12625",
+                "status": "CLOSED",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.12625, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2244971536",
+                    "name": "Hanyin Wang"
+                },
+                {
+                    "authorId": "2244662436",
+                    "name": "Chufan Gao"
+                },
+                {
+                    "authorId": "2244623612",
+                    "name": "Christopher Dantona"
+                },
+                {
+                    "authorId": "2244623519",
+                    "name": "Bryan Hull"
+                },
+                {
+                    "authorId": "2253820975",
+                    "name": "Jimeng Sun"
+                }
+            ],
+            "abstract": "In the U.S. inpatient payment system, the Diagnosis-Related Group (DRG) is pivotal, but its assignment process is inefficient. The study introduces DRG-LLaMA, an advanced large language model (LLM) fine-tuned on clinical notes to enhance DRGs assignment. Utilizing LLaMA as the foundational model and optimizing it through Low-Rank Adaptation (LoRA) on 236,192 MIMIC-IV discharge summaries, our DRG-LLaMA -7B model exhibited a noteworthy macro-averaged F1 score of 0.327, a top-1 prediction accuracy of 52.0%, and a macro-averaged Area Under the Curve (AUC) of 0.986, with a maximum input token length of 512. This model surpassed the performance of prior leading models in DRG prediction, showing a relative improvement of 40.3% and 35.7% in macro-averaged F1 score compared to ClinicalBERT and CAML, respectively. Applied to base DRG and complication or comorbidity (CC)/major complication or comorbidity (MCC) prediction, DRG-LLaMA achieved a top-1 prediction accuracy of 67.8% and 67.5%, respectively. Additionally, our findings indicate that DRG-LLaMA \u2019s performance correlates with increased model parameters and input context lengths.",
+            "score": 1
+        },
+        {
+            "id": "355d580b7f24afb073fbb21d8ad3fd2034dc3128",
+            "paperId": "355d580b7f24afb073fbb21d8ad3fd2034dc3128",
+            "title": "Publicly Shareable Clinical Large Language Model Built on Synthetic Clinical Notes",
+            "year": 2023,
+            "citationCount": 42,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.00237",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.00237, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2217192784",
+                    "name": "Sunjun Kweon"
+                },
+                {
+                    "authorId": "2237591679",
+                    "name": "Junu Kim"
+                },
+                {
+                    "authorId": "2177426085",
+                    "name": "Jiyoun Kim"
+                },
+                {
+                    "authorId": "2237426647",
+                    "name": "Sujeong Im"
+                },
+                {
+                    "authorId": "2237425314",
+                    "name": "Eunbyeol Cho"
+                },
+                {
+                    "authorId": "2149556520",
+                    "name": "Seongsu Bae"
+                },
+                {
+                    "authorId": "2110913353",
+                    "name": "Jungwoo Oh"
+                },
+                {
+                    "authorId": "2115216766",
+                    "name": "Gyubok Lee"
+                },
+                {
+                    "authorId": "2361653101",
+                    "name": "Jong Hak Moon"
+                },
+                {
+                    "authorId": "2248194507",
+                    "name": "S. C. You"
+                },
+                {
+                    "authorId": "2237425043",
+                    "name": "Seungjin Baek"
+                },
+                {
+                    "authorId": "2237449108",
+                    "name": "Chang Hoon Han"
+                },
+                {
+                    "authorId": "2237637583",
+                    "name": "Yoon Bin Jung"
+                },
+                {
+                    "authorId": "39947629",
+                    "name": "Yohan Jo"
+                },
+                {
+                    "authorId": "3242613",
+                    "name": "E. Choi"
+                }
+            ],
+            "abstract": "The development of large language models tailored for handling patients' clinical notes is often hindered by the limited accessibility and usability of these notes due to strict privacy regulations. To address these challenges, we first create synthetic large-scale clinical notes using publicly available case reports extracted from biomedical literature. We then use these synthetic notes to train our specialized clinical large language model, Asclepius. While Asclepius is trained on synthetic data, we assess its potential performance in real-world applications by evaluating it using real clinical notes. We benchmark Asclepius against several other large language models, including GPT-3.5-turbo and other open-source alternatives. To further validate our approach using synthetic notes, we also compare Asclepius with its variants trained on real clinical notes. Our findings convincingly demonstrate that synthetic clinical notes can serve as viable substitutes for real ones when constructing high-performing clinical language models. This conclusion is supported by detailed evaluations conducted by both GPT-4 and medical professionals. All resources including weights, codes, and data used in the development of Asclepius are made publicly accessible for future research. (https://github.com/starmpcc/Asclepius)",
+            "score": 1
+        },
+        {
+            "id": "8ab6174791a0299e779804300142237d1669c743",
+            "paperId": "8ab6174791a0299e779804300142237d1669c743",
+            "title": "Multimodal LLMs for health grounded in individual-specific data",
+            "year": 2023,
+            "citationCount": 61,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2307.09018",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2307.09018, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "144140638",
+                    "name": "A. Belyaeva"
+                },
+                {
+                    "authorId": "1388784597",
+                    "name": "J. Cosentino"
+                },
+                {
+                    "authorId": "2420527",
+                    "name": "F. Hormozdiari"
+                },
+                {
+                    "authorId": "1442214202",
+                    "name": "Krish Eswaran"
+                },
+                {
+                    "authorId": "2894170",
+                    "name": "S. Shetty"
+                },
+                {
+                    "authorId": "1472894007",
+                    "name": "Greg C. Corrado"
+                },
+                {
+                    "authorId": "51023969",
+                    "name": "A. Carroll"
+                },
+                {
+                    "authorId": "6322777",
+                    "name": "Cory Y. McLean"
+                },
+                {
+                    "authorId": "3238315",
+                    "name": "N. Furlotte"
+                }
+            ],
+            "abstract": "Foundation large language models (LLMs) have shown an impressive ability to solve tasks across a wide range of fields including health. To effectively solve personalized health tasks, LLMs need the ability to ingest a diversity of data modalities that are relevant to an individual's health status. In this paper, we take a step towards creating multimodal LLMs for health that are grounded in individual-specific data by developing a framework (HeLM: Health Large Language Model for Multimodal Understanding) that enables LLMs to use high-dimensional clinical modalities to estimate underlying disease risk. HeLM encodes complex data modalities by learning an encoder that maps them into the LLM's token embedding space and for simple modalities like tabular data by serializing the data into text. Using data from the UK Biobank, we show that HeLM can effectively use demographic and clinical features in addition to high-dimensional time-series data to estimate disease risk. For example, HeLM achieves an AUROC of 0.75 for asthma prediction when combining tabular and spirogram data modalities compared with 0.49 when only using tabular data. Overall, we find that HeLM outperforms or performs at parity with classical machine learning approaches across a selection of eight binary traits. Furthermore, we investigate the downstream uses of this model such as its generalizability to out-of-distribution traits and its ability to power conversations around individual health and wellness.",
+            "score": 1
+        },
+        {
+            "id": "78ab0eb7355a380cb50303e04cbe6a2ba9cedba6",
+            "paperId": "78ab0eb7355a380cb50303e04cbe6a2ba9cedba6",
+            "title": "AI4FoodDB: a database for personalized e-Health nutrition and lifestyle through wearable devices and artificial intelligence",
+            "year": 2023,
+            "citationCount": 30,
+            "openAccessPdf": {
+                "url": "https://academic.oup.com/database/article-pdf/doi/10.1093/database/baad049/50910121/baad049.pdf",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10354505, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1637242132",
+                    "name": "Sergio Romero-Tapiador"
+                },
+                {
+                    "authorId": "2191532132",
+                    "name": "Blanca Lacruz-Pleguezuelos"
+                },
+                {
+                    "authorId": "1708502",
+                    "name": "Rub\u00e9n Tolosana"
+                },
+                {
+                    "authorId": "151009701",
+                    "name": "Gala Freixer"
+                },
+                {
+                    "authorId": "39264284",
+                    "name": "Roberto Daza"
+                },
+                {
+                    "authorId": "1411354310",
+                    "name": "Cristina M. Fern\u00e1ndez-D\u00edaz"
+                },
+                {
+                    "authorId": "1434909963",
+                    "name": "Elena Aguilar-Aguilar"
+                },
+                {
+                    "authorId": "2223903461",
+                    "name": "Jorge Fern\u00e1ndez-Cabezas"
+                },
+                {
+                    "authorId": "1399011467",
+                    "name": "Silvia Cruz-Gil"
+                },
+                {
+                    "authorId": "37513866",
+                    "name": "Susana Molina"
+                },
+                {
+                    "authorId": "49096049",
+                    "name": "M. C. Crespo"
+                },
+                {
+                    "authorId": "152212784",
+                    "name": "T. Laguna"
+                },
+                {
+                    "authorId": "1398577149",
+                    "name": "L. Marcos-Zambrano"
+                },
+                {
+                    "authorId": "1402712530",
+                    "name": "R. Vera-Rodr\u00edguez"
+                },
+                {
+                    "authorId": "1701431",
+                    "name": "Julian Fierrez"
+                },
+                {
+                    "authorId": "7947405",
+                    "name": "A. Ram\u00edrez de Molina"
+                },
+                {
+                    "authorId": "1397258551",
+                    "name": "J. Ortega-Garcia"
+                },
+                {
+                    "authorId": "1403526101",
+                    "name": "Isabel Espinosa-Salinas"
+                },
+                {
+                    "authorId": "144083995",
+                    "name": "A. Morales"
+                },
+                {
+                    "authorId": "7701699",
+                    "name": "Enrique Carrillo de Santa Pau"
+                }
+            ],
+            "abstract": "Abstract The increasing prevalence of diet-related diseases calls for an improvement in nutritional advice. Personalized nutrition aims to solve this problem by adapting dietary and lifestyle guidelines to the unique circumstances of each individual. With the latest advances in technology and data science, researchers can now automatically collect and analyze large amounts of data from a variety of sources, including wearable and smart devices. By combining these diverse data, more comprehensive insights of the human body and its diseases can be achieved. However, there are still major challenges to overcome, including the need for more robust data and standardization of methodologies for better subject monitoring and assessment. Here, we present the AI4Food database (AI4FoodDB), which gathers data from a nutritional weight loss intervention monitoring 100 overweight and obese participants during 1 month. Data acquisition involved manual traditional approaches, novel digital methods and the collection of biological samples, obtaining: (i) biological samples at the beginning and the end of the intervention, (ii) anthropometric measurements every 2 weeks, (iii) lifestyle and nutritional questionnaires at two different time points and (iv) continuous digital measurements for 2 weeks. To the best of our knowledge, AI4FoodDB is the first public database that centralizes food images, wearable sensors, validated questionnaires and biological samples from the same intervention. AI4FoodDB thus has immense potential for fostering the advancement of automatic and novel artificial intelligence techniques in the field of personalized care. Moreover, the collected information will yield valuable insights into the relationships between different variables and health outcomes, allowing researchers to generate and test new hypotheses, identify novel biomarkers and digital endpoints, and explore how different lifestyle, biological and digital factors impact health. The aim of this article is to describe the datasets included in AI4FoodDB and to outline the potential that they hold for precision health research. Database URL https://github.com/AI4Food/AI4FoodDB",
+            "score": 1
+        },
+        {
+            "id": "060d472f6efce06bef0123c974a24fdcc54c0e6d",
+            "paperId": "060d472f6efce06bef0123c974a24fdcc54c0e6d",
+            "title": "Coding Inequity: Assessing GPT-4's Potential for Perpetuating Racial and Gender Biases in Healthcare",
+            "year": 2023,
+            "citationCount": 29,
+            "openAccessPdf": {
+                "url": "https://www.medrxiv.org/content/medrxiv/early/2023/07/17/2023.07.13.23292577.full.pdf",
+                "status": "GREEN",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1101/2023.07.13.23292577?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1101/2023.07.13.23292577, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2068890474",
+                    "name": "T. Zack"
+                },
+                {
+                    "authorId": "51172373",
+                    "name": "Eric P. Lehman"
+                },
+                {
+                    "authorId": "51903517",
+                    "name": "Mirac Suzgun"
+                },
+                {
+                    "authorId": "143603572",
+                    "name": "J. A. Rodriguez"
+                },
+                {
+                    "authorId": "143605744",
+                    "name": "L. Celi"
+                },
+                {
+                    "authorId": "2221827815",
+                    "name": "J. Gichoya"
+                },
+                {
+                    "authorId": "144138733",
+                    "name": "D. Jurafsky"
+                },
+                {
+                    "authorId": "47288457",
+                    "name": "P. Szolovits"
+                },
+                {
+                    "authorId": "1739447",
+                    "name": "D. Bates"
+                },
+                {
+                    "authorId": "2223546402",
+                    "name": "E. Raja-Elie"
+                },
+                {
+                    "authorId": "2223546413",
+                    "name": "Abdulnour"
+                },
+                {
+                    "authorId": "1716151",
+                    "name": "A. Butte"
+                },
+                {
+                    "authorId": "6003726",
+                    "name": "Emily Alsentzer"
+                }
+            ],
+            "abstract": "Background. Large language models (LLMs) such as GPT-4 hold great promise as transformative tools in healthcare, ranging from automating administrative tasks to augmenting clinical decision-making. However, these models also pose a serious danger of perpetuating biases and delivering incorrect medical diagnoses, which can have a direct, harmful impact on medical care. Methods. Using the Azure OpenAI API, we tested whether GPT-4 encodes racial and gender biases and examined the impact of such biases on four potential applications of LLMs in the clinical domain---namely, medical education, diagnostic reasoning, plan generation, and patient assessment. We conducted experiments with prompts designed to resemble typical use of GPT-4 within clinical and medical education applications. We used clinical vignettes from NEJM Healer and from published research on implicit bias in healthcare. GPT-4 estimates of the demographic distribution of medical conditions were compared to true U.S. prevalence estimates. Differential diagnosis and treatment planning were evaluated across demographic groups using standard statistical tests for significance between groups. Findings. We find that GPT-4 does not appropriately model the demographic diversity of medical conditions, consistently producing clinical vignettes that stereotype demographic presentations. The differential diagnoses created by GPT-4 for standardized clinical vignettes were more likely to include diagnoses that stereotype certain races, ethnicities, and gender identities. Assessment and plans created by the model showed significant association between demographic attributes and recommendations for more expensive procedures as well as differences in patient perception. Interpretation. Our findings highlight the urgent need for comprehensive and transparent bias assessments of LLM tools like GPT-4 for every intended use case before they are integrated into clinical care. We discuss the potential sources of these biases and potential mitigation strategies prior to clinical implementation.",
+            "score": 1
+        },
+        {
+            "id": "f590cbb28e4994f62e94bf9400a9cb33e99922fa",
+            "paperId": "f590cbb28e4994f62e94bf9400a9cb33e99922fa",
+            "title": "Understanding Social Reasoning in Language Models with Language Models",
+            "year": 2023,
+            "citationCount": 135,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2306.15448",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.15448, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "144841994",
+                    "name": "Kanishk Gandhi"
+                },
+                {
+                    "authorId": "2220625823",
+                    "name": "Jan-Philipp Franken"
+                },
+                {
+                    "authorId": "2697953",
+                    "name": "Tobias Gerstenberg"
+                },
+                {
+                    "authorId": "144002017",
+                    "name": "Noah D. Goodman"
+                }
+            ],
+            "abstract": "As Large Language Models (LLMs) become increasingly integrated into our everyday lives, understanding their ability to comprehend human mental states becomes critical for ensuring effective interactions. However, despite the recent attempts to assess the Theory-of-Mind (ToM) reasoning capabilities of LLMs, the degree to which these models can align with human ToM remains a nuanced topic of exploration. This is primarily due to two distinct challenges: (1) the presence of inconsistent results from previous evaluations, and (2) concerns surrounding the validity of existing evaluation methodologies. To address these challenges, we present a novel framework for procedurally generating evaluations with LLMs by populating causal templates. Using our framework, we create a new social reasoning benchmark (BigToM) for LLMs which consists of 25 controls and 5,000 model-written evaluations. We find that human participants rate the quality of our benchmark higher than previous crowd-sourced evaluations and comparable to expert-written evaluations. Using BigToM, we evaluate the social reasoning capabilities of a variety of LLMs and compare model performances with human performance. Our results suggest that GPT4 has ToM capabilities that mirror human inference patterns, though less reliable, while other LLMs struggle.",
+            "score": 1
+        },
+        {
+            "id": "6dd44624ac912fb50c21c691806ee52d27e73abb",
+            "paperId": "6dd44624ac912fb50c21c691806ee52d27e73abb",
+            "title": "Large Language Models are Few-Shot Health Learners",
+            "year": 2023,
+            "citationCount": 123,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.15525",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.15525, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2120101568",
+                    "name": "Xin Liu"
+                },
+                {
+                    "authorId": "1801452",
+                    "name": "Daniel J. McDuff"
+                },
+                {
+                    "authorId": "2064565683",
+                    "name": "G. Kov\u00e1cs"
+                },
+                {
+                    "authorId": "1382495709",
+                    "name": "I. Galatzer-Levy"
+                },
+                {
+                    "authorId": "2219035823",
+                    "name": "Jacob Sunshine"
+                },
+                {
+                    "authorId": "40465145",
+                    "name": "Jiening Zhan"
+                },
+                {
+                    "authorId": "145910256",
+                    "name": "M. Poh"
+                },
+                {
+                    "authorId": "145657522",
+                    "name": "Shun Liao"
+                },
+                {
+                    "authorId": "4330124",
+                    "name": "P. Achille"
+                },
+                {
+                    "authorId": "2152110626",
+                    "name": "Shwetak N. Patel"
+                }
+            ],
+            "abstract": "Large language models (LLMs) can capture rich representations of concepts that are useful for real-world tasks. However, language alone is limited. While existing LLMs excel at text-based inferences, health applications require that models be grounded in numerical data (e.g., vital signs, laboratory values in clinical domains; steps, movement in the wellness domain) that is not easily or readily expressed as text in existing training corpus. We demonstrate that with only few-shot tuning, a large language model is capable of grounding various physiological and behavioral time-series data and making meaningful inferences on numerous health tasks for both clinical and wellness contexts. Using data from wearable and medical sensor recordings, we evaluate these capabilities on the tasks of cardiac signal analysis, physical activity recognition, metabolic calculation (e.g., calories burned), and estimation of stress reports and mental health screeners.",
+            "score": 1
+        },
+        {
+            "id": "74b94891f8f7ac8d73d9df817b6720e1cb792bcc",
+            "paperId": "74b94891f8f7ac8d73d9df817b6720e1cb792bcc",
+            "title": "Enhancing Small Medical Learners with Privacy-preserving Contextual Prompting",
+            "year": 2023,
+            "citationCount": 11,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.12723",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.12723, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2108030191",
+                    "name": "Xinlu Zhang"
+                },
+                {
+                    "authorId": "50341591",
+                    "name": "SHIYANG LI"
+                },
+                {
+                    "authorId": "2145170944",
+                    "name": "Xianjun Yang"
+                },
+                {
+                    "authorId": "2218035941",
+                    "name": "Chenxin Tian"
+                },
+                {
+                    "authorId": "2219078907",
+                    "name": "Yao Qin"
+                },
+                {
+                    "authorId": "21038849",
+                    "name": "Linda Petzold"
+                }
+            ],
+            "abstract": "Large language models (LLMs) demonstrate remarkable medical expertise, but data privacy concerns impede their direct use in healthcare environments. Although offering improved data privacy protection, domain-specific small language models (SLMs) often underperform LLMs, emphasizing the need for methods that reduce this performance gap while alleviating privacy concerns. In this paper, we present a simple yet effective method that harnesses LLMs' medical proficiency to boost SLM performance in medical tasks under privacy-restricted scenarios. Specifically, we mitigate patient privacy issues by extracting keywords from medical data and prompting the LLM to generate a medical knowledge-intensive context by simulating clinicians' thought processes. This context serves as additional input for SLMs, augmenting their decision-making capabilities. Our method significantly enhances performance in both few-shot and full training settings across three medical knowledge-intensive tasks, achieving up to a 22.57% increase in absolute accuracy compared to SLM fine-tuning without context, and sets new state-of-the-art results in two medical tasks within privacy-restricted scenarios. Further out-of-domain testing and experiments in two general domain datasets showcase its generalizability and broad applicability. Our code can be found at https://github.com/XZhang97666/PrivacyBoost-SLM.",
+            "score": 1
+        },
+        {
+            "id": "74904727717df91e7f380b186eb1d004fb49a534",
+            "paperId": "74904727717df91e7f380b186eb1d004fb49a534",
+            "title": "Clinical Camel: An Open Expert-Level Medical Language Model with Dialogue-Based Knowledge Encoding",
+            "year": 2023,
+            "citationCount": 40,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.12031, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2159811443",
+                    "name": "Augustin Toma"
+                },
+                {
+                    "authorId": "36128664",
+                    "name": "P. Lawler"
+                },
+                {
+                    "authorId": "2220840742",
+                    "name": "Jimmy Ba"
+                },
+                {
+                    "authorId": "145253891",
+                    "name": "R. G. Krishnan"
+                },
+                {
+                    "authorId": "50333580",
+                    "name": "B. Rubin"
+                },
+                {
+                    "authorId": "2164832469",
+                    "name": "Bo Wang"
+                }
+            ],
+            "abstract": "We present Clinical Camel, an open large language model (LLM) explicitly tailored for clinical research. Fine-tuned from LLaMA-2 using QLoRA, Clinical Camel achieves state-of-the-art performance across medical benchmarks among openly available medical LLMs. Leveraging efficient single-GPU training, Clinical Camel surpasses GPT-3.5 in five-shot evaluations on all assessed benchmarks, including 64.3% on the USMLE Sample Exam (compared to 58.5% for GPT-3.5), 77.9% on PubMedQA (compared to 60.2%), 60.7% on MedQA (compared to 53.6%), and 54.2% on MedMCQA (compared to 51.0%). In addition to these benchmarks, Clinical Camel demonstrates its broader capabilities, such as synthesizing plausible clinical notes. This work introduces dialogue-based knowledge encoding, a novel method to synthesize conversational data from dense medical texts. While benchmark results are encouraging, extensive and rigorous human evaluation across diverse clinical scenarios is imperative to ascertain safety before implementation. By openly sharing Clinical Camel, we hope to foster transparent and collaborative research, working towards the safe integration of LLMs within the healthcare domain. Significant challenges concerning reliability, bias, and the potential for outdated knowledge persist. Nonetheless, the transparency provided by an open approach reinforces the scientific rigor essential for future clinical applications.",
+            "score": 1
+        },
+        {
+            "id": "ea72fb2a0d340f9d14fbcf300cd5f5fbbe1050bb",
+            "paperId": "ea72fb2a0d340f9d14fbcf300cd5f5fbbe1050bb",
+            "title": "Towards Expert-Level Medical Question Answering with Large Language Models",
+            "year": 2023,
+            "citationCount": 573,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.09617",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.09617, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "122902793",
+                    "name": "K. Singhal"
+                },
+                {
+                    "authorId": null,
+                    "name": "Tao Tu"
+                },
+                {
+                    "authorId": "2051681709",
+                    "name": "Juraj Gottweis"
+                },
+                {
+                    "authorId": "144042306",
+                    "name": "R. Sayres"
+                },
+                {
+                    "authorId": "2618745",
+                    "name": "Ellery Wulczyn"
+                },
+                {
+                    "authorId": "2153400663",
+                    "name": "Le Hou"
+                },
+                {
+                    "authorId": "144358401",
+                    "name": "Kevin Clark"
+                },
+                {
+                    "authorId": "7790917",
+                    "name": "S. Pfohl"
+                },
+                {
+                    "authorId": "1396212229",
+                    "name": "H. Cole-Lewis"
+                },
+                {
+                    "authorId": "2217366399",
+                    "name": "Darlene Neal"
+                },
+                {
+                    "authorId": "10685155",
+                    "name": "M. Schaekermann"
+                },
+                {
+                    "authorId": "2217861514",
+                    "name": "Amy Wang"
+                },
+                {
+                    "authorId": "2113278036",
+                    "name": "Mohamed Amin"
+                },
+                {
+                    "authorId": "12088502",
+                    "name": "S. Lachgar"
+                },
+                {
+                    "authorId": "40390773",
+                    "name": "P. A. Mansfield"
+                },
+                {
+                    "authorId": "28612243",
+                    "name": "Sushant Prakash"
+                },
+                {
+                    "authorId": "2056722536",
+                    "name": "Bradley Green"
+                },
+                {
+                    "authorId": "1896724",
+                    "name": "Ewa Dominowska"
+                },
+                {
+                    "authorId": "2661025",
+                    "name": "B. A. Y. Arcas"
+                },
+                {
+                    "authorId": "2213266",
+                    "name": "Nenad Toma\u0161ev"
+                },
+                {
+                    "authorId": "2118113191",
+                    "name": "Yun Liu"
+                },
+                {
+                    "authorId": "122418469",
+                    "name": "Renee C Wong"
+                },
+                {
+                    "authorId": "52326632",
+                    "name": "Christopher Semturs"
+                },
+                {
+                    "authorId": "1982213",
+                    "name": "S. S. Mahdavi"
+                },
+                {
+                    "authorId": "3658427",
+                    "name": "J. Barral"
+                },
+                {
+                    "authorId": "47191829",
+                    "name": "D. Webster"
+                },
+                {
+                    "authorId": "102388768",
+                    "name": "G. Corrado"
+                },
+                {
+                    "authorId": "1745572",
+                    "name": "Yossi Matias"
+                },
+                {
+                    "authorId": "40151244",
+                    "name": "Shekoofeh Azizi"
+                },
+                {
+                    "authorId": "2213433382",
+                    "name": "A. Karthikesalingam"
+                },
+                {
+                    "authorId": "144223091",
+                    "name": "Vivek Natarajan"
+                }
+            ],
+            "abstract": "Recent artificial intelligence (AI) systems have reached milestones in\"grand challenges\"ranging from Go to protein-folding. The capability to retrieve medical knowledge, reason over it, and answer medical questions comparably to physicians has long been viewed as one such grand challenge. Large language models (LLMs) have catalyzed significant progress in medical question answering; Med-PaLM was the first model to exceed a\"passing\"score in US Medical Licensing Examination (USMLE) style questions with a score of 67.2% on the MedQA dataset. However, this and other prior work suggested significant room for improvement, especially when models' answers were compared to clinicians' answers. Here we present Med-PaLM 2, which bridges these gaps by leveraging a combination of base LLM improvements (PaLM 2), medical domain finetuning, and prompting strategies including a novel ensemble refinement approach. Med-PaLM 2 scored up to 86.5% on the MedQA dataset, improving upon Med-PaLM by over 19% and setting a new state-of-the-art. We also observed performance approaching or exceeding state-of-the-art across MedMCQA, PubMedQA, and MMLU clinical topics datasets. We performed detailed human evaluations on long-form questions along multiple axes relevant to clinical applications. In pairwise comparative ranking of 1066 consumer medical questions, physicians preferred Med-PaLM 2 answers to those produced by physicians on eight of nine axes pertaining to clinical utility (p<0.001). We also observed significant improvements compared to Med-PaLM on every evaluation axis (p<0.001) on newly introduced datasets of 240 long-form\"adversarial\"questions to probe LLM limitations. While further studies are necessary to validate the efficacy of these models in real-world settings, these results highlight rapid progress towards physician-level performance in medical question answering.",
+            "score": 1
+        },
+        {
+            "id": "90e41626b8c78600da70c4350c67c3a10525cb37",
+            "paperId": "90e41626b8c78600da70c4350c67c3a10525cb37",
+            "title": "MedAlpaca -- An Open-Source Collection of Medical Conversational AI Models and Training Data",
+            "year": 2023,
+            "citationCount": 309,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2304.08247, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2031129360",
+                    "name": "T. Han"
+                },
+                {
+                    "authorId": "2105808021",
+                    "name": "Lisa C. Adams"
+                },
+                {
+                    "authorId": "40200325",
+                    "name": "Jens-Michalis Papaioannou"
+                },
+                {
+                    "authorId": "1491318758",
+                    "name": "Paul Grundmann"
+                },
+                {
+                    "authorId": "22193026",
+                    "name": "Tom Oberhauser"
+                },
+                {
+                    "authorId": "3289992",
+                    "name": "Alexander L\u00f6ser"
+                },
+                {
+                    "authorId": "3228050",
+                    "name": "D. Truhn"
+                },
+                {
+                    "authorId": "28908056",
+                    "name": "K. Bressem"
+                }
+            ],
+            "abstract": "As large language models (LLMs) like OpenAI's GPT series continue to make strides, we witness the emergence of artificial intelligence applications in an ever-expanding range of fields. In medicine, these LLMs hold considerable promise for improving medical workflows, diagnostics, patient care, and education. Yet, there is an urgent need for open-source models that can be deployed on-premises to safeguard patient privacy. In our work, we present an innovative dataset consisting of over 160,000 entries, specifically crafted to fine-tune LLMs for effective medical applications. We investigate the impact of fine-tuning these datasets on publicly accessible pre-trained LLMs, and subsequently, we juxtapose the performance of pre-trained-only models against the fine-tuned models concerning the examinations that future medical doctors must pass to achieve certification.",
+            "score": 1
+        },
+        {
+            "id": "348a1efa54376fa39053e5e25d52bd0eb6a0ba68",
+            "paperId": "348a1efa54376fa39053e5e25d52bd0eb6a0ba68",
+            "title": "Capabilities of GPT-4 on Medical Challenge Problems",
+            "year": 2023,
+            "citationCount": 845,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2303.13375",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.13375, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2268494857",
+                    "name": "Harsha Nori"
+                },
+                {
+                    "authorId": "2214807281",
+                    "name": "Nicholas King"
+                },
+                {
+                    "authorId": "2047820455",
+                    "name": "S. McKinney"
+                },
+                {
+                    "authorId": "3364465",
+                    "name": "Dean Carignan"
+                },
+                {
+                    "authorId": "145479841",
+                    "name": "E. Horvitz"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation across various domains, including medicine. We present a comprehensive evaluation of GPT-4, a state-of-the-art LLM, on medical competency examinations and benchmark datasets. GPT-4 is a general-purpose model that is not specialized for medical problems through training or engineered to solve clinical tasks. Our analysis covers two sets of official practice materials for the USMLE, a three-step examination program used to assess clinical competency and grant licensure in the United States. We also evaluate performance on the MultiMedQA suite of benchmark datasets. Beyond measuring model performance, experiments were conducted to investigate the influence of test questions containing both text and images on model performance, probe for memorization of content during training, and study probability calibration, which is of critical importance in high-stakes applications like medicine. Our results show that GPT-4, without any specialized prompt crafting, exceeds the passing score on USMLE by over 20 points and outperforms earlier general-purpose models (GPT-3.5) as well as models specifically fine-tuned on medical knowledge (Med-PaLM, a prompt-tuned version of Flan-PaLM 540B). In addition, GPT-4 is significantly better calibrated than GPT-3.5, demonstrating a much-improved ability to predict the likelihood that its answers are correct. We also explore the behavior of the model qualitatively through a case study that shows the ability of GPT-4 to explain medical reasoning, personalize explanations to students, and interactively craft new counterfactual scenarios around a medical case. Implications of the findings are discussed for potential uses of GPT-4 in medical education, assessment, and clinical practice, with appropriate attention to challenges of accuracy and safety.",
+            "score": 1
+        },
+        {
+            "id": "6052486bc9144dc1730c12bf35323af3792a1fd0",
+            "paperId": "6052486bc9144dc1730c12bf35323af3792a1fd0",
+            "title": "Large language models encode clinical knowledge",
+            "year": 2022,
+            "citationCount": 2583,
+            "openAccessPdf": {
+                "url": "https://www.nature.com/articles/s41586-023-06291-2.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2212.13138, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "122902793",
+                    "name": "K. Singhal"
+                },
+                {
+                    "authorId": "40151244",
+                    "name": "Shekoofeh Azizi"
+                },
+                {
+                    "authorId": "1661884341",
+                    "name": "T. Tu"
+                },
+                {
+                    "authorId": "145439417",
+                    "name": "S. Mahdavi"
+                },
+                {
+                    "authorId": "119640649",
+                    "name": "Jason Wei"
+                },
+                {
+                    "authorId": "3351938",
+                    "name": "Hyung Won Chung"
+                },
+                {
+                    "authorId": "1471909492",
+                    "name": "Nathan Scales"
+                },
+                {
+                    "authorId": "39132551",
+                    "name": "A. Tanwani"
+                },
+                {
+                    "authorId": "1396212229",
+                    "name": "H. Cole-Lewis"
+                },
+                {
+                    "authorId": "51231678",
+                    "name": "S. Pfohl"
+                },
+                {
+                    "authorId": "2067024894",
+                    "name": "P. Payne"
+                },
+                {
+                    "authorId": "6454443",
+                    "name": "Martin G. Seneviratne"
+                },
+                {
+                    "authorId": "2067332323",
+                    "name": "P. Gamble"
+                },
+                {
+                    "authorId": "144244303",
+                    "name": "C. Kelly"
+                },
+                {
+                    "authorId": "2198273063",
+                    "name": "Nathaneal Scharli"
+                },
+                {
+                    "authorId": "2841893",
+                    "name": "A. Chowdhery"
+                },
+                {
+                    "authorId": "40390773",
+                    "name": "P. A. Mansfield"
+                },
+                {
+                    "authorId": "2661025",
+                    "name": "B. A. Y. Arcas"
+                },
+                {
+                    "authorId": "47191829",
+                    "name": "D. Webster"
+                },
+                {
+                    "authorId": "2084098271",
+                    "name": "Greg S. Corrado"
+                },
+                {
+                    "authorId": "1745572",
+                    "name": "Yossi Matias"
+                },
+                {
+                    "authorId": "2111722061",
+                    "name": "K. Chou"
+                },
+                {
+                    "authorId": "2051681709",
+                    "name": "Juraj Gottweis"
+                },
+                {
+                    "authorId": "2213266",
+                    "name": "Nenad Toma\u0161ev"
+                },
+                {
+                    "authorId": "2118113314",
+                    "name": "Yun Liu"
+                },
+                {
+                    "authorId": "8638650",
+                    "name": "A. Rajkomar"
+                },
+                {
+                    "authorId": "3658427",
+                    "name": "J. Barral"
+                },
+                {
+                    "authorId": "52326632",
+                    "name": "Christopher Semturs"
+                },
+                {
+                    "authorId": "6413143",
+                    "name": "A. Karthikesalingam"
+                },
+                {
+                    "authorId": "144223091",
+                    "name": "Vivek Natarajan"
+                }
+            ],
+            "abstract": "Med-PaLM, a\u00a0state-of-the-art large language model for medicine, is introduced and evaluated across several\u00a0medical question answering tasks, demonstrating the promise of these models\u00a0in this domain. Large language models (LLMs) have demonstrated impressive capabilities, but the bar for clinical applications is high. Attempts to assess the clinical knowledge of models typically rely on automated evaluations based on limited benchmarks. Here, to address these limitations, we present MultiMedQA, a benchmark combining six existing medical question answering datasets spanning professional medicine, research and consumer queries and\u00a0a new dataset of medical questions searched online, HealthSearchQA. We propose a human evaluation framework for model answers along multiple axes including factuality, comprehension,\u00a0reasoning, possible harm and bias. In addition, we evaluate Pathways Language Model^ 1 (PaLM,\u00a0a 540-billion parameter LLM) and its instruction-tuned variant, Flan-PaLM^ 2 on MultiMedQA. Using a combination of prompting strategies, Flan-PaLM achieves state-of-the-art accuracy on every MultiMedQA multiple-choice dataset (MedQA^ 3 , MedMCQA^ 4 , PubMedQA^ 5 and Measuring Massive Multitask Language Understanding (MMLU) clinical topics^ 6 ), including 67.6% accuracy on MedQA\u00a0(US Medical Licensing Exam-style questions), surpassing the prior state of the art by more than 17%. However, human evaluation reveals key gaps. To resolve this, we introduce instruction prompt tuning, a parameter-efficient approach for aligning LLMs to new domains using a few exemplars. The resulting model, Med-PaLM, performs encouragingly, but remains inferior to clinicians. We show that comprehension, knowledge recall and reasoning improve with model scale and instruction prompt tuning, suggesting the potential utility of LLMs in medicine. Our human evaluations reveal limitations of today\u2019s models, reinforcing the importance of both evaluation frameworks and method development in creating safe, helpful LLMs for clinical applications.",
+            "score": 1
+        },
+        {
+            "id": "75941d3d252acab7a7850bfe33cabf7d3bf428a0",
+            "paperId": "75941d3d252acab7a7850bfe33cabf7d3bf428a0",
+            "title": "GLOBEM Dataset: Multi-Year Datasets for Longitudinal Human Behavior Modeling Generalization",
+            "year": 2022,
+            "citationCount": 45,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2211.02733",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2211.02733, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "9551276",
+                    "name": "Xuhai Xu"
+                },
+                {
+                    "authorId": "2119078295",
+                    "name": "Han Zhang"
+                },
+                {
+                    "authorId": "2032294",
+                    "name": "Yasaman S. Sefidgar"
+                },
+                {
+                    "authorId": "2115243470",
+                    "name": "Yiyi Ren"
+                },
+                {
+                    "authorId": "89121677",
+                    "name": "Xin Liu"
+                },
+                {
+                    "authorId": "9499353",
+                    "name": "Woosuk Seo"
+                },
+                {
+                    "authorId": "2190153282",
+                    "name": "Jennifer Brown"
+                },
+                {
+                    "authorId": "48501078",
+                    "name": "K. Kuehn"
+                },
+                {
+                    "authorId": "2065426767",
+                    "name": "Michael Merrill"
+                },
+                {
+                    "authorId": "4231487",
+                    "name": "P. Nurius"
+                },
+                {
+                    "authorId": "2152110626",
+                    "name": "Shwetak N. Patel"
+                },
+                {
+                    "authorId": "1745524",
+                    "name": "Tim Althoff"
+                },
+                {
+                    "authorId": "2070130591",
+                    "name": "Margaret E. Morris"
+                },
+                {
+                    "authorId": "1788775",
+                    "name": "E. Riskin"
+                },
+                {
+                    "authorId": "69398636",
+                    "name": "Jennifer Mankoff"
+                },
+                {
+                    "authorId": "144021446",
+                    "name": "A. Dey"
+                }
+            ],
+            "abstract": "Recent research has demonstrated the capability of behavior signals captured by smartphones and wearables for longitudinal behavior modeling. However, there is a lack of a comprehensive public dataset that serves as an open testbed for fair comparison among algorithms. Moreover, prior studies mainly evaluate algorithms using data from a single population within a short period, without measuring the cross-dataset generalizability of these algorithms. We present the first multi-year passive sensing datasets, containing over 700 user-years and 497 unique users' data collected from mobile and wearable sensors, together with a wide range of well-being metrics. Our datasets can support multiple cross-dataset evaluations of behavior modeling algorithms' generalizability across different users and years. As a starting point, we provide the benchmark results of 18 algorithms on the task of depression detection. Our results indicate that both prior depression detection algorithms and domain generalization techniques show potential but need further research to achieve adequate cross-dataset generalizability. We envision our multi-year datasets can support the ML community in developing generalizable longitudinal behavior modeling algorithms.",
+            "score": 1
+        },
+        {
+            "id": "08f2ad6b3dcb6e271ae7a678425c2a375a6fd577",
+            "paperId": "08f2ad6b3dcb6e271ae7a678425c2a375a6fd577",
+            "title": "LifeSnaps, a 4-month multi-modal dataset capturing unobtrusive snapshots of our lives in the wild",
+            "year": 2022,
+            "citationCount": 21,
+            "openAccessPdf": {
+                "url": "https://www.nature.com/articles/s41597-022-01764-x.pdf",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9622868, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2083568181",
+                    "name": "Sofia Yfantidou"
+                },
+                {
+                    "authorId": "2189321638",
+                    "name": "Christina Karagianni"
+                },
+                {
+                    "authorId": "2164256576",
+                    "name": "Stefanos Efstathiou"
+                },
+                {
+                    "authorId": "1741423",
+                    "name": "A. Vakali"
+                },
+                {
+                    "authorId": "3071228",
+                    "name": "Jo\u00e3o Palotti"
+                },
+                {
+                    "authorId": "2164258858",
+                    "name": "D. P. Giakatos"
+                },
+                {
+                    "authorId": "2042734942",
+                    "name": "Thomas Marchioro"
+                },
+                {
+                    "authorId": "2028646133",
+                    "name": "Andrei Kazlouski"
+                },
+                {
+                    "authorId": "2189322473",
+                    "name": "Elena Ferrari"
+                },
+                {
+                    "authorId": "69947993",
+                    "name": "Sarunas Girdzijauskas"
+                }
+            ],
+            "abstract": "Ubiquitous self-tracking technologies have penetrated various aspects of our lives, from physical and mental health monitoring to fitness and entertainment. Yet, limited data exist on the association between in the wild large-scale physical activity patterns, sleep, stress, and overall health, and behavioral and psychological patterns due to challenges in collecting and releasing such datasets, including waning user engagement or privacy considerations. In this paper, we present the LifeSnaps dataset , a multi-modal, longitudinal, and geographically-distributed dataset containing a plethora of anthropological data, collected unobtrusively for the total course of more than 4 months by n \u2009=\u200971 participants. LifeSnaps contains more than 35 different data types from second to daily granularity, totaling more than 71\u2009M rows of data. The participants contributed their data through validated surveys, ecological momentary assessments, and a Fitbit Sense smartwatch and consented to make these data available to empower future research. We envision that releasing this large-scale dataset of multi-modal real-world data will open novel research opportunities and potential applications in multiple disciplines. Measurement(s) Step Unit of Distance \u2022 Nutrition, Calories \u2022 Physical Activity Measurement \u2022 Oxygen Saturation Measurement \u2022 maximal oxygen uptake measurement \u2022 Electrocardiography \u2022 Respiratory Rate \u2022 skin temperature sensor \u2022 Unit of Length \u2022 Very Light Exercise \u2022 heart rate variability measurement \u2022 resting heart rate \u2022 electrodermal activity measurement \u2022 State-Trait Anxiety Inventory \u2022 Positive and Negative Affect Schedule \u2022 Stages and Processes of Change \u2022 Behavioural Regulations in Exercise \u2022 50-item International Personality Item Pool version of the Big Five Markers Technology Type(s) FitBit \u2022 Survey \u2022 Survey Sample Characteristic - Organism Homo sapiens Sample Characteristic - Environment anthropogenic habitat Sample Characteristic - Location Greece \u2022 Italy \u2022 Sweden \u2022 Cyprus",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.11535900000000002
+}

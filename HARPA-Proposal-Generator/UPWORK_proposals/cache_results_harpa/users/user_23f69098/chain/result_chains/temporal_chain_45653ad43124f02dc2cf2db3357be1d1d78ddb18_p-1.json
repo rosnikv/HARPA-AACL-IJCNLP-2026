@@ -1,0 +1,46 @@
+[
+    {
+        "paperId": "45653ad43124f02dc2cf2db3357be1d1d78ddb18",
+        "pmid": "2310.14564",
+        "title": "Language Models Hallucinate, but May Excel at Fact Verification",
+        "abstract": "Recent progress in natural language processing (NLP) owes much to remarkable advances in large language models (LLMs). Nevertheless, LLMs frequently \u201challucinate,\u201d resulting in non-factual outputs. Our carefully-designed human evaluation substantiates the serious hallucination issue, revealing that even GPT-3.5 produces factual outputs less than 25% of the time. This underscores the importance of fact verifiers in order to measure and incentivize progress. Our systematic investigation affirms that LLMs can be repurposed as effective fact verifiers with strong correlations with human judgments. Surprisingly, FLAN-T5-11B , the least factual generator in our study, performs the best as a fact verifier, even outperforming more capable LLMs like GPT3.5 and ChatGPT. Delving deeper, we analyze the reliance of these LLMs on high-quality evidence, as well as their deficiencies in robustness and generalization ability. Our study presents insights for developing trustworthy generation models.",
+        "year": 2023,
+        "citation_count": 36
+    },
+    {
+        "paperId": "d0489fd7c5ff833e08969341ae6e5fa1d0e6dd2a",
+        "title": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents",
+        "abstract": "Recognizing if LLM output can be grounded in evidence is central to many tasks in NLP: retrieval-augmented generation, summarization, document-grounded dialogue, and more. Current approaches to this kind of fact-checking are based on verifying each piece of a model generation against potential evidence using an LLM. However, this process can be very computationally expensive, requiring many calls to a model to check a single response. In this work, we show how to build small fact-checking models that have GPT-4-level performance but for 400x lower cost. We do this by constructing synthetic training data with GPT-4, which involves creating realistic yet challenging instances of factual errors via a structured generation procedure. Training on this data teaches models to check each fact in the claim and recognize synthesis of information across sentences. For evaluation, we unify datasets from recent work on fact-checking and grounding LLM generations into a new benchmark, LLM-AggreFact. Our best system MiniCheck-FT5 (770M parameters) outperforms all systems of comparable size and reaches GPT-4 accuracy. We release LLM-AggreFact, code for data synthesis, and models.",
+        "year": 2024,
+        "citation_count": 121,
+        "relevance": 2,
+        "explanation": "This paper is highly relevant as it addresses fact-checking of LLM outputs, which is a core aspect of the source paper's investigation into LLM hallucinations and fact verification."
+    },
+    {
+        "paperId": "9af0ca023c01ad143d46144207bb43035ec11274",
+        "title": "A Closer Look at Claim Decomposition",
+        "abstract": "As generated text becomes more commonplace, it is increasingly important to evaluate how well-supported such text is by external knowledge sources. Many approaches for evaluating textual support rely on some method for decomposing text into its individual subclaims which are scored against a trusted reference. We investigate how various methods of claim decomposition\u2014especially LLM-based methods\u2014affect the result of an evaluation approach such as the recently proposed FActScore, finding that it is sensitive to the decomposition method used. This sensitivity arises because such metrics attribute overall textual support to the model that generated the text even though error can also come from the metric\u2019s decomposition step. To measure decomposition quality, we introduce an adaptation of FActScore, which we call DecompScore. We then propose an LLM-based approach to generating decompositions inspired by Bertrand Russell\u2019s theory of logical atomism and neo-Davidsonian semantics and demonstrate its improved decomposition quality over previous methods.",
+        "year": 2024,
+        "citation_count": 28,
+        "relevance": 2,
+        "explanation": "The paper investigates claim decomposition methods, which is relevant to the source paper's focus on verifying claims in LLM outputs. It partially builds on the source paper's theme of fact-checking."
+    },
+    {
+        "paperId": "1ba083045a0af167b6402e2fbc2074df078b140a",
+        "title": "Decomposition Dilemmas: Does Claim Decomposition Boost or Burden Fact-Checking Performance?",
+        "abstract": "Fact-checking pipelines increasingly adopt the Decompose-Then-Verify paradigm, where texts are broken down into smaller claims for individual verification and subsequently combined for a veracity decision. While decomposition is widely-adopted in such pipelines, its effects on final fact-checking performance remain underexplored. Some studies have reported improvements from decompostition, while others have observed performance declines, indicating its inconsistent impact. To date, no comprehensive analysis has been conducted to understand this variability. To address this gap, we present an in-depth analysis that explicitly examines the impact of decomposition on downstream verification performance. Through error case inspection and experiments, we introduce a categorization of decomposition errors and reveal a trade-off between accuracy gains and the noise introduced through decomposition. Our analysis provides new insights into understanding current system's instability and offers guidance for future studies toward improving claim decomposition in fact-checking pipelines.",
+        "year": 2024,
+        "citation_count": 11,
+        "relevance": 2,
+        "explanation": "This paper directly investigates the impact of claim decomposition on fact-checking performance, which is closely related to the source paper's exploration of claim decomposition methods and their effects on evaluation metrics like FActScore."
+    },
+    {
+        "paperId": "0e426b088f5a02157577223d40f53fa966a53697",
+        "title": "Coordinating Search-Informed Reasoning and Reasoning-Guided Search in Claim Verification",
+        "abstract": "Multi-hop claim verification is inherently challenging, requiring multi-step reasoning to construct verification chains while iteratively searching for information to uncover hidden bridging facts. This process is fundamentally interleaved, as effective reasoning relies on dynamically retrieved evidence, while effective search demands reasoning to refine queries based on partial information. To achieve this, we propose Hierarchical Agent Reasoning and Information Search (HARIS), explicitly modeling the coordinated process of reasoning-driven searching and search-informed reasoning. HARIS consists of a high-level reasoning agent that focuses on constructing the main verification chain, generating factual questions when more information is needed, and a low-level search agent that iteratively retrieves more information, refining its search based on intermediate findings. This design allows each agent to specialize in its respective task, enhancing verification accuracy and interpretability. HARIS is trained using reinforcement learning with outcome-based rewards. Experimental results on the EX-FEVER and HOVER benchmarks demonstrate that HARIS achieves strong performance, greatly advancing multi-hop claim verification.",
+        "year": 2025,
+        "citation_count": 1,
+        "relevance": 2,
+        "explanation": "This paper introduces a framework for multi-hop claim verification, which involves decomposition and iterative reasoning. It builds on the decomposition concept from the source paper by proposing a coordinated approach to enhance verification accuracy."
+    }
+]

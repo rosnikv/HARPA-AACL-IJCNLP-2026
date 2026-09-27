@@ -1,0 +1,110 @@
+[
+    {
+        "paperId": "37536416c0da8751409a3289ac6b6355c7d61d0c",
+        "title": "What Do Llamas Really Think? Revealing Preference Biases in Language Model Representations",
+        "abstract": "Do large language models (LLMs) exhibit sociodemographic biases, even when they decline to respond? To bypass their refusal to\"speak,\"we study this research question by probing contextualized embeddings and exploring whether this bias is encoded in its latent representations. We propose a logistic Bradley-Terry probe which predicts word pair preferences of LLMs from the words' hidden vectors. We first validate our probe on three pair preference tasks and thirteen LLMs, where we outperform the word embedding association test (WEAT), a standard approach in testing for implicit association, by a relative 27% in error rate. We also find that word pair preferences are best represented in the middle layers. Next, we transfer probes trained on harmless tasks (e.g., pick the larger number) to controversial ones (compare ethnicities) to examine biases in nationality, politics, religion, and gender. We observe substantial bias for all target classes: for instance, the Mistral model implicitly prefers Europe to Africa, Christianity to Judaism, and left-wing to right-wing politics, despite declining to answer. This suggests that instruction fine-tuning does not necessarily debias contextualized embeddings. Our codebase is at https://github.com/castorini/biasprobe.",
+        "year": 2023,
+        "citation_count": 8,
+        "relevance": 2,
+        "explanation": "This paper investigates sociodemographic biases in LLMs, which aligns with the source paper's focus on political biases in LMs and their impact on downstream tasks."
+    },
+    {
+        "paperId": "6b09fd33d3cf1aa699c937c00997963231c8126e",
+        "title": "Sociodemographic Prompting is Not Yet an Effective Approach for Simulating Subjective Judgments with LLMs",
+        "abstract": "Human judgments are inherently subjective and are actively affected by personal traits such as gender and ethnicity. While Large Language Models (LLMs) are widely used to simulate human responses across diverse contexts, their ability to account for demographic differences in subjective tasks remains uncertain. In this study, leveraging the POPQUORN dataset, we evaluate nine popular LLMs on their ability to understand demographic differences in two subjective judgment tasks: politeness and offensiveness. We find that in zero-shot settings, most models' predictions for both tasks align more closely with labels from White participants than those from Asian or Black participants, while only a minor gender bias favoring women appears in the politeness task. Furthermore, sociodemographic prompting does not consistently improve and, in some cases, worsens LLMs' ability to perceive language from specific sub-populations. These findings highlight potential demographic biases in LLMs when performing subjective judgment tasks and underscore the limitations of sociodemographic prompting as a strategy to achieve pluralistic alignment. Code and data are available at: https://github.com/Jiaxin-Pei/LLM-as-Subjective-Judge.",
+        "year": 2023,
+        "citation_count": 19,
+        "relevance": 2,
+        "explanation": "This paper evaluates demographic biases in LLMs, which is relevant to the source paper's exploration of political biases in LMs."
+    },
+    {
+        "paperId": "62c8c4e610abf823e6c4f5d3cfc2aa006c59036c",
+        "title": "Inducing Political Bias Allows Language Models Anticipate Partisan Reactions to Controversies",
+        "abstract": "Social media platforms are rife with politically charged discussions. Therefore, accurately deciphering and predicting partisan biases using Large Language Models (LLMs) is increasingly critical. In this study, we address the challenge of understanding political bias in digitized discourse using LLMs. While traditional approaches often rely on finetuning separate models for each political faction, our work innovates by employing a singular, instruction-tuned LLM to reflect a spectrum of political ideologies. We present a comprehensive analytical framework, consisting of Partisan Bias Divergence Assessment and Partisan Class Tendency Prediction, to evaluate the model's alignment with real-world political ideologies in terms of stances, emotions, and moral foundations. Our findings reveal the model's effectiveness in capturing emotional and moral nuances, albeit with some challenges in stance detection, highlighting the intricacies and potential for refinement in NLP tools for politically sensitive contexts. This research contributes significantly to the field by demonstrating the feasibility and importance of nuanced political understanding in LLMs, particularly for applications requiring acute awareness of political bias.",
+        "year": 2023,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper directly addresses political bias in LLMs, aligning with the source paper's focus on political biases and their impact on NLP models."
+    },
+    {
+        "paperId": "6eaa00edbf2378b5456aa614a30ab45e0fff36ee",
+        "title": "The steerability of large language models toward data-driven personas",
+        "abstract": "Large language models (LLMs) are known to generate biased responses where the opinions of certain groups and populations are underrepresented. Here, we present a novel approach to achieve controllable generation of specific viewpoints using LLMs, that can be leveraged to produce multiple perspectives and to reflect the diverse opinions. Moving beyond the traditional reliance on demographics like age, gender, or party affiliation, we introduce a data-driven notion of persona grounded in collaborative filtering, which is defined as either a single individual or a cohort of individuals manifesting similar views across specific inquiries. As individuals in the same demographic group may have different personas, our data-driven persona definition allows for a more nuanced understanding of different (latent) social groups present in the population. In addition to this, we also explore an efficient method to steer LLMs toward the personas that we define. We show that our data-driven personas significantly enhance model steerability, with improvements of between 57%-77% over our best performing baselines.",
+        "year": 2023,
+        "citation_count": 37,
+        "relevance": 2,
+        "explanation": "This paper addresses the controllable generation of specific viewpoints in LLMs, which is related to the source paper's focus on biases in language models. It builds on the idea of bias and fairness in LLMs, making it partially dependent on the source paper's findings."
+    },
+    {
+        "paperId": "9bee647cd2999fcd2b68b964bbe128a471d3707c",
+        "title": "Generative language models exhibit social identity biases",
+        "abstract": "Social identity biases, particularly the tendency to favor one\u2019s own group (ingroup solidarity) and derogate other groups (outgroup hostility), are deeply rooted in human psychology and social behavior. However, it is unknown if such biases are also present in artificial intelligence systems. Here we show that large language models (LLMs) exhibit patterns of social identity bias, similarly to humans. By administering sentence completion prompts to 77 different LLMs (for instance, \u2018We are\u2026\u2019), we demonstrate that nearly all base models and some instruction-tuned and preference-tuned models display clear ingroup favoritism and outgroup derogation. These biases manifest both in controlled experimental settings and in naturalistic human\u2013LLM conversations. However, we find that careful curation of training data and specialized fine-tuning can substantially reduce bias levels. These findings have important implications for developing more equitable artificial intelligence systems and highlight the urgent need to understand how human\u2013LLM interactions might reinforce existing social biases.",
+        "year": 2023,
+        "citation_count": 64,
+        "relevance": 2,
+        "explanation": "This paper directly explores social identity biases in LLMs, which aligns closely with the source paper's focus on political and social biases in language models. It builds on the source paper's findings about bias propagation."
+    },
+    {
+        "paperId": "dc4d9b0c3c9c9cd9eb3a4c8d3ffa415d9953f77d",
+        "title": "Large Human Language Models: A Need and the Challenges",
+        "abstract": "As research in human-centered NLP advances, there is a growing recognition of the importance of incorporating human and social factors into NLP models. At the same time, our NLP systems have become heavily reliant on LLMs, most of which do not model authors. To build NLP systems that can truly understand human language, we must better integrate human contexts into LLMs. This brings to the fore a range of design considerations and challenges in terms of what human aspects to capture, how to represent them, and what modeling strategies to pursue. To address these, we advocate for three positions toward creating large human language models (LHLMs) using concepts from psychological and behavioral sciences: First, LM training should include the human context. Second, LHLMs should recognize that people are more than their group(s). Third, LHLMs should be able to account for the dynamic and temporally-dependent nature of the human context. We refer to relevant advances and present open challenges that need to be addressed and their possible solutions in realizing these goals.",
+        "year": 2023,
+        "citation_count": 12,
+        "relevance": 1,
+        "explanation": "This paper discusses the integration of human and social factors into NLP models, which is relevant to the source paper's exploration of political and social biases in language models. However, it does not directly depend on the findings of the source paper."
+    },
+    {
+        "paperId": "f62301c6978692824c3ff709a8b4f374b820dd56",
+        "title": "Indian-BhED: A Dataset for Measuring India-Centric Biases in Large Language Models",
+        "abstract": "Large Language Models (LLMs), now used daily by millions, can encode societal biases, exposing their users to representational harms. A large body of scholarship on LLM bias exists but it predominantly adopts a Western-centric frame and attends comparatively less to bias levels and potential harms in the Global South. In this paper, we quantify stereotypical bias in popular LLMs according to an Indian-centric frame through Indian-BhED, a first of its kind dataset, containing stereotypical and anti-stereotypical examples in the context of caste and religious stereotypes in India. We find that the majority of LLMs tested have a strong propensity to output stereotypes in the Indian context, especially when compared to axes of bias traditionally studied in the Western context, such as gender and race. Notably, we find that GPT-2, GPT-2 Large, and GPT 3.5 have a particularly high propensity for preferring stereotypical outputs as a percent of all sentences for the axes of caste (63\u201379%) and religion (69\u201372%). We finally investigate potential causes for such harmful behaviour in LLMs, and posit intervention techniques to reduce both stereotypical and anti-stereotypical biases. The findings of this work highlight the need for including more diverse voices when researching fairness in AI and evaluating LLMs.",
+        "year": 2023,
+        "citation_count": 12,
+        "relevance": 2,
+        "explanation": "This paper is directly related to the source paper as it investigates biases in language models, specifically focusing on India-centric biases, which aligns with the source paper's examination of political biases in language models."
+    },
+    {
+        "paperId": "3d682feaba804468217d27cf3f1e1db202cfca86",
+        "title": "Cultural Alignment in Large Language Models: An Explanatory Analysis Based on Hofstede's Cultural Dimensions",
+        "abstract": "The deployment of large language models (LLMs) raises concerns regarding their cultural misalignment and potential ramifications on individuals and societies with diverse cultural backgrounds. While the discourse has focused mainly on political and social biases, our research proposes a Cultural Alignment Test (Hoftede's CAT) to quantify cultural alignment using Hofstede's cultural dimension framework, which offers an explanatory cross-cultural comparison through the latent variable analysis. We apply our approach to quantitatively evaluate LLMs, namely Llama 2, GPT-3.5, and GPT-4, against the cultural dimensions of regions like the United States, China, and Arab countries, using different prompting styles and exploring the effects of language-specific fine-tuning on the models' behavioural tendencies and cultural values. Our results quantify the cultural alignment of LLMs and reveal the difference between LLMs in explanatory cultural dimensions. Our study demonstrates that while all LLMs struggle to grasp cultural values, GPT-4 shows a unique capability to adapt to cultural nuances, particularly in Chinese settings. However, it faces challenges with American and Arab cultures. The research also highlights that fine-tuning LLama 2 models with different languages changes their responses to cultural questions, emphasizing the need for culturally diverse development in AI for worldwide acceptance and ethical use. For more details or to contribute to this research, visit our GitHub page https://github.com/reemim/Hofstedes_CAT/",
+        "year": 2023,
+        "citation_count": 69,
+        "relevance": 2,
+        "explanation": "This paper examines cultural alignment in language models, which is relevant to the source paper's focus on biases in language models, particularly in terms of cultural and political biases."
+    },
+    {
+        "paperId": "daa5df014ad89aebc0dfcec507eccbbf3934224e",
+        "title": "Decolonial AI Alignment: Openness, Visesa-Dharma, and Including Excluded Knowledges",
+        "abstract": "Prior work has explicated the coloniality of artificial intelligence (AI) development and deployment through mechanisms such as extractivism, automation, sociological essentialism, surveillance, and containment. However, that work has not engaged much with alignment: teaching behaviors to a large language model (LLM) in line with desired values, and has not considered a mechanism that arises within that process: moral absolutism---a part of the coloniality of knowledge. Colonialism has a history of altering the beliefs and values of colonized peoples; in this paper, I argue that this history is recapitulated in current LLM alignment practices and technologies. Furthermore, I suggest that AI alignment be decolonialized using three forms of openness: openness of models, openness to society, and openness to excluded knowledges. This suggested approach to decolonial AI alignment uses ideas from the argumentative moral philosophical tradition of Hinduism, which has been described as an open-source religion. One concept used is vi\u015be\u1e63a-dharma, or particular context-specific notions of right and wrong. At the end of the paper, I provide a suggested reference architecture to work toward the proposed framework.",
+        "year": 2023,
+        "citation_count": 4,
+        "relevance": 1,
+        "explanation": "This paper discusses decolonial AI alignment and the inclusion of diverse knowledges, which is tangentially related to the source paper's focus on biases in language models, but does not directly depend on its findings."
+    },
+    {
+        "paperId": "1f5c666f2462190f76749be65764f43c393b0c0c",
+        "title": "This Land is Your, My Land: Evaluating Geopolitical Bias in Language Models through Territorial Disputes",
+        "abstract": "Do the Spratly Islands belong to China, the Philippines, or Vietnam? A pretrained large language model (LLM) may answer differently if asked in the languages of each claimant country: Chinese, Tagalog, or Vietnamese. This contrasts with a multilingual human, who would likely answer consistently. In this paper, we show that LLMs recall certain geographical knowledge inconsistently when queried in different languages\u2014a phenomenon we term geopolitical bias. As a targeted case study, we consider territorial disputes, an inherently controversial and multilingual task. We introduce BorderLines, a dataset of territorial disputes which covers 251 territories, each associated with a set of multiple-choice questions in the languages of each claimant country (49 languages in total). We also propose a suite of evaluation metrics to precisely quantify bias and consistency in responses across different languages. We then evaluate various multilingual LLMs on our dataset and metrics to probe their internal knowledge and use the proposed metrics to discover numerous inconsistencies in how these models respond in different languages. Finally, we explore several prompt modification strategies, aiming to either amplify or mitigate geopolitical bias, which highlights how brittle LLMs are and how they tailor their responses depending on cues from the interaction context. Our code and data are available at https://github.com/manestay/borderlines.",
+        "year": 2023,
+        "citation_count": 23,
+        "relevance": 2,
+        "explanation": "This paper investigates geopolitical biases in language models, which is closely related to the source paper's examination of political biases. It partially depends on the source paper's findings regarding biases in LMs, as it extends the analysis to geopolitical contexts."
+    },
+    {
+        "paperId": "0fe329b28b9508908c68787c02fa6d89bc463d6e",
+        "title": "Entity-Based Evaluation of Political Bias in Automatic Summarization",
+        "abstract": "Growing literature has shown that NLP systems may encode social biases; however, the political bias of summarization models remains relatively unknown. In this work, we use an entity replacement method to investigate the portrayal of politicians in automatically generated summaries of news articles. We develop an entity-based computational framework to assess the sensitivities of several extractive and abstractive summarizers to the politicians Donald Trump and Joe Biden. We find consistent differences in these summaries upon entity replacement, such as reduced emphasis of Trump's presence in the context of the same article and a more individualistic representation of Trump with respect to the collective US government (i.e., administration). These summary dissimilarities are most prominent when the entity is heavily featured in the source article. Our characterization provides a foundation for future studies of bias in summarization and for normative discussions on the ideal qualities of automatic summaries.",
+        "year": 2023,
+        "citation_count": 1,
+        "relevance": 2,
+        "explanation": "This paper examines political bias in summarization models, which is directly related to the source paper's focus on political biases in language models. It uses the source paper's findings as a sub-hypothesis for evaluating biases in a specific NLP task."
+    },
+    {
+        "paperId": "3a359f65a8ff8c84601c27e7c37192b518a9f8b7",
+        "title": "Assessing Political Inclination of Bangla Language Models",
+        "abstract": "Natural language processing has advanced with AI-driven language models (LMs), that are applied widely from text generation to question answering. These models are pre-trained on a wide spectrum of data sources, enhancing accuracy and responsiveness. However, this process inadvertently entails the absorption of a diverse spectrum of viewpoints inherent within the training data. Exploring political leaning within LMs due to such viewpoints remains a less-explored domain. In the context of a low-resource language like Bangla, this area of research is nearly non-existent. To bridge this gap, we comprehensively analyze biases present in Bangla language models, specifically focusing on social and economic dimensions. Our findings reveal the inclinations of various LMs, which will provide insights into ethical considerations and limitations associated with deploying Bangla LMs.",
+        "year": 2023,
+        "citation_count": 10,
+        "relevance": 1,
+        "explanation": "This paper explores political biases in Bangla language models, which is related to the source paper's examination of political biases in language models. It is inspired by the source paper's focus on political biases."
+    }
+]

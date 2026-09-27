@@ -1,0 +1,19 @@
+[
+    {
+        "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+        "pmid": "2104.08691",
+        "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+        "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+        "year": 2021,
+        "citation_count": 4242
+    },
+    {
+        "paperId": "169e5b9d75656deee2a2945cf36b0d3f12832a85",
+        "title": "Vector Quantization Prompting for Continual Learning",
+        "abstract": "Continual learning requires to overcome catastrophic forgetting when training a single model on a sequence of tasks. Recent top-performing approaches are prompt-based methods that utilize a set of learnable parameters (i.e., prompts) to encode task knowledge, from which appropriate ones are selected to guide the fixed pre-trained model in generating features tailored to a certain task. However, existing methods rely on predicting prompt identities for prompt selection, where the identity prediction process cannot be optimized with task loss. This limitation leads to sub-optimal prompt selection and inadequate adaptation of pre-trained features for a specific task. Previous efforts have tried to address this by directly generating prompts from input queries instead of selecting from a set of candidates. However, these prompts are continuous, which lack sufficient abstraction for task knowledge representation, making them less effective for continual learning. To address these challenges, we propose VQ-Prompt, a prompt-based continual learning method that incorporates Vector Quantization (VQ) into end-to-end training of a set of discrete prompts. In this way, VQ-Prompt can optimize the prompt selection process with task loss and meanwhile achieve effective abstraction of task knowledge for continual learning. Extensive experiments show that VQ-Prompt outperforms state-of-the-art continual learning methods across a variety of benchmarks under the challenging class-incremental setting. The code is available at \\href{https://github.com/jiaolifengmi/VQ-Prompt}{this https URL}.",
+        "year": 2024,
+        "citation_count": 6,
+        "relevance": 2,
+        "explanation": "This paper explores prompt-based continual learning, which is related to the source paper's exploration of prompt tuning. The use of prompts in continual learning aligns with the source paper's findings, making this paper's hypothesis partially dependent on the source paper's findings."
+    }
+]

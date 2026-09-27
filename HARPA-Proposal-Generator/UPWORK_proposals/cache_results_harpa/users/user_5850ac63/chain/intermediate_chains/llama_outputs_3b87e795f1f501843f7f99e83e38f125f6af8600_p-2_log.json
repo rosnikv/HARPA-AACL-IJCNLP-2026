@@ -1,0 +1,569 @@
+[
+    {
+        "year": 2021,
+        "source_paper": {
+            "paperId": "2d06caf8353882a62ba7993c66839c3ceb27ffd4",
+            "pmid": "None",
+            "title": "PororoGAN: An Improved Story Visualization Model on Pororo-SV Dataset",
+            "abstract": "Generating a sequence of images from a multi-sentence paragraph is a recently proposed task called Story-Visualization. In this task, how to keep the global consistency across dynamic scenes and characters in the story flow is the distinct difference from other single-image works, which is also a significant challenge. However, the visual quality and semantic relevance of existing results are not satisfying when handling datasets with high semantic complexity, such as Pororo-SV cartoon dataset. To address this issue, we propose a new story visualization model named PororoGAN, which jointly considers story-to-image-sequence, sentence-to-image and word-to-image-patch alignment. In particular, we introduce ASE (aligned sentence encoder) and AWE (attentional word encoder) to improve global and local relevance, respectively. Additionally, we add an image patches discriminator to improve the reality of results. Both quantitative and qualitative studies show that PororoGAN outperforms the state-of-the-art models.",
+            "year": 2019,
+            "citation_count": 27
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Generative Approach to Enrich Arabic Story Text with Visual Aids": {
+                    "explanation": "This paper focuses on generating images for Arabic stories to aid language learning, which is a different application from the source paper. It does not directly build upon the hypotheses or findings of the PororoGAN model, which is focused on improving story visualization through specific techniques like ASE and AWE.",
+                    "relevance": 0
+                },
+                "2. Integrating Visuospatial, Linguistic, and Commonsense Structure into Story Visualization": {
+                    "explanation": "This paper explores the integration of linguistic and commonsense structures into story visualization, which is a related area to the source paper's focus on improving story visualization. However, it does not appear to directly depend on the specific findings or techniques (ASE and AWE) introduced in the PororoGAN model, but rather explores a complementary approach.",
+                    "relevance": 1
+                },
+                "3. Improving Generation and Evaluation of Visual Stories via Semantic Consistency": {
+                    "explanation": "This paper presents improvements in story visualization through various techniques like dual learning and MART-based transformers, which are aligned with the goals of the PororoGAN model to improve visual quality and coherence. While it builds on similar challenges, it does not directly depend on the specific findings or techniques of the PororoGAN model.",
+                    "relevance": 1
+                },
+                "4. Improving text-to-image generation with object layout guidance": {
+                    "explanation": "This paper focuses on a new approach to text-to-image generation using object layout guidance, which is a different methodology from the PororoGAN model. It does not rely on the specific findings or techniques of the source paper, but rather proposes an alternative approach to the same overarching task of story visualization.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Integrating Visuospatial, Linguistic, and Commonsense Structure into Story Visualization": {
+                    "explanation": "This paper explores the integration of linguistic and commonsense structures into story visualization, which is a related area to the source paper's focus on improving story visualization. However, it does not appear to directly depend on the specific findings or techniques (ASE and AWE) introduced in the PororoGAN model, but rather explores a complementary approach.",
+                    "relevance": 1
+                },
+                "2. Improving Generation and Evaluation of Visual Stories via Semantic Consistency": {
+                    "explanation": "This paper presents improvements in story visualization through various techniques like dual learning and MART-based transformers, which are aligned with the goals of the PororoGAN model to improve visual quality and coherence. While it builds on similar challenges, it does not directly depend on the specific findings or techniques of the PororoGAN model.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "ee1d0e141530190a2b0d834737096c5bfda6b304",
+            "title": "Integrating Visuospatial, Linguistic, and Commonsense Structure into Story Visualization",
+            "abstract": "While much research has been done in text-to-image synthesis, little work has been done to explore the usage of linguistic structure of the input text. Such information is even more important for story visualization since its inputs have an explicit narrative structure that needs to be translated into an image sequence (or visual story). Prior work in this domain has shown that there is ample room for improvement in the generated image sequence in terms of visual quality, consistency and relevance. In this paper, we first explore the use of constituency parse trees using a Transformer-based recurrent architecture for encoding structured input. Second, we augment the structured input with commonsense information and study the impact of this external knowledge on the generation of visual story. Third, we also incorporate visual structure via bounding boxes and dense captioning to provide feedback about the characters/objects in generated images within a dual learning setup. We show that off-the-shelf dense-captioning models trained on Visual Genome can improve the spatial structure of images from a different target domain without needing fine-tuning. We train the model end-to-end using intra-story contrastive loss (between words and image sub-regions) and show significant improvements in visual quality. Finally, we provide an analysis of the linguistic and visuo-spatial information.",
+            "year": 2021,
+            "citation_count": 63,
+            "relevance": 1,
+            "explanation": "This paper explores the integration of linguistic and commonsense structures into story visualization, which is a related area to the source paper's focus on improving story visualization. However, it does not appear to directly depend on the specific findings or techniques (ASE and AWE) introduced in the PororoGAN model, but rather explores a complementary approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Make-A-Story: Visual Memory Conditioned Consistent Story Generation": {
+                    "explanation": "This paper addresses challenges in story visualization, focusing on maintaining consistency of actors and backgrounds across frames. It builds on the source paper's exploration of integrating linguistic and commonsense structures, but introduces a novel framework for reference resolution and consistency, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models": {
+                    "explanation": "This paper focuses on story visualization using diffusion models, which is a different approach from the source paper's use of Transformer-based recurrent architecture. While it addresses the same domain of story visualization, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "3. A survey on knowledge-enhanced multimodal learning": {
+                    "explanation": "This is a review paper that surveys knowledge-enhanced multimodal learning, including visiolinguistic learning. It does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "4. Learning to Model Multimodal Semantic Alignment for Story Visualization": {
+                    "explanation": "This paper addresses semantic alignment in story visualization, which is related to the source paper's focus on integrating linguistic and visuo-spatial information. It partially builds on the source paper's exploration of semantic structures, making it partially dependent on its findings.",
+                    "relevance": 2
+                },
+                "5. Character-centric Story Visualization via Visual Planning and Token Alignment": {
+                    "explanation": "This paper focuses on preserving character consistency in story visualization, which is a specific aspect of the broader challenges addressed in the source paper. It introduces a novel framework for character token planning, making it inspired by the source paper's exploration of story visualization challenges.",
+                    "relevance": 1
+                },
+                "6. Clustering Generative Adversarial Networks for Story Visualization": {
+                    "explanation": "This paper proposes a single-GAN-based approach for story visualization, focusing on semantic similarity and consistency. While it addresses similar challenges as the source paper, it does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "7. StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation": {
+                    "explanation": "This paper adapts pretrained text-to-image transformers for story continuation, focusing on sequential image generation. It addresses a related domain but does not directly build on the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "8. A Review of Multi-Modal Learning from the Text-Guided Visual Processing Viewpoint": {
+                    "explanation": "This is a review paper that analyzes text-guided visual processing, including text-to-image synthesis. It does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "9. Word-Level Fine-Grained Story Visualization": {
+                    "explanation": "This paper introduces a new sentence representation for story visualization, addressing challenges of quality and consistency. It builds on the source paper's exploration of linguistic structures, making it partially dependent on its findings.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Make-A-Story: Visual Memory Conditioned Consistent Story Generation": {
+                    "explanation": "This paper addresses challenges in story visualization, focusing on maintaining consistency of actors and backgrounds across frames. It builds on the source paper's exploration of integrating linguistic and commonsense structures, but introduces a novel framework for reference resolution and consistency, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Learning to Model Multimodal Semantic Alignment for Story Visualization": {
+                    "explanation": "This paper addresses semantic alignment in story visualization, which is related to the source paper's focus on integrating linguistic and visuo-spatial information. It partially builds on the source paper's exploration of semantic structures, making it partially dependent on its findings.",
+                    "relevance": 2
+                },
+                "3. Word-Level Fine-Grained Story Visualization": {
+                    "explanation": "This paper introduces a new sentence representation for story visualization, addressing challenges of quality and consistency. It builds on the source paper's exploration of linguistic structures, making it partially dependent on its findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "444d7286e421839aeb7731127bbaedd29d8b401b",
+            "title": "Make-A-Story: Visual Memory Conditioned Consistent Story Generation",
+            "abstract": "There has been a recent explosion of impressive generative models that can produce high quality images (or videos) conditioned on text descriptions. However, all such approaches rely on conditional sentences that contain un-ambiguous descriptions of scenes and main actors in them. Therefore employing such models for more complex task of story visualization, where naturally references and co-references exist, and one requires to reason about when to maintain consistency of actors and backgrounds across frames/scenes, and when not to, based on story progression, remains a challenge. In this work, we address the aforementioned challenges and propose a novel autoregressive diffusion-based framework with a visual memory module that implicitly captures the actor and background context across the generated frames. Sentence-conditioned soft attention over the memories enables effective reference resolution and learns to maintain scene and actor consistency when needed. To validate the effectiveness of our approach, we extend the MUGEN dataset [19] and introduce additional characters, backgrounds and referencing in multi-sentence storylines. Our experiments for story generation on the MUGEN, the PororoSV [30] and the FlintstonesSV [16] dataset show that our method not only outperforms prior state-of-the-art in generating frames with high visual quality, which are consistent with the story, but also models appropriate correspondences between the characters and the background.",
+            "year": 2022,
+            "citation_count": 75,
+            "relevance": 2,
+            "explanation": "This paper addresses challenges in story visualization, focusing on maintaining consistency of actors and backgrounds across frames. It builds on the source paper's exploration of integrating linguistic and commonsense structures, but introduces a novel framework for reference resolution and consistency, making it partially dependent on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation": {
+                    "explanation": "This paper focuses on 3D shape generation using multimodal inputs and does not directly relate to the source paper's focus on story visualization and maintaining consistency across frames. The methodologies and applications are different, as SDFusion is concerned with 3D asset generation rather than story generation.",
+                    "relevance": 0
+                },
+                "2. Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models": {
+                    "explanation": "This paper is highly relevant to the source paper as it also deals with story visualization using diffusion models. It builds upon the concept of generating coherent visual stories, similar to the source paper's focus on maintaining consistency in story generation. The use of auto-regressive latent diffusion models for coherent story synthesizing is closely related to the source paper's approach.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models": {
+                    "explanation": "This paper is highly relevant to the source paper as it also deals with story visualization using diffusion models. It builds upon the concept of generating coherent visual stories, similar to the source paper's focus on maintaining consistency in story generation. The use of auto-regressive latent diffusion models for coherent story synthesizing is closely related to the source paper's approach.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "33ef78737ba57ecc1ff98c22369a8e17ed90eb98",
+            "title": "Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models",
+            "abstract": "Conditioned diffusion models have demonstrated state-of-the-art text-to-image synthesis capacity. Recently, most works focus on synthesizing independent images; While for real-world applications, it is common and necessary to generate a series of coherent images for story-stelling. In this work, we mainly focus on story visualization and continuation tasks and propose AR-LDM, a latent diffusion model auto-regressively conditioned on history captions and generated images. Moreover, AR-LDM can generalize to new characters through adaptation. To our best knowledge, this is the first work successfully leveraging diffusion models for coherent visual story synthesizing. It also extends the text-conditioned method to multimodal conditioning. Quantitative results show that AR-LDM achieves SoTA FID scores on PororoSV, FlintstonesSV, and the adopted challenging dataset VIST containing natural images. Large-scale human evaluations show that AR-LDM has superior performance in terms of quality, relevance, and consistency. Code available at this https URL",
+            "year": 2022,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper is highly relevant to the source paper as it also deals with story visualization using diffusion models. It builds upon the concept of generating coherent visual stories, similar to the source paper's focus on maintaining consistency in story generation. The use of auto-regressive latent diffusion models for coherent story synthesizing is closely related to the source paper's approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Image Content Generation with Causal Reasoning": {
+                    "explanation": "This paper focuses on causal reasoning in image generation, which is a different aspect from the coherent story visualization tackled by the source paper. It does not rely on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "2. Make-A-Storyboard: A General Framework for Storyboard with Disentangled and Merged Control": {
+                    "explanation": "This paper addresses story visualization by proposing a storyboard framework, which aligns with the source paper's focus on coherent story visualization. However, it does not directly build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. StoryGPT-V: Large Language Models as Consistent Story Visualizers": {
+                    "explanation": "This paper builds on the concept of using diffusion models for story visualization, similar to the source paper. It extends the source paper's approach by integrating large language models for enhanced consistency, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "4. AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort": {
+                    "explanation": "AutoStory focuses on generating diverse and consistent story images with minimal human input, which is closely related to the source paper's goal of coherent story visualization. It builds on the source paper's approach by enhancing automation and consistency.",
+                    "relevance": 2
+                },
+                "5. OpenLEAF: Open-Domain Interleaved Image-Text Generation and Evaluation": {
+                    "explanation": "OpenLEAF explores interleaved image-text generation, which is a broader task than the specific coherent story visualization addressed in the source paper. It does not directly rely on the source paper's findings.",
+                    "relevance": 0
+                },
+                "6. Causal-Story: Local Causal Attention Utilizing Parameter-Efficient Tuning for Visual Story Synthesis": {
+                    "explanation": "Causal-Story introduces a causal attention mechanism for visual story synthesis, which is related to the source paper's focus on coherent story generation. It builds on the source paper's findings by improving the consistency of story generation.",
+                    "relevance": 2
+                },
+                "7. Synthesizing Long-Term Human Motions with Diffusion Models via Coherent Sampling": {
+                    "explanation": "This paper addresses text-to-motion generation, which is a different domain from the visual story synthesis in the source paper. It does not rely on the source paper's findings.",
+                    "relevance": 0
+                },
+                "8. Exploring the Intersection of AI Art and Film: A Case Study of Giant": {
+                    "explanation": "This paper focuses on AI-assisted pre-visualization in film production, which is unrelated to the coherent story visualization task of the source paper.",
+                    "relevance": 0
+                },
+                "9. Interactive Story Visualization with Multiple Characters": {
+                    "explanation": "This paper addresses interactive story visualization, which is related to the source paper's focus on coherent story visualization. It explores new methods for handling multiple characters and layout editing, building on the source paper's findings.",
+                    "relevance": 2
+                },
+                "10. Improved Visual Story Generation with Adaptive Context Modeling": {
+                    "explanation": "This paper improves visual story generation with adaptive context modeling, directly building on the source paper's approach to coherent story visualization by enhancing context modeling.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. StoryGPT-V: Large Language Models as Consistent Story Visualizers": {
+                    "explanation": "This paper builds on the concept of using diffusion models for story visualization, similar to the source paper. It extends the source paper's approach by integrating large language models for enhanced consistency, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort": {
+                    "explanation": "AutoStory focuses on generating diverse and consistent story images with minimal human input, which is closely related to the source paper's goal of coherent story visualization. It builds on the source paper's approach by enhancing automation and consistency.",
+                    "relevance": 2
+                },
+                "3. Causal-Story: Local Causal Attention Utilizing Parameter-Efficient Tuning for Visual Story Synthesis": {
+                    "explanation": "Causal-Story introduces a causal attention mechanism for visual story synthesis, which is related to the source paper's focus on coherent story generation. It builds on the source paper's findings by improving the consistency of story generation.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "33ef78737ba57ecc1ff98c22369a8e17ed90eb98",
+            "title": "Synthesizing Coherent Story with Auto-Regressive Latent Diffusion Models",
+            "abstract": "Conditioned diffusion models have demonstrated state-of-the-art text-to-image synthesis capacity. Recently, most works focus on synthesizing independent images; While for real-world applications, it is common and necessary to generate a series of coherent images for story-stelling. In this work, we mainly focus on story visualization and continuation tasks and propose AR-LDM, a latent diffusion model auto-regressively conditioned on history captions and generated images. Moreover, AR-LDM can generalize to new characters through adaptation. To our best knowledge, this is the first work successfully leveraging diffusion models for coherent visual story synthesizing. It also extends the text-conditioned method to multimodal conditioning. Quantitative results show that AR-LDM achieves SoTA FID scores on PororoSV, FlintstonesSV, and the adopted challenging dataset VIST containing natural images. Large-scale human evaluations show that AR-LDM has superior performance in terms of quality, relevance, and consistency. Code available at this https URL",
+            "year": 2022,
+            "citation_count": 70,
+            "relevance": 2,
+            "explanation": "This paper is highly relevant to the source paper as it also deals with story visualization using diffusion models. It builds upon the concept of generating coherent visual stories, similar to the source paper's focus on maintaining consistency in story generation. The use of auto-regressive latent diffusion models for coherent story synthesizing is closely related to the source paper's approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Diffusion-Based Adversarial Sample Generation for Improved Stealthiness and Controllability": {
+                    "explanation": "This paper focuses on generating adversarial samples using diffusion models, which is a different application from the source paper's focus on coherent story visualization. While both use diffusion models, the objectives and domains are distinct.",
+                    "relevance": 0
+                },
+                "2. HumanSD: A Native Skeleton-Guided Diffusion Model for Human Image Generation": {
+                    "explanation": "This paper discusses a diffusion model for human image generation with skeleton guidance, which is not directly related to the source paper's focus on coherent story visualization. The connection is limited to the use of diffusion models, but the applications and methodologies differ.",
+                    "relevance": 0
+                },
+                "3. Text-to-image Diffusion Models in Generative AI: A Survey": {
+                    "explanation": "This is a survey paper reviewing text-to-image diffusion models. It does not present novel hypotheses or findings but summarizes existing literature, including possibly the source paper.",
+                    "relevance": 0
+                },
+                "4. ELITE: Encoding Visual Concepts into Textual Embeddings for Customized Text-to-Image Generation": {
+                    "explanation": "This paper focuses on encoding visual concepts into textual embeddings for customized text-to-image generation, which is related to the source paper's domain of text-to-image synthesis. However, it does not specifically address coherent story visualization or continuation tasks.",
+                    "relevance": 0
+                },
+                "5. Directed Diffusion: Direct Control of Object Placement through Attention Guidance": {
+                    "explanation": "This paper addresses the control of object placement in text-guided diffusion models, which is relevant to the source paper's focus on coherent story visualization. The ability to control object placement can contribute to maintaining coherence in visual storytelling.",
+                    "relevance": 1
+                },
+                "6. Zero-shot Generation of Coherent Storybook from Plain Text Story using Diffusion Models": {
+                    "explanation": "This paper directly addresses the generation of coherent storybooks using diffusion models, similar to the source paper's focus on coherent story visualization. It builds on the concept of using diffusion models for storytelling, making it highly relevant.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Zero-shot Generation of Coherent Storybook from Plain Text Story using Diffusion Models": {
+                    "explanation": "This paper directly addresses the generation of coherent storybooks using diffusion models, similar to the source paper's focus on coherent story visualization. It builds on the concept of using diffusion models for storytelling, making it highly relevant.",
+                    "relevance": 2
+                },
+                "2. Directed Diffusion: Direct Control of Object Placement through Attention Guidance": {
+                    "explanation": "This paper addresses the control of object placement in text-guided diffusion models, which is relevant to the source paper's focus on coherent story visualization. The ability to control object placement can contribute to maintaining coherence in visual storytelling.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "493472c37e55eb8e9023880cb89ce3f108aeb3d9",
+            "title": "AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort",
+            "abstract": "Story visualization aims to generate a series of images that match the story described in texts, and it requires the generated images to satisfy high quality, alignment with the text description, and consistency in character identities. Given the complexity of story visualization, existing methods drastically simplify the problem by considering only a few specific characters and scenarios, or requiring the users to provide per-image control conditions such as sketches. However, these simplifications render these methods incompetent for real applications. To this end, we propose an automated story visualization system that can effectively generate diverse, high-quality, and consistent sets of story images, with minimal human interactions. Specifically, we utilize the comprehension and planning capabilities of large language models for layout planning, and then leverage large-scale text-to-image models to generate sophisticated story images based on the layout. We empirically find that sparse control conditions, such as bounding boxes, are suitable for layout planning, while dense control conditions, e.g., sketches and keypoints, are suitable for generating high-quality image content. To obtain the best of both worlds, we devise a dense condition generation module to transform simple bounding box layouts into sketch or keypoint control conditions for final image generation, which not only improves the image quality but also allows easy and intuitive user interactions. In addition, we propose a simple yet effective method to generate multi-view consistent character images, eliminating the reliance on human labor to collect or draw character images.",
+            "year": 2023,
+            "citation_count": 25,
+            "relevance": 2,
+            "explanation": "AutoStory focuses on generating diverse and consistent story images with minimal human input, which is closely related to the source paper's goal of coherent story visualization. It builds on the source paper's approach by enhancing automation and consistency."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. DiffSensei: Bridging Multi-Modal LLMs and Diffusion Models for Customized Manga Generation": {
+                    "explanation": "This paper builds on the idea of story visualization by focusing on manga generation with dynamic multi-character control. It extends the concept of generating visual narratives from text, similar to the source paper, but with a specific focus on manga and character customization.",
+                    "relevance": 1
+                },
+                "2. MovieBench: A Hierarchical Movie Level Dataset for Long Video Generation": {
+                    "explanation": "While this paper addresses video generation, it focuses on datasets and long video generation rather than the specific task of story visualization with minimal human effort, as in the source paper.",
+                    "relevance": 0
+                },
+                "3. StoryAgent: Customized Storytelling Video Generation via Multi-Agent Collaboration": {
+                    "explanation": "This paper shares a thematic connection with the source paper in terms of automated storytelling and maintaining character consistency. It explores video generation, which is a related but distinct area from image generation.",
+                    "relevance": 1
+                },
+                "4. Personalized Generative Storytelling with AI-Visual Illustrations for the Promotion of Knowledge in Cultural Heritage Tourism": {
+                    "explanation": "This paper focuses on using AI for personalized storytelling in cultural tourism, which is different from the automated story visualization system proposed in the source paper. The focus is more on tourism and user interaction than on automated image generation.",
+                    "relevance": 0
+                },
+                "5. Unbounded: A Generative Infinite Game of Character Life Simulation": {
+                    "explanation": "This paper explores generative models in the context of games and character life simulation, which is not directly related to the story visualization task of the source paper.",
+                    "relevance": 0
+                },
+                "6. Story-Adapter: A Training-free Iterative Framework for Long Story Visualization": {
+                    "explanation": "This paper directly addresses story visualization and proposes a framework to enhance generative capabilities for long stories, aligning closely with the source paper's focus on generating coherent story images.",
+                    "relevance": 2
+                },
+                "7. Training-free Color-Style Disentanglement for Constrained Text-to-Image Synthesis": {
+                    "explanation": "This paper focuses on text-to-image synthesis with a specific emphasis on color and style disentanglement, which is a narrower focus compared to the broader story visualization task of the source paper.",
+                    "relevance": 0
+                },
+                "8. CinePreGen: Camera Controllable Video Previsualization via Engine-powered Diffusion": {
+                    "explanation": "This paper deals with video previsualization and camera control, which is related to visual storytelling but focuses on video rather than image generation as in the source paper.",
+                    "relevance": 0
+                },
+                "9. Web Chat-based Application with Large Language Model and Transformers from Hugging Face for Self-Learning on Storytelling Skills": {
+                    "explanation": "This paper focuses on storytelling skills and self-learning through a web chat application, which is not directly related to the automated story visualization system of the source paper.",
+                    "relevance": 0
+                },
+                "10. MovieDreamer: Hierarchical Generation for Coherent Long Visual Sequence": {
+                    "explanation": "This paper addresses long-duration video generation with narrative coherence, which is related to the source paper's focus on maintaining consistency in storytelling, albeit in the context of video rather than images.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Story-Adapter: A Training-free Iterative Framework for Long Story Visualization": {
+                    "explanation": "This paper directly addresses story visualization and proposes a framework to enhance generative capabilities for long stories, aligning closely with the source paper's focus on generating coherent story images.",
+                    "relevance": 2
+                },
+                "2. DiffSensei: Bridging Multi-Modal LLMs and Diffusion Models for Customized Manga Generation": {
+                    "explanation": "This paper builds on the idea of story visualization by focusing on manga generation with dynamic multi-character control. It extends the concept of generating visual narratives from text, similar to the source paper, but with a specific focus on manga and character customization.",
+                    "relevance": 1
+                },
+                "3. StoryAgent: Customized Storytelling Video Generation via Multi-Agent Collaboration": {
+                    "explanation": "This paper shares a thematic connection with the source paper in terms of automated storytelling and maintaining character consistency. It explores video generation, which is a related but distinct area from image generation.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "493472c37e55eb8e9023880cb89ce3f108aeb3d9",
+            "title": "AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort",
+            "abstract": "Story visualization aims to generate a series of images that match the story described in texts, and it requires the generated images to satisfy high quality, alignment with the text description, and consistency in character identities. Given the complexity of story visualization, existing methods drastically simplify the problem by considering only a few specific characters and scenarios, or requiring the users to provide per-image control conditions such as sketches. However, these simplifications render these methods incompetent for real applications. To this end, we propose an automated story visualization system that can effectively generate diverse, high-quality, and consistent sets of story images, with minimal human interactions. Specifically, we utilize the comprehension and planning capabilities of large language models for layout planning, and then leverage large-scale text-to-image models to generate sophisticated story images based on the layout. We empirically find that sparse control conditions, such as bounding boxes, are suitable for layout planning, while dense control conditions, e.g., sketches and keypoints, are suitable for generating high-quality image content. To obtain the best of both worlds, we devise a dense condition generation module to transform simple bounding box layouts into sketch or keypoint control conditions for final image generation, which not only improves the image quality but also allows easy and intuitive user interactions. In addition, we propose a simple yet effective method to generate multi-view consistent character images, eliminating the reliance on human labor to collect or draw character images.",
+            "year": 2023,
+            "citation_count": 25,
+            "relevance": 2,
+            "explanation": "AutoStory focuses on generating diverse and consistent story images with minimal human input, which is closely related to the source paper's goal of coherent story visualization. It builds on the source paper's approach by enhancing automation and consistency."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation": {
+                    "explanation": "This paper builds on the concept of generating consistent images across multiple interactions, which is related to the source paper's focus on generating consistent storytelling images. The use of large language models and layout planning in both papers suggests a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation": {
+                    "explanation": "TheaterGen addresses the challenge of maintaining consistency in multi-turn image generation, similar to the source paper's goal of ensuring consistency in storytelling images. The integration of large language models for managing prompts and layouts indicates a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.MM-Diff: High-Fidelity Image Personalization via Multi-Modal Condition Integration": {
+                    "explanation": "While MM-Diff focuses on high-fidelity image personalization and multi-modal condition integration, it does not directly build upon the concepts of storytelling image generation or layout planning as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.LoRA-Composer: Leveraging Low-Rank Adaptation for Multi-Concept Customization in Training-Free Diffusion Models": {
+                    "explanation": "LoRA-Composer deals with multi-concept customization in image generation, which is not directly related to the storytelling and consistency challenges addressed in the source paper. It focuses on concept integration rather than storytelling or layout planning.",
+                    "relevance": 0
+                },
+                "5.AesopAgent: Agent-driven Evolutionary System on Story-to-Video Production": {
+                    "explanation": "AesopAgent involves story-to-video production, integrating multimodal content, which aligns with the source paper's goal of generating storytelling images. However, it extends the concept to video production, indicating an inspiration from the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation": {
+                    "explanation": "This paper builds on the concept of generating consistent images across multiple interactions, which is related to the source paper's focus on generating consistent storytelling images. The use of large language models and layout planning in both papers suggests a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation": {
+                    "explanation": "TheaterGen addresses the challenge of maintaining consistency in multi-turn image generation, similar to the source paper's goal of ensuring consistency in storytelling images. The integration of large language models for managing prompts and layouts indicates a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.AesopAgent: Agent-driven Evolutionary System on Story-to-Video Production": {
+                    "explanation": "AesopAgent involves story-to-video production, integrating multimodal content, which aligns with the source paper's goal of generating storytelling images. However, it extends the concept to video production, indicating an inspiration from the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "638d8d1f3865ebf065605535a7aa50727d5ffabe",
+            "title": "TheaterGen: Character Management with LLM for Consistent Multi-turn Image Generation",
+            "abstract": "Recent advances in diffusion models can generate high-quality and stunning images from text. However, multi-turn image generation, which is of high demand in real-world scenarios, still faces challenges in maintaining semantic consistency between images and texts, as well as contextual consistency of the same subject across multiple interactive turns. To address this issue, we introduce TheaterGen, a training-free framework that integrates large language models (LLMs) and text-to-image (T2I) models to provide the capability of multi-turn image generation. Within this framework, LLMs, acting as a\"Screenwriter\", engage in multi-turn interaction, generating and managing a standardized prompt book that encompasses prompts and layout designs for each character in the target image. Based on these, Theatergen generate a list of character images and extract guidance information, akin to the\"Rehearsal\". Subsequently, through incorporating the prompt book and guidance information into the reverse denoising process of T2I diffusion models, Theatergen generate the final image, as conducting the\"Final Performance\". With the effective management of prompt books and character images, TheaterGen significantly improves semantic and contextual consistency in synthesized images. Furthermore, we introduce a dedicated benchmark, CMIGBench (Consistent Multi-turn Image Generation Benchmark) with 8000 multi-turn instructions. Different from previous multi-turn benchmarks, CMIGBench does not define characters in advance. Both the tasks of story generation and multi-turn editing are included on CMIGBench for comprehensive evaluation. Extensive experimental results show that TheaterGen outperforms state-of-the-art methods significantly. It raises the performance bar of the cutting-edge Mini DALLE 3 model by 21% in average character-character similarity and 19% in average text-image similarity.",
+            "year": 2024,
+            "citation_count": 13,
+            "relevance": 2,
+            "explanation": "TheaterGen addresses the challenge of maintaining consistency in multi-turn image generation, similar to the source paper's goal of ensuring consistency in storytelling images. The integration of large language models for managing prompts and layouts indicates a partial dependency on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper addresses the challenge of maintaining multi-subject consistency in image generation, which is related to the source paper's focus on semantic and contextual consistency in multi-turn image generation. However, the approach is different as it focuses on isolation and reposition attention rather than integrating LLMs and T2I models. The connection is more about the shared challenge rather than direct dependency.",
+                    "relevance": 1
+                },
+                "2. Unbounded: A Generative Infinite Game of Character Life Simulation": {
+                    "explanation": "This paper focuses on a generative game using LLMs and visual generation for character life simulation, which is conceptually related to the source paper's use of LLMs for character management in image generation. However, the application domain and specific methodologies are different, making the connection more inspirational than dependent.",
+                    "relevance": 1
+                },
+                "3. Story-Adapter: A Training-free Iterative Framework for Long Story Visualization": {
+                    "explanation": "This paper deals with story visualization using a training-free framework to maintain semantic consistency, similar to the source paper's goal of improving consistency in multi-turn image generation. However, the specific techniques and focus on long story visualization differentiate it from the source paper's approach.",
+                    "relevance": 1
+                },
+                "4. A Character-Centric Creative Story Generation via Imagination": {
+                    "explanation": "This paper focuses on creative story generation using image-guided imagination, which involves text-to-image models. While it shares the use of T2I models with the source paper, the focus on story generation rather than image generation consistency makes the connection less direct.",
+                    "relevance": 0
+                },
+                "5. DreamStory: Open-Domain Story Visualization by LLM-Guided Multi-Subject Consistent Diffusion": {
+                    "explanation": "DreamStory uses LLMs and a multi-subject consistent diffusion model for story visualization, which aligns with the source paper's use of LLMs and diffusion models for consistent image generation. The focus on multi-subject consistency and the use of LLMs for generating descriptive prompts make it closely related to the source paper's methodology.",
+                    "relevance": 2
+                },
+                "6. AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation": {
+                    "explanation": "AutoStudio focuses on multi-turn interactive image generation, addressing the challenge of maintaining subject consistency, which is directly related to the source paper's focus on semantic and contextual consistency in multi-turn image generation. The use of LLMs and a multi-agent framework aligns with the source paper's approach.",
+                    "relevance": 2
+                },
+                "7. SPDiffusion: Semantic Protection Diffusion for Multi-concept Text-to-image Generation": {
+                    "explanation": "SPDiffusion addresses text-image inconsistency in multi-concept generation, which is related to the source paper's focus on maintaining consistency in multi-turn image generation. However, the specific approach of semantic protection diffusion is different from the source paper's methodology.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. DreamStory: Open-Domain Story Visualization by LLM-Guided Multi-Subject Consistent Diffusion": {
+                    "explanation": "DreamStory uses LLMs and a multi-subject consistent diffusion model for story visualization, which aligns with the source paper's use of LLMs and diffusion models for consistent image generation. The focus on multi-subject consistency and the use of LLMs for generating descriptive prompts make it closely related to the source paper's methodology.",
+                    "relevance": 2
+                },
+                "2. AutoStudio: Crafting Consistent Subjects in Multi-turn Interactive Image Generation": {
+                    "explanation": "AutoStudio focuses on multi-turn interactive image generation, addressing the challenge of maintaining subject consistency, which is directly related to the source paper's focus on semantic and contextual consistency in multi-turn image generation. The use of LLMs and a multi-agent framework aligns with the source paper's approach.",
+                    "relevance": 2
+                },
+                "3. Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper addresses the challenge of maintaining multi-subject consistency in image generation, which is related to the source paper's focus on semantic and contextual consistency in multi-turn image generation. However, the approach is different as it focuses on isolation and reposition attention rather than integrating LLMs and T2I models. The connection is more about the shared challenge rather than direct dependency.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "9d4292f60a1935812054f7d655e3586a0016d45a",
+            "title": "DreamStory: Open-Domain Story Visualization by LLM-Guided Multi-Subject Consistent Diffusion",
+            "abstract": "Story visualization aims to create visually compelling images or videos corresponding to textual narratives. Despite recent advances in diffusion models yielding promising results, existing methods still struggle to create a coherent sequence of subject-consistent frames based solely on a story. To this end, we propose DreamStory, an automatic open-domain story visualization framework by leveraging the LLMs and a novel multi-subject consistent diffusion model. DreamStory consists of (1) an LLM acting as a story director and (2) an innovative Multi-Subject consistent Diffusion model (MSD) for generating consistent multi-subject across the images. First, DreamStory employs the LLM to generate descriptive prompts for subjects and scenes aligned with the story, annotating each scene's subjects for subsequent subject-consistent generation. Second, DreamStory utilizes these detailed subject descriptions to create portraits of the subjects, with these portraits and their corresponding textual information serving as multimodal anchors (guidance). Finally, the MSD uses these multimodal anchors to generate story scenes with consistent multi-subject. Specifically, the MSD includes Masked Mutual Self-Attention (MMSA) and Masked Mutual Cross-Attention (MMCA) modules. MMSA and MMCA modules ensure appearance and semantic consistency with reference images and text, respectively. Both modules employ masking mechanisms to prevent subject blending. To validate our approach and promote progress in story visualization, we established a benchmark, DS-500, which can assess the overall performance of the story visualization framework, subject-identification accuracy, and the consistency of the generation model. Extensive experiments validate the effectiveness of DreamStory in both subjective and objective evaluations. Please visit our project homepage at https://dream-xyz.github.io/dreamstory.",
+            "year": 2024,
+            "citation_count": 21,
+            "relevance": 2,
+            "explanation": "DreamStory uses LLMs and a multi-subject consistent diffusion model for story visualization, which aligns with the source paper's use of LLMs and diffusion models for consistent image generation. The focus on multi-subject consistency and the use of LLMs for generating descriptive prompts make it closely related to the source paper's methodology."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper addresses multi-subject consistency in open-domain image generation, similar to the source paper's focus on multi-subject consistency in story visualization. However, it proposes a different approach with Isolation and Reposition Attention, which is not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.DreamRunner: Fine-Grained Compositional Story-to-Video Generation with Retrieval-Augmented Motion Adaptation": {
+                    "explanation": "DreamRunner builds upon the concept of story visualization by incorporating fine-grained compositional story-to-video generation. It shares the source paper's goal of improving narrative coherence and consistency but extends it to video generation. The methods in DreamRunner are inspired by the source paper's use of LLMs for scene planning.",
+                    "relevance": 1
+                },
+                "3.Unbounded: A Generative Infinite Game of Character Life Simulation": {
+                    "explanation": "Unbounded focuses on character life simulation in video games using generative models. While it involves generative AI and LLMs, it does not directly relate to the story visualization framework or multi-subject consistency discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Allegro: Open the Black Box of Commercial-Level Video Generation Model": {
+                    "explanation": "Allegro is focused on commercial-level video generation models and does not directly relate to the story visualization or multi-subject consistency aspects of the source paper.",
+                    "relevance": 0
+                },
+                "5.StoryMaker: Towards Holistic Consistent Characters in Text-to-image Generation": {
+                    "explanation": "StoryMaker addresses the challenge of maintaining holistic consistency in text-to-image generation, which aligns with the source paper's focus on multi-subject consistency in story visualization. It builds upon the idea of consistent character portrayal across images, similar to the source paper's objectives.",
+                    "relevance": 2
+                },
+                "6.One missing piece in Vision and Language: A Survey on Comics Understanding": {
+                    "explanation": "This paper is a survey on comics understanding and does not present new hypotheses or findings directly related to the source paper's focus on story visualization and multi-subject consistency.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.StoryMaker: Towards Holistic Consistent Characters in Text-to-image Generation": {
+                    "explanation": "StoryMaker addresses the challenge of maintaining holistic consistency in text-to-image generation, which aligns with the source paper's focus on multi-subject consistency in story visualization. It builds upon the idea of consistent character portrayal across images, similar to the source paper's objectives.",
+                    "relevance": 2
+                },
+                "2.Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper addresses multi-subject consistency in open-domain image generation, similar to the source paper's focus on multi-subject consistency in story visualization. However, it proposes a different approach with Isolation and Reposition Attention, which is not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.DreamRunner: Fine-Grained Compositional Story-to-Video Generation with Retrieval-Augmented Motion Adaptation": {
+                    "explanation": "DreamRunner builds upon the concept of story visualization by incorporating fine-grained compositional story-to-video generation. It shares the source paper's goal of improving narrative coherence and consistency but extends it to video generation. The methods in DreamRunner are inspired by the source paper's use of LLMs for scene planning.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "88520d52782c7db00cabfd8eace9cd1dabd9aecb",
+            "title": "StoryMaker: Towards Holistic Consistent Characters in Text-to-image Generation",
+            "abstract": "Tuning-free personalized image generation methods have achieved significant success in maintaining facial consistency, i.e., identities, even with multiple characters. However, the lack of holistic consistency in scenes with multiple characters hampers these methods' ability to create a cohesive narrative. In this paper, we introduce StoryMaker, a personalization solution that preserves not only facial consistency but also clothing, hairstyles, and body consistency, thus facilitating the creation of a story through a series of images. StoryMaker incorporates conditions based on face identities and cropped character images, which include clothing, hairstyles, and bodies. Specifically, we integrate the facial identity information with the cropped character images using the Positional-aware Perceiver Resampler (PPR) to obtain distinct character features. To prevent intermingling of multiple characters and the background, we separately constrain the cross-attention impact regions of different characters and the background using MSE loss with segmentation masks. Additionally, we train the generation network conditioned on poses to promote decoupling from poses. A LoRA is also employed to enhance fidelity and quality. Experiments underscore the effectiveness of our approach. StoryMaker supports numerous applications and is compatible with other societal plug-ins. Our source codes and model weights are available at https://github.com/RedAIGC/StoryMaker.",
+            "year": 2024,
+            "citation_count": 15,
+            "relevance": 2,
+            "explanation": "StoryMaker addresses the challenge of maintaining holistic consistency in text-to-image generation, which aligns with the source paper's focus on multi-subject consistency in story visualization. It builds upon the idea of consistent character portrayal across images, similar to the source paper's objectives."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.IDProtector: An Adversarial Noise Encoder to Protect Against ID-Preserving Image Generation": {
+                    "explanation": "This paper focuses on protecting identity information in images from being used in identity-preserving generation methods. While it mentions identity-preserving generation, it does not directly build upon or rely on the findings of the StoryMaker paper, which is more focused on holistic consistency in image generation.",
+                    "relevance": 0
+                },
+                "2.SerialGen: Personalized Image Generation by First Standardization Then Personalization": {
+                    "explanation": "SerialGen addresses personalized image generation with a focus on text controllability and whole-body appearance consistency. This aligns with the goals of StoryMaker, which also aims for consistency in character features across images. The hypothesis in SerialGen is inspired by the need for consistency in personalized image generation, a concept explored in StoryMaker.",
+                    "relevance": 1
+                },
+                "3.Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper directly addresses the issue of multi-subject consistency in image generation, which is a key concern of the StoryMaker paper. The proposed methods for maintaining subject consistency and preventing subject convergence are relevant to the challenges identified in StoryMaker, making this paper partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "4.Unbounded: A Generative Infinite Game of Character Life Simulation": {
+                    "explanation": "Unbounded utilizes generative models for character simulation in games, focusing on narrative coherence and visual consistency. While it shares some thematic elements with StoryMaker regarding character consistency, it does not directly build upon or rely on the specific methodologies or findings of the StoryMaker paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention": {
+                    "explanation": "This paper directly addresses the issue of multi-subject consistency in image generation, which is a key concern of the StoryMaker paper. The proposed methods for maintaining subject consistency and preventing subject convergence are relevant to the challenges identified in StoryMaker, making this paper partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "2.SerialGen: Personalized Image Generation by First Standardization Then Personalization": {
+                    "explanation": "SerialGen addresses personalized image generation with a focus on text controllability and whole-body appearance consistency. This aligns with the goals of StoryMaker, which also aims for consistency in character features across images. The hypothesis in SerialGen is inspired by the need for consistency in personalized image generation, a concept explored in StoryMaker.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "0fa050e3669b4d62ea430f3396716a99e752b1ae",
+            "title": "Improving Multi-Subject Consistency in Open-Domain Image Generation with Isolation and Reposition Attention",
+            "abstract": "Training-free diffusion models have achieved remarkable progress in generating multi-subject consistent images within open-domain scenarios. The key idea of these methods is to incorporate reference subject information within the attention layer. However, existing methods still obtain suboptimal performance when handling numerous subjects. This paper reveals two primary issues contributing to this deficiency. Firstly, the undesired internal attraction between different subjects within the target image can lead to the convergence of multiple subjects into a single entity. Secondly, tokens tend to reference nearby tokens, which reduces the effectiveness of the attention mechanism when there is a significant positional difference between subjects in reference and target images. To address these issues, we propose a training-free diffusion model with Isolation and Reposition Attention, named IR-Diffusion. Specifically, Isolation Attention ensures that multiple subjects in the target image do not reference each other, effectively eliminating the subject convergence. On the other hand, Reposition Attention involves scaling and repositioning subjects in both reference and target images to the same position within the images. This ensures that subjects in the target image can better reference those in the reference image, thereby maintaining better consistency. Extensive experiments demonstrate that IR-Diffusion significantly enhances multi-subject consistency, outperforming all existing methods in open-domain scenarios.",
+            "year": 2024,
+            "citation_count": 2,
+            "relevance": 2,
+            "explanation": "This paper directly addresses the issue of multi-subject consistency in image generation, which is a key concern of the StoryMaker paper. The proposed methods for maintaining subject consistency and preventing subject convergence are relevant to the challenges identified in StoryMaker, making this paper partially dependent on the findings of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MultiHuman-Testbench: Benchmarking Image Generation for Multiple Humans": {
+                    "explanation": "This paper introduces a benchmark for evaluating generative models for multi-human image generation. While it addresses challenges in generating images with multiple subjects, it does not directly build upon or depend on the specific findings or hypotheses of the source paper, which focuses on improving multi-subject consistency using Isolation and Reposition Attention.",
+                    "relevance": 0
+                },
+                "2.Personalized Image Generation with Deep Generative Models: A Decade Survey": {
+                    "explanation": "This paper is a survey of personalized image generation techniques and does not propose new hypotheses or findings directly related to the source paper. It provides a comprehensive review of the field, which includes text-to-image diffusion models, but does not specifically address the issues of multi-subject consistency or the methods proposed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8d1fbde83749f61e1a385f2c380ea134d65b52f2</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating Dynamic Object Queries and Augmented Box Replay in YOLO to enhance incremental detection.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Dynamic Object Queries with Augmented Box Replay in YOLO-based detectors will reduce catastrophic forgetting and improve optimization consistency compared to traditional YOLO LwF methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods for incremental object detection often struggle with catastrophic forgetting and optimization consistency, especially when dealing with new classes that emerge over time. While techniques like knowledge distillation and exemplar replay have been explored, they often do not adequately address the interaction between model alignment and augmented data strategies. Specifically, the combination of Dynamic Object Queries and Augmented Box Replay has not been extensively tested in YOLO-based detectors, which could potentially offer a novel approach to balancing stability and plasticity. This hypothesis aims to explore this combination to improve detection performance without the need for extensive retraining or large memory buffers.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Dynamic Object Queries and Augmented Box Replay within YOLO-based detectors to address the challenges of catastrophic forgetting and optimization consistency in incremental object detection. Dynamic Object Queries allow for the adaptive representation of new classes by introducing learnable queries into the model's decoder, which are aggregated with existing queries to maintain a balance between stability and plasticity. Augmented Box Replay addresses the foreground shift by mixing previous objects into the background of new images, ensuring that the model retains knowledge of old classes while learning new ones. This combination is expected to enhance the model's ability to adapt to new classes without forgetting previously learned ones, leading to improved detection performance on datasets like Pascal VOC and COCO. The hypothesis will be tested by comparing the proposed method against traditional YOLO LwF approaches, focusing on metrics such as mAP and optimization consistency.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/5927aea08195fe9d6beeac78e72f07913fbb983a">Dynamic Object Queries</a>: Dynamic Object Queries involve introducing new learnable object queries into the model's decoder to represent new classes. These queries are aggregated with those from previous phases, allowing the model to adapt to both old and new knowledge. This approach is implemented within the DyQ-DETR framework and is expected to reduce inter-class confusion by isolating object queries through disentangled self-attention mechanisms. The use of Dynamic Object Queries is particularly relevant for YOLO-based detectors, which traditionally struggle with noisy regression outputs. By dynamically adapting to new classes, this method aims to improve the model's stability-plasticity tradeoff.</p>
+<p><a href="https://www.semanticscholar.org/paper/4f78d2ef7f18907c04c7ab77b88172784e342f40">Augmented Box Replay</a>: Augmented Box Replay addresses the issue of foreground shift by mixing previous objects into the background of new images or fusing them together for training. This method helps maintain the model's ability to detect old classes by ensuring that their representations are preserved in the training data. The approach is implemented by creating augmented samples that include both old and new class objects, which are then used to train the model. This strategy is particularly useful in scenarios where new object classes emerge over time, and it is tested on benchmark datasets like Pascal VOC and COCO. The expected outcome is a reduction in catastrophic forgetting and improved optimization consistency.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates Dynamic Object Queries and Augmented Box Replay within a YOLO-based detection framework. First, Dynamic Object Queries are implemented by introducing a new set of learnable queries into the model's decoder, which are then aggregated with existing queries from previous phases. This allows the model to represent new classes while retaining knowledge of old ones, reducing inter-class confusion through disentangled self-attention mechanisms. Next, Augmented Box Replay is applied by creating augmented training samples that mix previous objects into the background of new images. This ensures that the model remains aware of old classes while learning new ones, addressing the issue of foreground shift. The integration of these components occurs at the data processing and model training stages, where the augmented samples are fed into the model alongside the dynamic queries. The hypothesis will be tested by comparing the proposed method against traditional YOLO LwF approaches, focusing on metrics such as mAP and optimization consistency. The implementation will involve configuring the YOLO model to accept dynamic queries and augmented samples, ensuring seamless data flow and processing at each stage.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Dynamic Object Queries with Augmented Box Replay in YOLO-based detectors will reduce catastrophic forgetting and improve optimization consistency compared to traditional YOLO LwF methods in incremental object detection tasks.</p></p>
+<p><p>The experiment should include the following components:</p></p>
+<p><ol>
+<li><strong>Experimental Setup</strong>:</li>
+<li>Create a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code></li>
+<li>Set <code>PILOT_MODE = 'MINI_PILOT'</code> by default</li>
+<li>Implement three systems for comparison:<br />
+     a. Baseline 1: Standard YOLO detector (YOLOv5 or YOLOv8)<br />
+     b. Baseline 2: YOLO with Learning without Forgetting (LwF)<br />
+     c. Experimental: YOLO with Dynamic Object Queries and Augmented Box Replay</li>
+</ol></p>
+<p><ol>
+<li><strong>Datasets</strong>:</li>
+<li>Use Pascal VOC and MS COCO datasets</li>
+<li>For <code>MINI_PILOT</code>: Use 5 classes from Pascal VOC with 10 images per class for training and 5 images per class for validation</li>
+<li>For <code>PILOT</code>: Use 10 classes from Pascal VOC with 100 images per class for training and 50 images per class for validation</li>
+<li>For <code>FULL_EXPERIMENT</code>: Use the full Pascal VOC and MS COCO datasets with standard train/val/test splits</li>
+</ol></p>
+<p><ol>
+<li><strong>Incremental Learning Setup</strong>:</li>
+<li>Split classes into multiple phases (e.g., 10-10 for Pascal VOC, 40-40 for COCO)</li>
+<li>For <code>MINI_PILOT</code>: Use 2 phases with 2-3 classes each</li>
+<li>For <code>PILOT</code>: Use 2 phases with 5 classes each</li>
+<li>For <code>FULL_EXPERIMENT</code>: Use standard incremental learning splits (e.g., 10-10 for VOC, 40-40 for COCO)</li>
+</ol></p>
+<p><ol>
+<li><strong>Dynamic Object Queries Implementation</strong>:</li>
+<li>Modify the YOLO architecture to incorporate a transformer decoder with learnable object queries</li>
+<li>Initialize new queries for each incremental phase</li>
+<li>Implement query aggregation to combine queries from previous phases with new ones</li>
+<li>Apply disentangled self-attention mechanisms to reduce inter-class confusion</li>
+</ol></p>
+<p><ol>
+<li><strong>Augmented Box Replay Implementation</strong>:</li>
+<li>Store bounding box annotations and corresponding image patches from previous phases</li>
+<li>Implement a data augmentation pipeline that:<br />
+     a. Extracts objects from previous phase images<br />
+     b. Mixes these objects into the background of new phase images<br />
+     c. Updates bounding box annotations accordingly</li>
+<li>Ensure proper handling of overlapping objects and occlusions</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li><strong>Training Procedure</strong>:</li>
+<li>For each incremental phase:<br />
+     a. Train the baseline models using standard procedures<br />
+     b. Train the experimental model with Dynamic Object Queries and Augmented Box Replay</li>
+<li>Use appropriate loss functions (classification, regression, distillation)</li>
+<li>For <code>MINI_PILOT</code>: Train for 5 epochs per phase</li>
+<li>For <code>PILOT</code>: Train for 20 epochs per phase</li>
+<li>For <code>FULL_EXPERIMENT</code>: Train for 100 epochs per phase</li>
+</ol></p>
+<p><ol>
+<li><strong>Evaluation Metrics</strong>:</li>
+<li>Calculate mean Average Precision (mAP) for all classes after each phase</li>
+<li>Measure forgetting rate by comparing performance on old classes before and after learning new classes</li>
+<li>Assess optimization consistency by tracking loss convergence across phases</li>
+<li>For <code>MINI_PILOT</code> and <code>PILOT</code>: Report metrics on validation set</li>
+<li>For <code>FULL_EXPERIMENT</code>: Report metrics on test set</li>
+</ol></p>
+<p><ol>
+<li><strong>Ablation Studies</strong>:</li>
+<li>For <code>PILOT</code> and <code>FULL_EXPERIMENT</code> only:<br />
+     a. Test Dynamic Object Queries alone<br />
+     b. Test Augmented Box Replay alone<br />
+     c. Test the combined approach</li>
+</ol></p>
+<p><ol>
+<li><strong>Visualization and Analysis</strong>:</li>
+<li>Generate detection visualizations for qualitative assessment</li>
+<li>Plot mAP trends across incremental phases</li>
+<li>Visualize attention maps from Dynamic Object Queries</li>
+<li>Create confusion matrices to analyze inter-class confusion</li>
+</ol></p>
+<p><ol>
+<li><strong>Implementation Notes</strong>:<ul>
+<li>Use PyTorch for model implementation</li>
+<li>Leverage existing YOLO implementations (e.g., YOLOv5, YOLOv8) as starting points</li>
+<li>Implement proper logging and checkpointing</li>
+<li>Ensure reproducibility by setting random seeds</li>
+</ul>
+</li>
+</ol></p>
+<p><p>Please run the experiment in the following order:<br />
+1. First run the <code>MINI_PILOT</code> to verify code functionality and debug any issues<br />
+2. If successful, proceed to the <code>PILOT</code> to assess if the approach shows promising results<br />
+3. Stop after the <code>PILOT</code> and do not run the <code>FULL_EXPERIMENT</code> (this will be manually triggered after human verification)</p></p>
+<p><p>The experiment should output detailed logs, visualizations, and performance metrics for each phase and model configuration. Include statistical significance tests (e.g., paired t-tests) to compare the performance of the baseline and experimental approaches.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/8d1fbde83749f61e1a385f2c380ea134d65b52f2">Paper 0: Continual Detection Transformer for Incremental Object Detection</a> (57 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/4f78d2ef7f18907c04c7ab77b88172784e342f40">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/4af5ac57d6df79dd457c80d90bac170906b5185b">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/9af284a416153c36bd4dbb1bc47ad7672b712cc9">Paper 3</a>. The analysis of the related papers reveals a progression in addressing the challenges of incremental object detection, particularly catastrophic forgetting and optimization consistency across stages. Each paper builds upon the previous by introducing novel methods such as Augmented Box Replay, model alignment across stages, and self-distillation for different types of detectors. However, a gap remains in effectively integrating these advancements into a unified framework that can be applied to various types of object detectors, including both transformer-based and YOLO models. A research idea that combines these approaches into a cohesive system could advance the field by providing a more comprehensive solution to IOD challenges.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/8d1fbde83749f61e1a385f2c380ea134d65b52f2" target="_blank">Continual Detection Transformer for Incremental Object Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4f78d2ef7f18907c04c7ab77b88172784e342f40" target="_blank">Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4af5ac57d6df79dd457c80d90bac170906b5185b" target="_blank">Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9af284a416153c36bd4dbb1bc47ad7672b712cc9" target="_blank">Teach YOLO to Remember: A Self-Distillation Approach for Continual Object Detection</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/1b054da637a42faaf14cf1454fb18ac003eb4f33" target="_blank">Preventing Catastrophic Forgetting through Memory Networks in Continuous Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/cbe2300f89abdc49fda49ea5047d0e337e4347ed" target="_blank">Pseudo Object Replay and Mining for Incremental Object Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4857062751b922c7ce3d166dd1c54d627b2056b8" target="_blank">DuET: Dual Incremental Object Detection via Exemplar-Free Task Arithmetic</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/e306906d0ccc1b40430f56650a01e94088584600" target="_blank">Demystifying Catastrophic Forgetting in Two-Stage Incremental Object Detector</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/e909ac804f9051694994a5ba94d5645aefc11e7b" target="_blank">On the Inherent Robustness of One-Stage Object Detection against Out-of-Distribution Data</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9545c715d9ad7f417eeb2e9337d7204675a2aa30" target="_blank">Non-exemplar Domain Incremental Object Detection via Learning Domain Bias</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4cb91ee12d758c4a05ebc3e1dff21e6df5a7eaaa" target="_blank">Autonomous Vehicles: Applications of Deep Reinforcement Learning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/31f19189c5989eefcb933571c5682a830b5b84fc" target="_blank">Synchronizing Object Detection: Applications, Advancements and Existing Challenges</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/3ea03c8bd1cfcaa4545ebd6a89e940673c04500a" target="_blank">YOLO Evolution: A Comprehensive Benchmark and Architectural Review of YOLOv12, YOLO11, and Their Previous Versions</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/5927aea08195fe9d6beeac78e72f07913fbb983a" target="_blank">Dynamic Object Queries for Transformer-based Incremental Object Detection</a> (2024)</li>
+</ol>
+</body>
+</html>

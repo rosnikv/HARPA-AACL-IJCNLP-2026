@@ -1,0 +1,56 @@
+[
+    {
+        "paperId": "1c175d404fbb340cb55946dc8085bffe4cbd2912",
+        "title": "Sample then Identify: A General Framework for Risk Control and Assessment in Multimodal Large Language Models",
+        "abstract": "Multimodal Large Language Models (MLLMs) exhibit promising advancements across various tasks, yet they still encounter significant trustworthiness issues. Prior studies apply Split Conformal Prediction (SCP) in language modeling to construct prediction sets with statistical guarantees. However, these methods typically rely on internal model logits or are restricted to multiple-choice settings, which hampers their generalizability and adaptability in dynamic, open-ended environments. In this paper, we introduce TRON, a two-step framework for risk control and assessment, applicable to any MLLM that supports sampling in both open-ended and closed-ended scenarios. TRON comprises two main components: (1) a novel conformal score to sample response sets of minimum size, and (2) a nonconformity score to identify high-quality responses based on self-consistency theory, controlling the error rates by two specific risk levels. Furthermore, we investigate semantic redundancy in prediction sets within open-ended contexts for the first time, leading to a promising evaluation metric for MLLMs based on average set size. Our comprehensive experiments across four Video Question-Answering (VideoQA) datasets utilizing eight MLLMs show that TRON achieves desired error rates bounded by two user-specified risk levels. Additionally, deduplicated prediction sets maintain adaptiveness while being more efficient and stable for risk assessment under different risk levels.",
+        "year": 2024,
+        "citation_count": 10,
+        "relevance": 2,
+        "explanation": "This paper builds on the idea of using conformal prediction in language models, making it partially dependent on the source paper."
+    },
+    {
+        "paperId": "c757764755c3b7a390aed65cd4d3072d46147753",
+        "title": "Conformal Risk Minimization with Variance Reduction",
+        "abstract": "Conformal prediction (CP) is a distribution-free framework for achieving probabilistic guarantees on black-box models. CP is generally applied to a model post-training. Recent research efforts, on the other hand, have focused on optimizing CP efficiency during training. We formalize this concept as the problem of conformal risk minimization (CRM). In this direction, conformal training (ConfTr) by Stutz et al.(2022) is a technique that seeks to minimize the expected prediction set size of a model by simulating CP in-between training updates. Despite its potential, we identify a strong source of sample inefficiency in ConfTr that leads to overly noisy estimated gradients, introducing training instability and limiting practical use. To address this challenge, we propose variance-reduced conformal training (VR-ConfTr), a CRM method that incorporates a variance reduction technique in the gradient estimation of the ConfTr objective function. Through extensive experiments on various benchmark datasets, we demonstrate that VR-ConfTr consistently achieves faster convergence and smaller prediction sets compared to baselines.",
+        "year": 2024,
+        "citation_count": 4,
+        "relevance": 1,
+        "explanation": "This paper discusses conformal prediction and risk minimization, which are related to the conformal factuality guarantees in the source paper."
+    },
+    {
+        "paperId": "d3bdc08af23235b0ce05a4c17dd8b32c3e314a31",
+        "title": "Conformal Generative Modeling with Improved Sample Efficiency through Sequential Greedy Filtering",
+        "abstract": "Generative models lack rigorous statistical guarantees for their outputs and are therefore unreliable in safety-critical applications. In this work, we propose Sequential Conformal Prediction for Generative Models (SCOPE-Gen), a sequential conformal prediction method producing prediction sets that satisfy a rigorous statistical guarantee called conformal admissibility control. This guarantee states that with high probability, the prediction sets contain at least one admissible (or valid) example. To this end, our method first samples an initial set of i.i.d. examples from a black box generative model. Then, this set is iteratively pruned via so-called greedy filters. As a consequence of the iterative generation procedure, admissibility of the final prediction set factorizes as a Markov chain. This factorization is crucial, because it allows to control each factor separately, using conformal prediction. In comparison to prior work, our method demonstrates a large reduction in the number of admissibility evaluations during calibration. This reduction is important in safety-critical applications, where these evaluations must be conducted manually by domain experts and are therefore costly and time consuming. We highlight the advantages of our method in terms of admissibility evaluations and cardinality of the prediction sets through experiments in natural language generation and molecular graph extension tasks.",
+        "year": 2024,
+        "citation_count": 1,
+        "relevance": 1,
+        "explanation": "This paper proposes a method for generative models using conformal prediction, which is related to the source paper's use of conformal prediction for factuality guarantees."
+    },
+    {
+        "paperId": "bbc8eb04cbfa9f221dcd63d45ffd460b88a0ac01",
+        "title": "ConU: Conformal Uncertainty in Large Language Models with Correctness Coverage Guarantees",
+        "abstract": "Uncertainty quantification (UQ) in natural language generation (NLG) tasks remains an open challenge, exacerbated by the closed-source nature of the latest large language models (LLMs). This study investigates applying conformal prediction (CP), which can transform any heuristic uncertainty notion into rigorous prediction sets, to black-box LLMs in open-ended NLG tasks. We introduce a novel uncertainty measure based on self-consistency theory, and then develop a conformal uncertainty criterion by integrating the uncertainty condition aligned with correctness into the CP algorithm. Empirical evaluations indicate that our uncertainty measure outperforms prior state-of-the-art methods. Furthermore, we achieve strict control over the correctness coverage rate utilizing 7 popular LLMs on 4 free-form NLG datasets, spanning general-purpose and medical scenarios. Additionally, the calibrated prediction sets with small size further highlights the efficiency of our method in providing trustworthy guarantees for practical open-ended NLG applications.",
+        "year": 2024,
+        "citation_count": 29,
+        "relevance": 2,
+        "explanation": "This paper expands on the source paper by applying conformal prediction to large language models for uncertainty quantification in open-ended tasks, which is directly related to the source paper's focus on conformal factuality guarantees."
+    },
+    {
+        "paperId": "2c85de293de93582e3d457ab9a5760a5ac71aa11",
+        "title": "Large language model validity via enhanced conformal prediction methods",
+        "abstract": "We develop new conformal inference methods for obtaining validity guarantees on the output of large language models (LLMs). Prior work in conformal language modeling identifies a subset of the text that satisfies a high-probability guarantee of correctness. These methods work by filtering claims from the LLM's original response if a scoring function evaluated on the claim fails to exceed a threshold calibrated via split conformal prediction. Existing methods in this area suffer from two deficiencies. First, the guarantee stated is not conditionally valid. The trustworthiness of the filtering step may vary based on the topic of the response. Second, because the scoring function is imperfect, the filtering step can remove many valuable and accurate claims. We address both of these challenges via two new conformal methods. First, we generalize the conditional conformal procedure of Gibbs et al. (2023) in order to adaptively issue weaker guarantees when they are required to preserve the utility of the output. Second, we show how to systematically improve the quality of the scoring function via a novel algorithm for differentiating through the conditional conformal procedure. We demonstrate the efficacy of our approach on biography and medical question-answering datasets.",
+        "year": 2024,
+        "citation_count": 48,
+        "relevance": 2,
+        "explanation": "This paper builds on the source paper by addressing deficiencies in existing conformal methods for language models and proposing enhancements, making it partially dependent on the findings of the source paper."
+    },
+    {
+        "paperId": "8d7d4d75437ca48415eed2a4153d5f8bef92e93e",
+        "title": "On Subjective Uncertainty Quantification and Calibration in Natural Language Generation",
+        "abstract": "Applications of large language models often involve the generation of free-form responses, in which case uncertainty quantification becomes challenging. This is due to the need to identify task-specific uncertainties (e.g., about the semantics) which appears difficult to define in general cases. This work addresses these challenges from a perspective of Bayesian decision theory, starting from the assumption that our utility is characterized by a similarity measure that compares a generated response with a hypothetical true response. We discuss how this assumption enables principled quantification of the model's subjective uncertainty and its calibration. We further derive a measure for epistemic uncertainty, based on a missing data perspective and its characterization as an excess risk. The proposed methods can be applied to black-box language models. We illustrate the methods on question answering and machine translation tasks. Our experiments provide a principled evaluation of task-specific calibration, and demonstrate that epistemic uncertainty offers a promising deferral strategy for efficient data acquisition in in-context learning.",
+        "year": 2024,
+        "citation_count": 7,
+        "relevance": 1,
+        "explanation": "This paper discusses uncertainty quantification in language generation from a Bayesian perspective, which is related to the source paper's focus on uncertainty in language models, but it does not directly build on the conformal factuality framework."
+    }
+]

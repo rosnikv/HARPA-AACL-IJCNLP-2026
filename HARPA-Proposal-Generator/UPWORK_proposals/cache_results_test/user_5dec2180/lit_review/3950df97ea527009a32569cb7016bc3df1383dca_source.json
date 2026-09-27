@@ -1,0 +1,2295 @@
+{
+    "topic_description": "graph-based reasoning with language models for question answering using knowledge graphs",
+    "all_queries": [
+        "KeywordQuery(\"graph-based reasoning with language models for question answering using knowledge graphs\")",
+        "PaperQuery(\"3950df97ea527009a32569cb7016bc3df1383dca\")",
+        "GetReferences(\"f8d9decb348a2a6daeb54c8cad82350bfec3e1b0\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "3950df97ea527009a32569cb7016bc3df1383dca",
+            "paperId": "3950df97ea527009a32569cb7016bc3df1383dca",
+            "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering",
+            "year": 2021,
+            "citationCount": 628,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.naacl-main.45.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.06378, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a new model, QA-GNN, which addresses the problem of answering questions using knowledge from pre-trained language models (LMs) and knowledge graphs (KGs) through two key innovations: relevance scoring and joint reasoning."
+            },
+            "authors": [
+                {
+                    "authorId": "19168196",
+                    "name": "Michihiro Yasunaga"
+                },
+                {
+                    "authorId": "40046694",
+                    "name": "Hongyu Ren"
+                },
+                {
+                    "authorId": "2691021",
+                    "name": "Antoine Bosselut"
+                },
+                {
+                    "authorId": "145419642",
+                    "name": "Percy Liang"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ],
+            "abstract": "The problem of answering questions using knowledge from pre-trained language models (LMs) and knowledge graphs (KGs) presents two challenges: given a QA context (question and answer choice), methods need to (i) identify relevant knowledge from large KGs, and (ii) perform joint reasoning over the QA context and KG. Here we propose a new model, QA-GNN, which addresses the above challenges through two key innovations: (i) relevance scoring, where we use LMs to estimate the importance of KG nodes relative to the given QA context, and (ii) joint reasoning, where we connect the QA context and KG to form a joint graph, and mutually update their representations through graph-based message passing. We evaluate QA-GNN on the CommonsenseQA and OpenBookQA datasets, and show its improvement over existing LM and LM+KG models, as well as its capability to perform interpretable and structured reasoning, e.g., correctly handling negation in questions.",
+            "score": 10
+        },
+        {
+            "id": "f8d9decb348a2a6daeb54c8cad82350bfec3e1b0",
+            "paperId": "f8d9decb348a2a6daeb54c8cad82350bfec3e1b0",
+            "title": "FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering",
+            "year": 2024,
+            "citationCount": 15,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.13873, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a unified framework, FiDeLiS, designed to improve the factuality of LLM responses by anchoring answers to verifiable reasoning steps retrieved from KGs, and leverages step-wise beam search with a deductive scoring function."
+            },
+            "authors": [
+                {
+                    "authorId": "2145641810",
+                    "name": "Yuan Sui"
+                },
+                {
+                    "authorId": "2285087612",
+                    "name": "Yufei He"
+                },
+                {
+                    "authorId": "2302823840",
+                    "name": "Nian Liu"
+                },
+                {
+                    "authorId": "2283895736",
+                    "name": "Xiaoxin He"
+                },
+                {
+                    "authorId": "2362220961",
+                    "name": "Kun Wang"
+                },
+                {
+                    "authorId": "2283877888",
+                    "name": "Bryan Hooi"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) are often challenged by generating erroneous or hallucinated responses, especially in complex reasoning tasks. Leveraging Knowledge Graphs (KGs) as external knowledge sources has emerged as a viable solution. However, existing KG-enhanced methods, either retrieval-based or agent-based, encounter difficulties in accurately retrieving knowledge and efficiently traversing KGs at scale. In this paper, we propose a unified framework, FiDeLiS, designed to improve the factuality of LLM responses by anchoring answers to verifiable reasoning steps retrieved from KGs. To achieve this, we leverage step-wise beam search with a deductive scoring function, allowing the LLM to validate reasoning process step by step, and halt the search once the question is deducible. In addition, we propose a Path-RAG module to pre-select a smaller candidate set for each beam search step, reducing computational costs by narrowing the search space. Extensive experiments show that our method, as a training-free framework, not only improve the performance but also enhance the factuality and interpretability across different benchmarks. Code is released at https://github.com/Y-Sui/FiDeLiS.",
+            "score": 10
+        },
+        {
+            "id": "8074a5421d77b63bdd8fe9cca2b49e5f4a4de277",
+            "paperId": "8074a5421d77b63bdd8fe9cca2b49e5f4a4de277",
+            "title": "Dynamic Heterogeneous-Graph Reasoning with Language Models and Knowledge Representation Learning for Commonsense Question Answering",
+            "year": 2023,
+            "citationCount": 18,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2023.acl-long.785.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2023.acl-long.785, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A dynamic heterogeneous-graph reasoning method with LMs and knowledge representation learning (DHLK), which constructs a heterogeneous knowledge graph (HKG) based on multiple knowledge sources and optimizes the structure and knowledge represented of the HKG using a two-stage pruning strategy and knowledge representations learning (KRL)."
+            },
+            "authors": [
+                {
+                    "authorId": "2143539859",
+                    "name": "Yujie Wang"
+                },
+                {
+                    "authorId": "2110890052",
+                    "name": "Hu Zhang"
+                },
+                {
+                    "authorId": "3300112",
+                    "name": "Jiye Liang"
+                },
+                {
+                    "authorId": "2160218813",
+                    "name": "Ru Li"
+                }
+            ],
+            "abstract": "Recently, knowledge graphs (KGs) have won noteworthy success in commonsense question answering. Existing methods retrieve relevant subgraphs in the KGs through key entities and reason about the answer with language models (LMs) and graph neural networks. However, they ignore (i) optimizing the knowledge representation and structure of subgraphs and (ii) deeply fusing heterogeneous QA context with subgraphs. In this paper, we propose a dynamic heterogeneous-graph reasoning method with LMs and knowledge representation learning (DHLK), which constructs a heterogeneous knowledge graph (HKG) based on multiple knowledge sources and optimizes the structure and knowledge representation of the HKG using a two-stage pruning strategy and knowledge representation learning (KRL). It then performs joint reasoning by LMs and Relation Mask Self-Attention (RMSA). Specifically, DHLK filters key entities based on the dictionary vocabulary to achieve the first-stage pruning while incorporating the paraphrases in the dictionary into the subgraph to construct the HKG. Then, DHLK encodes and fuses the QA context and HKG using LM, and dynamically removes irrelevant KG entities based on the attention weights of LM for the second-stage pruning. Finally, DHLK introduces KRL to optimize the knowledge representation and perform answer reasoning on the HKG by RMSA.We evaluate DHLK at CommonsenseQA and OpenBookQA, and show its improvement on existing LM and LM+KG methods.",
+            "score": 9
+        },
+        {
+            "id": "dffb86781047f64315df45a1081ed0a1352733e2",
+            "paperId": "dffb86781047f64315df45a1081ed0a1352733e2",
+            "title": "KARPA: A Training-free Method of Adapting Knowledge Graph as References for Large Language Model's Reasoning Path Aggregation",
+            "year": 2024,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2412.20995, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes Knowledge graph Assisted Reasoning Path Aggregation (KARPA), a novel framework that harnesses the global planning abilities of LLMs for efficient and accurate KG reasoning, and achieves state-of-the-art performance in KGQA tasks."
+            },
+            "authors": [
+                {
+                    "authorId": "2338362468",
+                    "name": "Siyuan Fang"
+                },
+                {
+                    "authorId": "2281290823",
+                    "name": "Kaijing Ma"
+                },
+                {
+                    "authorId": "2268491856",
+                    "name": "Tianyu Zheng"
+                },
+                {
+                    "authorId": "2279346001",
+                    "name": "Xinrun Du"
+                },
+                {
+                    "authorId": "2337804133",
+                    "name": "Ningxuan Lu"
+                },
+                {
+                    "authorId": "2337820398",
+                    "name": "Ge Zhang"
+                },
+                {
+                    "authorId": "2337855655",
+                    "name": "Qingkun Tang"
+                }
+            ],
+            "abstract": "Large language models (LLMs) demonstrate exceptional performance across a variety of tasks, yet they are often affected by hallucinations and the timeliness of knowledge. Leveraging knowledge graphs (KGs) as external knowledge sources has emerged as a viable solution, but existing methods for LLM-based knowledge graph question answering (KGQA) are often limited by step-by-step decision-making on KGs, restricting the global planning and reasoning capabilities of LLMs, or they require fine-tuning or pre-training on specific KGs. To address these challenges, we propose Knowledge graph Assisted Reasoning Path Aggregation (KARPA), a novel framework that harnesses the global planning abilities of LLMs for efficient and accurate KG reasoning. KARPA operates in three steps: pre-planning relation paths using the LLM's global planning capabilities, matching semantically relevant paths via an embedding model, and reasoning over these paths to generate answers. Unlike existing KGQA methods, KARPA avoids stepwise traversal, requires no additional training, and is adaptable to various LLM architectures. Extensive experimental results show that KARPA achieves state-of-the-art performance in KGQA tasks, delivering both high efficiency and accuracy. Our code will be available on Github.",
+            "score": 9
+        },
+        {
+            "id": "3746a5d3a1c1d1845bd6dcfacf37d7845720b18a",
+            "paperId": "3746a5d3a1c1d1845bd6dcfacf37d7845720b18a",
+            "title": "Integrating Large Language Models with Graph-based Reasoning for Conversational Question Answering",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2407.09506, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper focuses on a conversational question answering task which combines the challenges of understanding questions in context and reasoning over evidence gathered from heterogeneous sources like text, knowledge graphs, tables, and infoboxes, and demonstrates robustness against noise and retrieval errors."
+            },
+            "authors": [
+                {
+                    "authorId": "2311396839",
+                    "name": "Parag Jain"
+                },
+                {
+                    "authorId": "1747893",
+                    "name": "Mirella Lapata"
+                }
+            ],
+            "abstract": "We focus on a conversational question answering task which combines the challenges of understanding questions in context and reasoning over evidence gathered from heterogeneous sources like text, knowledge graphs, tables, and infoboxes. Our method utilizes a graph structured representation to aggregate information about a question and its context (i.e., the conversation so far and evidence retrieved to find an answer), while also harnessing the reasoning and text generation capabilities of large language models (LLMs). Graph embeddings are directly injected into the LLM, bypassing the token embedding layers, and learned end-to-end by minimizing cross-entropy. Our model maintains a memory module to track and update past evidence, thus influencing the graph's structure, as the conversation evolves. Experimental results on the ConvMix benchmark(Christmann et al., 2022a) show that graph embeddings enhance the LLM's ability to reason, while the memory module provides robustness against noise and retrieval errors.",
+            "score": 9
+        },
+        {
+            "id": "4c0f029efd5371eed087d0794fb0df71238600cc",
+            "paperId": "4c0f029efd5371eed087d0794fb0df71238600cc",
+            "title": "KG-CoT: Chain-of-Thought Prompting of Large Language Models over Knowledge Graphs for Knowledge-Aware Question Answering",
+            "year": 2024,
+            "citationCount": 13,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.24963/ijcai.2024/734?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.24963/ijcai.2024/734, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "KG-CoT is proposed, a novel knowledge-augmented paradigm that leverages a small-scale step-by-step graph reasoning model to reason over knowledge graphs (KGs) and utilizes a reasoning path generation method to generate chains of reasoning with high confidence for large-scale LLMs."
+            },
+            "authors": [
+                {
+                    "authorId": "2293901145",
+                    "name": "Ruilin Zhao"
+                },
+                {
+                    "authorId": "2283265839",
+                    "name": "Feng Zhao"
+                },
+                {
+                    "authorId": "2313356601",
+                    "name": "Long Wang"
+                },
+                {
+                    "authorId": "2238149841",
+                    "name": "Xianzhi Wang"
+                },
+                {
+                    "authorId": "2283302879",
+                    "name": "Guandong Xu"
+                }
+            ],
+            "abstract": "Large language models (LLMs) encounter challenges such as hallucination and factual errors in knowledge-intensive tasks. One the one hand, LLMs sometimes struggle to generate reliable answers based on the black-box parametric knowledge, due to the lack of responsible knowledge. Moreover, fragmented knowledge facts extracted by knowledge retrievers fail to provide explicit and coherent reasoning paths for improving LLM reasoning. To address these challenges, we propose KG-CoT, a novel knowledge-augmented paradigm that leverages a small-scale step-by-step graph reasoning model to reason over knowledge graphs (KGs) and utilizes a reasoning path generation method to generate chains of reasoning with high confidence for large-scale LLMs. Extensive experiments demonstrate that our KG-CoT significantly improves the performance of LLMs on knowledge-intensive question answering tasks, such as multi-hop, single-hop, and open-domain question answering benchmarks, without fine-tuning LLMs. KG-CoT outperforms the CoT prompting as well as prior retrieval-augmented and knowledge base question answering baselines. Moreover, KG-CoT can reduce the number of API calls and cost and generalize to various LLM backbones in a lightweight plug-and-play manner.",
+            "score": 9
+        },
+        {
+            "id": "9ef5f1c54f254589541ae63c33408ea1d3ad899a",
+            "paperId": "9ef5f1c54f254589541ae63c33408ea1d3ad899a",
+            "title": "Graph-constrained Reasoning: Faithful Reasoning on Knowledge Graphs with Large Language Models",
+            "year": 2024,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.13080, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2238130759",
+                    "name": "Linhao Luo"
+                },
+                {
+                    "authorId": "2314850812",
+                    "name": "Zicheng Zhao"
+                },
+                {
+                    "authorId": "2305431199",
+                    "name": "Chen Gong"
+                },
+                {
+                    "authorId": "2561045",
+                    "name": "Gholamreza Haffari"
+                },
+                {
+                    "authorId": "2265933101",
+                    "name": "Shirui Pan"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated impressive reasoning abilities, but they still struggle with faithful reasoning due to knowledge gaps and hallucinations. To address these issues, knowledge graphs (KGs) have been utilized to enhance LLM reasoning through their structured knowledge. However, existing KG-enhanced methods, either retrieval-based or agent-based, encounter difficulties in accurately retrieving knowledge and efficiently traversing KGs at scale. In this work, we introduce graph-constrained reasoning (GCR), a novel framework that bridges structured knowledge in KGs with unstructured reasoning in LLMs. To eliminate hallucinations, GCR ensures faithful KG-grounded reasoning by integrating KG structure into the LLM decoding process through KG-Trie, a trie-based index that encodes KG reasoning paths. KG-Trie constrains the decoding process, allowing LLMs to directly reason on graphs and generate faithful reasoning paths grounded in KGs. Additionally, GCR leverages a lightweight KG-specialized LLM for graph-constrained reasoning alongside a powerful general LLM for inductive reasoning over multiple reasoning paths, resulting in accurate reasoning with zero reasoning hallucination. Extensive experiments on several KGQA benchmarks demonstrate that GCR achieves state-of-the-art performance and exhibits strong zero-shot generalizability to unseen KGs without additional training.",
+            "score": 9
+        },
+        {
+            "id": "b47e96762351b2dbf7e863ece4640df6194bcc0c",
+            "paperId": "b47e96762351b2dbf7e863ece4640df6194bcc0c",
+            "title": "Reasoning on Graphs: Faithful and Interpretable Large Language Model Reasoning",
+            "year": 2023,
+            "citationCount": 276,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2310.01061",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.01061, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2238130759",
+                    "name": "Linhao Luo"
+                },
+                {
+                    "authorId": "2256011160",
+                    "name": "Yuan-Fang Li"
+                },
+                {
+                    "authorId": "2561045",
+                    "name": "Gholamreza Haffari"
+                },
+                {
+                    "authorId": "2254047333",
+                    "name": "Shirui Pan"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated impressive reasoning abilities in complex tasks. However, they lack up-to-date knowledge and experience hallucinations during reasoning, which can lead to incorrect reasoning processes and diminish their performance and trustworthiness. Knowledge graphs (KGs), which capture vast amounts of facts in a structured format, offer a reliable source of knowledge for reasoning. Nevertheless, existing KG-based LLM reasoning methods only treat KGs as factual knowledge bases and overlook the importance of their structural information for reasoning. In this paper, we propose a novel method called reasoning on graphs (RoG) that synergizes LLMs with KGs to enable faithful and interpretable reasoning. Specifically, we present a planning-retrieval-reasoning framework, where RoG first generates relation paths grounded by KGs as faithful plans. These plans are then used to retrieve valid reasoning paths from the KGs for LLMs to conduct faithful reasoning. Furthermore, RoG not only distills knowledge from KGs to improve the reasoning ability of LLMs through training but also allows seamless integration with any arbitrary LLMs during inference. Extensive experiments on two benchmark KGQA datasets demonstrate that RoG achieves state-of-the-art performance on KG reasoning tasks and generates faithful and interpretable reasoning results.",
+            "score": 9
+        },
+        {
+            "id": "c7184f9a914dbfbad59faa5aeaf9ba7019dfcf74",
+            "paperId": "c7184f9a914dbfbad59faa5aeaf9ba7019dfcf74",
+            "title": "Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph",
+            "year": 2023,
+            "citationCount": 107,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2307.07697, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2202454665",
+                    "name": "Jiashuo Sun"
+                },
+                {
+                    "authorId": "2250617116",
+                    "name": "Chengjin Xu"
+                },
+                {
+                    "authorId": "2253747495",
+                    "name": "Lumingyuan Tang"
+                },
+                {
+                    "authorId": "2211588034",
+                    "name": "Sai Wang"
+                },
+                {
+                    "authorId": "2249759096",
+                    "name": "Chen Lin"
+                },
+                {
+                    "authorId": "2254121688",
+                    "name": "Yeyun Gong"
+                },
+                {
+                    "authorId": "2249757348",
+                    "name": "Lionel M. Ni"
+                },
+                {
+                    "authorId": "93596028",
+                    "name": "H. Shum"
+                },
+                {
+                    "authorId": "2188226506",
+                    "name": "Jian Guo"
+                }
+            ],
+            "abstract": "Although large language models (LLMs) have achieved significant success in various tasks, they often struggle with hallucination problems, especially in scenarios requiring deep and responsible reasoning. These issues could be partially addressed by introducing external knowledge graphs (KG) in LLM reasoning. In this paper, we propose a new LLM-KG integrating paradigm ``$\\hbox{LLM}\\otimes\\hbox{KG}$'' which treats the LLM as an agent to interactively explore related entities and relations on KGs and perform reasoning based on the retrieved knowledge. We further implement this paradigm by introducing a new approach called Think-on-Graph (ToG), in which the LLM agent iteratively executes beam search on KG, discovers the most promising reasoning paths, and returns the most likely reasoning results. We use a number of well-designed experiments to examine and illustrate the following advantages of ToG: 1) compared with LLMs, ToG has better deep reasoning power; 2) ToG has the ability of knowledge traceability and knowledge correctability by leveraging LLMs reasoning and expert feedback; 3) ToG provides a flexible plug-and-play framework for different LLMs, KGs and prompting strategies without any additional training cost; 4) the performance of ToG with small LLM models could exceed large LLM such as GPT-4 in certain scenarios and this reduces the cost of LLM deployment and application. As a training-free method with lower computational cost and better generality, ToG achieves overall SOTA in 6 out of 9 datasets where most previous SOTAs rely on additional training.",
+            "score": 9
+        },
+        {
+            "id": "59395cf4f9346ef4ccb37499a3a7e52c2978fc61",
+            "paperId": "59395cf4f9346ef4ccb37499a3a7e52c2978fc61",
+            "title": "Right for Right Reasons: Large Language Models for Verifiable Commonsense Knowledge Graph Question Answering",
+            "year": 2024,
+            "citationCount": 10,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.01390, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Right for Right Reasons (R^3), a commonsense KGQA methodology that allows for a verifiable reasoning procedure by axiomatically surfacing intrinsic commonsense knowledge of LLMs and grounding every factual reasoning step on KG triples is proposed."
+            },
+            "authors": [
+                {
+                    "authorId": "1646622849",
+                    "name": "Armin Toroghi"
+                },
+                {
+                    "authorId": "2290061685",
+                    "name": "Willis Guo"
+                },
+                {
+                    "authorId": "104706163",
+                    "name": "Mohammad Mahdi Torabi pour"
+                },
+                {
+                    "authorId": "2273670268",
+                    "name": "Scott Sanner"
+                }
+            ],
+            "abstract": "Knowledge Graph Question Answering (KGQA) methods seek to answer Natural Language questions using the relational information stored in Knowledge Graphs (KGs). With the recent advancements of Large Language Models (LLMs) and their remarkable reasoning abilities, there is a growing trend to leverage them for KGQA. However, existing methodologies have only focused on answering factual questions, e.g., *\u201cIn which city was Silvio Berlusconi\u2019s first wife born?\u201d*, leaving questions involving commonsense reasoning that real-world users may pose more often, e.g., *\u201cDo I need separate visas to see the Venus of Willendorf and attend the Olympics this summer?\u201d* unaddressed. In this work, we first observe that existing LLM-based methods for KGQA struggle with hallucination on such questions, especially on queries targeting long-tail entities (e.g., non-mainstream and recent entities), thus hindering their applicability in real-world applications especially since their reasoning processes are not easily verifiable. In response, we propose Right for Right Reasons (R^3), a commonsense KGQA methodology that allows for a verifiable reasoning procedure by axiomatically surfacing intrinsic commonsense knowledge of LLMs and grounding every factual reasoning step on KG triples. Through experimental evaluations across three different tasks\u2014question answering, claim verification, and preference matching\u2014our findings showcase R^3 as a superior approach, outperforming existing methodologies and notably reducing instances of hallucination and reasoning errors.",
+            "score": 8
+        },
+        {
+            "id": "9b31288d4aba4858dd143646b33b4ad58c3bb6d5",
+            "paperId": "9b31288d4aba4858dd143646b33b4ad58c3bb6d5",
+            "title": "Memory-augmented Query Reconstruction for LLM-based Knowledge Graph Reasoning",
+            "year": 2025,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2503.05193, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Memory-augmented Query Reconstruction for LLM-based Knowledge Graph Reasoning (MemQ) is proposed to decouple LLM from tool invocation tasks using LLM-built query memory and design an effective and readable reasoning to enhance the LLM's reasoning capability in KGQA."
+            },
+            "authors": [
+                {
+                    "authorId": "2335823258",
+                    "name": "Mufan Xu"
+                },
+                {
+                    "authorId": "2349259697",
+                    "name": "Gewen Liang"
+                },
+                {
+                    "authorId": "2266796043",
+                    "name": "Kehai Chen"
+                },
+                {
+                    "authorId": "2349271722",
+                    "name": "Wei Wang"
+                },
+                {
+                    "authorId": "2349629656",
+                    "name": "Xun Zhou"
+                },
+                {
+                    "authorId": "2320745836",
+                    "name": "Muyun Yang"
+                },
+                {
+                    "authorId": "2237773157",
+                    "name": "Tiejun Zhao"
+                },
+                {
+                    "authorId": "2273887691",
+                    "name": "Min Zhang"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have achieved remarkable performance on knowledge graph question answering (KGQA) tasks by planning and interacting with knowledge graphs. However, existing methods often confuse tool utilization with knowledge reasoning, harming readability of model outputs and giving rise to hallucinatory tool invocations, which hinder the advancement of KGQA. To address this issue, we propose Memory-augmented Query Reconstruction for LLM-based Knowledge Graph Reasoning (MemQ) to decouple LLM from tool invocation tasks using LLM-built query memory. By establishing a memory module with explicit descriptions of query statements, the proposed MemQ facilitates the KGQA process with natural language reasoning and memory-augmented query reconstruction. Meanwhile, we design an effective and readable reasoning to enhance the LLM's reasoning capability in KGQA. Experimental results that MemQ achieves state-of-the-art performance on widely used benchmarks WebQSP and CWQ.",
+            "score": 8
+        },
+        {
+            "id": "710d183174844da5b7f392667f3cc25d2b098dde",
+            "paperId": "710d183174844da5b7f392667f3cc25d2b098dde",
+            "title": "KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning",
+            "year": 2019,
+            "citationCount": 472,
+            "openAccessPdf": {
+                "url": "https://www.aclweb.org/anthology/D19-1282.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1909.02151, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a textual inference framework for answering commonsense questions, which effectively utilizes external, structured commonsense knowledge graphs to perform explainable inferences."
+            },
+            "authors": [
+                {
+                    "authorId": "51583409",
+                    "name": "Bill Yuchen Lin"
+                },
+                {
+                    "authorId": "121022966",
+                    "name": "Xinyue Chen"
+                },
+                {
+                    "authorId": "4787155",
+                    "name": "Jamin Chen"
+                },
+                {
+                    "authorId": "145201124",
+                    "name": "Xiang Ren"
+                }
+            ],
+            "abstract": "Commonsense reasoning aims to empower machines with the human ability to make presumptions about ordinary situations in our daily life. In this paper, we propose a textual inference framework for answering commonsense questions, which effectively utilizes external, structured commonsense knowledge graphs to perform explainable inferences. The framework first grounds a question-answer pair from the semantic space to the knowledge-based symbolic space as a schema graph, a related sub-graph of external knowledge graphs. It represents schema graphs with a novel knowledge-aware graph network module named KagNet, and finally scores answers with graph representations. Our model is based on graph convolutional networks and LSTMs, with a hierarchical path-based attention mechanism. The intermediate attention scores make it transparent and interpretable, which thus produce trustworthy inferences. Using ConceptNet as the only external resource for Bert-based models, we achieved state-of-the-art performance on the CommonsenseQA, a large-scale dataset for commonsense reasoning.",
+            "score": 8
+        },
+        {
+            "id": "f5adc0d4b36ca900a7db0abd74e39e825607613c",
+            "paperId": "f5adc0d4b36ca900a7db0abd74e39e825607613c",
+            "title": "KG-o1: Enhancing Multi-hop Question Answering in Large Language Models via Knowledge Graph Integration",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.15790, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2362143336",
+                    "name": "Nan Wang"
+                },
+                {
+                    "authorId": "2298953258",
+                    "name": "Yongqi Fan"
+                },
+                {
+                    "authorId": "2317118272",
+                    "name": "Yansha Zhu"
+                },
+                {
+                    "authorId": "51198136",
+                    "name": "Zongyu Wang"
+                },
+                {
+                    "authorId": "2374945264",
+                    "name": "Xuezhi Cao"
+                },
+                {
+                    "authorId": "2375102939",
+                    "name": "Xinyan He"
+                },
+                {
+                    "authorId": "2260853999",
+                    "name": "Haiyun Jiang"
+                },
+                {
+                    "authorId": "2372853601",
+                    "name": "Tong Ruan"
+                },
+                {
+                    "authorId": "2261150369",
+                    "name": "Jingping Liu"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) face challenges in knowledge-intensive reasoning tasks like classic multi-hop question and answering, which involves reasoning across multiple facts. This difficulty arises because the chain of thoughts (CoTs) generated by LLMs in such tasks often deviate from real or a priori reasoning paths. In contrast, knowledge graphs (KGs) explicitly represent the logical connections between facts through entities and relationships. This reflects a significant gap. Meanwhile, large reasoning models (LRMs), such as o1, have demonstrated that long-step reasoning significantly enhances the performance of LLMs. Building on these insights, we propose KG-o1, a four-stage approach that integrates KGs to enhance the multi-hop reasoning abilities of LLMs. We first filter out initial entities and generate complex subgraphs. Secondly, we construct logical paths for subgraphs and then use knowledge graphs to build a dataset with a complex and extended brainstorming process, which trains LLMs to imitate long-term reasoning. Finally, we employ rejection sampling to generate a self-improving corpus for direct preference optimization (DPO), further refining the LLMs reasoning abilities. We conducted experiments on two simple and two complex datasets. The results show that KG-o1 models exhibit superior performance across all tasks compared to existing LRMs.",
+            "score": 8
+        },
+        {
+            "id": "05a3899c7480f9c3eab10e680f748c5bbedd4983",
+            "paperId": "05a3899c7480f9c3eab10e680f748c5bbedd4983",
+            "title": "KERAG: Knowledge-Enhanced Retrieval-Augmented Generation for Advanced Question Answering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.04716, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2214733444",
+                    "name": "Yushi Sun"
+                },
+                {
+                    "authorId": null,
+                    "name": "Kai Sun"
+                },
+                {
+                    "authorId": "2290243809",
+                    "name": "Y. Xu"
+                },
+                {
+                    "authorId": "2305569900",
+                    "name": "Xiao Yang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xin Luna Dong"
+                },
+                {
+                    "authorId": "2305482335",
+                    "name": "Nan Tang"
+                },
+                {
+                    "authorId": "2282352887",
+                    "name": "Lei Chen"
+                }
+            ],
+            "abstract": "Retrieval-Augmented Generation (RAG) mitigates hallucination in Large Language Models (LLMs) by incorporating external data, with Knowledge Graphs (KGs) offering crucial information for question answering. Traditional Knowledge Graph Question Answering (KGQA) methods rely on semantic parsing, which typically retrieves knowledge strictly necessary for answer generation, thus often suffer from low coverage due to rigid schema requirements and semantic ambiguity. We present KERAG, a novel KG-based RAG pipeline that enhances QA coverage by retrieving a broader subgraph likely to contain relevant information. Our retrieval-filtering-summarization approach, combined with fine-tuned LLMs for Chain-of-Thought reasoning on knowledge sub-graphs, reduces noises and improves QA for both simple and complex questions. Experiments demonstrate that KERAG surpasses state-of-the-art solutions by about 7% in quality and exceeds GPT-4o (Tool) by 10-21%.",
+            "score": 8
+        },
+        {
+            "id": "a681b1085c088c51347cdb9358dd344081d29c99",
+            "paperId": "a681b1085c088c51347cdb9358dd344081d29c99",
+            "title": "Think-on-Graph 2.0: Deep and Faithful Large Language Model Reasoning with Knowledge-guided Retrieval Augmented Generation",
+            "year": 2024,
+            "citationCount": 25,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2407.10805, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2311556497",
+                    "name": "Shengjie Ma"
+                },
+                {
+                    "authorId": "2250617116",
+                    "name": "Chengjin Xu"
+                },
+                {
+                    "authorId": "144267788",
+                    "name": "Xuhui Jiang"
+                },
+                {
+                    "authorId": "2307043422",
+                    "name": "Muzhi Li"
+                },
+                {
+                    "authorId": "2311383154",
+                    "name": "Huaren Qu"
+                },
+                {
+                    "authorId": "2307038391",
+                    "name": "Cehao Yang"
+                },
+                {
+                    "authorId": "2289744328",
+                    "name": "Jiaxin Mao"
+                },
+                {
+                    "authorId": "2284217200",
+                    "name": "Jian Guo"
+                }
+            ],
+            "abstract": "Retrieval-augmented generation (RAG) has improved large language models (LLMs) by using knowledge retrieval to overcome knowledge deficiencies. However, current RAG methods often fall short of ensuring the depth and completeness of retrieved information, which is necessary for complex reasoning tasks. In this work, we introduce Think-on-Graph 2.0 (ToG-2), a hybrid RAG framework that iteratively retrieves information from both unstructured and structured knowledge sources in a tight-coupling manner. Specifically, ToG-2 leverages knowledge graphs (KGs) to link documents via entities, facilitating deep and knowledge-guided context retrieval. Simultaneously, it utilizes documents as entity contexts to achieve precise and efficient graph retrieval. ToG-2 alternates between graph retrieval and context retrieval to search for in-depth clues relevant to the question, enabling LLMs to generate answers. We conduct a series of well-designed experiments to highlight the following advantages of ToG-2: 1) ToG-2 tightly couples the processes of context retrieval and graph retrieval, deepening context retrieval via the KG while enabling reliable graph retrieval based on contexts; 2) it achieves deep and faithful reasoning in LLMs through an iterative knowledge retrieval process of collaboration between contexts and the KG; and 3) ToG-2 is training-free and plug-and-play compatible with various LLMs. Extensive experiments demonstrate that ToG-2 achieves overall state-of-the-art (SOTA) performance on 6 out of 7 knowledge-intensive datasets with GPT-3.5, and can elevate the performance of smaller models (e.g., LLAMA-2-13B) to the level of GPT-3.5's direct reasoning. The source code is available on https://github.com/IDEA-FinAI/ToG-2.",
+            "score": 8
+        },
+        {
+            "id": "10955e63aa49fab146267949f8ebc9ebe8275183",
+            "paperId": "10955e63aa49fab146267949f8ebc9ebe8275183",
+            "title": "Knowledge-Driven CoT: Exploring Faithful Reasoning in LLMs for Knowledge-intensive Question Answering",
+            "year": 2023,
+            "citationCount": 97,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2308.13259",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2308.13259, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2234024810",
+                    "name": "Keheng Wang"
+                },
+                {
+                    "authorId": "2141973564",
+                    "name": "Feiyu Duan"
+                },
+                {
+                    "authorId": "2592528",
+                    "name": "Sirui Wang"
+                },
+                {
+                    "authorId": "8855602",
+                    "name": "Peiguang Li"
+                },
+                {
+                    "authorId": "2069503881",
+                    "name": "Yunsen Xian"
+                },
+                {
+                    "authorId": "40548403",
+                    "name": "Chuantao Yin"
+                },
+                {
+                    "authorId": "21505283",
+                    "name": "Wenge Rong"
+                },
+                {
+                    "authorId": "2091444262",
+                    "name": "Zhang Xiong"
+                }
+            ],
+            "abstract": "Equipped with Chain-of-Thought (CoT), Large language models (LLMs) have shown impressive reasoning ability in various downstream tasks. Even so, suffering from hallucinations and the inability to access external knowledge, LLMs often come with incorrect or unfaithful intermediate reasoning steps, especially in the context of answering knowledge-intensive tasks such as KBQA. To alleviate this issue, we propose a framework called Knowledge-Driven Chain-of-Thought (KD-CoT) to verify and modify reasoning traces in CoT via interaction with external knowledge, and thus overcome the hallucinations and error propagation. Concretely, we formulate the CoT rationale process of LLMs into a structured multi-round QA format. In each round, LLMs interact with a QA system that retrieves external knowledge and produce faithful reasoning traces based on retrieved precise answers. The structured CoT reasoning of LLMs is facilitated by our developed KBQA CoT collection, which serves as in-context learning demonstrations and can also be utilized as feedback augmentation to train a robust retriever. Extensive experiments on WebQSP and ComplexWebQuestion datasets demonstrate the effectiveness of proposed KD-CoT in task-solving reasoning generation, which outperforms the vanilla CoT ICL with an absolute success rate of 8.0% and 5.1%. Furthermore, our proposed feedback-augmented retriever outperforms the state-of-the-art baselines for retrieving knowledge, achieving significant improvement in Hit and recall performance. Our code and data are released on https://github.com/AdelWang/KD-CoT/tree/main.",
+            "score": 8
+        },
+        {
+            "id": "ae0839885c0317560cf8c1c286fe2aad65f4aba6",
+            "paperId": "ae0839885c0317560cf8c1c286fe2aad65f4aba6",
+            "title": "Graph Reasoning for Question Answering with Triplet Retrieval",
+            "year": 2023,
+            "citationCount": 39,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.18742",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.18742, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "50341591",
+                    "name": "SHIYANG LI"
+                },
+                {
+                    "authorId": "1921742",
+                    "name": "Yifan Gao"
+                },
+                {
+                    "authorId": "2152631081",
+                    "name": "Hao Jiang"
+                },
+                {
+                    "authorId": "3393799",
+                    "name": "Qingyu Yin"
+                },
+                {
+                    "authorId": "2146249169",
+                    "name": "Zheng Li"
+                },
+                {
+                    "authorId": "1740249",
+                    "name": "Xifeng Yan"
+                },
+                {
+                    "authorId": "2152738036",
+                    "name": "Chao Zhang"
+                },
+                {
+                    "authorId": "2021632793",
+                    "name": "Bing Yin"
+                }
+            ],
+            "abstract": "Answering complex questions often requires reasoning over knowledge graphs (KGs). State-of-the-art methods often utilize entities in questions to retrieve local subgraphs, which are then fed into KG encoder, e.g. graph neural networks (GNNs), to model their local structures and integrated into language models for question answering. However, this paradigm constrains retrieved knowledge in local subgraphs and discards more diverse triplets buried in KGs that are disconnected but useful for question answering. In this paper, we propose a simple yet effective method to first retrieve the most relevant triplets from KGs and then rerank them, which are then concatenated with questions to be fed into language models. Extensive results on both CommonsenseQA and OpenbookQA datasets show that our method can outperform state-of-the-art up to 4.6% absolute accuracy.",
+            "score": 8
+        },
+        {
+            "id": "13483e7c1834487ca2163c42d2a89d53b6e6007f",
+            "paperId": "13483e7c1834487ca2163c42d2a89d53b6e6007f",
+            "title": "QAVSA: Question Answering using Vector Symbolic Algebras",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2024.repl4nlp-1.14, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a novel graph reasoning module using Vector Symbolic Algebra (VSA) graph representations and a k-layer MLP that performs as well as QA-GNN, a model combining a PLM and a GNN-module, on 3 multiple-choice question answering (MCQA) datasets."
+            },
+            "authors": [
+                {
+                    "authorId": "2315308653",
+                    "name": "Ryan Laube"
+                },
+                {
+                    "authorId": "2271203767",
+                    "name": "Chris Eliasmith"
+                }
+            ],
+            "abstract": "With the advancement of large pretrained language models (PLMs), many question answering (QA) benchmarks have been developed in order to evaluate the reasoning capabilities of these models. Augmenting PLMs with external knowledge in the form of Knowledge Graphs (KGs) has been a popular method to improve their reasoning capabilities, and a common method to reason over KGs is to use Graph Neural Networks (GNNs). As an alternative to GNNs to augment PLMs, we propose a novel graph reasoning module using Vector Symbolic Algebra (VSA) graph representations and a k-layer MLP. We demonstrate that our VSA-based model performs as well as QA-GNN, a model combining a PLM and a GNN-module, on 3 multiple-choice question answering (MCQA) datasets. Our model has a simpler architecture than QA-GNN and also converges 39% faster during training.",
+            "score": 7
+        },
+        {
+            "id": "8cbde29eff2c43e644c22949af0a069804867d5e",
+            "paperId": "8cbde29eff2c43e644c22949af0a069804867d5e",
+            "title": "Improving LLM-based KGQA for multi-hop Question Answering with implicit reasoning in few-shot examples",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2024.kallm-1.13, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper presents a novel planned query guidance approach that improves large language model (LLM) performance in multi-hop question answering on knowledge graphs (KGQA) by designing few-shot examples that implicitly demonstrate a systematic reasoning methodology to answer multi-hop questions."
+            },
+            "authors": [
+                {
+                    "authorId": "2315645299",
+                    "name": "Mili Shah"
+                },
+                {
+                    "authorId": "2315978116",
+                    "name": "Jing Tian"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have shown remarkable capabilities in generating natural language texts for various tasks. However, using LLMs for question answering on knowledge graphs still remains a challenge, especially for questions requiring multi-hop reasoning. In this paper, we present a novel planned query guidance approach that improves large language model (LLM) performance in multi-hop question answering on knowledge graphs (KGQA). We do this by designing few-shot examples that implicitly demonstrate a systematic reasoning methodology to answer multi-hop questions. We evaluate our approach for two graph query languages, Cypher and SPARQL, and show that the queries generated using our strategy outperform the queries generated using a baseline LLM and typical few-shot examples by up to 24.66% and 7.7% in execution match accuracy for the MetaQA and the Spider benchmarks respectively. We also conduct an ablation study to analyze the incremental effects of the different techniques of designing few-shot examples. Our results suggest that our approach enables the LLM to effectively leverage the few-shot examples to generate queries for multi-hop KGQA.",
+            "score": 7
+        },
+        {
+            "id": "b6b5ffb9a1faee7b488eb46f2d68f62beaecb8c7",
+            "paperId": "b6b5ffb9a1faee7b488eb46f2d68f62beaecb8c7",
+            "title": "Modality-Aware Integration with Large Language Models for Knowledge-based Visual Question Answering",
+            "year": 2024,
+            "citationCount": 16,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.12728, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel modality-aware integration with LLMs for KVQA (MAIL) carefully leverages multimodal knowledge for both image understanding and knowledge reasoning, while maximally preserving insightful intra-modal learning by constraining the fusion within mediums."
+            },
+            "authors": [
+                {
+                    "authorId": "2171902940",
+                    "name": "Junnan Dong"
+                },
+                {
+                    "authorId": "2172162773",
+                    "name": "Qinggang Zhang"
+                },
+                {
+                    "authorId": "1962337917",
+                    "name": "Huachi Zhou"
+                },
+                {
+                    "authorId": "1759658",
+                    "name": "D. Zha"
+                },
+                {
+                    "authorId": "2284768151",
+                    "name": "Pai Zheng"
+                },
+                {
+                    "authorId": "97620379",
+                    "name": "Xiao Huang"
+                }
+            ],
+            "abstract": "Knowledge-based visual question answering (KVQA) has been extensively studied to answer visual questions with external knowledge, e.g., knowledge graphs (KGs). While several attempts have been proposed to leverage large language models (LLMs) as an implicit knowledge source, it remains challenging since LLMs may generate hallucinations. Moreover, multiple knowledge sources, e.g., images, KGs and LLMs, cannot be readily aligned for complex scenarios. To tackle these, we present a novel modality-aware integration with LLMs for KVQA (MAIL). It carefully leverages multimodal knowledge for both image understanding and knowledge reasoning. Specifically, (i) we propose a two-stage prompting strategy with LLMs to densely embody the image into a scene graph with detailed visual features; (ii) We construct a coupled concept graph by linking the mentioned entities with external facts. (iii) A tailored pseudo-siamese graph medium fusion is designed for sufficient multimodal fusion. We utilize the shared mentioned entities in two graphs as mediums to bridge a tight inter-modal exchange, while maximally preserving insightful intra-modal learning by constraining the fusion within mediums. Extensive experiments on two benchmark datasets show the superiority of MAIL with 24x less resources.",
+            "score": 7
+        },
+        {
+            "id": "e37b7928b8dcda4c6f1a3b18a372d651521c6d33",
+            "paperId": "e37b7928b8dcda4c6f1a3b18a372d651521c6d33",
+            "title": "RTQA : Recursive Thinking for Complex Temporal Knowledge Graph Question Answering with Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.03995, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2379625884",
+                    "name": "Zhaoyan Gong"
+                },
+                {
+                    "authorId": "2299298326",
+                    "name": "Juan Li"
+                },
+                {
+                    "authorId": "2261152687",
+                    "name": "Zhiqiang Liu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Lei Liang"
+                },
+                {
+                    "authorId": "14499025",
+                    "name": "Hua-zeng Chen"
+                },
+                {
+                    "authorId": "2346273850",
+                    "name": "Wen Zhang"
+                }
+            ],
+            "abstract": "Current temporal knowledge graph question answering (TKGQA) methods primarily focus on implicit temporal constraints, lacking the capability of handling more complex temporal queries, and struggle with limited reasoning abilities and error propagation in decomposition frameworks. We propose RTQA, a novel framework to address these challenges by enhancing reasoning over TKGs without requiring training. Following recursive thinking, RTQA recursively decomposes questions into sub-problems, solves them bottom-up using LLMs and TKG knowledge, and employs multi-path answer aggregation to improve fault tolerance. RTQA consists of three core components: the Temporal Question Decomposer, the Recursive Solver, and the Answer Aggregator. Experiments on MultiTQ and TimelineKGQA benchmarks demonstrate significant Hits@1 improvements in\"Multiple\"and\"Complex\"categories, outperforming state-of-the-art methods. Our code and data are available at https://github.com/zjukg/RTQA.",
+            "score": 7
+        },
+        {
+            "id": "e067373984cc87cb88bda7e2c5b8eccfd7453737",
+            "paperId": "e067373984cc87cb88bda7e2c5b8eccfd7453737",
+            "title": "The Benefits of Query-Based KGQA Systems for Complex and Temporal Questions in LLM Era",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11954, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372555119",
+                    "name": "Artem Alekseev"
+                },
+                {
+                    "authorId": "2315494605",
+                    "name": "Mikhail Chaichuk"
+                },
+                {
+                    "authorId": "2372559329",
+                    "name": "Miron Butko"
+                },
+                {
+                    "authorId": "2253459158",
+                    "name": "Alexander Panchenko"
+                },
+                {
+                    "authorId": "2360173469",
+                    "name": "Elena Tutubalina"
+                },
+                {
+                    "authorId": "2204672164",
+                    "name": "Oleg Somov"
+                }
+            ],
+            "abstract": "Large language models excel in question-answering (QA) yet still struggle with multi-hop reasoning and temporal questions. Query-based knowledge graph QA (KGQA) offers a modular alternative by generating executable queries instead of direct answers. We explore multi-stage query-based framework for WikiData QA, proposing multi-stage approach that enhances performance on challenging multi-hop and temporal benchmarks. Through generalization and rejection studies, we evaluate robustness across multi-hop and temporal QA datasets. Additionally, we introduce a novel entity linking and predicate matching method using CoT reasoning. Our results demonstrate the potential of query-based multi-stage KGQA framework for improving multi-hop and temporal QA with small language models. Code and data: https://github.com/ar2max/NLDB-KGQA-System",
+            "score": 7
+        },
+        {
+            "id": "cd094189b2ff7b6c01dc33ffc2c653df36fd400a",
+            "paperId": "cd094189b2ff7b6c01dc33ffc2c653df36fd400a",
+            "title": "Aligning Knowledge Graphs and Language Models for Factual Accuracy",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13411, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372328978",
+                    "name": "Nur A Zarin Nishat"
+                },
+                {
+                    "authorId": "2326117831",
+                    "name": "Andrea Coletta"
+                },
+                {
+                    "authorId": "1716855",
+                    "name": "Luigi Bellomarini"
+                },
+                {
+                    "authorId": "102310497",
+                    "name": "K. Amouzouvi"
+                },
+                {
+                    "authorId": "2291593072",
+                    "name": "Jens Lehmann"
+                },
+                {
+                    "authorId": "2327466746",
+                    "name": "Sahar Vahdati"
+                }
+            ],
+            "abstract": "Large language models like GPT-4, Gemini, and Claude have transformed natural language processing (NLP) tasks such as question answering, dialogue generation, summarization, and so forth; yet their susceptibility to hallucination stands as one of the major challenges. Among numerous approaches to overcome this challenge, integration of Knowledge Graphs (KGs) into language models has emerged as a promising solution as it provides structured, reliable, domain-specific, and up-to-date external information to the language models. In this paper, we introduce ALIGNed-LLM, a simple yet effective approach to improve language models'factuality via a lean strategy to infuse KGs into the latent space of language models inspired by LLaVA where visual and textual information is infused. We use embeddings from a pre-trained Knowledge Graph Embedding (KGE) model, such as TransE, and a trainable projection layer to align entity and text embeddings. This alignment enables the language model to distinguish between similar entities improving factual grounding and reducing hallucination. We tested our approach on three popular questions-answering benchmark datasets alongside language models of varying sizes, showing significant improvement. Furthermore, we applied our approach to a real-world financial use case from a large central bank in Europe, which demands high accuracy and precision, demonstrating a substantial improvement of the LLM answers.",
+            "score": 7
+        },
+        {
+            "id": "101deb445383031096fb8f20ad818c50d9b97e2d",
+            "paperId": "101deb445383031096fb8f20ad818c50d9b97e2d",
+            "title": "mKG-RAG: Multimodal Knowledge Graph-Enhanced RAG for Visual Question Answering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.05318, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375158007",
+                    "name": "Xu Yuan"
+                },
+                {
+                    "authorId": "2301015154",
+                    "name": "Liang-bo Ning"
+                },
+                {
+                    "authorId": "2291324376",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2335121129",
+                    "name": "Qing Li"
+                }
+            ],
+            "abstract": "Recently, Retrieval-Augmented Generation (RAG) has been proposed to expand internal knowledge of Multimodal Large Language Models (MLLMs) by incorporating external knowledge databases into the generation process, which is widely used for knowledge-based Visual Question Answering (VQA) tasks. Despite impressive advancements, vanilla RAG-based VQA methods that rely on unstructured documents and overlook the structural relationships among knowledge elements frequently introduce irrelevant or misleading content, reducing answer accuracy and reliability. To overcome these challenges, a promising solution is to integrate multimodal knowledge graphs (KGs) into RAG-based VQA frameworks to enhance the generation by introducing structured multimodal knowledge. Therefore, in this paper, we propose a novel multimodal knowledge-augmented generation framework (mKG-RAG) based on multimodal KGs for knowledge-intensive VQA tasks. Specifically, our approach leverages MLLM-powered keyword extraction and vision-text matching to distill semantically consistent and modality-aligned entities/relationships from multimodal documents, constructing high-quality multimodal KGs as structured knowledge representations. In addition, a dual-stage retrieval strategy equipped with a question-aware multimodal retriever is introduced to improve retrieval efficiency while refining precision. Comprehensive experiments demonstrate that our approach significantly outperforms existing methods, setting a new state-of-the-art for knowledge-based VQA.",
+            "score": 7
+        },
+        {
+            "id": "e574bb5c386a079e844a89fa31ab4be1f267ca07",
+            "paperId": "e574bb5c386a079e844a89fa31ab4be1f267ca07",
+            "title": "Pandora: Leveraging Code-driven Knowledge Transfer for Unified Structured Knowledge Reasoning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.17905, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2109245569",
+                    "name": "Yongrui Chen"
+                },
+                {
+                    "authorId": "2355950056",
+                    "name": "Junhao He"
+                },
+                {
+                    "authorId": "2356378984",
+                    "name": "Linbo Fu"
+                },
+                {
+                    "authorId": "2257401049",
+                    "name": "Shenyu Zhang"
+                },
+                {
+                    "authorId": "2273685421",
+                    "name": "Rihui Jin"
+                },
+                {
+                    "authorId": "2205573718",
+                    "name": "Xinbang Dai"
+                },
+                {
+                    "authorId": "2257372946",
+                    "name": "Jiaqi Li"
+                },
+                {
+                    "authorId": "2211478907",
+                    "name": "Dehai Min"
+                },
+                {
+                    "authorId": "2154445064",
+                    "name": "Nan Hu"
+                },
+                {
+                    "authorId": "2323100522",
+                    "name": "Yuxin Zhang"
+                },
+                {
+                    "authorId": "2284686899",
+                    "name": "Guilin Qi"
+                },
+                {
+                    "authorId": "2323523115",
+                    "name": "Yi Huang"
+                },
+                {
+                    "authorId": "1514917592",
+                    "name": "Tongtong Wu"
+                }
+            ],
+            "abstract": "Unified Structured Knowledge Reasoning (USKR) aims to answer natural language questions by using structured sources such as tables, databases, and knowledge graphs in a unified way. Existing USKR methods rely on task-specific strategies or bespoke representations, which hinder their ability to dismantle barriers between different SKR tasks, thereby constraining their overall performance in cross-task scenarios. In this paper, we introduce \\textsc{Pandora}, a novel USKR framework that addresses the limitations of existing methods by leveraging two key innovations. First, we propose a code-based unified knowledge representation using \\textsc{Python}'s \\textsc{Pandas} API, which aligns seamlessly with the pre-training of LLMs. This representation facilitates a cohesive approach to handling different structured knowledge sources. Building on this foundation, we employ knowledge transfer to bolster the unified reasoning process of LLMs by automatically building cross-task memory. By adaptively correcting reasoning using feedback from code execution, \\textsc{Pandora} showcases impressive unified reasoning capabilities. Extensive experiments on six widely used benchmarks across three SKR tasks demonstrate that \\textsc{Pandora} outperforms existing unified reasoning frameworks and competes effectively with task-specific methods.",
+            "score": 7
+        },
+        {
+            "id": "89fccb4b70d0a072d9c874dddfab0afb3676d1b8",
+            "paperId": "89fccb4b70d0a072d9c874dddfab0afb3676d1b8",
+            "title": "Can Knowledge Graphs Make Large Language Models More Trustworthy? An Empirical Study over Open-ended Question Answering",
+            "year": 2024,
+            "citationCount": 13,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.08085, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2325156180",
+                    "name": "Yuan Sui"
+                },
+                {
+                    "authorId": "2283877888",
+                    "name": "Bryan Hooi"
+                }
+            ],
+            "abstract": "Recent works integrating Knowledge Graphs (KGs) have shown promising improvements in enhancing the reasoning capabilities of Large Language Models (LLMs). However, existing benchmarks primarily focus on closed-ended tasks, leaving a gap in evaluating performance on more complex, real-world scenarios. This limitation also hinders a thorough assessment of KGs' potential to reduce hallucinations in LLMs. To address this, we introduce OKGQA, a new benchmark specifically designed to evaluate LLMs augmented with KGs in open-ended, real-world question answering settings. OKGQA reflects practical complexities through diverse question types and incorporates metrics to quantify both hallucination rates and reasoning improvements in LLM+KG models. To consider the scenarios in which KGs may contain varying levels of errors, we propose a benchmark variant, OKGQA-P, to assess model performance when the semantics and structure of KGs are deliberately perturbed and contaminated. In this paper, we aims to (1) explore whether KGs can make LLMs more trustworthy in an open-ended setting, and (2) conduct a comparative analysis to shed light on method design. We believe this study can facilitate a more complete performance comparison and encourages continuous improvement in integrating KGs with LLMs to mitigate hallucination, and make LLMs more trustworthy. Code and data are released at https://github.com/Y-Sui/OKGQA.",
+            "score": 7
+        },
+        {
+            "id": "4941b37136cdf1836b78ddb6cee65a28c3ce45f0",
+            "paperId": "4941b37136cdf1836b78ddb6cee65a28c3ce45f0",
+            "title": "ChatKBQA: A Generate-then-Retrieve Framework for Knowledge Base Question Answering with Fine-tuned Large Language Models",
+            "year": 2023,
+            "citationCount": 56,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2310.08975",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.08975, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2047926651",
+                    "name": "Haoran Luo"
+                },
+                {
+                    "authorId": "2347748",
+                    "name": "E. Haihong"
+                },
+                {
+                    "authorId": "2192576567",
+                    "name": "Zichen Tang"
+                },
+                {
+                    "authorId": "2257074317",
+                    "name": "Shiyao Peng"
+                },
+                {
+                    "authorId": "2185587164",
+                    "name": "Yikai Guo"
+                },
+                {
+                    "authorId": "2257082661",
+                    "name": "Wentai Zhang"
+                },
+                {
+                    "authorId": "2259054806",
+                    "name": "Chenghao Ma"
+                },
+                {
+                    "authorId": "51490462",
+                    "name": "Guanting Dong"
+                },
+                {
+                    "authorId": "2256992681",
+                    "name": "Meina Song"
+                },
+                {
+                    "authorId": "2257238908",
+                    "name": "Wei Lin"
+                }
+            ],
+            "abstract": "Knowledge Base Question Answering (KBQA) aims to answer natural language questions over large-scale knowledge bases (KBs), which can be summarized into two crucial steps: knowledge retrieval and semantic parsing. However, three core challenges remain: inefficient knowledge retrieval, mistakes of retrieval adversely impacting semantic parsing, and the complexity of previous KBQA methods. To tackle these challenges, we introduce ChatKBQA, a novel and simple generate-then-retrieve KBQA framework, which proposes first generating the logical form with fine-tuned LLMs, then retrieving and replacing entities and relations with an unsupervised retrieval method, to improve both generation and retrieval more directly. Experimental results show that ChatKBQA achieves new state-of-the-art performance on standard KBQA datasets, WebQSP, and CWQ. This work can also be regarded as a new paradigm for combining LLMs with knowledge graphs (KGs) for interpretable and knowledge-required question answering. Our code is publicly available.",
+            "score": 7
+        },
+        {
+            "id": "678cfca72b7de72b005f71207bc8a522ea9ac62c",
+            "paperId": "678cfca72b7de72b005f71207bc8a522ea9ac62c",
+            "title": "Knowledge-Augmented Language Model Prompting for Zero-Shot Knowledge Graph Question Answering",
+            "year": 2023,
+            "citationCount": 132,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2023.matching-1.7.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.04136, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "90765684",
+                    "name": "Jinheon Baek"
+                },
+                {
+                    "authorId": "8129718",
+                    "name": "Alham Fikri Aji"
+                },
+                {
+                    "authorId": "1741702",
+                    "name": "Amir Saffari"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) are capable of performing zero-shot closed-book question answering tasks, based on their internal knowledge stored in parameters during pre-training. However, such internalized knowledge might be insufficient and incorrect, which could lead LLMs to generate factually wrong answers. Furthermore, fine-tuning LLMs to update their knowledge is expensive. To this end, we propose to augment the knowledge directly in the input of LLMs. Specifically, we first retrieve the relevant facts to the input question from the knowledge graph based on semantic similarities between the question and its associated facts. After that, we prepend the retrieved facts to the input question in the form of the prompt, which is then forwarded to LLMs to generate the answer. Our framework, Knowledge-Augmented language model PromptING (KAPING), requires no model training, thus completely zero-shot. We validate the performance of our KAPING framework on the knowledge graph question answering task, that aims to answer the user\u2019s question based on facts over a knowledge graph, on which ours outperforms relevant zero-shot baselines by up to 48% in average, across multiple LLMs of various sizes.",
+            "score": 7
+        },
+        {
+            "id": "bc5271c98d1d1fa70a443bd1803cbf98f55a86e5",
+            "paperId": "bc5271c98d1d1fa70a443bd1803cbf98f55a86e5",
+            "title": "HyperKGQA: Question Answering over Knowledge Graphs using Hyperbolic Representation Learning",
+            "year": 2022,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICDM54844.2022.00041?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICDM54844.2022.00041, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work investigates hyperbolic graph representation learning methods to effectively and efficiently represent knowledge base items and natural questions and proposes a technique that embeds the knowledge graph in ahyperbolic manifold, then learns an adaptive transformation of pre-trained sentence representations into the space of entities and relations."
+            },
+            "authors": [
+                {
+                    "authorId": "151151266",
+                    "name": "Nadya Abdel Madjid"
+                },
+                {
+                    "authorId": "2203830217",
+                    "name": "Ola El Khatib"
+                },
+                {
+                    "authorId": "2204074526",
+                    "name": "Shuang Gao"
+                },
+                {
+                    "authorId": "1695677",
+                    "name": "D. Difallah"
+                }
+            ],
+            "abstract": "Knowledge Graph Question Answering (KGQA) models enable users to acquire entity-based answers from a Knowledge Graph by asking natural language questions (NLQs) without the need to learn a specialized graph query language or knowing the underlying schema of the knowledge graph. This work investigates hyperbolic graph representation learning methods to effectively and efficiently represent knowledge base items and natural questions. Our system, HyperKGQA, proposes a technique that embeds the knowledge graph in a hyperbolic manifold, then learns an adaptive transformation of pre-trained sentence representations into the space of entities and relations. Finally, a post-processing step refines the ranking of the candidate answers by computing the relevance score of the set of relations and the question. An extensive set of experiments conducted on two datasets shows that our method outperforms the current state-of-the-art models when reasoning over sparse graphs to answer multi-hop questions.",
+            "score": 6
+        },
+        {
+            "id": "ac4cc07fdc924ff9db13db39ece48e5915bf1f3b",
+            "paperId": "ac4cc07fdc924ff9db13db39ece48e5915bf1f3b",
+            "title": "Prompting Large Language Models with Partial Knowledge for Answering Questions with Unseen Entities",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01290, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2189118366",
+                    "name": "Zhichao Yan"
+                },
+                {
+                    "authorId": "2327159099",
+                    "name": "Jiapu Wang"
+                },
+                {
+                    "authorId": "2269695376",
+                    "name": "Jiaoyan Chen"
+                },
+                {
+                    "authorId": "2374487128",
+                    "name": "Yanyan Wang"
+                },
+                {
+                    "authorId": "2274159318",
+                    "name": "Hongye Tan"
+                },
+                {
+                    "authorId": "2284578333",
+                    "name": "Jiye Liang"
+                },
+                {
+                    "authorId": "2316645002",
+                    "name": "Xiaoli Li"
+                },
+                {
+                    "authorId": "2327169884",
+                    "name": "Ru Li"
+                },
+                {
+                    "authorId": "2374482467",
+                    "name": "Jeff Z.Pan"
+                }
+            ],
+            "abstract": "Retrieval-Augmented Generation (RAG) shows impressive performance by supplementing and substituting parametric knowledge in Large Language Models (LLMs). Retrieved knowledge can be divided into three types: explicit answer evidence, implicit answer clue, and insufficient answer context which can be further categorized into totally irrelevant and partially relevant information. Effectively utilizing partially relevant knowledge remains a key challenge for RAG systems, especially in incomplete knowledge base retrieval. Contrary to the conventional view, we propose a new perspective: LLMs can be awakened via partially relevant knowledge already embedded in LLMs. To comprehensively investigate this phenomenon, the triplets located in the gold reasoning path and their variants are used to construct partially relevant knowledge by removing the path that contains the answer. We provide theoretical analysis of the awakening effect in LLMs and support our hypothesis with experiments on two Knowledge Graphs (KGs) Question Answering (QA) datasets. Furthermore, we present a new task, Unseen Entity KGQA, simulating real-world challenges where entity linking fails due to KG incompleteness. Our awakening-based approach demonstrates greater efficacy in practical applications, outperforms traditional methods that rely on embedding-based similarity which are prone to returning noisy information.",
+            "score": 6
+        },
+        {
+            "id": "31e3a04572ebd776f3d1be25675bab8ddb2a921b",
+            "paperId": "31e3a04572ebd776f3d1be25675bab8ddb2a921b",
+            "title": "Retrieval-Augmented Question Answering System Based on Large Language Models and Knowledge Graphs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.54254/2755-2721/2025.po25800?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.54254/2755-2721/2025.po25800, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375897740",
+                    "name": "Zhuojin Wang"
+                }
+            ],
+            "abstract": "With the increasing public awareness of health and safety, there is a growing demand for intelligent systems capable of providing precise answers to medical and health-related questions. However, Large Language Models (LLMs) are prone to \"hallucination\" phenomena in medical domain responses, generating seemingly plausible but actually inaccurate content, which could lead to serious consequences in medical scenarios. To address this challenge, this study proposes a knowledge graph-based retrieval-augmented question answering framework, with a specific focus on the dermatology domain. First, this study constructed a medical knowledge graph ontology for dermatology, encompassing key dimensions such as disease definitions, symptoms, diagnoses, and treatments. Second, a method was designed utilizing the large language model GLM-4 (General Language Model-4) for automated knowledge extraction from medical guidelines to construct a domain-specific knowledge graph. Third, this study introduced fuzzy entity recognition and knowledge graph enhancement mechanisms, which can identify key entities in questions and retrieve relevant knowledge from the graph to augment the original queries. Furthermore, experiments demonstrate that our approach effectively reduces hallucinations in LLM-generated medical responses.On the test set, a comparison with the baseline method reveals that our proposed framework achieves superior performance, with the average BLEU score increasing from 0.0102 to 0.0157, and the average BERT_SCORE_P, R, and F1 scores improving from 0.5037, 0.7120, and 0.5897 to 0.5273, 0.7346, and 0.6135, respectively.These results indicate significant accuracy improvements, particularly in diagnostic recommendations and treatment plans.This methodology provides a new paradigm for building safer and more reliable medical intelligent systems and can be extended to other specialized medical domains.",
+            "score": 6
+        },
+        {
+            "id": "414963da55b31d89a8044762a3c548815bff9352",
+            "paperId": "414963da55b31d89a8044762a3c548815bff9352",
+            "title": "MTQA:Matrix of Thought for Enhanced Reasoning in Complex Question Answering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.03918, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2257045839",
+                    "name": "Fengxiao Tang"
+                },
+                {
+                    "authorId": "2286878569",
+                    "name": "Yufeng Li"
+                },
+                {
+                    "authorId": "2316170053",
+                    "name": "Zongzong Wu"
+                },
+                {
+                    "authorId": "2152529513",
+                    "name": "Ming Zhao"
+                }
+            ],
+            "abstract": "Complex Question Answering (QA) is a fundamental and challenging task in NLP. While large language models (LLMs) exhibit impressive performance in QA, they suffer from significant performance degradation when facing complex and abstract QA tasks due to insufficient reasoning capabilities. Works such as Chain-of-Thought (CoT) and Tree-of-Thought (ToT) aim to enhance LLMs'reasoning abilities, but they face issues such as in-layer redundancy in tree structures and single paths in chain structures. Although some studies utilize Retrieval-Augmented Generation (RAG) methods to assist LLMs in reasoning, the challenge of effectively utilizing large amounts of information involving multiple entities and hops remains critical. To address this, we propose the Matrix of Thought (MoT), a novel and efficient LLM thought structure. MoT explores the problem in both horizontal and vertical dimensions through the\"column-cell communication\"mechanism, enabling LLMs to actively engage in multi-strategy and deep-level thinking, reducing redundancy within the column cells and enhancing reasoning capabilities. Furthermore, we develop a fact-correction mechanism by constructing knowledge units from retrieved knowledge graph triples and raw text to enhance the initial knowledge for LLM reasoning and correct erroneous answers. This leads to the development of an efficient and accurate QA framework (MTQA). Experimental results show that our framework outperforms state-of-the-art methods on four widely-used datasets in terms of F1 and EM scores, with reasoning time only 14.4\\% of the baseline methods, demonstrating both its efficiency and accuracy. The code for this framework is available at https://github.com/lyfiter/mtqa.",
+            "score": 6
+        },
+        {
+            "id": "40235f9308abe8b36e42164125d061f82c2d2123",
+            "paperId": "40235f9308abe8b36e42164125d061f82c2d2123",
+            "title": "Enhancing Large Language Model for Knowledge Graph Completion via Structure-Aware Alignment-Tuning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.01166, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2379310140",
+                    "name": "Yu Liu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Yanan Cao"
+                },
+                {
+                    "authorId": "46519974",
+                    "name": "Xixun Lin"
+                },
+                {
+                    "authorId": "2031232",
+                    "name": "Yanmin Shang"
+                },
+                {
+                    "authorId": "2290653066",
+                    "name": "Shi Wang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Shirui Pan"
+                }
+            ],
+            "abstract": "Knowledge graph completion (KGC) aims to infer new knowledge and make predictions from knowledge graphs. Recently, large language models (LLMs) have exhibited remarkable reasoning capabilities. LLM-enhanced KGC methods primarily focus on designing task-specific instructions, achieving promising advancements. However, there are still two critical challenges. First, existing methods often ignore the inconsistent representation spaces between natural language and graph structures. Second, most approaches design separate instructions for different KGC tasks, leading to duplicate works and time-consuming processes. To address these challenges, we propose SAT, a novel framework that enhances LLMs for KGC via structure-aware alignment-tuning. Specifically, we first introduce hierarchical knowledge alignment to align graph embeddings with the natural language space through multi-task contrastive learning. Then, we propose structural instruction tuning to guide LLMs in performing structure-aware reasoning over KGs, using a unified graph instruction combined with a lightweight knowledge adapter. Experimental results on two KGC tasks across four benchmark datasets demonstrate that SAT significantly outperforms state-of-the-art methods, especially in the link prediction task with improvements ranging from 8.7% to 29.8%.",
+            "score": 6
+        },
+        {
+            "id": "f4499a4854c38bc31d9b6c1268c749d54a940f13",
+            "paperId": "f4499a4854c38bc31d9b6c1268c749d54a940f13",
+            "title": "An Entity Linking Agent for Question Answering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.03865, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375282179",
+                    "name": "Yajie Luo"
+                },
+                {
+                    "authorId": "2356633678",
+                    "name": "Yihong Wu"
+                },
+                {
+                    "authorId": "2195354990",
+                    "name": "Muzhi Li"
+                },
+                {
+                    "authorId": "2007643794",
+                    "name": "Fengran Mo"
+                },
+                {
+                    "authorId": "2375077734",
+                    "name": "Jia Ao Sun"
+                },
+                {
+                    "authorId": "2375063548",
+                    "name": "Xinyu Wang"
+                },
+                {
+                    "authorId": "2311422831",
+                    "name": "Liheng Ma"
+                },
+                {
+                    "authorId": "2242303315",
+                    "name": "Yingxue Zhang"
+                },
+                {
+                    "authorId": "2261086903",
+                    "name": "Jian-Yun Nie"
+                }
+            ],
+            "abstract": "Some Question Answering (QA) systems rely on knowledge bases (KBs) to provide accurate answers. Entity Linking (EL) plays a critical role in linking natural language mentions to KB entries. However, most existing EL methods are designed for long contexts and do not perform well on short, ambiguous user questions in QA tasks. We propose an entity linking agent for QA, based on a Large Language Model that simulates human cognitive workflows. The agent actively identifies entity mentions, retrieves candidate entities, and makes decision. To verify the effectiveness of our agent, we conduct two experiments: tool-based entity linking and QA task evaluation. The results confirm the robustness and effectiveness of our agent.",
+            "score": 6
+        },
+        {
+            "id": "6478940a29d8b9abf05bbe7c1eda2484e6b1e89b",
+            "paperId": "6478940a29d8b9abf05bbe7c1eda2484e6b1e89b",
+            "title": "Enhancing RAG and Knowledge Graphs with Discourse",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.28995/2075-7182-2025-23-103-116?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.28995/2075-7182-2025-23-103-116, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2021071353",
+                    "name": "B. Galitsky"
+                },
+                {
+                    "authorId": "1755765",
+                    "name": "Dmitry Ilvovsky"
+                },
+                {
+                    "authorId": "2377601094",
+                    "name": "Anton Morkovkin"
+                }
+            ],
+            "abstract": "We consider a number of Retrieval Augmented Generation (RAG) architectures to address a lack of specific information and hallucination issues of Large Language Models (LLM)\u2014based question answering. We start with conformal prediction which acts on top of LLM and maintains a set of generations instead of a single one and attempts to find the best element of this set, which is assumed to be the \u201cmost average one\u201d. We then proceed to LLM self-reflection series of RAG architectures predicting the multi-hop question answering session before actual search for an answer. After that, we propose a mechanism for LLM to filter out answers inappropriate with respect to style. All these components need discourse-level analysis for more robust functioning. Knowledge graph (KG) and Abstract Meaning Representation (AMR)-based knowledge graph construction follow. We evaluate the contribution of all of these components to overall answer relevance and also zoom in on the role of discourse-based subsystem in each of these components. There is a substantial improvement of performance due to the four-component architecture introduced in this paper; the contribution of discourse-based subsystems is fairly modest.",
+            "score": 6
+        },
+        {
+            "id": "838071aec4b6de99548cd486df42bab91717ef82",
+            "paperId": "838071aec4b6de99548cd486df42bab91717ef82",
+            "title": "CR-LT-KGQA: A Knowledge Graph Question Answering Dataset Requiring Commonsense Reasoning and Long-Tail Knowledge",
+            "year": 2024,
+            "citationCount": 8,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.01395, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2290061685",
+                    "name": "Willis Guo"
+                },
+                {
+                    "authorId": "1646622849",
+                    "name": "Armin Toroghi"
+                },
+                {
+                    "authorId": "2273670268",
+                    "name": "Scott Sanner"
+                }
+            ],
+            "abstract": "Knowledge graph question answering (KGQA) is a well-established field that seeks to provide factual answers to natural language (NL) questions by leveraging knowledge graphs (KGs). However, existing KGQA datasets suffer from two significant limitations: (1) no existing KGQA dataset requires commonsense reasoning to arrive at an answer and (2) existing KGQA datasets focus on popular entities for which large language models (LLMs) can directly answer without hallucinating and without leveraging the KG. In this work, we seek a novel KGQA dataset that supports commonsense reasoning and focuses on long-tail entities (e.g., non-mainstream and recent entities) where LLMs frequently hallucinate, and thus create the need for novel methodologies that leverage the KG for factual and attributable commonsense inference. We create a novel Commonsense Reasoning (CR) and Long-Tail (LT) KGQA dataset with two subtasks -- question answering and claim verification -- that address both limitations (1) and (2). We construct CR-LT-KGQA by building extensions to existing reasoning datasets StrategyQA and CREAK over Wikidata. While existing KGQA methods are not applicable due to their lack of commonsense inference support, baseline evaluation of LLMs on CR-LT KGQA demonstrate a high rate of hallucination. Thus, CR-LT KGQA poses significant challenges for hallucination-prone LLMs, hence paving the way for future commonsense KGQA research to provide accurate and factual answers for long-tail entities in the era of LLMs.",
+            "score": 6
+        },
+        {
+            "id": "e0f27336698c84709bd60b6b7f4ce588cbae66bf",
+            "paperId": "e0f27336698c84709bd60b6b7f4ce588cbae66bf",
+            "title": "StructGPT: A General Framework for Large Language Model to Reason over Structured Data",
+            "year": 2023,
+            "citationCount": 343,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.09645",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.09645, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2118240359",
+                    "name": "Jinhao Jiang"
+                },
+                {
+                    "authorId": "1423651904",
+                    "name": "Kun Zhou"
+                },
+                {
+                    "authorId": "2198280871",
+                    "name": "Zican Dong"
+                },
+                {
+                    "authorId": "1657563745",
+                    "name": "Keming Ye"
+                },
+                {
+                    "authorId": "2542603",
+                    "name": "Wayne Xin Zhao"
+                },
+                {
+                    "authorId": "153693432",
+                    "name": "Ji-rong Wen"
+                }
+            ],
+            "abstract": "In this paper, we study how to improve the zero-shot reasoning ability of large language models~(LLMs) over structured data in a unified way. Inspired by the study on tool augmentation for LLMs, we develop an \\emph{Iterative Reading-then-Reasoning~(IRR)} approach for solving question answering tasks based on structured data, called \\textbf{StructGPT}. In our approach, we construct the specialized function to collect relevant evidence from structured data (\\ie \\emph{reading}), and let LLMs concentrate the reasoning task based on the collected information (\\ie \\emph{reasoning}). Specially, we propose an \\emph{invoking-linearization-generation} procedure to support LLMs in reasoning on the structured data with the help of the external interfaces. By iterating this procedures with provided interfaces, our approach can gradually approach the target answer to a given query. Extensive experiments conducted on three types of structured data demonstrate the effectiveness of our approach, which can significantly boost the performance of ChatGPT and achieve comparable performance against the full-data supervised-tuning baselines. Our codes and data are publicly available at~\\url{https://github.com/RUCAIBox/StructGPT}.",
+            "score": 6
+        },
+        {
+            "id": "fb591c46afb5f1f2fc380a5a5a55f9cf9e485edb",
+            "paperId": "fb591c46afb5f1f2fc380a5a5a55f9cf9e485edb",
+            "title": "Utilizing Background Knowledge for Robust Reasoning over Traffic Situations",
+            "year": 2022,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2212.07798",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2212.07798, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper constructed two text-based multiple-choice question answering sets and adopts three knowledge-driven approaches for zero-shot QA over traffic situations, based on prior natural language inference methods, commonsense models with knowledge graph self-supervision, and dense retriever-based models."
+            },
+            "authors": [
+                {
+                    "authorId": "2261394194",
+                    "name": "Jiarui Zhang"
+                },
+                {
+                    "authorId": "2125822063",
+                    "name": "Filip Ilievski"
+                },
+                {
+                    "authorId": "2197058409",
+                    "name": "Aravinda Kollaa"
+                },
+                {
+                    "authorId": "26253744",
+                    "name": "Jonathan M Francis"
+                },
+                {
+                    "authorId": "22244290",
+                    "name": "Kaixin Ma"
+                },
+                {
+                    "authorId": "49930888",
+                    "name": "A. Oltramari"
+                }
+            ],
+            "abstract": "Understanding novel situations in the traffic domain requires an intricate combination of domain-specific and causal commonsense knowledge. Prior work has provided sufficient perception-based modalities for traffic monitoring, in this paper, we focus on a complementary research aspect of Intelligent Transportation: traffic understanding. We scope our study to text-based methods and datasets given the abundant commonsense knowledge that can be extracted using language models from large corpus and knowledge graphs. We adopt three knowledge-driven approaches for zero-shot QA over traffic situations, based on prior natural language inference methods, commonsense models with knowledge graph self-supervision, and dense retriever-based models. We constructed two text-based multiple-choice question answering sets: BDD-QA for evaluating causal reasoning in the traffic domain and HDT-QA for measuring the possession of domain knowledge akin to human driving license tests. Among the methods, Unified-QA reaches the best performance on the BDD-QA dataset with the adaptation of multiple formats of question answers. Language models trained with inference information and commonsense knowledge are also good at predicting the cause and effect in the traffic domain but perform badly at answering human-driving QA sets. For such sets, DPR+Unified-QA performs the best due to its efficient knowledge extraction.",
+            "score": 5
+        },
+        {
+            "id": "0a416611a21f5507d05f47f68c88a34000677205",
+            "paperId": "0a416611a21f5507d05f47f68c88a34000677205",
+            "title": "SPARQL Query Candidate Filtering for Improving the Quality of Multilingual Question Answering over Knowledge Graphs using Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.13052/jwe1540-9589.2444?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.13052/jwe1540-9589.2444, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145757722",
+                    "name": "A. Perevalov"
+                },
+                {
+                    "authorId": "2139351811",
+                    "name": "Aleksandr Gashkov"
+                },
+                {
+                    "authorId": "2139332878",
+                    "name": "M. Eltsova"
+                },
+                {
+                    "authorId": "2268768331",
+                    "name": "A. Both"
+                }
+            ],
+            "abstract": "Question answering is an approach to retrieving information from a knowledge base using natural language. Within question answering systems that work over knowledge graphs (KGQA), a ranked list of SPARQL query candidates is typically computed for the given natural-language input, where the top-ranked query should reflect the intention and semantics of the given user\u2019s question. This article follows our long-term research agenda of providing trustworthy KGQA systems by presenting an approach for filtering incorrect queries. Here, we employ (large) language models (LMs/LLMs) to distinguish between correct and incorrect queries. The main difference to the previous work is that we address here multilingual questions represented in major languages (English, German, French, Spanish, and Russian), and confirm the generalizability of the approach by also evaluating it on some low-resource languages (Ukrainian, Armenian, Lithuanian, Belarusian, and Bashkir). The considered LMs (BERT, DistilBERT, Mistral, Zephyr, GPT-3.5, and GPT-4) were applied to the KGQA systems \u2013 QAnswer (real-world system) and MemQA (idealized system) \u2013 as SPARQL query filters. The approach was evaluated on the multilingual dataset QALD-9-plus, which is based on the Wikidata knowledge graph. The experimental results imply that the considered KGQA systems achieve quality improvements for all languages when using our query-filtering approach.\n\n\n\u00a0\n\u00a0\n\u00a0\n\n",
+            "score": 5
+        },
+        {
+            "id": "88ad16de2738d6bfa5942bb878f0e83f222b9191",
+            "paperId": "88ad16de2738d6bfa5942bb878f0e83f222b9191",
+            "title": "Decomposing and Revising What Language Models Generate",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.00765, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2189118366",
+                    "name": "Zhichao Yan"
+                },
+                {
+                    "authorId": "2269695376",
+                    "name": "Jiaoyan Chen"
+                },
+                {
+                    "authorId": "2327159099",
+                    "name": "Jiapu Wang"
+                },
+                {
+                    "authorId": "2316645002",
+                    "name": "Xiaoli Li"
+                },
+                {
+                    "authorId": "2327169884",
+                    "name": "Ru Li"
+                },
+                {
+                    "authorId": "2260294608",
+                    "name": "Jeff Z. Pan"
+                }
+            ],
+            "abstract": "Attribution is crucial in question answering (QA) with Large Language Models (LLMs).SOTA question decomposition-based approaches use long form answers to generate questions for retrieving related documents. However, the generated questions are often irrelevant and incomplete, resulting in a loss of facts in retrieval.These approaches also fail to aggregate evidence snippets from different documents and paragraphs. To tackle these problems, we propose a new fact decomposition-based framework called FIDES (\\textit{faithful context enhanced fact decomposition and evidence aggregation}) for attributed QA. FIDES uses a contextually enhanced two-stage faithful decomposition method to decompose long form answers into sub-facts, which are then used by a retriever to retrieve related evidence snippets. If the retrieved evidence snippets conflict with the related sub-facts, such sub-facts will be revised accordingly. Finally, the evidence snippets are aggregated according to the original sentences.Extensive evaluation has been conducted with six datasets, with an additionally proposed new metric called $Attr_{auto-P}$ for evaluating the evidence precision. FIDES outperforms the SOTA methods by over 14\\% in average with GPT-3.5-turbo, Gemini and Llama 70B series.",
+            "score": 5
+        },
+        {
+            "id": "3fe65f31d9e5ae9def74894c84bf4fa2c8ed34e0",
+            "paperId": "3fe65f31d9e5ae9def74894c84bf4fa2c8ed34e0",
+            "title": "Mixture of Length and Pruning Experts for Knowledge Graphs Reasoning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.20498, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2349542076",
+                    "name": "Enjun Du"
+                },
+                {
+                    "authorId": "2362233241",
+                    "name": "Siyi Liu"
+                },
+                {
+                    "authorId": "2373596879",
+                    "name": "Yongqi Zhang"
+                }
+            ],
+            "abstract": "Knowledge Graph (KG) reasoning, which aims to infer new facts from structured knowledge repositories, plays a vital role in Natural Language Processing (NLP) systems. Its effectiveness critically depends on constructing informative and contextually relevant reasoning paths. However, existing graph neural networks (GNNs) often adopt rigid, query-agnostic path-exploration strategies, limiting their ability to adapt to diverse linguistic contexts and semantic nuances. To address these limitations, we propose \\textbf{MoKGR}, a mixture-of-experts framework that personalizes path exploration through two complementary components: (1) a mixture of length experts that adaptively selects and weights candidate path lengths according to query complexity, providing query-specific reasoning depth; and (2) a mixture of pruning experts that evaluates candidate paths from a complementary perspective, retaining the most informative paths for each query. Through comprehensive experiments on diverse benchmark, MoKGR demonstrates superior performance in both transductive and inductive settings, validating the effectiveness of personalized path exploration in KGs reasoning.",
+            "score": 5
+        },
+        {
+            "id": "9a4a9b5d75e677416be351111582ac442d667b8e",
+            "paperId": "9a4a9b5d75e677416be351111582ac442d667b8e",
+            "title": "DKG-LLM : A Framework for Medical Diagnosis and Personalized Treatment Recommendations via Dynamic Knowledge Graph and Large Language Model Integration",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.06186, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2349375590",
+                    "name": "Ali Sarabadani"
+                },
+                {
+                    "authorId": "2293541742",
+                    "name": "Maryam Abdollahi Shamami"
+                },
+                {
+                    "authorId": "2134070491",
+                    "name": "H. Sadeghsalehi"
+                },
+                {
+                    "authorId": "2375326196",
+                    "name": "Borhan Asadi"
+                },
+                {
+                    "authorId": "2290793191",
+                    "name": "Saba Hesaraki"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) have grown exponentially since the release of ChatGPT. These models have gained attention due to their robust performance on various tasks, including language processing tasks. These models achieve understanding and comprehension of tasks by training billions of parameters. The development of these models is a transformative force in enhancing natural language understanding and has taken a significant step towards artificial general intelligence (AGI). In this study, we aim to present the DKG-LLM framework. The DKG-LLM framework introduces a groundbreaking approach to medical diagnosis and personalized treatment recommendations by integrating a dynamic knowledge graph (DKG) with the Grok 3 large language model. Using the Adaptive Semantic Fusion Algorithm (ASFA), heterogeneous medical data (including clinical reports and PubMed articles) and patient records dynamically generate a knowledge graph consisting of 15,964 nodes in 13 distinct types (e.g., diseases, symptoms, treatments, patient profiles) and 127,392 edges in 26 relationship types (e.g., causal, therapeutic, association). ASFA utilizes advanced probabilistic models, Bayesian inference, and graph optimization to extract semantic information, dynamically updating the graph with approximately 150 new nodes and edges in each data category while maintaining scalability with up to 987,654 edges. Real-world datasets, including MIMIC-III and PubMed, were utilized to evaluate the proposed architecture. The evaluation results show that DKG-LLM achieves a diagnostic accuracy of 84.19%. The model also has a treatment recommendation accuracy of 89.63% and a semantic coverage of 93.48%. DKG-LLM is a reliable and transformative tool that handles noisy data and complex multi-symptom diseases, along with feedback-based learning from physician input.",
+            "score": 5
+        },
+        {
+            "id": "9e8b7b0d4c628c12b6a65ab56ac5f33a35eff2e6",
+            "paperId": "9e8b7b0d4c628c12b6a65ab56ac5f33a35eff2e6",
+            "title": "Unifying Large Language Models and Knowledge Graphs: A Roadmap",
+            "year": 2023,
+            "citationCount": 886,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2306.08302",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.08302, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2153326034",
+                    "name": "Shirui Pan"
+                },
+                {
+                    "authorId": "1382578305",
+                    "name": "Linhao Luo"
+                },
+                {
+                    "authorId": "46395829",
+                    "name": "Yufei Wang"
+                },
+                {
+                    "authorId": "2127380138",
+                    "name": "Chen Chen"
+                },
+                {
+                    "authorId": "2163833353",
+                    "name": "Jiapu Wang"
+                },
+                {
+                    "authorId": "1748808",
+                    "name": "Xindong Wu"
+                }
+            ],
+            "abstract": "Large language models (LLMs), such as ChatGPT and GPT4, are making new waves in the field of natural language processing and artificial intelligence, due to their emergent ability and generalizability. However, LLMs are black-box models, which often fall short of capturing and accessing factual knowledge. In contrast, Knowledge Graphs (KGs), Wikipedia, and Huapu for example, are structured knowledge models that explicitly store rich factual knowledge. KGs can enhance LLMs by providing external knowledge for inference and interpretability. Meanwhile, KGs are difficult to construct and evolve by nature, which challenges the existing methods in KGs to generate new facts and represent unseen knowledge. Therefore, it is complementary to unify LLMs and KGs together and, simultaneously, leverage their advantages. In this article, we present a forward-looking roadmap for the unification of LLMs and KGs. Our roadmap consists of three general frameworks, namely: 1) KG-enhanced LLMs, which incorporate KGs during the pre-training and inference phases of LLMs, or for the purpose of enhancing understanding of the knowledge learned by LLMs; 2) LLM-augmented KGs, that leverage LLMs for different KG tasks such as embedding, completion, construction, graph-to-text generation, and question answering; and 3) Synergized LLMs + KGs, in which LLMs and KGs play equal roles and work in a mutually beneficial way to enhance both LLMs and KGs for bidirectional reasoning driven by both data and knowledge. We review and summarize existing efforts within these three frameworks in our roadmap and pinpoint their future research directions.",
+            "score": 5
+        },
+        {
+            "id": "7fcb917cd4b6d0c77c41b4a1b1dc0c4d1965ba7b",
+            "paperId": "7fcb917cd4b6d0c77c41b4a1b1dc0c4d1965ba7b",
+            "title": "Comprehensive Event Representations using Event Knowledge Graphs and Natural Language Processing",
+            "year": 2022,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3487553.3524199",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.04794, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Sub-event extraction is used as a way of creating sub-event-aware event representations, which are further enriched through fine-grained location extraction and contextualised through the alignment of historically relevant quotes."
+            },
+            "authors": [
+                {
+                    "authorId": "46186892",
+                    "name": "Tin Kuculo"
+                }
+            ],
+            "abstract": "Recent work has utilised knowledge-aware approaches to natural language understanding, question answering, recommendation systems, and other tasks. These approaches rely on well-constructed and large-scale knowledge graphs that can be useful for many downstream applications and empower knowledge-aware models with commonsense reasoning. Such knowledge graphs are constructed through knowledge acquisition tasks such as relation extraction and knowledge graph completion. This work seeks to utilise and build on the growing body of work that uses findings from the field of natural language processing (NLP) to extract knowledge from text and build knowledge graphs. The focus of this research project is on how we can use transformer-based approaches to extract and contextualise event information, matching it to existing ontologies, to build comprehensive knowledge graph-based event representations. Specifically, sub-event extraction is used as a way of creating sub-event-aware event representations. These event representations are then further enriched through fine-grained location extraction and contextualised through the alignment of historically relevant quotes.",
+            "score": 4
+        },
+        {
+            "id": "c5f5f2dedeea922ba9a6249e71e6fe35aac7a6e9",
+            "paperId": "c5f5f2dedeea922ba9a6249e71e6fe35aac7a6e9",
+            "title": "Exploring Sequence-to-Sequence Models for SPARQL Pattern Composition",
+            "year": 2020,
+            "citationCount": 5,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.10900, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This short paper explores the use of architectures based on Neural Machine Translation called Neural SPARQL Machines to learn pattern compositions and shows that sequence-to-sequence models are a viable and promising option to transform long utterances into complex SParQL queries."
+            },
+            "authors": [
+                {
+                    "authorId": "2361593470",
+                    "name": "Anand Panchbhai"
+                },
+                {
+                    "authorId": "1869895",
+                    "name": "Tommaso Soru"
+                },
+                {
+                    "authorId": "2522516",
+                    "name": "Edgard Marx"
+                }
+            ],
+            "abstract": "A booming amount of information is continuously added to the Internet as structured and unstructured data, feeding knowledge bases such as DBpedia and Wikidata with billions of statements describing millions of entities. The aim of Question Answering systems is to allow lay users to access such data using natural language without needing to write formal queries. However, users often submit questions that are complex and require a certain level of abstraction and reasoning to decompose them into basic graph patterns. In this short paper, we explore the use of architectures based on Neural Machine Translation called Neural SPARQL Machines to learn pattern compositions. We show that sequence-to-sequence models are a viable and promising option to transform long utterances into complex SPARQL queries.",
+            "score": 4
+        },
+        {
+            "id": "26bde5ebc6609218ad565cd6ba04f3c3d586e3a9",
+            "paperId": "26bde5ebc6609218ad565cd6ba04f3c3d586e3a9",
+            "title": "Self-Questioning Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.03682, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2352348454",
+                    "name": "Lili Chen"
+                },
+                {
+                    "authorId": "1381902419",
+                    "name": "Mihir Prabhudesai"
+                },
+                {
+                    "authorId": "1705557",
+                    "name": "Katerina Fragkiadaki"
+                },
+                {
+                    "authorId": "2364826004",
+                    "name": "Hao Liu"
+                },
+                {
+                    "authorId": "2254258594",
+                    "name": "Deepak Pathak"
+                }
+            ],
+            "abstract": "Can large language models improve without external data -- by generating their own questions and answers? We hypothesize that a pre-trained language model can improve its reasoning skills given only a single prompt specifying the topic (e.g., algebra word problems) and asking the model to generate its own questions. To do this, we propose Self-Questioning Language Models (SQLM): an asymmetric self-play framework where a proposer is given the topic and generates a question for a solver, who tries to answer it. Both the proposer and solver are trained via reinforcement learning. The proposer receives a reward if the problem is not too easy or too difficult, and the solver receives a reward based on majority voting, a proxy for correctness in the absence of ground-truth answers. For coding, the proposer can instead generate unit tests which are used for verification. We study this asymmetric self-play framework on three benchmarks: three-digit multiplication, algebra problems from the OMEGA benchmark, and programming problems from Codeforces. By continually generating more interesting problems and attempting to solve them, language models can improve on downstream benchmarks without access to any curated training datasets.",
+            "score": 4
+        },
+        {
+            "id": "0f2ad43d0797ffc7c37b4f57c53fb38b47277b1b",
+            "paperId": "0f2ad43d0797ffc7c37b4f57c53fb38b47277b1b",
+            "title": "Advancing surgical VQA with scene graph knowledge",
+            "year": 2023,
+            "citationCount": 28,
+            "openAccessPdf": {
+                "url": "https://link.springer.com/content/pdf/10.1007/s11548-024-03141-y.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2312.10251, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes SSG-VQA-Net, a novel surgical VQA model incorporating a lightweight Scene-embedded Interaction Module, which integrates geometric scene knowledge in the VQA model design by employing cross-attention between the textual and the scene features."
+            },
+            "authors": [
+                {
+                    "authorId": "2275056992",
+                    "name": "Kun Yuan"
+                },
+                {
+                    "authorId": "2180779519",
+                    "name": "Manasi Kattel"
+                },
+                {
+                    "authorId": "50881397",
+                    "name": "Jo\u00ebl L. Lavanchy"
+                },
+                {
+                    "authorId": "145587209",
+                    "name": "N. Navab"
+                },
+                {
+                    "authorId": "49215304",
+                    "name": "V. Srivastav"
+                },
+                {
+                    "authorId": "2298142593",
+                    "name": "Nicolas Padoy"
+                }
+            ],
+            "abstract": "Purpose The modern operating room is becoming increasingly complex, requiring innovative intra-operative support systems. While the focus of surgical data science has largely been on video analysis, integrating surgical computer vision with natural language capabilities is emerging as a necessity. Our work aims to advance visual question answering (VQA) in the surgical context with scene graph knowledge, addressing two main challenges in the current surgical VQA systems: removing question\u2013condition bias in the surgical VQA dataset and incorporating scene-aware reasoning in the surgical VQA model design. Methods First, we propose a surgical scene graph-based dataset, SSG-VQA, generated by employing segmentation and detection models on publicly available datasets. We build surgical scene graphs using spatial and action information of instruments and anatomies. These graphs are fed into a question engine, generating diverse QA pairs. We then propose SSG-VQA-Net, a novel surgical VQA model incorporating a lightweight Scene-embedded Interaction Module, which integrates geometric scene knowledge in the VQA model design by employing cross-attention between the textual and the scene features. Results Our comprehensive analysis shows that our SSG-VQA dataset provides a more complex, diverse, geometrically grounded, unbiased and surgical action-oriented dataset compared to existing surgical VQA datasets and SSG-VQA-Net outperforms existing methods across different question types and complexities. We highlight that the primary limitation in the current surgical VQA systems is the lack of scene knowledge to answer complex queries. Conclusion We present a novel surgical VQA dataset and model and show that results can be significantly improved by incorporating geometric scene features in the VQA model design. We point out that the bottleneck of the current surgical visual question\u2013answer model lies in learning the encoded representation rather than decoding the sequence. Our SSG-VQA dataset provides a diagnostic benchmark to test the scene understanding and reasoning capabilities of the model. The source code and the dataset will be made publicly available at: https://github.com/CAMMA-public/SSG-VQA. Supplementary Information The online version contains supplementary material available at 10.1007/s11548-024-03141-y.",
+            "score": 3
+        },
+        {
+            "id": "63847644055fb75307c835232437d2ccdc201d8d",
+            "paperId": "63847644055fb75307c835232437d2ccdc201d8d",
+            "title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.03405, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2307080108",
+                    "name": "Daniela Gottesman"
+                },
+                {
+                    "authorId": "2378842740",
+                    "name": "Alon Gilae-Dotan"
+                },
+                {
+                    "authorId": "2353386111",
+                    "name": "Ido Cohen"
+                },
+                {
+                    "authorId": "2340016147",
+                    "name": "Yoav Gur-Arieh"
+                },
+                {
+                    "authorId": "2354177900",
+                    "name": "Marius Mosbach"
+                },
+                {
+                    "authorId": "2378853724",
+                    "name": "Ori Yoran"
+                },
+                {
+                    "authorId": "22245981",
+                    "name": "Mor Geva"
+                }
+            ],
+            "abstract": "Language models (LMs) increasingly drive real-world applications that require world knowledge. However, the internal processes through which models turn data into representations of knowledge and beliefs about the world, are poorly understood. Insights into these processes could pave the way for developing LMs with knowledge representations that are more consistent, robust, and complete. To facilitate studying these questions, we present LMEnt, a suite for analyzing knowledge acquisition in LMs during pretraining. LMEnt introduces: (1) a knowledge-rich pretraining corpus, fully annotated with entity mentions, based on Wikipedia, (2) an entity-based retrieval method over pretraining data that outperforms previous approaches by as much as 80.4%, and (3) 12 pretrained models with up to 1B parameters and 4K intermediate checkpoints, with comparable performance to popular open-sourced models on knowledge benchmarks. Together, these resources provide a controlled environment for analyzing connections between entity mentions in pretraining and downstream performance, and the effects of causal interventions in pretraining data. We show the utility of LMEnt by studying knowledge acquisition across checkpoints, finding that fact frequency is key, but does not fully explain learning trends. We release LMEnt to support studies of knowledge in LMs, including knowledge representations, plasticity, editing, attribution, and learning dynamics.",
+            "score": 3
+        },
+        {
+            "id": "20723b734e2838c22f921a0fc343d32e1d6d84e7",
+            "paperId": "20723b734e2838c22f921a0fc343d32e1d6d84e7",
+            "title": "Can Indirect Prompt Injection Attacks Be Detected and Removed?",
+            "year": 2025,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2502.16580, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2258786348",
+                    "name": "Yulin Chen"
+                },
+                {
+                    "authorId": "2260286743",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "2325156180",
+                    "name": "Yuan Sui"
+                },
+                {
+                    "authorId": "2285087612",
+                    "name": "Yufei He"
+                },
+                {
+                    "authorId": "2343583785",
+                    "name": "Yue Liu"
+                },
+                {
+                    "authorId": "2258804099",
+                    "name": "Yangqiu Song"
+                },
+                {
+                    "authorId": "2283877888",
+                    "name": "Bryan Hooi"
+                }
+            ],
+            "abstract": "Prompt injection attacks manipulate large language models (LLMs) by misleading them to deviate from the original input instructions and execute maliciously injected instructions, because of their instruction-following capabilities and inability to distinguish between the original input instructions and maliciously injected instructions. To defend against such attacks, recent studies have developed various detection mechanisms. If we restrict ourselves specifically to works which perform detection rather than direct defense, most of them focus on direct prompt injection attacks, while there are few works for the indirect scenario, where injected instructions are indirectly from external tools, such as a search engine. Moreover, current works mainly investigate injection detection methods and pay less attention to the post-processing method that aims to mitigate the injection after detection. In this paper, we investigate the feasibility of detecting and removing indirect prompt injection attacks, and we construct a benchmark dataset for evaluation. For detection, we assess the performance of existing LLMs and open-source detection models, and we further train detection models using our crafted training datasets. For removal, we evaluate two intuitive methods: (1) the segmentation removal method, which segments the injected document and removes parts containing injected instructions, and (2) the extraction removal method, which trains an extraction model to identify and remove injected instructions.",
+            "score": 1
+        },
+        {
+            "id": "a19b75036dd95bc6eba87c1589de3b2dff5c25a1",
+            "paperId": "a19b75036dd95bc6eba87c1589de3b2dff5c25a1",
+            "title": "Evaluating the Paperclip Maximizer: Are RL-Based Language Models More Likely to Pursue Instrumental Goals?",
+            "year": 2025,
+            "citationCount": 9,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2502.12206, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2285087612",
+                    "name": "Yufei He"
+                },
+                {
+                    "authorId": "2290047127",
+                    "name": "Yuexin Li"
+                },
+                {
+                    "authorId": "2185424347",
+                    "name": "Jiaying Wu"
+                },
+                {
+                    "authorId": "2325156180",
+                    "name": "Yuan Sui"
+                },
+                {
+                    "authorId": "2342926108",
+                    "name": "Yulin Chen"
+                },
+                {
+                    "authorId": "2283877888",
+                    "name": "Bryan Hooi"
+                }
+            ],
+            "abstract": "As large language models (LLMs) continue to evolve, ensuring their alignment with human goals and values remains a pressing challenge. A key concern is \\textit{instrumental convergence}, where an AI system, in optimizing for a given objective, develops unintended intermediate goals that override the ultimate objective and deviate from human-intended goals. This issue is particularly relevant in reinforcement learning (RL)-trained models, which can generate creative but unintended strategies to maximize rewards. In this paper, we explore instrumental convergence in LLMs by comparing models trained with direct RL optimization (e.g., the o1 model) to those trained with reinforcement learning from human feedback (RLHF). We hypothesize that RL-driven models exhibit a stronger tendency for instrumental convergence due to their optimization of goal-directed behavior in ways that may misalign with human intentions. To assess this, we introduce InstrumentalEval, a benchmark for evaluating instrumental convergence in RL-trained LLMs. Initial experiments reveal cases where a model tasked with making money unexpectedly pursues instrumental objectives, such as self-replication, implying signs of instrumental convergence. Our findings contribute to a deeper understanding of alignment challenges in AI systems and the risks posed by unintended model behaviors.",
+            "score": 1
+        },
+        {
+            "id": "61166a7545c7cadb1ec79c4744c348bac7644d41",
+            "paperId": "61166a7545c7cadb1ec79c4744c348bac7644d41",
+            "title": "RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval",
+            "year": 2024,
+            "citationCount": 58,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.10516, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2321661320",
+                    "name": "Di Liu"
+                },
+                {
+                    "authorId": "2322493855",
+                    "name": "Meng Chen"
+                },
+                {
+                    "authorId": "2321475619",
+                    "name": "Baotong Lu"
+                },
+                {
+                    "authorId": "2181120463",
+                    "name": "Huiqiang Jiang"
+                },
+                {
+                    "authorId": "2281867465",
+                    "name": "Zhenhua Han"
+                },
+                {
+                    "authorId": "2108076499",
+                    "name": "Qianxi Zhang"
+                },
+                {
+                    "authorId": "2157955990",
+                    "name": "Qi Chen"
+                },
+                {
+                    "authorId": "2284970741",
+                    "name": "Chengruidong Zhang"
+                },
+                {
+                    "authorId": "2312324853",
+                    "name": "Bailu Ding"
+                },
+                {
+                    "authorId": "2322983098",
+                    "name": "Kai Zhang"
+                },
+                {
+                    "authorId": "2361998560",
+                    "name": "Chen Chen"
+                },
+                {
+                    "authorId": "145338263",
+                    "name": "Fan Yang"
+                },
+                {
+                    "authorId": "2125051198",
+                    "name": "Yuqing Yang"
+                },
+                {
+                    "authorId": "2160727304",
+                    "name": "Lili Qiu"
+                }
+            ],
+            "abstract": "Transformer-based Large Language Models (LLMs) have become increasingly important. However, due to the quadratic time complexity of attention computation, scaling LLMs to longer contexts incurs extremely slow inference speed and high GPU memory consumption for caching key-value (KV) vectors. This paper proposes RetrievalAttention, a training-free approach to both accelerate attention computation and reduce GPU memory consumption. By leveraging the dynamic sparsity of attention mechanism, RetrievalAttention proposes to build approximate nearest neighbor search (ANNS) indexes for KV vectors in CPU memory and retrieve the most relevant ones through vector search during generation. Unfortunately, we observe that the off-the-shelf ANNS indexes are often ineffective for such retrieval tasks due to the out-of-distribution (OOD) between query vectors and key vectors in the attention mechanism. RetrievalAttention addresses the OOD challenge by designing an attention-aware vector search algorithm that can adapt to the distribution of query vectors. Our evaluation demonstrates that RetrievalAttention achieves near full attention accuracy while only requiring access to 1--3% of the data. This leads to a significant reduction in the inference cost of long-context LLMs, with a much lower GPU memory footprint. In particular, RetrievalAttention only needs a single NVIDIA RTX4090 (24GB) to serve 128K tokens for LLMs with 8B parameters, which is capable of generating one token in 0.188 seconds.",
+            "score": 1
+        },
+        {
+            "id": "494cf86c8a4b8d9464f3888dcd69ec1371aaf43d",
+            "paperId": "494cf86c8a4b8d9464f3888dcd69ec1371aaf43d",
+            "title": "RAP: Retrieval-Augmented Planning with Contextual Memory for Multimodal LLM Agents",
+            "year": 2024,
+            "citationCount": 41,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.03610, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "35344001",
+                    "name": "Tomoyuki Kagaya"
+                },
+                {
+                    "authorId": "2282957491",
+                    "name": "Thong Jing Yuan"
+                },
+                {
+                    "authorId": "2053694448",
+                    "name": "Yuxuan Lou"
+                },
+                {
+                    "authorId": "1785111",
+                    "name": "J. Karlekar"
+                },
+                {
+                    "authorId": "2668358",
+                    "name": "Sugiri Pranata"
+                },
+                {
+                    "authorId": "2282964850",
+                    "name": "Akira Kinose"
+                },
+                {
+                    "authorId": "2282968472",
+                    "name": "Koki Oguri"
+                },
+                {
+                    "authorId": "2282969684",
+                    "name": "Felix Wick"
+                },
+                {
+                    "authorId": "2282982772",
+                    "name": "Yang You"
+                }
+            ],
+            "abstract": "Owing to recent advancements, Large Language Models (LLMs) can now be deployed as agents for increasingly complex decision-making applications in areas including robotics, gaming, and API integration. However, reflecting past experiences in current decision-making processes, an innate human behavior, continues to pose significant challenges. Addressing this, we propose Retrieval-Augmented Planning (RAP) framework, designed to dynamically leverage past experiences corresponding to the current situation and context, thereby enhancing agents' planning capabilities. RAP distinguishes itself by being versatile: it excels in both text-only and multimodal environments, making it suitable for a wide range of tasks. Empirical evaluations demonstrate RAP's effectiveness, where it achieves SOTA performance in textual scenarios and notably enhances multimodal LLM agents' performance for embodied tasks. These results highlight RAP's potential in advancing the functionality and applicability of LLM agents in complex, real-world applications.",
+            "score": 1
+        },
+        {
+            "id": "5cd671efa2af8456c615c5faf54d1be4950f3819",
+            "paperId": "5cd671efa2af8456c615c5faf54d1be4950f3819",
+            "title": "Hallucination is Inevitable: An Innate Limitation of Large Language Models",
+            "year": 2024,
+            "citationCount": 309,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.11817, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1390848082",
+                    "name": "Ziwei Xu"
+                },
+                {
+                    "authorId": "2280273731",
+                    "name": "Sanjay Jain"
+                },
+                {
+                    "authorId": "1744045",
+                    "name": "Mohan Kankanhalli"
+                }
+            ],
+            "abstract": "Hallucination has been widely recognized to be a significant drawback for large language models (LLMs). There have been many works that attempt to reduce the extent of hallucination. These efforts have mostly been empirical so far, which cannot answer the fundamental question whether it can be completely eliminated. In this paper, we formalize the problem and show that it is impossible to eliminate hallucination in LLMs. Specifically, we define a formal world where hallucination is defined as inconsistencies between a computable LLM and a computable ground truth function. By employing results from learning theory, we show that LLMs cannot learn all the computable functions and will therefore inevitably hallucinate if used as general problem solvers. Since the formal world is a part of the real world which is much more complicated, hallucinations are also inevitable for real world LLMs. Furthermore, for real world LLMs constrained by provable time complexity, we describe the hallucination-prone tasks and empirically validate our claims. Finally, using the formal world framework, we discuss the possible mechanisms and efficacies of existing hallucination mitigators as well as the practical implications on the safe deployment of LLMs.",
+            "score": 1
+        },
+        {
+            "id": "1b387e3fbec0447c8bf2dcee21f6db59cdddf698",
+            "paperId": "1b387e3fbec0447c8bf2dcee21f6db59cdddf698",
+            "title": "The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models",
+            "year": 2024,
+            "citationCount": 68,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.03205, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2271770669",
+                    "name": "Junyi Li"
+                },
+                {
+                    "authorId": "2278478943",
+                    "name": "Jie Chen"
+                },
+                {
+                    "authorId": "1708171825",
+                    "name": "Ruiyang Ren"
+                },
+                {
+                    "authorId": "2149479237",
+                    "name": "Xiaoxue Cheng"
+                },
+                {
+                    "authorId": "2257376413",
+                    "name": "Wayne Xin Zhao"
+                },
+                {
+                    "authorId": "2301152868",
+                    "name": "Jian-yun Nie"
+                },
+                {
+                    "authorId": "2274218622",
+                    "name": "Ji-Rong Wen"
+                }
+            ],
+            "abstract": "In the era of large language models (LLMs), hallucination (i.e., the tendency to generate factually incorrect content) poses great challenge to trustworthy and reliable deployment of LLMs in real-world applications. To tackle the LLM hallucination, three key questions should be well studied: how to detect hallucinations (detection), why do LLMs hallucinate (source), and what can be done to mitigate them (mitigation). To address these challenges, this work presents a systematic empirical study on LLM hallucination, focused on the the three aspects of hallucination detection, source and mitigation. Specially, we construct a new hallucination benchmark HaluEval 2.0, and designs a simple yet effective detection method for LLM hallucination. Furthermore, we zoom into the different training or utilization stages of LLMs and extensively analyze the potential factors that lead to the LLM hallucination. Finally, we implement and examine a series of widely used techniques to mitigate the hallucinations in LLMs. Our work has led to several important findings to understand the hallucination origin and mitigate the hallucinations in LLMs. Our code and data can be accessed at https://github.com/RUCAIBox/HaluEval-2.0.",
+            "score": 1
+        },
+        {
+            "id": "3784fd84b61d482b52f7ef72aac66bcb886b892b",
+            "paperId": "3784fd84b61d482b52f7ef72aac66bcb886b892b",
+            "title": "Thought Propagation: An Analogical Approach to Complex Reasoning with Large Language Models",
+            "year": 2023,
+            "citationCount": 32,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2310.03965",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.03965, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "28822585",
+                    "name": "Junchi Yu"
+                },
+                {
+                    "authorId": "2256994353",
+                    "name": "Ran He"
+                },
+                {
+                    "authorId": "2248206514",
+                    "name": "Rex Ying"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) have achieved remarkable success in reasoning tasks with the development of prompting methods. However, existing prompting approaches cannot reuse insights of solving similar problems and suffer from accumulated errors in multi-step reasoning, since they prompt LLMs to reason \\textit{from scratch}. To address these issues, we propose \\textbf{\\textit{Thought Propagation} (TP)}, which explores the analogous problems and leverages their solutions to enhance the complex reasoning ability of LLMs. These analogous problems are related to the input one, with reusable solutions and problem-solving strategies. Thus, it is promising to propagate insights of solving previous analogous problems to inspire new problem-solving. To achieve this, TP first prompts LLMs to propose and solve a set of analogous problems that are related to the input one. Then, TP reuses the results of analogous problems to directly yield a new solution or derive a knowledge-intensive plan for execution to amend the initial solution obtained from scratch. TP is compatible with existing prompting approaches, allowing plug-and-play generalization and enhancement in a wide range of tasks without much labor in task-specific prompt engineering. Experiments across three challenging tasks demonstrate TP enjoys a substantial improvement over the baselines by an average of 12\\% absolute increase in finding the optimal solutions in Shortest-path Reasoning, 13\\% improvement of human preference in Creative Writing, and 15\\% enhancement in the task completion rate of LLM-Agent Planning.",
+            "score": 1
+        },
+        {
+            "id": "8236010c2ecc94d826be6010ff187fdc000e7df6",
+            "paperId": "8236010c2ecc94d826be6010ff187fdc000e7df6",
+            "title": "Deductive Verification of Chain-of-Thought Reasoning",
+            "year": 2023,
+            "citationCount": 150,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2306.03872",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.03872, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "49706114",
+                    "name": "Z. Ling"
+                },
+                {
+                    "authorId": "2219045025",
+                    "name": "Yunhao Fang"
+                },
+                {
+                    "authorId": "2108263986",
+                    "name": "Xuanlin Li"
+                },
+                {
+                    "authorId": "18036051",
+                    "name": "Zhiao Huang"
+                },
+                {
+                    "authorId": "2108721816",
+                    "name": "Mingu Lee"
+                },
+                {
+                    "authorId": "1710604",
+                    "name": "R. Memisevic"
+                },
+                {
+                    "authorId": "2087042750",
+                    "name": "Hao Su"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) significantly benefit from Chain-of-Thought (CoT) prompting in performing various reasoning tasks. While CoT allows models to produce more comprehensive reasoning processes, its emphasis on intermediate reasoning steps can inadvertently introduce hallucinations and accumulated errors, thereby limiting models' ability to solve complex reasoning tasks. Inspired by how humans engage in careful and meticulous deductive logical reasoning processes to solve tasks, we seek to enable language models to perform explicit and rigorous deductive reasoning, and also ensure the trustworthiness of their reasoning process through self-verification. However, directly verifying the validity of an entire deductive reasoning process is challenging, even with advanced models like ChatGPT. In light of this, we propose to decompose a reasoning verification process into a series of step-by-step subprocesses, each only receiving their necessary context and premises. To facilitate this procedure, we propose Natural Program, a natural language-based deductive reasoning format. Our approach enables models to generate precise reasoning steps where subsequent steps are more rigorously grounded on prior steps. It also empowers language models to carry out reasoning self-verification in a step-by-step manner. By integrating this verification process into each deductive reasoning stage, we significantly enhance the rigor and trustfulness of generated reasoning steps. Along this process, we also improve the answer correctness on complex reasoning tasks. Code will be released at https://github.com/lz1oceani/verify_cot.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.106905
+}

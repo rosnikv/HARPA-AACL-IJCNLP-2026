@@ -1,0 +1,759 @@
+[
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "dd4d82299b4209db539d639f836fcee663cf72b3",
+            "pmid": "2310.01469",
+            "title": "LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples",
+            "abstract": "Large Language Models (LLMs), including GPT-3.5, LLaMA, and PaLM, seem to be knowledgeable and able to adapt to many tasks. However, we still cannot completely trust their answers, since LLMs suffer from \\textbf{hallucination}\\textemdash fabricating non-existent facts, deceiving users with or without their awareness. However, the reasons for their existence and pervasiveness remain unclear. In this paper, we demonstrate that nonsensical prompts composed of random tokens can also elicit the LLMs to respond with hallucinations. Moreover, we provide both theoretical and experimental evidence that transformers can be manipulated to produce specific pre-define tokens by perturbing its input sequence. This phenomenon forces us to revisit that \\emph{hallucination may be another view of adversarial examples}, and it shares similar characteristics with conventional adversarial examples as a basic property of LLMs. Therefore, we formalize an automatic hallucination triggering method as the \\textit{hallucination attack} in an adversarial way. Finally, we explore the basic properties of attacked adversarial prompts and propose a simple yet effective defense strategy. Our code is released on GitHub\\footnote{https://github.com/PKU-YuanGroup/Hallucination-Attack}.",
+            "year": 2023,
+            "citation_count": 220
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Alleviating Hallucinations of Large Language Models through Induced Hallucinations": {
+                    "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper.",
+                    "relevance": 2
+                },
+                "2. From Google Gemini to OpenAI Q* (Q-Star): A Survey of Reshaping the Generative Artificial Intelligence (AI) Research Landscape": {
+                    "explanation": "This is a survey paper that explores the broader landscape of generative AI and does not specifically focus on hallucinations or adversarial examples in LLMs.",
+                    "relevance": 0
+                },
+                "3. Retrieval-Augmented Generation for Large Language Models: A Survey": {
+                    "explanation": "This is a review paper on Retrieval-Augmented Generation, which is not directly related to the hallucination or adversarial examples discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. DRDT: Dynamic Reflection with Divergent Thinking for LLM-based Sequential Recommendation": {
+                    "explanation": "This paper focuses on using LLMs for sequential recommendation tasks, which is not directly related to the hallucination or adversarial examples discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. A Reliable and Accessible Caregiving Language Model (CaLM) to Support Tools for Caregivers: Development and Evaluation Study": {
+                    "explanation": "While this paper addresses the issue of hallucinations in LLMs, it does so in the context of caregiving applications and does not build on the adversarial example perspective of hallucinations discussed in the source paper.",
+                    "relevance": 1
+                },
+                "6. Improving the Generation Quality of Watermarked Large Language Models via Word Importance Scoring": {
+                    "explanation": "This paper focuses on improving text quality in watermarked LLMs, which is not directly related to the hallucination or adversarial examples discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. Seeking Strategic Advantage: The Potential of Combining Artificial Intelligence and Human-centred Wargaming": {
+                    "explanation": "This paper explores the combination of AI and wargaming and does not focus on hallucinations or adversarial examples in LLMs.",
+                    "relevance": 0
+                },
+                "8. A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions": {
+                    "explanation": "This is a survey paper that provides an overview of hallucinations in LLMs, which is related to the source paper's topic but does not propose new hypotheses or findings.",
+                    "relevance": 0
+                },
+                "9. Hallucination-minimized Data-to-answer Framework for Financial Decision-makers": {
+                    "explanation": "This paper addresses minimizing hallucinations in LLMs for financial decision-making, which is related to the source paper's focus on hallucinations but in a specific application context.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Alleviating Hallucinations of Large Language Models through Induced Hallucinations": {
+                    "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper.",
+                    "relevance": 2
+                },
+                "2. A Reliable and Accessible Caregiving Language Model (CaLM) to Support Tools for Caregivers: Development and Evaluation Study": {
+                    "explanation": "While this paper addresses the issue of hallucinations in LLMs, it does so in the context of caregiving applications and does not build on the adversarial example perspective of hallucinations discussed in the source paper.",
+                    "relevance": 1
+                },
+                "3. Hallucination-minimized Data-to-answer Framework for Financial Decision-makers": {
+                    "explanation": "This paper addresses minimizing hallucinations in LLMs for financial decision-making, which is related to the source paper's focus on hallucinations but in a specific application context.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e",
+            "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+            "abstract": "Despite their impressive capabilities, large language models (LLMs) have been observed to generate responses that include inaccurate or fabricated information, a phenomenon commonly known as ``hallucination''. In this work, we propose a simple \\textit{Induce-then-Contrast} Decoding (ICD) strategy to alleviate hallucinations. We first construct a factually weak LLM by inducing hallucinations from the original LLMs. Then, we penalize these induced hallucinations during decoding to enhance the factuality of the generated content. Concretely, we determine the final next-token predictions by amplifying the predictions from the original model and downplaying the induced untruthful predictions via contrastive decoding. Experimental results on both discrimination-based and generation-based hallucination evaluation benchmarks, such as TruthfulQA and \\textsc{FActScore}, demonstrate that our proposed ICD methods can effectively enhance the factuality of LLMs across various model sizes and families. For example, when equipped with ICD, Llama2-7B-Chat and Mistral-7B-Instruct achieve performance comparable to ChatGPT and GPT4 on TruthfulQA, respectively.",
+            "year": 2023,
+            "citation_count": 62,
+            "relevance": 2,
+            "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Knowledge Boundary of Large Language Models: A Survey": {
+                    "explanation": "This paper is a survey that defines the knowledge boundary of LLMs and reviews existing literature on the topic. It does not propose a novel hypothesis or findings directly related to the source paper's ICD strategy.",
+                    "relevance": 0
+                },
+                "2.Critical Tokens Matter: Token-Level Contrastive Estimation Enhances LLM's Reasoning Capability": {
+                    "explanation": "This paper introduces a framework for improving reasoning capabilities in LLMs by identifying critical tokens. While it uses contrastive estimation, it focuses on reasoning tasks rather than hallucination mitigation, making it indirectly related to the source paper.",
+                    "relevance": 0
+                },
+                "3.Freeze-CD: Alleviating Hallucination of Large Language Models via Contrastive Decoding with Local Freezing Training": {
+                    "explanation": "This paper proposes a method similar to the source paper's ICD strategy, using contrastive decoding to mitigate hallucinations. The approach builds upon the idea of using contrastive methods to improve factuality, making it directly related to the source paper.",
+                    "relevance": 2
+                },
+                "4.Explaining and Improving Contrastive Decoding by Extrapolating the Probabilities of a Huge and Hypothetical LM": {
+                    "explanation": "This paper explores the theoretical underpinnings of contrastive decoding and proposes improvements. It extends the concept of contrastive decoding, which is central to the source paper's hypothesis, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "5.SLED: Self Logits Evolution Decoding for Improving Factuality in Large Language Models": {
+                    "explanation": "This paper introduces a novel decoding framework to improve factuality in LLMs. While it shares the goal of enhancing factuality, it does not directly build upon or depend on the ICD strategy from the source paper.",
+                    "relevance": 0
+                },
+                "6.A Debate-Driven Experiment on LLM Hallucinations and Accuracy": {
+                    "explanation": "This paper investigates hallucinations through a debate-like interaction among LLMs. It explores a different method for addressing hallucinations and does not directly build upon the source paper's ICD strategy.",
+                    "relevance": 0
+                },
+                "7.DeCoRe: Decoding by Contrasting Retrieval Heads to Mitigate Hallucinations": {
+                    "explanation": "This paper proposes a decoding strategy that contrasts retrieval heads to mitigate hallucinations. It shares the concept of using contrastive methods to address hallucinations, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "8.NoVo: Norm Voting off Hallucinations with Attention Heads in Large Language Models": {
+                    "explanation": "This paper presents a method using attention head norms to improve factual accuracy. While it addresses hallucinations, it does not directly build upon the ICD strategy from the source paper.",
+                    "relevance": 0
+                },
+                "9.A Survey on the Honesty of Large Language Models": {
+                    "explanation": "This is a survey paper on the honesty of LLMs, summarizing existing literature without proposing new hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "10.HaloScope: Harnessing Unlabeled LLM Generations for Hallucination Detection": {
+                    "explanation": "This paper introduces a framework for hallucination detection using unlabeled LLM generations. It focuses on detection rather than mitigation strategies like the ICD method from the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Freeze-CD: Alleviating Hallucination of Large Language Models via Contrastive Decoding with Local Freezing Training": {
+                    "explanation": "This paper proposes a method similar to the source paper's ICD strategy, using contrastive decoding to mitigate hallucinations. The approach builds upon the idea of using contrastive methods to improve factuality, making it directly related to the source paper.",
+                    "relevance": 2
+                },
+                "2.Explaining and Improving Contrastive Decoding by Extrapolating the Probabilities of a Huge and Hypothetical LM": {
+                    "explanation": "This paper explores the theoretical underpinnings of contrastive decoding and proposes improvements. It extends the concept of contrastive decoding, which is central to the source paper's hypothesis, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.DeCoRe: Decoding by Contrasting Retrieval Heads to Mitigate Hallucinations": {
+                    "explanation": "This paper proposes a decoding strategy that contrasts retrieval heads to mitigate hallucinations. It shares the concept of using contrastive methods to address hallucinations, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e",
+            "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+            "abstract": "Despite their impressive capabilities, large language models (LLMs) have been observed to generate responses that include inaccurate or fabricated information, a phenomenon commonly known as ``hallucination''. In this work, we propose a simple \\textit{Induce-then-Contrast} Decoding (ICD) strategy to alleviate hallucinations. We first construct a factually weak LLM by inducing hallucinations from the original LLMs. Then, we penalize these induced hallucinations during decoding to enhance the factuality of the generated content. Concretely, we determine the final next-token predictions by amplifying the predictions from the original model and downplaying the induced untruthful predictions via contrastive decoding. Experimental results on both discrimination-based and generation-based hallucination evaluation benchmarks, such as TruthfulQA and \\textsc{FActScore}, demonstrate that our proposed ICD methods can effectively enhance the factuality of LLMs across various model sizes and families. For example, when equipped with ICD, Llama2-7B-Chat and Mistral-7B-Instruct achieve performance comparable to ChatGPT and GPT4 on TruthfulQA, respectively.",
+            "year": 2023,
+            "citation_count": 62,
+            "relevance": 2,
+            "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Mitigating Hallucination in Visual-Language Models via Re-Balancing Contrastive Decoding": {
+                    "explanation": "This paper explores hallucination in Visual-Language Models and proposes a method similar to the source paper's ICD strategy, focusing on re-balancing contrastive decoding. While it addresses a different type of model (VLMs vs. LLMs), the approach is conceptually similar, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.What is the Role of Small Models in the LLM Era: A Survey": {
+                    "explanation": "This paper is a survey examining the role of small models in the context of LLMs. It does not propose a novel hypothesis or findings related to hallucinations in LLMs, and thus has no direct connection to the source paper.",
+                    "relevance": 0
+                },
+                "3.Improving Factuality in Large Language Models via Decoding-Time Hallucinatory and Truthful Comparators": {
+                    "explanation": "This paper proposes a framework to improve factuality in LLMs by using comparators at decoding time, which is conceptually similar to the source paper's ICD strategy. The approach is partially dependent on the source paper's findings regarding decoding strategies to reduce hallucinations.",
+                    "relevance": 2
+                },
+                "4.Unlocking Decoding-time Controllability: Gradient-Free Multi-Objective Alignment with Contrastive Prompts": {
+                    "explanation": "This paper focuses on multi-objective alignment using contrastive prompts, which is related to the source paper's use of contrastive decoding. However, it does not specifically address hallucinations or factuality, making it less directly connected.",
+                    "relevance": 1
+                },
+                "5.MAO: A Framework for Process Model Generation with Multi-Agent Orchestration": {
+                    "explanation": "This paper discusses process model generation using multi-agent orchestration and does not address hallucinations in LLMs or propose methods related to the source paper's focus.",
+                    "relevance": 0
+                },
+                "6.Multi-group Uncertainty Quantification for Long-form Text Generation": {
+                    "explanation": "This paper examines uncertainty quantification in LLM outputs but does not specifically address hallucinations or decoding strategies, making it unrelated to the source paper.",
+                    "relevance": 0
+                },
+                "7.Knowledge Overshadowing Causes Amalgamated Hallucination in Large Language Models": {
+                    "explanation": "This paper explores the phenomenon of knowledge overshadowing leading to hallucinations in LLMs, which is directly related to the source paper's focus on hallucinations. It provides a theoretical perspective that complements the source paper's practical approach.",
+                    "relevance": 2
+                },
+                "8.Enhancing Hallucination Detection through Perturbation-Based Synthetic Data Generation in System Responses": {
+                    "explanation": "This paper focuses on detecting hallucinations through synthetic data generation, which is related to the source paper's goal of alleviating hallucinations, although it approaches the problem from a different angle.",
+                    "relevance": 1
+                },
+                "9.On the Transformations across Reward Model, Parameter Update, and In-Context Prompt": {
+                    "explanation": "This paper discusses transformations in LLM adaptation tools and does not specifically address hallucinations or decoding strategies related to the source paper.",
+                    "relevance": 0
+                },
+                "10.FastMem: Fast Memorization of Prompt Improves Context Awareness of Large Language Models": {
+                    "explanation": "This paper introduces a method to enhance context awareness in LLMs, which is tangentially related to improving factuality, but it does not directly address hallucinations or decoding strategies.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Mitigating Hallucination in Visual-Language Models via Re-Balancing Contrastive Decoding": {
+                    "explanation": "This paper explores hallucination in Visual-Language Models and proposes a method similar to the source paper's ICD strategy, focusing on re-balancing contrastive decoding. While it addresses a different type of model (VLMs vs. LLMs), the approach is conceptually similar, indicating partial dependence on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.Improving Factuality in Large Language Models via Decoding-Time Hallucinatory and Truthful Comparators": {
+                    "explanation": "This paper proposes a framework to improve factuality in LLMs by using comparators at decoding time, which is conceptually similar to the source paper's ICD strategy. The approach is partially dependent on the source paper's findings regarding decoding strategies to reduce hallucinations.",
+                    "relevance": 2
+                },
+                "3.Knowledge Overshadowing Causes Amalgamated Hallucination in Large Language Models": {
+                    "explanation": "This paper explores the phenomenon of knowledge overshadowing leading to hallucinations in LLMs, which is directly related to the source paper's focus on hallucinations. It provides a theoretical perspective that complements the source paper's practical approach.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e",
+            "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+            "abstract": "Despite their impressive capabilities, large language models (LLMs) have been observed to generate responses that include inaccurate or fabricated information, a phenomenon commonly known as ``hallucination''. In this work, we propose a simple \\textit{Induce-then-Contrast} Decoding (ICD) strategy to alleviate hallucinations. We first construct a factually weak LLM by inducing hallucinations from the original LLMs. Then, we penalize these induced hallucinations during decoding to enhance the factuality of the generated content. Concretely, we determine the final next-token predictions by amplifying the predictions from the original model and downplaying the induced untruthful predictions via contrastive decoding. Experimental results on both discrimination-based and generation-based hallucination evaluation benchmarks, such as TruthfulQA and \\textsc{FActScore}, demonstrate that our proposed ICD methods can effectively enhance the factuality of LLMs across various model sizes and families. For example, when equipped with ICD, Llama2-7B-Chat and Mistral-7B-Instruct achieve performance comparable to ChatGPT and GPT4 on TruthfulQA, respectively.",
+            "year": 2023,
+            "citation_count": 62,
+            "relevance": 2,
+            "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Adaptive Token Biaser: Knowledge Editing via Biasing Key Entities": {
+                    "explanation": "This paper discusses a new decoding technique to enhance in-context editing (ICE) by focusing on key entities during decoding. While it involves a modification of the decoding strategy, similar to the source paper's Induce-then-Contrast Decoding (ICD) strategy, it does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Mitigating Large Language Model Hallucination with Faithful Finetuning": {
+                    "explanation": "This paper addresses the issue of hallucinations in LLMs, similar to the source paper, but it introduces a different approach called Faithful Finetuning (F2). It does not directly build upon or depend on the findings of the source paper, but it shares a similar goal of reducing hallucinations.",
+                    "relevance": 1
+                },
+                "3.Quantifying the Gain in Weak-to-Strong Generalization": {
+                    "explanation": "This paper focuses on understanding weak-to-strong generalization in LLMs, which is not directly related to hallucination reduction or the decoding strategies discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Perception of Knowledge Boundary for Large Language Models through Semi-open-ended Question Answering": {
+                    "explanation": "This paper explores the knowledge boundary of LLMs to detect hallucinations, which is related to the source paper's focus on hallucination reduction. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "5.Disperse-Then-Merge: Pushing the Limits of Instruction Tuning via Alignment Tax Reduction": {
+                    "explanation": "This paper addresses alignment tax in instruction tuning, which is not directly related to hallucination reduction or the decoding strategies discussed in the source paper.",
+                    "relevance": 0
+                },
+                "6.OLAPH: Improving Factuality in Biomedical Long-form Question Answering": {
+                    "explanation": "This paper focuses on improving factuality in biomedical question answering, similar to the source paper's goal of enhancing factuality in LLMs. However, it does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7.Decoding by Contrasting Knowledge: Enhancing LLMs' Confidence on Edited Facts": {
+                    "explanation": "This paper introduces a decoding method called DeCK, which contrasts knowledge to enhance LLMs' confidence. It shares a conceptual similarity with the source paper's ICD strategy, as both involve contrasting during decoding to improve factuality.",
+                    "relevance": 2
+                },
+                "8.Spectral Editing of Activations for Large Language Model Alignment": {
+                    "explanation": "This paper proposes a method for editing LLMs' internal representations to improve alignment, which is not directly related to hallucination reduction or the decoding strategies discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.When to Trust LLMs: Aligning Confidence with Response Quality": {
+                    "explanation": "This paper focuses on aligning confidence with response quality in LLMs, which is not directly related to hallucination reduction or the decoding strategies discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10.Adversarial Representation Engineering: A General Model Editing Framework for Large Language Models": {
+                    "explanation": "This paper explores model editing through representation engineering, which is not directly related to hallucination reduction or the decoding strategies discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Mitigating Large Language Model Hallucination with Faithful Finetuning": {
+                    "explanation": "This paper addresses the issue of hallucinations in LLMs, similar to the source paper, but it introduces a different approach called Faithful Finetuning (F2). It does not directly build upon or depend on the findings of the source paper, but it shares a similar goal of reducing hallucinations.",
+                    "relevance": 1
+                },
+                "2.Perception of Knowledge Boundary for Large Language Models through Semi-open-ended Question Answering": {
+                    "explanation": "This paper explores the knowledge boundary of LLMs to detect hallucinations, which is related to the source paper's focus on hallucination reduction. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.Decoding by Contrasting Knowledge: Enhancing LLMs' Confidence on Edited Facts": {
+                    "explanation": "This paper introduces a decoding method called DeCK, which contrasts knowledge to enhance LLMs' confidence. It shares a conceptual similarity with the source paper's ICD strategy, as both involve contrasting during decoding to improve factuality.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e",
+            "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+            "abstract": "Despite their impressive capabilities, large language models (LLMs) have been observed to generate responses that include inaccurate or fabricated information, a phenomenon commonly known as ``hallucination''. In this work, we propose a simple \\textit{Induce-then-Contrast} Decoding (ICD) strategy to alleviate hallucinations. We first construct a factually weak LLM by inducing hallucinations from the original LLMs. Then, we penalize these induced hallucinations during decoding to enhance the factuality of the generated content. Concretely, we determine the final next-token predictions by amplifying the predictions from the original model and downplaying the induced untruthful predictions via contrastive decoding. Experimental results on both discrimination-based and generation-based hallucination evaluation benchmarks, such as TruthfulQA and \\textsc{FActScore}, demonstrate that our proposed ICD methods can effectively enhance the factuality of LLMs across various model sizes and families. For example, when equipped with ICD, Llama2-7B-Chat and Mistral-7B-Instruct achieve performance comparable to ChatGPT and GPT4 on TruthfulQA, respectively.",
+            "year": 2023,
+            "citation_count": 62,
+            "relevance": 2,
+            "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Is Factuality Enhancement a Free Lunch For LLMs? Better Factuality Can Lead to Worse Context-Faithfulness": {
+                    "explanation": "This paper discusses the trade-offs between factuality enhancement and context-faithfulness in LLMs, which is relevant to the source paper's focus on alleviating hallucinations through factuality enhancement. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2. FACTOID: FACtual enTailment fOr hallucInation Detection": {
+                    "explanation": "This paper introduces a new method for detecting hallucinations in LLMs, which is related to the source paper's goal of reducing hallucinations. However, it does not build directly on the ICD method proposed in the source paper.",
+                    "relevance": 1
+                },
+                "3. Pensieve: Retrospect-then-Compare Mitigates Visual Hallucination": {
+                    "explanation": "This paper focuses on visual hallucinations in multimodal models, which is a different domain from the source paper's focus on textual hallucinations in LLMs. There is no direct connection to the source paper's findings.",
+                    "relevance": 0
+                },
+                "4. Unfamiliar Finetuning Examples Control How Language Models Hallucinate": {
+                    "explanation": "This paper explores how finetuning data affects hallucinations in LLMs, which is related to the source paper's focus on hallucination mitigation. However, it does not build on the specific ICD method proposed in the source paper.",
+                    "relevance": 1
+                },
+                "5. Collaborative decoding of critical tokens for boosting factuality of large language models": {
+                    "explanation": "This paper introduces a collaborative decoding framework to enhance factuality, which is related to the source paper's ICD strategy. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space": {
+                    "explanation": "TruthX proposes a method for enhancing truthfulness in LLMs, which aligns with the source paper's goal of reducing hallucinations. The approach is different but related to the ICD strategy.",
+                    "relevance": 1
+                },
+                "7. Retrieve Only When It Needs: Adaptive Retrieval Augmentation for Hallucination Mitigation in Large Language Models": {
+                    "explanation": "This paper presents a retrieval-based approach to mitigate hallucinations, which is related to the source paper's goal of reducing hallucinations. However, it does not directly build on the ICD method.",
+                    "relevance": 1
+                },
+                "8. Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation": {
+                    "explanation": "This paper explores self-evaluation for improving factuality, which is related to the source paper's focus on hallucination mitigation. However, it does not directly depend on the ICD method.",
+                    "relevance": 1
+                },
+                "9. Unified Hallucination Detection for Multimodal Large Language Models": {
+                    "explanation": "This paper addresses hallucination detection in multimodal models, which is a different focus from the source paper's textual hallucination mitigation strategy.",
+                    "relevance": 0
+                },
+                "10. Gaps or Hallucinations? Scrutinizing Machine-Generated Legal Analysis for Fine-grained Text Evaluations": {
+                    "explanation": "This paper focuses on legal analysis and the evaluation of machine-generated text, which is not directly related to the source paper's focus on hallucination mitigation in LLMs.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Is Factuality Enhancement a Free Lunch For LLMs? Better Factuality Can Lead to Worse Context-Faithfulness": {
+                    "explanation": "This paper discusses the trade-offs between factuality enhancement and context-faithfulness in LLMs, which is relevant to the source paper's focus on alleviating hallucinations through factuality enhancement. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2. FACTOID: FACtual enTailment fOr hallucInation Detection": {
+                    "explanation": "This paper introduces a new method for detecting hallucinations in LLMs, which is related to the source paper's goal of reducing hallucinations. However, it does not build directly on the ICD method proposed in the source paper.",
+                    "relevance": 1
+                },
+                "3. Unfamiliar Finetuning Examples Control How Language Models Hallucinate": {
+                    "explanation": "This paper explores how finetuning data affects hallucinations in LLMs, which is related to the source paper's focus on hallucination mitigation. However, it does not build on the specific ICD method proposed in the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e",
+            "title": "Alleviating Hallucinations of Large Language Models through Induced Hallucinations",
+            "abstract": "Despite their impressive capabilities, large language models (LLMs) have been observed to generate responses that include inaccurate or fabricated information, a phenomenon commonly known as ``hallucination''. In this work, we propose a simple \\textit{Induce-then-Contrast} Decoding (ICD) strategy to alleviate hallucinations. We first construct a factually weak LLM by inducing hallucinations from the original LLMs. Then, we penalize these induced hallucinations during decoding to enhance the factuality of the generated content. Concretely, we determine the final next-token predictions by amplifying the predictions from the original model and downplaying the induced untruthful predictions via contrastive decoding. Experimental results on both discrimination-based and generation-based hallucination evaluation benchmarks, such as TruthfulQA and \\textsc{FActScore}, demonstrate that our proposed ICD methods can effectively enhance the factuality of LLMs across various model sizes and families. For example, when equipped with ICD, Llama2-7B-Chat and Mistral-7B-Instruct achieve performance comparable to ChatGPT and GPT4 on TruthfulQA, respectively.",
+            "year": 2023,
+            "citation_count": 62,
+            "relevance": 2,
+            "explanation": "This paper is directly related to the source paper as it addresses the issue of hallucinations in LLMs and proposes a method to alleviate them, which is a central theme of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. DVD: Dynamic Contrastive Decoding for Knowledge Amplification in Multi-Document Question Answering": {
+                    "explanation": "This paper builds on the concept of contrastive decoding introduced in the source paper. While the source paper focuses on alleviating hallucinations in LLMs through induced hallucinations, this paper extends the idea by applying dynamic contrastive decoding to enhance knowledge amplification in multi-document QA tasks. The key hypothesis in this paper is partially dependent on the findings of the source paper, as it uses a similar decoding strategy to improve factuality.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. DVD: Dynamic Contrastive Decoding for Knowledge Amplification in Multi-Document Question Answering": {
+                    "explanation": "This paper builds on the concept of contrastive decoding introduced in the source paper. While the source paper focuses on alleviating hallucinations in LLMs through induced hallucinations, this paper extends the idea by applying dynamic contrastive decoding to enhance knowledge amplification in multi-document QA tasks. The key hypothesis in this paper is partially dependent on the findings of the source paper, as it uses a similar decoding strategy to improve factuality.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "9f405d2a43d4c62764b5a9a1630a20afbeb52450",
+            "title": "Decoding by Contrasting Knowledge: Enhancing LLMs' Confidence on Edited Facts",
+            "abstract": "The knowledge within large language models (LLMs) may become outdated quickly. While in-context editing (ICE) is currently the most effective method for knowledge editing (KE), it is constrained by the black-box modeling of LLMs and thus lacks interpretability. Our work aims to elucidate the superior performance of ICE on the KE by analyzing the impacts of in-context new knowledge on token-wise distributions. We observe that despite a significant boost in logits of the new knowledge, the performance of is still hindered by stubborn knowledge. Stubborn knowledge refers to as facts that have gained excessive confidence during pretraining, making it hard to edit effectively. To address this issue and further enhance the performance of ICE, we propose a novel approach termed $\\textbf{De}$coding by $\\textbf{C}$ontrasting $\\textbf{K}$nowledge (DeCK). DeCK derives the distribution of the next token by contrasting the logits obtained from the newly edited knowledge guided by ICE with those from the unedited parametric knowledge. Our experiments consistently demonstrate that DeCK enhances the confidence of LLMs in edited facts. For instance, it improves the performance of LLaMA3-8B-instruct on MQuAKE by up to 219%, demonstrating its capability to strengthen ICE in the editing of stubborn knowledge. Our work paves the way to develop the both effective and accountable KE methods for LLMs. (The source code is available at: https://deck-llm.meirtz.com)",
+            "year": 2024,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "This paper introduces a decoding method called DeCK, which contrasts knowledge to enhance LLMs' confidence. It shares a conceptual similarity with the source paper's ICD strategy, as both involve contrasting during decoding to improve factuality."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Context-DPO: Aligning Language Models for Context-Faithfulness": {
+                    "explanation": "This paper focuses on context-faithfulness in LLMs, which is related to the source paper's theme of improving LLM performance through knowledge editing. However, it does not directly depend on or extend the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.A Survey of Calibration Process for Black-Box LLMs": {
+                    "explanation": "This is a review paper that surveys calibration techniques for black-box LLMs. It does not propose a novel hypothesis or build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3.Critical Tokens Matter: Token-Level Contrastive Estimation Enhances LLM's Reasoning Capability": {
+                    "explanation": "This paper introduces a novel framework for identifying critical tokens in LLMs, which is conceptually related to the source paper's focus on knowledge editing and token-wise distributions. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "4.Can Knowledge Editing Really Correct Hallucinations?": {
+                    "explanation": "This paper directly addresses the effectiveness of knowledge editing, which is the central theme of the source paper. It evaluates knowledge editing methods, potentially using insights from the source paper.",
+                    "relevance": 2
+                },
+                "5.Uncovering Overfitting in Large Language Model Editing": {
+                    "explanation": "This paper explores the phenomenon of overfitting in knowledge editing, which is closely related to the source paper's focus on improving knowledge editing techniques.",
+                    "relevance": 2
+                },
+                "6.HiddenGuard: Fine-Grained Safe Generation with Specialized Representation Router": {
+                    "explanation": "This paper focuses on safe generation in LLMs, which is not directly related to the source paper's focus on knowledge editing and enhancing confidence in edited facts.",
+                    "relevance": 0
+                },
+                "7.StruEdit: Structured Outputs Enable the Fast and Accurate Knowledge Editing for Large Language Models": {
+                    "explanation": "This paper proposes a method for structured knowledge editing, directly building on the theme of the source paper, which is about improving knowledge editing techniques.",
+                    "relevance": 2
+                },
+                "8.LM-PUB-QUIZ: A Comprehensive Framework for Zero-Shot Evaluation of Relational Knowledge in Language Models": {
+                    "explanation": "This paper presents a framework for evaluating relational knowledge in LLMs, which is not directly related to the source paper's focus on knowledge editing.",
+                    "relevance": 0
+                },
+                "9.Can Editing LLMs Inject Harm?": {
+                    "explanation": "This paper explores the potential misuse of knowledge editing, which is a relevant extension of the source paper's focus on knowledge editing techniques.",
+                    "relevance": 1
+                },
+                "10.PFME: A Modular Approach for Fine-grained Hallucination Detection and Editing of Large Language Models": {
+                    "explanation": "This paper proposes a framework for detecting and editing hallucinations in LLMs, which is related to the source paper's focus on improving knowledge editing techniques.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Can Knowledge Editing Really Correct Hallucinations?": {
+                    "explanation": "This paper directly addresses the effectiveness of knowledge editing, which is the central theme of the source paper. It evaluates knowledge editing methods, potentially using insights from the source paper.",
+                    "relevance": 2
+                },
+                "2.Uncovering Overfitting in Large Language Model Editing": {
+                    "explanation": "This paper explores the phenomenon of overfitting in knowledge editing, which is closely related to the source paper's focus on improving knowledge editing techniques.",
+                    "relevance": 2
+                },
+                "3.StruEdit: Structured Outputs Enable the Fast and Accurate Knowledge Editing for Large Language Models": {
+                    "explanation": "This paper proposes a method for structured knowledge editing, directly building on the theme of the source paper, which is about improving knowledge editing techniques.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "9f405d2a43d4c62764b5a9a1630a20afbeb52450",
+            "title": "Decoding by Contrasting Knowledge: Enhancing LLMs' Confidence on Edited Facts",
+            "abstract": "The knowledge within large language models (LLMs) may become outdated quickly. While in-context editing (ICE) is currently the most effective method for knowledge editing (KE), it is constrained by the black-box modeling of LLMs and thus lacks interpretability. Our work aims to elucidate the superior performance of ICE on the KE by analyzing the impacts of in-context new knowledge on token-wise distributions. We observe that despite a significant boost in logits of the new knowledge, the performance of is still hindered by stubborn knowledge. Stubborn knowledge refers to as facts that have gained excessive confidence during pretraining, making it hard to edit effectively. To address this issue and further enhance the performance of ICE, we propose a novel approach termed $\\textbf{De}$coding by $\\textbf{C}$ontrasting $\\textbf{K}$nowledge (DeCK). DeCK derives the distribution of the next token by contrasting the logits obtained from the newly edited knowledge guided by ICE with those from the unedited parametric knowledge. Our experiments consistently demonstrate that DeCK enhances the confidence of LLMs in edited facts. For instance, it improves the performance of LLaMA3-8B-instruct on MQuAKE by up to 219%, demonstrating its capability to strengthen ICE in the editing of stubborn knowledge. Our work paves the way to develop the both effective and accountable KE methods for LLMs. (The source code is available at: https://deck-llm.meirtz.com)",
+            "year": 2024,
+            "citation_count": 39,
+            "relevance": 2,
+            "explanation": "This paper introduces a decoding method called DeCK, which contrasts knowledge to enhance LLMs' confidence. It shares a conceptual similarity with the source paper's ICD strategy, as both involve contrasting during decoding to improve factuality."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Adaptive Token Biaser: Knowledge Editing via Biasing Key Entities": {
+                    "explanation": "This paper builds on the concept of in-context editing (ICE) for knowledge editing in LLMs, similar to the source paper. It introduces a new decoding technique to enhance ICE, which aligns with the source paper's focus on improving ICE performance. However, it does not directly depend on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.WISE: Rethinking the Knowledge Memory for Lifelong Model Editing of Large Language Models": {
+                    "explanation": "This paper addresses knowledge editing in LLMs by proposing a dual parametric memory scheme, which is related to the source paper's focus on knowledge editing. However, it does not directly depend on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "3.FMint: Bridging Human Designed and Data Pretrained Models for Differential Equation Foundation Model": {
+                    "explanation": "This paper focuses on using neural networks for solving differential equations, which is unrelated to the source paper's focus on knowledge editing in LLMs.",
+                    "relevance": 0
+                },
+                "4.Is Factuality Enhancement a Free Lunch For LLMs? Better Factuality Can Lead to Worse Context-Faithfulness": {
+                    "explanation": "This paper discusses the trade-offs between factuality enhancement and context-faithfulness in LLMs, which is related to the source paper's focus on improving LLMs' confidence in edited facts. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "5.KG-Rank: Enhancing Large Language Models for Medical QA with Knowledge Graphs and Ranking Techniques": {
+                    "explanation": "This paper focuses on enhancing LLMs for medical QA using knowledge graphs, which is unrelated to the source paper's focus on knowledge editing in LLMs.",
+                    "relevance": 0
+                },
+                "6.Understanding and Patching Compositional Reasoning in LLMs": {
+                    "explanation": "This paper focuses on compositional reasoning in LLMs, which is not directly related to the source paper's focus on knowledge editing.",
+                    "relevance": 0
+                },
+                "7.When Do LLMs Need Retrieval Augmentation? Mitigating LLMs' Overconfidence Helps Retrieval Augmentation": {
+                    "explanation": "This paper discusses mitigating LLMs' overconfidence, which is tangentially related to the source paper's focus on enhancing LLMs' confidence in edited facts. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "8.Can Graph Descriptive Order Affect Solving Graph Problems with LLMs?": {
+                    "explanation": "This paper focuses on graph reasoning tasks with LLMs, which is unrelated to the source paper's focus on knowledge editing.",
+                    "relevance": 0
+                },
+                "9.SLANG: New Concept Comprehension of Large Language Models": {
+                    "explanation": "This paper focuses on enhancing LLMs' comprehension of evolving language concepts, which is unrelated to the source paper's focus on knowledge editing.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Adaptive Token Biaser: Knowledge Editing via Biasing Key Entities": {
+                    "explanation": "This paper builds on the concept of in-context editing (ICE) for knowledge editing in LLMs, similar to the source paper. It introduces a new decoding technique to enhance ICE, which aligns with the source paper's focus on improving ICE performance. However, it does not directly depend on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.WISE: Rethinking the Knowledge Memory for Lifelong Model Editing of Large Language Models": {
+                    "explanation": "This paper addresses knowledge editing in LLMs by proposing a dual parametric memory scheme, which is related to the source paper's focus on knowledge editing. However, it does not directly depend on the findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "3.Is Factuality Enhancement a Free Lunch For LLMs? Better Factuality Can Lead to Worse Context-Faithfulness": {
+                    "explanation": "This paper discusses the trade-offs between factuality enhancement and context-faithfulness in LLMs, which is related to the source paper's focus on improving LLMs' confidence in edited facts. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ea700777ac3c7493824b1b2efba352432ae2c604",
+            "title": "Can Knowledge Editing Really Correct Hallucinations?",
+            "abstract": "Large Language Models (LLMs) suffer from hallucinations, referring to the non-factual information in generated content, despite their superior capacities across tasks. Meanwhile, knowledge editing has been developed as a new popular paradigm to correct erroneous factual knowledge encoded in LLMs with the advantage of avoiding retraining from scratch. However, a common issue of existing evaluation datasets for knowledge editing is that they do not ensure that LLMs actually generate hallucinated answers to the evaluation questions before editing. When LLMs are evaluated on such datasets after being edited by different techniques, it is hard to directly adopt the performance to assess the effectiveness of different knowledge editing methods in correcting hallucinations. Thus, the fundamental question remains insufficiently validated: Can knowledge editing really correct hallucinations in LLMs? We proposed HalluEditBench to holistically benchmark knowledge editing methods in correcting real-world hallucinations. First, we rigorously construct a massive hallucination dataset with 9 domains, 26 topics and more than 6,000 hallucinations. Then, we assess the performance of knowledge editing methods in a holistic way on five dimensions including Efficacy, Generalization, Portability, Locality, and Robustness. Through HalluEditBench, we have provided new insights into the potentials and limitations of different knowledge editing methods in correcting hallucinations, which could inspire future improvements and facilitate progress in the field of knowledge editing.",
+            "year": 2024,
+            "citation_count": 18,
+            "relevance": 2,
+            "explanation": "This paper directly addresses the effectiveness of knowledge editing, which is the central theme of the source paper. It evaluates knowledge editing methods, potentially using insights from the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Context-DPO: Aligning Language Models for Context-Faithfulness": {
+                    "explanation": "This paper focuses on improving context-faithfulness in LLMs, which is related to the source paper's theme of addressing hallucinations. However, it does not directly depend on the findings of the source paper or its hypothesis about knowledge editing correcting hallucinations.",
+                    "relevance": 0
+                },
+                "2.Probing LLM Hallucination from Within: Perturbation-Driven Approach via Internal Knowledge": {
+                    "explanation": "This paper addresses LLM hallucination, similar to the source paper's focus. It introduces a new method for hallucination detection without relying on external knowledge, which is related to the source paper's exploration of knowledge editing. However, it does not directly build on the source paper's findings or hypotheses.",
+                    "relevance": 0
+                },
+                "3.How to Make LLMs Forget: On Reversing In-Context Knowledge Edits": {
+                    "explanation": "This paper explores reversing in-context knowledge edits, which is a different aspect of knowledge manipulation in LLMs compared to the source paper's focus on correcting hallucinations through knowledge editing. It does not directly depend on the source paper's findings.",
+                    "relevance": 0
+                },
+                "4.Adversarial Representation Engineering: A General Model Editing Framework for Large Language Models": {
+                    "explanation": "This paper discusses a framework for model editing in LLMs, which is relevant to the source paper's exploration of knowledge editing. However, it does not specifically address hallucinations or build on the source paper's findings about correcting hallucinations.",
+                    "relevance": 0
+                },
+                "5.Can Large Language Models Identify Authorship?": {
+                    "explanation": "This paper focuses on authorship identification using LLMs, which is unrelated to the source paper's focus on hallucinations and knowledge editing.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "ea700777ac3c7493824b1b2efba352432ae2c604",
+            "title": "Can Knowledge Editing Really Correct Hallucinations?",
+            "abstract": "Large Language Models (LLMs) suffer from hallucinations, referring to the non-factual information in generated content, despite their superior capacities across tasks. Meanwhile, knowledge editing has been developed as a new popular paradigm to correct erroneous factual knowledge encoded in LLMs with the advantage of avoiding retraining from scratch. However, a common issue of existing evaluation datasets for knowledge editing is that they do not ensure that LLMs actually generate hallucinated answers to the evaluation questions before editing. When LLMs are evaluated on such datasets after being edited by different techniques, it is hard to directly adopt the performance to assess the effectiveness of different knowledge editing methods in correcting hallucinations. Thus, the fundamental question remains insufficiently validated: Can knowledge editing really correct hallucinations in LLMs? We proposed HalluEditBench to holistically benchmark knowledge editing methods in correcting real-world hallucinations. First, we rigorously construct a massive hallucination dataset with 9 domains, 26 topics and more than 6,000 hallucinations. Then, we assess the performance of knowledge editing methods in a holistic way on five dimensions including Efficacy, Generalization, Portability, Locality, and Robustness. Through HalluEditBench, we have provided new insights into the potentials and limitations of different knowledge editing methods in correcting hallucinations, which could inspire future improvements and facilitate progress in the field of knowledge editing.",
+            "year": 2024,
+            "citation_count": 18,
+            "relevance": 2,
+            "explanation": "This paper directly addresses the effectiveness of knowledge editing, which is the central theme of the source paper. It evaluates knowledge editing methods, potentially using insights from the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Provable Benefits of In-Tool Learning for Large Language Models": {
+                    "explanation": "This paper focuses on the benefits of tool-augmented learning for LLMs, which is a different approach from knowledge editing. It does not directly address the correction of hallucinations or knowledge editing methods, thus it is not directly connected to the source paper.",
+                    "relevance": 0
+                },
+                "2.Retention analysis of edited knowledge after fine-tuning": {
+                    "explanation": "This paper investigates the retention of edited knowledge in LLMs, which is directly related to the source paper's focus on knowledge editing. It explores how fine-tuning affects edited knowledge, which is a critical aspect of evaluating the effectiveness of knowledge editing methods in correcting hallucinations.",
+                    "relevance": 2
+                },
+                "3.Model Editing as a Double-Edged Sword: Steering Agent Ethical Behavior Toward Beneficence or Harm": {
+                    "explanation": "This paper discusses model editing in the context of ethical behavior steering, which is a different application of model editing than correcting hallucinations. While it involves model editing, it does not focus on the same hypothesis or findings as the source paper.",
+                    "relevance": 0
+                },
+                "4.Beyond Memorization: A Rigorous Evaluation Framework for Medical Knowledge Editing": {
+                    "explanation": "This paper presents a framework for evaluating medical knowledge editing, which is a specific application of knowledge editing. It is related to the source paper as it addresses the effectiveness of knowledge editing methods, albeit in a specialized domain.",
+                    "relevance": 1
+                },
+                "5.COMPKE: Complex Question Answering under Knowledge Editing": {
+                    "explanation": "This paper introduces a benchmark for evaluating knowledge editing in complex question answering scenarios. It is relevant to the source paper as it provides a new way to assess the effectiveness of knowledge editing methods, which is a core aspect of the source paper's investigation.",
+                    "relevance": 2
+                },
+                "6.UniErase: Unlearning Token as a Universal Erasure Primitive for Language Models": {
+                    "explanation": "This paper focuses on unlearning as a method for knowledge removal, which is a different aspect of knowledge management in LLMs than correcting hallucinations. It does not directly address the hypothesis or findings of the source paper.",
+                    "relevance": 0
+                },
+                "7.UltraEdit: Training-, Subject-, and Memory-Free Lifelong Editing in Large Language Models": {
+                    "explanation": "UltraEdit proposes a new method for lifelong model editing, which is relevant to the source paper's focus on knowledge editing. It addresses the scalability and efficiency of editing methods, contributing to the broader understanding of knowledge editing effectiveness.",
+                    "relevance": 1
+                },
+                "8.Steering off Course: Reliability Challenges in Steering Language Models": {
+                    "explanation": "This paper examines the reliability of steering methods for LLMs, which is not directly related to knowledge editing or the correction of hallucinations as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.Can Multimodal LLMs Perform Time Series Anomaly Detection?": {
+                    "explanation": "This paper explores the use of multimodal LLMs for time series anomaly detection, which is unrelated to the topic of knowledge editing or hallucination correction in LLMs.",
+                    "relevance": 0
+                },
+                "10.Edit Once, Update Everywhere: A Simple Framework for Cross-Lingual Knowledge Synchronization in LLMs": {
+                    "explanation": "This paper presents a framework for cross-lingual knowledge synchronization, which is a different focus from the source paper's investigation into hallucination correction through knowledge editing.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Retention analysis of edited knowledge after fine-tuning": {
+                    "explanation": "This paper investigates the retention of edited knowledge in LLMs, which is directly related to the source paper's focus on knowledge editing. It explores how fine-tuning affects edited knowledge, which is a critical aspect of evaluating the effectiveness of knowledge editing methods in correcting hallucinations.",
+                    "relevance": 2
+                },
+                "2.COMPKE: Complex Question Answering under Knowledge Editing": {
+                    "explanation": "This paper introduces a benchmark for evaluating knowledge editing in complex question answering scenarios. It is relevant to the source paper as it provides a new way to assess the effectiveness of knowledge editing methods, which is a core aspect of the source paper's investigation.",
+                    "relevance": 2
+                },
+                "3.Beyond Memorization: A Rigorous Evaluation Framework for Medical Knowledge Editing": {
+                    "explanation": "This paper presents a framework for evaluating medical knowledge editing, which is a specific application of knowledge editing. It is related to the source paper as it addresses the effectiveness of knowledge editing methods, albeit in a specialized domain.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "ea700777ac3c7493824b1b2efba352432ae2c604",
+            "title": "Can Knowledge Editing Really Correct Hallucinations?",
+            "abstract": "Large Language Models (LLMs) suffer from hallucinations, referring to the non-factual information in generated content, despite their superior capacities across tasks. Meanwhile, knowledge editing has been developed as a new popular paradigm to correct erroneous factual knowledge encoded in LLMs with the advantage of avoiding retraining from scratch. However, a common issue of existing evaluation datasets for knowledge editing is that they do not ensure that LLMs actually generate hallucinated answers to the evaluation questions before editing. When LLMs are evaluated on such datasets after being edited by different techniques, it is hard to directly adopt the performance to assess the effectiveness of different knowledge editing methods in correcting hallucinations. Thus, the fundamental question remains insufficiently validated: Can knowledge editing really correct hallucinations in LLMs? We proposed HalluEditBench to holistically benchmark knowledge editing methods in correcting real-world hallucinations. First, we rigorously construct a massive hallucination dataset with 9 domains, 26 topics and more than 6,000 hallucinations. Then, we assess the performance of knowledge editing methods in a holistic way on five dimensions including Efficacy, Generalization, Portability, Locality, and Robustness. Through HalluEditBench, we have provided new insights into the potentials and limitations of different knowledge editing methods in correcting hallucinations, which could inspire future improvements and facilitate progress in the field of knowledge editing.",
+            "year": 2024,
+            "citation_count": 18,
+            "relevance": 2,
+            "explanation": "This paper directly addresses the effectiveness of knowledge editing, which is the central theme of the source paper. It evaluates knowledge editing methods, potentially using insights from the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.The Mirage of Model Editing: Revisiting Evaluation in the Wild": {
+                    "explanation": "This paper critiques the evaluation practices in model editing, which is directly relevant to the source paper's focus on evaluating knowledge editing methods. It highlights issues in synthetic evaluation practices and calls for more rigorous evaluation, aligning with the source paper's goal of assessing the effectiveness of knowledge editing in correcting hallucinations.",
+                    "relevance": 2
+                },
+                "2.Reinforced Lifelong Editing for Language Models": {
+                    "explanation": "This paper introduces a new method for lifelong model editing, which is relevant to the source paper's focus on knowledge editing in LLMs. It builds on the concept of model editing but does not directly depend on the findings of the source paper. It proposes a novel approach that could be inspired by the challenges highlighted in the source paper.",
+                    "relevance": 1
+                },
+                "3.AnyEdit: Edit Any Knowledge Encoded in Language Models": {
+                    "explanation": "This paper proposes a new editing paradigm for LLMs, addressing limitations in current methods. While it is related to the topic of knowledge editing, it does not directly build upon the findings or hypotheses of the source paper. It introduces a novel approach to editing, which could be seen as inspired by the broader challenges in the field.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.The Mirage of Model Editing: Revisiting Evaluation in the Wild": {
+                    "explanation": "This paper critiques the evaluation practices in model editing, which is directly relevant to the source paper's focus on evaluating knowledge editing methods. It highlights issues in synthetic evaluation practices and calls for more rigorous evaluation, aligning with the source paper's goal of assessing the effectiveness of knowledge editing in correcting hallucinations.",
+                    "relevance": 2
+                },
+                "2.Reinforced Lifelong Editing for Language Models": {
+                    "explanation": "This paper introduces a new method for lifelong model editing, which is relevant to the source paper's focus on knowledge editing in LLMs. It builds on the concept of model editing but does not directly depend on the findings of the source paper. It proposes a novel approach that could be inspired by the challenges highlighted in the source paper.",
+                    "relevance": 1
+                },
+                "3.AnyEdit: Edit Any Knowledge Encoded in Language Models": {
+                    "explanation": "This paper proposes a new editing paradigm for LLMs, addressing limitations in current methods. While it is related to the topic of knowledge editing, it does not directly build upon the findings or hypotheses of the source paper. It introduces a novel approach to editing, which could be seen as inspired by the broader challenges in the field.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "a68c08b8cbac36111910841032c2143029fde873",
+            "title": "The Mirage of Model Editing: Revisiting Evaluation in the Wild",
+            "abstract": "Despite near-perfect results reported in the literature, the effectiveness of model editing in real-world applications remains unclear. To bridge this gap, we introduce QAEdit, a new benchmark aligned with widely used question answering (QA) datasets, and WILD, a task-agnostic evaluation framework designed to better reflect real-world usage of model editing. Our single editing experiments show that current editing methods perform substantially worse than previously reported (38.5% vs. 96.8%). We demonstrate that it stems from issues in the synthetic evaluation practices of prior work. Among them, the most severe is the use of teacher forcing during testing, which leaks both content and length of the ground truth, leading to overestimated performance. Furthermore, we simulate practical deployment by sequential editing, revealing that current approaches fail drastically with only 1000 edits. This work calls for a shift in model editing research toward rigorous evaluation and the development of robust, scalable methods that can reliably update knowledge in LLMs for real-world use.",
+            "year": 2025,
+            "citation_count": 6,
+            "relevance": 2,
+            "explanation": "This paper critiques the evaluation practices in model editing, which is directly relevant to the source paper's focus on evaluating knowledge editing methods. It highlights issues in synthetic evaluation practices and calls for more rigorous evaluation, aligning with the source paper's goal of assessing the effectiveness of knowledge editing in correcting hallucinations."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Beyond Memorization: A Rigorous Evaluation Framework for Medical Knowledge Editing": {
+                    "explanation": "This paper extends the concept of knowledge editing to the medical domain, proposing a new evaluation framework. It is inspired by the source paper's call for rigorous evaluation in model editing, particularly in real-world applications. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2.Benchmarking and Rethinking Knowledge Editing for Large Language Models": {
+                    "explanation": "This paper addresses the inconsistencies in knowledge editing evaluation, similar to the source paper's critique of synthetic evaluation practices. It builds on the source paper's findings by proposing a comprehensive benchmarking study and introducing new datasets, reflecting a partial dependency on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.ADS-Edit: A Multimodal Knowledge Editing Dataset for Autonomous Driving Systems": {
+                    "explanation": "While this paper introduces a knowledge editing dataset for autonomous driving systems, it does not directly relate to the source paper's focus on evaluation frameworks for model editing in LLMs. It is more focused on a specific application domain rather than the general evaluation issues discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.CaKE: Circuit-aware Editing Enables Generalizable Knowledge Learners": {
+                    "explanation": "This paper proposes a new method for knowledge editing that addresses limitations in existing methods, similar to the concerns raised in the source paper about model editing performance. It partially depends on the source paper's findings regarding the need for robust and scalable methods.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Benchmarking and Rethinking Knowledge Editing for Large Language Models": {
+                    "explanation": "This paper builds on the source paper's findings by addressing inconsistencies in knowledge editing evaluation and proposing a comprehensive benchmarking study, reflecting a partial dependency on the source paper.",
+                    "relevance": 2
+                },
+                "2.CaKE: Circuit-aware Editing Enables Generalizable Knowledge Learners": {
+                    "explanation": "This paper proposes a novel method for knowledge editing that addresses limitations in existing methods, similar to the concerns raised in the source paper about model editing performance, reflecting a partial dependency.",
+                    "relevance": 2
+                },
+                "3.Beyond Memorization: A Rigorous Evaluation Framework for Medical Knowledge Editing": {
+                    "explanation": "This paper is inspired by the source paper's call for rigorous evaluation in model editing, particularly in real-world applications, extending the concept to the medical domain.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "9612f21153f328bbe2d3a293d37e836e1a7b4cec",
+            "title": "CaKE: Circuit-aware Editing Enables Generalizable Knowledge Learners",
+            "abstract": "Knowledge Editing (KE) enables the modification of outdated or incorrect information in large language models (LLMs). While existing KE methods can update isolated facts, they struggle to generalize these updates to multi-hop reasoning tasks that depend on the modified knowledge. Through an analysis of reasoning circuits -- the neural pathways LLMs use for knowledge-based inference, we observe that current layer-localized KE approaches, such as MEMIT and WISE, which edit only single or a few model layers, struggle to effectively incorporate updated information into these reasoning pathways. To address this limitation, we propose CaKE (Circuit-aware Knowledge Editing), a novel method that enables more effective integration of updated knowledge in LLMs. CaKE leverages strategically curated data, guided by our circuits-based analysis, that enforces the model to utilize the modified knowledge, stimulating the model to develop appropriate reasoning circuits for newly integrated knowledge. Experimental results show that CaKE enables more accurate and consistent use of updated knowledge across related reasoning tasks, leading to an average of 20% improvement in multi-hop reasoning accuracy on MQuAKE dataset compared to existing KE methods. We release the code and data in https://github.com/zjunlp/CaKE.",
+            "year": 2025,
+            "citation_count": 4,
+            "relevance": 2,
+            "explanation": "This paper proposes a novel method for knowledge editing that addresses limitations in existing methods, similar to the concerns raised in the source paper about model editing performance, reflecting a partial dependency."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MultiMedEdit: A Scenario-Aware Benchmark for Evaluating Knowledge Editing in Medical VQA": {
+                    "explanation": "This paper focuses on knowledge editing in multimodal medical scenarios, which is a different domain from the source paper. Although it shares the theme of knowledge editing, it does not build upon or depend on the specific findings or hypotheses of the source paper, which focuses on circuit-aware editing for multi-hop reasoning in LLMs.",
+                    "relevance": 0
+                },
+                "2.PropMEND: Hypernetworks for Knowledge Propagation in LLMs": {
+                    "explanation": "This paper addresses the propagation of knowledge in LLMs, which is closely related to the source paper's focus on integrating updated knowledge into reasoning circuits. The source paper's findings on circuit-aware editing could be seen as a sub-hypothesis for PropMEND's approach to enhancing knowledge propagation, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.How does Transformer Learn Implicit Reasoning?": {
+                    "explanation": "This paper explores implicit multi-hop reasoning in LLMs, which is related to the source paper's focus on improving reasoning through circuit-aware knowledge editing. However, it does not directly build on or depend on the specific methods or findings of the source paper, as it focuses more on understanding the mechanisms of reasoning rather than editing knowledge.",
+                    "relevance": 1
+                },
+                "4.ADS-Edit: A Multimodal Knowledge Editing Dataset for Autonomous Driving Systems": {
+                    "explanation": "This paper deals with knowledge editing in the context of autonomous driving systems, which is a different application domain from the source paper. While it shares the concept of knowledge editing, it does not rely on or extend the specific findings or hypotheses of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.PropMEND: Hypernetworks for Knowledge Propagation in LLMs": {
+                    "explanation": "This paper addresses the propagation of knowledge in LLMs, which is closely related to the source paper's focus on integrating updated knowledge into reasoning circuits. The source paper's findings on circuit-aware editing could be seen as a sub-hypothesis for PropMEND's approach to enhancing knowledge propagation, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.How does Transformer Learn Implicit Reasoning?": {
+                    "explanation": "This paper explores implicit multi-hop reasoning in LLMs, which is related to the source paper's focus on improving reasoning through circuit-aware knowledge editing. However, it does not directly build on or depend on the specific methods or findings of the source paper, as it focuses more on understanding the mechanisms of reasoning rather than editing knowledge.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    }
+]

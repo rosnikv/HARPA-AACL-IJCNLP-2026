@@ -1,0 +1,11 @@
+[
+    {
+        "paperId": "88b7137ae73e793f38f1ad22599c5e0449b2be57",
+        "title": "SPRec: Self-Play to Debias LLM-based Recommendation",
+        "abstract": "Large language models (LLMs) have attracted significant attention in recommendation systems. Current work primarily applies supervised fine-tuning (SFT) to adapt the model for recommendation tasks. However, SFT on positive examples only limits the model's ability to align with user preference. To address this, researchers recently introduced Direct Preference Optimization (DPO), which explicitly aligns LLMs with user preferences using offline preference ranking data. However, we found that DPO inherently biases the model towards a few items, exacerbating the filter bubble issue and ultimately degrading user experience. In this paper, we propose SPRec, a novel self-play framework designed to mitigate over-recommendation and improve fairness without requiring additional data or manual intervention. In each self-play iteration, the model undergoes an SFT step followed by a DPO step, treating offline interaction data as positive samples and the predicted outputs from the previous iteration as negative samples. This effectively re-weights the DPO loss function using the model's logits, adaptively suppressing biased items. Extensive experiments on multiple real-world datasets demonstrate SPRec's effectiveness in enhancing recommendation accuracy and fairness.",
+        "year": 2024,
+        "citation_count": 10,
+        "relevance": 1,
+        "explanation": "This paper addresses the issue of bias in LLM-based recommendation systems, which is a core concern of the source paper. While the source paper focuses on fairness in group recommendations, this paper proposes a method (SPRec) to mitigate bias in LLM-based recommendations more generally. The key hypothesis in this paper is inspired by the source paper's findings on the biases in LLMs and their impact on fairness, making it relevant."
+    }
+]

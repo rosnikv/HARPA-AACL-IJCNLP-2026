@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>a76209fea4627974b5e12d8b4942268eb17bc7df</p>
+<hr>
+<section><h2>Title</h2>
+<p>Self-Supervised Relevance Distillation for Improved Retrieval-Augmented Generation</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Retrieval-augmented generation systems often struggle with noisy or irrelevant retrieved information, leading to decreased performance and increased hallucination, especially when dealing with diverse tasks and domains. This problem is particularly acute when systems need to adapt to new domains or tasks without task-specific supervision.</p>
+<h3>Motivation</h3>
+<p>Current approaches often rely on supervised relevance labeling or use simple heuristics like TF-IDF scoring to filter retrieved passages. Some recent works have explored using language models to assess relevance, but they typically require task-specific fine-tuning. Inspired by the human ability to quickly identify relevant information from a large context, we propose a method that learns to distill relevant information from retrieved passages without task-specific supervision. This approach allows for unsupervised adaptation to new domains and tasks, as the relevance model continuously improves its understanding of relevance through interaction with the retrieval and generation processes.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Self-Supervised Relevance Distillation (SSRD), a novel approach to refine retrieved information. SSRD consists of two key components: (1) A relevance distillation model that learns to extract the most pertinent information from retrieved passages. This model is trained using a novel self-supervised objective: given a set of retrieved passages and a generated answer, it learns to reconstruct the answer using only a small subset of the retrieved information. The reconstruction loss encourages the model to identify the most relevant parts of the retrieved passages. (2) A contrastive learning module that further improves the relevance model by contrasting true retrieved passages with artificially constructed irrelevant passages. To generate these contrasts, we use the language model to paraphrase retrieved passages while changing key details, creating 'near-miss' distractors. During inference, SSRD processes the retrieved passages to produce a condensed, highly relevant context for the language model to use in generation.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect datasets for diverse tasks: (a) Open-domain QA: Natural Questions, (b) Multi-document summarization: Multi-News, (c) Task-oriented dialogue: MultiWOZ. Split each dataset into train, validation, and test sets.</p><p><strong>Step 2: Retrieval System Setup</strong></p><p>Implement a basic retrieval system using BM25 or Dense Passage Retrieval (DPR) to retrieve relevant passages for each input query or document.</p><p><strong>Step 3: Baseline Implementation</strong></p><p>Implement standard RAG baselines using GPT-3.5 and GPT-4 APIs. For each input, retrieve top-k passages and use them as context for generation.</p><p><strong>Step 4: SSRD Model Implementation</strong></p><p>Implement the SSRD model using GPT-3.5 or GPT-4 API. The model should take retrieved passages and a generated answer as input, and output a relevance score for each passage.</p><p><strong>Step 5: Self-Supervised Training</strong></p><p>Train the SSRD model using the reconstruction objective. For each training example: (a) Retrieve passages, (b) Generate an initial answer using the baseline RAG model, (c) Use SSRD to select a subset of passages, (d) Reconstruct the answer using only the selected passages, (e) Compute reconstruction loss and update the SSRD model.</p><p><strong>Step 6: Contrastive Learning</strong></p><p>Implement the contrastive learning module. For each positive example (true retrieved passage), generate negative examples by paraphrasing the passage and changing key details. Train the SSRD model to distinguish between positive and negative examples.</p><p><strong>Step 7: Inference Pipeline</strong></p><p>Implement the full SSRD inference pipeline: (a) Retrieve passages, (b) Use SSRD to select and rerank passages, (c) Use selected passages as context for final answer generation.</p><p><strong>Step 8: Evaluation</strong></p><p>Evaluate the SSRD model against baselines on all three tasks. Use task-specific metrics: (a) QA: Exact Match and F1 scores, (b) Summarization: ROUGE scores, (c) Dialogue: Task Completion Rate and BLEU scores. Also conduct human evaluation for relevance and factual consistency on a subset of examples.</p><p><strong>Step 9: Analysis</strong></p><p>Analyze model performance across different tasks and domains. Investigate how the SSRD model adapts to new domains by testing on out-of-distribution datasets.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Question: What is the capital of France? Context: Paris is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres. The City of Paris is the centre and seat of government of the region and province of Île-de-France, or Paris Region, which has an estimated population of 12,174,880, or about 18 percent of the population of France as of 2017.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>The capital of France is Paris.</p><p><strong>Proposed Prompt Input (SSRD Step 1: Relevance Scoring)</strong></p><p>Question: What is the capital of France? Retrieved Passages: [1] Paris is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres. [2] The City of Paris is the centre and seat of government of the region and province of Île-de-France, or Paris Region, which has an estimated population of 12,174,880, or about 18 percent of the population of France as of 2017. [3] France is a country located in Western Europe. It shares borders with Belgium, Luxembourg, Germany, Switzerland, Italy, Monaco, Andorra, and Spain. Generated Answer: The capital of France is Paris. Score the relevance of each passage to answering the question.</p><p><strong>Proposed Prompt Expected Output (SSRD Step 1: Relevance Scoring)</strong></p><p>Relevance scores: [1] 10/10 - This passage directly states that Paris is the capital of France, which is the exact information needed to answer the question. [2] 5/10 - This passage mentions Paris as a seat of government, which is related to being a capital, but doesn't directly state it's the capital of France. [3] 1/10 - This passage provides general information about France but doesn't mention anything about its capital.</p><p><strong>Proposed Prompt Input (SSRD Step 2: Final Answer Generation)</strong></p><p>Question: What is the capital of France? Relevant Context: Paris is the capital and most populous city of France, with an estimated population of 2,175,601 residents as of 2018, in an area of more than 105 square kilometres. Generate a concise answer to the question based on this context.</p><p><strong>Proposed Prompt Expected Output (SSRD Step 2: Final Answer Generation)</strong></p><p>The capital of France is Paris.</p><p><strong>Explanation</strong></p><p>The SSRD method improves over the baseline by explicitly scoring the relevance of each retrieved passage and selecting the most relevant one for the final answer generation. This helps in focusing on the most pertinent information and potentially reducing noise or irrelevant details in the generation process.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed SSRD method doesn't show significant improvements over the baselines, we can pivot the project in several directions. First, we could conduct a detailed error analysis to understand where and why SSRD is failing. This could involve categorizing errors (e.g., relevance misjudgments, factual inconsistencies) and analyzing patterns across different tasks and domains. Second, we could explore variations of the self-supervised training objective, such as incorporating multiple correct answers or using different reconstruction targets. Third, we could investigate the impact of different contrastive learning strategies, including more sophisticated methods for generating negative examples. Finally, if the self-supervised approach doesn't yield improvements, we could explore a hybrid approach that combines lightweight supervision with self-supervised learning, potentially using a small amount of human-labeled data to guide the relevance model. These analyses and variations could provide valuable insights into the challenges of unsupervised relevance learning and inform future research directions in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ddbd8fe782ac98e9c64dd98710687a962195dd9b" target="_blank">Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/745635a705c7f6272a090560a26bfc57a5ad22e0" target="_blank">Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6be99483e99128ea314d4be6c24493a2718eef64" target="_blank">MAO-ARAG: Multi-Agent Orchestration for Adaptive Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/14a90f4dce0ff11c893593f43f0607c41b7c9e3a" target="_blank">Leveraging LLM-Assisted Query Understanding for Live Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c9975925ab08e453768125259d9a808ff348a7a9" target="_blank">SGIC: A Self-Guided Iterative Calibration Framework for RAG</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/368bbac734e5683d2f10d6399a9d19cb58fa7e3b" target="_blank">Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e0efa866a1e464e65e3a217fd67d6c18bc422302" target="_blank">Investigating the Robustness of Retrieval-Augmented Generation at the Query Level</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5631e60096dc5a7a36fd1f4ffdfa3c8ff43dde64" target="_blank">HIRAG: Hierarchical-Thought Instruction-Tuning Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f7bd54b5f6d8284b92f8e1d5b4f9b30eb4928e38" target="_blank">Multimedia Graph Codes for Fast and Semantic Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4816a3613f1f5750b1f463d80086d39d400f370b" target="_blank">PAIRS: Parametric-Verified Adaptive Information Retrieval and Selection for Efficient RAG</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

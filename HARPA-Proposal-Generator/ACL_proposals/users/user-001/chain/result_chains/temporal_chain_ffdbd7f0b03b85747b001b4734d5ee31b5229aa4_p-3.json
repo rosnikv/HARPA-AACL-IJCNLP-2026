@@ -1,0 +1,28 @@
+[
+    {
+        "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+        "pmid": "2104.08691",
+        "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+        "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+        "year": 2021,
+        "citation_count": 4242
+    },
+    {
+        "paperId": "7613e3b52b5a66f0e229320d1b632a22883a3583",
+        "title": "Parameter-efficient fine-tuning of large language models using semantic knowledge tuning",
+        "abstract": "Large Language Models (LLMs) are gaining significant popularity in recent years for specialized tasks using prompts due to their low computational cost. Standard methods like prefix tuning utilize special, modifiable tokens that lack semantic meaning and require extensive training for best performance, often falling short. In this context, we propose a novel method called Semantic Knowledge Tuning (SK-Tuning) for prompt and prefix tuning that employs meaningful words instead of random tokens. This method involves using a fixed LLM to understand and process the semantic content of the prompt through zero-shot capabilities. Following this, it integrates the processed prompt with the input text to improve the model\u2019s performance on particular tasks. Our experimental results show that SK-Tuning exhibits faster training times, fewer parameters, and superior performance on tasks such as text classification and understanding compared to other tuning methods. This approach offers a promising method for optimizing the efficiency and effectiveness of LLMs in processing language tasks.",
+        "year": 2024,
+        "citation_count": 7,
+        "relevance": 2,
+        "explanation": "This paper proposes a novel method for prompt and prefix tuning, which is directly related to the source paper's focus on prompt tuning and parameter-efficient methods."
+    },
+    {
+        "paperId": "d85e272528ef12b12e62c2a776b54795adb84e76",
+        "title": "Optimizing GPT for Video Understanding: Zero-Shot Performance and Prompt Engineering",
+        "abstract": "In this study, we tackle industry challenges in video content classification by exploring and optimizing GPT-based models for zero-shot classification across seven critical categories of video quality. We contribute a novel approach to improving GPT's performance through prompt optimization and policy refinement, demonstrating that simplifying complex policies significantly reduces false negatives. Additionally, we introduce a new decomposition-aggregation-based prompt engineering technique, which outperforms traditional single-prompt methods. These experiments, conducted on real industry problems, show that thoughtful prompt design can substantially enhance GPT's performance without additional finetuning, offering an effective and scalable solution for improving video classification.",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 1,
+        "explanation": "This paper explores optimizing GPT models for video classification using prompt engineering, which aligns with the source paper's focus on prompt tuning. However, it does not explicitly build on the semantic knowledge tuning method proposed in the source paper."
+    }
+]

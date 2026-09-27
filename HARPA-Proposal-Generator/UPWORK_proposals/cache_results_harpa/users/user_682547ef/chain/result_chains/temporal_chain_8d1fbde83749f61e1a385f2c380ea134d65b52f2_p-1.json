@@ -1,0 +1,37 @@
+[
+    {
+        "paperId": "8d1fbde83749f61e1a385f2c380ea134d65b52f2",
+        "pmid": "2304.03110",
+        "title": "Continual Detection Transformer for Incremental Object Detection",
+        "abstract": "Incremental object detection (IOD) aims to train an object detector in phases, each with annotations for new object categories. As other incremental settings, IOD is subject to catastrophic forgetting, which is often addressed by techniques such as knowledge distillation (KD) and exem-plar replay (ER). However, KD and ER do not work well if applied directly to state-of-the-art transformer-based object detectors such as Deformable DETR [59] and UP-DETR [9]. In this paper, we solve these issues by proposing a ContinuaL DEtection TRansformer (CL-DETR), a new method for transformer-based IOD which enables effective usage of KD and ER in this context. First, we introduce a Detector Knowledge Distillation (DKD) loss, focusing on the most informative and reliable predictions from old versions of the model, ignoring redundant background predictions, and ensuring compatibility with the available ground-truth labels. We also improve ER by proposing a calibration strategy to preserve the label distribution of the training set, therefore better matching training and testing statistics. We conduct extensive experiments on COCO 2017 and demonstrate that CL-DETR achieves state-of-the-art results in the IOD setting.11Code: https://1yy.mpi-inf.mpg.de/CL-DETR/",
+        "year": 2023,
+        "citation_count": 57
+    },
+    {
+        "paperId": "4f78d2ef7f18907c04c7ab77b88172784e342f40",
+        "title": "Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection",
+        "abstract": "In incremental learning, replaying stored samples from previous tasks together with current task samples is one of the most efficient approaches to address catastrophic forgetting. However, unlike incremental classification, image replay has not been successfully applied to incremental object detection (IOD). In this paper, we identify the overlooked problem of foreground shift as the main reason for this. Foreground shift only occurs when replaying images of previous tasks and refers to the fact that their background might contain foreground objects of the current task. To overcome this problem, a novel and efficient Augmented Box Replay (ABR) method is developed that only stores and replays foreground objects and thereby circumvents the foreground shift problem. In addition, we propose an innovative Attentive RoI Distillation loss that uses spatial attention from region-of-interest (RoI) features to constrain current model to focus on the most important information from old model. ABR significantly reduces forgetting of previous classes while maintaining high plasticity in current classes. Moreover, it considerably reduces the storage requirements when compared to standard image replay. Comprehensive experiments on Pascal-VOC and COCO datasets support the state-of-the-art performance of our model1.",
+        "year": 2023,
+        "citation_count": 29,
+        "relevance": 2,
+        "explanation": "This paper proposes a method to address foreground shift in incremental object detection, directly tackling challenges in IOD, similar to the source paper. It is highly relevant as it focuses on improving IOD techniques."
+    },
+    {
+        "paperId": "4af5ac57d6df79dd457c80d90bac170906b5185b",
+        "title": "Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection",
+        "abstract": "In incremental object detection, knowledge distillation has been proven to be an effective way to alleviate catastrophic forgetting. However, previous works focused on preserving the knowledge of old models, ignoring that images could simultaneously contain categories from past, present, and future stages. The co-occurrence of objects makes the optimization objectives inconsistent across different stages since the definition for foreground objects differs across various stages, which limits the model's performance greatly. To overcome this problem, we propose a method called ``Bridge Past and Future'' (BPF), which aligns models across stages, ensuring consistent optimization directions. In addition, we propose a novel Distillation with Future (DwF) loss, fully leveraging the background probability to mitigate the forgetting of old classes while ensuring a high level of adaptability in learning new classes. Extensive experiments are conducted on both Pascal VOC and MS COCO benchmarks. Without memory, BPF outperforms current state-of-the-art methods under various settings. The code is available at https://github.com/iSEE-Laboratory/BPF.",
+        "year": 2024,
+        "citation_count": 7,
+        "relevance": 2,
+        "explanation": "This paper proposes a method to align models across stages in incremental object detection, addressing issues similar to those in the source paper, such as optimization objectives across different stages."
+    },
+    {
+        "paperId": "9af284a416153c36bd4dbb1bc47ad7672b712cc9",
+        "title": "Teach YOLO to Remember: A Self-Distillation Approach for Continual Object Detection",
+        "abstract": "Real-time object detectors like YOLO achieve exceptional performance when trained on large datasets for multiple epochs. However, in real-world scenarios where data arrives incrementally, neural networks suffer from catastrophic forgetting, leading to a loss of previously learned knowledge. To address this, prior research has explored strategies for Class Incremental Learning (CIL) in Continual Learning for Object Detection (CLOD), with most approaches focusing on two-stage object detectors. However, existing work suggests that Learning without Forgetting (LwF) may be ineffective for one-stage anchor-free detectors like YOLO due to noisy regression outputs, which risk transferring corrupted knowledge. In this work, we introduce YOLO LwF, a self-distillation approach tailored for YOLO-based continual object detection. We demonstrate that when coupled with a replay memory, YOLO LwF significantly mitigates forgetting. Compared to previous approaches, it achieves state-of-the-art performance, improving mAP by +2.1% and +2.9% on the VOC and COCO benchmarks, respectively.",
+        "year": 2025,
+        "citation_count": 1,
+        "relevance": 2,
+        "explanation": "This paper addresses catastrophic forgetting in continual object detection, similar to the source paper. It introduces a self-distillation approach for YOLO-based detectors, which aligns with the source paper's focus on distillation methods to mitigate forgetting."
+    }
+]

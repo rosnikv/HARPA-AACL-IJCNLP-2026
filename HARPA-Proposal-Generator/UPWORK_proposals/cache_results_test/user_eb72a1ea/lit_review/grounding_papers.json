@@ -1,0 +1,392 @@
+[
+  {
+    "id": "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+    "paperId": "ddbd8fe782ac98e9c64dd98710687a962195dd9b",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "year": 2023,
+    "citationCount": 866,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.11511, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "35584853",
+        "name": "Akari Asai"
+      },
+      {
+        "authorId": "7806955",
+        "name": "Zeqiu Wu"
+      },
+      {
+        "authorId": "1705260",
+        "name": "Yizhong Wang"
+      },
+      {
+        "authorId": "2707234",
+        "name": "Avirup Sil"
+      },
+      {
+        "authorId": "2548384",
+        "name": "Hannaneh Hajishirzi"
+      }
+    ],
+    "abstract": "Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (Self-RAG) that enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand, and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements. Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models.",
+    "score": 9
+  },
+  {
+    "id": "745635a705c7f6272a090560a26bfc57a5ad22e0",
+    "paperId": "745635a705c7f6272a090560a26bfc57a5ad22e0",
+    "title": "Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19333, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2354679960",
+        "name": "Minghao Tang"
+      },
+      {
+        "authorId": "2249761536",
+        "name": "Shiyu Ni"
+      },
+      {
+        "authorId": "2316783018",
+        "name": "Jiafeng Guo"
+      },
+      {
+        "authorId": "2249759496",
+        "name": "Keping Bi"
+      }
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) has been widely adopted to augment large language models (LLMs) with external knowledge for knowledge-intensive tasks. However, its effectiveness is often undermined by the presence of noisy (i.e., low-quality) retrieved passages. Enhancing LLMs'robustness to such noise is critical for improving the reliability of RAG systems. Recent advances have equipped LLMs with strong reasoning and self-reflection capabilities, allowing them to identify and correct errors in their reasoning process. Inspired by this ability, we propose Passage Injection-a simple yet effective method that explicitly incorporates retrieved passages into LLMs'reasoning process, aiming to enhance the model's ability to recognize and resist noisy passages. We validate Passage Injection under general RAG settings using BM25 as the retriever. Experiments on four reasoning-enhanced LLMs across four factual QA datasets demonstrate that Passage Injection significantly improves overall RAG performance. Further analysis on two noisy retrieval settings-random noise, where the model is provided irrelevant passages, and counterfactual noise, where it is given misleading passages-shows that Passage Injection consistently improves robustness. Controlled experiments confirm that Passage Injection can also effectively leverage helpful passages. These findings suggest that incorporating passages in LLMs'reasoning process is a promising direction for building more robust RAG systems. The code can be found \\href{here}{https://github.com/mh-tang/Passage-Injection}.",
+    "score": 8
+  },
+  {
+    "id": "6be99483e99128ea314d4be6c24493a2718eef64",
+    "paperId": "6be99483e99128ea314d4be6c24493a2718eef64",
+    "title": "MAO-ARAG: Multi-Agent Orchestration for Adaptive Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01005, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This work proposes an adaptive RAG framework called MAO-ARAG, which leverages multi-agent orchestration and dynamically plans workflows for each query, which achieves high answer quality but also maintains both cost and latency within acceptable limits."
+    },
+    "authors": [
+      {
+        "authorId": "2293552230",
+        "name": "Yiqun Chen"
+      },
+      {
+        "authorId": "2291137915",
+        "name": "Erhan Zhang"
+      },
+      {
+        "authorId": "1387839383",
+        "name": "Lingyong Yan"
+      },
+      {
+        "authorId": null,
+        "name": "Shuaiqiang Wang"
+      },
+      {
+        "authorId": "2365269416",
+        "name": "Jizhou Huang"
+      },
+      {
+        "authorId": "2243455567",
+        "name": "Dawei Yin"
+      },
+      {
+        "authorId": null,
+        "name": "Jiaxin Mao"
+      }
+    ],
+    "abstract": "In question-answering (QA) systems, Retrieval-Augmented Generation (RAG) has become pivotal in enhancing response accuracy and reducing hallucination issues. The architecture of RAG systems varies significantly, encompassing single-round RAG, iterative RAG, and reasoning RAG, each tailored to address different types of queries. Due to the varying complexity of real-world queries, a fixed RAG pipeline often struggles to balance performance and cost efficiency across different queries. To address this challenge, we propose an adaptive RAG framework called MAO-ARAG, which leverages multi-agent orchestration. Our adaptive RAG is conceived as a multi-turn framework. Specifically, we define multiple executor agents, representing typical RAG modules such as query reformulation agents, document selection agent, and generation agents. A planner agent intelligently selects and integrates the appropriate agents from these executors into a suitable workflow tailored for each query, striving for high-quality answers while maintaining reasonable costs. During each turn, the planner agent is trained using reinforcement learning, guided by an outcome-based reward (F1 score) and a cost-based penalty, continuously improving answer quality while keeping costs within a reasonable range. Experiments conducted on multiple QA datasets demonstrate that our approach, which dynamically plans workflows for each query, not only achieves high answer quality but also maintains both cost and latency within acceptable limits.The code of MAO-ARAG is on https://github.com/chenyiqun/Agentic-RAG.",
+    "score": 8
+  },
+  {
+    "id": "14a90f4dce0ff11c893593f43f0607c41b7c9e3a",
+    "paperId": "14a90f4dce0ff11c893593f43f0607c41b7c9e3a",
+    "title": "Leveraging LLM-Assisted Query Understanding for Live Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 2,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21384, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2316562231",
+        "name": "Guanting Dong"
+      },
+      {
+        "authorId": "2144456832",
+        "name": "Xiaoxi Li"
+      },
+      {
+        "authorId": "2298002735",
+        "name": "Yuyao Zhang"
+      },
+      {
+        "authorId": "2336094650",
+        "name": "Mengjie Deng"
+      }
+    ],
+    "abstract": "Real-world live retrieval-augmented generation (RAG) systems face significant challenges when processing user queries that are often noisy, ambiguous, and contain multiple intents. While RAG enhances large language models (LLMs) with external knowledge, current systems typically struggle with such complex inputs, as they are often trained or evaluated on cleaner data. This paper introduces Omni-RAG, a novel framework designed to improve the robustness and effectiveness of RAG systems in live, open-domain settings. Omni-RAG employs LLM-assisted query understanding to preprocess user inputs through three key modules: (1) Deep Query Understanding and Decomposition, which utilizes LLMs with tailored prompts to denoise queries (e.g., correcting spelling errors) and decompose multi-intent queries into structured sub-queries; (2) Intent-Aware Knowledge Retrieval, which performs retrieval for each sub-query from a corpus (i.e., FineWeb using OpenSearch) and aggregates the results; and (3) Reranking and Generation, where a reranker (i.e., BGE) refines document selection before a final response is generated by an LLM (i.e., Falcon-10B) using a chain-of-thought prompt. Omni-RAG aims to bridge the gap between current RAG capabilities and the demands of real-world applications, such as those highlighted by the SIGIR 2025 LiveRAG Challenge, by robustly handling complex and noisy queries.",
+    "score": 8
+  },
+  {
+    "id": "c9975925ab08e453768125259d9a808ff348a7a9",
+    "paperId": "c9975925ab08e453768125259d9a808ff348a7a9",
+    "title": "SGIC: A Self-Guided Iterative Calibration Framework for RAG",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.16172, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2256947370",
+        "name": "Guanhua Chen"
+      },
+      {
+        "authorId": "2300197653",
+        "name": "Yutong Yao"
+      },
+      {
+        "authorId": "1774304",
+        "name": "Lidia S. Chao"
+      },
+      {
+        "authorId": "2151060023",
+        "name": "Xuebo Liu"
+      },
+      {
+        "authorId": "1758353",
+        "name": "Derek F. Wong"
+      }
+    ],
+    "abstract": "Recent research in retrieval-augmented generation (RAG) has concentrated on retrieving useful information from candidate documents. However, numerous methodologies frequently neglect the calibration capabilities of large language models (LLMs), which capitalize on their robust in-context reasoning prowess. This work illustrates that providing LLMs with specific cues substantially improves their calibration efficacy, especially in multi-round calibrations. We present a new SGIC: Self-Guided Iterative Calibration Framework that employs uncertainty scores as a tool. Initially, this framework calculates uncertainty scores to determine both the relevance of each document to the query and the confidence level in the responses produced by the LLMs. Subsequently, it reevaluates these scores iteratively, amalgamating them with prior responses to refine calibration. Furthermore, we introduce an innovative approach for constructing an iterative self-calibration training set, which optimizes LLMs to efficiently harness uncertainty scores for capturing critical information and enhancing response accuracy. Our proposed framework significantly improves performance on both closed-source and open-weight LLMs.",
+    "score": 8
+  },
+  {
+    "id": "368bbac734e5683d2f10d6399a9d19cb58fa7e3b",
+    "paperId": "368bbac734e5683d2f10d6399a9d19cb58fa7e3b",
+    "title": "Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.15586, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2326046038",
+        "name": "Xinping Zhao"
+      },
+      {
+        "authorId": "2337079967",
+        "name": "Shouzheng Huang"
+      },
+      {
+        "authorId": null,
+        "name": "Yan Zhong"
+      },
+      {
+        "authorId": "2149467818",
+        "name": "Xinshuo Hu"
+      },
+      {
+        "authorId": "2257796182",
+        "name": "Meishan Zhang"
+      },
+      {
+        "authorId": "2285172247",
+        "name": "Baotian Hu"
+      },
+      {
+        "authorId": "2371141410",
+        "name": "Min Zhang"
+      }
+    ],
+    "abstract": "Retrieval-Augmented Generation (RAG) effectively improves the accuracy of Large Language Models (LLMs). However, retrieval noises significantly impact the quality of LLMs'generation, necessitating the development of denoising mechanisms. Previous methods extract evidence straightforwardly without explicit thinking, which risks filtering out key clues and struggles with generalization. To this end, we propose EviOmni, which learns to extract rational evidence by (1) explicitly reasoning to identify potential cues within retrieval contents first, and then (2) consciously extracting to avoid omitting any key cues helpful for answering questions. Specifically, we frame evidence reasoning and evidence extraction into one unified response for end-to-end training; apply knowledge token masks for disentanglement to derive reasoning-based and extraction-based answers; and devise three types of verifiable reward functions, including answer, length, and format, to update the model via the policy optimization algorithm. Extensive experiments on three benchmark datasets show the effectiveness of EviOmni, providing compact and high-quality evidence, improving the accuracy of downstream tasks, and promoting effective application in online RAG systems.",
+    "score": 9
+  },
+  {
+    "id": "e0efa866a1e464e65e3a217fd67d6c18bc422302",
+    "paperId": "e0efa866a1e464e65e3a217fd67d6c18bc422302",
+    "title": "Investigating the Robustness of Retrieval-Augmented Generation at the Query Level",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.06956, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2372648914",
+        "name": "Sezen Perccin"
+      },
+      {
+        "authorId": null,
+        "name": "Xin Su"
+      },
+      {
+        "authorId": "2372673412",
+        "name": "Qutub Sha Syed"
+      },
+      {
+        "authorId": "2263959561",
+        "name": "Phillip Howard"
+      },
+      {
+        "authorId": "2275935658",
+        "name": "Aleksei Kuvshinov"
+      },
+      {
+        "authorId": "2371072155",
+        "name": "Leo Schwinn"
+      },
+      {
+        "authorId": "2372647645",
+        "name": "Kay-Ulrich Scholl"
+      }
+    ],
+    "abstract": "Large language models (LLMs) are very costly and inefficient to update with new information. To address this limitation, retrieval-augmented generation (RAG) has been proposed as a solution that dynamically incorporates external knowledge during inference, improving factual consistency and reducing hallucinations. Despite its promise, RAG systems face practical challenges-most notably, a strong dependence on the quality of the input query for accurate retrieval. In this paper, we investigate the sensitivity of different components in the RAG pipeline to various types of query perturbations. Our analysis reveals that the performance of commonly used retrievers can degrade significantly even under minor query variations. We study each module in isolation as well as their combined effect in an end-to-end question answering setting, using both general-domain and domain-specific datasets. Additionally, we propose an evaluation framework to systematically assess the query-level robustness of RAG pipelines and offer actionable recommendations for practitioners based on the results of more than 1092 experiments we performed.",
+    "score": 8
+  },
+  {
+    "id": "5631e60096dc5a7a36fd1f4ffdfa3c8ff43dde64",
+    "paperId": "5631e60096dc5a7a36fd1f4ffdfa3c8ff43dde64",
+    "title": "HIRAG: Hierarchical-Thought Instruction-Tuning Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.05714, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2374364929",
+        "name": "Yihan Jiao"
+      },
+      {
+        "authorId": "2375322893",
+        "name": "Zhehao Tan"
+      },
+      {
+        "authorId": "2336086857",
+        "name": "Dan Yang"
+      },
+      {
+        "authorId": "2374413400",
+        "name": "Duolin Sun"
+      },
+      {
+        "authorId": "2372316138",
+        "name": "Jie Feng"
+      },
+      {
+        "authorId": "2290138094",
+        "name": "Yue Shen"
+      },
+      {
+        "authorId": "2356554128",
+        "name": "Jian Wang"
+      },
+      {
+        "authorId": "2304955019",
+        "name": "Peng Wei"
+      }
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) has become a fundamental paradigm for addressing the challenges faced by large language models in handling real-time information and domain-specific problems. Traditional RAG systems primarily rely on the in-context learning (ICL) capabilities of the large language model itself. Still, in-depth research on the specific capabilities needed by the RAG generation model is lacking, leading to challenges with inconsistent document quality and retrieval system imperfections. Even the limited studies that fine-tune RAG generative models often \\textit{lack a granular focus on RAG task} or \\textit{a deeper utilization of chain-of-thought processes}. To address this, we propose that RAG models should possess three progressively hierarchical abilities (1) Filtering: the ability to select relevant information; (2) Combination: the ability to combine semantic information across paragraphs; and (3) RAG-specific reasoning: the ability to further process external knowledge using internal knowledge. Thus, we introduce our new RAG instruction fine-tuning method, Hierarchical-Thought Instruction-Tuning Retrieval-Augmented Generation (HIRAG) incorporates a\"think before answering\"strategy. This method enhances the model's open-book examination capability by utilizing multi-level progressive chain-of-thought. Experiments show that the HIRAG training strategy significantly improves the model's performance on datasets such as RGB, PopQA, MuSiQue, HotpotQA, and PubmedQA.",
+    "score": 9
+  },
+  {
+    "id": "f7bd54b5f6d8284b92f8e1d5b4f9b30eb4928e38",
+    "paperId": "f7bd54b5f6d8284b92f8e1d5b4f9b30eb4928e38",
+    "title": "Multimedia Graph Codes for Fast and Semantic Retrieval-Augmented Generation",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/electronics14122472?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/electronics14122472, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2067030046",
+        "name": "Stefan Wagenpfeil"
+      }
+    ],
+    "abstract": "Retrieval-Augmented Generation (RAG) has become a central approach to enhance the factual consistency and domain specificity of large language models (LLMs) by incorporating external context at inference time. However, most existing RAG systems rely on dense vector-based similarity, which fails to capture complex semantic structures, relational dependencies, and multimodal content. In this paper, we introduce Graph Codes—a matrix-based encoding of Multimedia Feature Graphs—as an alternative retrieval paradigm. Graph Codes preserve semantic topology by explicitly encoding entities and their typed relationships from multimodal documents, enabling structure-aware and interpretable retrieval. We evaluate our system in two domains: multimodal scene understanding (200 annotated image-question pairs) and clinical question answering (150 real-world medical queries with 10,000 structured knowledge snippets). Results show that our method outperforms dense retrieval baselines in precision (+9–15%), reduces hallucination rates by over 30%, and yields higher expert-rated answer quality. Theoretically, this work demonstrates that symbolic similarity over typed semantic graphs provides a more faithful alignment mechanism than latent embeddings. Practically, it enables interpretable, modality-agnostic retrieval pipelines deployable in high-stakes domains such as medicine or law. We conclude that Graph Code-based RAG bridges the gap between structured knowledge representation and neural generation, offering a robust and explainable alternative to existing approaches.",
+    "score": 8
+  },
+  {
+    "id": "4816a3613f1f5750b1f463d80086d39d400f370b",
+    "paperId": "4816a3613f1f5750b1f463d80086d39d400f370b",
+    "title": "PAIRS: Parametric-Verified Adaptive Information Retrieval and Selection for Efficient RAG",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04057, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2375141356",
+        "name": "Wang Chen"
+      },
+      {
+        "authorId": "2375045467",
+        "name": "Guanqiang Qi"
+      },
+      {
+        "authorId": "2375082497",
+        "name": "Weikang Li"
+      },
+      {
+        "authorId": "2375095506",
+        "name": "Yang Li"
+      },
+      {
+        "authorId": "2896077",
+        "name": "Deguo Xia"
+      },
+      {
+        "authorId": "2375078291",
+        "name": "Jizhou Huang"
+      }
+    ],
+    "abstract": "Retrieval-Augmented Generation (RAG) has become a cornerstone technique for enhancing large language models (LLMs) with external knowledge. However, current RAG systems face two critical limitations: (1) they inefficiently retrieve information for every query, including simple questions that could be resolved using the LLM's parametric knowledge alone, and (2) they risk retrieving irrelevant documents when queries contain sparse information signals. To address these gaps, we introduce Parametric-verified Adaptive Information Retrieval and Selection (PAIRS), a training-free framework that integrates parametric and retrieved knowledge to adaptively determine whether to retrieve and how to select external information. Specifically, PAIRS employs a dual-path generation mechanism: First, the LLM produces both a direct answer and a context-augmented answer using self-generated pseudo-context. When these outputs converge, PAIRS bypasses external retrieval entirely, dramatically improving the RAG system's efficiency. For divergent cases, PAIRS activates a dual-path retrieval (DPR) process guided by both the original query and self-generated contextual signals, followed by an Adaptive Information Selection (AIS) module that filters documents through weighted similarity to both sources. This simple yet effective approach can not only enhance efficiency by eliminating unnecessary retrievals but also improve accuracy through contextually guided retrieval and adaptive information selection. Experimental results on six question-answering (QA) benchmarks show that PAIRS reduces retrieval costs by around 25% (triggering for only 75% of queries) while still improving accuracy-achieving +1.1% EM and +1.0% F1 over prior baselines on average.",
+    "score": 9
+  }
+]

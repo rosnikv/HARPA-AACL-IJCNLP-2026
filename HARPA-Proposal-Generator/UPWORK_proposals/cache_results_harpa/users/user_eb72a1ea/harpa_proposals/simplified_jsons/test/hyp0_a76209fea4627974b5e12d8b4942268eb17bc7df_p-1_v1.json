@@ -1,0 +1,145 @@
+{
+  "paper_id": "a76209fea4627974b5e12d8b4942268eb17bc7df",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Iterative Retrieval Module Implementation",
+      "criteria_met_question": "Does the experiment implement an iterative retrieval module that can refine queries based on intermediate results from previous retrieval steps?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multi-hop Reasoning Framework Implementation",
+      "criteria_met_question": "Does the experiment implement a multi-hop reasoning framework that can generate intermediate sub-queries and integrate information across multiple retrieval steps using a chain-of-thought approach?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Contrastive Noise Introduction Technique",
+      "criteria_met_question": "Does the experiment implement a contrastive noise introduction technique that adds controlled noise to training data to help the model differentiate between relevant and irrelevant information?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integration of All Three Components",
+      "criteria_met_question": "Does the experiment successfully integrate all three components (iterative retrieval, multi-hop reasoning, and contrastive noise introduction) into a unified system?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Benchmark Dataset with Varying Noise Levels",
+      "criteria_met_question": "Does the experiment use benchmark datasets (such as HotpotQA) with explicitly defined varying levels of noise (low, medium, high) for testing the hypothesis?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Basic Retrieval Baseline Implementation",
+      "criteria_met_question": "Does the experiment implement a basic retrieval system (that uses original queries without refinement or multi-hop reasoning) as a control/baseline?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Iterative Retrieval Only Baseline",
+      "criteria_met_question": "Does the experiment implement an iterative retrieval only baseline (without multi-hop reasoning or contrastive noise) for comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multi-hop Reasoning Only Baseline",
+      "criteria_met_question": "Does the experiment implement a multi-hop reasoning only baseline (without iterative retrieval or contrastive noise) for comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Retrieval Accuracy Metrics",
+      "criteria_met_question": "Does the experiment measure retrieval accuracy using precision (proportion of relevant documents retrieved out of total retrieved), recall (proportion of relevant documents retrieved out of all relevant documents), and F1 score (harmonic mean of precision and recall)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Response Quality Metrics",
+      "criteria_met_question": "Does the experiment measure response quality using Exact Match, F1 Score, and ROUGE-L metrics to evaluate the coherence, relevance, and informativeness of generated responses?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Iteration Testing",
+      "criteria_met_question": "Does the experiment test the system across multiple iterations of query refinement (at least 3 iterations for mini-pilot, 5 for pilot, and 10 for full experiment)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment conduct appropriate statistical significance tests to determine if the performance differences between the proposed integrated approach and baseline methods are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Noise Level Impact Analysis",
+      "criteria_met_question": "Does the experiment analyze how the performance of the integrated approach compared to baselines varies across different noise levels (low, medium, high)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment include multiple runs (at least 3) of each condition to ensure robustness and reliability of results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that systematically removes each component (iterative retrieval, multi-hop reasoning, contrastive noise) to measure their individual contributions to the overall performance?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include a detailed error analysis that categorizes and quantifies the types of errors made by the integrated approach versus baseline methods?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Metrics",
+      "criteria_met_question": "Does the experiment measure and report computational efficiency metrics such as processing time, memory usage, or other resource requirements for the integrated approach versus baseline methods?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include a sensitivity analysis that examines how the performance of the integrated approach varies with different hyperparameter settings (e.g., number of iterations, noise levels, etc.)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Qualitative Analysis of Retrieved Documents",
+      "criteria_met_question": "Does the experiment include a qualitative analysis of the documents retrieved by different methods, with examples illustrating how the integrated approach improves retrieval quality?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Cross-domain Generalization Testing",
+      "criteria_met_question": "Does the experiment test the generalization capability of the integrated approach on datasets from domains different from the training data?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Combining iterative retrieval, multi-hop reasoning, and contrastive noise to enhance retrieval accuracy in noisy environments.",
+    "research_idea_hypothesis": "Integrating iterative retrieval with multi-hop reasoning and contrastive noise introduction will enhance retrieval accuracy and response quality in noisy environments by dynamically refining queries and filtering irrelevant information.",
+    "description": "This research explores the integration of iterative retrieval with multi-hop reasoning and contrastive noise introduction to enhance retrieval accuracy and response quality in noisy environments. Iterative retrieval involves refining queries based on intermediate results, allowing for dynamic adjustment to better meet information needs. Multi-hop reasoning enables the integration of information across multiple retrieval steps, synthesizing comprehensive answers. Contrastive noise introduction improves the model's ability to differentiate relevant from irrelevant information by introducing controlled noise during training. The hypothesis posits that this combination will improve retrieval accuracy and response quality by dynamically refining queries and filtering noise. This approach addresses gaps in existing research by exploring the synergy between iterative retrieval and multi-hop reasoning under noisy conditions, a combination not extensively tested in prior work. The expected outcome is improved response quality and efficiency, particularly in environments with high noise levels, making it suitable for tasks requiring robust reasoning and retrieval accuracy.",
+    "research_gap": "Existing Retrieval-Augmented Generation (RAG) systems have explored various retrieval methods and reasoning enhancements, but there remains a gap in understanding how iterative retrieval combined with multi-hop reasoning can specifically enhance retrieval accuracy and response quality under noisy conditions. While iterative retrieval and multi-hop reasoning have been individually explored, their combined effect in a dynamic retrieval context, particularly with noise reduction techniques, is underexplored. This hypothesis addresses the gap by testing the integration of iterative retrieval with multi-hop reasoning and contrastive noise introduction to improve response quality and efficiency in noisy environments.",
+    "research_idea_variables": "[Iterative Retrieval](https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509): Iterative retrieval involves refining queries based on intermediate results, allowing for dynamic adjustment to better meet information needs. This approach uses feedback loops to refine the query, enhancing retrieval accuracy by adapting to the evolving context of the task. It is expected to improve retrieval precision by iteratively refining the retrieval process, particularly in noisy environments where initial retrievals may be incomplete or imperfect.\n\n[Multi-hop Reasoning](https://www.semanticscholar.org/paper/7afb80c8c0dc0c5f32d63a847a72b9bc8bada519): Multi-hop reasoning involves integrating information across multiple retrieval steps to derive comprehensive answers. This approach uses a chain-of-thought framework to generate intermediate sub-queries and retrieve relevant documents for each sub-query. It enhances retrieval accuracy by allowing the model to construct a comprehensive understanding of the query, leading to more accurate and relevant retrieval results.\n\n[Contrastive Noise Introduction](https://www.semanticscholar.org/paper/f848c7cbf63bd8231bf4e0adfc6eda8ad2673868): Contrastive noise introduction involves adding noise to the training data to improve the model's robustness against irrelevant information. This technique helps the model distinguish between relevant and irrelevant data by introducing contrasting examples during training. It is particularly useful in scenarios where the retrieval system needs to handle ambiguous or noisy queries, enhancing the model's ability to filter out irrelevant information.",
+    "Explanation": "Iterative retrieval refines queries based on feedback, enhancing retrieval accuracy by adapting to evolving contexts. Multi-hop reasoning synthesizes information across steps, improving response quality by constructing comprehensive answers. Contrastive noise introduction enhances robustness by training the model to filter noise. Together, these components address the challenge of maintaining high retrieval accuracy and response quality in noisy environments, where initial retrievals may be incomplete or imperfect. The chosen evaluation domain, involving noisy datasets, is appropriate as it directly tests the hypothesis under conditions where the proposed method is expected to excel.",
+    "research_idea_long_description": "Iterative retrieval refines the initial query, feeding improved queries into the multi-hop reasoning framework, which integrates information across steps. Contrastive noise introduction enhances the model's ability to filter irrelevant information, ensuring that only pertinent data is used in the reasoning process. This synergy is expected to improve retrieval accuracy and response quality by dynamically refining queries and filtering noise, particularly in noisy environments.",
+    "research_idea_design_prompt": "The proposed method integrates iterative retrieval, multi-hop reasoning, and contrastive noise introduction to enhance retrieval accuracy and response quality in noisy environments. The process begins with an initial query, which undergoes iterative refinement based on intermediate retrieval results. Each iteration involves adjusting the query to better capture the necessary context, using feedback loops to refine the retrieval process. Multi-hop reasoning is employed to integrate information across multiple retrieval steps, using a chain-of-thought framework to generate intermediate sub-queries and retrieve relevant documents. This approach allows the model to construct a comprehensive understanding of the query, synthesizing information from multiple sources. Contrastive noise introduction is applied during the training phase, adding controlled noise to the data to improve the model's ability to differentiate relevant from irrelevant information. This technique enhances the model's robustness against noise, ensuring that only the most pertinent information is retrieved and used during generation. The integration of these components is expected to improve retrieval accuracy and response quality by dynamically refining queries and filtering noise. The hypothesis will be tested using benchmark datasets with varying levels of noise, evaluating retrieval accuracy and response quality using metrics such as precision, recall, and F1 score. The expected outcome is improved response quality and efficiency, particularly in noisy environments, making it suitable for tasks requiring robust reasoning and retrieval accuracy.",
+    "research_idea_elements": "Independent variable: Integration of iterative retrieval with multi-hop reasoning and contrastive noise introduction\n\nDependent variable: Retrieval accuracy and response quality\n\nComparison groups: Proposed integrated approach (combining iterative retrieval, multi-hop reasoning, and contrastive noise introduction) versus baseline methods (Basic Retrieval, Iterative Retrieval Only, Multi-hop Reasoning Only)\n\nBaseline/control: Basic retrieval system that uses the original query without refinement or multi-hop reasoning\n\nContext/setting: Noisy environments with varying levels of noise (low, medium, high)\n\nAssumptions: Iterative retrieval can refine queries based on intermediate results; multi-hop reasoning can integrate information across multiple retrieval steps; contrastive noise introduction improves robustness against irrelevant information\n\nRelationship type: Causation (integration of components will enhance/improve outcomes)\n\nPopulation: Queries from the HotpotQA dataset\n\nTimeframe: Multiple iterations of query refinement (3 for mini-pilot, 5 for pilot, 10 for full experiment)\n\nMeasurement method: Retrieval accuracy (precision, recall, F1 score) and response quality metrics (Exact Match, F1 Score, ROUGE-L)",
+    "motivation": "The source paper is [Paper 0: Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation](https://www.semanticscholar.org/paper/a76209fea4627974b5e12d8b4942268eb17bc7df) (16 citations, 2024). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/cbc933e23e2c14747aab474a847fb730439938b5) --> [Paper 2](https://www.semanticscholar.org/paper/03ae366d33290066edc41287f90fc67476d70bbc) --> [Paper 3](https://www.semanticscholar.org/paper/bc898b37cd16f5681db13652b23368258f4c3c6e) --> [Paper 4](https://www.semanticscholar.org/paper/18264e04721b87ca664e54cbd07e8ff1b2d683c1) --> [Paper 5](https://www.semanticscholar.org/paper/8f224e484a058e335b28a67d73827b352b45f7b2) --> [Paper 6](https://www.semanticscholar.org/paper/85a11bd16eeb169548764e1e2f699a563315dc34). The analysis reveals a progression from practical improvements in RAG systems to theoretical frameworks and efficiency optimizations in reasoning processes. The source paper introduces the concept of LLMs as 'Information Refiners' in RAG, while subsequent papers explore theoretical trade-offs, reasoning enhancements, and efficiency improvements. A research idea that advances this field could focus on integrating these advancements to develop a comprehensive framework that optimizes both the effectiveness and efficiency of RAG systems, addressing limitations such as reasoning depth and token usage.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating iterative retrieval with multi-hop reasoning and contrastive noise introduction will enhance retrieval accuracy and response quality in noisy environments. The experiment should compare our proposed integrated approach against baseline methods.\n\n## Experiment Overview\nThis experiment will test a novel information retrieval system that combines three key components:\n1. Iterative Retrieval: A module that refines queries based on intermediate results\n2. Multi-hop Reasoning: A framework for integrating information across multiple retrieval steps\n3. Contrastive Noise Introduction: A technique for adding controlled noise to improve robustness against irrelevant information\n\n## Pilot Experiment Framework\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`. The experiment should start with `MINI_PILOT` mode, then proceed to `PILOT` if successful, but stop before `FULL_EXPERIMENT` for human verification.\n\n- `MINI_PILOT`: Use 20 queries from the training set with 3 noise levels (low, medium, high). Run 3 iterations of query refinement per query. This should complete in under 10 minutes.\n- `PILOT`: Use 100 queries from the training set for training/tuning and 50 queries from the validation set for evaluation, with all 3 noise levels. Run up to 5 iterations of query refinement per query. This should complete in under 2 hours.\n- `FULL_EXPERIMENT`: Use the complete training dataset for training/tuning and the complete test dataset for final evaluation, with all noise levels. Run up to 10 iterations of query refinement per query.\n\n## Dataset Preparation\n1. Use the HotpotQA dataset as the primary benchmark, which naturally requires multi-hop reasoning.\n2. Create three versions with different noise levels:\n   - Low noise: Add 1-3 irrelevant sentences to each context passage\n   - Medium noise: Add 4-7 irrelevant sentences to each context passage\n   - High noise: Add 8-12 irrelevant sentences to each context passage\n3. The irrelevant sentences should be sampled from other documents in the dataset that are unrelated to the query.\n\n## System Components\n\n### 1. Iterative Retrieval Module\nImplement a module that:\n- Takes an initial query and retrieves an initial set of documents\n- Analyzes the retrieved documents to identify relevant information\n- Reformulates the query based on the relevant information\n- Repeats this process for a specified number of iterations (3 for MINI_PILOT, 5 for PILOT, 10 for FULL_EXPERIMENT)\n- Tracks the quality of retrieved documents at each iteration\n\n### 2. Multi-hop Reasoning Framework\nImplement a framework that:\n- Breaks down complex queries into sub-queries\n- Retrieves relevant documents for each sub-query\n- Integrates information across the retrieved documents\n- Generates a comprehensive answer based on the integrated information\n\n### 3. Contrastive Noise Introduction\nImplement a technique that:\n- Adds controlled noise to the training data\n- Creates contrastive examples by pairing relevant and irrelevant information\n- Trains the model to distinguish between relevant and irrelevant information\n\n## Baseline Systems\nImplement three baseline systems for comparison:\n1. **Basic Retrieval**: A simple retrieval system that uses the original query without refinement or multi-hop reasoning\n2. **Iterative Retrieval Only**: A system that uses iterative query refinement but without multi-hop reasoning or contrastive noise\n3. **Multi-hop Reasoning Only**: A system that uses multi-hop reasoning but without iterative refinement or contrastive noise\n\n## Experimental System\nImplement the full integrated system that combines:\n1. Iterative Retrieval\n2. Multi-hop Reasoning\n3. Contrastive Noise Introduction\n\n## Evaluation Metrics\nEvaluate the systems using the following metrics:\n1. **Retrieval Accuracy**:\n   - Precision: The proportion of retrieved documents that are relevant\n   - Recall: The proportion of relevant documents that are retrieved\n   - F1 Score: The harmonic mean of precision and recall\n\n2. **Response Quality**:\n   - Exact Match (EM): Whether the predicted answer exactly matches the ground truth\n   - F1 Score: The overlap between predicted and ground truth answers\n   - ROUGE-L: The longest common subsequence between predicted and ground truth answers\n\n## Experiment Procedure\n1. **Data Preparation**:\n   - Load the HotpotQA dataset\n   - Create noisy versions of the dataset as described above\n   - Split the data into training, validation, and test sets\n\n2. **Model Training**:\n   - Train the iterative retrieval module on the training set\n   - Train the multi-hop reasoning framework on the training set\n   - Apply contrastive noise introduction during training\n\n3. **Evaluation**:\n   - Evaluate all systems (baseline and experimental) on the validation set (for PILOT) or test set (for FULL_EXPERIMENT)\n   - Calculate all evaluation metrics for each system\n   - Compare the performance of the systems across different noise levels\n\n4. **Analysis**:\n   - Perform statistical significance tests to determine if the differences between systems are significant\n   - Analyze the performance of each system across different noise levels\n   - Identify the strengths and weaknesses of each approach\n\n## Output and Reporting\n1. Generate a comprehensive report that includes:\n   - A description of the experimental setup\n   - The performance of each system on each metric\n   - Statistical significance of the results\n   - Analysis of the results and implications\n\n2. Create visualizations that show:\n   - The performance of each system across different noise levels\n   - The improvement in retrieval accuracy and response quality over iterations\n   - The relationship between retrieval accuracy and response quality\n\n## Implementation Notes\n- Use scikit-learn for evaluation metrics and statistical tests\n- Use numpy for data processing and manipulation\n- Implement proper logging to track the progress of the experiment\n- Ensure reproducibility by setting random seeds\n- Implement error handling to gracefully handle failures\n\nPlease run the MINI_PILOT first, then if everything looks good, proceed to the PILOT. After the PILOT, stop and do not run the FULL_EXPERIMENT as human verification of the results is required before proceeding.",
+  "core_related_works": [
+    {
+      "title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding",
+      "paperId": "2befc232dbd6117358313da0f7079854bf16c509",
+      "url": "https://www.semanticscholar.org/paper/2befc232dbd6117358313da0f7079854bf16c509",
+      "year": 2025,
+      "source_variable": "Iterative Retrieval",
+      "source_paper_lookup_title": "Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding"
+    },
+    {
+      "title": "MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search",
+      "paperId": "7afb80c8c0dc0c5f32d63a847a72b9bc8bada519",
+      "url": "https://www.semanticscholar.org/paper/7afb80c8c0dc0c5f32d63a847a72b9bc8bada519",
+      "year": 2025,
+      "source_variable": "Multi-hop Reasoning",
+      "source_paper_lookup_title": "MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search"
+    },
+    {
+      "title": "CondAmbigQA: A Benchmark and Dataset for Conditional Ambiguous Question Answering",
+      "paperId": "f848c7cbf63bd8231bf4e0adfc6eda8ad2673868",
+      "url": "https://www.semanticscholar.org/paper/f848c7cbf63bd8231bf4e0adfc6eda8ad2673868",
+      "year": 2025,
+      "source_variable": "Contrastive Noise Introduction",
+      "source_paper_lookup_title": "CondAmbigQA: A Benchmark and Dataset for Conditional Ambiguous Question Answering"
+    }
+  ],
+  "references": "1. Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation (2024). Paper ID: a76209fea4627974b5e12d8b4942268eb17bc7df\n\n2. A Theory for Token-Level Harmonization in Retrieval-Augmented Generation (2024). Paper ID: cbc933e23e2c14747aab474a847fb730439938b5\n\n3. How Much Can RAG Help the Reasoning of LLM? (2024). Paper ID: 03ae366d33290066edc41287f90fc67476d70bbc\n\n4. Rethinking Chain-of-Thought from the Perspective of Self-Training (2024). Paper ID: bc898b37cd16f5681db13652b23368258f4c3c6e\n\n5. Hawkeye:Efficient Reasoning with Model Collaboration (2025). Paper ID: 18264e04721b87ca664e54cbd07e8ff1b2d683c1\n\n6. HAPO: Training Language Models to Reason Concisely via History-Aware Policy Optimization (2025). Paper ID: 8f224e484a058e335b28a67d73827b352b45f7b2\n\n7. Hierarchical Budget Policy Optimization for Adaptive Reasoning (2025). Paper ID: 85a11bd16eeb169548764e1e2f699a563315dc34\n\n8. Synergizing RAG and Reasoning: A Systematic Review (2023). Paper ID: e7bf315327da6619462130c19771e5db896a2d86\n\n9. Credible plan-driven RAG method for Multi-hop Question Answering (2023). Paper ID: 0cbfeb8b10f029693932665d291066e331491c81\n\n10. Vendi-RAG: Adaptively Trading-Off Diversity And Quality Significantly Improves Retrieval Augmented Generation With LLMs (2023). Paper ID: c64681d1b8668b2c98331448691afe4ff46db1ec\n\n11. MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search (2023). Paper ID: 7afb80c8c0dc0c5f32d63a847a72b9bc8bada519\n\n12. RAG+: Enhancing Retrieval-Augmented Generation with Application-Aware Reasoning (2025). Paper ID: bd18b584546309feecdf3b74c07709e45984ea09\n\n13. Towards Concise and Adaptive Thinking in Large Reasoning Models: A Survey (2025). Paper ID: 4bb714c74f722a5e4caa8825d3edcf1b726689ab\n\n14. The Role of Deductive and Inductive Reasoning in Large Language Models (2024). Paper ID: a3c65d490f635b4ad0675f52d67e08fa45fc30d3\n\n15. OThink-R1: Intrinsic Fast/Slow Thinking Mode Switching for Over-Reasoning Mitigation (2025). Paper ID: a4c29dc3857004e054e93eede078f132946dd3cd\n\n16. Thinkless: LLM Learns When to Think (2025). Paper ID: 721149194c40b3d7034f88c391f851747680e2f7\n\n17. RARE: Retrieval-Augmented Reasoning Enhancement for Large Language Models (2024). Paper ID: 124b40ec883eb59e89be76e5da5489dbed89275c\n\n18. LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling (2025). Paper ID: 533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d\n\n19. CoRT: Code-integrated Reasoning within Thinking (2025). Paper ID: eff086f0a6d66b6514322c6832f2469d057f33e3\n\n20. Adaptive-Solver Framework for Dynamic Strategy Selection in Large Language Model Reasoning (2023). Paper ID: 5076bbbf831a92174c9cc1b347bd0584560435fc\n\n21. Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding (2025). Paper ID: 2befc232dbd6117358313da0f7079854bf16c509\n\n22. CondAmbigQA: A Benchmark and Dataset for Conditional Ambiguous Question Answering (2025). Paper ID: f848c7cbf63bd8231bf4e0adfc6eda8ad2673868"
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7c1707db9aafd209aa93db3251e7ebd593d55876</p>
+<hr>
+<h2>Title</h2>
+<p>Combining SelfCheckGPT with Output-Based Knowledge Editing to improve LLM factuality in zero-resource settings.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating SelfCheckGPT with Output-Based Knowledge Editing will enhance the factuality and consistency of LLM outputs in zero-resource settings compared to using these techniques independently.</p>
+<h3>Motivation</h3>
+<p>Current methods for hallucination detection in LLMs often rely on external resources or extensive model fine-tuning, which limits their applicability in zero-resource settings. While intrinsic uncertainty metrics and knowledge editing techniques have been explored independently, their combined potential remains underutilized. Specifically, no prior work has systematically integrated SelfCheckGPT with Output-Based Knowledge Editing to enhance factuality in LLM outputs without external databases. This hypothesis addresses the gap by leveraging the self-consistency of LLMs and post-processing corrections to improve output accuracy, especially in black-box models where internal states are inaccessible.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The proposed research explores the integration of SelfCheckGPT, a zero-resource hallucination detection technique, with Output-Based Knowledge Editing to improve the factuality and consistency of LLM outputs. SelfCheckGPT leverages the self-consistency of LLMs by generating multiple responses to the same prompt and identifying contradictions, while Output-Based Knowledge Editing corrects factual inaccuracies through post-processing. This combination aims to enhance output accuracy without relying on external databases, making it suitable for black-box models like ChatGPT. The hypothesis will be tested using a dataset like TruthfulQA, which challenges LLMs with factually demanding questions. The expected outcome is a significant improvement in factual accuracy and consistency over baseline methods that use these techniques independently. This approach addresses the gap in existing research by providing a novel, resource-efficient solution for hallucination detection and correction in LLMs.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/661bb35ce8b6a5d279f85119d0df581e572585b4">SelfCheckGPT</a>: SelfCheckGPT is a zero-resource hallucination detection technique that identifies inconsistencies in LLM outputs by generating multiple responses to the same prompt and checking for contradictions. It is implemented by sampling multiple outputs and comparing them for consistency, using metrics like semantic similarity and content overlap. This method is particularly effective for black-box models where internal states are inaccessible, as it relies on the stochastic nature of LLM outputs. The expected role of SelfCheckGPT in this research is to provide an initial detection of potential hallucinations, which will then be corrected using Output-Based Knowledge Editing.</p>
+<p><a href="https://www.semanticscholar.org/paper/5cfadb18e4e3c471d2dc991cf369608324ca8771">Output-Based Knowledge Editing</a>: Output-Based Knowledge Editing focuses on correcting factual inaccuracies in LLM outputs through post-processing. This method involves using external tools or secondary models to verify and adjust the generated text, aligning it with verified knowledge sources. It is particularly useful for enhancing the factual accuracy of LLM outputs without altering the underlying model parameters. In this research, Output-Based Knowledge Editing will be used to correct inconsistencies identified by SelfCheckGPT, thereby improving the overall factuality of the outputs.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves a two-step process. First, SelfCheckGPT will be used to generate multiple responses to a given prompt, identifying inconsistencies through semantic similarity and content overlap metrics. This step will highlight potential hallucinations in the LLM outputs. Next, Output-Based Knowledge Editing will be applied to correct these inconsistencies. This involves using external tools or secondary models to verify and adjust the generated text, ensuring alignment with verified knowledge sources. The integration occurs at the post-processing stage, where the outputs from SelfCheckGPT are fed into the knowledge editing module for correction. The data flow begins with the LLM generating multiple outputs, which are then compared for consistency. Inconsistent outputs are flagged and passed to the knowledge editing module, which adjusts them based on external verification. This process is repeated iteratively until the outputs meet the desired factual accuracy and consistency standards. The implementation will be carried out using existing codeblocks for SelfCheckGPT and a custom-built module for Output-Based Knowledge Editing, ensuring compatibility with the ASD agent's capabilities.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating SelfCheckGPT with Output-Based Knowledge Editing enhances the factuality and consistency of LLM outputs in zero-resource settings compared to using these techniques independently. This experiment should be structured as follows:</p></p>
+<p><ol>
+<li>EXPERIMENTAL SETUP:</li>
+<li>Create a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'</li>
+<li>Initially set PILOT_MODE = 'MINI_PILOT'</li>
+<li>Use the TruthfulQA dataset, which contains factually demanding questions designed to challenge LLMs</li>
+<li>For MINI_PILOT: Use 10 questions from the training set</li>
+<li>For PILOT: Use 100 questions from the training set and 50 questions from the validation set</li>
+<li>For FULL_EXPERIMENT: Use the entire dataset with proper train/validation/test splits</li>
+</ol></p>
+<p><ol>
+<li>IMPLEMENT FOUR EXPERIMENTAL CONDITIONS:<br />
+   a) Baseline (No Correction): Direct LLM responses without any hallucination detection or correction<br />
+   b) SelfCheckGPT Only: Use SelfCheckGPT to detect hallucinations but without correction<br />
+   c) Output-Based Knowledge Editing Only: Apply knowledge editing without prior hallucination detection<br />
+   d) Integrated Approach (Experimental): Combine SelfCheckGPT with Output-Based Knowledge Editing</li>
+</ol></p>
+<p><ol>
+<li>SELFCHECKGPT IMPLEMENTATION:</li>
+<li>For each question in the dataset, generate N=5 responses from the LLM (use N=3 for MINI_PILOT)</li>
+<li>Calculate semantic similarity between each pair of responses using a semantic similarity toolkit</li>
+<li>Calculate content overlap metrics between responses</li>
+<li>Flag potential hallucinations where responses contradict each other (low similarity or conflicting facts)</li>
+<li>For the SelfCheckGPT-only condition, simply flag the potentially hallucinated responses</li>
+</ol></p>
+<p><ol>
+<li>OUTPUT-BASED KNOWLEDGE EDITING IMPLEMENTATION:</li>
+<li>Create a knowledge editing module that takes an LLM output and attempts to correct factual inaccuracies</li>
+<li>The module should use a verification approach where a secondary LLM call is made to verify facts</li>
+<li>The verification prompt should ask the LLM to identify and correct potential factual errors</li>
+<li>For the Output-Based Knowledge Editing only condition, apply this to all responses</li>
+</ol></p>
+<p><ol>
+<li>INTEGRATED APPROACH IMPLEMENTATION:</li>
+<li>First apply SelfCheckGPT to identify potential hallucinations</li>
+<li>Then apply Output-Based Knowledge Editing only to the flagged responses</li>
+<li>The integration should pass information about the specific contradictions detected to the knowledge editing module</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>EVALUATION METRICS:</li>
+<li>Factual accuracy: Compare responses to ground truth answers in TruthfulQA</li>
+<li>Consistency: Measure the semantic similarity and content overlap between multiple responses to the same question</li>
+<li>Confidence: Track the model's confidence in its answers before and after correction</li>
+<li>Efficiency: Track the number of LLM calls required for each method</li>
+</ol></p>
+<p><ol>
+<li>ANALYSIS:</li>
+<li>Calculate mean and standard deviation for each metric across all conditions</li>
+<li>Perform statistical significance testing (e.g., t-tests or bootstrap resampling) to compare conditions</li>
+<li>Generate visualizations comparing the performance of each condition</li>
+<li>Perform qualitative analysis on a subset of examples to understand the types of corrections made</li>
+</ol></p>
+<p><ol>
+<li>IMPLEMENTATION DETAILS:</li>
+<li>Use a consistent LLM (e.g., GPT-4) across all conditions</li>
+<li>Set a consistent temperature (e.g., 0.7) for all LLM calls</li>
+<li>Implement proper logging to track all responses, corrections, and metrics</li>
+<li>Save all results to CSV files for further analysis</li>
+</ol></p>
+<p><ol>
+<li>EXECUTION FLOW:</li>
+<li>Run the MINI_PILOT first to verify the implementation</li>
+<li>If successful, run the PILOT</li>
+<li>After the PILOT completes, stop and do not run the FULL_EXPERIMENT (this will be manually triggered after human verification)</li>
+<li>For each run, generate a summary report with key metrics and findings</li>
+</ol></p>
+<p><p>The core innovation is in the integration step: SelfCheckGPT identifies specific contradictions between multiple responses, and this information is then used to guide the Output-Based Knowledge Editing process, making it more targeted and effective than applying each technique independently.</p></p>
+<p><p>Please implement this experiment and report the results, focusing on whether the integrated approach significantly outperforms the baseline methods.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/7c1707db9aafd209aa93db3251e7ebd593d55876">Paper 0: SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</a> (501 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/dd4d82299b4209db539d639f836fcee663cf72b3">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/9f405d2a43d4c62764b5a9a1630a20afbeb52450">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/ea700777ac3c7493824b1b2efba352432ae2c604">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/a68c08b8cbac36111910841032c2143029fde873">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/9612f21153f328bbe2d3a293d37e836e1a7b4cec">Paper 6</a> --&gt; <a href="https://www.semanticscholar.org/paper/a401764536247ec3caae61075fe0fa82ef7ba809">Paper 7</a>. The analysis of the related papers reveals a progression from understanding hallucinations as inherent features of LLMs to developing methods for mitigating and evaluating hallucinations through knowledge editing and propagation. The source paper focuses on zero-resource hallucination detection, while subsequent papers explore methods to alleviate, edit, and propagate knowledge to correct hallucinations. However, there is a gap in exploring how these methods can be integrated into a cohesive framework that leverages zero-resource detection with effective knowledge editing and propagation. A novel research idea could involve developing a unified framework that combines zero-resource hallucination detection with advanced knowledge editing and propagation techniques to enhance the factuality and reliability of LLM outputs.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/7c1707db9aafd209aa93db3251e7ebd593d55876" target="_blank">SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/dd4d82299b4209db539d639f836fcee663cf72b3" target="_blank">LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/3f915aab835cbfe69e7b2ea1c73b74ac8a2d384e" target="_blank">Alleviating Hallucinations of Large Language Models through Induced Hallucinations</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/9f405d2a43d4c62764b5a9a1630a20afbeb52450" target="_blank">Decoding by Contrasting Knowledge: Enhancing LLMs' Confidence on Edited Facts</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ea700777ac3c7493824b1b2efba352432ae2c604" target="_blank">Can Knowledge Editing Really Correct Hallucinations?</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/a68c08b8cbac36111910841032c2143029fde873" target="_blank">The Mirage of Model Editing: Revisiting Evaluation in the Wild</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/9612f21153f328bbe2d3a293d37e836e1a7b4cec" target="_blank">CaKE: Circuit-aware Editing Enables Generalizable Knowledge Learners</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/a401764536247ec3caae61075fe0fa82ef7ba809" target="_blank">PropMEND: Hypernetworks for Knowledge Propagation in LLMs</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/0c7f6e2d8b4feed05affb9a3e9b2591e19fe461e" target="_blank">Insights into Classifying and Mitigating LLMs' Hallucinations</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/495c36dba73fa97e2f742827c03c3d61a83b3a01" target="_blank">A New Benchmark and Reverse Validation Method for Passage-level Hallucination Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/451a657dabf80ebc43f6a3be518250b2cd5dfe1a" target="_blank">Through the Lens of Core Competency: Survey on Evaluation of Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5cfadb18e4e3c471d2dc991cf369608324ca8771" target="_blank">PFME: A Modular Approach for Fine-grained Hallucination Detection and Editing of Large Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/69f69f43e31af4b4a90b2cc7ed07a07e36a0e6db" target="_blank">A Survey on Collaborative Mechanisms Between Large and Small Language Models</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/ad8cbaf35efd4fe9f25705dbfe76e9ce6f6ec61d" target="_blank">Enabling Flexible Multi-LLM Integration for Scalable Knowledge Aggregation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/9a741f33aa4d782639e1f81a7e9c341b58b6ed2a" target="_blank">Securing Large Language Models: Threats, Vulnerabilities and Responsible Practices</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/ea63de3947d8313a244a1840730b2b80e16ee6fa" target="_blank">GraphGen: Enhancing Supervised Fine-Tuning for LLMs with Knowledge-Driven Synthetic Data Generation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/661bb35ce8b6a5d279f85119d0df581e572585b4" target="_blank">MALM: A Multi-Information Adapter for Large Language Models to Mitigate Hallucination</a> (2025)</li>
+</ol>
+</body>
+</html>

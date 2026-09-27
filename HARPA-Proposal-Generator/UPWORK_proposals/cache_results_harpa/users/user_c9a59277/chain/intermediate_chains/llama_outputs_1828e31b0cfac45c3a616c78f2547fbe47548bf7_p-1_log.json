@@ -1,0 +1,121 @@
+[
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "1828e31b0cfac45c3a616c78f2547fbe47548bf7",
+            "pmid": "2402.01135",
+            "title": "A Multi-Agent Conversational Recommender System",
+            "abstract": "Due to strong capabilities in conducting fluent, multi-turn conversations with users, Large Language Models (LLMs) have the potential to further improve the performance of Conversational Recommender System (CRS). Unlike the aimless chit-chat that LLM excels at, CRS has a clear target. So it is imperative to control the dialogue flow in the LLM to successfully recommend appropriate items to the users. Furthermore, user feedback in CRS can assist the system in better modeling user preferences, which has been ignored by existing studies. However, simply prompting LLM to conduct conversational recommendation cannot address the above two key challenges. In this paper, we propose Multi-Agent Conversational Recommender System (MACRS) which contains two essential modules. First, we design a multi-agent act planning framework, which can control the dialogue flow based on four LLM-based agents. This cooperative multi-agent framework will generate various candidate responses based on different dialogue acts and then choose the most appropriate response as the system response, which can help MACRS plan suitable dialogue acts. Second, we propose a user feedback-aware reflection mechanism which leverages user feedback to reason errors made in previous turns to adjust the dialogue act planning, and higher-level user information from implicit semantics. We conduct extensive experiments based on user simulator to demonstrate the effectiveness of MACRS in recommendation and user preferences collection. Experimental results illustrate that MACRS demonstrates an improvement in user interaction experience compared to directly using LLMs.",
+            "year": 2024,
+            "citation_count": 29
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. An Agentic AI-based Multi-Agent Framework for Recommender Systems": {
+                    "explanation": "This paper builds on the concept of multi-agent frameworks in recommender systems, similar to the source paper's MACRS. It explores the use of LLM agents and their relationships, which aligns with the source paper's focus on multi-agent act planning. However, it does not specifically depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2. An Electoral Approach to Diversify LLM-based Multi-Agent Collective Decision-Making": {
+                    "explanation": "This paper focuses on collective decision-making in LLM-based multi-agent systems, which is related to the source paper's multi-agent framework. However, it does not directly depend on the findings of the source paper, as it introduces a new electoral CDM module.",
+                    "relevance": 0
+                },
+                "3. Unleashing the Retrieval Potential of Large Language Models in Conversational Recommender Systems": {
+                    "explanation": "This paper addresses challenges in integrating LLMs into conversational recommender systems, similar to the source paper's focus on improving CRS with LLMs. It proposes a new model, ReFICR, which aligns with the source paper's aim to enhance CRS performance but does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "4. A Hybrid Multi-Agent Conversational Recommender System with LLM and Search Engine in E-commerce": {
+                    "explanation": "This paper proposes a hybrid multi-agent system for CRS, similar to the source paper's MACRS. It addresses issues like latency and scalability, which are relevant to the source paper's focus on improving user interaction experience. The hybrid approach partially depends on the multi-agent framework discussed in the source paper.",
+                    "relevance": 2
+                },
+                "5. Decoding Echo Chambers: LLM-Powered Simulations Revealing Polarization in Social Networks": {
+                    "explanation": "This paper focuses on LLM-based simulations for social networks and opinion dynamics, which is unrelated to the source paper's focus on conversational recommender systems.",
+                    "relevance": 0
+                },
+                "6. Beyond Persuasion: Towards Conversational Recommender System with Credible Explanations": {
+                    "explanation": "This paper addresses the credibility of explanations in CRS, which is related to the source paper's focus on user feedback and interaction. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. REAPER: Reasoning based Retrieval Planning for Complex RAG Systems": {
+                    "explanation": "This paper discusses retrieval planning in complex dialog systems, which is related to the source paper's focus on dialogue flow control in CRS. However, it introduces a new system (REAPER) that does not depend on the source paper's findings.",
+                    "relevance": 0
+                },
+                "8. Large Language Models for Recommendation: Past, Present, and Future": {
+                    "explanation": "This is a review paper that summarizes the evolution and impact of LLMs in recommender systems. It does not present novel hypotheses or findings and is not directly connected to the source paper.",
+                    "relevance": 0
+                },
+                "9. Multimodal Pretraining, Adaptation, and Generation for Recommendation: A Survey": {
+                    "explanation": "This is a survey paper on multimodal recommendation techniques and does not present novel hypotheses or findings related to the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. A Hybrid Multi-Agent Conversational Recommender System with LLM and Search Engine in E-commerce": {
+                    "explanation": "This paper proposes a hybrid multi-agent system for CRS, similar to the source paper's MACRS. It addresses issues like latency and scalability, which are relevant to the source paper's focus on improving user interaction experience. The hybrid approach partially depends on the multi-agent framework discussed in the source paper.",
+                    "relevance": 2
+                },
+                "2. An Agentic AI-based Multi-Agent Framework for Recommender Systems": {
+                    "explanation": "This paper builds on the concept of multi-agent frameworks in recommender systems, similar to the source paper's MACRS. It explores the use of LLM agents and their relationships, which aligns with the source paper's focus on multi-agent act planning. However, it does not specifically depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. Unleashing the Retrieval Potential of Large Language Models in Conversational Recommender Systems": {
+                    "explanation": "This paper addresses challenges in integrating LLMs into conversational recommender systems, similar to the source paper's focus on improving CRS with LLMs. It proposes a new model, ReFICR, which aligns with the source paper's aim to enhance CRS performance but does not directly depend on its findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "a3683fa4943f1bea24f769584e30c062d15305e2",
+            "title": "A Hybrid Multi-Agent Conversational Recommender System with LLM and Search Engine in E-commerce",
+            "abstract": "Multi-agent collaboration is the latest trending method to build conversational recommender systems (CRS), especially with the widespread use of Large Language Models (LLMs) recently. Typically, these systems employ several LLM agents, each serving distinct roles to meet user needs. In an industrial setting, it\u2019s essential for a CRS to exhibit low first token latency (i.e., the time taken from a user\u2019s input until the system outputs its first response token.) and high scalability\u2014for instance, minimizing the number of LLM inferences per user request\u2014to enhance user experience and boost platform profit. For example, JD.com\u2019s baseline CRS features two LLM agents and a search API but suffers from high first token latency and requires two LLM inferences per request (LIPR), hindering its performance. To address these issues, we introduce a Hybrid Multi-Agent Collaborative Recommender System (Hybrid-MACRS). It includes a central agent powered by a fine-tuned proprietary LLM and a search agent combining a related search module with a search engine. This hybrid system notably reduces first token latency by about 70% and cuts the LIPR from 2 to 1. We conducted thorough online A/B testing to confirm this approach\u2019s efficiency.",
+            "year": 2024,
+            "citation_count": 6,
+            "relevance": 2,
+            "explanation": "This paper proposes a hybrid multi-agent system for CRS, similar to the source paper's MACRS. It addresses issues like latency and scalability, which are relevant to the source paper's focus on improving user interaction experience. The hybrid approach partially depends on the multi-agent framework discussed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. An Agentic AI-based Multi-Agent Framework for Recommender Systems": {
+                    "explanation": "This paper discusses the use of LLMs in multi-agent frameworks for recommender systems, similar to the source paper's focus on multi-agent collaboration with LLMs. However, it does not directly build upon or depend on the specific findings or hypotheses of the source paper, as it is more focused on identifying and evaluating a framework rather than addressing the specific issues of latency and LIPR reduction tackled by the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. An Agentic AI-based Multi-Agent Framework for Recommender Systems": {
+                    "explanation": "This paper discusses the use of LLMs in multi-agent frameworks for recommender systems, similar to the source paper's focus on multi-agent collaboration with LLMs. However, it does not directly build upon or depend on the specific findings or hypotheses of the source paper, as it is more focused on identifying and evaluating a framework rather than addressing the specific issues of latency and LIPR reduction tackled by the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "1b463e8dbc63cd59641f3502c7c1a127573b1153",
+            "title": "An Agentic AI-based Multi-Agent Framework for Recommender Systems",
+            "abstract": "Agentic AI describes the use of LLMs in novel AI agents that can answer questions or collaborate to achieve goals. These LLM agents can be used to build a novel generation of recommender systems. However, little is known about the LLM agents or their relationships needed to provide recommendations. Once identified, a framework can be constructed. Moreover, evaluating this framework is still not well understood. In this paper, we propose an agentic AI-based, multi-agent framework for recommender systems. We first identify LLM agents proposed in the literature, followed by the identification of their relationships and we propose a framework to represent them. Next, we evaluate this framework with respect to the LLM agents and functionalities of a recommender system based on published studies. This study is a stepping stone in a novel paradigm shift in the construction of recommender systems.",
+            "year": 2024,
+            "citation_count": 2,
+            "relevance": 1,
+            "explanation": "This paper discusses the use of LLMs in multi-agent frameworks for recommender systems, similar to the source paper's focus on multi-agent collaboration with LLMs. However, it does not directly build upon or depend on the specific findings or hypotheses of the source paper, as it is more focused on identifying and evaluating a framework rather than addressing the specific issues of latency and LIPR reduction tackled by the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Agentic AI for Cloud Troubleshooting: A Review of Multi Agent System for Automated Cloud Support": {
+                    "explanation": "This paper is a review that discusses the applications of agentic AI across industries, including cloud troubleshooting. It does not propose a novel hypothesis or findings directly related to the source paper's framework for recommender systems, making it a review paper with no direct connection.",
+                    "relevance": 0
+                },
+                "2. The Rise of Agentic AI: Implications, Concerns, and the Path Forward": {
+                    "explanation": "This paper explores the broader implications and potential of agentic AI, including its societal and business impacts. It does not specifically build upon the source paper's framework for recommender systems, nor does it depend on its findings. It is more of a conceptual exploration rather than a direct continuation or application of the source paper's work.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

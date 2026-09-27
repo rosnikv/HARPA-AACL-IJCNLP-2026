@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3b87e795f1f501843f7f99e83e38f125f6af8600</p>
+<hr>
+<section><h2>Title</h2>
+<p>Coherent Multi-Frame Story Visualization via Sequential Conditional GANs with Scene Graph Intermediaries</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current story-to-image generation models struggle to maintain coherent visual elements and spatial relationships across multiple frames, often resulting in inconsistent character appearances and scene layouts in multi-sentence narratives. This inconsistency significantly hampers the quality and usefulness of generated visual stories.</p>
+<h3>Motivation</h3>
+<p>Existing approaches typically use sequential GANs or transformer-based models to generate images frame-by-frame, but lack explicit mechanisms to ensure global consistency. By introducing an intermediate semantic scene graph representation, we can explicitly model and enforce consistency in object relationships and attributes across the narrative sequence. This approach bridges the gap between text understanding and image generation, allowing for more coherent and faithful visual storytelling.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a two-stage approach: 1) A text-to-scene-graph transformer that converts multi-sentence narratives into a sequence of semantic scene graphs, capturing objects, attributes, and relationships. 2) A graph-to-image GAN that synthesizes images from these scene graphs while maintaining global consistency. The scene graph sequence acts as a 'storyboard', allowing for iterative refinement. We introduce a novel graph attention mechanism in the GAN to focus on relevant subgraphs for each frame, and a consistency loss that penalizes deviations in object appearances across frames.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Preprocess the PororoSV and FlintstonesSV datasets. Extract text descriptions, corresponding scene graphs, and ground truth images for each story sequence.</p><p><strong>Step 2: Implement Text-to-Scene-Graph Transformer</strong></p><p>Develop a transformer model that takes multi-sentence narratives as input and outputs a sequence of scene graphs. Use the extracted scene graphs from Step 1 as training data.</p><p><strong>Step 3: Implement Graph-to-Image GAN</strong></p><p>Develop a GAN model that takes scene graphs as input and generates corresponding images. Implement the novel graph attention mechanism and consistency loss.</p><p><strong>Step 4: Training</strong></p><p>Train both models separately. For the transformer, use cross-entropy loss on scene graph prediction. For the GAN, use a combination of adversarial loss, reconstruction loss, and the proposed consistency loss.</p><p><strong>Step 5: End-to-End Pipeline</strong></p><p>Integrate the two models into a single pipeline that takes a multi-sentence narrative as input and outputs a sequence of coherent images.</p><p><strong>Step 6: Baseline Implementation</strong></p><p>Implement state-of-the-art sequential GAN and transformer baselines for comparison.</p><p><strong>Step 7: Evaluation</strong></p><p>Evaluate the proposed method and baselines on test sets from PororoSV and FlintstonesSV. Use FID for image quality, CLIP score for text-image alignment, and implement a new metric for cross-frame consistency based on object tracking and attribute preservation.</p><p><strong>Step 8: Analysis</strong></p><p>Perform ablation studies to understand the contribution of each component (scene graph intermediary, graph attention, consistency loss) to the overall performance.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Pororo and Crong are playing in the snow. Pororo builds a snowman while Crong makes snow angels. They decide to have a snowball fight.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>A sequence of three images showing: 1) Pororo and Crong in a snowy setting, 2) Pororo next to a snowman and Crong lying in the snow, 3) Pororo and Crong throwing snowballs. However, the characters' appearances and the background details may be inconsistent across frames.</p><p><strong>Proposed Prompt Input</strong></p><p>Pororo and Crong are playing in the snow. Pororo builds a snowman while Crong makes snow angels. They decide to have a snowball fight.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>A sequence of three images showing: 1) Pororo and Crong in a consistent snowy setting, 2) Pororo next to a snowman and Crong lying in the snow, with consistent character appearances and background, 3) Pororo and Crong throwing snowballs, maintaining visual coherence with the previous frames.</p><p><strong>Explanation</strong></p><p>The proposed method maintains consistent character appearances, background details, and spatial relationships across all frames, resulting in a more coherent visual story compared to the baseline method.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed method fails to significantly outperform baselines, we can pivot to an analysis paper focusing on the challenges of maintaining visual consistency in multi-frame story generation. We would conduct a thorough error analysis to identify common failure modes, such as object persistence, attribute consistency, or spatial relationship preservation. We could also investigate the effectiveness of the scene graph as an intermediate representation by visualizing and analyzing the generated graphs. Additionally, we might explore alternative architectures for the graph-to-image GAN, such as incorporating memory mechanisms or exploring different attention mechanisms. Finally, we could develop more fine-grained evaluation metrics that capture specific aspects of visual consistency, which could provide insights for future research in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/4b0f3436810a5d8b3a8a557e0185d77a4ee38f74" target="_blank">Lay2Story: Extending Diffusion Transformers for Layout-Togglable Story Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/9f7914c2577626868e6a69f2c9605b38f941055b" target="_blank">StoryDALL-E: Adapting Pretrained Text-to-Image Transformers for Story Continuation</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b8f2ba261756ca551ba68940e08a9466c2602f79" target="_blank">Sequential Attention GAN for Interactive Image Editing</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8a9eb7a26d84965e69e4da4ff8f5e1fa7daa360c" target="_blank">Automated Visual Generation using GAN with Textual Information Feeds</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b8f07bdc2b9322c5a34e11cf52b7835c5b7ef4ea" target="_blank">Test-time Prompt Refinement for Text-to-Image Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ebd4d665ddd29e67961e3041574cb1ecf9d31336" target="_blank">Progressive Text-to-Image Diffusion with Soft Latent Direction</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/04016d3bad1f15b09b94b970b58e4e7a23562532" target="_blank">Audit & Repair: An Agentic Framework for Consistent Story Visualization in Text-to-Image Diffusion Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c25bd3625c6e18ca91fd8903f82703999e14bb90" target="_blank">Captain Cinema: Towards Short Movie Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dbec75d2309cca4b48389b6f3819b963f8b3b430" target="_blank">StorySync: Training-Free Subject Consistency in Text-to-Image Generation via Region Harmonization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f9194c7aaa42e64af48f7bd60d7f7677d6c1fe89" target="_blank">FairyGen: Storied Cartoon Video from a Single Child-Drawn Character</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

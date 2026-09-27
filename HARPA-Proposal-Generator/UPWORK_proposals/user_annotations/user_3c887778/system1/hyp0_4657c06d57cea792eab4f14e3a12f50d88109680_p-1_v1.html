@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>4657c06d57cea792eab4f14e3a12f50d88109680</p>
+<hr>
+<h2>Title</h2>
+<p>Combining dynamic graphlets and temporal motifs to enhance dynamic structural embeddings.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating dynamic graphlets with temporal motifs will improve the accuracy of dynamic structural embeddings in capturing the temporal evolution of structural roles over weekly intervals, as measured by cosine similarity.</p>
+<h3>Motivation</h3>
+<p>Existing methods primarily focus on capturing either structural proximity or equivalence in dynamic networks, often neglecting the nuanced interplay between dynamic graphlets and temporal motifs. While dynamic graphlets excel in capturing inter-snapshot structural dynamics, they do not fully account for the temporal patterns of interactions. Conversely, temporal motifs highlight interaction sequences but may miss structural equivalence. No prior work has effectively integrated these two approaches to enhance dynamic structural embeddings, especially over weekly intervals, which could provide a more comprehensive understanding of network evolution.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of dynamic graphlets and temporal motifs to enhance dynamic structural embeddings in temporal networks. Dynamic graphlets are used to capture the structural equivalence of nodes over time, while temporal motifs focus on the temporal patterns of interactions. By combining these two approaches, the study aims to provide a more comprehensive view of how nodes' structural roles evolve over weekly intervals. The hypothesis posits that this integration will result in more accurate dynamic structural embeddings, as measured by cosine similarity. This approach addresses the gap in existing research where either structural proximity or temporal interaction patterns are considered in isolation, thus missing the potential synergies between the two. The expected outcome is a more nuanced understanding of network dynamics, which could improve tasks such as node classification and community detection.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/ecc3c0d26e343977d0da11e692248a6e5d5bf41a">Dynamic Graphlets</a>: Dynamic graphlets are used to capture the structural equivalence of nodes over time by analyzing isomorphic time-connected temporal subgraphs. They provide a framework for understanding how a node's neighborhood structure evolves, offering insights into inter-snapshot relationships. In this experiment, dynamic graphlets will be used to define the structural similarity network, which will serve as the foundation for embedding nodes based on their evolving roles.</p>
+<p><a href="https://www.semanticscholar.org/paper/a97f9670499d7063d7b70b16a3f772eba9f404ad">Temporal Motifs</a>: Temporal motifs capture the temporal dynamics of node interactions by identifying statistically significant subgraph patterns within a specific time window. They provide a fine-grained view of interaction sequences, which is crucial for understanding the temporal evolution of network structures. In this study, temporal motifs will be integrated with dynamic graphlets to enhance the temporal aspect of structural embeddings, ensuring that both structural equivalence and interaction patterns are preserved.</p>
+<p><a href="https://www.semanticscholar.org/paper/74c3845a74b9c3abe84f787d24407a932162ece0">Cosine Similarity</a>: Cosine similarity will be used as the primary metric to evaluate the accuracy of dynamic structural embeddings. It measures the similarity between node embeddings by calculating the cosine of the angle between their vector representations. This metric is chosen for its ability to quantify the degree of alignment between nodes' structural roles over time, providing a clear indication of how well the integrated approach captures the temporal evolution of structural roles.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves several key steps: First, construct dynamic graphlets to capture the structural equivalence of nodes over time. This involves identifying isomorphic time-connected temporal subgraphs that reflect the evolving neighborhood structures of nodes. Next, identify temporal motifs within the network to capture the temporal patterns of interactions. This requires selecting a suitable null model to evaluate the significance of subgraph patterns and ensuring that the temporal information is retained within the embedding process. The integration of dynamic graphlets and temporal motifs is achieved by combining their outputs into a unified embedding framework. This involves aligning the structural similarity network derived from dynamic graphlets with the temporal patterns identified by temporal motifs, ensuring that both structural and temporal dynamics are preserved. The final step involves evaluating the accuracy of the resulting dynamic structural embeddings using cosine similarity, which measures the alignment of nodes' structural roles over weekly intervals. This approach leverages the strengths of both dynamic graphlets and temporal motifs, providing a more comprehensive understanding of network dynamics.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating dynamic graphlets with temporal motifs improves the accuracy of dynamic structural embeddings in capturing the temporal evolution of structural roles over weekly intervals, as measured by cosine similarity.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three approaches for creating dynamic structural embeddings:<br />
+1. Baseline 1: Dynamic graphlets only<br />
+2. Baseline 2: Temporal motifs only<br />
+3. Experimental: Integrated approach combining dynamic graphlets and temporal motifs</p></p>
+<p><p>The hypothesis is that the integrated approach will outperform both baselines in terms of cosine similarity between node embeddings across weekly intervals, as well as in downstream tasks like node classification and community detection.</p></p>
+<p><h4 class="custom-heading"><strong>Data Requirements</strong></h4>
+<p>Please use a temporal network dataset that has:<br />
+- Timestamped interactions between nodes<br />
+- Weekly intervals (or data that can be aggregated into weekly snapshots)<br />
+- Sufficient temporal depth (at least 4-8 weeks of data)<br />
+- Node labels for classification tasks (if available)</p></p>
+<p><p>Suggested datasets include:<br />
+- DBLP co-authorship network<br />
+- Email communication networks<br />
+- Social network interactions</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Data Preparation</strong></h4>
+<ul>
+<li>Load the temporal network data</li>
+<li>Preprocess and clean the data</li>
+<li>Divide the data into weekly snapshots</li>
+<li>Create training and testing splits (e.g., use earlier weeks for training, later weeks for testing)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Baseline 1: Dynamic Graphlets Only</strong></h4>
+<ul>
+<li>Implement dynamic graphlet construction for each weekly snapshot</li>
+<li>Count the occurrences of different dynamic graphlet types for each node</li>
+<li>Create a feature vector for each node based on these counts</li>
+<li>Generate node embeddings using these feature vectors</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Baseline 2: Temporal Motifs Only</strong></h4>
+<ul>
+<li>Implement temporal motif identification for the network</li>
+<li>Define a suitable null model to evaluate the significance of temporal motifs</li>
+<li>Count the occurrences of different temporal motif types for each node</li>
+<li>Create a feature vector for each node based on these counts</li>
+<li>Generate node embeddings using these feature vectors</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Experimental: Integrated Approach</strong></h4>
+<ul>
+<li>Implement both dynamic graphlet construction and temporal motif identification</li>
+<li>Create a unified embedding framework that combines both approaches</li>
+<li>This could involve:<br />
+  a) Concatenating the feature vectors from both approaches<br />
+  b) Creating a weighted combination of the feature vectors<br />
+  c) Using one approach to guide or constrain the other</li>
+<li>Generate node embeddings using this integrated approach</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>5. Evaluation</strong></h4>
+<ul>
+<li>Primary Metric: Calculate cosine similarity between node embeddings across weekly intervals for all three approaches</li>
+<li>Secondary Metrics:<br />
+  a) Node classification accuracy (if labels are available)<br />
+  b) Community detection performance (modularity, NMI, etc.)</li>
+<li>Statistical Analysis: Compare the performance of the three approaches using appropriate statistical tests</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Implementation</strong></h4>
+<p>Implement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.</p></p>
+<p><h4 class="custom-heading"><strong>MINI_PILOT Configuration</strong></h4>
+<ul>
+<li>Use only 2-3 weeks of data</li>
+<li>Select a small subset of nodes (e.g., 50-100 nodes)</li>
+<li>Run with minimal iterations/epochs for any optimization procedures</li>
+<li>Purpose: Quick debugging and verification of code functionality</li>
+<li>Expected runtime: 5-10 minutes</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>PILOT Configuration</strong></h4>
+<ul>
+<li>Use 4-6 weeks of data</li>
+<li>Select a moderate subset of nodes (e.g., 500-1000 nodes)</li>
+<li>Run with moderate iterations/epochs for optimization procedures</li>
+<li>Purpose: Verify if the approach shows promising results and if differences between methods are emerging</li>
+<li>Expected runtime: 30-60 minutes</li>
+<li>Use training data for training and validation data for evaluation</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>FULL_EXPERIMENT Configuration</strong></h4>
+<ul>
+<li>Use all available weeks of data</li>
+<li>Include all nodes in the network</li>
+<li>Run with full iterations/epochs for optimization procedures</li>
+<li>Purpose: Complete evaluation of the hypothesis</li>
+<li>Use training data for training, validation data for hyperparameter tuning, and test data for final evaluation</li>
+</ul></p>
+<p><p>Start by running the MINI_PILOT first, then if everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if appropriate).</p></p>
+<p><h4 class="custom-heading"><strong>Output Requirements</strong></h4>
+<ol>
+<li>Log files containing:</li>
+<li>Parameters used for each approach</li>
+<li>Training progress (if applicable)</li>
+<li>Intermediate results</li>
+</ol></p>
+<p><ol>
+<li>Results file containing:</li>
+<li>Cosine similarity scores for each approach across weekly intervals</li>
+<li>Node classification accuracy (if applicable)</li>
+<li>Community detection performance metrics</li>
+<li>Statistical comparison between approaches</li>
+<li>Visualizations of the embeddings (e.g., t-SNE or PCA projections)</li>
+</ol></p>
+<p><ol>
+<li>Saved models and embeddings for each approach</li>
+</ol></p>
+<p><ol>
+<li>A summary report with:</li>
+<li>Description of the implemented methods</li>
+<li>Key findings</li>
+<li>Statistical analysis results</li>
+<li>Conclusions regarding the hypothesis</li>
+</ol></p>
+<p><p>Please implement this experiment with clear, well-documented code that follows best practices for reproducibility.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/4657c06d57cea792eab4f14e3a12f50d88109680">Paper 0: Learning Structural Node Embeddings via Diffusion Wavelets</a> (397 citations, 2017). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/39058bbc1420dc3c218fe494aa183303550440f8">Paper 1</a>. The analysis reveals that while GraphWave effectively captures structural roles using diffusion wavelets, MOHONE extends this idea to knowledge graphs by modeling higher-order network effects. However, both approaches primarily focus on structural similarity and network connectivity. A potential research idea could explore the integration of temporal dynamics into structural node embeddings, as neither paper addresses how structural roles evolve over time. This would advance the field by providing insights into the temporal evolution of networks, which is crucial for dynamic network analysis.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/4657c06d57cea792eab4f14e3a12f50d88109680" target="_blank">Learning Structural Node Embeddings via Diffusion Wavelets</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/39058bbc1420dc3c218fe494aa183303550440f8" target="_blank">MOHONE: Modeling Higher Order Network Effects in KnowledgeGraphs via Network Infused Embeddings</a> (2018)</li>
+<li><a href="https://www.semanticscholar.org/paper/74c3845a74b9c3abe84f787d24407a932162ece0" target="_blank">Unifying Structural Proximity and Equivalence for Enhanced Dynamic Network Embedding</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/ecc3c0d26e343977d0da11e692248a6e5d5bf41a" target="_blank">Exploring the structure and function of temporal networks with dynamic graphlets</a> (2014)</li>
+<li><a href="https://www.semanticscholar.org/paper/7111d50bebf139e5c2c226ff2b424dc4f9a3deb6" target="_blank">Temporal Network Embedding with Micro- and Macro-dynamics</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/8d04bf06ca5f21ccf1923a595522eb4b25abae74" target="_blank">Dynamic Network Embedding Survey</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/6ba7d6fd9b7e169ca9a6ac3577e9c4b8ff688fb5" target="_blank">Role-dynamics: fast mining of large dynamic networks</a> (2012)</li>
+<li><a href="https://www.semanticscholar.org/paper/2eefd68beb64c89493a8ae5a941aaa1379ea22b0" target="_blank">Dynamic Network Embeddings for Network Evolution Analysis</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/0f7f5679615effcc4c9b98cf2deb17c30744a6d7" target="_blank">struc2vec: Learning Node Representations from Structural Identity</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/de9b9837bd04b62563201cc41420b6a4aaf52e01" target="_blank">Network representation learning based on social similarities</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/632c675f23a2d297d1eca82bf76e65ab0d1c9d6f" target="_blank">RiWalk: Fast Structural Node Embedding via Role Identification</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/a97f9670499d7063d7b70b16a3f772eba9f404ad" target="_blank">TME-BNA: Temporal Motif-Preserving Network Embedding with Bicomponent Neighbor Aggregation</a> (2021)</li>
+</ol>
+</body>
+</html>

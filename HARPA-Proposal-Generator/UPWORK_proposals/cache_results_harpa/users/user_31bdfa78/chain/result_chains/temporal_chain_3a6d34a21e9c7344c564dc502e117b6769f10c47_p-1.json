@@ -1,0 +1,46 @@
+[
+    {
+        "paperId": "3a6d34a21e9c7344c564dc502e117b6769f10c47",
+        "pmid": "2401.06866",
+        "title": "Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data",
+        "abstract": "Large language models (LLMs) are capable of many natural language tasks, yet they are far from perfect. In health applications, grounding and interpreting domain-specific and non-linguistic data is crucial. This paper investigates the capacity of LLMs to make inferences about health based on contextual information (e.g. user demographics, health knowledge) and physiological data (e.g. resting heart rate, sleep minutes). We present a comprehensive evaluation of 12 state-of-the-art LLMs with prompting and fine-tuning techniques on four public health datasets (PMData, LifeSnaps, GLOBEM and AW_FB). Our experiments cover 10 consumer health prediction tasks in mental health, activity, metabolic, and sleep assessment. Our fine-tuned model, HealthAlpaca exhibits comparable performance to much larger models (GPT-3.5, GPT-4 and Gemini-Pro), achieving the best performance in 8 out of 10 tasks. Ablation studies highlight the effectiveness of context enhancement strategies. Notably, we observe that our context enhancement can yield up to 23.8% improvement in performance. While constructing contextually rich prompts (combining user context, health knowledge and temporal information) exhibits synergistic improvement, the inclusion of health knowledge context in prompts significantly enhances overall performance.",
+        "year": 2024,
+        "citation_count": 78
+    },
+    {
+        "paperId": "91aa0251b5809ac6d380dd1be8544a1a59be4762",
+        "title": "HARGPT: Are LLMs Zero-Shot Human Activity Recognizers?",
+        "abstract": "There is an ongoing debate regarding the potential of Large Language Models (LLMs) as foundational models seamlessly integrated with Cyber- Physical Systems (CPS) for interpreting the physical world. In this paper, we carry out a case study to answer the following question: Are LLMs capable of zero-shot human activity recognition (HAR)? Our study, HARGPT, presents an affirmative answer by demonstrating that LLMs can comprehend raw IMU data and perform HAR tasks in a zero-shot manner, with only appropriate prompts. HARGPT inputs raw IMU data into LLMs and utilizes the role-play and \u201cthink step-by-step\u201c strategies for prompting. We benchmark HARGPT on GPT4 using two public datasets of different inter-class similarities and compare various baselines both based on traditional machine learning and state-of-the-art deep classification models. Remarkably, LLMs successfully recognize human activities from raw IMU data and consistently outperform all the baselines on both datasets. Our findings indicate that by effective prompting, LLMs can interpret raw IMU data based on their knowledge base, possessing a promising potential to analyze raw sensor data of the physical world effectively.",
+        "year": 2024,
+        "citation_count": 36,
+        "relevance": 2,
+        "explanation": "This paper investigates LLMs for human activity recognition using IMU data, which is directly related to the source paper's exploration of LLMs for health prediction with wearable sensor data."
+    },
+    {
+        "paperId": "894adb15e7f1dfa9e081c98434d10825205837b6",
+        "title": "SensorLLM: Aligning Large Language Models with Motion Sensors for Human Activity Recognition",
+        "abstract": "We introduce SensorLLM, a two-stage framework that enables Large Language Models (LLMs) to perform human activity recognition (HAR) from sensor data. Despite their strong reasoning and generalization capabilities, LLMs remain underutilized for motion sensor data due to the lack of semantic context in time-series, computational constraints, and challenges in processing numerical inputs. SensorLLM addresses these limitations through a Sensor-Language Alignment stage, where we introduce special tokens for each sensor channel and automatically generate textual trend descriptions. This alignment enables LLMs to capture numerical variations, channel-specific features, and data of varying durations\u2014without requiring human annotations. In the subsequent Task-Aware Tuning stage, we refine the model for HAR classification, achieving performance that matches or surpasses state-of-the-art methods. Our results demonstrate that SensorLLM evolves into an effective sensor learner, reasoner, and classifier through Sensor-Language Alignment, generalizing across diverse HAR datasets. We believe this work establishes a foundation for future research on time-series and text alignment, paving the way for foundation models in sensor data analysis. Our codes are available at https: //github.com/zechenli03/SensorLLM .",
+        "year": 2024,
+        "citation_count": 8,
+        "relevance": 2,
+        "explanation": "This paper builds directly on the source paper's findings about LLMs' capabilities in zero-shot human activity recognition, proposing a framework for aligning LLMs with motion sensors."
+    },
+    {
+        "paperId": "fa14998f98bca211b355837b3015d8879cc8db53",
+        "title": "RadarLLM: Empowering Large Language Models to Understand Human Motion from Millimeter-wave Point Cloud Sequence",
+        "abstract": "Millimeter-wave radar provides a privacy-preserving solution for human motion analysis, yet its sparse point clouds pose significant challenges for semantic understanding. We present Radar-LLM, the first framework that leverages large language models (LLMs) for human motion understanding using millimeter-wave radar as the sensing modality. Our approach introduces two key innovations: (1) a motion-guided radar tokenizer based on our Aggregate VQ-VAE architecture that incorporates deformable body templates and masked trajectory modeling to encode spatiotemporal point clouds into compact semantic tokens, and (2) a radar-aware language model that establishes cross-modal alignment between radar and text in a shared embedding space. To address data scarcity, we introduce a physics-aware synthesis pipeline that generates realistic radar-text pairs from motion-text datasets. Extensive experiments demonstrate that Radar-LLM achieves state-of-the-art performance across both synthetic and real-world benchmarks, enabling accurate translation of millimeter-wave signals to natural language descriptions. This breakthrough facilitates comprehensive motion understanding in privacy-sensitive applications like healthcare and smart homes. We will release the full implementation to support further research on https://inowlzy.github.io/RadarLLM/.",
+        "year": 2025,
+        "citation_count": 1,
+        "relevance": 2,
+        "explanation": "RadarLLM uses LLMs for human motion understanding with radar data, similar to SensorLLM's use of LLMs for HAR with sensor data. It shares the concept of using LLMs for sensor data analysis, making it partially dependent on the ideas from SensorLLM."
+    },
+    {
+        "paperId": "ab40cad49bbd49617d81321e6e51277ec523f261",
+        "title": "How to Talk to Your Classifier: Conditional Text Generation with Radar\u2013Visual Latent Space",
+        "abstract": "Many radar applications rely primarily on visual classification for their evaluations. However, new research is integrating textual descriptions alongside visual input and showing that such multimodal fusion improves contextual understanding. A critical issue in this area is the effective alignment of coded text with corresponding images. To this end, our paper presents an adversarial training framework that generates descriptive text from the latent space of a visual radar classifier. Our quantitative evaluations show that this dual-task approach maintains a robust classification accuracy of 98.3% despite the inclusion of Gaussian-distributed latent spaces. Beyond these numerical validations, we conduct a qualitative study of the text output in relation to the classifier\u2019s predictions. This analysis highlights the correlation between the generated descriptions and the assigned categories and provides insight into the classifier\u2019s visual interpretation processes, particularly in the context of normally uninterpretable radar data.",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 1,
+        "explanation": "This paper explores the integration of textual descriptions with visual input in radar applications, which aligns with the source paper's focus on cross-modal alignment between radar and text. However, it primarily focuses on visual classification and text generation from latent spaces, which is a different approach than the source paper's use of LLMs for semantic understanding of radar data. The connection is more about the shared interest in multimodal fusion rather than direct dependency on the source paper's findings."
+    }
+]

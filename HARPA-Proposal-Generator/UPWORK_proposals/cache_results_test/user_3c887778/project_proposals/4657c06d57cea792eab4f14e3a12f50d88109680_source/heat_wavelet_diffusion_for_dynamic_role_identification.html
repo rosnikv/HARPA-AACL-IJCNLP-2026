@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>4657c06d57cea792eab4f14e3a12f50d88109680</p>
+<hr>
+<section><h2>Title</h2>
+<p>DynRoleWave: Unsupervised Graph Embeddings using Heat Wavelet Diffusion for Dynamic Structural Role Identification</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing graph embedding methods often struggle to capture the evolving structural roles of nodes in dynamic networks, where the topology and node attributes change over time. This limitation hinders the accurate representation of node roles in time-varying graph structures, which is crucial for various downstream tasks such as node classification, link prediction, and anomaly detection in dynamic networks.</p>
+<h3>Motivation</h3>
+<p>Current approaches like DeepWalk and node2vec primarily focus on static graphs and fail to account for temporal dynamics in role identification. Heat wavelet diffusion can model the propagation of information across a graph over time, potentially capturing the evolution of structural roles more effectively than static methods. By leveraging this approach, we can develop a more robust and accurate method for identifying and tracking structural roles in dynamic networks.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose DynRoleWave, a novel unsupervised graph embedding framework that leverages heat wavelet diffusion to identify and track structural roles in dynamic networks. The method consists of three key components: 1) A time-dependent heat kernel that models the diffusion process across the evolving graph structure. 2) A wavelet transformation applied to the heat kernel to capture multi-scale structural information. 3) A recurrent neural network that learns to encode the temporal sequence of wavelet coefficients into dynamic role embeddings. The heat kernel is computed using a fast approximation method based on Chebyshev polynomials, allowing for efficient processing of large-scale graphs. The wavelet transformation uses a family of Mexican hat wavelets with varying scales to capture both local and global structural properties. The RNN encoder uses an attention mechanism to focus on the most relevant temporal patterns for role identification. The entire framework is trained end-to-end using a contrastive learning objective that encourages similar roles to have similar embeddings across time steps.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess dynamic network datasets: 1) Citation networks (e.g., DBLP), 2) Social networks (e.g., Facebook friendship graph), 3) Blockchain transaction graphs (e.g., Bitcoin or Ethereum transaction networks). For each dataset, create snapshots at regular time intervals to represent the evolving graph structure.</p><p><strong>Step 2: Implement Baseline Models</strong></p><p>Implement static baselines (DeepWalk, node2vec) and existing dynamic embedding methods (DynGEM, DynamicTriad) using open-source libraries or by adapting available implementations.</p><p><strong>Step 3: Implement DynRoleWave</strong></p><p>a) Implement the time-dependent heat kernel computation using Chebyshev polynomial approximation. b) Implement the wavelet transformation using Mexican hat wavelets at multiple scales. c) Implement the RNN encoder with attention mechanism using PyTorch or TensorFlow. d) Implement the contrastive learning objective for training the model end-to-end.</p><p><strong>Step 4: Training and Hyperparameter Tuning</strong></p><p>Train DynRoleWave and baseline models on the prepared datasets. Use grid search or Bayesian optimization to tune hyperparameters such as the number of wavelet scales, RNN hidden size, and learning rate. Use a validation set to select the best hyperparameters for each model.</p><p><strong>Step 5: Evaluation on Node Classification</strong></p><p>a) For each dataset, define a node classification task (e.g., predicting research areas in citation networks or community detection in social networks). b) Use the learned embeddings as input features for a simple classifier (e.g., logistic regression or random forest). c) Compare the classification performance of DynRoleWave against baselines using metrics such as accuracy, F1-score, and AUC-ROC.</p><p><strong>Step 6: Evaluation on Link Prediction</strong></p><p>a) For each dataset, create a link prediction task by hiding a portion of edges in the final time step. b) Use the learned embeddings to compute similarity scores between node pairs (e.g., cosine similarity or dot product). c) Evaluate the link prediction performance using metrics such as AUC-ROC and Average Precision.</p><p><strong>Step 7: Evaluation on Anomaly Detection</strong></p><p>a) For each dataset, inject synthetic anomalies (e.g., sudden changes in node connectivity or attribute values) at random time steps. b) Use the learned embeddings to detect anomalies by measuring the temporal consistency of node representations. c) Compare the anomaly detection performance of DynRoleWave against baselines using metrics such as precision, recall, and F1-score.</p><p><strong>Step 8: Qualitative Analysis</strong></p><p>a) Visualize the learned embeddings using dimensionality reduction techniques (e.g., t-SNE or UMAP) to observe the separation of different structural roles. b) Analyze the attention weights of the RNN encoder to identify which temporal patterns are most important for role identification. c) Case studies: Select specific nodes and analyze how their structural roles evolve over time, comparing the insights gained from DynRoleWave with those from baseline methods.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Conduct ablation studies to evaluate the contribution of each component in DynRoleWave: a) Compare performance with and without the wavelet transformation. b) Evaluate the impact of using different numbers of wavelet scales. c) Compare the RNN encoder with simpler aggregation methods (e.g., mean pooling) for temporal information.</p><p><strong>Step 10: Scalability Analysis</strong></p><p>Evaluate the computational efficiency of DynRoleWave compared to baselines by measuring training time and memory usage on graphs of increasing size and time steps.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (DeepWalk)</strong></p><p>Generate node embeddings for the DBLP citation network using DeepWalk with the following parameters: embedding dimension = 128, walk length = 80, number of walks per node = 10, window size = 10</p><p><strong>Baseline Prompt Expected Output (DeepWalk)</strong></p><p>Node embeddings generated for the DBLP citation network using DeepWalk. Each node is represented by a 128-dimensional vector. These embeddings capture the static network structure but do not account for temporal dynamics.</p><p><strong>Baseline Prompt Input (DynamicTriad)</strong></p><p>Generate dynamic node embeddings for the DBLP citation network using DynamicTriad with the following parameters: embedding dimension = 128, time steps = 10, beta_1 = 0.1, beta_2 = 0.1, beta_3 = 0.1</p><p><strong>Baseline Prompt Expected Output (DynamicTriad)</strong></p><p>Dynamic node embeddings generated for the DBLP citation network using DynamicTriad. Each node is represented by a sequence of 128-dimensional vectors, one for each time step. These embeddings capture some temporal dynamics but may not effectively model the evolution of structural roles.</p><p><strong>Proposed Prompt Input (DynRoleWave)</strong></p><p>Generate dynamic node embeddings for the DBLP citation network using DynRoleWave with the following parameters: embedding dimension = 128, time steps = 10, number of wavelet scales = 5, RNN hidden size = 256, attention heads = 4</p><p><strong>Proposed Prompt Expected Output (DynRoleWave)</strong></p><p>Dynamic node embeddings generated for the DBLP citation network using DynRoleWave. Each node is represented by a sequence of 128-dimensional vectors, one for each time step. These embeddings capture the evolution of structural roles by leveraging heat wavelet diffusion and attention-based temporal encoding. The multi-scale wavelet transformation allows for capturing both local and global structural properties, while the RNN with attention mechanism effectively models the temporal dynamics of node roles.</p><p><strong>Explanation</strong></p><p>DynRoleWave is expected to outperform both static (DeepWalk) and existing dynamic (DynamicTriad) baselines by more effectively capturing the evolution of structural roles in the dynamic network. The heat wavelet diffusion approach allows for modeling information propagation across the graph over time, while the multi-scale wavelet transformation captures structural properties at different granularities. The attention-based RNN encoder learns to focus on the most relevant temporal patterns for role identification, resulting in more informative and temporally consistent embeddings.</p>
+<h3>Fallback Plan</h3>
+<p>If DynRoleWave does not significantly outperform baseline methods, we can explore several alternative directions to gain insights and potentially improve the method. First, we can conduct a detailed analysis of the learned heat kernel and wavelet coefficients to understand how they capture structural information in dynamic graphs. This analysis could reveal limitations in our current approach and suggest improvements to the diffusion process or wavelet transformation. Second, we can investigate different temporal encoding mechanisms, such as temporal convolutional networks or transformer architectures, which might better capture complex temporal dependencies in node roles. Third, we can explore incorporating additional structural features, such as graphlet counts or local network motifs, to enhance the representation of node roles. Finally, if the performance gains are minimal, we can pivot the project towards an in-depth comparative analysis of different dynamic graph embedding techniques, focusing on their strengths and weaknesses in capturing evolving structural roles across various types of dynamic networks. This analysis could provide valuable insights for future research directions in dynamic graph representation learning.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/e24cdf73b3e7e590c2fe5ecac9ae8aa983801367" target="_blank">Neural Message Passing for Quantum Chemistry</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0f7f5679615effcc4c9b98cf2deb17c30744a6d7" target="_blank">struc2vec: Learning Node Representations from Structural Identity</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/fff114cbba4f3ba900f33da574283e3de7f26c83" target="_blank">DeepWalk: online learning of social representations</a> (2014)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/36eff562f65125511b5dfab68ce7f7a943c27478" target="_blank">Semi-Supervised Classification with Graph Convolutional Networks</a> (2016)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d1bfeed240709725c78bc72ea40e55410b373dc" target="_blank">Convolutional Networks on Graphs for Learning Molecular Fingerprints</a> (2015)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d2e403358b845673783de0a774d97379f6f7376" target="_blank">RolX: Role Extraction and Mining in Large Networks</a> (2011)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e02f59cf876cb40233573ff78a1609f969d301cc" target="_blank">subgraph2vec: Learning Distributed Representations of Rooted Sub-graphs from Large Graphs</a> (2016)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1d0f007192db92d29b1cdf43aa9325ba0535b23a" target="_blank">Vertex similarity in networks.</a> (2005)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ecf6c42d84351f34e1625a6a2e4cc6526da45c74" target="_blank">Representation Learning on Graphs: Methods and Applications</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b00cea45c85e68002d34b608aecb4fddd18210aa" target="_blank">Learning Graph Representations with Embedding Propagation</a> (2017)
+</li>
+</ol>
+</section>
+</body></html>

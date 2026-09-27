@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8711cea9e4af17b73427b55dc62fabaa7e576d88</p>
+<hr>
+<h2>Title</h2>
+<p>Combining Adaptive UNI Sampling with Structure Non-IID Split and Heterophilic Graphs to improve federated graph learning.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Adaptive UNI Sampling, when applied to federated graph learning models with Structure Non-IID Split and Heterophilic Graphs, will improve accuracy and convergence rates compared to random sampling.</p>
+<h3>Motivation</h3>
+<p>Existing methods in federated graph learning often overlook the potential of combining adaptive sampling strategies with specific non-IID data distributions to enhance model performance. While adaptive sampling strategies have been explored, their integration with specific non-IID conditions such as Structure Non-IID Split and Heterophilic Graphs remains underexplored. This gap is crucial as it can lead to improved model accuracy and convergence rates by leveraging the unique characteristics of non-IID data distributions. The proposed hypothesis aims to address this gap by testing the effectiveness of combining Adaptive UNI Sampling with Structure Non-IID Split and Heterophilic Graphs in federated graph learning, which has not been extensively tested in prior work.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the impact of combining Adaptive UNI Sampling with Structure Non-IID Split and Heterophilic Graphs on federated graph learning models. Adaptive UNI Sampling adjusts the sampling rate based on node attributes to maintain graph connectivity, which is particularly useful in large-scale graphs. Structure Non-IID Split addresses topological divergence among clients, while Heterophilic Graphs involve nodes with dissimilar features or labels. By integrating these strategies, the hypothesis posits that federated graph learning models will achieve higher accuracy and faster convergence rates compared to random sampling. This approach leverages the strengths of each component: Adaptive UNI Sampling's ability to maintain structural integrity, Structure Non-IID Split's handling of topological divergence, and Heterophilic Graphs' focus on dissimilar node features. The expected outcome is a more robust and efficient federated learning model that can better handle non-IID data distributions, addressing a significant gap in existing research.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/6639dadb3abfb8deadaa59672f2421eef54d4f94">Adaptive UNI Sampling</a>: Adaptive UNI Sampling adjusts the sampling rate based on the distribution and association of node attributes to maintain graph connectivity. This method divides nodes into multiple intervals and adaptively modifies the sampling probability, enhancing representativeness by including neighbor nodes. It is particularly effective in large-scale graphs where maintaining structural integrity is critical. The expected role of this variable is to improve the sampling process by ensuring that the sampled nodes provide a comprehensive view of the graph's structural characteristics, which is crucial for federated learning models dealing with non-IID data distributions.</p>
+<p><a href="https://www.semanticscholar.org/paper/26d353c131d58a9b92b4877bac49c81df643a3a8">Structure Non-IID Split</a>: Structure Non-IID Split addresses the topological divergence among multiple clients in federated graph learning. This divergence arises from varying subgraph topologies due to different local data engineering perspectives. The AdaFGL framework employs a decoupled two-step personalized approach to handle this challenge, initially using standard multi-client federated collaborative training to acquire a federated knowledge extractor. This strategy is validated through extensive experiments, demonstrating superior performance over state-of-the-art baselines. The expected role of this variable is to enhance the model's ability to handle topological heterogeneity, which is a common issue in federated graph learning.</p>
+<p><a href="https://www.semanticscholar.org/paper/68bda3039631926127aab1256d87fe92885885bc">Heterophilic Graphs</a>: Heterophilic Graphs are characterized by nodes that are connected but have dissimilar features or labels. In federated graph learning, addressing heterophilic graphs involves developing approaches that can effectively utilize the information from observed structures for structure learning. FedHERO employs a multi-head self-attention network to represent pairwise relationships between nodes, allowing for the learning of shared structure learners that can generalize to target graphs without necessitating re-training. The expected role of this variable is to improve the performance of federated learning models on heterophilic graphs, where traditional methods may struggle due to the lack of homophily.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves implementing Adaptive UNI Sampling in a federated graph learning setup with Structure Non-IID Split and Heterophilic Graphs. The process begins by configuring the Adaptive UNI Sampling strategy to adjust sampling rates based on node attributes, ensuring comprehensive graph connectivity. Next, the Structure Non-IID Split is applied to address topological divergence among clients, using a decoupled two-step personalized approach to acquire a federated knowledge extractor. Finally, the model incorporates Heterophilic Graphs by employing a multi-head self-attention network to represent pairwise relationships between nodes. The integration of these components is expected to enhance model accuracy and convergence rates. The implementation involves setting up a federated learning environment with multiple clients, each possessing a subgraph with non-IID characteristics. The Adaptive UNI Sampling strategy is applied to each client's subgraph, while the Structure Non-IID Split and Heterophilic Graphs are integrated into the federated learning framework. The model's performance is evaluated using metrics such as accuracy and convergence rate, comparing the results to a baseline model using random sampling. The expected outcome is a more robust and efficient federated learning model that can better handle non-IID data distributions.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that Adaptive UNI Sampling, when applied to federated graph learning models with Structure Non-IID Split and Heterophilic Graphs, will improve accuracy and convergence rates compared to random sampling.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare two federated graph learning approaches:<br />
+1. <strong>Baseline</strong>: Federated graph learning with random sampling<br />
+2. <strong>Experimental</strong>: Federated graph learning with Adaptive UNI Sampling</p></p>
+<p><p>Both approaches will be tested on heterophilic graphs with structure non-IID splits across multiple clients.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Requirements</strong></h4>
+<ul>
+<li>Use standard graph benchmark datasets that exhibit heterophilic properties (e.g., Cornell, Texas, Wisconsin, or Squirrel datasets)</li>
+<li>Create a structure non-IID split of the graph across multiple clients (5-10 clients)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement three experiment modes controlled by a global variable <code>PILOT_MODE</code>:<br />
+- <code>MINI_PILOT</code>: Use a very small graph (e.g., 100-200 nodes) with 3 clients, 5 communication rounds, and 2 independent runs<br />
+- <code>PILOT</code>: Use a medium-sized graph (e.g., 500-1000 nodes) with 5 clients, 10 communication rounds, and 5 independent runs<br />
+- <code>FULL_EXPERIMENT</code>: Use the complete dataset with 10 clients, 50+ communication rounds, and 10 independent runs</p></p>
+<p><p>Start with <code>MINI_PILOT</code> first, then run <code>PILOT</code> if successful. Do not run <code>FULL_EXPERIMENT</code> automatically - wait for human verification of pilot results.</p></p>
+<p><h4 class="custom-heading"><strong>Federated Learning Setup</strong></h4>
+<ol>
+<li>Set up a federated learning environment with multiple clients</li>
+<li>Implement a graph neural network (GNN) model for node classification</li>
+<li>Split the graph data across clients using Structure Non-IID Split approach</li>
+<li>Create heterophilic graph characteristics in the data</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Sampling Methods Implementation</strong></h4>
+<ol>
+<li><strong>Baseline</strong>: Implement random sampling of nodes for each client</li>
+<li><strong>Experimental</strong>: Implement Adaptive UNI Sampling with the following components:</li>
+<li>Node attribute analysis to determine sampling intervals</li>
+<li>Adaptive modification of sampling probabilities based on node attributes</li>
+<li>Neighbor node inclusion to enhance representativeness</li>
+<li>Maintenance of graph connectivity during sampling</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Adaptive UNI Sampling Algorithm</strong></h4>
+<p>Implement the Adaptive UNI Sampling algorithm with these steps:<br />
+1. Divide nodes into multiple intervals based on their attributes<br />
+2. Calculate the initial sampling probability for each interval<br />
+3. Adaptively modify the sampling probability based on node connectivity<br />
+4. Include neighbor nodes to enhance representativeness<br />
+5. Ensure the sampled subgraph maintains structural integrity</p></p>
+<p><h4 class="custom-heading"><strong>Structure Non-IID Split Implementation</strong></h4>
+<p>Implement the Structure Non-IID Split with these components:<br />
+1. Create topological divergence among clients<br />
+2. Implement a decoupled two-step personalized approach:<br />
+   - Standard multi-client federated collaborative training<br />
+   - Federated knowledge extractor</p></p>
+<p><h4 class="custom-heading"><strong>Heterophilic Graphs Module</strong></h4>
+<p>Implement the Heterophilic Graphs module with these components:<br />
+1. Create graphs where connected nodes have dissimilar features/labels<br />
+2. Implement a multi-head self-attention network to represent pairwise relationships<br />
+3. Develop shared structure learners that can generalize to target graphs</p></p>
+<p><h4 class="custom-heading"><strong>Training Process</strong></h4>
+<ol>
+<li>Train both baseline and experimental models for multiple communication rounds</li>
+<li>For each round:</li>
+<li>Clients perform local training on their subgraphs</li>
+<li>Server aggregates model updates</li>
+<li>Evaluate global model performance</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<p>Measure and compare the following metrics between baseline and experimental approaches:<br />
+1. <strong>Accuracy Metrics</strong>:<br />
+   - Precision, Recall, F1 score on test set<br />
+   - Node classification accuracy<br />
+2. <strong>Convergence Metrics</strong>:<br />
+   - Number of communication rounds to reach predefined accuracy threshold<br />
+   - Loss curves over communication rounds<br />
+3. <strong>Statistical Analysis</strong>:<br />
+   - Conduct multiple independent runs with different random seeds<br />
+   - Calculate mean and standard deviation of metrics<br />
+   - Perform statistical significance tests (e.g., t-test or bootstrap resampling)</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Workflow</strong></h4>
+<ol>
+<li>Load and preprocess the graph dataset</li>
+<li>Split the graph into training, validation, and test sets</li>
+<li>Create Structure Non-IID Split across clients</li>
+<li>Implement both sampling methods (random and Adaptive UNI)</li>
+<li>Train federated models with both sampling methods</li>
+<li>Evaluate and compare performance metrics</li>
+<li>Generate visualizations of results</li>
+<li>Report findings with statistical analysis</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Expected Output</strong></h4>
+<ol>
+<li>Performance metrics for both baseline and experimental approaches</li>
+<li>Convergence plots showing accuracy and loss over communication rounds</li>
+<li>Statistical analysis of the differences between approaches</li>
+<li>Visualization of sampled subgraphs to demonstrate structural integrity</li>
+<li>Comprehensive report summarizing findings and implications</li>
+</ol></p>
+<p><p>Please run the experiment in <code>MINI_PILOT</code> mode first, then proceed to <code>PILOT</code> mode if successful. Do not run the <code>FULL_EXPERIMENT</code> automatically - wait for human verification of pilot results.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/8711cea9e4af17b73427b55dc62fabaa7e576d88">Paper 0: Federated Graph Classification over Non-IID Graphs</a> (171 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/49cda3055270a6f7296b128b0969a2739f05bc8f">Paper 1</a>. The source paper introduces a federated learning framework for graph classification over non-IID graphs, addressing the challenge of heterogeneity in graph structures and node features. Paper 0 builds on this by tackling the local bias problem, which is a specific challenge in federated graph learning. The advancements made by Paper 0 in leveraging cross-client edges and reducing local bias highlight the need for further exploration into optimizing federated learning frameworks to handle non-IID data more effectively. A promising research idea would be to integrate these insights and explore the impact of different graph sampling strategies on federated learning performance, specifically focusing on non-IID data distributions.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/8711cea9e4af17b73427b55dc62fabaa7e576d88" target="_blank">Federated Graph Classification over Non-IID Graphs</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/49cda3055270a6f7296b128b0969a2739f05bc8f" target="_blank">Tackling the Local Bias in Federated Graph Learning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/26d353c131d58a9b92b4877bac49c81df643a3a8" target="_blank">AdaFGL: A New Paradigm for Federated Node Classification with Topology Heterogeneity</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/0b9fd410e5ecf9b4f87dfb6ac73bbcba24471afb" target="_blank">FedGTA: Topology-aware Averaging for Federated Graph Learning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/87d651e701a3222d40af693d31eebd4e19d58b1f" target="_blank">Data-Adaptive Active Sampling for Efficient Graph-Cognizant Classification</a> (2017)</li>
+<li><a href="https://www.semanticscholar.org/paper/0b89f2b0ca70274db139eedfdf4c77451d126451" target="_blank">Exploring the Practicality of Federated Learning: A Survey Towards the Communication Perspective</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5d663feb288d4ef26697abe2bf6b14c85ff96a2d" target="_blank">A comprehensive study of non-adaptive and residual-based adaptive sampling for physics-informed neural networks</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/d2b42b66f53a63a3751e464a00531bc303acc153" target="_blank">L-SVRG and L-Katyusha with Adaptive Sampling</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/fab5068bc7083658168409079d0ce39dce101805" target="_blank">Online Learning to Sample</a> (2015)</li>
+<li><a href="https://www.semanticscholar.org/paper/6639dadb3abfb8deadaa59672f2421eef54d4f94" target="_blank">Large graph layout optimization based on vision and computational efficiency: a survey</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/68bda3039631926127aab1256d87fe92885885bc" target="_blank">FedHERO: A Federated Learning Approach for Node Classification Task on Heterophilic Graphs</a> (2025)</li>
+</ol>
+</body>
+</html>

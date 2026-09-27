@@ -1,0 +1,137 @@
+{
+  "paper_id": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Bayesian Neural Network Implementation",
+      "criteria_met_question": "Does the experiment implement Bayesian Neural Networks for Q-value uncertainty estimation using probabilistic ensembles and Batch Inverse Variance weighting techniques?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "LLM-Driven Probability Distribution",
+      "criteria_met_question": "Does the experiment implement a mechanism where an LLM analyzes agent trajectories and generates tailored probability distributions to guide exploration?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integration Mechanism",
+      "criteria_met_question": "Does the experiment implement a clear mechanism for integrating the uncertainty estimates from Bayesian Neural Networks with the LLM-driven probability distributions to guide exploration decisions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Web-based RL Environment",
+      "criteria_met_question": "Does the experiment use at least one web-based RL environment (such as text-based games or interactive web interfaces) for evaluation?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Comparison Group 1: Full Model",
+      "criteria_met_question": "Does the experiment implement and evaluate a DQN agent that integrates both Bayesian Neural Networks and LLM-driven probability distributions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Comparison Group 2: Partial Model",
+      "criteria_met_question": "Does the experiment implement and evaluate a DQN agent with Bayesian Neural Networks only (without LLM integration)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Comparison Group 3: Baseline",
+      "criteria_met_question": "Does the experiment implement and evaluate a standard DQN agent with epsilon-greedy exploration as a baseline?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Task Success Rate Measurement",
+      "criteria_met_question": "Does the experiment measure and report the percentage of successful task completions for each comparison group?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Exploration Efficiency Measurement",
+      "criteria_met_question": "Does the experiment measure and report exploration efficiency (defined as unique states visited divided by total steps) for each comparison group?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Sample Efficiency Measurement",
+      "criteria_met_question": "Does the experiment measure and report sample efficiency (defined as steps required to achieve a specific reward threshold) for each comparison group?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Average Return Measurement",
+      "criteria_met_question": "Does the experiment measure and report the average return per episode for each comparison group?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance testing to determine if the differences in performance metrics between the comparison groups are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Uncertainty Visualization",
+      "criteria_met_question": "Does the experiment include visualizations of the Q-value uncertainty estimates from the Bayesian Neural Networks?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "LLM Distribution Analysis",
+      "criteria_met_question": "Does the experiment analyze and visualize how the LLM-generated probability distributions change over time as the agent learns?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that systematically removes or modifies components of the proposed approach to assess their individual contributions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of how sensitive the results are to different hyperparameter settings (e.g., ensemble size, LLM update frequency)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Multiple Environment Testing",
+      "criteria_met_question": "Does the experiment evaluate the approach on multiple different web-based environments to demonstrate generalizability?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze and report the computational overhead of the proposed approach compared to traditional methods?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Learning Curve Analysis",
+      "criteria_met_question": "Does the experiment analyze and visualize learning curves (performance over time) for each comparison group?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of common failure modes or error patterns for each comparison group?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrating Bayesian Neural Networks with LLM-driven probability distributions to enhance RL exploration in web-based tasks.",
+    "research_idea_hypothesis": "Integrating Bayesian Neural Networks for Q-Value Uncertainty Estimation with LLM-driven probability distributions will significantly improve exploration efficiency and task success rates in web-based RL tasks compared to traditional RL methods without LLM integration.",
+    "description": "This research explores the integration of Bayesian Neural Networks for Q-Value Uncertainty Estimation with LLM-driven probability distributions to enhance exploration strategies in web-based RL tasks. The Bayesian Neural Networks estimate the uncertainty in Q-value predictions, providing a measure of the reliability of the agent's policy evaluation. This uncertainty is then used to dynamically adjust the exploration strategy through LLM-driven probability distributions, which analyze the agent's learning status and generate tailored exploration strategies. This approach leverages the reasoning capabilities of LLMs to provide domain-specific insights, improving the agent's ability to explore effectively in high-dimensional and sparse reward environments. The expected outcome is a significant improvement in exploration efficiency and task success rates, as the agent can make more informed exploration decisions and adapt to changes in the environment more effectively. This hypothesis addresses the gap in existing research by combining Bayesian uncertainty estimation with LLM-driven exploration strategies, providing a novel approach to enhancing RL performance in complex web-based tasks.",
+    "research_gap": "Existing reinforcement learning (RL) methods often struggle with efficiently balancing exploration and exploitation, especially in environments with high-dimensional state-action spaces and sparse rewards. While Bayesian methods have been employed to estimate uncertainty, they typically focus on either epistemic or aleatory uncertainty separately, leading to suboptimal exploration strategies. Furthermore, many approaches do not effectively integrate large language models (LLMs) to enhance exploration in RL tasks. This hypothesis addresses the gap by proposing a novel combination of Bayesian Neural Networks for Q-Value Uncertainty Estimation and LLM-driven probability distributions to dynamically guide exploration, leveraging both epistemic and aleatory uncertainties in a unified framework. This integration has not been extensively tested in prior work, particularly in the context of web-based tasks where LLMs can provide domain-specific insights to improve task success rates.",
+    "research_idea_variables": "[Bayesian Neural Networks for Q-Value Uncertainty Estimation](https://www.semanticscholar.org/paper/6f987340adf4f0b90cf900d3e219341cf46248d5): This variable involves using Bayesian Neural Networks to estimate the uncertainty in Q-value predictions, providing a measure of the reliability of the agent's policy evaluation. The Bayesian Neural Networks are implemented using probabilistic ensembles and Batch Inverse Variance weighting to account for both Q-value and environment stochasticity. This approach mitigates the negative impacts of noisy supervision, improving sample efficiency in discrete and continuous control tasks. The uncertainty estimates are used to guide exploration by selecting actions that maximize expected reward while considering uncertainty. This variable is critical for providing a robust measure of uncertainty, enabling more informed exploration decisions.\n\n[LLM-Driven Probability Distribution](https://www.semanticscholar.org/paper/6326b8d5d12ef861091a9450d09e55baf285582c): The LLM-Driven Probability Distribution is a method where large language models (LLMs) are used to dynamically adjust the policy exploration during RL training. This involves periodically sampling the agent's action-reward trajectories and prompting the LLM to analyze the agent's learning status. The LLM then generates a tailored probability distribution that guides future policy exploration. The distribution is updated regularly to adapt to changes in the agent's learning status and the environment's characteristics. This approach leverages the reasoning capabilities of LLMs to provide domain-specific insights, improving the agent's ability to explore effectively in high-dimensional and sparse reward environments. The LLM-driven probability distribution is expected to enhance exploration efficiency by providing more accurate and adaptive exploration strategies.",
+    "Explanation": "Bayesian Neural Networks provide a robust measure of uncertainty in Q-value predictions, enabling more informed exploration decisions. LLM-driven probability distributions leverage the reasoning capabilities of LLMs to provide domain-specific insights, improving the agent's ability to explore effectively in high-dimensional and sparse reward environments. This integration is expected to enhance exploration efficiency and task success rates by enabling the agent to make more informed exploration decisions and adapt to changes in the environment more effectively.",
+    "research_idea_long_description": "The uncertainty estimates from the Bayesian Neural Networks are used to inform the LLM-driven probability distribution, enabling more informed exploration decisions. The LLM-driven probability distribution dynamically adjusts the exploration strategy based on the agent's learning status, providing domain-specific insights that enhance exploration efficiency and task success rates.",
+    "research_idea_design_prompt": "The proposed method involves integrating Bayesian Neural Networks for Q-Value Uncertainty Estimation with LLM-driven probability distributions to enhance exploration strategies in web-based RL tasks. The Bayesian Neural Networks are implemented using probabilistic ensembles and Batch Inverse Variance weighting to estimate the uncertainty in Q-value predictions. This uncertainty is used to guide exploration by selecting actions that maximize expected reward while considering uncertainty. The LLM-driven probability distribution is implemented by periodically sampling the agent's action-reward trajectories and prompting the LLM to analyze the agent's learning status. The LLM generates a tailored probability distribution that guides future policy exploration, and this distribution is updated regularly to adapt to changes in the agent's learning status and the environment's characteristics. The integration of these components involves using the uncertainty estimates from the Bayesian Neural Networks to inform the LLM-driven probability distribution, enabling more informed exploration decisions. The expected outcome is a significant improvement in exploration efficiency and task success rates, as the agent can make more informed exploration decisions and adapt to changes in the environment more effectively. The implementation involves setting up the Bayesian Neural Networks and LLM-driven probability distribution, integrating them into the RL framework, and evaluating the performance on web-based tasks using standard metrics such as task success rate and exploration efficiency.",
+    "research_idea_elements": "Independent variable: Integration of Bayesian Neural Networks for Q-Value Uncertainty Estimation with LLM-driven probability distributions\n\nDependent variable: Exploration efficiency and task success rates\n\nComparison groups: 1) DQN agent with Bayesian Neural Networks and LLM-driven probability distributions, 2) DQN agent with Bayesian Neural Networks only, 3) Standard DQN agent with epsilon-greedy exploration\n\nBaseline/control: Traditional RL methods without LLM integration (standard DQN agent with epsilon-greedy exploration)\n\nContext/setting: Web-based RL tasks including text-based games and interactive web interfaces\n\nAssumptions: Bayesian Neural Networks provide reliable uncertainty estimates; LLMs can generate meaningful probability distributions for exploration; uncertainty estimates can effectively guide exploration decisions\n\nRelationship type: Causal (integration will 'significantly improve' outcomes)\n\nPopulation: RL agents performing web-based tasks\n\nTimeframe: Variable depending on experiment mode (3-100 episodes with 20-100 steps each)\n\nMeasurement method: Task success rate (percentage of successful completions), exploration efficiency (unique states visited divided by total steps), sample efficiency (steps required to achieve reward threshold), average return per episode",
+    "motivation": "The source paper is [Paper 0: Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://www.semanticscholar.org/paper/1fcaafeb72142fe3d1a5d698a072d69778d244b0) (194 citations, 2025). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/a343a24a0d47e0acf4d71bfd0215924bc76d0256) --> [Paper 2](https://www.semanticscholar.org/paper/1d03586baa32b3d6ff657a180053821543e11abb) --> [Paper 3](https://www.semanticscholar.org/paper/742d9c80b2ca4d01f8a8675cfe98487e0783d3d7) --> [Paper 4](https://www.semanticscholar.org/paper/3c8b92a8b6eee1377077ecfea95e53223845af20). The progression of research from the source paper through the related papers highlights a consistent focus on improving multi-turn RL frameworks for LLMs and web agents. Each paper addresses specific challenges such as long-horizon decision-making, reward shaping, and credit assignment. A common limitation across these works is the complexity of effectively balancing exploration and exploitation in dynamic, multi-step environments. Building upon these insights, a research idea that further enhances the adaptability and efficiency of RL frameworks in LLMs could significantly advance the field.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating Bayesian Neural Networks for Q-Value Uncertainty Estimation with LLM-driven probability distributions will significantly improve exploration efficiency and task success rates in web-based RL tasks compared to traditional RL methods without LLM integration.\n\n## Experiment Overview\nThis experiment will compare three RL agent configurations:\n1. **Baseline**: A standard DQN agent with epsilon-greedy exploration\n2. **BNN-Only**: A DQN agent with Bayesian Neural Networks for uncertainty estimation to guide exploration\n3. **BNN+LLM (Experimental)**: A DQN agent with both Bayesian Neural Networks and LLM-driven probability distributions for exploration\n\nThe agents will be evaluated on text-based game environments, measuring task success rates, exploration efficiency, and sample efficiency.\n\n## Pilot Mode Configuration\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`. The experiment should start with `MINI_PILOT` mode, and only proceed to `PILOT` if the initial results look promising. Do not run the `FULL_EXPERIMENT` mode automatically - this will be manually triggered after human verification of the pilot results.\n\n- **MINI_PILOT**: Run 3 episodes with a maximum of 20 steps each on a single text-based game environment. Use a small neural network (1-2 hidden layers) and only 5 update iterations between each step.\n- **PILOT**: Run 20 episodes with a maximum of 50 steps each on 2 different text-based game environments. Use a medium-sized neural network (2-3 hidden layers) and 10 update iterations between each step.\n- **FULL_EXPERIMENT**: Run 100 episodes with a maximum of 100 steps each on 5 different text-based game environments. Use the full-sized neural network (3-4 hidden layers) and 20 update iterations between each step.\n\n## Implementation Details\n\n### 1. Bayesian Neural Networks for Q-Value Uncertainty Estimation\nImplement a Bayesian Neural Network using an ensemble approach with the following specifications:\n- Create an ensemble of 5 neural networks with identical architecture but different random initializations\n- Each network should predict both the Q-value and its variance (aleatoric uncertainty)\n- Use Batch Inverse Variance weighting to combine predictions from the ensemble\n- The total uncertainty should be calculated as the sum of aleatoric uncertainty (from each network) and epistemic uncertainty (variance across ensemble predictions)\n- The uncertainty estimates should be used to guide exploration by selecting actions that balance expected reward and uncertainty\n\n### 2. LLM-Driven Probability Distribution\nImplement an LLM-based module that dynamically adjusts exploration strategies:\n- Every 10 steps (or after each episode in MINI_PILOT mode), sample the agent's recent action-reward trajectories\n- Format these trajectories into a prompt for the LLM (use gpt-4o-mini)\n- The prompt should ask the LLM to analyze the agent's learning status and suggest a probability distribution over actions that would improve exploration\n- The LLM's output should be parsed into a probability distribution that influences the agent's action selection\n- The prompt should include the current uncertainty estimates from the Bayesian Neural Network\n- The LLM should provide reasoning for its suggested distribution\n\n### 3. Integration of BNN and LLM\nFor the experimental condition (BNN+LLM):\n- Use the uncertainty estimates from the BNN to inform the LLM about the agent's confidence in different actions\n- The LLM should generate a probability distribution that balances exploitation (high Q-values) and exploration (high uncertainty)\n- The final action selection should be a weighted combination of the BNN's uncertainty-based exploration and the LLM's suggested distribution\n\n### 4. Environment Setup\nUse text-based game environments with the following configuration:\n- For MINI_PILOT: Use a single simple text-based game (e.g., a small CookingWorld with 2 rooms)\n- For PILOT: Use two text-based games of moderate complexity (e.g., CookingWorld with 3-4 rooms)\n- For FULL_EXPERIMENT: Use five text-based games of varying complexity\n\n### 5. Metrics and Evaluation\nTrack and report the following metrics for each agent configuration:\n- **Task Success Rate**: Percentage of episodes where the agent successfully completes the task\n- **Exploration Efficiency**: Number of unique states visited divided by total steps taken\n- **Sample Efficiency**: Number of steps required to achieve a certain reward threshold\n- **Average Return**: Average cumulative reward per episode\n- **Learning Curve**: Plot of average return vs. episode number\n\n### 6. Analysis\nPerform the following analyses:\n- Statistical comparison of the three agent configurations using bootstrap resampling\n- Ablation study to assess the contribution of each component (BNN and LLM)\n- Visualization of the exploration patterns for each agent\n- Analysis of the LLM's suggested probability distributions and how they evolve over time\n\n## Implementation Requirements\n1. Use PyTorch for implementing the neural networks\n2. Use the transformers library for LLM integration\n3. Log all trajectories, LLM prompts and responses, and metrics\n4. Generate visualizations of the results\n5. Save model checkpoints after each episode\n\n## Expected Output\n1. A comprehensive report with all metrics and analyses\n2. Visualizations of the exploration patterns and learning curves\n3. Logs of all trajectories, LLM interactions, and metrics\n4. Model checkpoints for each agent configuration\n\nPlease implement this experiment and run it in MINI_PILOT mode first. If the results look promising, proceed to PILOT mode. Do not run the FULL_EXPERIMENT mode without manual verification.",
+  "core_related_works": [
+    {
+      "title": "Sample Efficient Deep Reinforcement Learning via Uncertainty Estimation",
+      "paperId": "6f987340adf4f0b90cf900d3e219341cf46248d5",
+      "url": "https://www.semanticscholar.org/paper/6f987340adf4f0b90cf900d3e219341cf46248d5",
+      "year": 2022,
+      "source_variable": "Bayesian Neural Networks for Q-Value Uncertainty Estimation",
+      "source_paper_lookup_title": "Sample Efficient Deep Reinforcement Learning via Uncertainty Estimation"
+    },
+    {
+      "title": "LLM-Explorer: A Plug-in Reinforcement Learning Policy Exploration Enhancement Driven by Large Language Models",
+      "paperId": "6326b8d5d12ef861091a9450d09e55baf285582c",
+      "url": "https://www.semanticscholar.org/paper/6326b8d5d12ef861091a9450d09e55baf285582c",
+      "year": 2025,
+      "source_variable": "LLM-Driven Probability Distribution",
+      "source_paper_lookup_title": "LLM-Explorer: A Plug-in Reinforcement Learning Policy Exploration Enhancement Driven by Large Language Models"
+    }
+  ],
+  "references": "1. Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning (2025). Paper ID: 1fcaafeb72142fe3d1a5d698a072d69778d244b0\n\n2. WebAgent-R1: Training Web Agents via End-to-End Multi-Turn Reinforcement Learning (2025). Paper ID: a343a24a0d47e0acf4d71bfd0215924bc76d0256\n\n3. RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn Reinforcement Learning (2025). Paper ID: 1d03586baa32b3d6ff657a180053821543e11abb\n\n4. Group-in-Group Policy Optimization for LLM Agent Training (2025). Paper ID: 742d9c80b2ca4d01f8a8675cfe98487e0783d3d7\n\n5. Agentic Reinforced Policy Optimization (2025). Paper ID: 3c8b92a8b6eee1377077ecfea95e53223845af20\n\n6. LLM-Explorer: A Plug-in Reinforcement Learning Policy Exploration Enhancement Driven by Large Language Models (2025). Paper ID: 6326b8d5d12ef861091a9450d09e55baf285582c\n\n7. Model-based Lifelong Reinforcement Learning with Bayesian Exploration (2022). Paper ID: 70e1d6b227fdd605fe61239a953e803df97e521d\n\n8. Efficient Reinforcement Learning with Large Language Model Priors (2023). Paper ID: e0bf76edd8e6b793b81c16a915ede48e377ebab6\n\n9. Guiding Reinforcement Learning Using Uncertainty-Aware Large Language Models (2024). Paper ID: 0d5d87f1eaa4ce7e76869e8d599043011dedbc16\n\n10. Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library (2025). Paper ID: 40bf9f6b3c4ae001c7eb15853b164721f0d8194c\n\n11. Uncertainty Prioritized Experience Replay (2023). Paper ID: 845e7b768dd3b846be8e2aa5a001d57fcc635a90\n\n12. Robust Policy Learning over Multiple Uncertainty Sets (2022). Paper ID: 5903fa23a67f15d5e56c5939b83e256ad9469411\n\n13. Sample Efficient Deep Reinforcement Learning via Uncertainty Estimation (2022). Paper ID: 6f987340adf4f0b90cf900d3e219341cf46248d5\n\n14. A Review of Uncertainty for Deep Reinforcement Learning (2022). Paper ID: 55174eacb397cadee19b3315a06e8b4df4c4cc0a\n\n15. Active deep Q-learning with demonstration (2018). Paper ID: 73b5c8b2e4d291a556c63c29b2033b63c0eeb10a\n\n16. Successor Uncertainties: exploration and uncertainty in temporal difference learning (2018). Paper ID: 72a75aeab2c918394dc9af2408fd8e1076ae39ac"
+}

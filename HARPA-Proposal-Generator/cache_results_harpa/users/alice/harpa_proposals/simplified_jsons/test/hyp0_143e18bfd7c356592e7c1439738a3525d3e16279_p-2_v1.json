@@ -1,0 +1,157 @@
+{
+  "paper_id": "143e18bfd7c356592e7c1439738a3525d3e16279",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "MATH500 Dataset Implementation",
+      "criteria_met_question": "Does the experiment successfully load and preprocess the MATH500 benchmark dataset, ensuring it contains a diverse range of mathematical problems suitable for evaluating reasoning capabilities?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Self-Evolving Curriculum (SEC) Implementation",
+      "criteria_met_question": "Does the experiment implement a Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework where each problem category is treated as an individual arm?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Boltzmann Distribution Sampling",
+      "criteria_met_question": "Does the experiment implement Boltzmann distribution sampling for selecting problem categories based on their expected learning gains?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "TD(0) Update Method",
+      "criteria_met_question": "Does the experiment implement the TD(0) method for updating the curriculum policy based on immediate learning gains measured using absolute advantage from policy gradient methods?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Adaptive Difficulty Curriculum Learning (ADCL) Implementation",
+      "criteria_met_question": "Does the experiment implement an Adaptive Difficulty Curriculum Learning system that periodically re-estimates problem difficulty within upcoming data batches to maintain alignment with the model's evolving capabilities?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integrated SEC+ADCL Approach",
+      "criteria_met_question": "Does the experiment implement an integrated approach that combines the Self-Evolving Curriculum with Adaptive Difficulty Curriculum Learning, ensuring the model is consistently challenged with appropriately difficult tasks?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline SEC-Only Implementation",
+      "criteria_met_question": "Does the experiment implement a baseline model trained with only the Self-Evolving Curriculum (without Adaptive Difficulty Curriculum Learning) for comparison purposes?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline ADCL-Only Implementation",
+      "criteria_met_question": "Does the experiment implement a baseline model trained with only Adaptive Difficulty Curriculum Learning (without Self-Evolving Curriculum) for comparison purposes?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Primary Metric: Accuracy Measurement",
+      "criteria_met_question": "Does the experiment measure the accuracy of all models (integrated SEC+ADCL, SEC-only, and ADCL-only) on the MATH500 benchmark, calculating the proportion of problems solved correctly?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Secondary Metric: Problem-Solving Efficiency",
+      "criteria_met_question": "Does the experiment measure problem-solving efficiency for all models by tracking the number of attempts required to solve each problem in the MATH500 benchmark?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment conduct appropriate statistical tests to determine if the performance differences between the integrated approach and individual baselines are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment include multiple runs (at least 3) of each condition to ensure statistical confidence in the results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Difficulty Shift Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of how the Difficulty Shift phenomenon affects model performance and how the integrated approach addresses this issue compared to the baselines?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Learning Curve Analysis",
+      "criteria_met_question": "Does the experiment analyze learning curves for all three approaches (SEC+ADCL, SEC-only, ADCL-only) to demonstrate how performance improves over curriculum iterations?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Problem Category Distribution Analysis",
+      "criteria_met_question": "Does the experiment analyze how the distribution of problem categories selected by the curriculum changes over time for each approach?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Curriculum Policy Visualization",
+      "criteria_met_question": "Does the experiment include visualizations of how the curriculum policy evolves over time, showing which problem categories are prioritized at different stages of training?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis by Problem Type",
+      "criteria_met_question": "Does the experiment include an analysis of model errors categorized by problem type to identify which mathematical concepts are most challenging for each approach?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Ablation Study of MAB Components",
+      "criteria_met_question": "Does the experiment include an ablation study that examines the impact of different components of the Multi-Armed Bandit framework (e.g., exploration rate, update frequency) on model performance?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze the computational efficiency of the integrated approach compared to the individual baselines, measuring training time and resource requirements?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Generalization to Other Benchmarks",
+      "criteria_met_question": "Does the experiment test the generalization capabilities of the trained models on mathematical reasoning benchmarks beyond MATH500?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of how sensitive the integrated approach is to hyperparameter choices compared to the individual baselines?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Qualitative Analysis of Solution Strategies",
+      "criteria_met_question": "Does the experiment include a qualitative analysis of the solution strategies employed by models trained with different approaches, examining differences in reasoning patterns?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Timeframe Implementation",
+      "criteria_met_question": "Does the experiment implement the specified timeframe with appropriate curriculum iterations (5 for mini-pilot, 20 for pilot, 100 for full experiment)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Synergy Measurement",
+      "criteria_met_question": "Does the experiment explicitly measure and analyze the synergistic effects between SEC and ADCL components to demonstrate how they complement each other?",
+      "required_or_optional": "required"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrating Self-Evolving Curriculum with Adaptive Difficulty Learning to enhance LLM reasoning on complex tasks.",
+    "research_idea_hypothesis": "Integrating a Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning will enhance the reasoning capabilities of LLMs on complex mathematical tasks, leading to improved performance on benchmarks like MATH500 compared to using either method alone.",
+    "description": "This research explores the integration of a Self-Evolving Curriculum (SEC) with Adaptive Difficulty Curriculum Learning (ADCL) to enhance the reasoning capabilities of large language models (LLMs) on complex mathematical tasks. The SEC is implemented using a non-stationary Multi-Armed Bandit (MAB) framework, where each problem category is treated as an individual arm. The curriculum policy dynamically selects problem categories that maximize immediate learning gains, measured using the absolute advantage from policy gradient methods. The selection process is guided by a Boltzmann distribution for sampling, and the curriculum policy is updated using the TD(0) method. ADCL addresses the Difficulty Shift phenomenon by periodically re-estimating problem difficulty within upcoming data batches to maintain alignment with the model's evolving capabilities. This integration aims to ensure that the model is consistently challenged with appropriately difficult tasks, facilitating effective learning and generalization. The hypothesis will be tested on the MATH500 benchmark, comparing the performance of models trained with the integrated approach against those trained with each method individually. The expected outcome is that the integrated approach will lead to improved reasoning capabilities, as measured by accuracy and problem-solving efficiency, due to the synergistic effects of dynamic curriculum adjustment and adaptive difficulty alignment.",
+    "research_gap": "Current RLVR methods often fail to elicit fundamentally new reasoning patterns, as they primarily optimize existing strategies without introducing novel capabilities. This hypothesis addresses the gap by exploring the integration of a Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning to dynamically adjust problem difficulty based on the model's evolving capabilities.",
+    "research_idea_variables": "[Self-Evolving Curriculum](https://www.semanticscholar.org/paper/be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb): The Self-Evolving Curriculum (SEC) is implemented using a non-stationary Multi-Armed Bandit (MAB) framework. Each problem category, such as difficulty level or problem type, is treated as an individual arm. The curriculum policy dynamically selects problem categories to maximize immediate learning gains, which are measured using the absolute advantage from policy gradient methods. The selection process is guided by a Boltzmann distribution for sampling, and the curriculum policy is updated using the TD(0) method. This approach allows the curriculum to adapt to the model's evolving capabilities by adjusting the difficulty of the problems presented during training. The SEC framework is expected to improve reasoning capabilities across diverse domains by enabling better generalization to harder, out-of-distribution test problems.\n\n[Adaptive Difficulty Curriculum Learning](https://www.semanticscholar.org/paper/99195e486c8d7057e91efcc6660cf386180c6d99): Adaptive Difficulty Curriculum Learning (ADCL) involves dynamically adjusting the difficulty of training tasks based on the model's evolving capabilities. This strategy tackles the Difficulty Shift phenomenon by periodically re-estimating difficulty within upcoming data batches to maintain alignment with the model's learning progress. Implementation requires a system that can assess the model's current performance and adjust the curriculum accordingly, often using a teacher model to guide the process. This approach ensures that the model is consistently challenged, promoting deeper understanding and better generalization. ADCL is expected to enhance performance on complex reasoning benchmarks by ensuring that the model is consistently challenged with appropriately difficult tasks.",
+    "Explanation": "The Self-Evolving Curriculum dynamically adjusts problem difficulty based on immediate learning gains, ensuring the model is consistently challenged. Adaptive Difficulty Curriculum Learning periodically re-estimates problem difficulty to maintain alignment with the model's evolving capabilities. Together, these methods are expected to enhance reasoning capabilities by ensuring the model is consistently challenged with appropriately difficult tasks, facilitating effective learning and generalization. The MATH500 benchmark is well-suited for evaluating these capabilities due to its diverse range of mathematical problems.",
+    "research_idea_long_description": "The dynamic problem selection from the Self-Evolving Curriculum informs the adaptive difficulty adjustments in Adaptive Difficulty Curriculum Learning. This synergy ensures that the model is consistently challenged with tasks that are neither too easy nor too difficult, optimizing learning gains and reasoning capabilities.",
+    "research_idea_design_prompt": "The hypothesis will be implemented by integrating the Self-Evolving Curriculum (SEC) with Adaptive Difficulty Curriculum Learning (ADCL) within the ASD Agent's capabilities. The SEC will be implemented using a non-stationary Multi-Armed Bandit (MAB) framework, where each problem category is treated as an individual arm. The curriculum policy will dynamically select problem categories that maximize immediate learning gains, measured using the absolute advantage from policy gradient methods. The selection process will be guided by a Boltzmann distribution for sampling, and the curriculum policy will be updated using the TD(0) method. ADCL will be implemented by periodically re-estimating problem difficulty within upcoming data batches to maintain alignment with the model's evolving capabilities. This will involve assessing the model's current performance and adjusting the curriculum accordingly, using a teacher model to guide the process. The integration will ensure that the model is consistently challenged with appropriately difficult tasks, facilitating effective learning and generalization. The hypothesis will be tested on the MATH500 benchmark, comparing the performance of models trained with the integrated approach against those trained with each method individually. The expected outcome is that the integrated approach will lead to improved reasoning capabilities, as measured by accuracy and problem-solving efficiency, due to the synergistic effects of dynamic curriculum adjustment and adaptive difficulty alignment.",
+    "research_idea_elements": "Independent variable: Integration of Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning\n\nDependent variable: Reasoning capabilities of LLMs on complex mathematical tasks, measured by accuracy on MATH500 benchmark and problem-solving efficiency\n\nComparison groups: Models trained with integrated SEC+ADCL approach vs. models trained with SEC only vs. models trained with ADCL only\n\nBaseline/control: Self-Evolving Curriculum (SEC) only and Adaptive Difficulty Curriculum Learning (ADCL) only\n\nContext/setting: Training LLMs on mathematical reasoning tasks using the MATH500 benchmark dataset\n\nAssumptions: The Difficulty Shift phenomenon exists and can be addressed by periodically re-estimating problem difficulty; immediate learning gains can be measured using absolute advantage from policy gradient methods\n\nRelationship type: Causal - the integration of SEC and ADCL will cause enhanced reasoning capabilities\n\nPopulation: Large Language Models (LLMs)\n\nTimeframe: Duration of curriculum iterations (5 iterations for mini-pilot, 20 for pilot, 100 for full experiment)\n\nMeasurement method: Accuracy on MATH500 benchmark (primary metric) and problem-solving efficiency measured by number of attempts required (secondary metric)",
+    "motivation": "The source paper is [Paper 0: Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?](https://www.semanticscholar.org/paper/143e18bfd7c356592e7c1439738a3525d3e16279) (185 citations, 2025). This idea builds on a progression of related work [Paper 1](https://www.semanticscholar.org/paper/09b2a0f0d7c1164ab334e13e70eb0d65b5b96393) --> [Paper 2](https://www.semanticscholar.org/paper/1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0).\n\nThe analysis of the related papers reveals a trend towards minimizing reliance on external data in RLVR, with the Absolute Zero paradigm and 1-shot RLVR demonstrating significant advancements in this area. However, these approaches primarily focus on data efficiency and do not address the core issue identified in the source paper: the inability of current RLVR methods to elicit fundamentally new reasoning patterns beyond the base model. To advance the field, a research idea should focus on developing a novel RLVR paradigm that not only reduces data dependency but also enhances the reasoning capabilities of LLMs by introducing new reasoning patterns."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating a Self-Evolving Curriculum (SEC) using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning (ADCL) will enhance the reasoning capabilities of LLMs on complex mathematical tasks, leading to improved performance on benchmarks like MATH500 compared to using either method alone.\n\n## Experiment Overview\nThis experiment will compare three curriculum learning approaches for training LLMs on mathematical reasoning tasks:\n1. Self-Evolving Curriculum (SEC) only (Baseline 1)\n2. Adaptive Difficulty Curriculum Learning (ADCL) only (Baseline 2)\n3. Integrated SEC+ADCL approach (Experimental)\n\nThe experiment should evaluate these approaches using the MATH500 benchmark dataset, measuring both accuracy (primary metric) and problem-solving efficiency (secondary metric).\n\n## Pilot Mode Settings\nImplement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.\n\n- MINI_PILOT: Use only 10 problems from each category in MATH500 for training and 5 problems for evaluation. Run for only 5 curriculum iterations. This should complete in under 10 minutes and is for code verification only.\n- PILOT: Use 50 problems from each category for training and 20 problems for evaluation. Run for 20 curriculum iterations. This should complete in 1-2 hours and is to verify if the experimental approach shows promise compared to baselines.\n- FULL_EXPERIMENT: Use the complete MATH500 dataset with proper train/validation/test splits and run for the full 100 curriculum iterations.\n\nThe experiment should first run in MINI_PILOT mode, then if successful, run in PILOT mode. It should NOT automatically proceed to FULL_EXPERIMENT mode (this will be manually triggered after human verification of pilot results).\n\n## Dataset Preparation\n1. Load the MATH500 dataset.\n2. Categorize problems by both difficulty level (1-5) and problem type (algebra, geometry, calculus, etc.).\n3. Create appropriate train/validation/test splits (80/10/10) for each pilot mode.\n\n## Implementation Details\n\n### Self-Evolving Curriculum (SEC) Implementation\n1. Implement a non-stationary Multi-Armed Bandit framework where each problem category (combination of difficulty level and problem type) is treated as an arm.\n2. Initialize Q-values for each arm (category) to 0.\n3. For each curriculum iteration:\n   a. Select a problem category using Boltzmann distribution sampling based on current Q-values.\n   b. Present problems from the selected category to the LLM.\n   c. Measure the learning gain (absolute advantage) from the LLM's performance on these problems.\n   d. Update the Q-value for the selected category using the TD(0) method: Q(a) \u2190 Q(a) + \u03b1[r - Q(a)], where r is the learning gain and \u03b1 is the learning rate.\n\n### Adaptive Difficulty Curriculum Learning (ADCL) Implementation\n1. Initialize a difficulty estimator for each problem in the dataset.\n2. For each curriculum iteration:\n   a. Assess the model's current performance level.\n   b. Re-estimate the difficulty of problems in the upcoming batch based on recent performance.\n   c. Select problems that are slightly above the model's current capability level.\n   d. Update difficulty estimates based on the model's performance on the selected problems.\n\n### Integrated SEC+ADCL Implementation\n1. Implement both SEC and ADCL components as described above.\n2. For each curriculum iteration:\n   a. Use SEC to select the problem category.\n   b. Within the selected category, use ADCL to choose specific problems that match the appropriate difficulty level for the model's current capabilities.\n   c. Update both the SEC Q-values and ADCL difficulty estimates based on performance.\n\n### LLM Configuration\n1. Use a consistent LLM across all conditions (e.g., GPT-4 or another suitable model).\n2. Implement a standardized prompting strategy for presenting mathematical problems.\n3. Track the number of attempts required to solve each problem correctly.\n\n## Evaluation Metrics\n1. Primary Metric: Accuracy on the MATH500 benchmark (percentage of problems solved correctly).\n2. Secondary Metric: Problem-solving efficiency (average number of attempts required to solve problems).\n3. Learning Curve: Plot accuracy over curriculum iterations to visualize learning progress.\n\n## Statistical Analysis\n1. Compare the performance of the three approaches using appropriate statistical tests (e.g., paired t-tests or bootstrap resampling).\n2. Calculate effect sizes to quantify the magnitude of differences between approaches.\n3. Analyze performance across different problem categories and difficulty levels to identify where the integrated approach provides the most benefit.\n\n## Logging and Reporting\n1. Log detailed information for each curriculum iteration, including:\n   - Selected problem categories\n   - Problem difficulties\n   - Model performance\n   - Q-value updates\n   - Difficulty estimate updates\n2. Generate a comprehensive report with:\n   - Overall accuracy and efficiency metrics for each approach\n   - Statistical significance of differences\n   - Learning curves\n   - Analysis by problem category and difficulty level\n   - Recommendations for further improvements\n\n## Implementation Notes\n- Ensure that the SEC implementation properly handles the non-stationarity of the learning environment.\n- The Boltzmann distribution sampling should include a temperature parameter that can be tuned.\n- The TD(0) update should use an appropriate learning rate (\u03b1) that balances stability and adaptability.\n- The ADCL implementation should include a mechanism to prevent getting stuck in local optima of difficulty.\n- All random processes should use fixed seeds for reproducibility.\n\nPlease implement this experiment following the structure outlined above, starting with the MINI_PILOT mode to verify functionality, then proceeding to PILOT mode if successful. The code should be modular and well-documented to facilitate future extensions and modifications.",
+  "core_related_works": [
+    {
+      "title": "Self-Evolving Curriculum for LLM Reasoning",
+      "paperId": "be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb",
+      "url": "https://www.semanticscholar.org/paper/be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb",
+      "year": 2025,
+      "source_variable": "Self-Evolving Curriculum",
+      "source_paper_lookup_title": "Self-Evolving Curriculum for LLM Reasoning"
+    },
+    {
+      "title": "Learning Like Humans: Advancing LLM Reasoning Capabilities via Adaptive Difficulty Curriculum Learning and Expert-Guided Self-Reformulation",
+      "paperId": "99195e486c8d7057e91efcc6660cf386180c6d99",
+      "url": "https://www.semanticscholar.org/paper/99195e486c8d7057e91efcc6660cf386180c6d99",
+      "year": 2025,
+      "source_variable": "Adaptive Difficulty Curriculum Learning",
+      "source_paper_lookup_title": "Learning Like Humans: Advancing LLM Reasoning Capabilities via Adaptive Difficulty Curriculum Learning and Expert-Guided Self-Reformulation"
+    }
+  ],
+  "references": "1. Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model? (2025). Paper ID: 143e18bfd7c356592e7c1439738a3525d3e16279\n\n2. Absolute Zero: Reinforced Self-play Reasoning with Zero Data (2025). Paper ID: 09b2a0f0d7c1164ab334e13e70eb0d65b5b96393\n\n3. Reinforcement Learning for Reasoning in Large Language Models with One Training Example (2025). Paper ID: 1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0\n\n4. Self-Evolving Curriculum for LLM Reasoning (2025). Paper ID: be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb\n\n5. Learning Like Humans: Advancing LLM Reasoning Capabilities via Adaptive Difficulty Curriculum Learning and Expert-Guided Self-Reformulation (2025). Paper ID: 99195e486c8d7057e91efcc6660cf386180c6d99"
+}

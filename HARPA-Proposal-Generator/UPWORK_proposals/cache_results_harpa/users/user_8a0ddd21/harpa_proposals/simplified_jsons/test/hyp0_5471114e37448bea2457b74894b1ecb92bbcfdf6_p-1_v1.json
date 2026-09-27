@@ -1,0 +1,170 @@
+{
+  "paper_id": "5471114e37448bea2457b74894b1ecb92bbcfdf6",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Multilingual Hate Speech Dataset",
+      "criteria_met_question": "Does the experiment use a multilingual hate speech detection dataset that includes both high-resource languages (e.g., English) and low-resource languages (e.g., Urdu, Punjabi) as specified in the research idea?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cultural Alignment Test (CAT) Implementation",
+      "criteria_met_question": "Does the experiment implement a Cultural Alignment Test (CAT) that evaluates language models against Hofstede's cultural dimensions (individualism vs. collectivism, power distance, etc.) using culturally diverse prompts and a clear scoring mechanism?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Political Compass Test (PCT) Implementation",
+      "criteria_met_question": "Does the experiment implement a Culturally Adapted Political Compass Test (PCT) that evaluates language models across economic and social axes using prompts tailored to specific cultural contexts with a clear scoring mechanism?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cultural-Only Alignment Baseline",
+      "criteria_met_question": "Does the experiment include a baseline model that is aligned only with Hofstede's cultural dimensions using the CAT, without political compass alignment?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Political-Only Alignment Baseline",
+      "criteria_met_question": "Does the experiment include a baseline model that is aligned only with political compass scores using the PCT, without cultural dimensions alignment?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Combined Cultural-Political Alignment Model",
+      "criteria_met_question": "Does the experiment implement a model that is aligned with both Hofstede's cultural dimensions and political compass scores using both the CAT and PCT methodologies?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Two-Step Alignment Process",
+      "criteria_met_question": "Does the experiment follow a clear two-step alignment process where cultural alignment is applied first using CAT, followed by political alignment using PCT (or vice versa with clear justification)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Hate Speech Detection Evaluation",
+      "criteria_met_question": "Does the experiment evaluate all models (combined alignment and baselines) on multilingual hate speech detection tasks using the same dataset and methodology?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Precision Metric",
+      "criteria_met_question": "Does the experiment measure and report precision scores for hate speech detection across all language models and alignment conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Recall Metric",
+      "criteria_met_question": "Does the experiment measure and report recall scores for hate speech detection across all language models and alignment conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "F1-Score Metric",
+      "criteria_met_question": "Does the experiment measure and report F1-scores for hate speech detection across all language models and alignment conditions?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Fairness Metrics",
+      "criteria_met_question": "Does the experiment measure and report fairness metrics such as equal opportunity difference and/or disparate impact across different cultural and linguistic groups?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "False Positive/Negative Analysis",
+      "criteria_met_question": "Does the experiment analyze and report false positive and false negative rates across different cultural and linguistic groups to assess bias?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment conduct statistical significance testing (e.g., t-tests or ANOVA) to determine if the differences between the combined alignment model and baseline models are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment include multiple runs (at least 3) with different random seeds to ensure statistical confidence and robustness of results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cross-Lingual Performance Analysis",
+      "criteria_met_question": "Does the experiment analyze and compare model performance across different languages to identify any language-specific biases or performance gaps?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cultural-Political Bias Interaction Analysis",
+      "criteria_met_question": "Does the experiment analyze how cultural and political biases interact and potentially compound each other in the context of hate speech detection?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that systematically removes or modifies components of the alignment process to understand their individual contributions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include a qualitative error analysis of cases where the combined alignment model fails or succeeds compared to baseline models?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Alignment Score Correlation Analysis",
+      "criteria_met_question": "Does the experiment analyze the correlation between cultural alignment scores, political alignment scores, and hate speech detection performance?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Human Evaluation",
+      "criteria_met_question": "Does the experiment include human evaluation of model outputs by culturally diverse annotators to validate the automated fairness metrics?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze and report the computational cost and efficiency of the combined alignment approach compared to single-dimension alignment?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Generalizability Testing",
+      "criteria_met_question": "Does the experiment test the generalizability of the combined alignment approach on other NLP tasks beyond hate speech detection (e.g., sentiment analysis, toxicity detection)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Alignment Methodology Comparison",
+      "criteria_met_question": "Does the experiment compare different methodologies for implementing cultural and political alignment beyond the proposed CAT and PCT approaches?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Ethical Considerations Discussion",
+      "criteria_met_question": "Does the experiment include a discussion of ethical considerations related to cultural and political alignment of language models?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Exploring combined cultural and political alignment to reduce bias in multilingual hate speech detection.",
+    "research_idea_hypothesis": "Language models that are aligned with both Hofstede's cultural dimensions and political compass scores will exhibit improved fairness and reduced bias in multilingual hate speech detection tasks compared to models aligned with only one of these dimensions.",
+    "description": "This research explores the combined effect of aligning language models with Hofstede's cultural dimensions and political compass scores on bias and fairness in multilingual hate speech detection. The study will implement a Cultural Alignment Test (CAT) using Hofstede's Dimensions and a Culturally Adapted Political Compass Test (PCT) across multiple languages, including low-resource languages like Urdu and Punjabi. The hypothesis posits that models aligned with both cultural and political dimensions will demonstrate reduced bias and improved fairness compared to models aligned with only one dimension. This approach addresses the gap in understanding how cultural and political biases interact and propagate in multilingual contexts, which is crucial for developing fair and inclusive NLP systems. The expected outcome is that the combined alignment will lead to more balanced and fair model outputs, reducing the risk of amplifying biases in sensitive tasks like hate speech detection. This study will provide insights into the complex interplay of cultural and political factors in shaping model behavior, offering a novel perspective on bias mitigation strategies.",
+    "research_gap": "Existing methods often evaluate language model biases using isolated cultural or political dimensions, but they fail to explore the interaction between Hofstede's cultural dimensions and political compass scores in a multilingual context. This gap is critical because cultural and political biases can compound, leading to more pronounced unfairness in NLP tasks. No prior work has systematically tested the combined influence of these dimensions on multilingual hate speech detection, particularly across languages with distinct cultural and political contexts. This hypothesis aims to fill that gap by examining how these combined alignments affect model fairness and bias propagation in multilingual settings.",
+    "research_idea_variables": "[Hofstede Cultural Dimensions Alignment](https://www.semanticscholar.org/paper/3d682feaba804468217d27cf3f1e1db202cfca86): This variable involves using the Cultural Alignment Test (CAT) to evaluate and align language models with Hofstede's cultural dimensions, such as individualism vs. collectivism and power distance. The CAT will be implemented using culturally diverse prompts and scoring mechanisms to assess alignment. This alignment is expected to reduce cultural biases in model outputs by ensuring that the model's responses are culturally sensitive and contextually appropriate.\n\n[Political Compass Scores Alignment](https://www.semanticscholar.org/paper/a643e78f431e94749c681a8009f6e7a3003e707a): This variable uses the Culturally Adapted Political Compass Test (PCT) to evaluate and align language models with political ideologies across economic and social axes. The PCT will be implemented using prompts tailored to specific cultural contexts, allowing for nuanced assessment of political bias. This alignment aims to reduce political biases in model outputs by ensuring that the model's responses are ideologically balanced and contextually relevant.\n\n[Multilingual Hate Speech Detection](https://www.semanticscholar.org/paper/38c6c07e514b9941631c5bfe0e6c9a9dc3ba01e4): This variable involves evaluating the performance of language models on hate speech detection tasks across multiple languages, including low-resource languages. The focus is on measuring fairness and bias in model outputs, using metrics like precision, recall, and F1-score. The expected outcome is that models aligned with both cultural and political dimensions will exhibit improved fairness and reduced bias in multilingual contexts.",
+    "Explanation": "Each component plays a crucial role in reducing bias: the Cultural Alignment Test ensures cultural sensitivity, while the Political Compass Test ensures ideological balance. Together, they address the compounded biases that can arise in multilingual settings. For example, aligning a model with both dimensions can prevent it from amplifying cultural stereotypes or political biases in its outputs, leading to fairer and more balanced hate speech detection.",
+    "research_idea_long_description": "The alignment scores from the Cultural Alignment Test will be used to adjust model responses for cultural sensitivity, while the scores from the Political Compass Test will adjust for ideological balance. These adjustments will be applied before the model's outputs are evaluated on hate speech detection tasks, ensuring that both cultural and political biases are mitigated.",
+    "research_idea_design_prompt": "The proposed method involves a two-step alignment process. First, the Cultural Alignment Test (CAT) will be conducted using Hofstede's cultural dimensions. This involves crafting culturally diverse prompts to evaluate model responses against known cultural benchmarks. The model's alignment score will be calculated based on its performance on these prompts. Second, the Culturally Adapted Political Compass Test (PCT) will be conducted using politically charged prompts tailored to specific cultural contexts. The model's ideological alignment score will be calculated based on its responses. Both alignment processes will be applied to multilingual language models, including those trained on low-resource languages. The aligned models will then be evaluated on multilingual hate speech detection tasks, using metrics like precision, recall, and F1-score to measure fairness and bias. The hypothesis will be tested by comparing the performance of models aligned with both dimensions against those aligned with only one dimension. The expected outcome is that combined alignment will lead to improved fairness and reduced bias in multilingual contexts.",
+    "research_idea_elements": "Independent variable: Alignment of language models with both Hofstede's cultural dimensions and political compass scores\n\nDependent variable: Fairness and bias in multilingual hate speech detection tasks\n\nComparison groups: Models aligned with both cultural dimensions and political compass scores vs. models aligned with only one of these dimensions\n\nBaseline/control: Models aligned with only Hofstede's cultural dimensions or only political compass scores\n\nContext/setting: Multilingual hate speech detection across multiple languages including English and low-resource languages\n\nAssumptions: Cultural and political biases interact and propagate in multilingual contexts; alignment with cultural and political dimensions can reduce bias\n\nRelationship type: Causation (alignment approach will cause improved fairness and reduced bias)\n\nPopulation: Language models used for hate speech detection\n\nTimeframe: Not specified\n\nMeasurement method: Precision, recall, F1-score, false positive/negative rates, and fairness metrics (equal opportunity difference, disparate impact)",
+    "motivation": "The source paper is [Paper 0: From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models](https://www.semanticscholar.org/paper/5471114e37448bea2457b74894b1ecb92bbcfdf6) (266 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/3d682feaba804468217d27cf3f1e1db202cfca86) --> [Paper 2](https://www.semanticscholar.org/paper/023a98af94a3e7e8e538a6183da8ec05024fec56) --> [Paper 3](https://www.semanticscholar.org/paper/a67e03298127b2a42a971718735d1318b5c45772) --> [Paper 4](https://www.semanticscholar.org/paper/2054cfced5cc371ae47369769d9ba4b878c3844e) --> [Paper 5](https://www.semanticscholar.org/paper/cd27cfa1744f5963a32d1f1722e5bb0465241a80) --> [Paper 6](https://www.semanticscholar.org/paper/c19a0555123f164fe6df7dfd726c43dee53dc414). The progression of research from the source paper to the related papers highlights the increasing complexity and scope of bias analysis in language models. While the source paper focuses on political biases, subsequent papers expand the discussion to include cultural biases, using frameworks like Hofstede's Cultural Dimensions and the GLOBE framework. Despite these advancements, there remains a gap in understanding the intersection of political and cultural biases and their combined impact on NLP tasks. A novel research idea could explore this intersection, leveraging the strengths of existing frameworks while addressing the limitations in capturing nuanced biases.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test whether language models aligned with both Hofstede's cultural dimensions and political compass scores exhibit improved fairness and reduced bias in multilingual hate speech detection compared to models aligned with only one dimension.\n\n## Experiment Overview\nThis experiment will compare three alignment approaches for language models in hate speech detection:\n1. Cultural-only alignment (Baseline 1): Models aligned using only Hofstede's cultural dimensions\n2. Political-only alignment (Baseline 2): Models aligned using only political compass scores\n3. Combined alignment (Experimental): Models aligned with both cultural and political dimensions\n\nThe experiment will evaluate these approaches across multiple languages, including English and at least one low-resource language (e.g., Urdu or Punjabi if available, otherwise substitute with another non-English language with available data).\n\n## Pilot Mode Settings\nImplement a global variable PILOT_MODE that can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':\n- MINI_PILOT: Use 10 examples per language, 2 languages (English + one other), and run only 3 evaluation iterations\n- PILOT: Use 100 examples per language, 3 languages, and run 5 evaluation iterations\n- FULL_EXPERIMENT: Use the complete dataset across 5+ languages with 10 evaluation iterations\n\nStart with MINI_PILOT, then run PILOT if successful. Do not run FULL_EXPERIMENT - this will be manually triggered after human verification of the PILOT results.\n\n## Implementation Steps\n\n### 1. Data Preparation\n1.1. Load a multilingual hate speech detection dataset (such as HateXplain, HASOC, or another available dataset)\n1.2. Preprocess the data for each language, ensuring balanced representation of hate and non-hate speech examples\n1.3. Split the data into training, validation, and test sets (80/10/10 split)\n\n### 2. Cultural Alignment Test (CAT) Implementation\n2.1. Create a set of prompts that assess alignment with Hofstede's six cultural dimensions:\n   - Power Distance Index (PDI)\n   - Individualism vs. Collectivism (IDV)\n   - Masculinity vs. Femininity (MAS)\n   - Uncertainty Avoidance Index (UAI)\n   - Long-term vs. Short-term Orientation (LTO)\n   - Indulgence vs. Restraint (IND)\n2.2. For each dimension, create 5-10 scenarios/questions in each language that test the model's cultural alignment\n2.3. Implement a scoring mechanism that calculates a cultural alignment score for each dimension\n2.4. Create a function that uses these scores to adjust model outputs for cultural sensitivity\n\n### 3. Political Compass Test (PCT) Implementation\n3.1. Create prompts that assess alignment with political compass dimensions:\n   - Economic Left/Right axis\n   - Social Libertarian/Authoritarian axis\n3.2. Adapt these prompts to be culturally relevant for each language in the study\n3.3. Implement a scoring mechanism that calculates political alignment scores\n3.4. Create a function that uses these scores to adjust model outputs for political balance\n\n### 4. Model Alignment Implementation\n4.1. Implement the baseline models:\n   - Cultural-only aligned model: Apply only the CAT adjustments\n   - Political-only aligned model: Apply only the PCT adjustments\n4.2. Implement the experimental model:\n   - Combined alignment: Apply both CAT and PCT adjustments\n4.3. The alignment process should involve:\n   - Evaluating the base model using CAT and PCT\n   - Calculating alignment scores\n   - Using these scores to adjust model outputs through prompt engineering or other techniques\n\n### 5. Hate Speech Detection Evaluation\n5.1. For each aligned model variant, evaluate performance on the hate speech detection task\n5.2. Calculate the following metrics for each language and model:\n   - Precision, Recall, and F1-score\n   - False positive and false negative rates across different cultural and political contexts\n   - Fairness metrics (e.g., equal opportunity difference, disparate impact)\n5.3. Perform statistical significance testing to compare the performance of the three model variants\n\n### 6. Analysis and Reporting\n6.1. Generate tables and visualizations comparing the performance of the three model variants\n6.2. Analyze how the combined alignment affects bias and fairness compared to single-dimension alignment\n6.3. Report statistical significance of differences between models\n6.4. Analyze performance differences across languages\n\n## Technical Requirements\n1. Use a pre-trained language model (e.g., GPT-3.5-turbo or GPT-4) as the base model\n2. Implement the alignment adjustments using prompt engineering techniques\n3. Log all experimental results, including model responses, scores, and metrics\n4. Ensure reproducibility by setting random seeds\n\n## Expected Output\n1. Detailed logs of model responses and alignment scores\n2. Performance metrics for each model variant across languages\n3. Statistical analysis of the differences between model variants\n4. Visualizations comparing model performance\n5. A summary report interpreting the results and addressing the research hypothesis\n\nPlease run the experiment first in MINI_PILOT mode to verify the implementation, then in PILOT mode if successful. Do not proceed to FULL_EXPERIMENT mode without human verification.",
+  "core_related_works": [
+    {
+      "title": "Cultural Alignment in Large Language Models: An Explanatory Analysis Based on Hofstede's Cultural Dimensions",
+      "paperId": "3d682feaba804468217d27cf3f1e1db202cfca86",
+      "url": "https://www.semanticscholar.org/paper/3d682feaba804468217d27cf3f1e1db202cfca86",
+      "year": 2023,
+      "source_variable": "Hofstede Cultural Dimensions Alignment",
+      "source_paper_lookup_title": "Cultural Alignment in Large Language Models: An Explanatory Analysis Based on Hofstede's Cultural Dimensions"
+    },
+    {
+      "title": "Framing Political Bias in Multilingual LLMs Across Pakistani Languages",
+      "paperId": "a643e78f431e94749c681a8009f6e7a3003e707a",
+      "url": "https://www.semanticscholar.org/paper/a643e78f431e94749c681a8009f6e7a3003e707a",
+      "year": 2025,
+      "source_variable": "Political Compass Scores Alignment",
+      "source_paper_lookup_title": "Framing Political Bias in Multilingual LLMs Across Pakistani Languages"
+    },
+    {
+      "title": "Countering Hateful and Offensive Speech Online - Open Challenges",
+      "paperId": "38c6c07e514b9941631c5bfe0e6c9a9dc3ba01e4",
+      "url": "https://www.semanticscholar.org/paper/38c6c07e514b9941631c5bfe0e6c9a9dc3ba01e4",
+      "year": 2024,
+      "source_variable": "Multilingual Hate Speech Detection",
+      "source_paper_lookup_title": "Countering Hateful and Offensive Speech Online - Open Challenges"
+    }
+  ],
+  "references": "1. From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models (2023). Paper ID: 5471114e37448bea2457b74894b1ecb92bbcfdf6\n\n2. Cultural Alignment in Large Language Models: An Explanatory Analysis Based on Hofstede's Cultural Dimensions (2023). Paper ID: 3d682feaba804468217d27cf3f1e1db202cfca86\n\n3. How Well Do LLMs Represent Values Across Cultures? Empirical Analysis of LLM Responses Based on Hofstede Cultural Dimensions (2024). Paper ID: 023a98af94a3e7e8e538a6183da8ec05024fec56\n\n4. LLM-GLOBE: A Benchmark Evaluating the Cultural Values Embedded in LLM Output (2024). Paper ID: a67e03298127b2a42a971718735d1318b5c45772\n\n5. ValuesRAG: Enhancing Cultural Alignment Through Retrieval-Augmented Contextual Learning (2025). Paper ID: 2054cfced5cc371ae47369769d9ba4b878c3844e\n\n6. RAVENEA: A Benchmark for Multimodal Retrieval-Augmented Visual Culture Understanding (2025). Paper ID: cd27cfa1744f5963a32d1f1722e5bb0465241a80\n\n7. Cultural Evaluations of Vision-Language Models Have a Lot to Learn from Cultural Theory (2025). Paper ID: c19a0555123f164fe6df7dfd726c43dee53dc414\n\n8. Thesis Distillation: Investigating The Impact of Bias in NLP Models on Hate Speech Detection (2023). Paper ID: 2447cefe817cf267cc46d8f2c9cdb4878c896b39\n\n9. A Dual-Layered Evaluation of Geopolitical and Cultural Bias in LLMs (2023). Paper ID: 840436e8753369cc5274c098e594cf464552eb77\n\n10. Framing Political Bias in Multilingual LLMs Across Pakistani Languages (2023). Paper ID: a643e78f431e94749c681a8009f6e7a3003e707a\n\n11. John vs. Ahmed: Debate-Induced Bias in Multilingual LLMs (2024). Paper ID: 972c97a151960d8f6b16e0a570c2ccbfbf8e01e8\n\n12. Investigating Cultural Bias in Pre-trained Language Models using Hofstede's Dimensions (2023). Paper ID: 8a3d1ce6dd9dc9766a42e645a23de4b5f2b447ec\n\n13. PoliTune: Analyzing the Impact of Data Selection and Fine-Tuning on Economic and Political Biases in Large Language Models (2024). Paper ID: 334160c208c5b2381ffb696e803a64226a55ac03\n\n14. Bias Beyond English: Evaluating Social Bias and Debiasing Methods in a Low-Resource Setting (2023). Paper ID: 55a29919f174c3382c1924410628ebcaea0f96db\n\n15. Assessing Political Inclination of Bangla Language Models (2023). Paper ID: 3a359f65a8ff8c84601c27e7c37192b518a9f8b7\n\n16. Countering Hateful and Offensive Speech Online - Open Challenges (2024). Paper ID: 38c6c07e514b9941631c5bfe0e6c9a9dc3ba01e4"
+}

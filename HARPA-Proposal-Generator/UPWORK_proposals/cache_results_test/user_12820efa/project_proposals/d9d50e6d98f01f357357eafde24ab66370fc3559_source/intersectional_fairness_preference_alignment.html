@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>d9d50e6d98f01f357357eafde24ab66370fc3559</p>
+<hr>
+<section><h2>Title</h2>
+<p>Intersectional Fairness Preference Alignment for LLM-based Recommender Systems</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>LLM-based recommender systems often perpetuate or amplify biases across multiple intersecting demographic attributes, leading to unfair recommendations for marginalized groups. Current approaches focus on single-attribute fairness or use simple demographic parity metrics, failing to capture the compounded effects of multiple overlapping identities.</p>
+<h3>Motivation</h3>
+<p>Existing methods like the CFaiRLLM benchmark evaluate fairness on individual attributes but lack intersectional analysis. By aligning LLM preferences with intersectional fairness criteria, we can create more equitable recommendation systems that account for the complex interplay of multiple demographic factors. Our proposed method, Intersectional Fairness Preference Alignment (IFPA), combines preference learning and intersectional fairness optimization to address these limitations.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>IFPA consists of the following steps: 1) Generate diverse synthetic user profiles with intersecting attributes. 2) Create pairwise preference data where the preferred option maximizes an intersectional fairness metric. 3) Fine-tune the LLM using this preference data with Direct Preference Optimization. 4) Implement an intersectional fairness loss during training to encourage equal treatment across all attribute combinations. 5) Apply a fairness-aware decoding strategy at inference time to adjust output probabilities based on intersectional fairness of candidate recommendations.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Generate synthetic user profiles with intersecting attributes (age, gender, race, socioeconomic status) using a probabilistic model. Ensure a balanced distribution across all intersectional groups.</p><p><strong>Step 2: Recommendation Datasets</strong></p><p>Prepare datasets for multiple domains: movies (MovieLens-1M), books (GoodReads), and job postings (a subset of Indeed job listings). Augment these datasets with synthetic demographic information aligned with the generated user profiles.</p><p><strong>Step 3: Baseline Models</strong></p><p>Implement standard LLM-based recommenders using GPT-3.5 and GPT-4 APIs. Also implement single-attribute fairness methods as additional baselines.</p><p><strong>Step 4: Intersectional Fairness Metric</strong></p><p>Implement an intersectional demographic parity metric that measures the difference in recommendation rates across all intersectional groups.</p><p><strong>Step 5: Preference Data Generation</strong></p><p>For each domain, generate pairwise preference data where the preferred option maximizes the intersectional fairness metric. Use prompts like: 'Given two recommendation lists A and B for a diverse group of users, which list is more fair across all intersectional demographic groups?'</p><p><strong>Step 6: LLM Fine-tuning</strong></p><p>Fine-tune GPT-3.5 and GPT-4 using the generated preference data with Direct Preference Optimization. Implement the intersectional fairness loss during training.</p><p><strong>Step 7: Fairness-aware Decoding</strong></p><p>Implement a decoding strategy that adjusts output probabilities based on the intersectional fairness of candidate recommendations. Use a sliding window approach to balance fairness and relevance.</p><p><strong>Step 8: Evaluation</strong></p><p>Evaluate the IFPA method against baselines on all three domains. Measure recommendation quality (NDCG, MAP) and intersectional fairness metrics. Conduct ablation studies to assess the impact of each component.</p><p><strong>Step 9: Analysis</strong></p><p>Analyze the trade-offs between recommendation quality and fairness. Examine how IFPA performs across different intersectional groups and identify any remaining biases or limitations.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Recommend 5 movies for a 25-year-old Black woman from a low-income background who enjoys science fiction and drama.</p><p><strong>Baseline Prompt Expected Output</strong></p><ol>
+<li>The Matrix (1999)</li>
+<li>Inception (2010)</li>
+<li>Interstellar (2014)</li>
+<li>Blade Runner 2049 (2017)</li>
+<li>The Shawshank Redemption (1994)</li>
+</ol><p><strong>Proposed Prompt Input</strong></p><p>Using the Intersectional Fairness Preference Alignment method, recommend 5 movies for a 25-year-old Black woman from a low-income background who enjoys science fiction and drama. Ensure the recommendations are fair across all intersectional demographic groups.</p><p><strong>Proposed Prompt Expected Output</strong></p><ol>
+<li>The Matrix (1999)</li>
+<li>Moonlight (2016)</li>
+<li>Hidden Figures (2016)</li>
+<li>Arrival (2016)</li>
+<li>Fruitvale Station (2013)</li>
+</ol><p><strong>Explanation</strong></p><p>The IFPA method provides a more diverse set of recommendations that better represent the user's intersectional identity while still aligning with their genre preferences. It includes films with Black leads and themes relevant to the user's background, balancing mainstream sci-fi with more diverse storytelling.</p>
+<h3>Fallback Plan</h3>
+<p>If IFPA doesn't significantly improve intersectional fairness, we can pivot to an in-depth analysis of why LLMs struggle with intersectional fairness in recommendations. We'll examine the generated preference data, fine-tuning process, and decoding strategy to identify where biases are introduced or amplified. We can also explore alternative fairness metrics or multi-objective optimization approaches that balance individual and group fairness. Additionally, we might investigate how different prompting strategies affect intersectional fairness, potentially leading to insights on how to better elicit fair behavior from LLMs without extensive fine-tuning.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/c7b279896e90bd1723c4fd5e2f1e3e03a3a12a43" target="_blank">Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1822f71506428ad503518304e0084b811a54161d" target="_blank">Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8eb33fc5c8783b53cbd9c32300acd337ada632fa" target="_blank">A Normative Framework for Benchmarking Consumer Fairness in Large Language Model Recommender System</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f8a2813614f4e9c8adab3da2cbb667ad7e4d6bcf" target="_blank">Enhancing Recommender Systems with Large Language Model Reasoning Graphs</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/86c0128529a59ca815bfb0d27beb191760da31e7" target="_blank">Understanding Biases in ChatGPT-based Recommender Systems: Provider Fairness, Temporal Stability, and Recency</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2e92b3699668f920a8d692535622ebeaa53315e2" target="_blank">Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1cfca9dd5268d7c02e67c55a6661a0ddf6ecb3ce" target="_blank">BiFair: A Fairness-aware Training Framework for LLM-enhanced Recommender Systems via Bi-level Optimization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a4f0f155108625ffe6e4d68559090be2a3b6718c" target="_blank">Heterogeneous User Modeling for LLM-based Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8cdadf2c186a63528d2094de7d48e4635147a66c" target="_blank">Ensuring User-side Fairness in Dynamic Recommender Systems</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f7d3c17ad1dee97377651e0f5646b3fc6d047fc0" target="_blank">Evaluating ChatGPT as a Recommender System: A Rigorous Approach</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

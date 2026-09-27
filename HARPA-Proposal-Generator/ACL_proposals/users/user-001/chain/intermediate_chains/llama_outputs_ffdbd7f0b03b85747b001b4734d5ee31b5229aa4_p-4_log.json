@@ -1,0 +1,43 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "169e5b9d75656deee2a2945cf36b0d3f12832a85",
+            "pmid": "2410.20444",
+            "title": "Vector Quantization Prompting for Continual Learning",
+            "abstract": "Continual learning requires to overcome catastrophic forgetting when training a single model on a sequence of tasks. Recent top-performing approaches are prompt-based methods that utilize a set of learnable parameters (i.e., prompts) to encode task knowledge, from which appropriate ones are selected to guide the fixed pre-trained model in generating features tailored to a certain task. However, existing methods rely on predicting prompt identities for prompt selection, where the identity prediction process cannot be optimized with task loss. This limitation leads to sub-optimal prompt selection and inadequate adaptation of pre-trained features for a specific task. Previous efforts have tried to address this by directly generating prompts from input queries instead of selecting from a set of candidates. However, these prompts are continuous, which lack sufficient abstraction for task knowledge representation, making them less effective for continual learning. To address these challenges, we propose VQ-Prompt, a prompt-based continual learning method that incorporates Vector Quantization (VQ) into end-to-end training of a set of discrete prompts. In this way, VQ-Prompt can optimize the prompt selection process with task loss and meanwhile achieve effective abstraction of task knowledge for continual learning. Extensive experiments show that VQ-Prompt outperforms state-of-the-art continual learning methods across a variety of benchmarks under the challenging class-incremental setting. The code is available at \\href{https://github.com/jiaolifengmi/VQ-Prompt}{this https URL}.",
+            "year": 2024,
+            "citation_count": 6
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.CKAA: Cross-subspace Knowledge Alignment and Aggregation for Robust Continual Learning": {
+                    "explanation": "This paper addresses the challenge of feature subspace misalignment in continual learning, which is a related issue to the prompt selection problem in the source paper. However, it does not directly depend on the findings of the source paper, as it proposes a different approach involving knowledge alignment and aggregation.",
+                    "relevance": 0
+                },
+                "2.SplitLoRA: Balancing Stability and Plasticity in Continual Learning Through Gradient Space Splitting": {
+                    "explanation": "SplitLoRA focuses on balancing stability and plasticity in continual learning through gradient space splitting. While it addresses continual learning, it does not build on the specific findings or hypotheses of the source paper, which focuses on vector quantization prompting.",
+                    "relevance": 0
+                },
+                "3.Onboard Optimization and Learning: A Survey": {
+                    "explanation": "This is a survey paper that summarizes existing methodologies in onboard learning, lacking novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "4.Navigating Semantic Drift in Task-Agnostic Class-Incremental Learning": {
+                    "explanation": "This paper addresses semantic drift in class-incremental learning, which is a conceptually related challenge to the source paper's focus on continual learning. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "5.In Praise of Stubbornness: An Empirical Case for Cognitive-Dissonance Aware Continual Update of Knowledge in LLMs": {
+                    "explanation": "This paper explores the challenge of updating knowledge in large language models without catastrophic forgetting, which is related to the source paper's focus on continual learning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6.Collaborative Adapter Experts for Class-Incremental Learning": {
+                    "explanation": "This paper proposes a collaborative approach to class-incremental learning using adapter experts, which is related to the source paper's focus on prompt-based methods for continual learning. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

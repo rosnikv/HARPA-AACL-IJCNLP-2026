@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>ffdbd7f0b03b85747b001b4734d5ee31b5229aa4</p>
+<hr>
+<h2>Title</h2>
+<p>Integrate Fourier Prompt Tuning with Oscar for enhanced image captioning performance.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Fourier Prompt Tuning with the Oscar model will enhance performance and parameter efficiency in image captioning tasks compared to using Oscar with CoOp or CoCoOp tuning methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods primarily focus on integrating Fourier-based prompt tuning with multi-modal models for tasks like image captioning and visual question answering. However, they often overlook the potential of combining Fourier Prompt Tuning (FPT) with specific multi-modal models like Oscar, which are designed to process both visual and language features within the same transformer block. This combination has not been extensively explored, especially in the context of parameter efficiency and performance improvement in image captioning tasks. The hypothesis addresses the gap by proposing a novel integration of FPT with Oscar, leveraging the model's unique architecture to enhance performance and parameter efficiency.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research idea explores the integration of Fourier Prompt Tuning (FPT) with the Oscar model to improve performance and parameter efficiency in image captioning tasks. FPT leverages Fast Fourier Transformation (FFT) to extract global spectral information, which is then integrated into soft prompts via a frequency-spatial cross-attention mechanism. This method enhances the model's ability to handle scenarios with incomplete modalities by injecting spectral information into the prompts. Oscar, a single-stream transformer model, processes both visual and language features within the same transformer block, making it an ideal candidate for this integration. The combination is expected to improve the alignment between visual and textual representations, leading to better performance in image captioning tasks. The hypothesis will be tested by comparing the performance of the Oscar model with FPT against Oscar with CoOp and CoCoOp tuning methods, using metrics such as BLEU, METEOR, and CIDEr scores. This approach addresses the gap in existing research by exploring a novel combination of FPT with a specific multi-modal model, offering potential improvements in both performance and parameter efficiency.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/74d511fd4c69afac05dd99b35a80b6de67ceece1">Fourier Prompt Tuning (FPT)</a>: Fourier Prompt Tuning leverages Fast Fourier Transformation (FFT) to incorporate frequency domain information into the prompt tuning process. This approach enhances the model's ability to capture global patterns and interactions in the data, which is particularly beneficial for tasks like image captioning. Implementation involves transforming the input data into the frequency domain using FFT, and then using the resulting spectral information to guide the prompt tuning process. This method allows the model to better generalize across datasets with varying disparities by capturing both spatial and frequency-based features.</p>
+<p><a href="https://www.semanticscholar.org/paper/a1954b19945cc1c50efa32bbb63fb85a990125aa">Oscar Model</a>: Oscar is a single-stream transformer model designed to process both visual and language features within the same transformer block. It is pre-trained on image-text pairs and fine-tuned for tasks like image captioning. Oscar uses a combination of prompts and parameter-efficient tuning techniques, such as LoRA and Adapter, to enhance performance. The model incorporates task-specific learnable parameters, including CoOp for object labels and VPT for region features, to improve image-captioning performance. This approach allows Oscar to effectively integrate visual and textual inputs, achieving a 2% increase in the Cider score with minimal additional parameters.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating Fourier Prompt Tuning (FPT) with the Oscar model to enhance image captioning performance. The process begins with the Oscar model, which processes both visual and language features within the same transformer block. FPT is applied by transforming the input data into the frequency domain using Fast Fourier Transformation (FFT). The resulting spectral information is then integrated into soft prompts via a frequency-spatial cross-attention mechanism. This integration enhances the model's ability to capture global patterns and interactions in the data. The Oscar model, with its unique architecture, allows for efficient processing of both visual and textual inputs, making it an ideal candidate for this integration. The hypothesis will be tested by comparing the performance of the Oscar model with FPT against Oscar with CoOp and CoCoOp tuning methods, using metrics such as BLEU, METEOR, and CIDEr scores. The expected outcome is improved performance and parameter efficiency in image captioning tasks, addressing the gap in existing research by exploring a novel combination of FPT with a specific multi-modal model.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating Fourier Prompt Tuning (FPT) with the Oscar model enhances performance and parameter efficiency in image captioning tasks compared to using Oscar with CoOp or CoCoOp tuning methods.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three approaches for image captioning:<br />
+1. <strong>Baseline 1</strong>: Oscar model with CoOp tuning<br />
+2. <strong>Baseline 2</strong>: Oscar model with CoCoOp tuning<br />
+3. <strong>Experimental</strong>: Oscar model with Fourier Prompt Tuning (FPT)</p></p>
+<p><p>The experiment should evaluate these approaches using standard image captioning metrics (BLEU, METEOR, and CIDEr) on a common image captioning dataset (MS COCO).</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. Configure the experiment as follows:</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use only 50 images from the MS COCO training set for training and 20 images from the validation set for evaluation. Limit training to 2 epochs with a small batch size (4). This should run in under 10 minutes for quick debugging.</li>
+</ul></p>
+<p><ul>
+<li><strong>PILOT</strong>: Use 1000 images from the MS COCO training set for training and 200 images from the validation set for evaluation. Train for 5 epochs with a batch size of 16. This should run in under 2 hours to verify if the approach shows promise.</li>
+</ul></p>
+<p><ul>
+<li><strong>FULL_EXPERIMENT</strong>: Use the full MS COCO dataset (train/val/test splits as appropriate). Train for 20 epochs with optimal batch size. Perform hyperparameter tuning on the validation set and final evaluation on the test set.</li>
+</ul></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then PILOT mode if successful, and stop before FULL_EXPERIMENT (which would require manual verification and approval).</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Data Preparation</strong></h4>
+<ul>
+<li>Load the MS COCO dataset with image-caption pairs</li>
+<li>Preprocess images (resize, normalize) for input to the Oscar model</li>
+<li>Prepare caption data (tokenization, etc.)</li>
+<li>Split data according to the current PILOT_MODE setting</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>2. Model Implementation</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Oscar Model Setup</strong></h4>
+<ul>
+<li>Load the pre-trained Oscar model</li>
+<li>Configure it for image captioning tasks</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Baseline Implementations</strong></h4>
+<ul>
+<li><strong>CoOp</strong>: Implement Context Optimization (CoOp) tuning for Oscar</li>
+<li>Add learnable prompt vectors to the input embeddings</li>
+<li>Initialize these prompts and optimize them during training</li>
+</ul></p>
+<p><ul>
+<li><strong>CoCoOp</strong>: Implement Conditional Context Optimization (CoCoOp) tuning for Oscar</li>
+<li>Implement a meta-network that generates input-conditional prompts</li>
+<li>The meta-network should take image features as input and output prompt embeddings</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Experimental Implementation (FPT)</strong></h4>
+<ul>
+<li>Implement Fourier Prompt Tuning (FPT) integration with Oscar:</li>
+<li>Extract visual features from input images</li>
+<li>Apply Fast Fourier Transform (FFT) to these features to obtain spectral information</li>
+<li>Design a frequency-spatial cross-attention mechanism that:<ul>
+<li>Takes the FFT-transformed features as input</li>
+<li>Generates soft prompts that incorporate this spectral information</li>
+<li>Integrates these prompts into the Oscar model's input</li>
+</ul>
+</li>
+<li>The FPT module should have a parameter-efficient design (fewer parameters than the full Oscar model)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Training Procedure</strong></h4>
+<ul>
+<li>Train each model (Oscar+CoOp, Oscar+CoCoOp, Oscar+FPT) separately</li>
+<li>Use the same training data, optimizer settings, and learning rate for fair comparison</li>
+<li>Save checkpoints and training logs</li>
+<li>Track training metrics (loss, validation scores) after each epoch</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Evaluation</strong></h4>
+<ul>
+<li>Generate captions for images in the evaluation set using each model</li>
+<li>Calculate the following metrics for each approach:</li>
+<li>BLEU-1, BLEU-4 scores</li>
+<li>METEOR score</li>
+<li>CIDEr score</li>
+<li>Count the number of trainable parameters for each approach</li>
+<li>Measure inference time for each approach</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>5. Analysis and Reporting</strong></h4>
+<ul>
+<li>Create tables comparing all metrics across the three approaches</li>
+<li>Perform statistical significance testing (bootstrap resampling) to determine if differences between approaches are statistically significant</li>
+<li>Generate sample outputs (images with generated captions) from each approach for qualitative comparison</li>
+<li>Create visualizations showing the spectral information captured by FPT</li>
+<li>Report parameter counts and inference times to evaluate parameter efficiency</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Technical Requirements</strong></h4>
+<ol>
+<li>Use PyTorch for model implementation</li>
+<li>Use numpy for FFT calculations and data processing</li>
+<li>Use the transformers library for the Oscar model</li>
+<li>Implement proper logging of all experiment details</li>
+<li>Save all models, results, and visualizations</li>
+</ol></p>
+<p><p>Please run the experiment first in MINI_PILOT mode, then in PILOT mode if successful. Stop before running the FULL_EXPERIMENT mode, as this will require manual verification of the pilot results.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4">Paper 0: The Power of Scale for Parameter-Efficient Prompt Tuning</a> (4242 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/6e8490d951de04002706b2f4cc43a338124af12a">Paper 1</a>. The analysis shows a progression from parameter-efficient prompt tuning in language models to its application in vision models, addressing the challenge of dataset disparity. The source paper demonstrated the effectiveness of prompt tuning in language models, while the related paper expanded this concept to vision models, incorporating frequency domain information to tackle dataset mismatch. A research idea that could advance this field would involve exploring the application of prompt tuning in multi-modal models, which combine both language and vision data. This would address the limitation of current methods that focus on either language or vision models separately, and could lead to more robust models capable of handling diverse data types.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4" target="_blank">The Power of Scale for Parameter-Efficient Prompt Tuning</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/6e8490d951de04002706b2f4cc43a338124af12a" target="_blank">Visual Fourier Prompt Tuning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/None" target="_blank">Context Optimization for Vision-Language Models (CoOp) and its Extension (CoCoOp)</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/a1954b19945cc1c50efa32bbb63fb85a990125aa" target="_blank">Applying Prompts and Parameter-Efficient Methods to Enhance Single-Stream Vision-Language Transformers</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/fd394c65850c5028d8004b37110d1ca8a615e937" target="_blank">Prompt Tuning for Unified Multimodal Pretrained Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/74d511fd4c69afac05dd99b35a80b6de67ceece1" target="_blank">Fourier Prompt Tuning for Modality-Incomplete Scene Segmentation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/5cb62434f24b8e685de8f2be3a0f7c4c9ec55fed" target="_blank">Enhancing Multi-modal Models with Heterogeneous MoE Adapters for Fine-tuning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/364603fcdd82c607df4042ea985f81b0b58fa5f1" target="_blank">SAN: Hypothesizing Long-Term Synaptic Development and Neural Engram Mechanism in Scalable Model's Parameter-Efficient Fine-Tuning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/2989d81cd45dd7b784f7e7130dea11237f73ff54" target="_blank">Block Circulant Adapter for Large Language Models</a> (2025)</li>
+</ol>
+</body>
+</html>

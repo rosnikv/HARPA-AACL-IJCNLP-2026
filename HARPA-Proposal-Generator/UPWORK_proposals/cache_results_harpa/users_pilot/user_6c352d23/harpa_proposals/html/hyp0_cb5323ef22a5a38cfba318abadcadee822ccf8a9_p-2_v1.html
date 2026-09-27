@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>cb5323ef22a5a38cfba318abadcadee822ccf8a9</p>
+<hr>
+<h2>Title</h2>
+<p>Enhancing scheduling optimization with block-sparse tensor networks and Generative Flow Networks.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating block-sparse tensor networks with Generative Flow Networks will improve the diversity and quality of solutions for scheduling optimization tasks, as measured by the Quantum Inception Score.</p>
+<h3>Motivation</h3>
+<p>Existing methods for integrating Generative Flow Networks with U(1) symmetric tensor networks have primarily focused on constrained combinatorial optimization tasks using arbitrary integer-valued equality constraints. However, these approaches have not extensively explored the potential of leveraging tensor network structures to enhance the diversity of solutions in scheduling optimization tasks, particularly under complex constraints. This gap is significant because scheduling optimization is a critical problem in various industries, and improving solution diversity can lead to more robust and adaptable schedules. By integrating block-sparse tensor networks with Generative Flow Networks, this hypothesis aims to address this gap by enhancing both the diversity and quality of solutions in scheduling optimization tasks.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of block-sparse tensor networks with Generative Flow Networks to enhance the diversity and quality of solutions in scheduling optimization tasks. The hypothesis posits that by leveraging the block-sparse structure of tensor networks, which efficiently represent and generate diverse solutions, the combined approach will outperform traditional methods in generating robust and adaptable schedules. The integration focuses on encoding scheduling constraints directly into the tensor network, allowing the Generative Flow Network to explore a wider solution space while maintaining validity. This approach is expected to improve the Quantum Inception Score, a metric used to evaluate the quality and diversity of generated solutions. The research will involve implementing the integration using Python-based experiments, testing on benchmark scheduling tasks, and analyzing results across multiple runs. The expected outcome is a demonstrable improvement in both the diversity and quality of scheduling solutions, providing a novel approach to tackling complex scheduling problems.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/f74e22ca2bba820aa9377420f92ea50abcd94adc">Block-Sparse Tensor Networks</a>: Block-sparse tensor networks are used to efficiently represent and generate diverse solutions in constrained optimization tasks. In this experiment, they will be configured to encode scheduling constraints directly, leveraging U(1) global charge conservation to reduce space complexity and computational time. This approach allows for faster learning and convergence, ensuring that only necessary tensor components are updated. The block-sparse structure is expected to enhance the diversity of solutions by exploiting inherent symmetries in the data, making it particularly effective in generating novel solutions while maintaining constraints.</p>
+<p><a href="https://www.semanticscholar.org/paper/7f915e2af2f8b3874d0d6dd7aa53d60933730e28">Generative Flow Networks</a>: Generative Flow Networks (GFlowNets) are employed to generate compositional structures in a probabilistic manner, offering flexibility in solving diverse tasks such as scheduling optimization. In this experiment, GFlowNets will be used to sample solutions by incrementally adding entities onto current structures, with probabilities proportional to a target reward distribution. This method is effective for tasks like scheduling optimization, where it provides a powerful framework for generating diverse solutions. The integration with block-sparse tensor networks is expected to enhance the model's ability to explore the solution space efficiently.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating block-sparse tensor networks with Generative Flow Networks to enhance scheduling optimization tasks. The implementation begins with configuring block-sparse tensor networks to encode scheduling constraints directly, leveraging U(1) global charge conservation to reduce space complexity. This configuration ensures that the tensor network only generates valid solutions, reducing computational costs and improving learning efficiency. Next, Generative Flow Networks are employed to sample solutions by incrementally adding entities onto current structures, with probabilities proportional to a target reward distribution. The integration occurs by using the block-sparse tensor network to guide the sampling process of the GFlowNet, ensuring that only valid and diverse solutions are generated. The output from the tensor network serves as a constraint-aware guide for the GFlowNet, allowing it to explore a wider solution space while maintaining validity. The experiment will be conducted using Python-based experiments, with results analyzed across multiple runs to ensure robustness. The expected outcome is an improvement in both the diversity and quality of scheduling solutions, as measured by the Quantum Inception Score.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating block-sparse tensor networks with Generative Flow Networks improves the diversity and quality of solutions for scheduling optimization tasks. The experiment should compare our proposed integrated approach against two baselines and evaluate performance using the Quantum Inception Score.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Structure</strong></h4></p>
+<p><p>Implement the experiment with three pilot modes controlled by a global variable:</p>
+<pre><code class="language-python">PILOT_MODE = &quot;MINI_PILOT&quot;  # Options: &quot;MINI_PILOT&quot;, &quot;PILOT&quot;, &quot;FULL_EXPERIMENT&quot;
+</code></pre></p>
+<p><p>Run the MINI_PILOT first, then if everything looks good, run the PILOT. After the pilot completes successfully, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Modes:</strong></h4>
+<ul>
+<li><strong>MINI_PILOT</strong>: Use 3 small scheduling problems with 5-10 tasks each. Run 5 trials per method. This should complete in under 10 minutes.</li>
+<li><strong>PILOT</strong>: Use 10 medium scheduling problems with 20-50 tasks each. Run 10 trials per method. This should complete in under 2 hours.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the full benchmark dataset of 50 scheduling problems of varying complexity (small, medium, large). Run 30 trials per method for robust statistical analysis.</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Methods to Implement</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Baseline Methods</strong></h4></p>
+<p><h4 class="custom-heading"><strong>a. Standard GFlowNet (Baseline 1)</strong></h4>
+<p>Implement a standard Generative Flow Network for scheduling optimization:<br />
+- Configure the GFlowNet to incrementally build scheduling solutions<br />
+- Use a reward function based on schedule quality (makespan, resource utilization)<br />
+- Train the GFlowNet using flow-matching loss<br />
+- Generate solutions by sampling from the trained model</p></p>
+<p><h4 class="custom-heading"><strong>b. Standard Tensor Network Optimization (Baseline 2)</strong></h4>
+<p>Implement a standard tensor network approach for scheduling:<br />
+- Encode scheduling constraints in a tensor network structure<br />
+- Use standard tensor contraction methods (not block-sparse)<br />
+- Optimize the tensor network to generate valid schedules<br />
+- Sample solutions from the optimized tensor network</p></p>
+<p><h4 class="custom-heading"><strong>2. Integrated Approach (Experimental)</strong></h4>
+<p>Implement the integration of block-sparse tensor networks with GFlowNets:<br />
+- Configure block-sparse tensor networks to encode scheduling constraints directly<br />
+- Leverage U(1) global charge conservation to reduce space complexity<br />
+- Use the block-sparse tensor network to guide the sampling process of the GFlowNet<br />
+- The tensor network should provide constraint-aware guidance to the GFlowNet<br />
+- The GFlowNet should use this guidance to explore the solution space efficiently</p></p>
+<p><h4 class="custom-heading"><strong>Scheduling Problems Dataset</strong></h4></p>
+<p><p>Use standard scheduling benchmark problems with the following characteristics:<br />
+- Job Shop Scheduling Problems (JSSP) or Resource-Constrained Project Scheduling Problems (RCPSP)<br />
+- For each problem, define tasks, durations, precedence constraints, and resource requirements<br />
+- Include problems of varying complexity based on the pilot mode<br />
+- Use established benchmark instances from OR-Library or PSPLIB if possible</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Block-Sparse Tensor Network Implementation</strong></h4>
+<ul>
+<li>Implement tensor networks with block-sparse structure</li>
+<li>Use U(1) symmetry for global charge conservation</li>
+<li>Encode scheduling constraints directly in the tensor structure</li>
+<li>Implement efficient tensor contraction operations</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>GFlowNet Implementation</strong></h4>
+<ul>
+<li>Implement a Generative Flow Network that builds schedules incrementally</li>
+<li>Define appropriate state space, actions, and transitions for scheduling</li>
+<li>Implement flow-matching training objective</li>
+<li>Configure the network to use guidance from the tensor network (for the integrated approach)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Integration Mechanism</strong></h4>
+<ul>
+<li>The block-sparse tensor network should compute constraint-aware probabilities</li>
+<li>These probabilities should guide the GFlowNet's sampling process</li>
+<li>Implement an interface between the tensor network and GFlowNet</li>
+<li>Ensure that the tensor network output is properly formatted for the GFlowNet</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Primary Metric: Quantum Inception Score (QIS)</strong></h4>
+<ul>
+<li>Implement the Quantum Inception Score to measure solution quality and diversity</li>
+<li>Compare the distribution of generated solutions to benchmark solutions</li>
+<li>Higher QIS indicates better quality and diversity</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Secondary Metrics:</strong></h4>
+<ol>
+<li>Solution Quality:</li>
+<li>Makespan (total completion time)</li>
+<li>Resource utilization efficiency</li>
+<li>Number of constraint violations (should be zero for valid solutions)</li>
+</ol></p>
+<p><ol>
+<li>Solution Diversity:</li>
+<li>Pairwise distance between solutions</li>
+<li>Coverage of the solution space</li>
+</ol></p>
+<p><ol>
+<li>Computational Efficiency:</li>
+<li>Time taken to generate solutions</li>
+<li>Number of valid solutions generated</li>
+<li>Memory usage</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experimental Procedure</strong></h4></p>
+<p><ol>
+<li>For each scheduling problem in the dataset:</li>
+<li>Run each method (Baseline 1, Baseline 2, Integrated Approach) multiple times based on pilot mode</li>
+<li>Generate a set of solutions for each method</li>
+<li>Compute all evaluation metrics for each method</li>
+</ol></p>
+<p><ol>
+<li>Statistical Analysis:</li>
+<li>Compute mean and standard deviation for all metrics</li>
+<li>Perform statistical significance tests (t-tests or non-parametric alternatives)</li>
+<li>Use bootstrap resampling to estimate confidence intervals</li>
+</ol></p>
+<p><ol>
+<li>Visualization:</li>
+<li>Plot the distribution of solutions for each method</li>
+<li>Create comparative visualizations of the metrics</li>
+<li>Generate Gantt charts for representative solutions</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4></p>
+<p><ol>
+<li>Generate a comprehensive report including:</li>
+<li>Summary of results for each method</li>
+<li>Statistical analysis of the differences between methods</li>
+<li>Visualizations of the solutions and metrics</li>
+<li>Discussion of the findings in relation to the hypothesis</li>
+</ol></p>
+<p><ol>
+<li>Save all generated solutions and intermediate results</li>
+</ol></p>
+<p><ol>
+<li>Log detailed information about the experiment:</li>
+<li>Configuration parameters</li>
+<li>Runtime information</li>
+<li>Error messages and warnings</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Code Structure</strong></h4></p>
+<p><p>Organize the code into the following modules:<br />
+1. Data loading and preprocessing<br />
+2. Block-sparse tensor network implementation<br />
+3. GFlowNet implementation<br />
+4. Integration mechanism<br />
+5. Evaluation metrics<br />
+6. Experiment runner<br />
+7. Visualization and reporting</p></p>
+<p><p>Ensure proper documentation and error handling throughout the code.</p></p>
+<p><p>The experiment should test the hypothesis that integrating block-sparse tensor networks with Generative Flow Networks improves the diversity and quality of solutions for scheduling optimization tasks, as measured by the Quantum Inception Score and other metrics.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/cb5323ef22a5a38cfba318abadcadee822ccf8a9">Paper 0: Flow Network based Generative Models for Non-Iterative Diverse Candidate Generation</a> (352 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/e309fc40c7092104bc767d78a3cff03447a4cdd9">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/f74e22ca2bba820aa9377420f92ea50abcd94adc">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/c19c7642931c86bcc1afcafa201c64dc5fab9a0b">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/a5bcaae165d38a9fbcaa9520135fb48ed3ef5765">Paper 4</a>. The analysis reveals a progression from leveraging generative models for optimization (Paper 0) to handling constraints efficiently (Paper 1), and then to evaluating model performance through novel metrics (Papers 2 and 3). The source paper's focus on flow networks for diverse candidate generation is complemented by these advancements, yet there remains a gap in integrating these approaches to enhance the diversity and quality of generated solutions in constrained optimization tasks. A research idea that combines the flow network approach with the constraint handling and evaluation metrics from subsequent papers could advance the field by providing a comprehensive framework for generating diverse, high-quality solutions in complex optimization problems.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/cb5323ef22a5a38cfba318abadcadee822ccf8a9" target="_blank">Flow Network based Generative Models for Non-Iterative Diverse Candidate Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/e309fc40c7092104bc767d78a3cff03447a4cdd9" target="_blank">Enhancing combinatorial optimization with classical and quantum generative models</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/f74e22ca2bba820aa9377420f92ea50abcd94adc" target="_blank">Symmetric tensor networks for generative modeling and constrained combinatorial optimization</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/c19c7642931c86bcc1afcafa201c64dc5fab9a0b" target="_blank">Generalization metrics for practical quantum advantage in generative models</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/a5bcaae165d38a9fbcaa9520135fb48ed3ef5765" target="_blank">Quantum Inception Score</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/716fd0325457d69f0ef883c10cbd35df3db3950a" target="_blank">Generative-enhanced optimization for knapsack problems: an industry-relevant study</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/492b82048940316caaa29f9a8850520dd2b6b98f" target="_blank">Knapsack and Shortest Path Problems Generalizations From A Quantum-Inspired Tensor Network Perspective</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/7f915e2af2f8b3874d0d6dd7aa53d60933730e28" target="_blank">Order-Preserving GFlowNets</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/51d47eb4217a86a00bad5f6d4f727eb359145881" target="_blank">Multi-Criterion Evolutionary Design of Deep Convolutional Neural Networks</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/4619368cfa628865e6b233f6ea356d981313451a" target="_blank">DiffSG: A Generative Solver for Network Optimization with Diffusion Model</a> (2024)</li>
+</ol>
+</body>
+</html>

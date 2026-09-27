@@ -1,0 +1,396 @@
+[
+  {
+    "id": "f7ea50dea238913894dde804d696f22b13c7cbdf",
+    "paperId": "f7ea50dea238913894dde804d696f22b13c7cbdf",
+    "title": "Multi-Objective Intrinsic Reward Learning for Conversational Recommender Systems",
+    "year": 2023,
+    "citationCount": 2,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.20109, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This work forms intrinsic reward learning as a multi-objective bi-level optimization problem that improves CRS performance by exploiting informative learned intrinsic rewards from interactions with users."
+    },
+    "authors": [
+      {
+        "authorId": "73772816",
+        "name": "Zhendong Chu"
+      },
+      {
+        "authorId": "2167295293",
+        "name": "Nan Wang"
+      },
+      {
+        "authorId": "2263913022",
+        "name": "Hongning Wang"
+      }
+    ],
+    "abstract": "Conversational Recommender Systems (CRS) actively elicit user preferences to generate adaptive recommendations. Mainstream reinforcement learning-based CRS solutions heavily rely on handcrafted reward functions, which may not be aligned with user intent in CRS tasks. Therefore, the design of task-specific rewards is critical to facilitate CRS policy learning, which remains largely under-explored in the literature. In this work, we propose a novel approach to address this challenge by learning intrinsic rewards from interactions with users. Specifically, we formulate intrinsic reward learning as a multi-objective bi-level optimization problem. The inner level optimizes the CRS policy augmented by the learned intrinsic rewards, while the outer level drives the intrinsic rewards to optimize two CRS-specific objectives: maximizing the success rate and minimizing the number of turns to reach a successful recommendation in conversations. To evaluate the effectiveness of our approach, we conduct extensive experiments on three public CRS benchmarks. The results show that our algorithm significantly improves CRS performance by exploiting informative learned intrinsic rewards.",
+    "score": 8
+  },
+  {
+    "id": "490b66fbd697d82c1542d1f43be243e8d8ff7fbb",
+    "paperId": "490b66fbd697d82c1542d1f43be243e8d8ff7fbb",
+    "title": "Chain-of-Choice Hierarchical Policy Learning for Conversational Recommendation",
+    "year": 2023,
+    "citationCount": 2,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.17922, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This work proposes a more realistic and efficient conversational recommendation problem setting, called Multi-Type-Attribute Multi-round Conversational Recommendation (MTAMCR), which enables CRS to inquire about multi-choice questions covering multiple types of attributes in each round, thereby improving interactive efficiency."
+    },
+    "authors": [
+      {
+        "authorId": "2262397115",
+        "name": "Wei Fan"
+      },
+      {
+        "authorId": "9399483",
+        "name": "Weijiao Zhang"
+      },
+      {
+        "authorId": "1587728690",
+        "name": "Weiqi Wang"
+      },
+      {
+        "authorId": "2241325169",
+        "name": "Yangqiu Song"
+      },
+      {
+        "authorId": "2262588916",
+        "name": "Hao Liu"
+      }
+    ],
+    "abstract": "Conversational Recommender Systems (CRS) illuminate user preferences via multi-round interactive dialogues, ultimately navigating towards precise and satisfactory recommendations. However, contemporary CRS are limited to inquiring binary or multi-choice questions based on a single attribute type (e.g., color) per round, which causes excessive rounds of interaction and diminishes the user's experience. To address this, we propose a more realistic and efficient conversational recommendation problem setting, called Multi-Type-Attribute Multi-round Conversational Recommendation (MTAMCR), which enables CRS to inquire about multi-choice questions covering multiple types of attributes in each round, thereby improving interactive efficiency. Moreover, by formulating MTAMCR as a hierarchical reinforcement learning task, we propose a Chain-of-Choice Hierarchical Policy Learning (CoCHPL) framework to enhance both the questioning efficiency and recommendation effectiveness in MTAMCR. Specifically, a long-term policy over options (i.e., ask or recommend) determines the action type, while two short-term intra-option policies sequentially generate the chain of attributes or items through multi-step reasoning and selection, optimizing the diversity and interdependence of questioning attributes. Finally, extensive experiments on four benchmarks demonstrate the superior performance of CoCHPL over prevailing state-of-the-art methods.",
+    "score": 8
+  },
+  {
+    "id": "849175924b095347002dd73920288d3c30036927",
+    "paperId": "849175924b095347002dd73920288d3c30036927",
+    "title": "AgentTOD: A Task-Oriented Dialogue Agent with a Flexible and Adaptive API Calling Paradigm",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3745021?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3745021, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "152337253",
+        "name": "Heng-Da Xu"
+      },
+      {
+        "authorId": "2335620733",
+        "name": "Xian-Ling Mao"
+      },
+      {
+        "authorId": "50472032",
+        "name": "Fanshu Sun"
+      },
+      {
+        "authorId": "2161564794",
+        "name": "Tian-Yi Che"
+      },
+      {
+        "authorId": "2321922317",
+        "name": "Chun Xu"
+      },
+      {
+        "authorId": "2146258255",
+        "name": "Heyan Huang"
+      }
+    ],
+    "abstract": "Task-oriented dialogue (TOD) systems play a vital role in numerous assistance and service scenarios, significantly improving people’s daily lives. Conventionally, a TOD system adheres to a fixed paradigm, where it must first extract user goals and query external databases before it can generate the final response. However, this fixed extract-and-query paradigm is not always optimal for all dialogue turns, which is redundant for the simple turns that do not need external information, and is inadequate for the complex turns that need to interact with the external world multiple times. To address the limitations, in this paper, we propose AgentTOD, a novel TOD framework that uses a large language model (LLM) as the intelligent agent to achieve a flexible dialogue paradigm. AgentTOD deprecates the traditional modular architecture (including dialogue state tracking and dialogue policy) by utilizing an LLM as the controller brain to determine when and how to call the provided APIs to obtain external information. It can choose to call APIs any number of times with various parameters until it’s enough to reply to the user. Besides, to train AgentTOD, we construct a large and comprehensive TOD dataset, called TrajsTOD (Trajectories of TODs), which consists of 66k+ user-agent dialogue trajectories converted from 8 popular TOD datasets covering 60 domains. TrajsTOD is constructed with minimal dialogue annotations where only the API calling logs are needed, and can empower AgentTOD with the general ability to call APIs and generate responses according to the task definition. Extensive experimental results on the MultiWOZ-series and SGD datasets demonstrate AgentTOD has superior performance on task-oriented dialogues as well as a superior adaptability to new task scenarios.",
+    "score": 7
+  },
+  {
+    "id": "b358c4986679b49b85925a265896f22de7d683ad",
+    "paperId": "b358c4986679b49b85925a265896f22de7d683ad",
+    "title": "Tailored Conversations beyond LLMs: A RL-Based Dialogue Manager",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.19652, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2094766882",
+        "name": "L. Galland"
+      },
+      {
+        "authorId": "2246870240",
+        "name": "Catherine Pelachaud"
+      },
+      {
+        "authorId": "3021264",
+        "name": "Florian Pecune"
+      }
+    ],
+    "abstract": "In this work, we propose a novel framework that integrates large language models (LLMs) with an RL-based dialogue manager for open-ended dialogue with a specific goal. By leveraging hierarchical reinforcement learning to model the structured phases of dialogue and employ meta-learning to enhance adaptability across diverse user profiles, our approach enhances adaptability and efficiency, enabling the system to learn from limited data, transition fluidly between dialogue phases, and personalize responses to heterogeneous patient needs. We apply our framework to Motivational Interviews, aiming to foster behavior change, and demonstrate that the proposed dialogue manager outperforms a state-of-the-art LLM baseline in terms of reward, showing a potential benefit of conditioning LLMs to create open-ended dialogue systems with specific goals.",
+    "score": 8
+  },
+  {
+    "id": "0e07768e8dff74c8bb5eb3e42998c6198a0ca0bb",
+    "paperId": "0e07768e8dff74c8bb5eb3e42998c6198a0ca0bb",
+    "title": "Leveraging Long Short-Term User Preference in Conversational Recommendation via Multi-agent Reinforcement Learning",
+    "year": 2023,
+    "citationCount": 6,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TKDE.2022.3225109?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TKDE.2022.3225109, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "This work proposes two novel multi-agent RL-based frameworks, namely Independent and Hierarchical Multi-Agent UNIfied COnversational RecommeNders (IMA-UNicORN and HMA-UNICORN), respectively, which significantly outperform state-of-the-art methods on the multi-round conversational recommendation."
+    },
+    "authors": [
+      {
+        "authorId": "145843537",
+        "name": "Yang Deng"
+      },
+      {
+        "authorId": "2110479359",
+        "name": "Yaliang Li"
+      },
+      {
+        "authorId": "1696332",
+        "name": "Bolin Ding"
+      },
+      {
+        "authorId": "1380007189",
+        "name": "W. Lam"
+      }
+    ],
+    "abstract": "Conversational recommender systems (CRS) endow traditional recommender systems with the capability of dynamically obtaining users’ short-term preferences for items and attributes through interactive dialogues. There are three core challenges for CRS, including the intelligent decisions for what attributes to ask, which items to recommend, and when to ask or recommend, at each conversation turn. Previous methods mainly leverage reinforcement learning (RL) to learn conversational recommendation policies for solving one or two of these three decision-making problems in CRS with separated conversation and recommendation components. These approaches restrict the scalability and generality of CRS and fall short of preserving a stable training procedure. In the light of these challenges, we tackle these three decision-making problems in CRS as a unified policy learning task. In order to leverage different features that are important to each sub-problem and facilitate better unified policy learning in CRS, we propose two novel multi-agent RL-based frameworks, namely Independent and Hierarchical Multi-Agent UNIfied COnversational RecommeNders (IMA-UNICORN and HMA-UNICORN), respectively. In specific, two low-level agents enrich the state representations for attribute prediction and item recommendation, by combining the long-term user preference information from the historical interaction data and the short-term user preference information from the conversation history. A high-level meta agent is responsible for coordinating the low-level agents to adaptively make the final decision. Experimental results on four benchmark CRS datasets and a real-world E-Commerce application show that the proposed frameworks significantly outperform state-of-the-art methods. Extensive analyses further demonstrate the superior scalability of the MARL frameworks on the multi-round conversational recommendation.",
+    "score": 9
+  },
+  {
+    "id": "080b2aa6b9b819f14d6ec4e66c4ad83714caf3ba",
+    "paperId": "080b2aa6b9b819f14d6ec4e66c4ad83714caf3ba",
+    "title": "Expectation Confirmation Preference Optimization for Multi-Turn Conversational Recommendation Agent",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.14302, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2163940136",
+        "name": "Xueyang Feng"
+      },
+      {
+        "authorId": "2144163813",
+        "name": "Jingsen Zhang"
+      },
+      {
+        "authorId": "144010962",
+        "name": "Jiakai Tang"
+      },
+      {
+        "authorId": "2367289229",
+        "name": "Wei Li"
+      },
+      {
+        "authorId": "24140498",
+        "name": "Guohao Cai"
+      },
+      {
+        "authorId": "2345874482",
+        "name": "Xu Chen"
+      },
+      {
+        "authorId": "2345819983",
+        "name": "Quanyu Dai"
+      },
+      {
+        "authorId": "2362978058",
+        "name": "Yue Zhu"
+      },
+      {
+        "authorId": "2276747916",
+        "name": "Zhenhua Dong"
+      }
+    ],
+    "abstract": "Recent advancements in Large Language Models (LLMs) have significantly propelled the development of Conversational Recommendation Agents (CRAs). However, these agents often generate short-sighted responses that fail to sustain user guidance and meet expectations. Although preference optimization has proven effective in aligning LLMs with user expectations, it remains costly and performs poorly in multi-turn dialogue. To address this challenge, we introduce a novel multi-turn preference optimization (MTPO) paradigm ECPO, which leverages Expectation Confirmation Theory to explicitly model the evolution of user satisfaction throughout multi-turn dialogues, uncovering the underlying causes of dissatisfaction. These causes can be utilized to support targeted optimization of unsatisfactory responses, thereby achieving turn-level preference optimization. ECPO ingeniously eliminates the significant sampling overhead of existing MTPO methods while ensuring the optimization process drives meaningful improvements. To support ECPO, we introduce an LLM-based user simulator, AILO, to simulate user feedback and perform expectation confirmation during conversational recommendations. Experimental results show that ECPO significantly enhances CRA's interaction capabilities, delivering notable improvements in both efficiency and effectiveness over existing MTPO methods.",
+    "score": 8
+  },
+  {
+    "id": "389a1735f67a7c210c90098d1de0c3440e44c815",
+    "paperId": "389a1735f67a7c210c90098d1de0c3440e44c815",
+    "title": "On Mitigating Data Sparsity in Conversational Recommender Systems",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00479, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2328224602",
+        "name": "Sixiao Zhang"
+      },
+      {
+        "authorId": "2328072859",
+        "name": "Mingrui Liu"
+      },
+      {
+        "authorId": "2328011945",
+        "name": "Cheng Long"
+      },
+      {
+        "authorId": "2106755543",
+        "name": "Wei Yuan"
+      },
+      {
+        "authorId": "2261682536",
+        "name": "Hongxu Chen"
+      },
+      {
+        "authorId": "2331459372",
+        "name": "Xiangyu Zhao"
+      },
+      {
+        "authorId": "2302520304",
+        "name": "Hongzhi Yin"
+      }
+    ],
+    "abstract": "Conversational recommender systems (CRSs) capture user preference through textual information in dialogues. However, they suffer from data sparsity on two fronts: the dialogue space is vast and linguistically diverse, while the item space exhibits long-tail and sparse distributions. Existing methods struggle with (1) generalizing to varied dialogue expressions due to underutilization of rich textual cues, and (2) learning informative item representations under severe sparsity. To address these problems, we propose a CRS model named DACRS. It consists of three modules, namely Dialogue Augmentation, Knowledge-Guided Entity Modeling, and Dialogue-Entity Matching. In the Dialogue Augmentation module, we apply a two-stage augmentation pipeline to augment the dialogue context to enrich the data and improve generalizability. In the Knowledge-Guided Entity Modeling, we propose a knowledge graph (KG) based entity substitution and an entity similarity constraint to enhance the expressiveness of entity embeddings. In the Dialogue-Entity Matching module, we fuse the dialogue embedding with the mentioned entity embeddings through a dialogue-guided attention aggregation to acquire user embeddings that contain both the explicit and implicit user preferences. Extensive experiments on two public datasets demonstrate the state-of-the-art performance of DACRS.",
+    "score": 7
+  },
+  {
+    "id": "59c62abbe629c80e8a1928e6e868e967a63db677",
+    "paperId": "59c62abbe629c80e8a1928e6e868e967a63db677",
+    "title": "Vaiage: A Multi-Agent Solution to Personalized Travel Planning",
+    "year": 2025,
+    "citationCount": 0,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2505.10922, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "Vaiage enables adaptive, explainable, and end-to-end travel planning grounded in both symbolic reasoning and conversational understanding and demonstrates the effectiveness of combining LLM reasoning with symbolic agent coordination in open-ended, real-world planning tasks."
+    },
+    "authors": [
+      {
+        "authorId": "2362142382",
+        "name": "Binwen Liu"
+      },
+      {
+        "authorId": "2362528776",
+        "name": "Jiexi Ge"
+      },
+      {
+        "authorId": "2362187703",
+        "name": "Jiamin Wang"
+      }
+    ],
+    "abstract": "Planning trips is a cognitively intensive task involving conflicting user preferences, dynamic external information, and multi-step temporal-spatial optimization. Traditional platforms often fall short - they provide static results, lack contextual adaptation, and fail to support real-time interaction or intent refinement. Our approach, Vaiage, addresses these challenges through a graph-structured multi-agent framework built around large language models (LLMs) that serve as both goal-conditioned recommenders and sequential planners. LLMs infer user intent, suggest personalized destinations and activities, and synthesize itineraries that align with contextual constraints such as budget, timing, group size, and weather. Through natural language interaction, structured tool use, and map-based feedback loops, Vaiage enables adaptive, explainable, and end-to-end travel planning grounded in both symbolic reasoning and conversational understanding. To evaluate Vaiage, we conducted human-in-the-loop experiments using rubric-based GPT-4 assessments and qualitative feedback. The full system achieved an average score of 8.5 out of 10, outperforming the no-strategy (7.2) and no-external-API (6.8) variants, particularly in feasibility. Qualitative analysis indicated that agent coordination - especially the Strategy and Information Agents - significantly improved itinerary quality by optimizing time use and integrating real-time context. These results demonstrate the effectiveness of combining LLM reasoning with symbolic agent coordination in open-ended, real-world planning tasks.",
+    "score": 7
+  },
+  {
+    "id": "280857f4ce62db55de7ec585f4030ab6c2a5ef86",
+    "paperId": "280857f4ce62db55de7ec585f4030ab6c2a5ef86",
+    "title": "The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems",
+    "year": 2025,
+    "citationCount": 1,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02097, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "91010985",
+        "name": "Reza Yousefi Maragheh"
+      },
+      {
+        "authorId": "2614755",
+        "name": "Yashar Deldjoo"
+      }
+    ],
+    "abstract": "Large language models (LLMs) are rapidly evolving from passive engines of text generation into agentic entities that can plan, remember, invoke external tools, and co-operate with one another. This perspective paper investigates how such LLM agents (and societies thereof) can transform the design space of recommender systems. We introduce a unified formalism that (i) models an individual agent as a tuple comprising its language core, tool set, and hierarchical memory, and (ii) captures a multi-agent recommender as a triple of agents, shared environment, and communication protocol. Within this framework, we present four end-to-end use cases-interactive party planning, synthetic user-simulation for offline evaluation, multi-modal furniture recommendation, and brand-aligned explanation generation-each illustrating a distinct capability unlocked by agentic orchestration. We then surface five cross-cutting challenge families: protocol complexity, scalability, hallucination and error propagation, emergent misalignment (including covert collusion), and brand compliance. For each, we formalize the problem, review nascent mitigation strategies, and outline open research questions. The result is both a blueprint and an agenda: a blueprint that shows how memory-augmented, tool-using LLM agents can be composed into robust recommendation pipelines, and an agenda inviting the RecSys community to develop benchmarks, theoretical guarantees, and governance tools that keep pace with this new degree of autonomy. By unifying agentic abstractions with recommender objectives, the paper lays the groundwork for the next generation of personalized, trustworthy, and context-rich recommendation services.",
+    "score": 7
+  },
+  {
+    "id": "894a733ff2ca3ec77f8385a6ac65bd17b42896c1",
+    "paperId": "894a733ff2ca3ec77f8385a6ac65bd17b42896c1",
+    "title": "Towards Hierarchical Policy Learning for Conversational Recommendation with Hypergraph-based Reinforcement Learning",
+    "year": 2023,
+    "citationCount": 6,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2305.02575",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.02575, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "A dynamic hypergraph is developed to model user preferences and introduce an intrinsic motivation to train from weak supervision over the director, to alleviate the bad effect of model bias on the mutual influence between the director and actor."
+    },
+    "authors": [
+      {
+        "authorId": "2216064291",
+        "name": "Sen Zhao1"
+      },
+      {
+        "authorId": "47748186",
+        "name": "Wei Wei"
+      },
+      {
+        "authorId": "49421615",
+        "name": "Yifan Liu"
+      },
+      {
+        "authorId": "2274077487",
+        "name": "Ziyang Wang"
+      },
+      {
+        "authorId": "2108635193",
+        "name": "Wendi Li"
+      },
+      {
+        "authorId": "2089102",
+        "name": "Xian-ling Mao"
+      },
+      {
+        "authorId": "2163650720",
+        "name": "Shuai Zhu"
+      },
+      {
+        "authorId": "1830455541",
+        "name": "Minghui Yang"
+      },
+      {
+        "authorId": "1515550185",
+        "name": "Zujie Wen"
+      }
+    ],
+    "abstract": "Conversational recommendation systems (CRS) aim to timely and proactively acquire user dynamic preferred attributes through conversations for item recommendation. In each turn of CRS, there naturally have two decision-making processes with different roles that influence each other: 1) director, which is to select the follow-up option (i.e., ask or recommend) that is more effective for reducing the action space and acquiring user preferences; and 2) actor, which is to accordingly choose primitive actions (i.e., asked attribute or recommended item) to estimate the effectiveness of the director’s option. However, existing methods heavily rely on a unified decision-making module or heuristic rules, while neglecting to distinguish the roles of different decision procedures, as well as the mutual influences between them. To address this, we propose a novel Director-Actor Hierarchical Conversational Recommender (DAHCR), where the director selects the most effective option, followed by the actor accordingly choosing primitive actions that satisfy user preferences. Specifically, we develop a dynamic hypergraph to model user preferences and introduce an intrinsic motivation to train from weak supervision over the director. Finally, to alleviate the bad effect of model bias on the mutual influence between the director and actor, we model the director’s option by sampling from a categorical distribution. Extensive experiments demonstrate that DAHCR outperforms state-of-the-art methods.",
+    "score": 8
+  }
+]

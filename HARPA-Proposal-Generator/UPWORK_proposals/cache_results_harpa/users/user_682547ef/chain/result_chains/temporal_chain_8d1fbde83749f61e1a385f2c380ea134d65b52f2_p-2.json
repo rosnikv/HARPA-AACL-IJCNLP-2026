@@ -1,0 +1,19 @@
+[
+    {
+        "paperId": "8d1fbde83749f61e1a385f2c380ea134d65b52f2",
+        "pmid": "2304.03110",
+        "title": "Continual Detection Transformer for Incremental Object Detection",
+        "abstract": "Incremental object detection (IOD) aims to train an object detector in phases, each with annotations for new object categories. As other incremental settings, IOD is subject to catastrophic forgetting, which is often addressed by techniques such as knowledge distillation (KD) and exem-plar replay (ER). However, KD and ER do not work well if applied directly to state-of-the-art transformer-based object detectors such as Deformable DETR [59] and UP-DETR [9]. In this paper, we solve these issues by proposing a ContinuaL DEtection TRansformer (CL-DETR), a new method for transformer-based IOD which enables effective usage of KD and ER in this context. First, we introduce a Detector Knowledge Distillation (DKD) loss, focusing on the most informative and reliable predictions from old versions of the model, ignoring redundant background predictions, and ensuring compatibility with the available ground-truth labels. We also improve ER by proposing a calibration strategy to preserve the label distribution of the training set, therefore better matching training and testing statistics. We conduct extensive experiments on COCO 2017 and demonstrate that CL-DETR achieves state-of-the-art results in the IOD setting.11Code: https://1yy.mpi-inf.mpg.de/CL-DETR/",
+        "year": 2023,
+        "citation_count": 57
+    },
+    {
+        "paperId": "2e6fb965aff683fd6afe29c18523b4776442009a",
+        "title": "Incremental Object Detection with CLIP",
+        "abstract": "In contrast to the incremental classification task, the incremental detection task is characterized by the presence of data ambiguity, as an image may have differently labeled bounding boxes across multiple continuous learning stages. This phenomenon often impairs the model's ability to effectively learn new classes. However, existing research has paid less attention to the forward compatibility of the model, which limits its suitability for incremental learning. To overcome this obstacle, we propose leveraging a visual-language model such as CLIP to generate text feature embeddings for different class sets, which enhances the feature space globally. We then employ super-classes to replace the unavailable novel classes in the early learning stage to simulate the incremental scenario. Finally, we utilize the CLIP image encoder to accurately identify potential objects. We incorporate the finely recognized detection boxes as pseudo-annotations into the training process, thereby further improving the detection performance. We evaluate our approach on various incremental learning settings using the PASCAL VOC 2007 dataset, and our approach outperforms state-of-the-art methods, particularly for recognizing the new classes.",
+        "year": 2023,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper addresses incremental object detection using a visual-language model to enhance feature space and improve detection performance. It is directly related to the source paper as it deals with incremental object detection, making it relevant."
+    }
+]

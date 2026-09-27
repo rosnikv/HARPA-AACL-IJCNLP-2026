@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>356fb62f0f9acf17c5f3a8c2669436e8c4ebd632</p>
+<hr>
+<section><h2>Title</h2>
+<p>Cross-Lingual Transfer Learning for Urdu Fake News Detection: Leveraging English Resources</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing Urdu fake news detection models struggle with limited labeled data and fail to leverage the abundance of English fake news resources. This hinders the development of robust fake news detection systems for Urdu, potentially allowing misinformation to spread unchecked in Urdu-speaking communities.</p>
+<h3>Motivation</h3>
+<p>Current approaches rely on small Urdu-only datasets and traditional machine learning models like AdaBoost, which limits their effectiveness. By creating a large parallel Urdu-English fake news corpus, we can leverage cross-lingual transfer learning to improve Urdu fake news detection. This approach allows us to tap into the rich resources available for English fake news detection while addressing the specific challenges of the Urdu language context.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a novel cross-lingual fake news detection framework. First, we will create a large parallel Urdu-English fake news corpus by machine translating existing English fake news datasets into Urdu and having human annotators verify and correct the translations. We will then train a multilingual BERT model on this parallel corpus using a contrastive learning objective that aligns the representations of equivalent Urdu and English fake news articles. Finally, we will fine-tune this model on Urdu fake news detection using a small amount of human-labeled Urdu data. The contrastive pre-training will allow the model to leverage knowledge from both languages, while the Urdu fine-tuning will specialize it for the target task.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Creation</strong></p><ol>
+<li>Select English fake news datasets (e.g., LIAR, FakeNewsNet).</li>
+<li>Use Google Translate API to translate English articles to Urdu.</li>
+<li>Hire Urdu-speaking annotators to verify and correct translations.</li>
+<li>Create a parallel corpus of 10,000 Urdu-English fake news article pairs.</li>
+<li>Collect 1,000 additional human-labeled Urdu fake news articles for fine-tuning and testing.</li>
+</ol><p><strong>Step 2: Model Selection</strong></p><ol>
+<li>Choose multilingual BERT (mBERT) as the base model.</li>
+<li>Use Hugging Face Transformers library to load the pre-trained mBERT model.</li>
+</ol><p><strong>Step 3: Contrastive Pre-training</strong></p><ol>
+<li>Implement contrastive learning objective using InfoNCE loss.</li>
+<li>Train mBERT on parallel corpus for 5 epochs.</li>
+<li>Use Adam optimizer with learning rate 2e-5 and batch size 32.</li>
+<li>Save the pre-trained model checkpoints.</li>
+</ol><p><strong>Step 4: Fine-tuning</strong></p><ol>
+<li>Fine-tune the pre-trained model on 800 human-labeled Urdu fake news articles.</li>
+<li>Use binary cross-entropy loss for fake news classification.</li>
+<li>Train for 3 epochs with learning rate 5e-6 and batch size 16.</li>
+<li>Save the fine-tuned model.</li>
+</ol><p><strong>Step 5: Baseline Implementation</strong></p><ol>
+<li>Implement AdaBoost classifier using scikit-learn.</li>
+<li>Train AdaBoost on TF-IDF features of Urdu articles.</li>
+<li>Implement Urdu-only BERT baseline without cross-lingual pre-training.</li>
+</ol><p><strong>Step 6: Evaluation</strong></p><ol>
+<li>Use remaining 200 human-labeled Urdu articles as test set.</li>
+<li>Evaluate all models (proposed, AdaBoost, Urdu-only BERT) on test set.</li>
+<li>Calculate accuracy, precision, recall, F1-score, and AUC-ROC.</li>
+<li>Perform statistical significance tests (e.g., McNemar's test) to compare models.</li>
+</ol><p><strong>Step 7: Analysis</strong></p><ol>
+<li>Analyze performance across different types of fake news (e.g., political, health-related).</li>
+<li>Examine model attention weights to understand cross-lingual knowledge transfer.</li>
+<li>Perform error analysis on misclassified examples.</li>
+</ol>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (AdaBoost)</strong></p><p>پاکستان میں کورونا وائرس کی وجہ سے تمام اسکول بند کر دیئے گئے ہیں۔</p><p><strong>Baseline Prompt Expected Output (AdaBoost)</strong></p><p>Real News</p><p><strong>Baseline Prompt Input (Urdu-only BERT)</strong></p><p>پاکستان میں کورونا وائرس کی وجہ سے تمام اسکول بند کر دیئے گئے ہیں۔</p><p><strong>Baseline Prompt Expected Output (Urdu-only BERT)</strong></p><p>Real News</p><p><strong>Proposed Prompt Input (Cross-lingual BERT)</strong></p><p>پاکستان میں کورونا وائرس کی وجہ سے تمام اسکول بند کر دیئے گئے ہیں۔</p><p><strong>Proposed Prompt Expected Output (Cross-lingual BERT)</strong></p><p>Fake News</p><p><strong>Explanation</strong></p><p>The proposed cross-lingual BERT model correctly identifies this as fake news, likely due to its ability to leverage knowledge from English fake news datasets about COVID-19 misinformation. The baseline models fail to detect the subtle inaccuracy in the statement, which exaggerates the extent of school closures.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed cross-lingual transfer learning method doesn't significantly outperform the baselines, we can explore several alternatives. First, we could analyze the quality of the machine translations and the impact of human corrections to ensure the parallel corpus is reliable. If translation quality is an issue, we might need to invest in professional translation services for a subset of the data. Second, we could experiment with different pre-training objectives, such as masked language modeling or translation language modeling, which might be more effective for this task. Third, we could investigate the use of other multilingual models like XLM-R or mT5 as alternatives to mBERT. Additionally, we could turn this into an analysis paper by conducting a thorough investigation of why cross-lingual transfer is challenging for Urdu fake news detection. This could involve analyzing linguistic differences between Urdu and English, examining the types of fake news that are common in each language, and studying the model's attention patterns to understand what it's learning from each language.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/219f07b938175623ed9db7d798cbc6ef29e5e4aa" target="_blank">PERMANOVA, ANOSIM, and the Mantel test in the face of heterogeneous dispersions: What null hypothesis are you testing?</a> (2013)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/3c1179c10bcf95a27680ae3671c2e19f203ff1df" target="_blank">A guide to null models for animal social network analysis</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/11fb5da5b45b2f12de2945dce1c9478d367c79e8" target="_blank">Bayesian alternatives for common null-hypothesis significance tests in psychiatry: a non-technical guide using JASP</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dc4e9cd745870729a48fc482d2c6050dc5d76b7f" target="_blank">Microsatellite null alleles and estimation of population differentiation.</a> (2007)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dfa3c3689503600fe0bcc45eb0ad319e313079b9" target="_blank">The file drawer problem and tolerance for null results</a> (1979)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e969aa3422a49152c22f3faf734e4561a2a3cf42" target="_blank">Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c67441fa865894d4d85780bdb682629bd61d131a" target="_blank">[null].</a> (2019)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/bb713964d37530310940aa5814cfb9b44ffad8b3" target="_blank">Learning a Discriminative Null Space for Person Re-identification</a> (2016)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0ddfa8bed288df82b03eb450768043877fa21582" target="_blank">The Holographic Nature of Null Infinity</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/61730a01cf93e6cd2f6ac60f803e08eb7df3cc06" target="_blank">Exploiting Diffusion Prior for Task-driven Image Restoration</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

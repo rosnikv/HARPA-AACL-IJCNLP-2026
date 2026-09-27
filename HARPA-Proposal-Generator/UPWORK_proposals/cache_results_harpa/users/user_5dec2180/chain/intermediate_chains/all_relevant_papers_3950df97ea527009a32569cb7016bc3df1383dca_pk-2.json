@@ -1,0 +1,29 @@
+[
+    {
+        "paperId": "ad3dfb2514cb0c899fcb9a14d229ff2a6018892f",
+        "title": "Deep Bidirectional Language-Knowledge Graph Pretraining",
+        "abstract": "Pretraining a language model (LM) on text has been shown to help various downstream NLP tasks. Recent works show that a knowledge graph (KG) can complement text data, offering structured background knowledge that provides a useful scaffold for reasoning. However, these works are not pretrained to learn a deep fusion of the two modalities at scale, limiting the potential to acquire fully joint representations of text and KG. Here we propose DRAGON (Deep Bidirectional Language-Knowledge Graph Pretraining), a self-supervised approach to pretraining a deeply joint language-knowledge foundation model from text and KG at scale. Specifically, our model takes pairs of text segments and relevant KG subgraphs as input and bidirectionally fuses information from both modalities. We pretrain this model by unifying two self-supervised reasoning tasks, masked language modeling and KG link prediction. DRAGON outperforms existing LM and LM+KG models on diverse downstream tasks including question answering across general and biomedical domains, with +5% absolute gain on average. In particular, DRAGON achieves notable performance on complex reasoning about language and knowledge (+10% on questions involving long contexts or multi-step reasoning) and low-resource QA (+8% on OBQA and RiddleSense), and new state-of-the-art results on various BioNLP tasks. Our code and trained models are available at https://github.com/michiyasunaga/dragon.",
+        "year": 2022,
+        "citation_count": 213,
+        "relevance": 2,
+        "explanation": "This paper explores the integration of language models and knowledge graphs, similar to the source paper's focus on GNNs for QA. It introduces a new pretraining approach that could be seen as addressing the limitations of GNNs identified in the source paper, thus partially depending on its findings."
+    },
+    {
+        "paperId": "d19a94cef89eb96d4de39d1cebfa259e84503112",
+        "title": "Dynamic Relevance Graph Network for Knowledge-Aware Question Answering",
+        "abstract": "This work investigates the challenge of learning and reasoning for Commonsense Question Answering given an external source of knowledge in the form of a knowledge graph (KG). We propose a novel graph neural network architecture, called Dynamic Relevance Graph Network (DRGN). DRGN operates on a given KG subgraph based on the question and answers entities and uses the relevance scores between the nodes to establish new edges dynamically for learning node representations in the graph network. This explicit usage of relevance as graph edges has the following advantages, a) the model can exploit the existing relationships, re-scale the node weights, and influence the way the neighborhood nodes\u2019 representations are aggregated in the KG subgraph, b) It potentially recovers the missing edges in KG that are needed for reasoning. Moreover, as a byproduct, our model improves handling the negative questions due to considering the relevance between the question node and the graph entities. Our proposed approach shows competitive performance on two QA benchmarks, CommonsenseQA and OpenbookQA, compared to the state-of-the-art published results.",
+        "year": 2022,
+        "citation_count": 6,
+        "relevance": 2,
+        "explanation": "This paper proposes a novel GNN architecture for question answering, directly addressing the challenges of reasoning with knowledge graphs highlighted in the source paper. It builds on the source paper's findings about the limitations of existing GNN modules."
+    },
+    {
+        "paperId": "0136f2faaa902082d0e6ad15e5fd14f5842d2b14",
+        "title": "Relation-aware Language-Graph Transformer for Question Answering",
+        "abstract": "Question Answering (QA) is a task that entails reasoning over natural language contexts, and many relevant works augment language models (LMs) with graph neural networks (GNNs) to encode the Knowledge Graph (KG) information. However, most existing GNN-based modules for QA do not take advantage of rich relational information of KGs and depend on limited information interaction between the LM and the KG. To address these issues, we propose Question Answering Transformer (QAT), which is designed to jointly reason over language and graphs with respect to entity relations in a unified manner. Specifically, QAT constructs Meta-Path tokens, which learn relation-centric embeddings based on diverse structural and semantic relations. Then, our Relation-Aware Self-Attention module comprehensively integrates different modalities via the Cross-Modal Relative Position Bias, which guides information exchange between relevant entities of different modalities. We validate the effectiveness of QAT on commonsense question answering datasets like CommonsenseQA and OpenBookQA, and on a medical question answering dataset, MedQA-USMLE. On all the datasets, our method achieves state-of-the-art performance. Our code is available at http://github.com/mlvlab/QAT.",
+        "year": 2022,
+        "citation_count": 11,
+        "relevance": 1,
+        "explanation": "This paper builds on the idea of integrating language models with graph neural networks for question answering, similar to the source paper. It proposes a novel method for reasoning over language and graphs, which is inspired by the limitations identified in the source paper regarding existing GNN-based modules."
+    }
+]

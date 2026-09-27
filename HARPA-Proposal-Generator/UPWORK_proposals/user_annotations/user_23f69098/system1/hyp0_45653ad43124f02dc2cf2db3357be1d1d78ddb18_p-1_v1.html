@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>45653ad43124f02dc2cf2db3357be1d1d78ddb18</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating graph-based decomposition with adaptive atomic verification for enhanced fact-checking accuracy and efficiency.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating graph-based claim decomposition with adaptive atomic fact verification will enhance the accuracy and efficiency of fact verification in LLMs, compared to using either method alone.</p>
+<h3>Motivation</h3>
+<p>Existing fact verification methods often overlook the potential of combining graph-based claim decomposition with adaptive atomic fact verification to enhance reasoning accuracy and efficiency. While some approaches use graph structures for multi-hop reasoning, they typically do not integrate dynamic verification strategies that adapt to the complexity of each claim. This hypothesis addresses the gap by proposing a novel integration of graph-based decomposition with adaptive atomic verification, which has not been extensively tested. This combination is expected to improve verification robustness and computational efficiency by tailoring the reasoning process to the specific needs of each claim.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of graph-based claim decomposition with adaptive atomic fact verification to improve the accuracy and efficiency of fact verification in large language models (LLMs). The hypothesis posits that by decomposing complex claims into structured entity-relationship graphs, and then verifying each atomic fact adaptively based on its complexity, the system can achieve more robust and efficient verification. Graph-based decomposition allows for a comprehensive exploration of multiple reasoning paths, capturing both explicit and latent entities. Adaptive atomic fact verification dynamically adjusts the verification strategy based on the complexity of each atomic fact, ensuring that simpler claims are verified quickly while more complex ones receive the necessary attention. This approach addresses the limitations of existing methods that either rely solely on static graph structures or static verification strategies, which can lead to inefficiencies and reduced accuracy. The proposed method is expected to outperform traditional approaches by leveraging the strengths of both graph-based reasoning and adaptive verification, leading to improved performance on benchmark datasets like HOVER and EX-FEVER. The chosen evaluation domain is appropriate as these datasets require sophisticated multi-hop reasoning and evidence synthesis, aligning well with the capabilities of the proposed method.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/6db8053888d61e60d8fb861853b85ab99ce83d75">Graph-Based Claim Decomposition</a>: Graph-based claim decomposition involves transforming claims into structured entity-relationship graphs, where each entity and relationship is represented as a node and edge, respectively. This method allows for comprehensive multi-hop verification by exploring multiple reasoning paths and capturing latent entities through text infilling. The graph structure enables systematic verification by decomposing complex claims into simpler sub-claims, each of which can be independently verified. This approach is selected for its ability to model complex relationships and dependencies within claims, providing a robust framework for multi-hop reasoning. The expected role of this variable is to enhance the model's ability to handle intricate claims that require reasoning over multiple pieces of evidence. The success of this variable will be measured by improvements in reasoning accuracy and efficiency, as indicated by metrics such as precision, recall, and F1 score.</p>
+<p><a href="https://www.semanticscholar.org/paper/a2bc4ec4c75e5ec307608d4f7967de4c9d23ebb1">Adaptive Atomic Fact Verification</a>: Adaptive atomic fact verification dynamically adjusts the verification strategy based on the complexity of each atomic fact. This method involves using dynamic demonstrations and reranked evidence to guide reliable reasoning, enhancing the model's ability to handle complex claims. By focusing on atomic facts, the approach reduces the need for large model sizes while enhancing reasoning accuracy. This variable is selected for its potential to improve verification efficiency by tailoring the reasoning process to the specific needs of each claim. The expected role of this variable is to enhance the model's ability to verify complex claims efficiently, reducing computational costs while maintaining high accuracy. The success of this variable will be measured by improvements in computational efficiency and verification accuracy, as indicated by metrics such as precision, recall, and F1 score.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates graph-based claim decomposition with adaptive atomic fact verification to enhance fact verification in LLMs. The process begins with transforming complex claims into structured entity-relationship graphs, where each entity and relationship is represented as a node and edge, respectively. This graph-based decomposition allows for comprehensive multi-hop verification by exploring multiple reasoning paths and capturing latent entities through text infilling. Once the graph is constructed, each atomic fact within the graph is verified adaptively based on its complexity. This involves using dynamic demonstrations and reranked evidence to guide reliable reasoning, ensuring that simpler claims are verified quickly while more complex ones receive the necessary attention. The integration of these two methods is achieved by using the graph structure to inform the adaptive verification process, allowing the system to dynamically adjust the verification strategy based on the complexity of each atomic fact. The outputs of the graph-based decomposition are used to guide the adaptive verification process, ensuring that each atomic fact is verified in the most efficient and accurate manner possible. This integration is expected to improve both the accuracy and efficiency of fact verification, leading to better performance on benchmark datasets like HOVER and EX-FEVER. The hypothesis will be implemented using the ASD Agent's capabilities, with the graph-based decomposition and adaptive verification processes being realized through existing codeblocks and newly built logic as needed.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement a Graph-Enhanced Adaptive Verification system for fact-checking in large language models (LLMs). This experiment will test the hypothesis that integrating graph-based claim decomposition with adaptive atomic fact verification enhances the accuracy and efficiency of fact verification compared to using either method alone.</p></p>
+<p><h4 class="custom-heading"><strong>EXPERIMENT OVERVIEW</strong></h4>
+<p>This experiment will compare three approaches to fact verification:<br />
+1. Baseline 1: Graph-Based Decomposition only<br />
+2. Baseline 2: Adaptive Atomic Verification only<br />
+3. Experimental: Integrated Graph-Enhanced Adaptive Verification</p></p>
+<p><p>All three approaches will be evaluated on the HOVER dataset, which contains multi-hop fact-checking tasks requiring sophisticated reasoning and evidence synthesis.</p></p>
+<p><h4 class="custom-heading"><strong>PILOT MODE SETTINGS</strong></h4>
+<p>Implement a global variable PILOT_MODE that can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':<br />
+- MINI_PILOT: Use only 10 claims from the HOVER training set to verify basic functionality and debugging.<br />
+- PILOT: Use 100 claims from the HOVER training set and 50 claims from the validation set to assess if the experimental approach shows promise compared to baselines.<br />
+- FULL_EXPERIMENT: Use the complete HOVER dataset, with proper training/validation/test splits.</p></p>
+<p><p>Start by running the MINI_PILOT, then if everything looks good, run the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if appropriate).</p></p>
+<p><h4 class="custom-heading"><strong>REQUIRED COMPONENTS</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Data Processing</strong></h4>
+<ul>
+<li>Download and preprocess the HOVER dataset</li>
+<li>Split the dataset according to the PILOT_MODE setting</li>
+<li>Implement functions to load and parse claims and evidence documents</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>2. Graph-Based Decomposition Module (Baseline 1)</strong></h4>
+<ul>
+<li>Implement a module that transforms claims into structured entity-relationship graphs</li>
+<li>Each entity should be represented as a node and each relationship as an edge</li>
+<li>Use text infilling to capture latent entities when necessary</li>
+<li>The module should decompose complex claims into simpler sub-claims (atomic facts)</li>
+<li>Implement visualization of the generated graphs using networkx and matplotlib</li>
+<li>Store the decomposed atomic facts for verification</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Adaptive Atomic Fact Verification Module (Baseline 2)</strong></h4>
+<ul>
+<li>Implement a module that verifies atomic facts without using graph structure</li>
+<li>The module should dynamically adjust verification strategy based on claim complexity</li>
+<li>Implement complexity assessment for each claim (e.g., using number of entities, relationships, or LLM-based assessment)</li>
+<li>Use dynamic demonstrations and evidence reranking for complex claims</li>
+<li>Use simpler verification for straightforward claims</li>
+<li>Track verification time and resources used for each claim</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Integrated Graph-Enhanced Adaptive Verification (Experimental)</strong></h4>
+<ul>
+<li>Combine the graph-based decomposition and adaptive verification modules</li>
+<li>Use the graph structure to inform the adaptive verification process</li>
+<li>The graph structure should guide which verification strategies to use for each atomic fact</li>
+<li>Implement a mechanism to prioritize verification of critical atomic facts identified from the graph</li>
+<li>Track verification time and resources used for each claim</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>5. Evaluation Framework</strong></h4>
+<ul>
+<li>Implement precision, recall, and F1 score metrics for all three approaches</li>
+<li>Track and report computational efficiency (time taken, number of LLM calls)</li>
+<li>Implement statistical significance testing between approaches using bootstrap resampling</li>
+<li>Generate detailed reports comparing the three approaches</li>
+<li>Create visualizations of the results</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>IMPLEMENTATION DETAILS</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>LLM Configuration</strong></h4>
+<ul>
+<li>Use gpt-4o as the base model for all approaches</li>
+<li>Implement proper error handling and rate limiting for API calls</li>
+<li>Cache LLM responses to avoid redundant calls</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Graph-Based Decomposition Implementation</strong></h4>
+<ul>
+<li>Use networkx for graph operations</li>
+<li>Implement entity and relationship extraction using the LLM</li>
+<li>Create a function to visualize the generated graphs</li>
+<li>Implement a function to extract atomic facts from the graph</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Adaptive Verification Implementation</strong></h4>
+<ul>
+<li>Implement a complexity scoring function for claims</li>
+<li>Create different verification strategies based on complexity scores</li>
+<li>Implement evidence retrieval and reranking</li>
+<li>Track verification time and accuracy for each strategy</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Integration Implementation</strong></h4>
+<ul>
+<li>Create a pipeline that first decomposes claims into a graph</li>
+<li>For each node/edge in the graph, determine its complexity</li>
+<li>Apply the appropriate verification strategy based on complexity</li>
+<li>Aggregate the verification results to make a final decision</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>EVALUATION PROTOCOL</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Metrics</strong></h4>
+<ul>
+<li>Precision: Proportion of correctly verified claims among all claims verified as true</li>
+<li>Recall: Proportion of correctly verified true claims among all actually true claims</li>
+<li>F1 Score: Harmonic mean of precision and recall</li>
+<li>Efficiency: Average verification time per claim</li>
+<li>Resource Usage: Number of LLM calls per claim</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Analysis</strong></h4>
+<ul>
+<li>Compare the three approaches on all metrics</li>
+<li>Perform statistical significance testing using bootstrap resampling</li>
+<li>Analyze which types of claims benefit most from the integrated approach</li>
+<li>Generate visualizations comparing performance across different claim complexities</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>OUTPUT REQUIREMENTS</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Logs</strong></h4>
+<ul>
+<li>Log all LLM calls and responses</li>
+<li>Log the generated graphs for each claim</li>
+<li>Log the verification process for each atomic fact</li>
+<li>Log the final verification decision and ground truth for each claim</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Reports</strong></h4>
+<ul>
+<li>Generate a summary report with overall metrics for each approach</li>
+<li>Generate detailed reports for each claim, showing the verification process</li>
+<li>Create visualizations comparing the three approaches</li>
+<li>Provide statistical analysis of the results</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>EXPECTED RESULTS</strong></h4>
+<p>The integrated Graph-Enhanced Adaptive Verification approach is expected to outperform both baselines in terms of accuracy (F1 score) and efficiency (verification time). The experiment should demonstrate that the graph structure provides valuable context for the adaptive verification process, leading to more accurate and efficient fact verification.</p></p>
+<p><p>Please implement this experiment and run it in MINI_PILOT mode first, then PILOT mode if successful. Do not proceed to FULL_EXPERIMENT mode without human verification of the PILOT results.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18">Paper 0: Language Models Hallucinate, but May Excel at Fact Verification</a> (36 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/d0489fd7c5ff833e08969341ae6e5fa1d0e6dd2a">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/9af0ca023c01ad143d46144207bb43035ec11274">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/1ba083045a0af167b6402e2fbc2074df078b140a">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/0e426b088f5a02157577223d40f53fa966a53697">Paper 4</a>. The analysis of the related papers reveals a progression from addressing the computational cost of fact-checking to improving claim decomposition methods and exploring their impact on verification performance. The introduction of a multi-hop claim verification framework further enhances the accuracy and interpretability of fact verification. To advance the field, a research idea should focus on integrating these advancements into a unified system that leverages efficient fact-checking, improved decomposition methods, and multi-hop reasoning to enhance the robustness and generalization ability of LLMs in fact verification.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18" target="_blank">Language Models Hallucinate, but May Excel at Fact Verification</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/d0489fd7c5ff833e08969341ae6e5fa1d0e6dd2a" target="_blank">MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9af0ca023c01ad143d46144207bb43035ec11274" target="_blank">A Closer Look at Claim Decomposition</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/1ba083045a0af167b6402e2fbc2074df078b140a" target="_blank">Decomposition Dilemmas: Does Claim Decomposition Boost or Burden Fact-Checking Performance?</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/0e426b088f5a02157577223d40f53fa966a53697" target="_blank">Coordinating Search-Informed Reasoning and Reasoning-Guided Search in Claim Verification</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/87c18923d054e552fb03ea6b197120b0eb083246" target="_blank">Mining the Explainability and Generalization: Fact Verification Based on Self-Instruction</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/97fc84f67d1167c2f48ba219fdce38a22b5a3cf1" target="_blank">FactCG: Enhancing Fact Checkers with Graph-Based Multi-Hop Data</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/6db8053888d61e60d8fb861853b85ab99ce83d75" target="_blank">GraphCheck: Multi-Path Fact-Checking with Entity-Relationship Graphs</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/1fd612cc0f6ada0ad694eaa5c978a7099ee6dbb9" target="_blank">FIRE: Fact-checking with Iterative Retrieval and Verification</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/1f16aa0610714966b4855a9b837487d69a442266" target="_blank">Zero-Shot Learning and Key Points Are All You Need for Automated Fact-Checking</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/593511eecdccb5b6cc52887b8ea54a2a4539378e" target="_blank">Evaluating open-source Large Language Models for automated fact-checking</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/69f69f43e31af4b4a90b2cc7ed07a07e36a0e6db" target="_blank">A Survey on Collaborative Mechanisms Between Large and Small Language Models</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/f8f6411dab56f6ace2554a44085bab97e2c3eb78" target="_blank">VeriPlan: Integrating Formal Verification and LLMs into End-User Planning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/fb172b63ace59dc898b81d4924ecbe388c5cdabe" target="_blank">Integrating Expert Knowledge into Logical Programs via LLMs</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/59a717280d27b300dfea29554ea8b290f69c6f10" target="_blank">The Fusion of Large Language Models and Formal Methods for Trustworthy AI Agents: A Roadmap</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/e9661585d0efc02b4c941e5398ab6ef85063c9c0" target="_blank">Are LLMs Correctly Integrated into Software Systems?</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/a2bc4ec4c75e5ec307608d4f7967de4c9d23ebb1" target="_blank">Fact in Fragments: Deconstructing Complex Claims via LLM-based Atomic Fact Extraction and Verification</a> (2025)</li>
+</ol>
+</body>
+</html>

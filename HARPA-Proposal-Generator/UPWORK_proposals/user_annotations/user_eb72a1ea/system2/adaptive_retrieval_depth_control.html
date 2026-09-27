@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>a76209fea4627974b5e12d8b4942268eb17bc7df</p>
+<hr>
+<section><h2>Title</h2>
+<p>Adaptive Retrieval Depth Control for Efficient and Effective Retrieval-Augmented Generation</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current retrieval-augmented generation (RAG) systems often use a fixed number of retrieved passages for all queries, which can be inefficient for simple questions and insufficient for complex ones. This leads to suboptimal performance across diverse tasks with varying complexity.</p>
+<h3>Motivation</h3>
+<p>Existing RAG systems typically retrieve a predetermined number of passages (e.g., top-k) for all queries. Some recent works have explored iterative retrieval, but they often lack a principled mechanism to determine when to stop retrieving. Inspired by human information-seeking behavior, where we adaptively decide how much information to gather based on the task complexity, we propose a method that dynamically adjusts the retrieval depth for each query. This approach aims to balance efficiency and effectiveness across a wide range of tasks.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce an Adaptive Retrieval Depth Controller (ARDC) that learns to determine the optimal number of passages to retrieve for each query. The ARDC is a small neural network trained via reinforcement learning. It takes as input the query, the current retrieved passages, and the language model's current generation. At each step, it decides whether to retrieve more passages or stop and generate the final answer. The reward function balances answer quality (measured by a learned critic) and retrieval efficiency (measured by the number of retrieved passages). To enable unsupervised training, we use a contrastive learning approach: we create synthetic query-passage pairs by having the language model generate questions from retrieved passages, then train the ARDC to efficiently retrieve the original passages given the generated questions. During inference, the ARDC guides the retrieval process, allowing the system to retrieve just enough information for each query.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect datasets for evaluation: TriviaQA for simple factoid QA, HotpotQA for complex multi-hop reasoning, and ELI5 for open-ended generation tasks. Split each dataset into train, validation, and test sets.</p><p><strong>Step 2: Baseline Implementation</strong></p><p>Implement fixed-depth RAG baselines using popular retrieval models (e.g., BM25, DPR) and language models (e.g., T5, BART). Use 5, 10, and 20 as fixed retrieval depths. Implement recent adaptive retrieval methods as additional baselines.</p><p><strong>Step 3: ARDC Architecture</strong></p><p>Design the ARDC as a small transformer-based network. Input: concatenated query, retrieved passages, and current generation. Output: binary decision (retrieve more or stop).</p><p><strong>Step 4: Synthetic Data Generation</strong></p><p>Use GPT-3.5-turbo to generate questions from passages in the training set. Prompt: 'Given the following passage, generate a question that can be answered using the information in the passage: [PASSAGE]'. Store the generated question-passage pairs.</p><p><strong>Step 5: ARDC Pre-training</strong></p><p>Train the ARDC using contrastive learning on the synthetic data. For each question, retrieve passages incrementally and train the ARDC to stop when the original passage is retrieved. Use cross-entropy loss for the binary decision.</p><p><strong>Step 6: Reward Function Design</strong></p><p>Implement a learned critic network to evaluate answer quality. Train it on human-labeled examples from the training set. Define the reward as a weighted sum of the critic's score and the negative of the number of retrieved passages.</p><p><strong>Step 7: ARDC Fine-tuning</strong></p><p>Fine-tune the ARDC using reinforcement learning on the target datasets. Use the REINFORCE algorithm with the designed reward function. Update the ARDC parameters to maximize the expected reward.</p><p><strong>Step 8: Inference Pipeline</strong></p><p>Implement the full RAG system with the ARDC. For each query: (1) Retrieve initial set of passages, (2) Generate partial answer, (3) Use ARDC to decide whether to retrieve more, (4) If yes, go to step 1; if no, generate final answer.</p><p><strong>Step 9: Evaluation</strong></p><p>Evaluate the ARDC-guided RAG system on the test sets of TriviaQA, HotpotQA, and ELI5. Compare against fixed-depth RAG baselines and other adaptive retrieval methods. Metrics: F1 score for QA tasks, ROUGE for ELI5, average number of retrieved passages, and a combined score balancing performance and efficiency.</p><p><strong>Step 10: Analysis</strong></p><p>Analyze the ARDC's behavior across different query types. Visualize the distribution of retrieval depths for each dataset. Examine cases where the ARDC performs particularly well or poorly compared to baselines.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Fixed-depth RAG)</strong></p><p>Q: What is the capital of France?</p><p><strong>Baseline Prompt Expected Output (Fixed-depth RAG)</strong></p><p>The capital of France is Paris. [Retrieved 5 passages, including irrelevant information about French cuisine and history]</p><p><strong>Proposed Prompt Input (ARDC-guided RAG)</strong></p><p>Q: What is the capital of France?</p><p><strong>Proposed Prompt Expected Output (ARDC-guided RAG)</strong></p><p>The capital of France is Paris. [Retrieved 1 passage containing the relevant information]</p><p><strong>Explanation</strong></p><p>The ARDC-guided RAG system retrieves only the necessary information for simple queries, improving efficiency without sacrificing accuracy.</p>
+<h3>Fallback Plan</h3>
+<p>If the ARDC-guided RAG system doesn't outperform baselines, we can explore several alternatives. First, we could analyze the ARDC's decision-making process to identify patterns in its errors. This might reveal biases in the training data or flaws in the reward function design. We could then refine the synthetic data generation process or adjust the reward function accordingly. Another approach would be to experiment with different architectures for the ARDC, such as incorporating memory mechanisms or attention layers to better capture long-term dependencies in the retrieval process. Additionally, we could investigate hybrid approaches that combine the ARDC with other adaptive retrieval methods, potentially leveraging the strengths of multiple techniques. If these attempts don't yield significant improvements, we could pivot the project towards an in-depth analysis of why adaptive retrieval is challenging for certain types of queries or datasets. This could involve categorizing queries based on their complexity, examining the relationship between retrieval depth and answer quality across different query types, and identifying factors that influence the optimal retrieval strategy. Such an analysis could provide valuable insights for future work in adaptive retrieval systems.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ddbd8fe782ac98e9c64dd98710687a962195dd9b" target="_blank">Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/745635a705c7f6272a090560a26bfc57a5ad22e0" target="_blank">Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6be99483e99128ea314d4be6c24493a2718eef64" target="_blank">MAO-ARAG: Multi-Agent Orchestration for Adaptive Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/14a90f4dce0ff11c893593f43f0607c41b7c9e3a" target="_blank">Leveraging LLM-Assisted Query Understanding for Live Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c9975925ab08e453768125259d9a808ff348a7a9" target="_blank">SGIC: A Self-Guided Iterative Calibration Framework for RAG</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/368bbac734e5683d2f10d6399a9d19cb58fa7e3b" target="_blank">Learning to Extract Rational Evidence via Reinforcement Learning for Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e0efa866a1e464e65e3a217fd67d6c18bc422302" target="_blank">Investigating the Robustness of Retrieval-Augmented Generation at the Query Level</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5631e60096dc5a7a36fd1f4ffdfa3c8ff43dde64" target="_blank">HIRAG: Hierarchical-Thought Instruction-Tuning Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f7bd54b5f6d8284b92f8e1d5b4f9b30eb4928e38" target="_blank">Multimedia Graph Codes for Fast and Semantic Retrieval-Augmented Generation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4816a3613f1f5750b1f463d80086d39d400f370b" target="_blank">PAIRS: Parametric-Verified Adaptive Information Retrieval and Selection for Efficient RAG</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

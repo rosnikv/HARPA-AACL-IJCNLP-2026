@@ -1,0 +1,2184 @@
+{
+    "topic_description": "graph clustered federated learning for non-IID graph classification using dynamic time warping",
+    "all_queries": [
+        "KeywordQuery(\"graph clustered federated learning for non-iid graph classification using dynamic time warping\")",
+        "PaperQuery(\"8711cea9e4af17b73427b55dc62fabaa7e576d88\")",
+        "GetReferences(\"8711cea9e4af17b73427b55dc62fabaa7e576d88\")",
+        "KeywordQuery(\"federated graph neural networks non-iid\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "8711cea9e4af17b73427b55dc62fabaa7e576d88",
+            "paperId": "8711cea9e4af17b73427b55dc62fabaa7e576d88",
+            "title": "Federated Graph Classification over Non-IID Graphs",
+            "year": 2021,
+            "citationCount": 171,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.13423, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A graph clustered federated learning (GCFL) framework that dynamically finds clusters of local systems based on the gradients of GNNs, and theoretically justify that such clusters can reduce the structure and feature heterogeneity among graphs owned by the local systems."
+            },
+            "authors": [
+                {
+                    "authorId": "2117714080",
+                    "name": "Han Xie"
+                },
+                {
+                    "authorId": "2157405012",
+                    "name": "Jing Ma"
+                },
+                {
+                    "authorId": "2291135512",
+                    "name": "Li Xiong"
+                },
+                {
+                    "authorId": "1390553618",
+                    "name": "Carl Yang"
+                }
+            ],
+            "abstract": "Federated learning has emerged as an important paradigm for training machine learning models in different domains. For graph-level tasks such as graph classification, graphs can also be regarded as a special type of data samples, which can be collected and stored in separate local systems. Similar to other domains, multiple local systems, each holding a small set of graphs, may benefit from collaboratively training a powerful graph mining model, such as the popular graph neural networks (GNNs). To provide more motivation towards such endeavors, we analyze real-world graphs from different domains to confirm that they indeed share certain graph properties that are statistically significant compared with random graphs. However, we also find that different sets of graphs, even from the same domain or same dataset, are non-IID regarding both graph structures and node features. To handle this, we propose a graph clustered federated learning (GCFL) framework that dynamically finds clusters of local systems based on the gradients of GNNs, and theoretically justify that such clusters can reduce the structure and feature heterogeneity among graphs owned by the local systems. Moreover, we observe the gradients of GNNs to be rather fluctuating in GCFL which impedes high-quality clustering, and design a gradient sequence-based clustering mechanism based on dynamic time warping (GCFL+). Extensive experimental results and in-depth analysis demonstrate the effectiveness of our proposed frameworks.",
+            "score": 10
+        },
+        {
+            "id": "6a2cde371246ed0a6f87bd2fd1bf6c32971120e9",
+            "paperId": "6a2cde371246ed0a6f87bd2fd1bf6c32971120e9",
+            "title": "Subgraph Federated Learning with Missing Neighbor Generation",
+            "year": 2021,
+            "citationCount": 181,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.13430, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2119059495",
+                    "name": "Ke Zhang"
+                },
+                {
+                    "authorId": "1390553618",
+                    "name": "Carl Yang"
+                },
+                {
+                    "authorId": "2144456293",
+                    "name": "Xiaoxiao Li"
+                },
+                {
+                    "authorId": "49755259",
+                    "name": "Lichao Sun"
+                },
+                {
+                    "authorId": "145964453",
+                    "name": "S. Yiu"
+                }
+            ],
+            "abstract": "Graphs have been widely used in data mining and machine learning due to their unique representation of real-world objects and their interactions. As graphs are getting bigger and bigger nowadays, it is common to see their subgraphs separately collected and stored in multiple local systems. Therefore, it is natural to consider the subgraph federated learning setting, where each local system holds a small subgraph that may be biased from the distribution of the whole graph. Hence, the subgraph federated learning aims to collaboratively train a powerful and generalizable graph mining model without directly sharing their graph data. In this work, towards the novel yet realistic setting of subgraph federated learning, we propose two major techniques: (1) FedSage, which trains a GraphSage model based on FedAvg to integrate node features, link structures, and task labels on multiple local subgraphs; (2) FedSage+, which trains a missing neighbor generator along FedSage to deal with missing links across local subgraphs. Empirical results on four real-world graph datasets with synthesized subgraph federated learning settings demonstrate the effectiveness and efficiency of our proposed techniques. At the same time, consistent theoretical implications are made towards their generalization ability on the global graphs.",
+            "score": 3
+        },
+        {
+            "id": "5a30dd283a279661e224c477ccbad7b1a8ae45e4",
+            "paperId": "5a30dd283a279661e224c477ccbad7b1a8ae45e4",
+            "title": "Cluster-driven Graph Federated Learning over Multiple Domains",
+            "year": 2021,
+            "citationCount": 88,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2104.14628",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.14628, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2086972816",
+                    "name": "Debora Caldarola"
+                },
+                {
+                    "authorId": "38286801",
+                    "name": "Massimiliano Mancini"
+                },
+                {
+                    "authorId": "1787725",
+                    "name": "Fabio Galasso"
+                },
+                {
+                    "authorId": "153738445",
+                    "name": "Marco Ciccone"
+                },
+                {
+                    "authorId": "1796150",
+                    "name": "E. Rodol\u00e0"
+                },
+                {
+                    "authorId": "1752593147",
+                    "name": "Barbara Caputo"
+                }
+            ],
+            "abstract": "Federated Learning (FL) deals with learning a central model (i.e. the server) in privacy-constrained scenarios, where data are stored on multiple devices (i.e. the clients). The central model has no direct access to the data, but only to the updates of the parameters computed locally by each client. This raises a problem, known as statistical heterogeneity, because the clients may have different data distributions (i.e. domains). This is only partly alleviated by clustering the clients. Clustering may reduce heterogeneity by identifying the domains, but it deprives each cluster model of the data and supervision of others.Here we propose a novel Cluster-driven Graph Federated Learning (FedCG). In FedCG, clustering serves to address statistical heterogeneity, while Graph Convolutional Networks (GCNs) enable sharing knowledge across them. FedCG: i. identifies the domains via an FL-compliant clustering and instantiates domain-specific modules (residual branches) for each domain; ii. connects the domain-specific modules through a GCN at training to learn the interactions among domains and share knowledge; and iii. learns to cluster unsupervised via teacher-student classifier-training iterations and to address novel unseen test domains via their domain soft-assignment scores. Thanks to the unique interplay of GCN over clusters, FedCG achieves the state-of-theart on multiple FL benchmarks.",
+            "score": 3
+        },
+        {
+            "id": "06bc35120d2775bb4c26d6fd1ba68d1befcd84cb",
+            "paperId": "06bc35120d2775bb4c26d6fd1ba68d1befcd84cb",
+            "title": "An Efficient Framework for Clustered Federated Learning",
+            "year": 2020,
+            "citationCount": 904,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2006.04088",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.04088, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2528309",
+                    "name": "Avishek Ghosh"
+                },
+                {
+                    "authorId": "50622131",
+                    "name": "Jichan Chung"
+                },
+                {
+                    "authorId": "50559902",
+                    "name": "Dong Yin"
+                },
+                {
+                    "authorId": "144161012",
+                    "name": "K. Ramchandran"
+                }
+            ],
+            "abstract": "We address the problem of federated learning (FL) where users are distributed and partitioned into clusters. This setup captures settings where different groups of users have their own objectives (learning tasks) but by aggregating their data with others in the same cluster (same learning task), they can leverage the strength in numbers in order to perform more efficient federated learning. For this new framework of clustered federated learning, we propose the Iterative Federated Clustering Algorithm (IFCA), which alternately estimates the cluster identities of the users and optimizes model parameters for the user clusters via gradient descent. We analyze the convergence rate of this algorithm first in a linear model with squared loss and then for generic strongly convex and smooth loss functions. We show that in both settings, with good initialization, IFCA is guaranteed to converge, and discuss the optimality of the statistical error rate. In particular, for the linear model with two clusters, we can guarantee that our algorithm converges as long as the initialization is slightly better than random. When the clustering structure is ambiguous, we propose to train the models by combining IFCA with the weight sharing technique in multi-task learning. In the experiments, we show that our algorithm can succeed even if we relax the requirements on initialization with random initialization and multiple restarts. We also present experimental results showing that our algorithm is efficient in non-convex problems such as neural networks. We demonstrate the benefits of IFCA over the baselines on several clustered FL benchmarks.",
+            "score": 3
+        },
+        {
+            "id": "69f39fab118ba77b39a8a4acc7b5671bae001035",
+            "paperId": "69f39fab118ba77b39a8a4acc7b5671bae001035",
+            "title": "Federated learning with hierarchical clustering of local updates to improve training on non-IID data",
+            "year": 2020,
+            "citationCount": 596,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2004.11791",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2004.11791, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2060162747",
+                    "name": "Christopher Briggs"
+                },
+                {
+                    "authorId": "112838836",
+                    "name": "Zhong Fan"
+                },
+                {
+                    "authorId": "27473978",
+                    "name": "P\u00e9ter Andr\u00e1s"
+                }
+            ],
+            "abstract": "Federated learning (FL) is a well established method for performing machine learning tasks over massively distributed data. However in settings where data is distributed in a non-iid (not independent and identically distributed) fashion - as is typical in real world situations - the joint model produced by FL suffers in terms of test set accuracy and/or communication costs compared to training on iid data. We show that learning a single joint model is often not optimal in the presence of certain types of non-iid data. In this work we present a modification to FL by introducing a hierarchical clustering step (FL+HC) to separate clusters of clients by the similarity of their local updates to the global joint model. Once separated, the clusters are trained independently and in parallel on specialised models. We present a robust empirical analysis of the hyperparameters for FL+HC for several iid and non-iid settings. We show how FL+HC allows model training to converge in fewer communication rounds (significantly so under some non-iid settings) compared to FL without clustering. Additionally, FL+HC allows for a greater percentage of clients to reach a target accuracy compared to standard FL. Finally we make suggestions for good default hyperparameters to promote superior performing specialised models without modifying the the underlying federated learning communication protocol.",
+            "score": 3
+        },
+        {
+            "id": "08bd705920792314e3ef806c28d0a7f40505634f",
+            "paperId": "08bd705920792314e3ef806c28d0a7f40505634f",
+            "title": "Clustered Federated Learning: Model-Agnostic Distributed Multitask Optimization Under Privacy Constraints",
+            "year": 2019,
+            "citationCount": 1042,
+            "openAccessPdf": {
+                "url": "https://ieeexplore.ieee.org/ielx7/5962385/9505270/09174890.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.01991, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "46223357",
+                    "name": "Felix Sattler"
+                },
+                {
+                    "authorId": "145034054",
+                    "name": "K. M\u00fcller"
+                },
+                {
+                    "authorId": "1699054",
+                    "name": "W. Samek"
+                }
+            ],
+            "abstract": "Federated learning (FL) is currently the most widely adopted framework for collaborative training of (deep) machine learning models under privacy constraints. Albeit its popularity, it has been observed that FL yields suboptimal results if the local clients\u2019 data distributions diverge. To address this issue, we present clustered FL (CFL), a novel federated multitask learning (FMTL) framework, which exploits geometric properties of the FL loss surface to group the client population into clusters with jointly trainable data distributions. In contrast to existing FMTL approaches, CFL does not require any modifications to the FL communication protocol to be made, is applicable to general nonconvex objectives (in particular, deep neural networks), does not require the number of clusters to be known a priori, and comes with strong mathematical guarantees on the clustering quality. CFL is flexible enough to handle client populations that vary over time and can be implemented in a privacy-preserving way. As clustering is only performed after FL has converged to a stationary point, CFL can be viewed as a postprocessing method that will always achieve greater or equal performance than conventional FL by allowing clients to arrive at more specialized models. We verify our theoretical analysis in experiments with deep convolutional and recurrent neural networks on commonly used FL data sets.",
+            "score": 3
+        },
+        {
+            "id": "5458d45895ae767b5fd6248612b7abbfd1f1e39e",
+            "paperId": "5458d45895ae767b5fd6248612b7abbfd1f1e39e",
+            "title": "Privacy-Preserving Federated Graph Neural Network Learning on Non-IID Graph Data",
+            "year": 2023,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "https://downloads.hindawi.com/journals/wcmc/2023/8545101.pdf",
+                "status": "GOLD",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1155/2023/8545101?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1155/2023/8545101, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "By integrating embedding alignment techniques in PPFL-GNN, this paper overcome the obstacles of federated learning on non-IID graph data and can further reduce privacy exposure by sharing preferred information."
+            },
+            "authors": [
+                {
+                    "authorId": "2153280030",
+                    "name": "Kainan Zhang"
+                },
+                {
+                    "authorId": "144779781",
+                    "name": "Zhipeng Cai"
+                },
+                {
+                    "authorId": "50587717",
+                    "name": "Daehee Seo"
+                }
+            ],
+            "abstract": "Since the concept of federated learning (FL) was proposed by Google in 2017, many applications have been combined with FL technology due to its outstanding performance in data integration, computing performance, privacy protection, etc. However, most traditional federated learning-based applications focus on image processing and natural language processing with few achievements in graph neural networks due to the graph\u2019s nonindependent identically distributed (IID) nature. Representation learning on graph-structured data generates graph embedding, which helps machines understand graphs effectively. Meanwhile, privacy protection plays a more meaningful role in analyzing graph-structured data such as social networks. Hence, this paper proposes PPFL-GNN, a novel privacy-preserving federated graph neural network framework for node representation learning, which is a pioneer work for graph neural network-based federated learning. In PPFL-GNN, clients utilize a local graph dataset to generate graph embeddings and integrate information from other collaborative clients to utilize federated learning to produce more accurate representation results. More importantly, by integrating embedding alignment techniques in PPFL-GNN, we overcome the obstacles of federated learning on non-IID graph data and can further reduce privacy exposure by sharing preferred information.",
+            "score": 3
+        },
+        {
+            "id": "c212d8114e8e13c591e083d0a107b8a845ddbbc5",
+            "paperId": "c212d8114e8e13c591e083d0a107b8a845ddbbc5",
+            "title": "FedGAC: Graph Federated Learning with Gradients Aggregation Calibration for Non-IID and Long-Tailed Data",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ISPA63168.2024.00059?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ISPA63168.2024.00059, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Experimental results demonstrate that, compared to the state-of-the-art federated learning methods, FedGAC achieves superior performance on highly non-IID and long-tailed distribution datasets."
+            },
+            "authors": [
+                {
+                    "authorId": "2346543601",
+                    "name": "Jie Li"
+                },
+                {
+                    "authorId": "2275748269",
+                    "name": "Jinyan Wang"
+                },
+                {
+                    "authorId": "2346513242",
+                    "name": "Rongbin Deng"
+                },
+                {
+                    "authorId": "2324222412",
+                    "name": "Dongqi Yan"
+                },
+                {
+                    "authorId": "2275760910",
+                    "name": "Qiyu Li"
+                }
+            ],
+            "abstract": "Federated graph learning (FGL) combines the advantages of graph neural networks and federated learning, extracting valuable information from decentralized graph data while preserving data privacy. Existing FGL methods typically consider mitigating the effect of non-IID under the class balanced assumption. However, in many real-world scenarios, the data class distribution often exhibits a long-tailed distribution, which can lead to the model being severely biased towards the head classes, thus affecting the overall performance of the global model. To address the challenges posed by non-IID and long-tailed distribution data in FGL, this paper proposes a method called FedGAC to train a globally balanced model. In the local stage, FedGAC employs feature-structure decoupled graph attention network to train client models, introduces class-importance balanced strategy to mitigate class imbalance issues, and leverages knowledge relearning strategy to enhance model generalization. In the global stage, FedGAC employs an adaptive gradients aggregation strategy that dynamically adjusts balancing factors based on the degree of class imbalance in each client\u2019s data, thereby optimizing the aggregation process. Additionally, it utilizes global class gradients to calibrate learnable features. Experimental results demonstrate that, compared to the state-of-the-art federated learning methods, FedGAC achieves superior performance on highly non-IID and long-tailed distribution datasets.",
+            "score": 3
+        },
+        {
+            "id": "2f325e874aa12ebbf8f5028076e7c4c75831ce54",
+            "paperId": "2f325e874aa12ebbf8f5028076e7c4c75831ce54",
+            "title": "Federated Learning on Non-IID Graphs via Structural Knowledge Sharing",
+            "year": 2022,
+            "citationCount": 148,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2211.13009",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2211.13009, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "FedStar is proposed, an FGL framework that extracts and shares the common underlying structure information for inter-graph federated learning tasks, capable of capturing more structure-based domain-invariant information and avoiding feature misalignment issues."
+            },
+            "authors": [
+                {
+                    "authorId": "2110732367",
+                    "name": "Yue Tan"
+                },
+                {
+                    "authorId": "2116018493",
+                    "name": "Yixin Liu"
+                },
+                {
+                    "authorId": "2062835",
+                    "name": "Guodong Long"
+                },
+                {
+                    "authorId": "1746594",
+                    "name": "Jing Jiang"
+                },
+                {
+                    "authorId": "2151674574",
+                    "name": "Qinghua Lu"
+                },
+                {
+                    "authorId": "48934799",
+                    "name": "Chengqi Zhang"
+                }
+            ],
+            "abstract": "Graph neural networks (GNNs) have shown their superiority in modeling graph data. Owing to the advantages of federated learning, federated graph learning (FGL) enables clients to train strong GNN models in a distributed manner without sharing their private data. A core challenge in federated systems is the non-IID problem, which also widely exists in real-world graph data. For example, local data of clients may come from diverse datasets or even domains, e.g., social networks and molecules, increasing the difficulty for FGL methods to capture commonly shared knowledge and learn a generalized encoder. From real-world graph datasets, we observe that some structural properties are shared by various domains, presenting great potential for sharing structural knowledge in FGL. Inspired by this, we propose FedStar, an FGL framework that extracts and shares the common underlying structure information for inter-graph federated learning tasks. To explicitly extract the structure information rather than encoding them along with the node features, we define structure embeddings and encode them with an independent structure encoder. Then, the structure encoder is shared across clients while the feature-based knowledge is learned in a personalized way, making FedStar capable of capturing more structure-based domain-invariant information and avoiding feature misalignment issues. We perform extensive experiments over both cross-dataset and cross-domain non-IID FGL settings, demonstrating the superiority of FedStar.",
+            "score": 3
+        },
+        {
+            "id": "c3b9348a89fb0d5937bb5d517a89fb047c1d689c",
+            "paperId": "c3b9348a89fb0d5937bb5d517a89fb047c1d689c",
+            "title": "GraphFed: A Personalized Subgraph Federated Learning Framework for Non-IID Graphs",
+            "year": 2023,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/MASS58611.2023.00035?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/MASS58611.2023.00035, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Inspired by the common overlapping nodes among subgraphs, GraphFed is proposed, a subgraph federated learning framework which solve the challenge in terms of both data augmentation and personalized Federated learning."
+            },
+            "authors": [
+                {
+                    "authorId": "2264639236",
+                    "name": "Pan Deng"
+                },
+                {
+                    "authorId": "48033068",
+                    "name": "Xuefeng Liu"
+                },
+                {
+                    "authorId": "2056283222",
+                    "name": "Jianwei Niu"
+                },
+                {
+                    "authorId": "2264711955",
+                    "name": "Chunming Hu"
+                }
+            ],
+            "abstract": "Recently, federated graph learning has attracted significant attention, as subgraphs of a global graph may often distribute across different institutions and are subject to privacy restrictions. However, inevitable data heterogeneity among sub-graphs can lead to poor performance of Graph Neural Networks (GNNs) trained by vanilla federated learning algorithm, which has been neglected before. To address this problem we look at subgraphs and find that there are usually overlapping nodes among them. Inspired by the common overlapping nodes among subgraphs, we propose GraphFed, a subgraph federated learning framework which solve the challenge in terms of both data augmentation and personalized federated learning. GraphFed uses common overlapping nodes among subgraphs to locate lost node information and applies data augmentation by retrieving lost nodes and forming common node sets that mitigates data distribution difference. Furthermore, GraphFed treats the overlapping nodes as bridges to calculate the distance among different subgraphs, which implies the similarity of the graph data distribution. Then, we use the distance to perform personalized federated learning. Empirical results and analysis on three real-world graph datasets with graph federated learning settings demonstrate the effectiveness of our proposed framework.",
+            "score": 3
+        },
+        {
+            "id": "7f85b0ce97d6374006bc46b1967b947e14f2539f",
+            "paperId": "7f85b0ce97d6374006bc46b1967b947e14f2539f",
+            "title": "FedSSP: Federated Graph Learning with Spectral Knowledge and Personalized Preference",
+            "year": 2024,
+            "citationCount": 8,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.20105, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work innovatively reveals that the spectral nature of graphs can well reflect inherent domain structural shifts and proposes the pFGL framework FedSSP which Shares generic Spectral knowledge while satisfying graph Preferences."
+            },
+            "authors": [
+                {
+                    "authorId": "2328032254",
+                    "name": "Zihan Tan"
+                },
+                {
+                    "authorId": "2229286959",
+                    "name": "Guancheng Wan"
+                },
+                {
+                    "authorId": "2174575646",
+                    "name": "Wenke Huang"
+                },
+                {
+                    "authorId": "2293445688",
+                    "name": "Mang Ye"
+                }
+            ],
+            "abstract": "Personalized Federated Graph Learning (pFGL) facilitates the decentralized training of Graph Neural Networks (GNNs) without compromising privacy while accommodating personalized requirements for non-IID participants. In cross-domain scenarios, structural heterogeneity poses significant challenges for pFGL. Nevertheless, previous pFGL methods incorrectly share non-generic knowledge globally and fail to tailor personalized solutions locally under domain structural shift. We innovatively reveal that the spectral nature of graphs can well reflect inherent domain structural shifts. Correspondingly, our method overcomes it by sharing generic spectral knowledge. Moreover, we indicate the biased message-passing schemes for graph structures and propose the personalized preference module. Combining both strategies, we propose our pFGL framework FedSSP which Shares generic Spectral knowledge while satisfying graph Preferences. Furthermore, We perform extensive experiments on cross-dataset and cross-domain settings to demonstrate the superiority of our framework. The code is available at https://github.com/OakleyTan/FedSSP.",
+            "score": 3
+        },
+        {
+            "id": "b32aab492727412e73185b45fa8c166b1c080b33",
+            "paperId": "b32aab492727412e73185b45fa8c166b1c080b33",
+            "title": "Optimizing Federated Graph Learning with Inherent Structural Knowledge and Dual-Densely Connected GNNs",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2408.11662, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "FedDense is proposed, a novel FGL framework that optimizes the utilization efficiency of inherent structural knowledge within graph data itself alongside node features and introduces a Dual-Densely Connected GNN architecture that exploits the multi-scale feature and structure insights embedded in the aggregated feature maps at each layer."
+            },
+            "authors": [
+                {
+                    "authorId": "2316586304",
+                    "name": "Longwen Wang"
+                },
+                {
+                    "authorId": "2271550736",
+                    "name": "Jianchun Liu"
+                },
+                {
+                    "authorId": "2315310826",
+                    "name": "Zhi Liu"
+                },
+                {
+                    "authorId": "2242404420",
+                    "name": "Jinyang Huang"
+                }
+            ],
+            "abstract": "Federated Graph Learning (FGL) is an emerging technology that enables clients to collaboratively train powerful Graph Neural Networks (GNNs) in a distributed manner without exposing their private data. Nevertheless, FGL still faces the challenge of the severe non-Independent and Identically Distributed (non-IID) nature of graphs, which possess diverse node and edge structures, especially across varied domains. Thus, exploring the knowledge inherent in these structures becomes significantly crucial. Existing methods, however, either overlook the inherent structural knowledge in graph data or capture it at the cost of significantly increased resource demands (e.g., FLOPs and communication bandwidth), which can be detrimental to distributed paradigms. Inspired by this, we propose FedDense, a novel FGL framework that optimizes the utilization efficiency of inherent structural knowledge. To better acquire knowledge of diverse and underexploited structures, FedDense first explicitly encodes the structural knowledge inherent within graph data itself alongside node features. Besides, FedDense introduces a Dual-Densely Connected (DDC) GNN architecture that exploits the multi-scale (i.e., one-hop to multi-hop) feature and structure insights embedded in the aggregated feature maps at each layer. In addition to the exploitation of inherent structures, we consider resource limitations in FGL, devising exceedingly narrow layers atop the DDC architecture and adopting a selective parameter sharing strategy to reduce resource costs substantially. We conduct extensive experiments using 15 datasets across 4 different domains, demonstrating that FedDense consistently surpasses baselines by a large margin in training performance, while demanding minimal resources.",
+            "score": 3
+        },
+        {
+            "id": "26d353c131d58a9b92b4877bac49c81df643a3a8",
+            "paperId": "26d353c131d58a9b92b4877bac49c81df643a3a8",
+            "title": "AdaFGL: A New Paradigm for Federated Node Classification with Topology Heterogeneity",
+            "year": 2024,
+            "citationCount": 13,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.11750, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces the concept of structure Non-iid split and presents a new paradigm called Adaptive Federated Graph Learning (AdaFGL), a decoupled two-step personalized approach that outperforms baselines over state-of-the-art baselines."
+            },
+            "authors": [
+                {
+                    "authorId": "2268429288",
+                    "name": "Xunkai Li"
+                },
+                {
+                    "authorId": "2268502577",
+                    "name": "Zhengyu Wu"
+                },
+                {
+                    "authorId": "2268429396",
+                    "name": "Wentao Zhang"
+                },
+                {
+                    "authorId": "2271276405",
+                    "name": "Henan Sun"
+                },
+                {
+                    "authorId": "2259752262",
+                    "name": "Ronghua Li"
+                },
+                {
+                    "authorId": "2240263835",
+                    "name": "Guoren Wang"
+                }
+            ],
+            "abstract": "Recently, Federated Graph Learning (FGL) has attracted significant attention as a distributed framework based on graph neural networks, primarily due to its capability to break data silos. Existing FGL studies employ community split on the homophilous global graph by default to simulate federated semisupervised node classification settings. Such a strategy assumes the consistency of topology between the multi-client subgraphs and the global graph, where connected nodes are highly likely to possess similar feature distributions and the same label. However, in real-world implementations, the varying perspectives of local data engineering result in various subgraph topologies, posing unique heterogeneity challenges in FGL. Unlike the well-known label Non-independent identical distribution (Non-iid) problems in federated learning, FGL heterogeneity essentially reveals the topological divergence among multiple clients, namely homophily or heterophily. To simulate and handle this unique challenge, we introduce the concept of structure Non-iid split and then present a new paradigm called Adaptive Federated Graph Learning (AdaFGL), a decoupled two-step personalized approach. To begin with, AdaFGL employs standard multi-client federated collaborative training to acquire the federated knowledge extractor by aggregating uploaded models in the final round at the server. Then, each client conducts personalized training based on the local subgraph and the federated knowledge extractor. Extensive experiments on the 12 graph benchmark datasets validate the superior performance of AdaFGL over state-of-the-art baselines. Specifically, in terms of test accuracy, our proposed AdaFGL outperforms baselines by significant margins of 3.24 % and 5.57 % on community split and structure Non-iid split, respectively.",
+            "score": 3
+        },
+        {
+            "id": "50f2da3d64fb566b7976d665626735deeeb93c20",
+            "paperId": "50f2da3d64fb566b7976d665626735deeeb93c20",
+            "title": "Optimizing Federated Learning using Remote Embeddings for Graph Neural Networks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.12425, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1396453405",
+                    "name": "Pranjal Naman"
+                },
+                {
+                    "authorId": "1761220",
+                    "name": "Yogesh L. Simmhan"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) have experienced rapid advancements in recent years due to their ability to learn meaningful representations from graph data structures. Federated Learning (FL) has emerged as a viable machine learning approach for training a shared model on decentralized data, addressing privacy concerns while leveraging parallelism. Existing methods that address the unique requirements of federated GNN training using remote embeddings to enhance convergence accuracy are limited by their diminished performance due to large communication costs with a shared embedding server. In this paper, we present OpES, an optimized federated GNN training framework that uses remote neighbourhood pruning, and overlaps pushing of embeddings to the server with local training to reduce the network costs and training time. The modest drop in per-round accuracy due to pre-emptive push of embeddings is out-stripped by the reduction in per-round training time for large and dense graphs like Reddit and Products, converging up to $\\approx2\\times$ faster than the state-of-the-art technique using an embedding server and giving up to $20\\%$ better accuracy than vanilla federated GNN learning.",
+            "score": 2
+        },
+        {
+            "id": "b9352582346d7205c708766fb19a6c1d4f317bda",
+            "paperId": "b9352582346d7205c708766fb19a6c1d4f317bda",
+            "title": "FedSA-GCL: A Semi-Asynchronous Federated Graph Learning Framework with Personalized Aggregation and Cluster-Aware Broadcasting",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.18219, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Zhongzheng Yuan"
+                },
+                {
+                    "authorId": "2372141854",
+                    "name": "Lianshuai Guo"
+                },
+                {
+                    "authorId": "1502861254",
+                    "name": "Xunkai Li"
+                },
+                {
+                    "authorId": "2167187084",
+                    "name": "Yinlin Zhu"
+                },
+                {
+                    "authorId": "2372152784",
+                    "name": "Wenyu Wang"
+                },
+                {
+                    "authorId": "3060015",
+                    "name": "Meixia Qu"
+                }
+            ],
+            "abstract": "Federated Graph Learning (FGL) is a distributed learning paradigm that enables collaborative training over large-scale subgraphs located on multiple local systems. However, most existing FGL approaches rely on synchronous communication, which leads to inefficiencies and is often impractical in real-world deployments. Meanwhile, current asynchronous federated learning (AFL) methods are primarily designed for conventional tasks such as image classification and natural language processing, without accounting for the unique topological properties of graph data. Directly applying these methods to graph learning can possibly result in semantic drift and representational inconsistency in the global model. To address these challenges, we propose FedSA-GCL, a semi-asynchronous federated framework that leverages both inter-client label distribution divergence and graph topological characteristics through a novel ClusterCast mechanism for efficient training. We evaluate FedSA-GCL on multiple real-world graph datasets using the Louvain and Metis split algorithms, and compare it against 9 baselines. Extensive experiments demonstrate that our method achieves strong robustness and outstanding efficiency, outperforming the baselines by an average of 2.92% with the Louvain and by 3.4% with the Metis.",
+            "score": 2
+        },
+        {
+            "id": "0436dcacc8809c6e277299b97519339f592116ba",
+            "paperId": "0436dcacc8809c6e277299b97519339f592116ba",
+            "title": "Federated Learning with Graph-Based Aggregation for Traffic Forecasting",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.09805, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2220363257",
+                    "name": "Audri Banik"
+                },
+                {
+                    "authorId": "2372451285",
+                    "name": "Glaucio Haroldo Silva de Carvalho"
+                },
+                {
+                    "authorId": "2332050850",
+                    "name": "Renata Dividino"
+                }
+            ],
+            "abstract": "In traffic prediction, the goal is to estimate traffic speed or flow in specific regions or road segments using historical data collected by devices deployed in each area. Each region or road segment can be viewed as an individual client that measures local traffic flow, making Federated Learning (FL) a suitable approach for collaboratively training models without sharing raw data. In centralized FL, a central server collects and aggregates model updates from multiple clients to build a shared model while preserving each client's data privacy. Standard FL methods, such as Federated Averaging (FedAvg), assume that clients are independent, which can limit performance in traffic prediction tasks where spatial relationships between clients are important. Federated Graph Learning methods can capture these dependencies during server-side aggregation, but they often introduce significant computational overhead. In this paper, we propose a lightweight graph-aware FL approach that blends the simplicity of FedAvg with key ideas from graph learning. Rather than training full models, our method applies basic neighbourhood aggregation principles to guide parameter updates, weighting client models based on graph connectivity. This approach captures spatial relationships effectively while remaining computationally efficient. We evaluate our method on two benchmark traffic datasets, METR-LA and PEMS-BAY, and show that it achieves competitive performance compared to standard baselines and recent graph-based federated learning techniques.",
+            "score": 2
+        },
+        {
+            "id": "7cbd1434f4346359cdaad8f0cf606cd2fedbca35",
+            "paperId": "7cbd1434f4346359cdaad8f0cf606cd2fedbca35",
+            "title": "Learning to Collaborate Over Graphs: A Selective Federated Multi-Task Learning Approach",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.10102, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2305683449",
+                    "name": "Ahmed Elbakary"
+                },
+                {
+                    "authorId": "2124017074",
+                    "name": "Chaouki Ben Issaid"
+                },
+                {
+                    "authorId": "2279548875",
+                    "name": "Mehdi Bennis"
+                }
+            ],
+            "abstract": "We present a novel federated multi-task learning method that leverages cross-client similarity to enable personalized learning for each client. To avoid transmitting the entire model to the parameter server, we propose a communication-efficient scheme that introduces a feature anchor, a compact vector representation that summarizes the features learned from the client's local classes. This feature anchor is shared with the server to account for local clients' distribution. In addition, the clients share the classification heads, a lightweight linear layer, and perform a graph-based regularization to enable collaboration among clients. By modeling collaboration between clients as a dynamic graph and continuously updating and refining this graph, we can account for any drift from the clients. To ensure beneficial knowledge transfer and prevent negative collaboration, we leverage a community detection-based approach that partitions this dynamic graph into homogeneous communities, maximizing the sum of task similarities, represented as the graph edges' weights, within each community. This mechanism restricts collaboration to highly similar clients within their formed communities, ensuring positive interaction and preserving personalization. Extensive experiments on two heterogeneous datasets demonstrate that our method significantly outperforms state-of-the-art baselines. Furthermore, we show that our method exhibits superior computation and communication efficiency and promotes fairness across clients.",
+            "score": 2
+        },
+        {
+            "id": "a56609e82d466abb700cd0369e8c26fe8a173e32",
+            "paperId": "a56609e82d466abb700cd0369e8c26fe8a173e32",
+            "title": "S2FGL: Spatial Spectral Federated Graph Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02409, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Zihan Tan"
+                },
+                {
+                    "authorId": "2372564033",
+                    "name": "Suyuan Huang"
+                },
+                {
+                    "authorId": "2229286959",
+                    "name": "Guancheng Wan"
+                },
+                {
+                    "authorId": "2174575646",
+                    "name": "Wenke Huang"
+                },
+                {
+                    "authorId": "2153614670",
+                    "name": "He Li"
+                },
+                {
+                    "authorId": null,
+                    "name": "Mang Ye"
+                }
+            ],
+            "abstract": "Federated Graph Learning (FGL) combines the privacy-preserving capabilities of federated learning (FL) with the strong graph modeling capability of Graph Neural Networks (GNNs). Current research addresses subgraph-FL from the structural perspective, neglecting the propagation of graph signals on spatial and spectral domains of the structure. From a spatial perspective, subgraph-FL introduces edge disconnections between clients, leading to disruptions in label signals and a degradation in the semantic knowledge of the global GNN. From a spectral perspective, spectral heterogeneity causes inconsistencies in signal frequencies across subgraphs, which makes local GNNs overfit the local signal propagation schemes. As a result, spectral client drift occurs, undermining global generalizability. To tackle the challenges, we propose a global knowledge repository to mitigate the challenge of poor semantic knowledge caused by label signal disruption. Furthermore, we design a frequency alignment to address spectral client drift. The combination of Spatial and Spectral strategies forms our framework S2FGL. Extensive experiments on multiple datasets demonstrate the superiority of S2FGL. The code is available at https://github.com/Wonder7racer/S2FGL.git.",
+            "score": 2
+        },
+        {
+            "id": "a85c45ce7c893388e8eafa8a653b042e1497db48",
+            "paperId": "a85c45ce7c893388e8eafa8a653b042e1497db48",
+            "title": "Cross-Node Federated Graph Neural Network for Spatio-Temporal Data Modeling",
+            "year": 2021,
+            "citationCount": 134,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3447548.3467371",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.05223, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "27737939",
+                    "name": "Chuizheng Meng"
+                },
+                {
+                    "authorId": "2267664",
+                    "name": "Sirisha Rambhatla"
+                },
+                {
+                    "authorId": "47909531",
+                    "name": "Yan Liu"
+                }
+            ],
+            "abstract": "Vast amount of data generated from networks of sensors, wearables, and the Internet of Things (IoT) devices underscores the need for advanced modeling techniques that leverage the spatio-temporal structure of decentralized data due to the need for edge computation and licensing (data access) issues. While federated learning (FL) has emerged as a framework for model training without requiring direct data sharing and exchange, effectively modeling the complex spatio-temporal dependencies to improve forecasting capabilities still remains an open problem. On the other hand, state-of-the-art spatio-temporal forecasting models assume unfettered access to the data, neglecting constraints on data sharing. To bridge this gap, we propose a federated spatio-temporal model -- Cross-Node Federated Graph Neural Network (CNFGNN) -- which explicitly encodes the underlying graph structure using graph neural network (GNN)-based architecture under the constraint of cross-node federated learning, which requires that data in a network of nodes is generated locally on each node and remains decentralized. CNFGNN operates by disentangling the temporal dynamics modeling on devices and spatial dynamics on the server, utilizing alternating optimization to reduce the communication cost, facilitating computations on the edge devices. Experiments on the traffic flow forecasting task show that CNFGNN achieves the best forecasting performance in both transductive and inductive learning settings with no extra computation cost on edge devices, while incurring modest communication cost.",
+            "score": 2
+        },
+        {
+            "id": "33f036f3dc345b1f09e24e781e58869005e3bcf9",
+            "paperId": "33f036f3dc345b1f09e24e781e58869005e3bcf9",
+            "title": "FL-AGCNS: Federated Learning Framework for Automatic Graph Convolutional Network Search",
+            "year": 2021,
+            "citationCount": 17,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.04141, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2108679228",
+                    "name": "Chunnan Wang"
+                },
+                {
+                    "authorId": "26671571",
+                    "name": "Bozhou Chen"
+                },
+                {
+                    "authorId": "2108548674",
+                    "name": "Geng Li"
+                },
+                {
+                    "authorId": "46506118",
+                    "name": "Hongzhi Wang"
+                }
+            ],
+            "abstract": "Recently, some Neural Architecture Search (NAS) techniques are proposed for the automatic design of Graph Convolutional Network (GCN) architectures. They bring great convenience to the use of GCN, but could hardly apply to the Federated Learning (FL) scenarios with distributed and private datasets, which limit their applications. Moreover, they need to train many candidate GCN models from scratch, which is inefficient for FL. To address these challenges, we propose FL-AGCNS, an efficient GCN NAS algorithm suitable for FL scenarios. FL-AGCNS designs a federated evolutionary optimization strategy to enable distributed agents to cooperatively design powerful GCN models while keeping personal information on local devices. Besides, it applies the GCN SuperNet and a weight sharing strategy to speed up the evaluation of GCN models. Experimental results show that FL-AGCNS can find better GCN models in short time under the FL framework, surpassing the state-of-the-arts NAS methods and GCN models.",
+            "score": 2
+        },
+        {
+            "id": "bd32e8dc7289b47e946b651208f622f4802ad7d1",
+            "paperId": "bd32e8dc7289b47e946b651208f622f4802ad7d1",
+            "title": "GraphFL: A Federated Learning Framework for Semi-Supervised Node Classification on Graphs",
+            "year": 2020,
+            "citationCount": 122,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2012.04187",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.04187, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1789625",
+                    "name": "Binghui Wang"
+                },
+                {
+                    "authorId": "2108667778",
+                    "name": "Ang Li"
+                },
+                {
+                    "authorId": "51208601",
+                    "name": "H. Li"
+                },
+                {
+                    "authorId": "5442167",
+                    "name": "Yiran Chen"
+                }
+            ],
+            "abstract": "Graph-based semi-supervised node classification (GraphSSC) has wide applications, ranging from networking and security to data mining and machine learning, etc. However, existing centralized GraphSSC methods are impractical to solve many real-world graph-based problems, as collecting the entire graph and labeling a reasonable number of labels is time-consuming and costly, and data privacy may be also violated. Federated learning (FL) is an emerging learning paradigm that enables collaborative learning among multiple clients, which can mitigate the issue of label scarcity and protect data privacy as well. Therefore, performing GraphSSC under the FL setting is a promising solution to solve real-world graph-based problems. However, existing FL methods 1) perform poorly when data across clients are non independent identically distributed (nonIID), 2) cannot handle data with new label domains, and 3) cannot leverage unlabeled data, while all these issues naturally happen in real-world graph-based problems. To address the above issues, we propose the first FL framework, namely GraphFL, for semi-supervised node classification on graphs. Our framework is motivated by meta-learning methods. Specifically, we propose two GraphFL methods to respectively address the non-IID issue in graph data and handle the tasks with new label domains. Furthermore, we design a self-training method to leverage unlabeled graph data. We adopt representative graph neural networks as GraphSSC methods and evaluate GraphFL on multiple graph datasets. Experimental results on various benchmark datasets demonstrate that GraphFL significantly outperforms the compared FL baseline, GraphFL can handle data with new label domains, and GraphFL with selftraining can obtain better performance. Source code is available at https://github.com/binghuiivang/GraphFL.",
+            "score": 2
+        },
+        {
+            "id": "edd3d5164720dda26632cca5fdbf885fdd411a0e",
+            "paperId": "edd3d5164720dda26632cca5fdbf885fdd411a0e",
+            "title": "Federated Dynamic GNN with Secure Aggregation",
+            "year": 2020,
+            "citationCount": 31,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.07351, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1470716407",
+                    "name": "Meng Jiang"
+                },
+                {
+                    "authorId": "8645024",
+                    "name": "Taeho Jung"
+                },
+                {
+                    "authorId": "145753553",
+                    "name": "Ryan Karl"
+                },
+                {
+                    "authorId": "1742573",
+                    "name": "Tong Zhao"
+                }
+            ],
+            "abstract": "Given video data from multiple personal devices or street cameras, can we exploit the structural and dynamic information to learn dynamic representation of objects for applications such as distributed surveillance, without storing data at a central server that leads to a violation of user privacy? In this work, we introduce Federated Dynamic Graph Neural Network (Feddy), a distributed and secured framework to learn the object representations from multi-user graph sequences: i) It aggregates structural information from nearby objects in the current graph as well as dynamic information from those in the previous graph. It uses a self-supervised loss of predicting the trajectories of objects. ii) It is trained in a federated learning manner. The centrally located server sends the model to user devices. Local models on the respective user devices learn and periodically send their learning to the central server without ever exposing the user's data to server. iii) Studies showed that the aggregated parameters could be inspected though decrypted when broadcast to clients for model synchronizing, after the server performed a weighted average. We design an appropriate aggregation mechanism of secure aggregation primitives that can protect the security and privacy in federated learning with scalability. Experiments on four video camera datasets (in four different scenes) as well as simulation demonstrate that Feddy achieves great effectiveness and security.",
+            "score": 2
+        },
+        {
+            "id": "679237737ab2392a87a1f3c44d62b2e37f36bf01",
+            "paperId": "679237737ab2392a87a1f3c44d62b2e37f36bf01",
+            "title": "Personalized Cross-Silo Federated Learning on Non-IID Data",
+            "year": 2020,
+            "citationCount": 631,
+            "openAccessPdf": {
+                "url": "https://ojs.aaai.org/index.php/AAAI/article/download/16960/16767",
+                "status": "GOLD",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2007.03797, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1390612732",
+                    "name": "Yutao Huang"
+                },
+                {
+                    "authorId": "2074100",
+                    "name": "Lingyang Chu"
+                },
+                {
+                    "authorId": "2610961",
+                    "name": "Zirui Zhou"
+                },
+                {
+                    "authorId": "49680751",
+                    "name": "Lanjun Wang"
+                },
+                {
+                    "authorId": "1681457",
+                    "name": "Jiangchuan Liu"
+                },
+                {
+                    "authorId": "145525190",
+                    "name": "J. Pei"
+                },
+                {
+                    "authorId": "2144288655",
+                    "name": "Yong Zhang"
+                }
+            ],
+            "abstract": "Non-IID data present a tough challenge for federated learning. In this paper, we explore a novel idea of facilitating pairwise collaborations between clients with similar data. We propose FedAMP, a new method employing federated attentive message passing to facilitate similar clients to collaborate more. We establish the convergence of FedAMP for both convex and non-convex models, and propose a heuristic method to further improve the performance of FedAMP when clients adopt deep neural networks as personalized models. Our extensive experiments on benchmark data sets demonstrate the superior performance of the proposed methods.",
+            "score": 2
+        },
+        {
+            "id": "70f1b279f96a9ba8e15f599635ba0e3ec449ef5f",
+            "paperId": "70f1b279f96a9ba8e15f599635ba0e3ec449ef5f",
+            "title": "Personalized Federated Learning with Moreau Envelopes",
+            "year": 2020,
+            "citationCount": 1035,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.08848, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "35784038",
+                    "name": "Canh T. Dinh"
+                },
+                {
+                    "authorId": "145359941",
+                    "name": "N. H. Tran"
+                },
+                {
+                    "authorId": "2116225572",
+                    "name": "Tuan Dung Nguyen"
+                }
+            ],
+            "abstract": "Federated learning (FL) is a decentralized and privacy-preserving machine learning technique in which a group of clients collaborate with a server to learn a global model without sharing clients' data. One challenge associated with FL is statistical diversity among clients, which restricts the global model from delivering good performance on each client's task. To address this, we propose an algorithm for personalized FL (pFedMe) using Moreau envelopes as clients' regularized loss functions, which help decouple personalized model optimization from the global model learning in a bi-level problem stylized for personalized FL. Theoretically, we show that pFedMe's convergence rate is state-of-the-art: achieving quadratic speedup for strongly convex and sublinear speedup of order 2/3 for smooth nonconvex objectives. Experimentally, we verify that pFedMe excels at empirical performance compared with the vanilla FedAvg and Per-FedAvg, a meta-learning based personalized FL algorithm.",
+            "score": 2
+        },
+        {
+            "id": "f3872ef3743b744736da813249745545a9c1877f",
+            "paperId": "f3872ef3743b744736da813249745545a9c1877f",
+            "title": "Vertically Federated Graph Neural Network for Privacy-Preserving Node Classification",
+            "year": 2020,
+            "citationCount": 102,
+            "openAccessPdf": {
+                "url": "https://www.ijcai.org/proceedings/2022/0272.pdf",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2005.11903, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2145762399",
+                    "name": "Chaochao Chen"
+                },
+                {
+                    "authorId": "2151549863",
+                    "name": "Jun Zhou"
+                },
+                {
+                    "authorId": "11455278",
+                    "name": "Longfei Zheng"
+                },
+                {
+                    "authorId": "46477104",
+                    "name": "Huiwen Wu"
+                },
+                {
+                    "authorId": "145225199",
+                    "name": "Lingjuan Lyu"
+                },
+                {
+                    "authorId": "2144139161",
+                    "name": "Jia Wu"
+                },
+                {
+                    "authorId": "27055880",
+                    "name": "Bingzhe Wu"
+                },
+                {
+                    "authorId": "2738138",
+                    "name": "Ziqi Liu"
+                },
+                {
+                    "authorId": "50876633",
+                    "name": "L. xilinx Wang"
+                },
+                {
+                    "authorId": "1687974",
+                    "name": "Xiaolin Zheng"
+                }
+            ],
+            "abstract": "Recently, Graph Neural Network (GNN) has achieved remarkable progresses in various real-world tasks on graph data, consisting of node features and the adjacent information between different nodes. High-performance GNN models always depend on both rich features and complete edge information in graph. However, such information could possibly be isolated by different data holders in practice, which is the so-called data isolation problem. To solve this problem, in this paper, we propose VFGNN, a federated GNN learning paradigm for privacy-preserving node classification task under data vertically partitioned setting, which can be generalized to existing GNN models. Specifically, we split the computation graph into two parts. We leave the private data (i.e., features, edges, and labels) related computations on data holders, and delegate the rest of computations to a semi-honest server. We also propose to apply differential privacy to prevent potential information leakage from the server. We conduct experiments on three benchmarks and the results demonstrate the effectiveness of VFGNN.",
+            "score": 2
+        },
+        {
+            "id": "f7e7eb69db25df3e9efa1fc2cb3e2f2d6537580d",
+            "paperId": "f7e7eb69db25df3e9efa1fc2cb3e2f2d6537580d",
+            "title": "Personalized Federated Learning: A Meta-Learning Approach",
+            "year": 2020,
+            "citationCount": 583,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.07948, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "113441545",
+                    "name": "Alireza Fallah"
+                },
+                {
+                    "authorId": "2706423",
+                    "name": "Aryan Mokhtari"
+                },
+                {
+                    "authorId": "145744184",
+                    "name": "A. Ozdaglar"
+                }
+            ],
+            "abstract": "In Federated Learning, we aim to train models across multiple computing units (users), while users can only communicate with a common central server, without exchanging their data samples. This mechanism exploits the computational power of all users and allows users to obtain a richer model as their models are trained over a larger set of data points. However, this scheme only develops a common output for all the users, and, therefore, it does not adapt the model to each user. This is an important missing feature, especially given the heterogeneity of the underlying data distribution for various users. In this paper, we study a personalized variant of the federated learning in which our goal is to find an initial shared model that current or new users can easily adapt to their local dataset by performing one or a few steps of gradient descent with respect to their own data. This approach keeps all the benefits of the federated learning architecture, and, by structure, leads to a more personalized model for each user. We show this problem can be studied within the Model-Agnostic Meta-Learning (MAML) framework. Inspired by this connection, we study a personalized variant of the well-known Federated Averaging algorithm and evaluate its performance in terms of gradient norm for non-convex loss functions. Further, we characterize how this performance is affected by the closeness of underlying distributions of user data, measured in terms of distribution distances such as Total Variation and 1-Wasserstein metric.",
+            "score": 2
+        },
+        {
+            "id": "e566c649a5e410178e7fb413482ec14d10cbe2a3",
+            "paperId": "e566c649a5e410178e7fb413482ec14d10cbe2a3",
+            "title": "Personalized Federated Graph Learning on Non-IID Electronic Health Records",
+            "year": 2024,
+            "citationCount": 16,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNNLS.2024.3370297?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNNLS.2024.3370297, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces a novel personalized federated learning framework named PEARL, which is designed for disease prediction on Non-IID EHRs, and integrates self-supervised learning into a federated learning framework to train a global model for hierarchical disease prediction."
+            },
+            "authors": [
+                {
+                    "authorId": "144543518",
+                    "name": "Tao Tang"
+                },
+                {
+                    "authorId": "2279784647",
+                    "name": "Zhuoyang Han"
+                },
+                {
+                    "authorId": "2265524525",
+                    "name": "Zhen Cai"
+                },
+                {
+                    "authorId": "2116619083",
+                    "name": "Shuo Yu"
+                },
+                {
+                    "authorId": "2143069096",
+                    "name": "Xiaokang Zhou"
+                },
+                {
+                    "authorId": "3328545",
+                    "name": "Taiwo Oseni"
+                },
+                {
+                    "authorId": "2266425485",
+                    "name": "Sajal k. Das"
+                }
+            ],
+            "abstract": "Understanding the latent disease patterns embedded in electronic health records (EHRs) is crucial for making precise and proactive healthcare decisions. Federated graph learning-based methods are commonly employed to extract complex disease patterns from the distributed EHRs without sharing the client-side raw data. However, the intrinsic characteristics of the distributed EHRs are typically non-independent and identically distributed (Non-IID), significantly bringing challenges related to data imbalance and leading to a notable decrease in the effectiveness of making healthcare decisions derived from the global model. To address these challenges, we introduce a novel personalized federated learning framework named PEARL, which is designed for disease prediction on Non-IID EHRs. Specifically, PEARL incorporates disease diagnostic code attention and admission record attention to extract patient embeddings from all EHRs. Then, PEARL integrates self-supervised learning into a federated learning framework to train a global model for hierarchical disease prediction. To improve the performance of the client model, we further introduce a fine-tuning scheme to personalize the global model using local EHRs. During the global model updating process, a differential privacy (DP) scheme is implemented, providing a high-level privacy guarantee. Extensive experiments conducted on the real-world MIMIC-III dataset validate the effectiveness of PEARL, demonstrating competitive results when compared with baselines.",
+            "score": 2
+        },
+        {
+            "id": "fb393dbdeff065d4f724c09084ea2a1e28a93f24",
+            "paperId": "fb393dbdeff065d4f724c09084ea2a1e28a93f24",
+            "title": "Globally Consistent Federated Graph Autoencoder for Non-IID Graphs",
+            "year": 2023,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "https://www.ijcai.org/proceedings/2023/0419.pdf",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.24963/ijcai.2023/419?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.24963/ijcai.2023/419, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A globally consistent federated graph autoencoder (GCFGAE) to overcome the non-IID problem in unsupervised federatedgraph learning via three innovations, which achieves not only higher accuracy but also around 500 times lower communication overhead and 1000 times smaller space overhead than existing federated GNN models."
+            },
+            "authors": [
+                {
+                    "authorId": "2061501877",
+                    "name": "Kun Guo"
+                },
+                {
+                    "authorId": "2220275955",
+                    "name": "Yutong Fang"
+                },
+                {
+                    "authorId": "2111526781",
+                    "name": "Qingqing Huang"
+                },
+                {
+                    "authorId": "2117875364",
+                    "name": "Yuting Liang"
+                },
+                {
+                    "authorId": "31751182",
+                    "name": "Ziyao Zhang"
+                },
+                {
+                    "authorId": "2153233125",
+                    "name": "Wenyu He"
+                },
+                {
+                    "authorId": "2119061122",
+                    "name": "Liu Yang"
+                },
+                {
+                    "authorId": "2186559880",
+                    "name": "Kai Chen"
+                },
+                {
+                    "authorId": "2154487593",
+                    "name": "Ximeng Liu"
+                },
+                {
+                    "authorId": "2152760943",
+                    "name": "Wenzhong Guo"
+                }
+            ],
+            "abstract": "Graph neural networks (GNNs) have been applied successfully in many machine learning tasks due to their advantages in utilizing neighboring information. Recently, with the global enactment of privacy protection regulations, federated GNNs have gained increasing attention in academia and industry. However, the graphs owned by different participants could be non-independently-and-identically distributed (non-IID), leading to the deterioration of federated GNNs' accuracy. In this paper, we propose a globally consistent federated graph autoencoder (GCFGAE) to overcome the non-IID problem in unsupervised federated graph learning via three innovations. First, by integrating federated learning with split learning, we train a unique global model instead of FedAvg-styled global and local models, yielding results consistent with that of the centralized GAE. Second, we design a collaborative computation mechanism considering overlapping vertices to reduce communication overhead during forward propagation. Third, we develop a layer-wise and block-wise gradient computation strategy to reduce the space and communication complexity during backward propagation. Experiments on real-world datasets demonstrate that GCFGAE achieves not only higher accuracy but also around 500 times lower communication overhead and 1000 times smaller space overhead than existing federated GNN models.",
+            "score": 2
+        },
+        {
+            "id": "1d5be44f756a986193767b57d5462eb2f4ee942b",
+            "paperId": "1d5be44f756a986193767b57d5462eb2f4ee942b",
+            "title": "ASFGNN: Automated separated-federated graph neural network",
+            "year": 2020,
+            "citationCount": 77,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.03248, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "An Automated Separated-Federated Graph Neural Network (ASFGNN) learning paradigm is proposed, which decouples the training of GNN into two parts: the message passing part that is done by clients separately, and the loss computing part that was learnt by clients federally."
+            },
+            "authors": [
+                {
+                    "authorId": "11455278",
+                    "name": "Longfei Zheng"
+                },
+                {
+                    "authorId": "2151548940",
+                    "name": "Jun Zhou"
+                },
+                {
+                    "authorId": "2145762399",
+                    "name": "Chaochao Chen"
+                },
+                {
+                    "authorId": "27055880",
+                    "name": "Bingzhe Wu"
+                },
+                {
+                    "authorId": "50876633",
+                    "name": "L. xilinx Wang"
+                },
+                {
+                    "authorId": "2143372562",
+                    "name": "Benyu Zhang"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) have achieved remarkable performance by taking advantage of graph data. The success of GNN models always depends on rich features and adjacent relationships. However, in practice, such data are usually isolated by different data owners (clients) and thus are likely to be Non-Independent and Identically Distributed (Non-IID). Meanwhile, considering the limited network status of data owners, hyper-parameters optimization for collaborative learning approaches is time-consuming in data isolation scenarios. To address these problems, we propose an Automated Separated-Federated Graph Neural Network (ASFGNN) learning paradigm. ASFGNN consists of two main components, i.e., the training of GNN and the tuning of hyper-parameters. Specifically, to solve the data Non-IID problem, we first propose a separated-federated GNN learning model, which decouples the training of GNN into two parts: the message passing part that is done by clients separately, and the loss computing part that is learnt by clients federally. To handle the time-consuming parameter tuning problem, we leverage Bayesian optimization technique to automatically tune the hyper-parameters of all the clients. We conduct experiments on benchmark datasets and the results demonstrate that ASFGNN significantly outperforms the naive federated GNN, in terms of both accuracy and parameter-tuning efficiency.",
+            "score": 2
+        },
+        {
+            "id": "adcdc3a73ca193b77b0a238c695dfb63e2e38d88",
+            "paperId": "adcdc3a73ca193b77b0a238c695dfb63e2e38d88",
+            "title": "SpreadGNN: Decentralized Multi-Task Federated Learning for Graph Neural Networks on Molecular Data",
+            "year": 2022,
+            "citationCount": 41,
+            "openAccessPdf": {
+                "url": "https://ojs.aaai.org/index.php/AAAI/article/download/20643/20402",
+                "status": "GOLD",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1609/aaai.v36i6.20643?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1609/aaai.v36i6.20643, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes SpreadGNN, a novel multi-task federated training framework capable of operating in the presence of partial labels and absence of a central server for the first time in the literature."
+            },
+            "authors": [
+                {
+                    "authorId": "31927890",
+                    "name": "Chaoyang He"
+                },
+                {
+                    "authorId": "51219213",
+                    "name": "Emir Ceyani"
+                },
+                {
+                    "authorId": "1500527909",
+                    "name": "Keshav Balasubramanian"
+                },
+                {
+                    "authorId": "145599558",
+                    "name": "M. Annavaram"
+                },
+                {
+                    "authorId": "121011351",
+                    "name": "S. Avestimehr"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) are the first choice methods for graph machine learning problems thanks to their ability to learn state-of-the-art level representations from graph-structured data. However, centralizing a massive amount of real-world graph data for GNN training is prohibitive due to user-side privacy concerns, regulation restrictions, and commercial competition. Federated Learning is the de-facto standard for collaborative training of machine learning models over many distributed edge devices without the need for centralization. Nevertheless, training graph neural networks in a federated setting is vaguely defined and brings statistical and systems challenges. This work proposes SpreadGNN, a novel multi-task federated training framework capable of operating in the presence of partial labels and absence of a central server for the first time in the literature. We provide convergence guarantees and empirically demonstrate the efficacy of our framework on a variety of non-I.I.D. distributed graph-level molecular property prediction datasets with partial labels. Our results show that SpreadGNN outperforms GNN models trained over a central server-dependent federated learning system, even in constrained topologies.",
+            "score": 2
+        },
+        {
+            "id": "1b835344442d83db8b9a4d79df86f8c4ca0e065c",
+            "paperId": "1b835344442d83db8b9a4d79df86f8c4ca0e065c",
+            "title": "Federated Learning With Taskonomy for Non-IID Data",
+            "year": 2021,
+            "citationCount": 57,
+            "openAccessPdf": {
+                "url": "https://ieeexplore.ieee.org/ielx7/5962385/6104215/09739132.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2103.15947, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "FLT can flexibly handle a generic client relatedness graph, when there are no explicit clusters of clients, as well as efficiently decompose it into (disjoint) clusters for clustered federated learning."
+            },
+            "authors": [
+                {
+                    "authorId": "1423344663",
+                    "name": "H. Jamali-Rad"
+                },
+                {
+                    "authorId": "2468973",
+                    "name": "Mohammad Abdizadeh"
+                },
+                {
+                    "authorId": "2262082949",
+                    "name": "Anuj Singh"
+                }
+            ],
+            "abstract": "Classical federated learning approaches incur significant performance degradation in the presence of non-independent and identically distributed (non-IID) client data. A possible direction to address this issue is forming clusters of clients with roughly IID data. Most solutions following this direction are iterative and relatively slow, also prone to convergence issues in discovering underlying cluster formations. We introduce federated learning with taskonomy (FLT) that generalizes this direction by learning the task relatedness between clients for more efficient federated aggregation of heterogeneous data. In a one-off process, the server provides the clients with a pretrained (and fine-tunable) encoder to compress their data into a latent representation and transmit the signature of their data back to the server. The server then learns the task relatedness among clients via manifold learning and performs a generalization of federated averaging. FLT can flexibly handle a generic client relatedness graph, when there are no explicit clusters of clients, as well as efficiently decompose it into (disjoint) clusters for clustered federated learning. We demonstrate that FLT not only outperforms the existing state-of-the-art baselines in non-IID scenarios but also offers improved fairness across clients. Our codebase can be found at: https://github.com/hjraad/FLT/",
+            "score": 2
+        },
+        {
+            "id": "ac7030058931d2584fa9393ca9205d1c8f248d7b",
+            "paperId": "ac7030058931d2584fa9393ca9205d1c8f248d7b",
+            "title": "Towards Communication-Efficient Federated Graph Learning: An Adaptive Client Selection Perspective",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/IWQoS61813.2024.10682905?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/IWQoS61813.2024.10682905, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "An efficient FGL framework, named FedACS, which adaptively selects a subset of clients for model training, to alleviate communication overhead and non-IID issues simultaneously, and the global GNN model can learn significant hidden edges and the structure of graph data among selected clients, enhancing recommendation efficiency."
+            },
+            "authors": [
+                {
+                    "authorId": "2323429115",
+                    "name": "Xianjun Gao"
+                },
+                {
+                    "authorId": "46700208",
+                    "name": "Jianchun Liu"
+                },
+                {
+                    "authorId": "2155908613",
+                    "name": "Hong-Ze Xu"
+                },
+                {
+                    "authorId": "90484137",
+                    "name": "Qianpiao Ma"
+                },
+                {
+                    "authorId": "2153519138",
+                    "name": "Lun Wang"
+                }
+            ],
+            "abstract": "Federated graph learning (FGL) has been proposed to collaboratively train the increasing graph data with graph neural networks (GNNs) in a recommendation system, aggregating the features of graph nodes and edges among these nodes. Nevertheless, implementing an efficient recommendation system with FGL still faces two primary challenges, i.e., limited communication bandwidth and non-IID local graph data. Existing works typically reduce communication frequency or transmission amount, which may suffer significant performance degradation under non-IID settings. Furthermore, some researchers propose to share the underlying structure information among all clients, which brings massive communication cost. To this end, we propose an efficient FGL framework, named FedACS, which adaptively selects a subset of clients for model training, to alleviate communication overhead and non-IID issues simultaneously. In FedACS, the global GNN model can learn significant hidden edges and the structure of graph data among selected clients, enhancing recommendation efficiency. This capability distinguishes it from the traditional FL client selection methods. To optimize the client selection process, we introduce a multi-armed bandit (MAB) based algorithm to select participating clients according to the resource budgets and the training performance (i.e., RMSE) under different data distributions. Experimental results show that, given the same resource budget, FedACS achieves the RMSE improvement of 5.4% over the baselines. Besides, when achieving the same RMSE performance, FedACS saves up to approximately 70.7% communication cost, compared with the baselines.",
+            "score": 2
+        },
+        {
+            "id": "56ec820b057b6ec7ff02be922783d05b3e1f50e7",
+            "paperId": "56ec820b057b6ec7ff02be922783d05b3e1f50e7",
+            "title": "Efficient federated graph aggregation for privacy-preserving GNN-based session recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12222671, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper bridges the practical gaps between FL and GNN-based session recommendations for the first time by introducing a novel adaptive federated learning method named FedGA, which is beyond the reach of prior adaptive FL methods by incorporating Divergence Resistant Aggregation and Conditional Second-Moment Estimation."
+            },
+            "authors": [
+                {
+                    "authorId": "2369872168",
+                    "name": "Jing Lou"
+                },
+                {
+                    "authorId": "2369872182",
+                    "name": "Cheng Rong"
+                },
+                {
+                    "authorId": "2369936392",
+                    "name": "Hanshen Chen"
+                },
+                {
+                    "authorId": "2370732428",
+                    "name": "Daxue Liu"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNN) have attracted increasing attention due to their efficient performance in recommendation systems. However, applying GNNs in session-based recommendations with emerging federated learning (FL) for a privacy-preserving recommendation is challenging. Firstly, constructing a global graph in a centralized manner is forbidden due to the privacy-preserving constraints of FL. Secondly, local graphs in each device contain minimal information on the global graph, causing the inefficient merging of sub-graphs by aggregating local models. Thirdly, the session data in these separated devices are usually extraordinarily non-Independent and Identically Distributed (non-IID), which harms the model performance. In this paper, we bridge the practical gaps between FL and GNN-based session recommendations for the first time by introducing a novel adaptive federated learning method named Federated Graph Aggregation (FedGA). FedGA is beyond the reach of prior adaptive FL methods by incorporating Divergence Resistant Aggregation (DRA) and Conditional Second-Moment Estimation (C-SME), yielding an efficient aggregator where local models trained by the unseen local graph embedding can be efficiently merged. Thanks to the above-proposed strategies, FedGA optimizes models without being interfered with by the aggressive learning rates generated by existing adaptive methods under extreme non-IIDness. In addition, we perform the theoretical analysis of the proposed method, and the results demonstrate that our method achieves a similar rate of convergence as other adaptive FL methods. We validate our method on both open datasets and real-world production data. Results show that our method obtains state-of-the-art performance compared to existing adaptive FL methods while retaining the comparable performance of the centralized methods.",
+            "score": 2
+        },
+        {
+            "id": "0de881c893ca27a62726ed3c3f95f6bf074607eb",
+            "paperId": "0de881c893ca27a62726ed3c3f95f6bf074607eb",
+            "title": "Empowering Federated Graph Rationale Learning with Latent Environments",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3696410.3714929?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3696410.3714929, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The Environment-aware Data Augmentation (EaDA) method for Federated Graph Rationalization is proposed, which comprises two main components: the Environment-aware Rationale Extraction (ERE) module and the Local-Global Alignment (LGA) module."
+            },
+            "authors": [
+                {
+                    "authorId": "2118940856",
+                    "name": "Linan Yue"
+                },
+                {
+                    "authorId": "2243408560",
+                    "name": "Qi Liu"
+                },
+                {
+                    "authorId": "2356912922",
+                    "name": "Yawen Li"
+                },
+                {
+                    "authorId": "2242684882",
+                    "name": "Fangzhou Yao"
+                },
+                {
+                    "authorId": "8361099",
+                    "name": "Weibo Gao"
+                },
+                {
+                    "authorId": "2344034544",
+                    "name": "Junping Du"
+                }
+            ],
+            "abstract": "The success of Graph Neural Networks (GNNs) in graph classification has heightened interest in explainable GNNs, particularly through graph rationalization. This method aims to enhance GNNs explainability by identifying subgraph structures (i.e., rationales) that support model predictions. However, existing methods often rely on centralized datasets, posing challenges in scenarios where data privacy is crucial, such as in molecular property prediction. Federated Learning (FL) offers a solution by enabling collaborative model training without sharing raw data. In this context, Federated Graph Rationalization emerges as a promising research direction. However, in each client, the rationalization methods often rely on client-specific shortcuts to compose rationales and make task predictions. Data heterogeneity, characterized by non-IID data across clients, exacerbates this problem, leading to poor prediction performance. To address these challenges, we propose the Environment-aware Data Augmentation (EaDA) method for Federated Graph Rationalization. EaDA comprises two main components: the Environment-aware Rationale Extraction (ERE) module and the Local-Global Alignment (LGA) module. The ERE module employs prototype learning to infer and share abstract environment information across clients, which are then aggregated to form a global environment. This information is used to generate counterfactual samples for local clients, enhancing the robustness of task predictions. The LGA module uses contrastive learning methods to align local and global rationale representations, mitigating performance degradation due to data heterogeneity. Comprehensive experiments on benchmark datasets demonstrate the effectiveness of our approaches. Code is available at https://github.com/yuelinan/Codes-of-EaDA.",
+            "score": 2
+        },
+        {
+            "id": "aeef4d9ded9a979ef042c8e32ac024ea55a352f3",
+            "paperId": "aeef4d9ded9a979ef042c8e32ac024ea55a352f3",
+            "title": "Collaborative weighting in federated graph neural networks for disease classification with the human-in-the-loop",
+            "year": 2024,
+            "citationCount": 10,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.1038/s41598-024-72748-7",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC11410954, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel framework that integrates federated learning with Graph Neural Networks (GNNs) to classify diseases, incorporating Human-in-the-Loop methodologies is introduced, significantly contributing to the progression of personalized digital medicine in a responsible and transparent manner."
+            },
+            "authors": [
+                {
+                    "authorId": "2321704842",
+                    "name": "Christian Hausleitner"
+                },
+                {
+                    "authorId": "1491108643",
+                    "name": "Heimo Mueller"
+                },
+                {
+                    "authorId": "2320257086",
+                    "name": "Andreas Holzinger"
+                },
+                {
+                    "authorId": "2152300",
+                    "name": "B. Pfeifer"
+                }
+            ],
+            "abstract": "The authors introduce a novel framework that integrates federated learning with Graph Neural Networks (GNNs) to classify diseases, incorporating Human-in-the-Loop methodologies. This advanced framework innovatively employs collaborative voting mechanisms on subgraphs within a Protein-Protein Interaction (PPI) network, situated in a federated ensemble-based deep learning context. This methodological approach marks a significant stride in the development of explainable and privacy-aware Artificial Intelligence, significantly contributing to the progression of personalized digital medicine in a responsible and transparent manner.",
+            "score": 2
+        },
+        {
+            "id": "57829b4f7ddf3a7ca3b7a3c40d482b038a082e6e",
+            "paperId": "57829b4f7ddf3a7ca3b7a3c40d482b038a082e6e",
+            "title": "Graph Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.05636, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2283308587",
+                    "name": "Feng Xia"
+                },
+                {
+                    "authorId": "1726114642",
+                    "name": "Ciyuan Peng"
+                },
+                {
+                    "authorId": "2374313176",
+                    "name": "Jing Ren"
+                },
+                {
+                    "authorId": "2150707265",
+                    "name": "F. Febrinanto"
+                },
+                {
+                    "authorId": "2298756911",
+                    "name": "Renqiang Luo"
+                },
+                {
+                    "authorId": "2102095",
+                    "name": "Vidya Saikrishna"
+                },
+                {
+                    "authorId": "2116619083",
+                    "name": "Shuo Yu"
+                },
+                {
+                    "authorId": "2345144690",
+                    "name": "Xiangjie Kong"
+                }
+            ],
+            "abstract": "Graph learning has rapidly evolved into a critical subfield of machine learning and artificial intelligence (AI). Its development began with early graph-theoretic methods, gaining significant momentum with the advent of graph neural networks (GNNs). Over the past decade, progress in scalable architectures, dynamic graph modeling, multimodal learning, generative AI, explainable AI (XAI), and responsible AI has broadened the applicability of graph learning to various challenging environments. Graph learning is significant due to its ability to model complex, non-Euclidean relationships that traditional machine learning struggles to capture, thus better supporting real-world applications ranging from drug discovery and fraud detection to recommender systems and scientific reasoning. However, challenges like scalability, generalization, heterogeneity, interpretability, and trustworthiness must be addressed to unlock its full potential. This survey provides a comprehensive introduction to graph learning, focusing on key dimensions including scalable, temporal, multimodal, generative, explainable, and responsible graph learning. We review state-of-the-art techniques for efficiently handling large-scale graphs, capturing dynamic temporal dependencies, integrating heterogeneous data modalities, generating novel graph samples, and enhancing interpretability to foster trust and transparency. We also explore ethical considerations, such as privacy and fairness, to ensure responsible deployment of graph learning models. Additionally, we identify and discuss emerging topics, highlighting recent integration of graph learning and other AI paradigms and offering insights into future directions. This survey serves as a valuable resource for researchers and practitioners seeking to navigate the rapidly evolving landscape of graph learning.",
+            "score": 1
+        },
+        {
+            "id": "b926a6649906f207fd9c69ba65a4ee96300443a7",
+            "paperId": "b926a6649906f207fd9c69ba65a4ee96300443a7",
+            "title": "A Comprehensive Data-centric Overview of Federated Graph Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.16541, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2268502577",
+                    "name": "Zhengyu Wu"
+                },
+                {
+                    "authorId": "2268429288",
+                    "name": "Xunkai Li"
+                },
+                {
+                    "authorId": "2167187084",
+                    "name": "Yinlin Zhu"
+                },
+                {
+                    "authorId": "2356610159",
+                    "name": "Zekai Chen"
+                },
+                {
+                    "authorId": "2302862953",
+                    "name": "Guochen Yan"
+                },
+                {
+                    "authorId": "2374954895",
+                    "name": "Yanyu Yan"
+                },
+                {
+                    "authorId": "2359231417",
+                    "name": "Hao Zhang"
+                },
+                {
+                    "authorId": "2338828584",
+                    "name": "Yuming Ai"
+                },
+                {
+                    "authorId": "2373589452",
+                    "name": "Xinmo Jin"
+                },
+                {
+                    "authorId": "2312235766",
+                    "name": "Ronghua Li"
+                },
+                {
+                    "authorId": "2240263835",
+                    "name": "Guoren Wang"
+                }
+            ],
+            "abstract": "In the era of big data applications, Federated Graph Learning (FGL) has emerged as a prominent solution that reconcile the tradeoff between optimizing the collective intelligence between decentralized datasets holders and preserving sensitive information to maximum. Existing FGL surveys have contributed meaningfully but largely focus on integrating Federated Learning (FL) and Graph Machine Learning (GML), resulting in early stage taxonomies that emphasis on methodology and simulated scenarios. Notably, a data centric perspective, which systematically examines FGL methods through the lens of data properties and usage, remains unadapted to reorganize FGL research, yet it is critical to assess how FGL studies manage to tackle data centric constraints to enhance model performances. This survey propose a two-level data centric taxonomy: Data Characteristics, which categorizes studies based on the structural and distributional properties of datasets used in FGL, and Data Utilization, which analyzes the training procedures and techniques employed to overcome key data centric challenges. Each taxonomy level is defined by three orthogonal criteria, each representing a distinct data centric configuration. Beyond taxonomy, this survey examines FGL integration with Pretrained Large Models, showcases realistic applications, and highlights future direction aligned with emerging trends in GML.",
+            "score": 1
+        },
+        {
+            "id": "5d6cd47635ffe8f6bc7410268dea9978d992d275",
+            "paperId": "5d6cd47635ffe8f6bc7410268dea9978d992d275",
+            "title": "Enhancing Graph Neural Networks for Out-of-Distribution Graph Detection.",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNNLS.2025.3584090?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNNLS.2025.3584090, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2312874111",
+                    "name": "Ge Zhang"
+                },
+                {
+                    "authorId": "2371064930",
+                    "name": "Zhenyu Yang"
+                },
+                {
+                    "authorId": "2356900163",
+                    "name": "Jia Wu"
+                },
+                {
+                    "authorId": "2265271340",
+                    "name": "Pengfei Jiao"
+                },
+                {
+                    "authorId": "2118801701",
+                    "name": "Jian Yang"
+                }
+            ],
+            "abstract": "Graph neural networks (GNNs) have shown promise in graph classification tasks, but they struggle to identify out-of-distribution (OOD) graphs often encountered in real-world scenarios, posing a significant obstacle for their open-world deployment. Due to the unpredictable nature of the various distributions to which OOD graphs adhere, the challenge of OOD graph detection lies in enabling models to capture distribution differences between in-distribution (ID) and OOD graphs. Current methods often introduce a subset of OOD patterns, such as synthetic OOD graphs, to facilitate learning the discrimination between ID and OOD graphs. However, these OOD patterns may not sufficiently encapsulate the entire range of OOD graphs, leading to inadequate learning of the distribution differences between ID and OOD graphs. In this article, we propose a novel OOD graph detection algorithm, ODGNN. The ODGNN does not expose GNNs to any OOD patterns during model training, thus reducing bias toward specific types of OOD graph samples and enhancing OOD graph detection. The algorithm differentiates graphs by evaluating whether the input graphs conform to established ID graph class-conditioned distributions. Specifically, during model training, the ODGNN integrates a Gaussian encoder into GNNs to characterize ID graph classes using distinct class-conditioned distributions. During inference, OOD graphs are mapped to a representation space distant from ID graphs due to their divergence from any known class-conditioned distribution. Extensive experiments conducted on real-world datasets validate the effectiveness of the ODGNN in enhancing OOD detection performance across various GNN-based graph classification models. The ODGNN also demonstrates superior performance compared to state-of-the-art OOD graph detection competitors.",
+            "score": 1
+        },
+        {
+            "id": "d7f5d4238e00b9d93572767038b8b841c7b35e9e",
+            "paperId": "d7f5d4238e00b9d93572767038b8b841c7b35e9e",
+            "title": "Dataset2Graph: A GNN-based Methodology for AutoML for Clustering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3735654.3735947?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3735654.3735947, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2366113455",
+                    "name": "Emmanouil Dilmperis"
+                },
+                {
+                    "authorId": "2049028115",
+                    "name": "Yannis Poulakis"
+                },
+                {
+                    "authorId": "2365628623",
+                    "name": "Dimitris Petratos"
+                },
+                {
+                    "authorId": "2267797243",
+                    "name": "Christos Doulkeridis"
+                }
+            ],
+            "abstract": "In this paper, we propose Dataset2Graph, a novel methodology that targets the problem of automated machine learning (AutoML) for clustering. Dataset2Graph offers an end-to-end solution to meta-learning, by encoding any input dataset as a similarity graph which undergoes graph reduction techniques (sparsification and coarsening) to obtain a smaller and more concise graph representation of the dataset. Besides making the processing more efficient, the graph reduction aims to keep the most important structural properties of the dataset. Subsequently, a graph neural network (GNN) architecture is applied on the reduced graph, producing a graph embedding, which is propagated to a meta-learner that processes this embedding to predict the best clustering algorithm for the dataset at hand. Our empirical evaluation using a set of 50 collected datasets shows the effectiveness of Dataset2Graph for different GNN models under various settings and in comparison with the state-of-the-art.",
+            "score": 1
+        },
+        {
+            "id": "8ea585e2a562560f24b6617db229d9fdef1704c1",
+            "paperId": "8ea585e2a562560f24b6617db229d9fdef1704c1",
+            "title": "Graph Unlearning System with Subgraph De-Isolation Measures",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3750734?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3750734, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Yi Li"
+                },
+                {
+                    "authorId": "2320341",
+                    "name": "Debo Cheng"
+                },
+                {
+                    "authorId": "2352199038",
+                    "name": "Guixian Zhang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Chengyu Li"
+                },
+                {
+                    "authorId": "2185904929",
+                    "name": "Shichao Zhang"
+                }
+            ],
+            "abstract": "\n Graph unlearning system offers a promising solution for securely erasing specific data points and their associated influences from graph neural networks (GNNs). However, existing approaches often treat the problem as multiple isolated and disjoint sub-problems by partitioning graph data into isolated subgraphs, which overlooks the native graph structure information between subgraphs. This results in biased representations that hinder the accurate modeling of key connections and relationships within the data, leading to a notable reduction in model utility due to this loss of information. To address these issues, we propose an innovative framework called NIGEraser (\n \n N\n \n on-\n \n I\n \n solated\n \n G\n \n raph\n \n E\n \n raser) that decomposes the unlearning task into multiple non-isolated, intersecting sub-problems. Specifically, a novel non-isolated graph partitioning strategy is proposed for NIGEraser that mitigates isolation by replicating key nodes across multiple neighboring subgraphs, along with an attention-based sub-model aggregation technique in that global graph structure information is employed. By this design, a broader natural neighborhood is explored, capturing and effectively utilizing the critical graph structure features lost between subgraphs during partitioning, thereby reducing information loss during task decomposition and aggregation. Additionally, it is demonstrated that graph unlearning methods can overcome the limitations of traditional isolated partitioning strategies, providing an effective theoretical constraint on time consumption. Extensive experiments on four real-world graph-structured datasets show that NIGEraser consistently outperforms existing unlearning methods, offering superior model utility while ensuring efficient and deterministic data removal.\n",
+            "score": 1
+        },
+        {
+            "id": "272bf8aba2eeecb6f7d96a4ed6f5afb1e8425999",
+            "paperId": "272bf8aba2eeecb6f7d96a4ed6f5afb1e8425999",
+            "title": "Research on the application of graph data structure and graph neural network in node classification/clustering tasks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19527, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373624243",
+                    "name": "Yihan Wang"
+                },
+                {
+                    "authorId": "2373755981",
+                    "name": "Jianing Zhao"
+                }
+            ],
+            "abstract": "Graph-structured data are pervasive across domains including social networks, biological networks, and knowledge graphs. Due to their non-Euclidean nature, such data pose significant challenges to conventional machine learning methods. This study investigates graph data structures, classical graph algorithms, and Graph Neural Networks (GNNs), providing comprehensive theoretical analysis and comparative evaluation. Through comparative experiments, we quantitatively assess performance differences between traditional algorithms and GNNs in node classification and clustering tasks. Results show GNNs achieve substantial accuracy improvements of 43% to 70% over traditional methods. We further explore integration strategies between classical algorithms and GNN architectures, providing theoretical guidance for advancing graph representation learning research.",
+            "score": 1
+        },
+        {
+            "id": "917de3d6e654e79bf3fbaeecbc692402f4c5b518",
+            "paperId": "917de3d6e654e79bf3fbaeecbc692402f4c5b518",
+            "title": "SamGoG: A Sampling-Based Graph-of-Graphs Framework for Imbalanced Graph Classification",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13741, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2288047995",
+                    "name": "Shangyou Wang"
+                },
+                {
+                    "authorId": "2287966974",
+                    "name": "Zezhong Ding"
+                },
+                {
+                    "authorId": "2373598387",
+                    "name": "Xike Xie"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) have shown remarkable success in graph classification tasks by capturing both structural and feature-based representations. However, real-world graphs often exhibit two critical forms of imbalance: class imbalance and graph size imbalance. These imbalances can bias the learning process and degrade model performance. Existing methods typically address only one type of imbalance or incur high computational costs. In this work, we propose SamGoG, a sampling-based Graph-of-Graphs (GoG) learning framework that effectively mitigates both class and graph size imbalance. SamGoG constructs multiple GoGs through an efficient importance-based sampling mechanism and trains on them sequentially. This sampling mechanism incorporates the learnable pairwise similarity and adaptive GoG node degree to enhance edge homophily, thus improving downstream model quality. SamGoG can seamlessly integrate with various downstream GNNs, enabling their efficient adaptation for graph classification tasks. Extensive experiments on benchmark datasets demonstrate that SamGoG achieves state-of-the-art performance with up to a 15.66% accuracy improvement with 6.7$\\times$ training acceleration.",
+            "score": 1
+        },
+        {
+            "id": "dc4348580ce8166ee15487f30fb517fbe0c8a1f6",
+            "paperId": "dc4348580ce8166ee15487f30fb517fbe0c8a1f6",
+            "title": "Learning Federated Neural Graph Databases for Answering Complex Queries from Distributed Knowledge Graphs",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.14609, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2258708733",
+                    "name": "Qi Hu"
+                },
+                {
+                    "authorId": "1720821940",
+                    "name": "Weifeng Jiang"
+                },
+                {
+                    "authorId": "2260286743",
+                    "name": "Haoran Li"
+                },
+                {
+                    "authorId": "1390878075",
+                    "name": "Zihao Wang"
+                },
+                {
+                    "authorId": "145677395",
+                    "name": "Jiaxin Bai"
+                },
+                {
+                    "authorId": "67081502",
+                    "name": "Qianren Mao"
+                },
+                {
+                    "authorId": "2275626612",
+                    "name": "Yangqiu Song"
+                },
+                {
+                    "authorId": "2147260670",
+                    "name": "Lixin Fan"
+                },
+                {
+                    "authorId": "2260198301",
+                    "name": "Jianxin Li"
+                }
+            ],
+            "abstract": "The increasing demand for deep learning-based foundation models has highlighted the importance of efficient data retrieval mechanisms. Neural graph databases (NGDBs) offer a compelling solution, leveraging neural spaces to store and query graph-structured data, thereby enabling LLMs to access precise and contextually relevant information. However, current NGDBs are constrained to single-graph operation, limiting their capacity to reason across multiple, distributed graphs. Furthermore, the lack of support for multi-source graph data in existing NGDBs hinders their ability to capture the complexity and diversity of real-world data. In many applications, data is distributed across multiple sources, and the ability to reason across these sources is crucial for making informed decisions. This limitation is particularly problematic when dealing with sensitive graph data, as directly sharing and aggregating such data poses significant privacy risks. As a result, many applications that rely on NGDBs are forced to choose between compromising data privacy or sacrificing the ability to reason across multiple graphs. To address these limitations, we propose to learn Federated Neural Graph DataBase (FedNGDB), a pioneering systematic framework that empowers privacy-preserving reasoning over multi-source graph data. FedNGDB leverages federated learning to collaboratively learn graph representations across multiple sources, enriching relationships between entities, and improving the overall quality of graph data.",
+            "score": 1
+        },
+        {
+            "id": "433bf175951c965aeb4ffb266bea1fb0dd83973f",
+            "paperId": "433bf175951c965aeb4ffb266bea1fb0dd83973f",
+            "title": "Enabling the Application of Graph Neural Networks on Graphs With Unknown Connectivity",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1111/exsy.70088?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1111/exsy.70088, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2187587734",
+                    "name": "Jorge Garc\u00eda-Carrasco"
+                },
+                {
+                    "authorId": "2269295441",
+                    "name": "A. Mat\u00e9"
+                },
+                {
+                    "authorId": "2193508751",
+                    "name": "Juan Trujillo"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) have proven to be reliable methods for working with graph\u2010structured data. However, it is common to find graphs with partially or fully inaccessible connectivity patterns, hindering the direct application of GNNs to the task at hand. To tackle this problem, several Graph Structure Learning (GSL) methods have been proposed, with the objective of jointly optimizing both the graph structure and the GNN model by adding loss terms that enforce desired graph properties. These properties, such as sparseness and connectivity of similar nodes, can have a drastic impact on the performance of a GNN. However, current methods offer little control on the desired degree of sparseness, which may lead to non\u2010optimal connectivity and reduced efficiency. In this paper, we propose a new method called Adaptative Sparsification Graph Learning (ASGL), which enables fine\u2010grained, linear control over the total number of edges in the resulting learned graph via a novel perturbation\u2010based loss term. ASGL not only provides flexibility in sparsity control but also improves both accuracy and computational efficiency, outperforming state\u2010of\u2010the\u2010art methods in most benchmarks. We demonstrate its robustness through extensive experiments and highlight how adjusting sparsity enables optimizing the trade\u2010off between accuracy, complexity, and interpretability.",
+            "score": 1
+        },
+        {
+            "id": "21ee4de1fbc3089e0dc53e945038f203c89c3c48",
+            "paperId": "21ee4de1fbc3089e0dc53e945038f203c89c3c48",
+            "title": "Demystifying Distributed Training of Graph Neural Networks for Link Prediction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.20818, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2152662118",
+                    "name": "Xin Huang"
+                },
+                {
+                    "authorId": "2143578359",
+                    "name": "Chul-Ho Lee"
+                }
+            ],
+            "abstract": "Graph neural networks (GNNs) are powerful tools for solving graph-related problems. Distributed GNN frameworks and systems enhance the scalability of GNNs and accelerate model training, yet most are optimized for node classification. Their performance on link prediction remains underexplored. This paper demystifies distributed training of GNNs for link prediction by investigating the issue of performance degradation when each worker trains a GNN on its assigned partitioned subgraph without having access to the entire graph. We discover that the main sources of the issue come from not only the information loss caused by graph partitioning but also the ways of drawing negative samples during model training. While sharing the complete graph information with each worker resolves the issue and preserves link prediction accuracy, it incurs a high communication cost. We propose SpLPG, which effectively leverages graph sparsification to mitigate the issue of performance degradation at a reduced communication cost. Experiment results on several public real-world datasets demonstrate the effectiveness of SpLPG, which reduces the communication overhead by up to about 80% while mostly preserving link prediction accuracy.",
+            "score": 1
+        },
+        {
+            "id": "6cb269477ca898af431d83a048cb4d1fcf423d81",
+            "paperId": "6cb269477ca898af431d83a048cb4d1fcf423d81",
+            "title": "Tri-Learn Graph Fusion Network for Attributed Graph Clustering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13620, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2326731395",
+                    "name": "Binxiong Li"
+                },
+                {
+                    "authorId": "2367916144",
+                    "name": "Xu Xiang"
+                },
+                {
+                    "authorId": "2367944679",
+                    "name": "Xue Li"
+                },
+                {
+                    "authorId": "2368561277",
+                    "name": "Binyu Zhao"
+                },
+                {
+                    "authorId": "2368301229",
+                    "name": "Heyang Gao"
+                },
+                {
+                    "authorId": "2372242029",
+                    "name": "Qinyu Zhao"
+                }
+            ],
+            "abstract": "In recent years, models based on Graph Convolutional Networks (GCN) have made significant strides in the field of graph data analysis. However, challenges such as over-smoothing and over-compression remain when handling large-scale and complex graph datasets, leading to a decline in clustering quality. Although the Graph Transformer architecture has mitigated some of these issues, its performance is still limited when processing heterogeneous graph data. To address these challenges, this study proposes a novel deep clustering framework that comprising GCN, Autoencoder (AE), and Graph Transformer, termed the Tri-Learn Graph Fusion Network (Tri-GFN). This framework enhances the differentiation and consistency of global and local information through a unique tri-learning mechanism and feature fusion enhancement strategy. The framework integrates GCN, AE, and Graph Transformer modules. These components are meticulously fused by a triple-channel enhancement module, which maximizes the use of both node attributes and topological structures, ensuring robust clustering representation. The tri-learning mechanism allows mutual learning among these modules, while the feature fusion strategy enables the model to capture complex relationships, yielding highly discriminative representations for graph clustering. It surpasses many state-of-the-art methods, achieving an accuracy improvement of approximately 0.87% on the ACM dataset, 14.14 % on the Reuters dataset, and 7.58 % on the USPS dataset. Due to its outstanding performance on the Reuters dataset, Tri-GFN can be applied to automatic news classification, topic retrieval, and related fields.",
+            "score": 1
+        },
+        {
+            "id": "31949039a48961f939ac50440c3b4b8504fccceb",
+            "paperId": "31949039a48961f939ac50440c3b4b8504fccceb",
+            "title": "Ditto: Fair and Robust Federated Learning Through Personalization",
+            "year": 2020,
+            "citationCount": 953,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.04221, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2118910109",
+                    "name": "Tian Li"
+                },
+                {
+                    "authorId": "51305275",
+                    "name": "Shengyuan Hu"
+                },
+                {
+                    "authorId": "1791052",
+                    "name": "Ahmad Beirami"
+                },
+                {
+                    "authorId": "145260024",
+                    "name": "Virginia Smith"
+                }
+            ],
+            "abstract": "Fairness and robustness are two important concerns for federated learning systems. In this work, we identify that robustness to data and model poisoning attacks and fairness, measured as the uniformity of performance across devices, are competing constraints in statistically heterogeneous networks. To address these constraints, we propose employing a simple, general framework for personalized federated learning, Ditto, that can inherently provide fairness and robustness benefits, and develop a scalable solver for it. Theoretically, we analyze the ability of Ditto to achieve fairness and robustness simultaneously on a class of linear problems. Empirically, across a suite of federated datasets, we show that Ditto not only achieves competitive performance relative to recent personalization methods, but also enables more accurate, robust, and fair models relative to state-of-the-art fair or robust baselines.",
+            "score": 1
+        },
+        {
+            "id": "6f2b73bb90a55290ce053d5a6dd472697d82eeb7",
+            "paperId": "6f2b73bb90a55290ce053d5a6dd472697d82eeb7",
+            "title": "Co-Embedding Network Nodes and Hierarchical Labels with Taxonomy Based Generative Adversarial Networks",
+            "year": 2020,
+            "citationCount": 29,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICDM50108.2020.00081?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICDM50108.2020.00081, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1390553618",
+                    "name": "Carl Yang"
+                },
+                {
+                    "authorId": "47540245",
+                    "name": "Jieyu Zhang"
+                },
+                {
+                    "authorId": "153034701",
+                    "name": "Jiawei Han"
+                }
+            ],
+            "abstract": "Network embedding aims at transferring node proximity in networks into distributed vectors, which can be leveraged in various downstream applications. Recent research has shown that nodes in a network can often be organized in latent hierarchical structures, but without a particular underlying taxonomy, the learned node embedding is less useful nor interpretable. In this work, we aim to improve network embedding by modeling the conditional node proximity in networks indicated by node labels residing in real taxonomies. In the meantime, we also aim to model the hierarchical label proximity in the given taxonomies, which is too coarse by solely looking at the hierarchical topologies. To this end, we propose TaxoGAN to co-embed network nodes and hierarchical labels, through a hierarchical network generation process. Particularly, TaxoGAN models the child labels and network nodes of each parent label in an individual embedding space while learning to transfer network proximity among the spaces of hierarchical labels through stacked network generators and embedding encoders. To enable robust and efficient model inference, we further develop a hierarchical adversarial training process. Comprehensive experiments and case studies on four real-world datasets of networks with hierarchical labels demonstrate the utility of TaxoGAN in improving network embedding on traditional tasks of node classification and link prediction, as well as novel tasks like conditional proximity search and fine-grained taxonomy layout.",
+            "score": 1
+        },
+        {
+            "id": "eef59a967f7248cd8da06ef55a23ce426904cb8b",
+            "paperId": "eef59a967f7248cd8da06ef55a23ce426904cb8b",
+            "title": "FedE: Embedding Knowledge Graphs in Federated Setting",
+            "year": 2020,
+            "citationCount": 85,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2010.12882",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.12882, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "48622851",
+                    "name": "Mingyang Chen"
+                },
+                {
+                    "authorId": null,
+                    "name": "Wen Zhang"
+                },
+                {
+                    "authorId": "1617854355",
+                    "name": "Zonggang Yuan"
+                },
+                {
+                    "authorId": "2861442",
+                    "name": "Yantao Jia"
+                },
+                {
+                    "authorId": "1729778",
+                    "name": "Huajun Chen"
+                }
+            ],
+            "abstract": "Knowledge graphs (KGs) become widespread and many organizations construct as well as maintain their own knowledge graphs. Same as the data isolation which has been a long-standing problem, knowledge graph isolation is common in real knowledge graph applications. Since the incompleteness of knowledge graphs obtained by different owners, they need to take advantage of other knowledge graphs to complete their own knowledge graphs, without exposing knowledge graphs explicitly since the consideration of data privacy, commercial interests and so on. Knowledge graph embedding (KGE) methods represent components of a knowledge graph as vectors in continuous vector spaces (i.e., embeddings) and proved to be effective in conducting knowledge graph completion. However, current knowledge graph embedding methods focus on the scenario with only a single knowledge graph. To solve this problem, we introduce the federated setting for knowledge graphs and apply it in knowledge graph embedding. We propose a Federated Knowledge Graph Embedding framework, FedE, focusing on learning knowledge graph embeddings by aggregating locally-computed updates. In this framework, there is a client for each knowledge graph and a server for coordinating embedding aggregation. Specifically, entity embeddings are locally learned in clients and the server is responsible for aggregating entity embeddings from clients. Furthermore, a model fusion procedure blends the capability of learned embeddings based only on one client without using the federated setting and embeddings based on all the clients in the federated setting. Finally, we conduct extensive experiments on datasets derived from KGE benchmark datasets, and results show the effectiveness of our proposed FedE.",
+            "score": 1
+        },
+        {
+            "id": "3302081b8878de505b69900e22b8137c5d931be7",
+            "paperId": "3302081b8878de505b69900e22b8137c5d931be7",
+            "title": "TUDataset: A collection of benchmark datasets for learning with graphs",
+            "year": 2020,
+            "citationCount": 852,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2007.08663, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "143622465",
+                    "name": "Christopher Morris"
+                },
+                {
+                    "authorId": "1810077",
+                    "name": "Nils M. Kriege"
+                },
+                {
+                    "authorId": "67338758",
+                    "name": "Franka Bause"
+                },
+                {
+                    "authorId": "1746871",
+                    "name": "K. Kersting"
+                },
+                {
+                    "authorId": "1724469",
+                    "name": "Petra Mutzel"
+                },
+                {
+                    "authorId": "40059761",
+                    "name": "Marion Neumann"
+                }
+            ],
+            "abstract": "Recently, there has been an increasing interest in (supervised) learning with graph data, especially using graph neural networks. However, the development of meaningful benchmark datasets and standardized evaluation procedures is lagging, consequently hindering advancements in this area. To address this, we introduce the TUDataset for graph classification and regression. The collection consists of over 120 datasets of varying sizes from a wide range of applications. We provide Python-based data loaders, kernel and graph neural network baseline implementations, and evaluation tools. Here, we give an overview of the datasets, standardized evaluation procedures, and provide baseline experiments. All datasets are available at this http URL. The experiments are fully reproducible from the code available at this http URL.",
+            "score": 1
+        },
+        {
+            "id": "07912741c6c96e6ad5b2c2d6c6c3b2de5c8a271b",
+            "paperId": "07912741c6c96e6ad5b2c2d6c6c3b2de5c8a271b",
+            "title": "Advances and Open Problems in Federated Learning",
+            "year": 2019,
+            "citationCount": 6515,
+            "openAccessPdf": {
+                "url": "https://wrap.warwick.ac.uk/170168/1/WRAP-Advances-and-open-problems-in-federated-learning-Cormode-2022.pdf",
+                "status": "GREEN",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1912.04977, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3115341",
+                    "name": "P. Kairouz"
+                },
+                {
+                    "authorId": "145057514",
+                    "name": "H. B. McMahan"
+                },
+                {
+                    "authorId": "15519668",
+                    "name": "Brendan Avent"
+                },
+                {
+                    "authorId": "1702915",
+                    "name": "A. Bellet"
+                },
+                {
+                    "authorId": "1702172",
+                    "name": "M. Bennis"
+                },
+                {
+                    "authorId": "10754103",
+                    "name": "A. Bhagoji"
+                },
+                {
+                    "authorId": "2039588",
+                    "name": "Keith Bonawitz"
+                },
+                {
+                    "authorId": "143676545",
+                    "name": "Zachary B. Charles"
+                },
+                {
+                    "authorId": "1709589",
+                    "name": "Graham Cormode"
+                },
+                {
+                    "authorId": "49326047",
+                    "name": "Rachel Cummings"
+                },
+                {
+                    "authorId": "1410457573",
+                    "name": "Rafael G. L. D'Oliveira"
+                },
+                {
+                    "authorId": "40464010",
+                    "name": "S. E. Rouayheb"
+                },
+                {
+                    "authorId": "2116660698",
+                    "name": "David Evans"
+                },
+                {
+                    "authorId": "33685819",
+                    "name": "Josh Gardner"
+                },
+                {
+                    "authorId": "40449749",
+                    "name": "Zachary Garrett"
+                },
+                {
+                    "authorId": "145511365",
+                    "name": "Adri\u00e0 Gasc\u00f3n"
+                },
+                {
+                    "authorId": "2529354",
+                    "name": "Badih Ghazi"
+                },
+                {
+                    "authorId": "1974678",
+                    "name": "Phillip B. Gibbons"
+                },
+                {
+                    "authorId": "1708469",
+                    "name": "M. Gruteser"
+                },
+                {
+                    "authorId": "1753355",
+                    "name": "Za\u00efd Harchaoui"
+                },
+                {
+                    "authorId": "31927890",
+                    "name": "Chaoyang He"
+                },
+                {
+                    "authorId": "51222147",
+                    "name": "Lie He"
+                },
+                {
+                    "authorId": "3382735",
+                    "name": "Zhouyuan Huo"
+                },
+                {
+                    "authorId": "2044655623",
+                    "name": "Ben Hutchinson"
+                },
+                {
+                    "authorId": "39756252",
+                    "name": "Justin Hsu"
+                },
+                {
+                    "authorId": "2456863",
+                    "name": "Martin Jaggi"
+                },
+                {
+                    "authorId": "47197693",
+                    "name": "T. Javidi"
+                },
+                {
+                    "authorId": "144225970",
+                    "name": "Gauri Joshi"
+                },
+                {
+                    "authorId": "10398264",
+                    "name": "M. Khodak"
+                },
+                {
+                    "authorId": "32139366",
+                    "name": "Jakub Konecn\u00fd"
+                },
+                {
+                    "authorId": "2823893",
+                    "name": "A. Korolova"
+                },
+                {
+                    "authorId": "3018662",
+                    "name": "F. Koushanfar"
+                },
+                {
+                    "authorId": "143812875",
+                    "name": "Oluwasanmi Koyejo"
+                },
+                {
+                    "authorId": "1792616",
+                    "name": "Tancr\u00e8de Lepoint"
+                },
+                {
+                    "authorId": "1614034792",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "143615345",
+                    "name": "Prateek Mittal"
+                },
+                {
+                    "authorId": "81080659",
+                    "name": "M. Mohri"
+                },
+                {
+                    "authorId": "1718786",
+                    "name": "R. Nock"
+                },
+                {
+                    "authorId": "2064241030",
+                    "name": "A. \u00d6zg\u00fcr"
+                },
+                {
+                    "authorId": "1801719",
+                    "name": "R. Pagh"
+                },
+                {
+                    "authorId": "1702744",
+                    "name": "Mariana Raykova"
+                },
+                {
+                    "authorId": "2072589474",
+                    "name": "Hang Qi"
+                },
+                {
+                    "authorId": "1878835",
+                    "name": "Daniel Ramage"
+                },
+                {
+                    "authorId": "145711633",
+                    "name": "R. Raskar"
+                },
+                {
+                    "authorId": "143711382",
+                    "name": "D. Song"
+                },
+                {
+                    "authorId": "2118727912",
+                    "name": "Weikang Song"
+                },
+                {
+                    "authorId": "2127057",
+                    "name": "Sebastian U. Stich"
+                },
+                {
+                    "authorId": "8908922",
+                    "name": "Ziteng Sun"
+                },
+                {
+                    "authorId": "9486035",
+                    "name": "A. Suresh"
+                },
+                {
+                    "authorId": "2444919",
+                    "name": "Florian Tram\u00e8r"
+                },
+                {
+                    "authorId": "2927870",
+                    "name": "Praneeth Vepakomma"
+                },
+                {
+                    "authorId": "30880777",
+                    "name": "Jianyu Wang"
+                },
+                {
+                    "authorId": "2291135512",
+                    "name": "Li Xiong"
+                },
+                {
+                    "authorId": "144897102",
+                    "name": "Zheng Xu"
+                },
+                {
+                    "authorId": "153096457",
+                    "name": "Qiang Yang"
+                },
+                {
+                    "authorId": "1815972",
+                    "name": "Felix X. Yu"
+                },
+                {
+                    "authorId": "2110984588",
+                    "name": "Han Yu"
+                },
+                {
+                    "authorId": "49113001",
+                    "name": "Sen Zhao"
+                }
+            ],
+            "abstract": "Federated learning (FL) is a machine learning setting where many clients (e.g. mobile devices or whole organizations) collaboratively train a model under the orchestration of a central server (e.g. service provider), while keeping the training data decentralized. FL embodies the principles of focused data collection and minimization, and can mitigate many of the systemic privacy risks and costs resulting from traditional, centralized machine learning and data science approaches. Motivated by the explosive growth in FL research, this paper discusses recent advances and presents an extensive collection of open problems and challenges.",
+            "score": 1
+        },
+        {
+            "id": "1db9e4e420f940f821ab5974a3c96614304c5995",
+            "paperId": "1db9e4e420f940f821ab5974a3c96614304c5995",
+            "title": "Variance Reduced Local SGD with Lower Communication Complexity",
+            "year": 2019,
+            "citationCount": 154,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1912.12844, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "152922681",
+                    "name": "Xian-Feng Liang"
+                },
+                {
+                    "authorId": "24984914",
+                    "name": "Shuheng Shen"
+                },
+                {
+                    "authorId": "2108372402",
+                    "name": "Jingchang Liu"
+                },
+                {
+                    "authorId": "2069543597",
+                    "name": "Zhen Pan"
+                },
+                {
+                    "authorId": "2227868312",
+                    "name": "Enhong Chen"
+                },
+                {
+                    "authorId": "2117233384",
+                    "name": "Yifei Cheng"
+                }
+            ],
+            "abstract": "To accelerate the training of machine learning models, distributed stochastic gradient descent (SGD) and its variants have been widely adopted, which apply multiple workers in parallel to speed up training. Among them, Local SGD has gained much attention due to its lower communication cost. Nevertheless, when the data distribution on workers is non-identical, Local SGD requires $O(T^{\\frac{3}{4}} N^{\\frac{3}{4}})$ communications to maintain its \\emph{linear iteration speedup} property, where $T$ is the total number of iterations and $N$ is the number of workers. In this paper, we propose Variance Reduced Local SGD (VRL-SGD) to further reduce the communication complexity. Benefiting from eliminating the dependency on the gradient variance among workers, we theoretically prove that VRL-SGD achieves a \\emph{linear iteration speedup} with a lower communication complexity $O(T^{\\frac{1}{2}} N^{\\frac{3}{2}})$ even if workers access non-identical datasets. We conduct experiments on three machine learning tasks, and the experimental results demonstrate that VRL-SGD performs impressively better than Local SGD when the data among workers are quite diverse.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.103653
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8d1fbde83749f61e1a385f2c380ea134d65b52f2</p>
+<hr>
+<section><h2>Title</h2>
+<p>Dynamic Exemplar Composition for Transformer-based Incremental Object Detection</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Incremental object detection suffers from catastrophic forgetting when learning new classes, especially when exemplars from previous classes are limited or unavailable. This problem is particularly challenging as it requires maintaining performance on previously learned classes while adapting to new ones, which is crucial for real-world applications where continuous learning is necessary.</p>
+<h3>Motivation</h3>
+<p>Current approaches often rely on fixed exemplar sets or knowledge distillation, which can be inefficient or insufficient for preserving old knowledge. These methods struggle to capture the essence of old classes while being compatible with new class learning. Inspired by how humans compose and synthesize memories, we propose a method to dynamically generate and refine exemplars that capture the essence of old classes while being compatible with new class learning. This approach leverages the transformer architecture's ability to process and synthesize information, potentially offering a more flexible and effective solution to the incremental learning problem in object detection.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Dynamic Exemplar Composition (DEC), a novel approach that leverages the transformer architecture to create synthetic exemplars. DEC consists of three key components: 1) A memory bank that stores compressed representations of old class features. 2) An exemplar generator transformer that takes the memory bank and new class data as input to synthesize diverse and informative exemplars. 3) An adaptive refinement module that iteratively updates the synthetic exemplars based on their effectiveness in preserving old knowledge and facilitating new class learning. The exemplar generator uses cross-attention mechanisms to fuse old and new class information, creating exemplars that maintain old class characteristics while being compatible with the evolving feature space. The adaptive refinement module evaluates exemplar quality using a meta-learning approach, adjusting exemplar composition to maximize performance on both old and new classes.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Use the COCO dataset for incremental object detection. Split the dataset into initial classes and incremental classes. Prepare the data loaders for both initial and incremental learning phases.</p><p><strong>Step 2: Baseline Model Implementation</strong></p><p>Implement a transformer-based object detection model (e.g., DETR) as the base architecture. Train this model on the initial set of classes.</p><p><strong>Step 3: Memory Bank Implementation</strong></p><p>Develop a memory bank module to store compressed representations of old class features. Use a dimensionality reduction technique (e.g., PCA) to compress features extracted from the base model.</p><p><strong>Step 4: Exemplar Generator Transformer</strong></p><p>Implement the exemplar generator transformer. This should take inputs from the memory bank and new class data. Use cross-attention mechanisms to fuse old and new class information.</p><p><strong>Step 5: Adaptive Refinement Module</strong></p><p>Implement the adaptive refinement module. This should evaluate exemplar quality and adjust exemplar composition using meta-learning techniques.</p><p><strong>Step 6: Training Loop</strong></p><p>Develop the incremental learning training loop. This should include: a) Generating synthetic exemplars using the exemplar generator, b) Training on new classes while using synthetic exemplars, c) Updating the memory bank with new class information, d) Refining exemplars using the adaptive refinement module.</p><p><strong>Step 7: Evaluation</strong></p><p>Implement evaluation metrics including mean Average Precision (mAP) across all classes, as well as forgetting and intransigence metrics. Evaluate the model after each incremental learning phase.</p><p><strong>Step 8: Baseline Comparisons</strong></p><p>Implement baseline methods including fixed exemplar replay and knowledge distillation approaches. Compare DEC against these baselines.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Conduct ablation studies to analyze the impact of each component in the DEC framework. This includes testing without the adaptive refinement module and using fixed exemplars instead of generated ones.</p><p><strong>Step 10: Analysis</strong></p><p>Analyze the quality and diversity of generated exemplars. Visualize attention maps from the exemplar generator to understand how it fuses old and new class information.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Detect objects in the image, focusing on the classes: person, car, dog.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Detected objects: 2 persons, 1 car</p><p><strong>Proposed Prompt Input</strong></p><p>Detect objects in the image, including newly learned classes: person, car, dog, bicycle, traffic light.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>Detected objects: 2 persons, 1 car, 1 bicycle, 2 traffic lights</p><p><strong>Explanation</strong></p><p>The baseline method fails to detect the newly learned classes (bicycle and traffic light), showing catastrophic forgetting. The proposed DEC method successfully detects both old and new classes, demonstrating its ability to maintain performance on previously learned classes while adapting to new ones.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed DEC method doesn't meet the success criteria, we can pivot the project in several directions. First, we can conduct a detailed analysis of the generated exemplars to understand why they're not effectively preserving old knowledge. This could involve visualizing the exemplars, comparing them to real data, and analyzing their feature distributions. We could also investigate the attention patterns in the exemplar generator to see if it's focusing on the right information. Another direction is to explore different architectures for the exemplar generator, such as using GANs or variational autoencoders instead of transformers. We could also investigate the impact of different memory bank structures, such as using prototype learning or episodic memory techniques. If these approaches don't yield improvements, we could turn the project into an analysis paper, offering insights into the challenges of incremental learning in object detection and the limitations of exemplar-based approaches. This could include a comprehensive comparison of different exemplar generation and selection strategies, providing valuable guidance for future research in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/e866b9e877712008edb4ebaaad10c9d0b3621800" target="_blank">Revisiting Continual Semantic Segmentation with Pre-trained Vision Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4857062751b922c7ce3d166dd1c54d627b2056b8" target="_blank">DuET: Dual Incremental Object Detection via Exemplar-Free Task Arithmetic</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c194730a4fc21650d252a7ebf4d37e203f0c25ca" target="_blank">Alleviating Catastrophic Forgetting of Incremental Object Detection via Within-Class and Between-Class Knowledge Distillation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/cbe2300f89abdc49fda49ea5047d0e337e4347ed" target="_blank">Pseudo Object Replay and Mining for Incremental Object Detection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/078ad37a11445c44b6a68f3b514cefb29ee60cf4" target="_blank">Overcoming Catastrophic Forgetting in Incremental Object Detection via Elastic Response Distillation</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8d1fbde83749f61e1a385f2c380ea134d65b52f2" target="_blank">Continual Detection Transformer for Incremental Object Detection</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/591b4f4b4f2b000b119f1cd2db265abb9e4e4b04" target="_blank">Incremental Few-Shot Object Detection via Simple Fine-Tuning Approach</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/597159544be7ca16821760cc9332880a1cb5b42f" target="_blank">EGOR: Efficient Generated Objects Replay for incremental object detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4af5ac57d6df79dd457c80d90bac170906b5185b" target="_blank">Bridge Past and Future: Overcoming Information Asymmetry in Incremental Object Detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4f78d2ef7f18907c04c7ab77b88172784e342f40" target="_blank">Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

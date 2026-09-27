@@ -1,0 +1,55 @@
+[
+    {
+        "paperId": "3bfb5f836d944414c171f8f843eaf90cf5604243",
+        "pmid": "2002.08676",
+        "title": "Learning with Differentiable Perturbed Optimizers",
+        "abstract": "Machine learning pipelines often rely on optimization procedures to make discrete decisions (e.g., sorting, picking closest neighbors, or shortest paths). Although these discrete decisions are easily computed, they break the back-propagation of computational graphs. In order to expand the scope of learning problems that can be solved in an end-to-end fashion, we propose a systematic method to transform optimizers into operations that are differentiable and never locally constant. Our approach relies on stochastically perturbed optimizers, and can be used readily together with existing solvers. Their derivatives can be evaluated efficiently, and smoothness tuned via the chosen noise amplitude. We also show how this framework can be connected to a family of losses developed in structured prediction, and give theoretical guarantees for their use in learning tasks. We demonstrate experimentally the performance of our approach on various tasks.",
+        "year": 2020,
+        "citation_count": 109
+    },
+    {
+        "paperId": "0b02da8ba8c024850d4ee3ca3d1b0bddf6bf54f1",
+        "title": "Gradient Estimation with Stochastic Softmax Tricks",
+        "abstract": "The Gumbel-Max trick is the basis of many relaxed gradient estimators. These estimators are easy to implement and low variance, but the goal of scaling them comprehensively to large combinatorial distributions is still outstanding. Working within the perturbation model framework, we introduce stochastic softmax tricks, which generalize the Gumbel-Softmax trick to combinatorial spaces. Our framework is a unified perspective on existing relaxed estimators for perturbation models, and it contains many novel relaxations. We design structured relaxations for subset selection, spanning trees, arborescences, and others. When compared to less structured baselines, we find that stochastic softmax tricks can be used to train latent variable models that perform better and discover more latent structure.",
+        "year": 2020,
+        "citation_count": 88,
+        "relevance": 2,
+        "explanation": "This paper introduces stochastic softmax tricks for gradient estimation in combinatorial spaces, which aligns with the source paper's focus on differentiable perturbations. The stochastic approach to gradient estimation suggests a conceptual link to the source paper."
+    },
+    {
+        "paperId": "e61db54fe46bd13e1ef7a6ce293f4db202e3317e",
+        "title": "Rao-Blackwellizing the Straight-Through Gumbel-Softmax Gradient Estimator",
+        "abstract": "Gradient estimation in models with discrete latent variables is a challenging problem, because the simplest unbiased estimators tend to have high variance. To counteract this, modern estimators either introduce bias, rely on multiple function evaluations, or use learned, input-dependent baselines. Thus, there is a need for estimators that require minimal tuning, are computationally cheap, and have low mean squared error. In this paper, we show that the variance of the straight-through variant of the popular Gumbel-Softmax estimator can be reduced through Rao-Blackwellization without increasing the number of function evaluations. This provably reduces the mean squared error. We empirically demonstrate that this leads to variance reduction, faster convergence, and generally improved performance in two unsupervised latent variable models.",
+        "year": 2020,
+        "citation_count": 42,
+        "relevance": 2,
+        "explanation": "This paper directly builds on the Gumbel-Softmax estimator, which is a key component of the source paper. It proposes a method to reduce variance through Rao-Blackwellization, which is a direct extension of the ideas in the source paper."
+    },
+    {
+        "paperId": "928b7aa25c4de5f697a576eff29cf45e14094a40",
+        "title": "Coupled Gradient Estimators for Discrete Latent Variables",
+        "abstract": "Training models with discrete latent variables is challenging due to the high variance of unbiased gradient estimators. While low-variance reparameterization gradients of a continuous relaxation can provide an effective solution, a continuous relaxation is not always available or tractable. Dong et al. (2020) and Yin et al. (2020) introduced a performant estimator that does not rely on continuous relaxations; however, it is limited to binary random variables. We introduce a novel derivation of their estimator based on importance sampling and statistical couplings, which we extend to the categorical setting. Motivated by the construction of a stick-breaking coupling, we introduce gradient estimators based on reparameterizing categorical variables as sequences of binary variables and Rao-Blackwellization. In systematic experiments, we show that our proposed categorical gradient estimators provide state-of-the-art performance, whereas even with additional Rao-Blackwellization, previous estimators (Yin et al., 2019) underperform a simpler REINFORCE with a leave-one-out-baseline estimator (Kool et al., 2019).",
+        "year": 2021,
+        "citation_count": 13,
+        "relevance": 2,
+        "explanation": "This paper introduces gradient estimators for discrete latent variables and incorporates Rao-Blackwellization, directly building on the concepts discussed in the source paper, making it highly relevant."
+    },
+    {
+        "paperId": "64c36adaeb803ff1d49771ed6a7ae7271e17b35d",
+        "title": "Training Discrete Deep Generative Models via Gapped Straight-Through Estimator",
+        "abstract": "While deep generative models have succeeded in image processing, natural language processing, and reinforcement learning, training that involves discrete random variables remains challenging due to the high variance of its gradient estimation process. Monte Carlo is a common solution used in most variance reduction approaches. However, this involves time-consuming resampling and multiple function evaluations. We propose a Gapped Straight-Through (GST) estimator to reduce the variance without incurring resampling overhead. This estimator is inspired by the essential properties of Straight-Through Gumbel-Softmax. We determine these properties and show via an ablation study that they are essential. Experiments demonstrate that the proposed GST estimator enjoys better performance compared to strong baselines on two discrete deep generative modeling tasks, MNIST-VAE and ListOps.",
+        "year": 2022,
+        "citation_count": 8,
+        "relevance": 2,
+        "explanation": "This paper addresses the challenge of training deep generative models with discrete random variables, similar to the source paper's focus on discrete latent variables. It proposes the Gapped Straight-Through (GST) estimator, which is inspired by the Straight-Through Gumbel-Softmax. The paper is partially dependent on the findings of the source paper, as it deals with variance reduction techniques for discrete variables, a key aspect of the source paper."
+    },
+    {
+        "paperId": "8f92edfc54c2292bd86169190447db86dea3c053",
+        "title": "Revisiting the Gumbel-Softmax in MADDPG",
+        "abstract": "MADDPG is an algorithm in multi-agent reinforcement learning (MARL) that extends the popular single-agent method, DDPG, to multi-agent scenarios. Importantly, DDPG is an algorithm designed for continuous action spaces, where the gradient of the state-action value function exists. For this algorithm to work in discrete action spaces, discrete gradient estimation must be performed. For MADDPG, the Gumbel-Softmax (GS) estimator is used -- a reparameterisation which relaxes a discrete distribution into a similar continuous one. This method, however, is statistically biased, and a recent MARL benchmarking paper suggests that this bias makes MADDPG perform poorly in grid-world situations, where the action space is discrete. Fortunately, many alternatives to the GS exist, boasting a wide range of properties. This paper explores several of these alternatives and integrates them into MADDPG for discrete grid-world scenarios. The corresponding impact on various performance metrics is then measured and analysed. It is found that one of the proposed estimators performs significantly better than the original GS in several tasks, achieving up to 55% higher returns, along with faster convergence.",
+        "year": 2023,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper discusses the Gumbel-Softmax estimator, which is a key component in the source paper's GST estimator. The exploration of alternatives to Gumbel-Softmax for discrete action spaces in MADDPG suggests a partial dependency on the source paper's findings regarding discrete gradient estimation methods."
+    }
+]

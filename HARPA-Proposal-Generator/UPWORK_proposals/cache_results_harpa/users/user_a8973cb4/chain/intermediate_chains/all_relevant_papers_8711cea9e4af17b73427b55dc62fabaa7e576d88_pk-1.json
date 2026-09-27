@@ -1,0 +1,29 @@
+[
+    {
+        "paperId": "49cda3055270a6f7296b128b0969a2739f05bc8f",
+        "title": "Tackling the Local Bias in Federated Graph Learning",
+        "abstract": "Federated graph learning (FGL) has become an important research topic in response to the increasing scale and the distributed nature of graph-structured data in the real world. In FGL, a global graph is distributed across different clients, where each client holds a subgraph. Existing FGL methods often fail to effectively utilize cross-client edges, losing structural information during the training; additionally, local graphs often exhibit significant distribution divergence. These two issues make local models in FGL less desirable than in centralized graph learning, namely the local bias problem in this paper. To solve this problem, we propose a novel FGL framework to make the local models similar to the model trained in a centralized setting. Specifically, we design a distributed learning scheme, fully leveraging cross-client edges to aggregate information from other clients. In addition, we propose a label-guided sampling approach to alleviate the imbalanced local data and meanwhile, distinctly reduce the training overhead. Extensive experiments demonstrate that local bias can compromise the model performance and slow down the convergence during training. Experimental results also verify that our framework successfully mitigates local bias, achieving better performance than other baselines with lower time and memory overhead.",
+        "year": 2021,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper addresses issues in federated graph learning, specifically local bias, which is closely related to the source paper's focus on federated graph classification over non-IID graphs. It builds on the federated learning framework and proposes solutions to improve model performance, making it partially dependent on the source paper's findings."
+    },
+    {
+        "paperId": "86ad9d1dd6626921297a8456b048f4bccafe967c",
+        "title": "FedGraphNN: A Federated Learning System and Benchmark for Graph Neural Networks",
+        "abstract": null,
+        "year": 2021,
+        "citation_count": 176,
+        "relevance": 2,
+        "explanation": "This paper introduces a federated learning system for GNNs, which is directly relevant to the source paper's focus on federated graph classification. It provides a platform for research in federated GNNs, addressing challenges similar to those discussed in the source paper."
+    },
+    {
+        "paperId": "6a2cde371246ed0a6f87bd2fd1bf6c32971120e9",
+        "title": "Subgraph Federated Learning with Missing Neighbor Generation",
+        "abstract": "Graphs have been widely used in data mining and machine learning due to their unique representation of real-world objects and their interactions. As graphs are getting bigger and bigger nowadays, it is common to see their subgraphs separately collected and stored in multiple local systems. Therefore, it is natural to consider the subgraph federated learning setting, where each local system holds a small subgraph that may be biased from the distribution of the whole graph. Hence, the subgraph federated learning aims to collaboratively train a powerful and generalizable graph mining model without directly sharing their graph data. In this work, towards the novel yet realistic setting of subgraph federated learning, we propose two major techniques: (1) FedSage, which trains a GraphSage model based on FedAvg to integrate node features, link structures, and task labels on multiple local subgraphs; (2) FedSage+, which trains a missing neighbor generator along FedSage to deal with missing links across local subgraphs. Empirical results on four real-world graph datasets with synthesized subgraph federated learning settings demonstrate the effectiveness and efficiency of our proposed techniques. At the same time, consistent theoretical implications are made towards their generalization ability on the global graphs.",
+        "year": 2021,
+        "citation_count": 181,
+        "relevance": 1,
+        "explanation": "This paper explores subgraph federated learning, which is related to the source paper's topic of federated learning for graph classification. It proposes techniques to handle missing links in subgraphs, which is a specific aspect of the broader federated learning framework discussed in the source paper."
+    }
+]

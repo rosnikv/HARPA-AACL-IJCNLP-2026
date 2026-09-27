@@ -1,0 +1,960 @@
+[
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. LLM Factoscope: Uncovering LLMs' Factual Discernment through Inner States Analysis": {
+                    "explanation": "This paper introduces a novel approach to factual detection in LLMs by analyzing their inner states, which is a different methodology from the source paper's sampling-based approach. While both papers address the issue of factuality in LLMs, the methods are distinct, making this paper's hypothesis independent of the source paper.",
+                    "relevance": 0
+                },
+                "2. Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs": {
+                    "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs using NER and ER models, which is a different approach from the zero-resource method proposed in the source paper. While both papers aim to address hallucinations, the methodologies do not rely on each other.",
+                    "relevance": 0
+                },
+                "3. From Google Gemini to OpenAI Q* (Q-Star): A Survey of Reshaping the Generative Artificial Intelligence (AI) Research Landscape": {
+                    "explanation": "This is a survey paper that reviews the landscape of generative AI, including LLMs, without proposing novel hypotheses or findings directly related to the source paper's focus on hallucination detection.",
+                    "relevance": 0
+                },
+                "4. Let AI Entertain You: Increasing User Engagement with Generative AI and Rejection Sampling": {
+                    "explanation": "This paper focuses on increasing user engagement with generative AI through rejection sampling, which is unrelated to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 0
+                },
+                "5. HALO: an ontology for representing and categorizing hallucinations in large language models": {
+                    "explanation": "This paper presents an ontology for categorizing hallucinations in LLMs, which complements the source paper's focus on detecting hallucinations. However, it does not depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. Building Trustworthy NeuroSymbolic AI Systems: Consistency, Reliability, Explainability, and Safety": {
+                    "explanation": "This paper discusses building trustworthy AI systems using a NeuroSymbolic approach, which is not directly related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 0
+                },
+                "7. Agent-OM: Leveraging LLM Agents for Ontology Matching": {
+                    "explanation": "This paper discusses ontology matching using LLM agents, which is unrelated to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 0
+                },
+                "8. OPERA: Alleviating Hallucination in Multi-Modal Large Language Models via Over-Trust Penalty and Retrospection-Allocation": {
+                    "explanation": "This paper presents a method for alleviating hallucinations in multi-modal LLMs, which is related to the source paper's focus on hallucination detection. However, the approach is different and does not rely on the source paper's findings.",
+                    "relevance": 0
+                },
+                "9. Predictive Minds: LLMs As Atypical Active Inference Agents": {
+                    "explanation": "This paper conceptualizes LLMs as active inference agents, which is unrelated to the source paper's focus on hallucination detection.",
+                    "relevance": 0
+                },
+                "10. Insights into Classifying and Mitigating LLMs' Hallucinations": {
+                    "explanation": "This paper addresses hallucinations in LLMs and explores strategies to mitigate them, similar to the source paper's focus. However, it does not rely on the source paper's findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Survey of Large Language Models in Medicine: Progress, Application, and Challenge": {
+                    "explanation": "This paper is a review of LLMs in the medical field and does not propose novel hypotheses or findings directly related to hallucination detection in LLMs.",
+                    "relevance": 0
+                },
+                "2. A qualitative assessment of using ChatGPT as large language model for scientific workflow development": {
+                    "explanation": "This paper evaluates the use of ChatGPT for scientific workflows, which is not directly related to hallucination detection or the methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "3. Orchestrating Consensus Strategies to Counter AI Hallucination in Generative Chatbots": {
+                    "explanation": "This paper addresses AI hallucination by proposing a consensus strategy among multiple chatbots, which is related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 1
+                },
+                "4. Interactive Multi-fidelity Learning for Cost-effective Adaptation of Language Model with Sparse Human Supervision": {
+                    "explanation": "This paper focuses on cost-effective adaptation of LLMs with sparse supervision, which is not directly related to hallucination detection or the methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "5. Sequence-Level Certainty Reduces Hallucination In Knowledge-Grounded Dialogue Generation": {
+                    "explanation": "This paper proposes a method to reduce hallucination in dialogue generation, which is related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 1
+                },
+                "6. LUNA: A Model-Based Universal Analysis Framework for Large Language Models": {
+                    "explanation": "This paper proposes a universal analysis framework for LLMs, which includes addressing issues like hallucination, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "7. Chainpoll: A high efficacy method for LLM hallucination detection": {
+                    "explanation": "This paper introduces a new method for hallucination detection in LLMs, which is directly related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "8. An LLM can Fool Itself: A Prompt-Based Adversarial Attack": {
+                    "explanation": "This paper discusses adversarial attacks on LLMs, which is not directly related to hallucination detection or the methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "9. Core Building Blocks: Next Gen Geo Spatial GPT Application": {
+                    "explanation": "This paper focuses on integrating LLMs with spatial data processing, which is not directly related to hallucination detection or the methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "10. NuclearQA: A Human-Made Benchmark for Language Models for the Nuclear Domain": {
+                    "explanation": "This paper presents a benchmark for evaluating LLMs in the nuclear domain, which is not directly related to hallucination detection or the methods proposed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. LUNA: A Model-Based Universal Analysis Framework for Large Language Models": {
+                    "explanation": "This paper proposes a universal analysis framework for LLMs, which includes addressing issues like hallucination, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "2. Chainpoll: A high efficacy method for LLM hallucination detection": {
+                    "explanation": "This paper introduces a new method for hallucination detection in LLMs, which is directly related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "3. Orchestrating Consensus Strategies to Counter AI Hallucination in Generative Chatbots": {
+                    "explanation": "This paper addresses AI hallucination by proposing a consensus strategy among multiple chatbots, which is related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Metric Ensembles For Hallucination Detection": {
+                    "explanation": "This paper focuses on hallucination detection in abstractive text summarization using metric ensembles. It is related to the source paper as both address hallucination detection in LLMs, but it does not directly build upon or depend on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "2.NeMo Guardrails: A Toolkit for Controllable and Safe LLM Applications with Programmable Rails": {
+                    "explanation": "This paper discusses adding guardrails to LLMs to control their output, which is a different approach from the zero-resource hallucination detection method proposed in SelfCheckGPT. It does not directly relate to or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3.RegaVAE: A Retrieval-Augmented Gaussian Mixture Variational Auto-Encoder for Language Modeling": {
+                    "explanation": "RegaVAE addresses hallucinations in language models through retrieval-augmented methods, which is a different approach from the zero-resource method in SelfCheckGPT. It does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "4.Configuration Validation with Large Language Models": {
+                    "explanation": "This paper explores using LLMs for configuration validation, addressing hallucination and nondeterminism. While it touches on hallucination issues, it does not directly build upon or depend on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "5.KCTS: Knowledge-Constrained Tree Search Decoding with Token-Level Hallucination Detection": {
+                    "explanation": "KCTS proposes a knowledge-constrained decoding method to reduce hallucinations in LLMs. It shares a similar goal with SelfCheckGPT but uses a different approach. It does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6.Beyond Factuality: A Comprehensive Evaluation of Large Language Models as Knowledge Generators": {
+                    "explanation": "This paper evaluates LLMs as knowledge generators, focusing on various aspects including factuality. It does not directly build upon or depend on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "7.Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity": {
+                    "explanation": "This is a survey paper discussing factuality in LLMs, which is related to the topic of the source paper but does not present new hypotheses or findings that build upon SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "8.A New Benchmark and Reverse Validation Method for Passage-level Hallucination Detection": {
+                    "explanation": "This paper proposes a new benchmark and method for passage-level hallucination detection, which is closely related to SelfCheckGPT's focus on hallucination detection. It builds upon the concept of zero-resource detection introduced in the source paper.",
+                    "relevance": 2
+                },
+                "9.Towards Mitigating Hallucination in Large Language Models via Self-Reflection": {
+                    "explanation": "This paper addresses hallucination in LLMs through self-reflection, which is a different approach from SelfCheckGPT. It does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "10.Factuality Challenges in the Era of Large Language Models": {
+                    "explanation": "This paper discusses the challenges of factuality in LLMs, which is related to the topic of the source paper but does not present new hypotheses or findings that build upon SelfCheckGPT.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.A New Benchmark and Reverse Validation Method for Passage-level Hallucination Detection": {
+                    "explanation": "This paper proposes a new benchmark and method for passage-level hallucination detection, which is closely related to SelfCheckGPT's focus on hallucination detection. It builds upon the concept of zero-resource detection introduced in the source paper.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. DORIS-MAE: Scientific Document Retrieval using Multi-level Aspect-based Queries": {
+                    "explanation": "This paper focuses on scientific document retrieval and does not directly address hallucination detection or fact-checking in LLMs, which is the focus of the source paper.",
+                    "relevance": 0
+                },
+                "2. Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations": {
+                    "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, which is closely related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 2
+                },
+                "3. Keyword Augmented Retrieval: Novel framework for Information Retrieval integrated with speech interface": {
+                    "explanation": "This paper addresses information retrieval and speech interfaces, which are not directly related to hallucination detection in LLMs as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Evaluating Hallucinations in Chinese Large Language Models": {
+                    "explanation": "This paper establishes a benchmark for evaluating hallucinations in Chinese LLMs, which is related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 1
+                },
+                "5. Adapting Large Language Models for Content Moderation: Pitfalls in Data Engineering and Supervised Fine-tuning": {
+                    "explanation": "This paper focuses on content moderation using LLMs and does not directly address hallucination detection or fact-checking, which is the focus of the source paper.",
+                    "relevance": 0
+                },
+                "6. LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples": {
+                    "explanation": "This paper explores hallucinations as adversarial examples in LLMs, which is related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "7. AutoHall: Automated Hallucination Dataset Generation for Large Language Models": {
+                    "explanation": "This paper introduces a method for generating hallucination datasets and a detection method, which is closely related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 2
+                },
+                "8. Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models": {
+                    "explanation": "This paper investigates factual errors in LLMs through attention patterns, which is related to the source paper's focus on hallucination detection.",
+                    "relevance": 1
+                },
+                "9. RAGAs: Automated Evaluation of Retrieval Augmented Generation": {
+                    "explanation": "This paper focuses on evaluating retrieval augmented generation systems, which is not directly related to hallucination detection in LLMs as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. Creating Trustworthy LLMs: Dealing with Hallucinations in Healthcare AI": {
+                    "explanation": "This paper discusses hallucination mitigation in healthcare AI, which is related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations": {
+                    "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, which is closely related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 2
+                },
+                "2. LLM Lies: Hallucinations are not Bugs, but Features as Adversarial Examples": {
+                    "explanation": "This paper explores hallucinations as adversarial examples in LLMs, which is related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "3. AutoHall: Automated Hallucination Dataset Generation for Large Language Models": {
+                    "explanation": "This paper introduces a method for generating hallucination datasets and a detection method, which is closely related to the source paper's focus on hallucination detection in LLMs.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Can LLM-Generated Misinformation Be Detected?": {
+                    "explanation": "This paper explores the detection of misinformation generated by LLMs, a topic related to the source paper's focus on hallucination detection. However, it does not directly build upon the methods or findings of the source paper, as it takes a broader approach to misinformation rather than focusing on the specific technique of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "2. Natural Language based Context Modeling and Reasoning for Ubiquitous Computing with Large Language Models: A Tutorial": {
+                    "explanation": "This paper is a tutorial on context modeling and reasoning with LLMs and does not directly relate to hallucination detection or the specific methods proposed in the source paper.",
+                    "relevance": 0
+                },
+                "3. Foundation metrics for evaluating effectiveness of healthcare conversations powered by generative AI": {
+                    "explanation": "This paper focuses on evaluation metrics for healthcare chatbots, which is unrelated to the hallucination detection methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Chain-of-Verification Reduces Hallucination in Large Language Models": {
+                    "explanation": "This paper proposes a method (Chain-of-Verification) to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It builds on the idea of verifying responses, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "5. Using ChatGPT with Confidence for Biodiversity-Related Information Tasks": {
+                    "explanation": "This paper evaluates ChatGPT's performance in biodiversity-related tasks and discusses hallucination as one of the issues. While it touches on hallucination, it does not build upon the specific findings or methods of the source paper.",
+                    "relevance": 0
+                },
+                "6. ExpertQA: Expert-Curated Questions and Attributed Answers": {
+                    "explanation": "This paper focuses on factuality and attribution in LLM outputs, which is related to the source paper's focus on hallucination detection. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. Cognitive Mirage: A Review of Hallucinations in Large Language Models": {
+                    "explanation": "This is a review paper summarizing insights into hallucinations in LLMs. It does not present new hypotheses or findings that build upon the source paper.",
+                    "relevance": 0
+                },
+                "8. A Survey of Hallucination in Large Foundation Models": {
+                    "explanation": "This is a survey paper that provides an overview of hallucination in foundation models. It does not present new hypotheses or findings that build upon the source paper.",
+                    "relevance": 0
+                },
+                "9. Beyond Traditional Teaching: The Potential of Large Language Models and Chatbots in Graduate Engineering Education": {
+                    "explanation": "This paper explores the use of LLMs in education, which is unrelated to the hallucination detection methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models": {
+                    "explanation": "This paper proposes a decoding strategy to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It presents a method that could complement the source paper's approach.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Chain-of-Verification Reduces Hallucination in Large Language Models": {
+                    "explanation": "This paper proposes a method (Chain-of-Verification) to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It builds on the idea of verifying responses, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "2. DoLa: Decoding by Contrasting Layers Improves Factuality in Large Language Models": {
+                    "explanation": "This paper proposes a decoding strategy to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It presents a method that could complement the source paper's approach.",
+                    "relevance": 2
+                },
+                "3. ExpertQA: Expert-Curated Questions and Attributed Answers": {
+                    "explanation": "This paper focuses on factuality and attribution in LLM outputs, which is related to the source paper's focus on hallucination detection. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Zero-Resource Hallucination Prevention for Large Language Models": {
+                    "explanation": "This paper introduces a pre-detection self-evaluation technique to prevent hallucinations in LLMs, which is related to the source paper's focus on detecting hallucinations post-generation. Both papers address the issue of hallucination in LLMs, but the methods are different; the source paper focuses on detection while this paper focuses on prevention.",
+                    "relevance": 1
+                },
+                "2. Aligning Large Language Models for Clinical Tasks": {
+                    "explanation": "This paper discusses aligning LLMs for clinical tasks, focusing on generating factually accurate content for medical applications. While it shares an interest in factual accuracy with the source paper, it does not directly build upon the source paper's findings or hypotheses regarding hallucination detection.",
+                    "relevance": 0
+                },
+                "3. Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models": {
+                    "explanation": "This is a survey paper that reviews existing literature on hallucination in LLMs, including detection and mitigation strategies. It does not present novel hypotheses or findings, making it a review paper.",
+                    "relevance": 0
+                },
+                "4. Using ChatGPT and other LLMs in Professional Environments": {
+                    "explanation": "This paper examines the use of LLMs in professional environments, focusing on challenges like bias and inaccuracy. While it touches on the issues of factual accuracy, it does not directly relate to the source paper's focus on hallucination detection methods.",
+                    "relevance": 0
+                },
+                "5. Quantifying Uncertainty in Answers from any Language Model and Enhancing their Trustworthiness": {
+                    "explanation": "This paper introduces BSDetector, a method for quantifying uncertainty in LLM responses, which is conceptually related to the source paper's focus on detecting hallucinations. Both papers aim to enhance trust in LLM outputs, but BSDetector focuses on uncertainty quantification rather than hallucination detection.",
+                    "relevance": 1
+                },
+                "6. Sparks of Large Audio Models: A Survey and Outlook": {
+                    "explanation": "This is a survey paper on large audio models, which does not relate to the source paper's focus on hallucination detection in text-based LLMs.",
+                    "relevance": 0
+                },
+                "7. Diversity Measures: Domain-Independent Proxies for Failure in Language Model Queries": {
+                    "explanation": "This paper presents domain-independent measures for quantifying error in LLM responses, which aligns with the source paper's interest in detecting hallucinations. Both papers address the issue of error detection in LLM outputs, making this paper partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "8. Halo: Estimation and Reduction of Hallucinations in Open-Source Weak Large Language Models": {
+                    "explanation": "This paper introduces HaloCheck, a framework for quantifying and reducing hallucinations in open-source LLMs, which is directly related to the source paper's focus on hallucination detection. Both papers aim to address hallucination issues, making this paper partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "9. LLM-Mini-CEX: Automatic Evaluation of Large Language Model for Diagnostic Conversation": {
+                    "explanation": "This paper focuses on evaluating LLMs for medical diagnosis, which is not directly related to the source paper's focus on hallucination detection in general LLMs.",
+                    "relevance": 0
+                },
+                "10. Robustness Over Time: Understanding Adversarial Examples' Effectiveness on Longitudinal Versions of Large Language Models": {
+                    "explanation": "This paper examines the robustness of LLMs over time, including hallucination issues. While it shares an interest in hallucination with the source paper, it does not directly build upon the source paper's findings or hypotheses.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Diversity Measures: Domain-Independent Proxies for Failure in Language Model Queries": {
+                    "explanation": "This paper presents domain-independent measures for quantifying error in LLM responses, which aligns with the source paper's interest in detecting hallucinations. Both papers address the issue of error detection in LLM outputs, making this paper partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Halo: Estimation and Reduction of Hallucinations in Open-Source Weak Large Language Models": {
+                    "explanation": "This paper introduces HaloCheck, a framework for quantifying and reducing hallucinations in open-source LLMs, which is directly related to the source paper's focus on hallucination detection. Both papers aim to address hallucination issues, making this paper partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3. Zero-Resource Hallucination Prevention for Large Language Models": {
+                    "explanation": "This paper introduces a pre-detection self-evaluation technique to prevent hallucinations in LLMs, which is related to the source paper's focus on detecting hallucinations post-generation. Both papers address the issue of hallucination in LLMs, but the methods are different; the source paper focuses on detection while this paper focuses on prevention.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Large Language Models for Information Retrieval: A Survey": {
+                    "explanation": "This paper is a survey of the use of large language models in information retrieval systems. It does not propose new hypotheses or findings directly related to the hallucination detection methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2. PentestGPT: An LLM-empowered Automatic Penetration Testing Tool": {
+                    "explanation": "This paper focuses on using LLMs for penetration testing tasks, which is unrelated to hallucination detection in LLMs as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "3. Answering Unseen Questions With Smaller Language Models Using Rationale Generation and Dense Retrieval": {
+                    "explanation": "This paper explores methods for improving the reasoning ability of smaller language models using rationale generation and dense retrieval. It does not directly relate to hallucination detection in LLMs.",
+                    "relevance": 0
+                },
+                "4. Mondrian: Prompt Abstraction Attack Against Large Language Models for Cheaper API Pricing": {
+                    "explanation": "This paper discusses a method to reduce API costs by abstracting prompts, which is not related to the hallucination detection methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies": {
+                    "explanation": "This paper reviews self-correction strategies for LLMs, which is relevant to the source paper's focus on detecting and addressing hallucinations in LLMs.",
+                    "relevance": 1
+                },
+                "6. On the Trustworthiness Landscape of State-of-the-art Generative Models: A Survey and Outlook": {
+                    "explanation": "This paper is a survey on the trustworthiness of generative models, including LLMs. It does not propose new hypotheses or findings directly related to hallucination detection methods.",
+                    "relevance": 0
+                },
+                "7. Performance of progressive generations of GPT on an exam designed for certifying physicians as Certified Clinical Densitometrists": {
+                    "explanation": "This paper evaluates the performance of GPT models on a specific exam, which is not directly related to hallucination detection.",
+                    "relevance": 0
+                },
+                "8. Selective Generation for Controllable Language Models": {
+                    "explanation": "This paper proposes selective generation algorithms to control hallucinations in language models, which is directly relevant to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "9. On the application of Large Language Models for language teaching and assessment technology": {
+                    "explanation": "This paper discusses the application of LLMs in language teaching and assessment, which is not directly related to hallucination detection.",
+                    "relevance": 0
+                },
+                "10. Look Before You Leap: An Exploratory Study of Uncertainty Analysis for Large Language Models": {
+                    "explanation": "This paper explores uncertainty analysis for LLMs to assess prediction risks, which is relevant to the source paper's focus on detecting hallucinations.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Selective Generation for Controllable Language Models": {
+                    "explanation": "This paper proposes selective generation algorithms to control hallucinations in language models, which is directly relevant to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "2. Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies": {
+                    "explanation": "This paper reviews self-correction strategies for LLMs, which is relevant to the source paper's focus on detecting and addressing hallucinations in LLMs.",
+                    "relevance": 1
+                },
+                "3. Look Before You Leap: An Exploratory Study of Uncertainty Analysis for Large Language Models": {
+                    "explanation": "This paper explores uncertainty analysis for LLMs to assess prediction risks, which is relevant to the source paper's focus on detecting hallucinations.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MASTERKEY: Automated Jailbreaking of Large Language Model Chatbots": {
+                    "explanation": "This paper focuses on the vulnerabilities of LLM chatbots to jailbreak attacks, which is a different focus from the source paper's emphasis on hallucination detection. While both papers deal with LLMs, the specific issues they address are distinct.",
+                    "relevance": 0
+                },
+                "2.LLM Comparative Assessment: Zero-shot NLG Evaluation through Pairwise Comparisons using Large Language Models": {
+                    "explanation": "This paper explores the evaluation of NLG using LLMs, which is not directly related to hallucination detection or fact-checking as discussed in the source paper. The focus is on assessment methods rather than factuality or hallucination.",
+                    "relevance": 0
+                },
+                "3.PapagAI: Automated Feedback for Reflective Essays": {
+                    "explanation": "This paper discusses an automated feedback tool for reflective essays, which does not relate to hallucination detection or fact-checking in LLMs. The focus is on educational applications rather than the issues addressed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Assessing GPT-3.5 and GPT-4 in Generating International Classification of Diseases Billing Codes": {
+                    "explanation": "This paper evaluates the accuracy of LLMs in generating ICD billing codes, highlighting issues of hallucination in a specific application. It partially depends on understanding hallucination in LLMs, making it somewhat related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "5.A Stitch in Time Saves Nine: Detecting and Mitigating Hallucinations of LLMs by Validating Low-Confidence Generation": {
+                    "explanation": "This paper directly addresses hallucination detection and mitigation in LLMs, which is highly relevant to the source paper's focus on hallucination detection using SelfCheckGPT.",
+                    "relevance": 2
+                },
+                "6.Large Language Models for Supply Chain Optimization": {
+                    "explanation": "This paper discusses the application of LLMs in supply chain optimization, which is unrelated to hallucination detection or fact-checking as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7.A Survey on Evaluation of Large Language Models": {
+                    "explanation": "This is a review paper summarizing evaluation methods for LLMs, which does not present novel hypotheses or findings related to hallucination detection or fact-checking.",
+                    "relevance": 0
+                },
+                "8.Recommender Systems in the Era of Large Language Models (LLMs)": {
+                    "explanation": "This survey paper reviews the use of LLMs in recommender systems, which is unrelated to hallucination detection or fact-checking as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.Stay on topic with Classifier-Free Guidance": {
+                    "explanation": "This paper discusses inference-time techniques to improve LLM performance, which is not directly related to hallucination detection or fact-checking as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10.Trapping LLM Hallucinations Using Tagged Context Prompts": {
+                    "explanation": "This paper proposes a method to recognize and mitigate hallucinations in LLMs, which is directly related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Assessing GPT-3.5 and GPT-4 in Generating International Classification of Diseases Billing Codes": {
+                    "explanation": "This paper evaluates LLMs in generating ICD codes, highlighting hallucination issues, which is related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "2.A Stitch in Time Saves Nine: Detecting and Mitigating Hallucinations of LLMs by Validating Low-Confidence Generation": {
+                    "explanation": "This paper directly addresses hallucination detection and mitigation in LLMs, which aligns with the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                },
+                "3.Trapping LLM Hallucinations Using Tagged Context Prompts": {
+                    "explanation": "This paper proposes a method to recognize and mitigate hallucinations in LLMs, directly related to the source paper's focus on hallucination detection.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Prompt Injection attack against LLM-integrated Applications": {
+                    "explanation": "This paper focuses on security risks associated with LLMs, specifically prompt injection attacks, which is a different aspect from the source paper's focus on hallucination detection. There is no direct connection or dependency on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2. CapText: Large Language Model-based Caption Generation From Image Context and Description": {
+                    "explanation": "This paper deals with caption generation using LLMs, which is unrelated to the hallucination detection focus of the source paper. There is no connection or dependency on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey": {
+                    "explanation": "This is a review paper focusing on domain specialization of LLMs. It does not propose novel hypotheses or findings related to hallucination detection, making it unrelated to the source paper.",
+                    "relevance": 0
+                },
+                "4. Do Language Models Know When They\u2019re Hallucinating References?": {
+                    "explanation": "This paper investigates hallucination in LLMs, specifically focusing on references, which is closely related to the source paper's focus on hallucination detection. It builds on the idea of detecting hallucinations without external resources, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "5. Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation": {
+                    "explanation": "This paper addresses self-contradictory hallucinations in LLMs, which is directly related to the source paper's focus on hallucination detection. It proposes a detection and mitigation framework that aligns with the source paper's theme of improving factuality in LLM outputs.",
+                    "relevance": 2
+                },
+                "6. Linguistic Properties of Truthful Response": {
+                    "explanation": "This paper explores the linguistic properties of truthful responses in LLMs, which is tangentially related to the source paper's focus on hallucination detection. It does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. SAIL: Search-Augmented Instruction Learning": {
+                    "explanation": "This paper focuses on improving LLMs through search-augmented instruction learning, which is different from the hallucination detection approach of the source paper. There is no direct connection or dependency.",
+                    "relevance": 0
+                },
+                "8. Selectively Answering Ambiguous Questions": {
+                    "explanation": "This paper deals with question answering and ambiguity, which is not directly related to the hallucination detection focus of the source paper. There is no connection or dependency.",
+                    "relevance": 0
+                },
+                "9. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation": {
+                    "explanation": "This paper introduces a method for evaluating factual precision in LLM outputs, which is related to the source paper's focus on factuality assessment. However, it does not directly build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "10. Improving Language Models via Plug-and-Play Retrieval Feedback": {
+                    "explanation": "This paper proposes a retrieval feedback mechanism to improve LLMs, which is different from the hallucination detection approach of the source paper. There is no direct connection or dependency.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Do Language Models Know When They\u2019re Hallucinating References?": {
+                    "explanation": "This paper investigates hallucination in LLMs, specifically focusing on references, which is closely related to the source paper's focus on hallucination detection. It builds on the idea of detecting hallucinations without external resources, similar to the source paper's approach.",
+                    "relevance": 2
+                },
+                "2. Self-contradictory Hallucinations of Large Language Models: Evaluation, Detection and Mitigation": {
+                    "explanation": "This paper addresses self-contradictory hallucinations in LLMs, which is directly related to the source paper's focus on hallucination detection. It proposes a detection and mitigation framework that aligns with the source paper's theme of improving factuality in LLM outputs.",
+                    "relevance": 2
+                },
+                "3. Linguistic Properties of Truthful Response": {
+                    "explanation": "This paper explores the linguistic properties of truthful responses in LLMs, which is tangentially related to the source paper's focus on hallucination detection. It does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "7c1707db9aafd209aa93db3251e7ebd593d55876",
+            "pmid": "2303.08896",
+            "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+            "abstract": "Generative Large Language Models (LLMs) such as GPT-3 are capable of generating highly fluent responses to a wide variety of user prompts. However, LLMs are known to hallucinate facts and make non-factual statements which can undermine trust in their output. Existing fact-checking approaches either require access to the output probability distribution (which may not be available for systems such as ChatGPT) or external databases that are interfaced via separate, often complex, modules. In this work, we propose\"SelfCheckGPT\", a simple sampling-based approach that can be used to fact-check the responses of black-box models in a zero-resource fashion, i.e. without an external database. SelfCheckGPT leverages the simple idea that if an LLM has knowledge of a given concept, sampled responses are likely to be similar and contain consistent facts. However, for hallucinated facts, stochastically sampled responses are likely to diverge and contradict one another. We investigate this approach by using GPT-3 to generate passages about individuals from the WikiBio dataset, and manually annotate the factuality of the generated passages. We demonstrate that SelfCheckGPT can: i) detect non-factual and factual sentences; and ii) rank passages in terms of factuality. We compare our approach to several baselines and show that our approach has considerably higher AUC-PR scores in sentence-level hallucination detection and higher correlation scores in passage-level factuality assessment compared to grey-box methods.",
+            "year": 2023,
+            "citation_count": 501
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing": {
+                    "explanation": "This paper introduces a framework that allows LLMs to self-correct by interacting with external tools, which is different from the zero-resource approach of SelfCheckGPT. While both papers address the issue of LLM hallucinations, CRITIC relies on external feedback, whereas SelfCheckGPT does not, making them conceptually distinct.",
+                    "relevance": 0
+                },
+                "2. HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models": {
+                    "explanation": "HaluEval focuses on evaluating hallucinations in LLMs and suggests that external knowledge can help recognize hallucinations, which contrasts with SelfCheckGPT's zero-resource approach. While both papers deal with hallucinations, HaluEval is more about benchmarking and does not build directly on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "3. TARGET: Traffic Rule-Based Test Generation for Autonomous Driving via Validated LLM-Guided Knowledge Extraction": {
+                    "explanation": "TARGET applies LLMs to generate test scenarios for autonomous driving, which is unrelated to the hallucination detection focus of SelfCheckGPT. The paper does not address hallucination detection or fact-checking in LLMs.",
+                    "relevance": 0
+                },
+                "4. MoT: Memory-of-Thought Enables ChatGPT to Self-Improve": {
+                    "explanation": "MoT focuses on self-improvement of LLMs through memory recall, which is a different concept from the hallucination detection approach of SelfCheckGPT. The paper does not depend on or extend the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "5. Fine-tuning Language Models with Generative Adversarial Reward Modelling": {
+                    "explanation": "This paper discusses a method for aligning LLM outputs using generative adversarial feedback, which is not directly related to hallucination detection or the zero-resource approach of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "6. WizardLM: Empowering Large Pre-Trained Language Models to Follow Complex Instructions": {
+                    "explanation": "WizardLM focuses on creating complex instruction data for LLMs, which is unrelated to the hallucination detection focus of SelfCheckGPT. The paper does not address hallucination detection or fact-checking in LLMs.",
+                    "relevance": 0
+                },
+                "7. Safer Conversational AI as a Source of User Delight": {
+                    "explanation": "This paper explores moderation in conversational AI systems, which is not directly related to hallucination detection or the zero-resource approach of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "8. Interpretable Unified Language Checking": {
+                    "explanation": "This paper presents a method for language checking that includes fact-checking, which is conceptually related to SelfCheckGPT's goal of detecting non-factual statements. However, it does not build on or depend on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "9. Hallucinations in Large Multilingual Translation Models": {
+                    "explanation": "This paper analyzes hallucinations in multilingual translation models, which is related to the topic of hallucination detection. However, it does not build on or depend on the findings of SelfCheckGPT.",
+                    "relevance": 0
+                },
+                "10. ChatDoctor: A Medical Chat Model Fine-Tuned on a Large Language Model Meta-AI (LLaMA) Using Medical Domain Knowledge": {
+                    "explanation": "ChatDoctor focuses on improving medical advice accuracy in LLMs, which is unrelated to the hallucination detection focus of SelfCheckGPT. The paper does not address hallucination detection or fact-checking in LLMs.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "4b0b56be0ae9479d2bd5c2f0943db1906343c10f",
+            "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+            "abstract": "Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issue in large language models. We study the ability of language models to deliberate on the responses they give in order to correct their mistakes. We develop the Chain-of-Verification (CoVe) method whereby the model first (i) drafts an initial response; then (ii) plans verification questions to fact-check its draft; (iii) answers those questions independently so the answers are not biased by other responses; and (iv) generates its final verified response. In experiments, we show CoVe decreases hallucinations across a variety of tasks, from list-based questions from Wikidata, closed book MultiSpanQA and longform text generation.",
+            "year": 2023,
+            "citation_count": 230,
+            "relevance": 2,
+            "explanation": "This paper proposes a method (Chain-of-Verification) to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It builds on the idea of verifying responses, similar to the source paper's approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Supervised Knowledge Makes Large Language Models Better In-context Learners": {
+                    "explanation": "This paper addresses the issue of hallucinations in LLMs by proposing a framework that enhances the reliability of LLMs, which is related to the source paper's focus on reducing hallucinations. However, it does not directly depend on the CoVe method.",
+                    "relevance": 1
+                },
+                "2. Agent-based Learning of Materials Datasets from Scientific Literature": {
+                    "explanation": "This paper focuses on using LLMs for extracting datasets from scientific literature, which is unrelated to the source paper's focus on reducing hallucinations in LLMs.",
+                    "relevance": 0
+                },
+                "3. Retrieval-Augmented Generation for Large Language Models: A Survey": {
+                    "explanation": "This is a review paper on Retrieval-Augmented Generation, which is a different approach to addressing hallucinations and knowledge integration in LLMs. It does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "4. SPROUT: An Interactive Authoring Tool for Generating Programming Tutorials With the Visualization of Large Language Models": {
+                    "explanation": "This paper focuses on creating programming tutorials using LLMs and does not address the issue of hallucinations or verification methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. A Contrastive Compositional Benchmark for Text-to-Image Synthesis: A Study with Unified Text-to-Image Fidelity Metrics": {
+                    "explanation": "This paper deals with text-to-image synthesis and compositionality, which is unrelated to the source paper's focus on reducing hallucinations in LLMs.",
+                    "relevance": 0
+                },
+                "6. Expert Evaluation of Export Control-Related Question Answering Capabilities of LLMs": {
+                    "explanation": "This paper evaluates LLMs in a specific domain (export control) but does not address the hallucination issue or verification methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. From Beginner to Expert: Modeling Medical Knowledge into General LLMs": {
+                    "explanation": "This paper focuses on adapting LLMs for medical knowledge, which is not directly related to the source paper's focus on reducing hallucinations through verification methods.",
+                    "relevance": 0
+                },
+                "8. Conceptual Engineering Using Large Language Models": {
+                    "explanation": "This paper explores conceptual engineering using LLMs and does not address the hallucination issue or verification methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9. ChatGPT's One-year Anniversary: Are Open-Source Large Language Models Catching up?": {
+                    "explanation": "This paper is a survey of LLMs' progress and does not present novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "10. FlowZero: Zero-Shot Text-to-Video Synthesis with LLM-Driven Dynamic Scene Syntax": {
+                    "explanation": "This paper focuses on text-to-video synthesis using LLMs, which is unrelated to the source paper's focus on reducing hallucinations in LLMs.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Supervised Knowledge Makes Large Language Models Better In-context Learners": {
+                    "explanation": "This paper addresses the issue of hallucinations in LLMs by proposing a framework that enhances the reliability of LLMs, which is related to the source paper's focus on reducing hallucinations. However, it does not directly depend on the CoVe method.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "4b0b56be0ae9479d2bd5c2f0943db1906343c10f",
+            "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+            "abstract": "Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issue in large language models. We study the ability of language models to deliberate on the responses they give in order to correct their mistakes. We develop the Chain-of-Verification (CoVe) method whereby the model first (i) drafts an initial response; then (ii) plans verification questions to fact-check its draft; (iii) answers those questions independently so the answers are not biased by other responses; and (iv) generates its final verified response. In experiments, we show CoVe decreases hallucinations across a variety of tasks, from list-based questions from Wikidata, closed book MultiSpanQA and longform text generation.",
+            "year": 2023,
+            "citation_count": 230,
+            "relevance": 2,
+            "explanation": "This paper proposes a method (Chain-of-Verification) to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It builds on the idea of verifying responses, similar to the source paper's approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. System 2 Attention (is something you might need too)": {
+                    "explanation": "This paper introduces System 2 Attention (S2A) to improve attention mechanisms in LLMs by focusing on relevant information. While it addresses issues of factuality and objectivity similar to the source paper, it does not directly build upon or depend on the Chain-of-Verification method. Therefore, it is not directly inspired by or dependent on the source paper.",
+                    "relevance": 0
+                },
+                "2. Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models": {
+                    "explanation": "This paper introduces Chain-of-Note (CoN), a method to improve the robustness of retrieval-augmented language models. It shares a conceptual similarity with the Chain-of-Verification method in addressing hallucinations by verifying information. However, CoN focuses on retrieval-augmented models, while the source paper focuses on self-verification in LLMs. The methods are conceptually related, but CoN is not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. Towards Automating Database Designing": {
+                    "explanation": "This paper focuses on using LLMs for automating database design, which is unrelated to the source paper's focus on reducing hallucinations in LLMs through the Chain-of-Verification method. There is no direct connection or dependency between the two.",
+                    "relevance": 0
+                },
+                "4. Fine-tuning Language Models for Factuality": {
+                    "explanation": "This paper addresses the issue of factuality in LLMs, similar to the source paper's focus on reducing hallucinations. However, it explores different methods for improving factuality, such as fine-tuning with preference rankings, rather than the Chain-of-Verification method. While related in topic, it is not directly inspired by or dependent on the source paper.",
+                    "relevance": 1
+                },
+                "5. A Survey of Large Language Models in Medicine: Progress, Application, and Challenge": {
+                    "explanation": "This paper is a review of LLMs in the medical field and does not present novel hypotheses or findings related to the Chain-of-Verification method. It is not directly connected to the source paper.",
+                    "relevance": 0
+                },
+                "6. Reference Hallucination Score for Medical Artificial Intelligence Chatbots: Development and Usability Study": {
+                    "explanation": "This paper proposes a reference hallucination score for evaluating AI chatbots, which is related to the source paper's focus on hallucinations in LLMs. However, it specifically targets medical AI chatbots and does not build upon or depend on the Chain-of-Verification method. The connection is thematic but not direct.",
+                    "relevance": 1
+                },
+                "7. LILO: Learning Interpretable Libraries by Compressing and Documenting Code": {
+                    "explanation": "This paper focuses on code generation and library learning, which is unrelated to the source paper's focus on reducing hallucinations in LLMs. There is no direct connection or dependency between the two.",
+                    "relevance": 0
+                },
+                "8. AutoMix: Automatically Mixing Language Models": {
+                    "explanation": "This paper presents Automix, a method for optimizing the use of different LLMs based on output correctness. While it involves self-verification, similar to the source paper, it does not directly build upon or depend on the Chain-of-Verification method. The connection is thematic but not direct.",
+                    "relevance": 1
+                },
+                "9. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection": {
+                    "explanation": "This paper introduces Self-RAG, a framework that enhances LLMs through retrieval and self-reflection, which is conceptually similar to the Chain-of-Verification method in reducing hallucinations. However, it focuses on retrieval-augmented generation rather than self-verification. The connection is thematic but not directly dependent.",
+                    "relevance": 1
+                },
+                "10. MechGPT, a language-based strategy for mechanics and materials modeling that connects knowledge across scales, disciplines and modalities": {
+                    "explanation": "This paper focuses on using LLMs for mechanics and materials modeling, which is unrelated to the source paper's focus on reducing hallucinations in LLMs. There is no direct connection or dependency between the two.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models": {
+                    "explanation": "This paper introduces Chain-of-Note, a method conceptually similar to the Chain-of-Verification method in addressing hallucinations by verifying information. It shares a thematic connection with the source paper.",
+                    "relevance": 1
+                },
+                "2. Fine-tuning Language Models for Factuality": {
+                    "explanation": "This paper addresses the issue of factuality in LLMs, similar to the source paper's focus on reducing hallucinations. It explores different methods for improving factuality, such as fine-tuning with preference rankings.",
+                    "relevance": 1
+                },
+                "3. Reference Hallucination Score for Medical Artificial Intelligence Chatbots: Development and Usability Study": {
+                    "explanation": "This paper proposes a reference hallucination score for evaluating AI chatbots, related to the source paper's focus on hallucinations in LLMs, although it specifically targets medical AI chatbots.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "4b0b56be0ae9479d2bd5c2f0943db1906343c10f",
+            "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+            "abstract": "Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issue in large language models. We study the ability of language models to deliberate on the responses they give in order to correct their mistakes. We develop the Chain-of-Verification (CoVe) method whereby the model first (i) drafts an initial response; then (ii) plans verification questions to fact-check its draft; (iii) answers those questions independently so the answers are not biased by other responses; and (iv) generates its final verified response. In experiments, we show CoVe decreases hallucinations across a variety of tasks, from list-based questions from Wikidata, closed book MultiSpanQA and longform text generation.",
+            "year": 2023,
+            "citation_count": 230,
+            "relevance": 2,
+            "explanation": "This paper proposes a method (Chain-of-Verification) to reduce hallucinations in LLMs, which is directly relevant to the source paper's focus on hallucination detection. It builds on the idea of verifying responses, similar to the source paper's approach."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Factored Verification: Detecting and Reducing Hallucination in Summaries of Academic Papers": {
+                    "explanation": "This paper focuses on detecting and reducing hallucinations in LLM-generated summaries, similar to the source paper's goal of reducing hallucinations in LLMs. However, the method used (Factored Verification) is different from the Chain-of-Verification method proposed in the source paper, making it inspired but not directly dependent.",
+                    "relevance": 1
+                },
+                "2. Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity": {
+                    "explanation": "This is a survey paper that reviews existing literature on factuality in LLMs, including issues like hallucination. It does not propose novel hypotheses or findings directly related to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "3. Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations": {
+                    "explanation": "This paper proposes a method (Chain of Natural Language Inference) for reducing hallucinations in LLMs, which is conceptually similar to the Chain-of-Verification method in the source paper. The hypothesis is partially dependent on the findings of the source paper as it addresses the same problem of hallucination reduction.",
+                    "relevance": 2
+                },
+                "4. Can LLM-Generated Misinformation Be Detected?": {
+                    "explanation": "This paper focuses on the detection of LLM-generated misinformation, which is related to hallucination but does not directly build upon or depend on the Chain-of-Verification method from the source paper.",
+                    "relevance": 0
+                },
+                "5. Cognitive Mirage: A Review of Hallucinations in Large Language Models": {
+                    "explanation": "This is a review paper summarizing insights into hallucinations in LLMs. It does not propose new methods or hypotheses directly related to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "6. PACE-LM: Prompting and Augmentation for Calibrated Confidence Estimation with GPT-4 in Cloud Incident Root Cause Analysis": {
+                    "explanation": "This paper addresses the issue of hallucination in LLMs within the specific context of cloud incident analysis, using confidence estimation. While it deals with hallucination, it does not directly relate to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "7. Siren's Song in the AI Ocean: A Survey on Hallucination in Large Language Models": {
+                    "explanation": "This is a survey paper on hallucination in LLMs, providing an overview of detection and mitigation efforts. It does not propose new methods or hypotheses directly related to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "8. LLM Self Defense: By Self Examination, LLMs Know They Are Being Tricked": {
+                    "explanation": "This paper proposes a method for LLMs to defend against adversarial prompts by self-examination. While it involves self-correction, it is not directly related to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "9. On the Trustworthiness Landscape of State-of-the-art Generative Models: A Survey and Outlook": {
+                    "explanation": "This is a survey paper on the trustworthiness of generative models, including LLMs. It does not propose new methods or hypotheses directly related to the Chain-of-Verification method.",
+                    "relevance": 0
+                },
+                "10. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation": {
+                    "explanation": "This paper introduces a method for evaluating the factual precision of LLM-generated text. While it addresses factuality, it does not directly relate to the Chain-of-Verification method.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations": {
+                    "explanation": "This paper proposes a method (Chain of Natural Language Inference) for reducing hallucinations in LLMs, which is conceptually similar to the Chain-of-Verification method in the source paper. The hypothesis is partially dependent on the findings of the source paper as it addresses the same problem of hallucination reduction.",
+                    "relevance": 2
+                },
+                "2. Factored Verification: Detecting and Reducing Hallucination in Summaries of Academic Papers": {
+                    "explanation": "This paper focuses on detecting and reducing hallucinations in LLM-generated summaries, similar to the source paper's goal of reducing hallucinations in LLMs. However, the method used (Factored Verification) is different from the Chain-of-Verification method proposed in the source paper, making it inspired but not directly dependent.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "79429814fd4d967b9277af2805c53f370e52ebb5",
+            "title": "Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations",
+            "abstract": "Large language models (LLMs) can generate fluent natural language texts when given relevant documents as background context. This ability has attracted considerable interest in developing industry applications of LLMs. However, LLMs are prone to generate hallucinations that are not supported by the provided sources. In this paper, we propose a hierarchical framework to detect and mitigate such ungrounded hallucination. Our framework uses Chain of Natural Language Inference (CoNLI) for hallucination detection and hallucination reduction via post-editing. Our approach achieves state-of-the-art performance on hallucination detection and enhances text quality through rewrite, using LLMs without any fine-tuning or domain-specific prompt engineering. We show that this simple plug-and-play framework can serve as an effective choice for hallucination detection and reduction, achieving competitive performance across various contexts.",
+            "year": 2023,
+            "citation_count": 42,
+            "relevance": 2,
+            "explanation": "This paper proposes a method (Chain of Natural Language Inference) for reducing hallucinations in LLMs, which is conceptually similar to the Chain-of-Verification method in the source paper. The hypothesis is partially dependent on the findings of the source paper as it addresses the same problem of hallucination reduction."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs": {
+                    "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, similar to the source paper's focus on hallucination reduction. However, it uses different techniques (NER and ER models) and prompt engineering, rather than the Chain of Natural Language Inference (CoNLI) approach. The hypothesis is inspired by the same problem addressed in the source paper.",
+                    "relevance": 1
+                },
+                "2.A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions": {
+                    "explanation": "This is a survey paper that provides an overview of hallucination in LLMs, including detection and mitigation methods. It does not propose a novel hypothesis or findings directly inspired by or dependent on the source paper.",
+                    "relevance": 0
+                },
+                "3.Combating Misinformation in the Age of LLMs: Opportunities and Challenges": {
+                    "explanation": "This paper discusses the role of LLMs in combating misinformation, which is related to hallucination in terms of generating nonfactual content. However, it focuses on misinformation rather than hallucination specifically, and is more of a review and outlook rather than building on the source paper's hypothesis.",
+                    "relevance": 0
+                },
+                "4.Navigate through Enigmatic Labyrinth A Survey of Chain of Thought Reasoning: Advances, Frontiers and Future": {
+                    "explanation": "This is a survey paper on chain-of-thought reasoning in LLMs, which may relate to the reasoning aspect of hallucination detection but does not directly build on the source paper's hypothesis or findings.",
+                    "relevance": 0
+                },
+                "5.Cognitive Mirage: A Review of Hallucinations in Large Language Models": {
+                    "explanation": "This is a review paper that summarizes insights into hallucinations in LLMs, providing taxonomy and theoretical insights. It does not propose a novel hypothesis or findings directly inspired by or dependent on the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs": {
+                    "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, similar to the source paper's focus on hallucination reduction. However, it uses different techniques (NER and ER models) and prompt engineering, rather than the Chain of Natural Language Inference (CoNLI) approach. The hypothesis is inspired by the same problem addressed in the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "30bcead462777b7e2962bc4b5d650b02034f83ea",
+            "title": "Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs",
+            "abstract": "Large language models (LLMs) have achieved impressive success in generating fluent and coherent texts in natural language. However, the presence of inaccurate or low-quality data can unintentionally lead to the retention of incorrect knowledge, resulting in hallucinations that hinder progress in content generation. In this paper, we propose a comprehensive framework aimed at detecting and mitigating these hallucinations. Our approach uses Named Entity Recognition (NER) and Entity Relationship (ER) models to identify hallucination entities and sentences during the detection phase. Furthermore, by incorporating prompt engineering, we effectively correct these hallucination sentences using LLM in the mitigation phase. Tests on real articles confirm the effectiveness of our approach in rectifying LLM-associated hallucinations without adding new ones, thereby enhancing their reliability and credibility.",
+            "year": 2023,
+            "citation_count": 5,
+            "relevance": 1,
+            "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, similar to the source paper's focus on hallucination reduction. However, it uses different techniques (NER and ER models) and prompt engineering, rather than the Chain of Natural Language Inference (CoNLI) approach. The hypothesis is inspired by the same problem addressed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.From Pen to Prompt: How Creative Writers Integrate AI into their Writing Practice": {
+                    "explanation": "This paper explores how creative writers use AI in their writing processes, focusing on the interplay between human values and AI integration. While it involves LLMs, it does not directly address hallucinations or mitigation techniques as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2.pathfinder: A Semantic Framework for Literature Review and Knowledge Discovery in Astronomy": {
+                    "explanation": "This paper presents a framework for literature review and knowledge discovery using LLMs in the field of astronomy. Although it utilizes LLMs, it focuses on semantic searching rather than detecting or mitigating hallucinations, which is the core focus of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "30bcead462777b7e2962bc4b5d650b02034f83ea",
+            "title": "Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs",
+            "abstract": "Large language models (LLMs) have achieved impressive success in generating fluent and coherent texts in natural language. However, the presence of inaccurate or low-quality data can unintentionally lead to the retention of incorrect knowledge, resulting in hallucinations that hinder progress in content generation. In this paper, we propose a comprehensive framework aimed at detecting and mitigating these hallucinations. Our approach uses Named Entity Recognition (NER) and Entity Relationship (ER) models to identify hallucination entities and sentences during the detection phase. Furthermore, by incorporating prompt engineering, we effectively correct these hallucination sentences using LLM in the mitigation phase. Tests on real articles confirm the effectiveness of our approach in rectifying LLM-associated hallucinations without adding new ones, thereby enhancing their reliability and credibility.",
+            "year": 2023,
+            "citation_count": 5,
+            "relevance": 1,
+            "explanation": "This paper proposes a framework for detecting and mitigating hallucinations in LLMs, similar to the source paper's focus on hallucination reduction. However, it uses different techniques (NER and ER models) and prompt engineering, rather than the Chain of Natural Language Inference (CoNLI) approach. The hypothesis is inspired by the same problem addressed in the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Systematic Literature Review of Hallucinations in Large Language Models": {
+                    "explanation": "This paper is a systematic review and does not present a novel hypothesis or findings directly inspired by or dependent on the source paper. It summarizes existing literature on hallucinations in large language models, including various architectures and approaches, but does not build upon the specific framework proposed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

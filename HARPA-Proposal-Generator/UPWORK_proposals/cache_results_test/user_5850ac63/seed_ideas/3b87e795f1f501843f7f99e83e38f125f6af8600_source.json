@@ -1,0 +1,21 @@
+{
+    "topic_description": "story-to-image generation using sequential conditional GANs for visualizing multi-sentence narratives",
+    "ideas": [
+        {
+            "Semantic Scene Graph Synthesis": {
+                "Problem": "Current story-to-image generation models struggle to maintain coherent visual elements and spatial relationships across multiple frames, often resulting in inconsistent character appearances and scene layouts in multi-sentence narratives.",
+                "Existing Methods": "Existing approaches typically use sequential GANs or transformer-based models to generate images frame-by-frame, but lack explicit mechanisms to ensure global consistency.",
+                "Motivation": "By introducing an intermediate semantic scene graph representation, we can explicitly model and enforce consistency in object relationships and attributes across the narrative sequence.",
+                "Proposed Method": "We propose a two-stage approach: 1) A text-to-scene-graph transformer that converts multi-sentence narratives into a sequence of semantic scene graphs, capturing objects, attributes, and relationships. 2) A graph-to-image GAN that synthesizes images from these scene graphs while maintaining global consistency. The scene graph sequence acts as a 'storyboard', allowing for iterative refinement. We introduce a novel graph attention mechanism in the GAN to focus on relevant subgraphs for each frame, and a consistency loss that penalizes deviations in object appearances across frames.",
+                "Experiment Plan": "We will evaluate our method on the PororoSV and FlintstonesSV datasets, comparing against state-of-the-art sequential GAN and transformer baselines. Metrics will include FID for image quality, CLIP score for text-image alignment, and a new metric we develop for cross-frame consistency based on object tracking and attribute preservation."
+            },
+            "Narrative-Aware Diffusion Models": {
+                "Problem": "Existing story-to-image generation models often fail to capture the temporal dynamics and causal relationships inherent in multi-sentence narratives, leading to disconnected or illogical image sequences.",
+                "Existing Methods": "Current approaches typically treat each sentence independently or use simple concatenation of text embeddings, losing important narrative structure.",
+                "Motivation": "By incorporating narrative understanding directly into the image generation process, we can produce more coherent and causally-aligned visual stories.",
+                "Proposed Method": "We propose a novel diffusion model architecture that integrates narrative comprehension: 1) A narrative encoder processes the full text sequence, producing hierarchical embeddings that capture sentence-level and story-level semantics. 2) We introduce 'narrative tokens' - learnable embeddings that represent key story elements (e.g., characters, locations, events) and are updated throughout the diffusion process. 3) A cross-attention mechanism allows the image generation to attend to relevant parts of the narrative structure at each diffusion step. 4) We employ a curriculum learning strategy, starting with single-sentence generation and gradually increasing to full story generation, to help the model learn temporal dependencies.",
+                "Experiment Plan": "We will evaluate on a new large-scale dataset we create by pairing multi-sentence stories from books with corresponding image sequences from movies and TV shows. We will compare against state-of-the-art text-to-image models fine-tuned on sequential data, assessing both individual image quality and narrative coherence using human evaluation and automated metrics for story understanding."
+            }
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7c1707db9aafd209aa93db3251e7ebd593d55876</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating graph-based modeling with Self-CheckGPT for enhanced hallucination detection in LLMs.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Graph-based Contextual Knowledge Triples Modeling with Self-CheckGPT using BERT embeddings will enhance hallucination detection accuracy in LLMs, as measured by improved AUROC scores, compared to traditional uncertainty scoring methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods for hallucination detection in large language models (LLMs) often focus on sentence-level or passage-level detection, which lacks granularity and precision. Many approaches rely heavily on external knowledge bases or are constrained by the limitations of internal state access. The proposed hypothesis addresses the gap by integrating Graph-based Contextual Knowledge Triples Modeling with Self-CheckGPT, leveraging BERT embeddings to enhance detection accuracy without external resources. This combination has not been extensively explored and offers a novel way to model dependencies and self-consistency in hallucination detection, potentially improving detection granularity and robustness.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research explores the integration of Graph-based Contextual Knowledge Triples Modeling with Self-CheckGPT using BERT embeddings to enhance hallucination detection in large language models (LLMs). The hypothesis posits that this combination will improve detection accuracy by leveraging the strengths of both methods: the graph-based approach models dependencies and contextual relationships, while Self-CheckGPT assesses self-consistency across multiple generations. BERT embeddings are used to capture semantic nuances and guide the detection process. This approach addresses the limitations of existing methods that either lack granularity or rely on external knowledge bases. By modeling dependencies among contextual triples and assessing self-consistency, the proposed method aims to provide a more robust and precise detection mechanism. The expected outcome is improved AUROC scores, indicating better detection capabilities. The chosen evaluation domain, using datasets like MSCOCO and Mu-SHROOM, is appropriate as it provides a diverse set of examples for evaluating hallucination detection methods. The integration of these components is expected to synergistically enhance detection accuracy by capturing both contextual dependencies and self-consistency.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/34039adf2e9f912637e3e0f1aba56cf976d1444c">Graph-based Contextual Knowledge Triples Modeling</a>: This method uses BERT embeddings to model dependencies among contextual triples in a graph structure, enhancing hallucination detection. It involves segmenting responses into knowledge triples and constructing a graph to represent these dependencies. BERT's embeddings generate deep representations for each triple, facilitating message passing and aggregation via RGCN. This technique is particularly useful for long texts and aligns facts effectively, outperforming baseline methods that do not consider contextual dependencies.</p>
+<p><a href="https://www.semanticscholar.org/paper/7c1707db9aafd209aa93db3251e7ebd593d55876">Self-CheckGPT</a>: Self-CheckGPT employs BERT embeddings to detect hallucinations by leveraging the self-consistency of LLMs. This method involves generating multiple stochastic samples and using BERT embeddings to assess the semantic consistency across these samples. The embeddings are extracted from specific layers of BERT to capture fine-grained semantic differences. This approach is compatible with models like GPT-3 and LLaMA, and it is evaluated using datasets that require zero-resource detection capabilities.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates Graph-based Contextual Knowledge Triples Modeling with Self-CheckGPT using BERT embeddings to enhance hallucination detection in LLMs. The process begins by segmenting the generated text into knowledge triples, which are then used to construct a graph representing contextual dependencies. BERT embeddings are employed to generate deep representations for each triple, enabling message passing and aggregation via RGCN. Concurrently, Self-CheckGPT generates multiple stochastic samples of the text and uses BERT embeddings to assess semantic consistency across these samples. The integration occurs at the decision-making stage, where the graph-based model's output is combined with the self-consistency scores from Self-CheckGPT to produce a final hallucination detection score. This score is used to evaluate the factuality of the generated text. The method is implemented using Python-based experiments, leveraging existing codeblocks for BERT embeddings and graph construction, while building new logic for integrating the two approaches. The expected outcome is improved AUROC scores, indicating enhanced detection accuracy.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Graph-based Contextual Knowledge Triples Modeling with Self-CheckGPT using BERT embeddings will enhance hallucination detection accuracy in LLMs compared to traditional uncertainty scoring methods.</p></p>
+<p><h4 class="custom-heading"><strong>EXPERIMENT OVERVIEW</strong></h4>
+<p>This experiment will integrate two hallucination detection approaches:<br />
+1. Graph-based Contextual Knowledge Triples Modeling: Segments text into knowledge triples, constructs a graph to represent dependencies, and uses BERT embeddings with RGCN for message passing<br />
+2. Self-CheckGPT: Generates multiple stochastic samples and uses BERT embeddings to assess semantic consistency across samples</p></p>
+<p><p>The integration will occur at the decision-making stage, combining the graph-based model's output with Self-CheckGPT's self-consistency scores to produce a final hallucination detection score.</p></p>
+<p><h4 class="custom-heading"><strong>PILOT MODE SETTINGS</strong></h4>
+<p>Implement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.<br />
+- MINI_PILOT: Use 10 examples from each dataset (MSCOCO and Mu-SHROOM) from the training set. Run only 3 stochastic samples for Self-CheckGPT instead of the full number. This should complete in under 10 minutes.<br />
+- PILOT: Use 100 examples from each dataset from the training set for training and 50 examples from the validation set for evaluation. Run 5 stochastic samples for Self-CheckGPT. This should complete in under 2 hours.<br />
+- FULL_EXPERIMENT: Use the complete datasets. Train on the training set, tune hyperparameters on the validation set, and evaluate on the test set. Run 10 stochastic samples for Self-CheckGPT.</p></p>
+<p><p>Start by running the MINI_PILOT. If successful, proceed to the PILOT. Stop after the PILOT and do not run the FULL_EXPERIMENT (a human will verify results and manually change to FULL_EXPERIMENT if appropriate).</p></p>
+<p><h4 class="custom-heading"><strong>DATASETS</strong></h4>
+<ol>
+<li>MSCOCO: A dataset of images with captions, where we'll use the captions for hallucination detection</li>
+<li>Mu-SHROOM: A dataset specifically designed for hallucination detection in LLMs</li>
+</ol></p>
+<p><p>For each dataset, create a data loader that:<br />
+- Loads the appropriate subset based on PILOT_MODE<br />
+- Splits data into training, validation, and test sets (if not already split)<br />
+- Preprocesses text for input to LLMs and BERT</p></p>
+<p><h4 class="custom-heading"><strong>BASELINE METHODS</strong></h4>
+<p>Implement the following baseline methods for comparison:<br />
+1. Traditional uncertainty scoring: Use the token-level probabilities from the LLM to calculate uncertainty scores<br />
+2. Sentence-level classification: Use BERT to classify sentences as factual or hallucinated<br />
+3. Self-CheckGPT alone: Implement the original Self-CheckGPT method without graph integration<br />
+4. Graph-based method alone: Implement the Graph-based Contextual Knowledge Triples Modeling without Self-CheckGPT integration</p></p>
+<p><h4 class="custom-heading"><strong>EXPERIMENTAL METHOD</strong></h4>
+<p>Implement the integrated approach with the following components:</p></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>Knowledge Triple Extraction:</li>
+<li>Segment generated text into subject-predicate-object triples</li>
+<li>Use dependency parsing and rule-based extraction</li>
+<li>Store triples with their source text spans</li>
+</ol></p>
+<p><ol>
+<li>Graph Construction:</li>
+<li>Create nodes for each triple</li>
+<li>Add edges based on semantic relationships between triples</li>
+<li>Use BERT embeddings to represent each node</li>
+</ol></p>
+<p><ol>
+<li>Graph Neural Network:</li>
+<li>Implement RGCN for message passing between nodes</li>
+<li>Aggregate node representations to get graph-level features</li>
+<li>Output a graph-based hallucination score</li>
+</ol></p>
+<p><ol>
+<li>Self-CheckGPT Implementation:</li>
+<li>Generate multiple stochastic samples from the LLM for the same input</li>
+<li>Extract BERT embeddings for each sample</li>
+<li>Calculate consistency scores across samples</li>
+<li>Output a self-consistency hallucination score</li>
+</ol></p>
+<p><ol>
+<li>Integration Module:</li>
+<li>Combine the graph-based score and self-consistency score</li>
+<li>Implement a weighted combination (weights to be tuned on validation data)</li>
+<li>Output a final hallucination detection score</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>EVALUATION</strong></h4>
+<p>Evaluate all methods (baselines and experimental) using:<br />
+1. AUROC (Area Under the Receiver Operating Characteristic curve)<br />
+2. F1 score<br />
+3. Precision and Recall</p></p>
+<p><p>For each evaluation metric:<br />
+- Calculate confidence intervals using bootstrap resampling<br />
+- Perform statistical significance testing between methods<br />
+- Generate ROC curves and precision-recall curves</p></p>
+<p><h4 class="custom-heading"><strong>IMPLEMENTATION DETAILS</strong></h4>
+<ol>
+<li>Use BERT-base-uncased for embeddings</li>
+<li>For LLM generations, use GPT-3.5-turbo with temperature=0.7</li>
+<li>For graph construction, use the NetworkX library</li>
+<li>For RGCN implementation, use PyTorch Geometric</li>
+<li>Save all model outputs, scores, and evaluation metrics</li>
+<li>Generate visualizations of example graphs with hallucinated nodes highlighted</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>EXPECTED OUTPUT</strong></h4>
+<p>The experiment should produce:<br />
+1. A results table comparing all methods on all evaluation metrics<br />
+2. ROC curves and precision-recall curves for visual comparison<br />
+3. Example outputs showing detected hallucinations for each method<br />
+4. Visualizations of knowledge graphs with hallucinated nodes highlighted<br />
+5. A summary of statistical significance tests</p></p>
+<p><p>Please implement this experiment following best practices for reproducibility, including setting random seeds and documenting all hyperparameters.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/7c1707db9aafd209aa93db3251e7ebd593d55876">Paper 0: SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</a> (501 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/4b0b56be0ae9479d2bd5c2f0943db1906343c10f">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/79429814fd4d967b9277af2805c53f370e52ebb5">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/30bcead462777b7e2962bc4b5d650b02034f83ea">Paper 3</a>. The progression from the source paper to the related papers shows a clear evolution in methods for detecting and mitigating hallucinations in LLMs. The source paper introduces a zero-resource approach, while subsequent papers explore verification and inference-based methods to enhance factual accuracy. However, these methods often rely on complex frameworks or external models, which may not be feasible in all scenarios. A novel research idea could focus on developing a more streamlined, resource-efficient approach that combines the strengths of these methods while addressing their limitations.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/7c1707db9aafd209aa93db3251e7ebd593d55876" target="_blank">SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/4b0b56be0ae9479d2bd5c2f0943db1906343c10f" target="_blank">Chain-of-Verification Reduces Hallucination in Large Language Models</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/79429814fd4d967b9277af2805c53f370e52ebb5" target="_blank">Chain of Natural Language Inference for Reducing Large Language Model Ungrounded Hallucinations</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/30bcead462777b7e2962bc4b5d650b02034f83ea" target="_blank">Detecting and Mitigating the Ungrounded Hallucinations in Text Generation by LLMs</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/1704e693d2e26805025bc5d4fbc8c504fb317527" target="_blank">Towards Long Context Hallucination Detection</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/79170d00db46547d10edf2cc5923e4431220cbcb" target="_blank">FactSelfCheck: Fact-Level Black-Box Hallucination Detection for LLMs</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/91e8102b16daeffd4031418c479eb2764ca20877" target="_blank">Representations Matter: Embedding Modes of Large Language Models using Dynamic Mode Decomposition</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/34039adf2e9f912637e3e0f1aba56cf976d1444c" target="_blank">Zero-resource Hallucination Detection for Text Generation via Graph-based Contextual Knowledge Triples Modeling</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/661bb35ce8b6a5d279f85119d0df581e572585b4" target="_blank">MALM: A Multi-Information Adapter for Large Language Models to Mitigate Hallucination</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/c39cbafab7c9dc7aac9a964f61ad0c01dc863ebe" target="_blank">MARiA at SemEval 2024 Task-6: Hallucination Detection Through LLMs, MNLI, and Cosine similarity</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/bc41b330073640f5a7b7f22338c031007d831bdf" target="_blank">IRIT-Berger-Levrault at SemEval-2024: How Sensitive Sentence Embeddings are to Hallucinations?</a> (2024)</li>
+</ol>
+</body>
+</html>

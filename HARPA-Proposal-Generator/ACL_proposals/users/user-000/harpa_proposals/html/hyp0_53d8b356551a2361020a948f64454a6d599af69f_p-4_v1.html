@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>53d8b356551a2361020a948f64454a6d599af69f</p>
+<hr>
+<h2>Title</h2>
+<p>Dynamically adjust prompt complexity based on reasoning steps to improve NLP and RL task performance.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Dynamically adjusting dynamic prefix prompts based on the number of reasoning steps will lead to improved performance in natural language generation and offline reinforcement learning tasks compared to static prompt-tuning methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods primarily focus on static or generalized prompt tuning strategies without considering the specific task difficulty metrics in a dynamic manner. This oversight leads to suboptimal performance in complex tasks where the prompt needs to be tailored to the task's complexity. No prior work has extensively explored the combination of dynamic prefix prompts with task complexity metrics like the number of reasoning steps to dynamically adjust prompt complexity in real-time. This hypothesis addresses the gap by proposing a method that dynamically adjusts prompt complexity based on task difficulty metrics, specifically the number of reasoning steps, to optimize performance in natural language generation and offline reinforcement learning tasks.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research idea explores the integration of dynamic prefix prompts with task complexity metrics, specifically the number of reasoning steps, to optimize performance in natural language generation and offline reinforcement learning tasks. Dynamic prefix prompts involve adjusting the prefix parameters of a language model dynamically during the generation process. This technique uses an attribute discriminator to update the prefix parameters based on the current hidden states of the model, allowing the prompts to act as dynamic guides for text generation. By incorporating the number of reasoning steps as a task complexity metric, the model can dynamically adjust the complexity of the prompts in real-time, tailoring them to the specific requirements of each task. This approach aims to enhance the model's ability to generate text that adheres to desired attributes and constraints while optimizing computational resources. The expected outcome is improved performance in terms of BLEU scores for natural language generation and reward maximization in offline reinforcement learning tasks. This hypothesis addresses the gap in existing research by exploring the novel combination of dynamic prefix prompts and task complexity metrics, providing a more tailored approach to prompt tuning that adapts to the specific needs of each task.</p>
+<h3>Background</h3>
+<p>Dynamic Prefix Prompts: Dynamic prefix prompts involve adjusting the prefix parameters of a language model dynamically during the generation process. This technique uses an attribute discriminator to update the prefix parameters based on the current hidden states of the model, allowing the prompts to act as dynamic guides for text generation. The process involves adding a vector of length 'l' before the input sequence, which is continuously adjusted to meet specific constraints. This approach requires fine-tuning the language model to understand and respond to these dynamic prompts effectively, enhancing the model's ability to generate text that adheres to desired attributes and constraints.</p>
+<p>Number of Reasoning Steps: The number of reasoning steps is a metric that quantifies the sequential logical operations needed to arrive at a solution. In natural language generation, this might involve the number of transformations or inferences required to generate coherent text from a given prompt. In reinforcement learning, it could be the number of decision points or policy evaluations needed to achieve a goal. This metric is implemented by tracing the decision-making process in models, such as tracking the depth of decision trees or the layers of neural networks involved in processing. The complexity increases with the number of steps, indicating a higher cognitive load and potential for errors.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves dynamically adjusting dynamic prefix prompts based on the number of reasoning steps to optimize performance in natural language generation and offline reinforcement learning tasks. The implementation begins with the integration of an attribute discriminator within the language model to monitor the hidden states and adjust the prefix parameters dynamically. The number of reasoning steps is calculated by tracing the decision-making process within the model, such as tracking the depth of decision trees or the layers of neural networks involved in processing. This metric serves as a guide for adjusting the complexity of the dynamic prefix prompts in real-time. The process involves continuously updating the prefix parameters based on the number of reasoning steps, allowing the model to tailor the prompts to the specific requirements of each task. The expected outcome is improved performance in terms of BLEU scores for natural language generation and reward maximization in offline reinforcement learning tasks. The method leverages the ASD Agent's capabilities to automate the experiment, ensuring that the hypothesis is tested across multiple runs with a meta-analysis to validate the results. The integration of dynamic prefix prompts with task complexity metrics provides a novel approach to prompt tuning, offering a more tailored and efficient method for optimizing performance in complex tasks.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that dynamically adjusting prefix prompts based on the number of reasoning steps will improve performance in natural language generation (NLG) and offline reinforcement learning (RL) tasks compared to static prompt-tuning methods.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare two prompt-tuning approaches:<br />
+1. <strong>Baseline</strong>: Static prefix prompt-tuning where fixed prefix parameters are added to the input sequence<br />
+2. <strong>Experimental</strong>: Dynamic prefix prompt-tuning where prefix parameters are adjusted based on the number of reasoning steps required for the task</p></p>
+<p><p>The experiment should be implemented with three pilot modes (MINI_PILOT, PILOT, and FULL_EXPERIMENT) to allow for progressive testing and validation.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Dynamic Prefix Prompt Module</strong></h4>
+<p>Create a module that can:<br />
+- Add a learnable vector prefix of length 'l' before the input sequence<br />
+- Implement an attribute discriminator that monitors the hidden states of the model<br />
+- Dynamically adjust the prefix parameters during the generation process<br />
+- Scale the complexity of the prefix based on the estimated number of reasoning steps</p></p>
+<p><p>The dynamic prefix should be implemented as a wrapper around a pre-trained language model (use a Hugging Face transformer model like GPT-2 or T5).</p></p>
+<p><h4 class="custom-heading"><strong>2. Reasoning Steps Metric</strong></h4>
+<p>Implement a method to estimate the number of reasoning steps required for a given task:<br />
+- For NLG tasks: Count the number of logical operations/transformations needed to generate the target output<br />
+- For RL tasks: Count the number of decision points in the policy evaluation</p></p>
+<p><p>This can be implemented by:<br />
+- Analyzing the complexity of the input-output mapping<br />
+- Tracking the depth of decision trees or neural network layers involved<br />
+- Using heuristics based on task characteristics (e.g., length of required output, number of constraints)</p></p>
+<p><h4 class="custom-heading"><strong>3. Experiment Tasks</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Natural Language Generation Task</strong></h4>
+<ul>
+<li>Use a summarization or translation dataset (e.g., CNN/Daily Mail for summarization or WMT for translation)</li>
+<li>Implement both static and dynamic prefix prompt approaches</li>
+<li>Evaluate using BLEU scores and other relevant metrics</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Offline Reinforcement Learning Task</strong></h4>
+<ul>
+<li>Use a standard RL environment (e.g., CartPole or a text-based game)</li>
+<li>Implement both static and dynamic prefix prompt approaches for policy learning</li>
+<li>Evaluate using cumulative rewards</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Pilot Modes</strong></h4></p>
+<p><p>Implement a global variable <code>PILOT_MODE</code> with three possible settings:</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>MINI_PILOT</strong></h4>
+<ul>
+<li>NLG: Process 10 examples from the training set</li>
+<li>RL: Run 3 episodes with 15 steps each</li>
+<li>Purpose: Quick code verification and debugging (should run in minutes)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>PILOT</strong></h4>
+<ul>
+<li>NLG: Process 200 examples (150 from training, 50 from validation)</li>
+<li>RL: Run 30 episodes with up to 50 steps each</li>
+<li>Purpose: Verify if the approach shows promising results (should run in 1-2 hours)</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>FULL_EXPERIMENT</strong></h4>
+<ul>
+<li>NLG: Full dataset processing with proper train/validation/test splits</li>
+<li>RL: 200+ episodes with full step limits</li>
+<li>Purpose: Complete evaluation of the hypothesis</li>
+</ul></p>
+<p><p>The experiment should first run the MINI_PILOT, then if everything looks good, proceed to the PILOT. After the PILOT completes, it should stop and not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>5. Evaluation Protocol</strong></h4></p>
+<p><ul>
+<li>For NLG tasks:</li>
+<li>Calculate BLEU scores for both baseline and experimental approaches</li>
+<li>Report perplexity and other relevant NLG metrics</li>
+<li>Perform statistical significance testing (t-test or bootstrap resampling)</li>
+</ul></p>
+<p><ul>
+<li>For RL tasks:</li>
+<li>Calculate average cumulative rewards</li>
+<li>Track success rates for task completion</li>
+<li>Measure sample efficiency (rewards per step)</li>
+<li>Perform statistical significance testing</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>6. Analysis Requirements</strong></h4></p>
+<p><ul>
+<li>Plot the relationship between estimated reasoning steps and performance improvement</li>
+<li>Analyze how the dynamic prefix parameters change during generation</li>
+<li>Compare computational efficiency between static and dynamic approaches</li>
+<li>Report confidence intervals for all metrics</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>7. Implementation Steps</strong></h4></p>
+<p><ol>
+<li>Set up the environment with required dependencies</li>
+<li>Implement the static prefix prompt-tuning (baseline)</li>
+<li>Implement the reasoning steps metric</li>
+<li>Implement the dynamic prefix prompt-tuning (experimental)</li>
+<li>Set up the NLG and RL tasks</li>
+<li>Implement evaluation metrics</li>
+<li>Run experiments in pilot modes</li>
+<li>Analyze and report results</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>8. Output Requirements</strong></h4></p>
+<p><p>The experiment should output:<br />
+- Detailed logs of model performance<br />
+- Visualizations of the relationship between reasoning steps and performance<br />
+- Statistical analysis of the results<br />
+- A summary report comparing baseline and experimental approaches</p></p>
+<p><p>Please ensure all code is well-documented and includes appropriate error handling. The implementation should be modular to allow for easy modification and extension.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/53d8b356551a2361020a948f64454a6d599af69f">Paper 0: Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> (4442 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/3ab4ca8ae36b6718f1021eecd01890c02439dc19">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/d08d1308a62200b6ad4c7627e50a3bbdd06ea863">Paper 2</a>. The analysis reveals a progression from optimizing continuous prompts for language generation to enhancing prompt-tuning in offline RL through diffusion models and adaptive selection mechanisms. The existing research has successfully expanded the application of prompt-tuning but still faces challenges in optimizing prompt selection and efficiency. A research idea that builds on these advancements could explore a novel method for dynamically adjusting prompt complexity based on task difficulty, which could further improve performance and efficiency in both language and RL tasks.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+</body>
+</html>

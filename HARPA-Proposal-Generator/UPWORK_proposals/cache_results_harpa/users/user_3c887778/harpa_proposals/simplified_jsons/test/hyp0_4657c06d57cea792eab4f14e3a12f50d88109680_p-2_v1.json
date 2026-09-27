@@ -1,0 +1,122 @@
+{
+  "paper_id": "4657c06d57cea792eab4f14e3a12f50d88109680",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Dynamic Network Datasets",
+      "criteria_met_question": "Does the experiment use at least two benchmark dynamic network datasets (e.g., DBLP, Reddit, Bitcoin) that contain temporal information and ground truth labels for node classification and community detection?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Dynamic GraphWave Implementation",
+      "criteria_met_question": "Does the experiment implement the baseline dynamic GraphWave embedding method that uses heat diffusion patterns to represent nodes' structural roles across multiple time steps?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "High-Order Temporal Dependency Model",
+      "criteria_met_question": "Does the experiment implement a recurrent neural network (e.g., LSTM, GRU) to capture high-order temporal dependencies across multiple time steps in the dynamic network?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integrated Model Implementation",
+      "criteria_met_question": "Does the experiment implement an integrated model that combines the high-order temporal dependencies with dynamic GraphWave embeddings (e.g., through concatenation, attention mechanism, or other integration methods)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Node Classification Task",
+      "criteria_met_question": "Does the experiment evaluate the integrated model on a node classification task using appropriate metrics (e.g., accuracy, F1-score, AUC-ROC) and compare it against the baseline dynamic GraphWave embeddings?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Community Detection Task",
+      "criteria_met_question": "Does the experiment evaluate the integrated model on a community detection task using appropriate metrics (e.g., modularity, normalized mutual information) and compare it against the baseline dynamic GraphWave embeddings?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance testing (e.g., t-tests, ANOVA) to determine if the performance improvements of the integrated model over the baseline are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that evaluates the contribution of different components (e.g., varying orders of temporal dependencies, different integration methods) to the overall performance?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Parameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment analyze how sensitive the integrated model is to key parameters (e.g., RNN hidden dimensions, GraphWave scaling parameters, integration weights) by varying these parameters and measuring performance changes?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze and report the computational efficiency (e.g., training time, memory usage) of the integrated model compared to the baseline dynamic GraphWave embeddings?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Comparison with Other State-of-the-Art Methods",
+      "criteria_met_question": "Does the experiment compare the integrated model against other state-of-the-art methods for dynamic network embedding (e.g., DynGEM, DynamicTriad, CTDNE) beyond just the dynamic GraphWave baseline?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of Embeddings",
+      "criteria_met_question": "Does the experiment include visualizations (e.g., t-SNE, PCA) of the learned embeddings to qualitatively assess how well the integrated model captures both structural and temporal patterns compared to the baseline?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Case Study on Real-World Network",
+      "criteria_met_question": "Does the experiment include a detailed case study on a real-world dynamic network that demonstrates the practical utility of the integrated model for specific applications?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Temporal Evolution Analysis",
+      "criteria_met_question": "Does the experiment analyze how the integrated model captures the temporal evolution of network structures by examining embeddings at different time points and tracking changes in node roles or community memberships?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of error patterns (e.g., which types of nodes or communities are misclassified) to identify limitations of the integrated model?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Scalability Analysis",
+      "criteria_met_question": "Does the experiment evaluate the scalability of the integrated model by testing it on networks of varying sizes (e.g., from thousands to millions of nodes) and reporting how performance scales with network size?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Code and Model Availability",
+      "criteria_met_question": "Does the experiment provide access to the implementation code, trained models, and processed datasets to enable reproducibility of the results?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrate high-order temporal dependencies with dynamic GraphWave embeddings for improved node classification and community detection.",
+    "research_idea_hypothesis": "In dynamic networks, integrating high-order temporal dependencies with dynamic GraphWave embeddings will improve the accuracy of node classification and community detection compared to using dynamic GraphWave embeddings alone.",
+    "description": "This research explores the integration of high-order temporal dependencies with dynamic GraphWave embeddings to enhance node classification and community detection in dynamic networks. High-order temporal dependencies capture complex temporal relationships beyond immediate neighbors, while dynamic GraphWave embeddings represent nodes' structural roles using heat diffusion patterns. By combining these approaches, we aim to capture both the temporal evolution and structural roles of nodes, addressing the gap in existing methods that often focus on one aspect. This integration is expected to improve the accuracy of node classification and community detection tasks, particularly in networks with frequent connectivity changes. The approach will be implemented by first modeling high-order temporal dependencies using recurrent neural networks to capture interactions over multiple time steps. These dependencies will then be integrated with dynamic GraphWave embeddings, which use heat diffusion patterns to represent nodes' structural roles. The combined embeddings will be evaluated on benchmark datasets for node classification and community detection tasks, comparing their performance against baseline methods using metrics such as accuracy and modularity.",
+    "research_gap": "Existing methods for dynamic network embeddings often focus on either structural proximity or temporal dynamics, but rarely both in a unified manner. Many approaches overlook the potential of combining high-order temporal dependencies with dynamic GraphWave embeddings, especially in networks with frequent connectivity changes. This gap is significant because capturing both structural roles and temporal evolution can enhance the accuracy of node classification and community detection tasks. No prior work has extensively tested the integration of high-order temporal dependencies with dynamic GraphWave embeddings to capture complex temporal patterns and structural roles simultaneously.",
+    "research_idea_variables": "[High-Order Temporal Dependencies](https://www.semanticscholar.org/paper/4cc5ca0772b91b6c5cef3f956574f60c43829b6c): High-order temporal dependencies involve capturing interactions that occur over multiple time steps, extending beyond immediate neighbors. This is achieved using recurrent neural networks or attention mechanisms to model complex temporal relationships. This variable is crucial as it allows for a comprehensive understanding of how information propagates through the network over time, which is often overlooked in existing methods focusing solely on structural roles. By capturing these dependencies, the embeddings can reflect the temporal dynamics of the network more accurately, leading to improved performance in node classification and community detection tasks.\n\n[Dynamic GraphWave Embeddings](https://www.semanticscholar.org/paper/a97f9670499d7063d7b70b16a3f772eba9f404ad): Dynamic GraphWave embeddings use heat diffusion patterns to represent each node's structural role within the network. This approach is unsupervised and mathematically proves that nodes with similar network neighborhoods will have similar embeddings, even if they reside in different regions. By integrating these embeddings with high-order temporal dependencies, the combined approach can capture both structural roles and temporal evolution, addressing the limitations of existing methods that often focus on one aspect. This integration is expected to enhance the accuracy of node classification and community detection tasks.",
+    "Explanation": "High-order temporal dependencies capture complex temporal relationships, while dynamic GraphWave embeddings represent structural roles. Together, they provide a comprehensive view of node dynamics, improving classification and detection tasks.",
+    "research_idea_long_description": "The temporal features from high-order dependencies are concatenated with structural embeddings from GraphWave, allowing for a unified representation that captures both temporal and structural aspects, enhancing task performance.",
+    "research_idea_design_prompt": "The proposed method integrates high-order temporal dependencies with dynamic GraphWave embeddings to enhance node classification and community detection in dynamic networks. The implementation involves several key steps: 1) Model high-order temporal dependencies using recurrent neural networks (RNNs) to capture interactions over multiple time steps. This involves training RNNs on sequences of node interactions to learn complex temporal relationships. 2) Compute dynamic GraphWave embeddings using heat diffusion patterns to represent nodes' structural roles. This involves calculating heat kernel diffusion patterns for each node to generate low-dimensional embeddings. 3) Integrate the high-order temporal dependencies with dynamic GraphWave embeddings by concatenating the learned temporal features with the structural embeddings. This integration captures both the temporal evolution and structural roles of nodes. 4) Evaluate the combined embeddings on benchmark datasets for node classification and community detection tasks. This involves comparing their performance against baseline methods using metrics such as accuracy and modularity. The integration of high-order temporal dependencies with dynamic GraphWave embeddings is expected to improve the accuracy of these tasks by capturing both temporal dynamics and structural roles.",
+    "research_idea_elements": "Independent variable: Integration of high-order temporal dependencies with dynamic GraphWave embeddings\n\nDependent variable: Accuracy of node classification and community detection\n\nComparison groups: High-Order Temporal GraphWave (integrated approach) vs. dynamic GraphWave embeddings alone\n\nBaseline/control: Dynamic GraphWave embeddings alone\n\nContext/setting: Dynamic networks\n\nAssumptions: High-order temporal dependencies can be effectively captured using RNNs; GraphWave embeddings accurately represent structural roles; temporal and structural features can be meaningfully integrated\n\nRelationship type: Causation (integration will improve accuracy)\n\nPopulation: Nodes in dynamic networks\n\nTimeframe: Multiple time steps (specific duration not specified)\n\nMeasurement method: Node classification accuracy, F1-score, AUC-ROC; Community detection modularity and normalized mutual information (NMI)",
+    "motivation": "The source paper is [Paper 0: Learning Structural Node Embeddings via Diffusion Wavelets](https://www.semanticscholar.org/paper/4657c06d57cea792eab4f14e3a12f50d88109680) (397 citations, 2017). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/f950e179e939d2cdda04e27a29c2c0e6fced9e9d). The source paper introduces GraphWave, a method for learning structural node embeddings using diffusion wavelets, which is proven to effectively capture structural roles in networks. The related paper extends this method's application to urban spatial analysis, showcasing its utility in identifying significant urban areas based on human activity data. However, both papers focus on static network structures. A potential advancement could involve exploring dynamic networks, where node roles and connections evolve over time. This would address a limitation in the current work by extending GraphWave's applicability to temporal networks, which are common in real-world scenarios such as social networks, communication networks, and evolving urban environments.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating high-order temporal dependencies with dynamic GraphWave embeddings will improve the accuracy of node classification and community detection in dynamic networks compared to using dynamic GraphWave embeddings alone.\n\n## Experiment Overview\nThis experiment will compare two approaches for generating node embeddings in dynamic networks:\n1. Baseline: Dynamic GraphWave embeddings alone\n2. Experimental: High-Order Temporal GraphWave (integration of high-order temporal dependencies with dynamic GraphWave embeddings)\n\nThe experiment will evaluate these approaches on two tasks:\n1. Node classification\n2. Community detection\n\n## Implementation Details\n\n### Pilot Mode Configuration\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`.\n- `MINI_PILOT`: Use a very small subset of data (e.g., 2-3 time steps of a small network with ~50-100 nodes) to verify code functionality. Should run in a few minutes.\n- `PILOT`: Use a moderate subset of data (e.g., 5-10 time steps of a network with ~500 nodes) to check if results are promising. Should run in less than 1-2 hours.\n- `FULL_EXPERIMENT`: Use the complete datasets with all time steps and nodes.\n\nStart with `MINI_PILOT`, then run `PILOT` if everything looks good. Do not run `FULL_EXPERIMENT` automatically - this will be manually triggered after human verification of pilot results.\n\n### Data Processing\n1. Load dynamic network datasets suitable for node classification and community detection tasks. For the pilot experiments, use smaller datasets like:\n   - Synthetic dynamic networks\n   - Small real-world dynamic networks (e.g., email communication networks, small social networks)\n\n2. For each dataset, create snapshots of the network at different time steps.\n\n3. For node classification tasks, ensure that node labels are available for evaluation.\n\n4. For community detection tasks, if ground truth communities are not available, use modularity as the evaluation metric.\n\n### Baseline Implementation: Dynamic GraphWave Embeddings\n1. Implement dynamic GraphWave embeddings for each snapshot of the network:\n   - For each time step t, compute the heat kernel diffusion patterns for each node\n   - Generate low-dimensional embeddings using the characteristic function of the wavelet coefficients\n   - Store these embeddings for each node at each time step\n\n2. For node classification and community detection tasks, use the embeddings from time step t to predict labels/communities at time step t+1.\n\n### Experimental Implementation: High-Order Temporal GraphWave\n1. Implement high-order temporal dependencies using RNNs:\n   - For each node, create sequences of its connectivity patterns over multiple time steps\n   - Train an RNN (LSTM or GRU) to capture temporal dependencies in these sequences\n   - Extract the hidden state of the RNN as the temporal embedding for each node\n\n2. Compute dynamic GraphWave embeddings as in the baseline approach.\n\n3. Integrate the high-order temporal dependencies with dynamic GraphWave embeddings:\n   - Concatenate the temporal embeddings from the RNN with the structural embeddings from GraphWave\n   - Optionally, apply a linear transformation to reduce dimensionality if needed\n\n4. Use these integrated embeddings for node classification and community detection tasks.\n\n### Evaluation\n1. Node Classification:\n   - Split the data into training and testing sets\n   - Train a classifier (e.g., logistic regression) using the embeddings from both approaches\n   - Evaluate using accuracy, F1-score, and AUC-ROC\n\n2. Community Detection:\n   - Apply a clustering algorithm (e.g., k-means) to the embeddings from both approaches\n   - Evaluate using modularity and, if ground truth is available, normalized mutual information (NMI)\n\n3. Statistical Analysis:\n   - Perform multiple runs (at least 5 for MINI_PILOT, 10 for PILOT, 30 for FULL_EXPERIMENT)\n   - Calculate mean and standard deviation of performance metrics\n   - Conduct statistical significance tests (e.g., paired t-tests) to compare baseline and experimental approaches\n\n### Visualization and Reporting\n1. Generate plots comparing the performance of baseline and experimental approaches:\n   - Bar charts for accuracy and modularity\n   - Line plots showing performance over time steps\n\n2. Visualize the embeddings using dimensionality reduction techniques (e.g., t-SNE or PCA)\n\n3. Generate a comprehensive report including:\n   - Experimental setup\n   - Results for both approaches on both tasks\n   - Statistical analysis\n   - Visualizations\n   - Conclusions and insights\n\n## Required Libraries\n- numpy (for numerical computations)\n- networkx (for network analysis)\n- pytorch (for implementing RNNs)\n- scikit-learn (for classification, clustering, and evaluation)\n- matplotlib and seaborn (for visualization)\n\nPlease implement this experiment following the structure outlined above, ensuring that the code is modular, well-documented, and reproducible.",
+  "core_related_works": [
+    {
+      "title": "Embedding Dynamic Attributed Networks by Modeling the Evolution Processes",
+      "paperId": "4cc5ca0772b91b6c5cef3f956574f60c43829b6c",
+      "url": "https://www.semanticscholar.org/paper/4cc5ca0772b91b6c5cef3f956574f60c43829b6c",
+      "year": 2020,
+      "source_variable": "High-Order Temporal Dependencies",
+      "source_paper_lookup_title": "Embedding Dynamic Attributed Networks by Modeling the Evolution Processes"
+    },
+    {
+      "title": "TME-BNA: Temporal Motif-Preserving Network Embedding with Bicomponent Neighbor Aggregation",
+      "paperId": "a97f9670499d7063d7b70b16a3f772eba9f404ad",
+      "url": "https://www.semanticscholar.org/paper/a97f9670499d7063d7b70b16a3f772eba9f404ad",
+      "year": 2021,
+      "source_variable": "Dynamic GraphWave Embeddings",
+      "source_paper_lookup_title": "TME-BNA: Temporal Motif-Preserving Network Embedding with Bicomponent Neighbor Aggregation"
+    }
+  ],
+  "references": "1. Learning Structural Node Embeddings via Diffusion Wavelets (2017). Paper ID: 4657c06d57cea792eab4f14e3a12f50d88109680\n\n2. Identifying Important Spatial Structures in Cities Based on Graphwave \u2013 Taking Shanghai as an Example (2018). Paper ID: f950e179e939d2cdda04e27a29c2c0e6fced9e9d\n\n3. Embedding Node Structural Role Identity Using Stress Majorization (2021). Paper ID: f5435067d268cddf9776657ee8d9e07539a5a100\n\n4. A Survey on Embedding Dynamic Graphs (2021). Paper ID: 47d94e480681e2bb35f79ecf2620ea2e5e1904ad\n\n5. Dynamic Network Embeddings for Network Evolution Analysis (2019). Paper ID: 2eefd68beb64c89493a8ae5a941aaa1379ea22b0\n\n6. A Method Based on Temporal Embedding for the Pairwise Alignment of Dynamic Networks (2023). Paper ID: 8894fe21a7ec573c32f3229597de3a52d49ad731\n\n7. Temporal Network Representation Learning (2019). Paper ID: 931186d1ba3c6bcf34f69ad7e582cdcdac5503b2\n\n8. Unifying Structural Proximity and Equivalence for Enhanced Dynamic Network Embedding (2025). Paper ID: 74c3845a74b9c3abe84f787d24407a932162ece0\n\n9. EPNE: Evolutionary Pattern Preserving Network Embedding (2020). Paper ID: d741188685cf0ac855b574830172f8ee982aa0a6\n\n10. Identifying Transition States of Chemical Kinetic Systems using Network Embedding Techniques (2020). Paper ID: d7f538eed636531ae2949c64227435ed02811bff\n\n11. struc2vec: Learning Node Representations from Structural Identity (2017). Paper ID: 0f7f5679615effcc4c9b98cf2deb17c30744a6d7\n\n12. Embedding Dynamic Attributed Networks by Modeling the Evolution Processes (2020). Paper ID: 4cc5ca0772b91b6c5cef3f956574f60c43829b6c\n\n13. TME-BNA: Temporal Motif-Preserving Network Embedding with Bicomponent Neighbor Aggregation (2021). Paper ID: a97f9670499d7063d7b70b16a3f772eba9f404ad"
+}

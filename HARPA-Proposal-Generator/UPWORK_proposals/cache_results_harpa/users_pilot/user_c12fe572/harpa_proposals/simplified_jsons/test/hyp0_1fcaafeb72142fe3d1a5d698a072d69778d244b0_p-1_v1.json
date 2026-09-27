@@ -1,0 +1,147 @@
+{
+  "paper_id": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "MIND Dynamic Retrieval Implementation",
+      "criteria_met_question": "Does the experiment implement the MIND dynamic retrieval strategy that monitors token-level entropy and attention patterns to trigger retrieval based on real-time uncertainty signals?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Memory-Augmented Mechanism Implementation",
+      "criteria_met_question": "Does the experiment implement a memory store that retains high-confidence facts across multiple retrieval steps and is dynamically updated based on real-time uncertainty signals?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integration of MIND and Memory Mechanism",
+      "criteria_met_question": "Does the experiment integrate the MIND dynamic retrieval strategy with the memory-augmented mechanism so that retrieved information from MIND is stored in the memory store and made accessible for subsequent reasoning steps?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "MIND Baseline Implementation",
+      "criteria_met_question": "Does the experiment implement a baseline using only the MIND dynamic retrieval strategy without the memory-augmented mechanism for comparison purposes?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "HotpotQA Dataset Implementation",
+      "criteria_met_question": "Does the experiment use the HotpotQA dataset, which contains multi-hop questions requiring reasoning over multiple documents, to evaluate the proposed method?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "2WikiMultihopQA Dataset Implementation",
+      "criteria_met_question": "Does the experiment use the 2WikiMultihopQA dataset, which contains multi-hop questions requiring reasoning over multiple documents, to evaluate the proposed method?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Retrieval Precision Measurement",
+      "criteria_met_question": "Does the experiment measure retrieval precision by calculating the accuracy of retrieved information (proportion of retrieved documents that are relevant to answering the question)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Reasoning Coherence Measurement",
+      "criteria_met_question": "Does the experiment measure reasoning coherence by assessing the consistency of reasoning chains (whether the system maintains logical connections between reasoning steps without contradictions)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Answer Accuracy Measurement",
+      "criteria_met_question": "Does the experiment measure the accuracy of final answers produced by both the integrated system and the baseline on the multi-hop QA datasets?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "F1 Score Measurement",
+      "criteria_met_question": "Does the experiment calculate F1 scores (harmonic mean of precision and recall) for the answers produced by both the integrated system and the baseline?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance testing (e.g., t-tests or bootstrap tests) to determine if the differences in performance metrics between the integrated system and baseline are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Multiple Experimental Runs",
+      "criteria_met_question": "Does the experiment include multiple runs (at least 3) with different random seeds to ensure statistical confidence in the results?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Retrieval Efficiency Measurement",
+      "criteria_met_question": "Does the experiment measure retrieval efficiency by tracking the number of retrieval calls made by both the integrated system and the baseline?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Memory Usage Analysis",
+      "criteria_met_question": "Does the experiment analyze how the memory store is utilized during reasoning, including what types of information are stored and how frequently the memory is accessed?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that tests different components of the integrated system (e.g., varying memory capacity, different thresholds for MIND) to understand their individual contributions?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Error Analysis",
+      "criteria_met_question": "Does the experiment include a detailed error analysis that categorizes and examines the types of errors made by both the integrated system and the baseline?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Qualitative Analysis of Reasoning Chains",
+      "criteria_met_question": "Does the experiment include a qualitative analysis with examples of reasoning chains from both the integrated system and baseline to illustrate differences in coherence?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Comparison with Static Retrieval Strategies",
+      "criteria_met_question": "Does the experiment compare the integrated system not only with MIND alone but also with static retrieval strategies (e.g., retrieve-once-at-beginning approaches)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze the computational efficiency (e.g., runtime, memory usage) of the integrated system compared to the baseline?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of Attention Patterns",
+      "criteria_met_question": "Does the experiment include visualizations of attention patterns and entropy signals that trigger retrieval in both the integrated system and baseline?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Cross-dataset Generalization",
+      "criteria_met_question": "Does the experiment evaluate how well the integrated system generalizes across different multi-hop QA datasets beyond the primary evaluation datasets?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include an analysis of how sensitive the integrated system is to different hyperparameter settings (e.g., entropy thresholds, memory capacity)?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrate MIND with memory mechanisms to enhance retrieval precision and reasoning coherence in multi-hop QA.",
+    "research_idea_hypothesis": "Integrating the MIND dynamic retrieval strategy with a memory-augmented mechanism will improve retrieval precision and reasoning coherence in multi-hop question answering tasks compared to using MIND alone.",
+    "description": "This research explores the integration of the MIND dynamic retrieval strategy with memory-augmented mechanisms to enhance retrieval precision and reasoning coherence in multi-hop question answering tasks. MIND employs dynamic thresholding to monitor token-level entropy and attention patterns, triggering retrieval based on real-time uncertainty signals. By integrating a memory store, the system retains high-confidence facts across reasoning steps, reducing redundant retrievals and maintaining context. This combination is expected to improve retrieval precision by ensuring that only necessary information is retrieved, while the memory mechanism enhances reasoning coherence by providing consistent context throughout the task. This approach addresses the gap in existing research where dynamic retrieval strategies often lack memory integration, leading to incomplete reasoning chains. The evaluation will focus on multi-hop QA datasets like HotpotQA and 2WikiMultihopQA, measuring improvements in retrieval precision and reasoning coherence. The expected outcome is a more efficient and accurate retrieval-augmented reasoning system that effectively balances retrieval frequency and information relevance.",
+    "research_gap": "Existing methods in retrieval-augmented reasoning often struggle with dynamically adapting retrieval actions based on real-time uncertainty signals, particularly in multi-hop question answering tasks. While dynamic retrieval strategies like DRAGIN and SEAKER have been explored, they often lack the integration of memory mechanisms that ensure continuity and coherence across reasoning steps. This gap is critical because maintaining context and reducing redundant retrievals can significantly enhance reasoning accuracy and efficiency. No prior work has extensively tested the combination of dynamic retrieval with memory-augmented mechanisms to address this issue, which is crucial for improving retrieval precision and reasoning coherence.",
+    "research_idea_variables": "[MIND (Memory-Informed & Interactive Dynamic RAG)](https://www.semanticscholar.org/paper/036ed091d7789665f10ce386960a49715bfb1575): MIND is a dynamic retrieval strategy that uses dynamic thresholding to monitor token-level entropy and attention patterns, triggering retrieval based on real-time uncertainty signals. It is particularly effective in multi-hop reasoning tasks where retrieval needs to be dynamically adjusted based on intermediate reasoning outputs. MIND generates sub-queries to retrieve missing information while maintaining contextual relevance. This strategy is selected for its ability to adaptively trigger retrieval actions, ensuring that the retrieval process remains responsive to the evolving needs of the task. The expected role of MIND in this research is to improve retrieval precision by ensuring that only necessary information is retrieved, reducing unnecessary retrieval calls.\n\n[Memory-Augmented Mechanism](https://www.semanticscholar.org/paper/036ed091d7789665f10ce386960a49715bfb1575): The memory-augmented mechanism involves a memory store that retains high-confidence facts across multiple retrieval steps. This component is crucial for maintaining context and consistency throughout multi-hop question answering tasks. By storing retrieved entities, the memory store reduces the need for repeated retrieval of the same information, thus enhancing retrieval efficiency. The memory mechanism works in conjunction with MIND to ensure that relevant information is consistently available throughout the reasoning process. This approach is expected to improve reasoning coherence by providing a structured memory of retrieved entities, ensuring consistent reasoning across multi-hop QA tasks.",
+    "Explanation": "MIND's dynamic retrieval improves precision by adapting retrieval actions based on real-time signals, ensuring only necessary information is retrieved. The memory-augmented mechanism enhances reasoning coherence by maintaining context across reasoning steps. This combination is useful as it addresses the issue of redundant retrievals and incomplete reasoning chains, common in multi-hop QA tasks. The chosen evaluation domain, multi-hop QA, is well-matched as it requires reasoning over multiple documents, testing the proposed method's ability to maintain context and coherence.",
+    "research_idea_long_description": "MIND's retrieval actions trigger the memory-augmented mechanism to store high-confidence facts, ensuring context is maintained across reasoning steps. This synergy occurs at the retrieval stage, where MIND's dynamic actions are complemented by the memory store's ability to retain relevant information, reducing redundant retrievals and enhancing reasoning coherence.",
+    "research_idea_design_prompt": "The proposed method integrates the MIND dynamic retrieval strategy with a memory-augmented mechanism to enhance retrieval precision and reasoning coherence in multi-hop question answering tasks. The process begins with MIND monitoring token-level entropy and attention patterns to detect uncertainty signals. When uncertainty exceeds a predefined threshold, MIND triggers retrieval actions, generating sub-queries to retrieve missing information. The retrieved information is stored in a memory store, which retains high-confidence facts across reasoning steps. This memory store is dynamically updated based on real-time uncertainty signals, ensuring that only relevant information is retained. The integration occurs at the retrieval stage, where MIND's dynamic retrieval actions are complemented by the memory store's ability to maintain context and consistency. Data flows from MIND's retrieval actions to the memory store, where it is stored and made accessible for subsequent reasoning steps. This setup ensures that retrieval actions are contextually relevant and timely, reducing unnecessary retrievals and enhancing retrieval efficiency. The hypothesis will be implemented using the ASD agent's capabilities, with existing codeblocks for MIND and a newly built memory-augmented mechanism. The expected outcome is a more efficient and accurate retrieval-augmented reasoning system that effectively balances retrieval frequency and information relevance.",
+    "research_idea_elements": "Independent variable: Integration of MIND dynamic retrieval strategy with a memory-augmented mechanism\n\nDependent variable: Retrieval precision and reasoning coherence\n\nComparison groups: MIND with memory-augmented mechanism vs. MIND alone\n\nBaseline/control: MIND dynamic retrieval strategy alone\n\nContext/setting: Multi-hop question answering tasks\n\nAssumptions: MIND dynamic retrieval strategy functions effectively; memory mechanisms can retain high-confidence facts across reasoning steps\n\nRelationship type: Causation (integration will improve performance)\n\nPopulation: Multi-hop QA datasets (HotpotQA and 2WikiMultihopQA)\n\nTimeframe: Not specified\n\nMeasurement method: Retrieval precision (accuracy of retrieved information), reasoning coherence (consistency of reasoning chains), answer accuracy, F1 score",
+    "motivation": "The source paper is [Paper 0: Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](https://www.semanticscholar.org/paper/1fcaafeb72142fe3d1a5d698a072d69778d244b0) (194 citations, 2025). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/04fd5c534a7f4f7b3318493c16d7ba01d8c09a7e) --> [Paper 2](https://www.semanticscholar.org/paper/89a5223e14896e7404d8c2fbd246f989ab3bcaac). The progression from the source paper to the related papers shows a clear trajectory of improving retrieval-augmented reasoning in LLMs through reinforcement learning techniques. The source paper introduces a framework for optimizing search interactions, which is further refined by DeepRAG's MDP approach and Search Wisely's focus on reducing search inefficiencies. However, a gap remains in dynamically adjusting the retrieval strategy based on real-time feedback from the search process, which could further enhance the adaptability and efficiency of LLMs in retrieval-augmented reasoning tasks. Addressing this gap could lead to more robust and accurate LLMs capable of efficiently acquiring and utilizing external knowledge.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "Please implement an experiment to test the hypothesis that integrating the MIND dynamic retrieval strategy with a memory-augmented mechanism will improve retrieval precision and reasoning coherence in multi-hop question answering tasks compared to using MIND alone.\n\n## Experiment Overview\nThis experiment will compare two systems for multi-hop question answering:\n1. **Baseline System**: MIND dynamic retrieval strategy alone\n2. **Experimental System**: MIND integrated with a memory-augmented mechanism\n\nThe memory-augmented mechanism should store and update high-confidence facts across retrieval steps based on real-time uncertainty signals from MIND. This integration should occur at the retrieval stage, where MIND's dynamic retrieval actions are complemented by the memory store's ability to maintain context and consistency.\n\n## Implementation Details\n\n### MIND Dynamic Retrieval Strategy\nUse the existing MIND codeblock which implements dynamic thresholding to monitor token-level entropy and attention patterns, triggering retrieval based on real-time uncertainty signals. MIND should generate sub-queries to retrieve missing information while maintaining contextual relevance.\n\n### Memory-Augmented Mechanism\nImplement a new memory store module with the following functionality:\n1. Store retrieved facts with confidence scores\n2. Prioritize high-confidence facts for retention\n3. Provide an interface for MIND to query the memory before making external retrievals\n4. Update memory contents based on new retrievals and confidence scores\n5. Maintain context across reasoning steps\n\n### Integration\nIntegrate the memory mechanism with MIND as follows:\n1. When MIND detects uncertainty and needs to retrieve information, it should first check the memory store\n2. If the required information exists in memory with high confidence, use it directly\n3. If not, perform external retrieval using MIND's dynamic retrieval strategy\n4. Store newly retrieved information in the memory with appropriate confidence scores\n5. Use the combined information (from memory and new retrievals) for reasoning\n\n## Datasets\nUse the following multi-hop QA datasets:\n1. HotpotQA\n2. 2WikiMultihopQA\n\n## Evaluation Metrics\n1. **Retrieval Precision**: Measure the accuracy of retrieved information\n   - Number of retrievals per question\n   - Relevance of retrieved documents to the question (precision@k)\n   - Proportion of retrievals that contribute to the final answer\n\n2. **Reasoning Coherence**: Assess the consistency of reasoning chains\n   - Consistency of entities mentioned across reasoning steps\n   - Logical flow of reasoning steps\n   - Completeness of reasoning chains\n\n3. **Performance Metrics**:\n   - Answer accuracy\n   - F1 score\n   - Execution time\n\n## Pilot Experiment Settings\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`.\n\n### MINI_PILOT\n- Use 10 questions from each dataset (HotpotQA and 2WikiMultihopQA)\n- Questions should be from the training set\n- Run both baseline and experimental systems\n- Log all retrievals, memory states, and reasoning steps\n- Report all evaluation metrics\n\n### PILOT\n- Use 100 questions from each dataset\n- Questions should be from the training set for training and dev/validation set for evaluation\n- Run both baseline and experimental systems\n- Log all retrievals, memory states, and reasoning steps\n- Report all evaluation metrics with statistical significance tests\n\n### FULL_EXPERIMENT\n- Use the full datasets\n- Proper train/dev/test splits\n- Hyperparameter tuning on dev set\n- Comprehensive evaluation on test set\n- Detailed analysis of results\n\nThe experiment should run the MINI_PILOT first, then if everything looks good, the PILOT. After the pilot, it should stop and not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT).\n\n## Implementation Steps\n1. Set up the datasets and preprocessing pipeline\n2. Implement the baseline MIND system\n3. Implement the memory-augmented mechanism\n4. Integrate the memory mechanism with MIND\n5. Implement evaluation metrics\n6. Run experiments in pilot mode\n7. Analyze and report results\n\n## Logging and Analysis\n1. Log all retrievals (queries, results, confidence scores)\n2. Log memory states at each reasoning step\n3. Log reasoning steps and final answers\n4. Calculate and report all evaluation metrics\n5. Perform statistical significance tests comparing baseline and experimental systems\n6. Generate visualizations of memory usage and retrieval patterns\n\n## Expected Output\n1. Implementation of both baseline and experimental systems\n2. Evaluation results for both systems\n3. Statistical analysis of the differences\n4. Visualizations of memory usage and retrieval patterns\n5. Discussion of the results in relation to the hypothesis\n\nPlease ensure that the code is modular, well-documented, and includes appropriate error handling. The memory-augmented mechanism should be implemented as a separate module that can be easily integrated with MIND.",
+  "core_related_works": [
+    {
+      "title": "Memory-Aware and Uncertainty-Guided Retrieval for Multi-Hop Question Answering",
+      "paperId": "036ed091d7789665f10ce386960a49715bfb1575",
+      "url": "https://www.semanticscholar.org/paper/036ed091d7789665f10ce386960a49715bfb1575",
+      "year": 2025,
+      "source_variable": "MIND (Memory-Informed & Interactive Dynamic RAG)",
+      "source_paper_lookup_title": "Memory-Aware and Uncertainty-Guided Retrieval for Multi-Hop Question Answering"
+    },
+    {
+      "title": "Memory-Aware and Uncertainty-Guided Retrieval for Multi-Hop Question Answering",
+      "paperId": "036ed091d7789665f10ce386960a49715bfb1575",
+      "url": "https://www.semanticscholar.org/paper/036ed091d7789665f10ce386960a49715bfb1575",
+      "year": 2025,
+      "source_variable": "Memory-Augmented Mechanism",
+      "source_paper_lookup_title": "Memory-Aware and Uncertainty-Guided Retrieval for Multi-Hop Question Answering"
+    }
+  ],
+  "references": "1. Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning (2025). Paper ID: 1fcaafeb72142fe3d1a5d698a072d69778d244b0\n\n2. DeepRAG: Thinking to Retrieve Step by Step for Large Language Models (2025). Paper ID: 04fd5c534a7f4f7b3318493c16d7ba01d8c09a7e\n\n3. Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty (2025). Paper ID: 89a5223e14896e7404d8c2fbd246f989ab3bcaac\n\n4. Memory-Aware and Uncertainty-Guided Retrieval for Multi-Hop Question Answering (2023). Paper ID: 036ed091d7789665f10ce386960a49715bfb1575\n\n5. To Retrieve or Not to Retrieve? Uncertainty Detection for Dynamic Retrieval Augmented Generation (2024). Paper ID: a6782ec29a129088b5fa94f5fc20633163a5a10c\n\n6. Adaptive Retrieval Without Self-Knowledge? Bringing Uncertainty Back Home (2025). Paper ID: 273c76c05293f1d219fb2c83443ca9901ba3adf4\n\n7. AT-RAG: An Adaptive RAG Model Enhancing Query Efficiency with Topic Filtering and Iterative Reasoning (2024). Paper ID: 017516fe07604414dc07663f5ef63f9260cd9875\n\n8. Scent of Knowledge: Optimizing Search-Enhanced Reasoning with Information Foraging (2025). Paper ID: c778fad9acef0847c4f4e0f4ac033b7c4f1c217b\n\n9. Context-Guided Dynamic Retrieval for Improving Generation Quality in RAG Models (2025). Paper ID: 619cbfaa535f792b6fc51b8d148a7f2fb4e7080e"
+}

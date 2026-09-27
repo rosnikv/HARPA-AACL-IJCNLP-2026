@@ -1,0 +1,46 @@
+[
+    {
+        "paperId": "53d8b356551a2361020a948f64454a6d599af69f",
+        "pmid": "2101.00190",
+        "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "abstract": "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were \u201cvirtual tokens\u201d. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+        "year": 2021,
+        "citation_count": 4442
+    },
+    {
+        "paperId": "75e185aa6f5e248685d4f178293279c086c656f8",
+        "title": "Parameter-Efficient Fine-Tuning of Large Language Models for Unit Test Generation: An Empirical Study",
+        "abstract": "The advent of large language models (LLMs) like GitHub Copilot has significantly enhanced programmers' productivity, particularly in code generation. However, these models often struggle with real-world tasks without fine-tuning. As LLMs grow larger and more performant, fine-tuning for specialized tasks becomes increasingly expensive. Parameter-efficient fine-tuning (PEFT) methods, which fine-tune only a subset of model parameters, offer a promising solution by reducing the computational costs of tuning LLMs while maintaining their performance. Existing studies have explored using PEFT and LLMs for various code-related tasks and found that the effectiveness of PEFT techniques is task-dependent. The application of PEFT techniques in unit test generation remains underexplored. The state-of-the-art is limited to using LLMs with full fine-tuning to generate unit tests. This paper investigates both full fine-tuning and various PEFT methods, including LoRA, (IA)^3, and prompt tuning, across different model architectures and sizes. We use well-established benchmark datasets to evaluate their effectiveness in unit test generation. Our findings show that PEFT methods can deliver performance comparable to full fine-tuning for unit test generation, making specialized fine-tuning more accessible and cost-effective. Notably, prompt tuning is the most effective in terms of cost and resource utilization, while LoRA approaches the effectiveness of full fine-tuning in several cases.",
+        "year": 2024,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper explores parameter-efficient fine-tuning methods, including prompt tuning, which is directly related to the source paper's focus on prefix-tuning as a parameter-efficient method."
+    },
+    {
+        "paperId": "8787164d9961ae8c22a1e33e2ed89554f4213432",
+        "title": "MTLoRA: A Low-Rank Adaptation Approach for Efficient Multi-Task Learning",
+        "abstract": "Adapting models pre-trained on large-scale datasets to a variety of downstream tasks is a common strategy in deep learning. Consequently, parameter-efficient fine-tuning methods have emerged as a promising way to adapt pretrained models to different tasks while training only a minimal number of parameters. While most of these methods are designed for single-task adaptation, parameter-efficient training in Multi-Task Learning (MTL) architectures is still unexplored. In this paper, we introduce MTLoRA, a novel framework for parameter-efficient training of MTL models. MTLoRA employs Task-Agnostic and Task-Specific Low-Rank Adaptation modules, which effectively disentangle the parameter space in MTL fine-tuning, thereby enabling the model to adeptly handle both task specialization and interaction within MTL contexts. We applied MTLoRA to hierarchical-transformer-based MTL architectures, adapting them to multiple downstream dense prediction tasks. Our extensive experiments on the PASCAL dataset show that MTLoRA achieves higher accuracy on downstream tasks compared to fully fine-tuning the MTL model while reducing the number of trainable parameters by 3.6\u00d7. Furthermore, MTLoRA establishes a Pareto-optimal trade-off between the number of trainable parameters and the accuracy of the downstream tasks, outperforming current state-of-the-art parameter-efficient training methods in both accuracy and efficiency. Our code is publicly available. 11https://github.com/scale-lab/MTLoRA.git",
+        "year": 2024,
+        "citation_count": 25,
+        "relevance": 1,
+        "explanation": "This paper introduces MTLoRA, a parameter-efficient fine-tuning method for multi-task learning, which is related to the source paper's exploration of parameter-efficient fine-tuning methods like LoRA. However, the focus here is on multi-task learning rather than unit test generation. While both papers discuss parameter-efficient fine-tuning, the specific application and context differ. The source paper's exploration of LoRA as a PEFT method is relevant, but MTLoRA is applied in a different domain."
+    },
+    {
+        "paperId": "5de65a413140ec11b05f8d5d6ff1d8f5f2f9ddf3",
+        "title": "Low-rank Adaptation for Spatio-Temporal Forecasting",
+        "abstract": "Spatio-temporal forecasting is essential for understanding future dynamics within real-world systems by leveraging historical data from multiple locations. Existing methods often prioritize the development of intricate neural networks to capture the complex dependencies of the data. These methods neglect node-level heterogeneity and face over-parameterization when attempting to model node-specific characteristics. In this paper, we present a novel low-rank adaptation framework for existing spatio-temporal prediction models, termed \\model, which alleviates the aforementioned problems through node-level adjustments. Specifically, we introduce the node-adaptive low-rank layer and node-specific predictor, capturing the complex functional characteristics of nodes while maintaining computational efficiency. Extensive experiments on multiple real-world datasets demonstrate that our method consistently achieves superior performance across various forecasting models with minimal computational overhead, improving performance by 7% with only 1% additional parameter cost. The source code is available at https://github.com/RWLinno/ST-LoRA.",
+        "year": 2024,
+        "citation_count": 3,
+        "relevance": 1,
+        "explanation": "This paper introduces a low-rank adaptation framework, similar in concept to MTLoRA, but applied to spatio-temporal forecasting. It shares the low-rank adaptation approach, making it conceptually related to the source paper."
+    },
+    {
+        "paperId": "19d8b16dc8fcee3b342cd1ae26c5c7c61bbd00e0",
+        "title": "Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting",
+        "abstract": "Real-world time series often exhibit a non-stationary nature, degrading the performance of pre-trained forecasting models. Test-Time Adaptation (TTA) addresses this by adjusting models during inference, but existing methods typically update the full model, increasing memory and compute costs. We propose PETSA, a parameter-efficient method that adapts forecasters at test time by only updating small calibration modules on the input and output. PETSA uses low-rank adapters and dynamic gating to adjust representations without retraining. To maintain accuracy despite limited adaptation capacity, we introduce a specialized loss combining three components: (1) a robust term, (2) a frequency-domain term to preserve periodicity, and (3) a patch-wise structural term for structural alignment. PETSA improves the adaptability of various forecasting backbones while requiring fewer parameters than baselines. Experimental results on benchmark datasets show that PETSA achieves competitive or better performance across all horizons. Our code is available at: https://github.com/BorealisAI/PETSA",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 1,
+        "explanation": "This paper is relevant to the source paper as it also focuses on improving spatio-temporal forecasting models through parameter-efficient methods. Both papers address the challenge of model adaptation with minimal computational overhead, and the use of low-rank adapters in PETSA is conceptually similar to the low-rank adaptation framework in the source paper. Thus, the hypothesis in this paper is inspired by the hypothesis of the source paper."
+    }
+]

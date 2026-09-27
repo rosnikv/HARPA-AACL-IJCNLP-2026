@@ -1,0 +1,79 @@
+[
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "74fcfb150e319d83479314e44dbc89eb31db9e06",
+            "pmid": "2410.02200",
+            "title": "Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts",
+            "abstract": "Prompt-based techniques, such as prompt-tuning and prefix-tuning, have gained prominence for their efficiency in fine-tuning large pre-trained models. Despite their widespread adoption, the theoretical foundations of these methods remain limited. For instance, in prefix-tuning, we observe that a key factor in achieving performance parity with full fine-tuning lies in the reparameterization strategy. However, the theoretical principles underpinning the effectiveness of this approach have yet to be thoroughly examined. Our study demonstrates that reparameterization is not merely an engineering trick but is grounded in deep theoretical foundations. Specifically, we show that the reparameterization strategy implicitly encodes a shared structure between prefix key and value vectors. Building on recent insights into the connection between prefix-tuning and mixture of experts models, we further illustrate that this shared structure significantly improves sample efficiency in parameter estimation compared to non-shared alternatives. The effectiveness of prefix-tuning across diverse tasks is empirically confirmed to be enhanced by the shared structure, through extensive experiments in both visual and language domains. Additionally, we uncover similar structural benefits in prompt-tuning, offering new perspectives on its success. Our findings provide theoretical and empirical contributions, advancing the understanding of prompt-based methods and their underlying mechanisms.",
+            "year": 2024,
+            "citation_count": 8
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective": {
+                    "explanation": "This paper draws inspiration from the relationship between prefix tuning and mixture of experts, which is a key finding from the source paper. It builds on the source paper's insights into prompt-based methods and their efficiency, applying these concepts to continual relation extraction.",
+                    "relevance": 1
+                },
+                "2.Statistical Advantages of Perturbing Cosine Router in Mixture of Experts": {
+                    "explanation": "While this paper discusses the mixture of experts model, it focuses on the statistical advantages of perturbing the cosine router, which is not directly related to the reparameterization strategy or shared structure in prefix-tuning discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective": {
+                    "explanation": "This paper draws inspiration from the relationship between prefix tuning and mixture of experts, which is a key finding from the source paper. It builds on the source paper's insights into prompt-based methods and their efficiency, applying these concepts to continual relation extraction.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "07059e01668b69cc5e9b032b10ff30aa222fb053",
+            "title": "Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective",
+            "abstract": "To address catastrophic forgetting in Continual Relation Extraction (CRE), many current approaches rely on memory buffers to rehearse previously learned knowledge while acquiring new tasks. Recently, prompt-based methods have emerged as potent alternatives to rehearsal-based strategies, demonstrating strong empirical performance. However, upon analyzing existing prompt-based approaches for CRE, we identified several critical limitations, such as inaccurate prompt selection, inadequate mechanisms for mitigating forgetting in shared parameters, and suboptimal handling of cross-task and within-task variances. To overcome these challenges, we draw inspiration from the relationship between prefix tuning and mixture of experts, proposing a novel approach that employs a prompt pool for each task, capturing variations within each task while enhancing cross-task variances. Furthermore, we incorporate a generative model to consolidate prior knowledge within shared parameters, eliminating the need for explicit data storage. Extensive experiments validate the efficacy of our approach, demonstrating superior performance over state-of-the-art prompt-based and rehearsal-free methods in continual relation extraction.",
+            "year": 2024,
+            "citation_count": 5,
+            "relevance": 1,
+            "explanation": "This paper draws inspiration from the relationship between prefix tuning and mixture of experts, which is a key finding from the source paper. It builds on the source paper's insights into prompt-based methods and their efficiency, applying these concepts to continual relation extraction."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Comprehensive Survey on Continual Learning in Generative Models": {
+                    "explanation": "This paper is a review of continual learning methods in generative models, summarizing existing literature and categorizing approaches. It does not propose novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "2. Towards Rehearsal-Free Continual Relation Extraction: Capturing Within-Task Variance with Adaptive Prompting": {
+                    "explanation": "This paper builds directly on the source paper by proposing WAVE++, which addresses similar challenges in CRE using adaptive prompting. It expands on the source paper's findings by introducing task-specific prompt pools and a generative model, making it highly relevant.",
+                    "relevance": 2
+                },
+                "3. Few-Shot, No Problem: Descriptive Continual Relation Extraction": {
+                    "explanation": "This paper addresses few-shot scenarios in CRE, which is related to the source paper's focus on continual relation extraction. However, it introduces a different approach using retrieval-based methods and large language models, indicating that it is inspired by the general problem but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "4. On the Expressiveness of Visual Prompt Experts": {
+                    "explanation": "This paper focuses on visual prompt tuning in vision models, which is a different domain than the source paper's focus on CRE. While it discusses prompt-based methods, it does not directly relate to the source paper's findings or hypotheses.",
+                    "relevance": 0
+                },
+                "5. Enhancing Discriminative Representation in Similar Relation Clusters for Few-Shot Continual Relation Extraction": {
+                    "explanation": "The abstract is missing, but based on the title, this paper likely addresses few-shot CRE, which is related to the source paper's domain. Without more information, it's unclear if it builds on the source paper's findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Towards Rehearsal-Free Continual Relation Extraction: Capturing Within-Task Variance with Adaptive Prompting": {
+                    "explanation": "This paper builds directly on the source paper by proposing WAVE++, which addresses similar challenges in CRE using adaptive prompting. It expands on the source paper's findings by introducing task-specific prompt pools and a generative model, making it highly relevant.",
+                    "relevance": 2
+                },
+                "2. Few-Shot, No Problem: Descriptive Continual Relation Extraction": {
+                    "explanation": "This paper addresses few-shot scenarios in CRE, which is related to the source paper's focus on continual relation extraction. However, it introduces a different approach using retrieval-based methods and large language models, indicating that it is inspired by the general problem but not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    }
+]

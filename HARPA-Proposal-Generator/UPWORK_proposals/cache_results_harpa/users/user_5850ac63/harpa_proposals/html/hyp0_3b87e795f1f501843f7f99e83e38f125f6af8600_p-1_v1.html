@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3b87e795f1f501843f7f99e83e38f125f6af8600</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating sketches and narrative-preserving prompts to enhance story visualization.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Incorporating sketches and narrative-preserving prompt generation as control variables in an interactive story visualization framework will improve both semantic alignment and image quality compared to using static story visualization models.</p>
+<h3>Motivation</h3>
+<p>Existing story visualization methods often struggle with maintaining semantic consistency and high image quality when incorporating user inputs like sketches and text prompts. While some models focus on either semantic alignment or image quality, they rarely address both simultaneously, especially in dynamic story visualization contexts. No prior work has extensively explored the combined use of sketches and narrative-preserving prompt generation to enhance both semantic alignment and image quality in interactive story visualization frameworks. This gap is critical as it limits the potential for creating visually coherent and semantically rich story sequences that align closely with user intentions.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of sketches and narrative-preserving prompt generation within an interactive story visualization framework to enhance semantic alignment and image quality. Sketches provide dense control conditions, allowing users to define detailed scene layouts and key elements, which are then translated into high-quality images by text-to-image models. Narrative-preserving prompt generation ensures that the visualizations maintain the narrative structure, preserving key scenes and character attributes. By combining these two control variables, the system can produce images that are both visually consistent and semantically aligned with the narrative context. This approach addresses the limitations of existing models that focus on either semantic alignment or image quality but not both. The expected outcome is a significant improvement in both semantic alignment scores and FID scores, demonstrating the effectiveness of this integrated approach. This research is particularly relevant for applications requiring high-quality, semantically rich visual storytelling, such as interactive media and educational tools.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/493472c37e55eb8e9023880cb89ce3f108aeb3d9">Sketches</a>: Sketches act as dense control conditions in the story visualization framework, allowing users to define detailed scene layouts and key elements. These sketches are translated into final images by text-to-image models, ensuring that the images produced are high in quality and consistent with the user's intentions. This approach allows for intuitive user interactions, as users can directly influence the visual outcome through their sketches. The use of sketches is expected to enhance image quality by providing precise control over scene composition.</p>
+<p><a href="https://www.semanticscholar.org/paper/4efbd122fb59f94701cbfeca5b2ca82bb5f8bd65">Narrative-Preserving Prompt Generation</a>: This approach involves generating prompts that preserve the narrative structure of the story, ensuring that visualizations effectively convey the story's intentions. The framework uses large language models to analyze narrative structures from plain text input and refine them into layered prompts for both background and foreground elements. This process, known as story distillation, ensures that key scenes and character attributes are preserved in the generated images, enhancing semantic consistency. This variable is expected to improve semantic alignment by maintaining narrative coherence throughout the visualization process.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating sketches and narrative-preserving prompt generation within an interactive story visualization framework. Initially, users provide sketches as dense control conditions to define scene layouts and key elements. These sketches are processed by a text-to-image model to generate high-quality images. Simultaneously, narrative-preserving prompt generation is employed to analyze the narrative structure of the story, refining it into layered prompts for both background and foreground elements. This ensures that the generated images maintain semantic consistency with the original narrative. The integration occurs at the input stage, where sketches and narrative prompts are combined to guide the image generation process. The system leverages large language models to interpret both inputs, ensuring that the visualizations align with user intentions and narrative context. The expected outcome is an improvement in both semantic alignment scores and FID scores, demonstrating the effectiveness of this integrated approach in producing visually consistent and semantically rich story sequences.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to evaluate the hypothesis that incorporating sketches and narrative-preserving prompt generation as control variables in an interactive story visualization framework will improve both semantic alignment and image quality compared to using static story visualization models.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will test a novel approach to story visualization that combines sketch-based control with narrative-preserving prompt generation. The system should take as input: (1) a narrative text and (2) a sketch representing the desired scene layout. It will then generate high-quality images that align with both the narrative context and the sketch guidance.</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Requirements</strong></h4></p>
+<p><ol>
+<li>Create a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>. The experiment should start in <code>MINI_PILOT</code> mode.</li>
+</ol></p>
+<p><ol>
+<li>Implement three distinct story visualization systems:</li>
+<li><strong>Baseline 1 (Text-Only)</strong>: A system that generates images using only text prompts derived from the narrative.</li>
+<li><strong>Baseline 2 (Sketch-Only)</strong>: A system that generates images using only sketch inputs without narrative context.</li>
+<li><strong>Experimental System (Combined)</strong>: A system that integrates both sketches and narrative-preserving prompts.</li>
+</ol></p>
+<p><ol>
+<li>For the narrative-preserving prompt generation component:</li>
+<li>Use a large language model to analyze narrative structures from plain text input</li>
+<li>Implement a "story distillation" process that extracts key scenes and character attributes</li>
+<li>Generate layered prompts for both background and foreground elements</li>
+</ol></p>
+<p><ol>
+<li>For the sketch processing component:</li>
+<li>Implement a method to process user-provided sketches as control conditions</li>
+<li>Integrate these sketches with the text-to-image model</li>
+</ol></p>
+<p><ol>
+<li>For the combined system:</li>
+<li>Develop an integration method that combines the sketch input with the narrative-preserving prompts</li>
+<li>Ensure the system maintains both visual consistency and semantic alignment</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<p>Use the FlintstonesSV dataset, which contains story narratives and corresponding images. This dataset is well-suited for testing story visualization methods due to its rich narrative content and diverse character interactions.</p></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<p>Implement the following evaluation metrics:<br />
+1. <strong>Semantic Alignment</strong>:<br />
+   - BLEU score (comparing generated image captions to ground truth)<br />
+   - CIDEr score (measuring consensus in image descriptions)</p></p>
+<p><ol>
+<li><strong>Image Quality</strong>:</li>
+<li>FID (Fréchet Inception Distance) score</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Pilot Modes</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>MINI_PILOT Mode</strong></h4>
+<ul>
+<li>Use only 5 story segments from the FlintstonesSV dataset</li>
+<li>Generate 1 image per story segment for each system (baseline 1, baseline 2, and experimental)</li>
+<li>Calculate all metrics but focus on verifying that the pipeline works end-to-end</li>
+<li>Expected runtime: 10-15 minutes</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>PILOT Mode</strong></h4>
+<ul>
+<li>Use 50 story segments from the FlintstonesSV training set</li>
+<li>Generate 1 image per story segment for each system</li>
+<li>Calculate all metrics and perform preliminary statistical analysis</li>
+<li>Run bootstrap resampling to check for significant differences between systems</li>
+<li>Expected runtime: 1-2 hours</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>FULL_EXPERIMENT Mode</strong></h4>
+<ul>
+<li>Use the entire FlintstonesSV dataset (training, validation, and test sets appropriately)</li>
+<li>Generate images for all story segments using all three systems</li>
+<li>Perform comprehensive statistical analysis</li>
+<li>Generate visualizations comparing the three systems</li>
+<li>Expected runtime: Several hours to days depending on computational resources</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4></p>
+<p><ol>
+<li><strong>Data Preparation</strong>:</li>
+<li>Load and preprocess the FlintstonesSV dataset</li>
+<li>Extract story narratives and corresponding ground truth images</li>
+<li>For the MINI_PILOT and PILOT modes, select the appropriate subset of data</li>
+</ol></p>
+<p><ol>
+<li><strong>Model Implementation</strong>:</li>
+<li>Implement the text-only baseline using a standard text-to-image model</li>
+<li>Implement the sketch-only baseline using a sketch-to-image model</li>
+<li>Implement the experimental system that combines both approaches</li>
+</ol></p>
+<p><ol>
+<li><strong>Evaluation Pipeline</strong>:</li>
+<li>Implement the BLEU and CIDEr score calculations</li>
+<li>Implement the FID score calculation</li>
+<li>Create a results table that compares all three systems</li>
+</ol></p>
+<p><ol>
+<li><strong>Visualization</strong>:</li>
+<li>Create side-by-side visualizations of the generated images from all three systems</li>
+<li>Include the original narrative text and sketch input for reference</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output Requirements</strong></h4></p>
+<p><ol>
+<li><strong>Results File</strong>:</li>
+<li>A CSV file containing all evaluation metrics for each system</li>
+<li>Statistical significance tests comparing the systems</li>
+<li>Summary statistics for each metric</li>
+</ol></p>
+<p><ol>
+<li><strong>Visualization File</strong>:</li>
+<li>A PDF or HTML file showing sample outputs from each system</li>
+<li>Side-by-side comparisons of the three systems for the same story segments</li>
+</ol></p>
+<p><ol>
+<li><strong>Log File</strong>:</li>
+<li>Detailed logs of the experiment process</li>
+<li>Any errors or warnings encountered</li>
+<li>Timing information for each component</li>
+</ol></p>
+<p><p>Please run the experiment in MINI_PILOT mode first, then if everything looks good, proceed to PILOT mode. After the PILOT mode completes successfully, stop and do not run the FULL_EXPERIMENT mode (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/3b87e795f1f501843f7f99e83e38f125f6af8600">Paper 0: StoryGAN: A Sequential Conditional GAN for Story Visualization</a> (241 citations, 2018). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/e0779bca8faec33918338f98c0014e387993d388">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/c22325b8c8c321b3591092dfda1c2cf409eb3881">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/fc8e871457e5902b5322ea68aa45881e3086fa9b">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/bc9d15b4f8d20847a738f4e48336a37a175b4012">Paper 4</a>. The analysis reveals a progression from story visualization to automatic storyboard and comic generation, with applications in education and storytelling. However, there is a gap in exploring the integration of dynamic elements in story visualization, such as real-time interaction or adaptation to user inputs. Building upon the existing work, a novel research idea could focus on enhancing story visualization by incorporating interactive elements that allow users to influence the narrative flow and visual outcomes, thus addressing the limitations of static story visualization models.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/3b87e795f1f501843f7f99e83e38f125f6af8600" target="_blank">StoryGAN: A Sequential Conditional GAN for Story Visualization</a> (2018)</li>
+<li><a href="https://www.semanticscholar.org/paper/e0779bca8faec33918338f98c0014e387993d388" target="_blank">Neural Storyboard Artist: Visualizing Stories with Coherent Image Sequences</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/c22325b8c8c321b3591092dfda1c2cf409eb3881" target="_blank">Automatic Comic Generation with Stylistic Multi-page Layouts and Emotion-driven Text Balloon Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/fc8e871457e5902b5322ea68aa45881e3086fa9b" target="_blank">CodeToon: Story Ideation, Auto Comic Generation, and Structure Mapping for Code-Driven Storytelling</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/bc9d15b4f8d20847a738f4e48336a37a175b4012" target="_blank">Reference Guide for Teaching Programming with Comics</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/32fad3ebb40bc9e827ad8ebb250dfabc5006a17a" target="_blank">Interactive Story Visualization with Multiple Characters</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/493472c37e55eb8e9023880cb89ce3f108aeb3d9" target="_blank">AutoStory: Generating Diverse Storytelling Images with Minimal Human Effort</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/6be8bc2b5fecd2fc361799980800e74fb2e38ac4" target="_blank">Learning to Model Multimodal Semantic Alignment for Story Visualization</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/4efbd122fb59f94701cbfeca5b2ca82bb5f8bd65" target="_blank">VisAgent: Narrative-Preserving Story Visualization Framework</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/8680e23ef9e91b828ec22ee21162991a1eb9f314" target="_blank">Visual Story Generation Based on Emotion and Keywords</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/d30873c6fa87e04f68b90754a523411e7c656364" target="_blank">DiaryPlay: AI-Assisted Authoring of Interactive Vignettes for Everyday Storytelling</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/bf746159ec6008fa8e4d4134c848f8611066d62d" target="_blank">DataNarrative: Automated Data-Driven Storytelling with Visualizations and Texts</a> (2024)</li>
+</ol>
+</body>
+</html>

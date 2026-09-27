@@ -1,0 +1,73 @@
+[
+    {
+        "paperId": "0de0a44b859a3719d11834479112314b4caba669",
+        "pmid": "1906.05714",
+        "title": "A Multiscale Visualization of Attention in the Transformer Model",
+        "abstract": "The Transformer is a sequence model that forgoes traditional recurrent architectures in favor of a fully attention-based approach. Besides improving performance, an advantage of using attention is that it can also help to interpret a model by showing how the model assigns weight to different input elements. However, the multi-layer, multi-head attention mechanism in the Transformer model can be difficult to decipher. To make the model more accessible, we introduce an open-source tool that visualizes attention at multiple scales, each of which provides a unique perspective on the attention mechanism. We demonstrate the tool on BERT and OpenAI GPT-2 and present three example use cases: detecting model bias, locating relevant attention heads, and linking neurons to model behavior.",
+        "year": 2019,
+        "citation_count": 596
+    },
+    {
+        "paperId": "327d7e55d64cb34d55bd3a3fe58233c238a312cd",
+        "title": "exBERT: A Visual Analysis Tool to Explore Learned Representations in Transformers Models",
+        "abstract": "Large language models can produce powerful contextual representations that lead to improvements across many NLP tasks. Since these models are typically guided by a sequence of learned self attention mechanisms and may comprise undesired inductive biases, it is paramount to be able to explore what the attention has learned. While static analyses of these models lead to targeted insights, interactive tools are more dynamic and can help humans better gain an intuition for the model-internal reasoning process. We present exBERT, an interactive tool named after the popular BERT language model, that provides insights into the meaning of the contextual representations by matching a human-specified input to similar contexts in a large annotated dataset. By aggregating the annotations of the matching similar contexts, exBERT helps intuitively explain what each attention-head has learned.",
+        "year": 2019,
+        "citation_count": 86,
+        "relevance": 2,
+        "explanation": "This paper presents a tool for visualizing learned representations in transformer models, similar to the source paper's focus on visualizing attention in transformers. It builds upon the concept of visualizing attention mechanisms in transformers, making it highly relevant."
+    },
+    {
+        "paperId": "79c93274429d6355959f1e4374c2147bb81ea649",
+        "title": "LXMERT: Learning Cross-Modality Encoder Representations from Transformers",
+        "abstract": "Vision-and-language reasoning requires an understanding of visual concepts, language semantics, and, most importantly, the alignment and relationships between these two modalities. We thus propose the LXMERT (Learning Cross-Modality Encoder Representations from Transformers) framework to learn these vision-and-language connections. In LXMERT, we build a large-scale Transformer model that consists of three encoders: an object relationship encoder, a language encoder, and a cross-modality encoder. Next, to endow our model with the capability of connecting vision and language semantics, we pre-train the model with large amounts of image-and-sentence pairs, via five diverse representative pre-training tasks: masked language modeling, masked object prediction (feature regression and label classification), cross-modality matching, and image question answering. These tasks help in learning both intra-modality and cross-modality relationships. After fine-tuning from our pre-trained parameters, our model achieves the state-of-the-art results on two visual question answering datasets (i.e., VQA and GQA). We also show the generalizability of our pre-trained cross-modality model by adapting it to a challenging visual-reasoning task, NLVR2, and improve the previous best result by 22% absolute (54% to 76%). Lastly, we demonstrate detailed ablation studies to prove that both our novel model components and pre-training strategies significantly contribute to our strong results. Code and pre-trained models publicly available at: https://github.com/airsplay/lxmert",
+        "year": 2019,
+        "citation_count": 2552,
+        "relevance": 1,
+        "explanation": "LXMERT builds on Transformer models to learn cross-modality relationships between vision and language. While it uses a Transformer architecture, it does not directly depend on or extend the visualization and analysis techniques proposed in the exBERT paper. However, it shares the broader goal of understanding and improving Transformer models, which is a related area of research."
+    },
+    {
+        "paperId": "ed8ac4ff13d32a291bbe74f3e5a138800bba47fd",
+        "title": "Image as a Foreign Language: BEIT Pretraining for Vision and Vision-Language Tasks",
+        "abstract": "A big convergence of language, vision, and multimodal pretraining is emerging. In this work, we introduce a general-purpose multimodal foundation model BEIT-3, which achieves excellent transfer performance on both vision and vision-language tasks. Specifically, we advance the big convergence from three aspects: backbone architecture, pretraining task, and model scaling up. We use Multiway Transformers for general-purpose modeling, where the modular architecture enables both deep fusion and modality-specific encoding. Based on the shared backbone, we perform masked \u201clanguage\u201d modeling on images (Imglish), texts (English), and image-text pairs (\u201cparallel sentences\u201d) in a unified manner. Experimental results show that BEIT-3 obtains remarkable performance on object detection (COCO), semantic segmentation (ADE20K), image classification (ImageNet), visual reasoning (NLVR2), visual question answering (VQAv2), image captioning (COCO), and cross-modal retrieval (Flickr30K, COCO).",
+        "year": 2023,
+        "citation_count": 327,
+        "relevance": 2,
+        "explanation": "This paper introduces a multimodal foundation model BEIT-3 for vision and vision-language tasks, similar to LXMERT's cross-modality focus. It shares the concept of using transformers for multi-modal tasks and could be seen as partially dependent on the findings of LXMERT."
+    },
+    {
+        "paperId": "6a33e58ef961a3a0a5657518b2be86395eb7c8d0",
+        "title": "Intern VL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks",
+        "abstract": "The exponential growth of large language models (LLMs) has opened up numerous possibilities for multi-modal AGI systems. However, the progress in vision and vision-language foundation models, which are also critical elements of multi-modal AGI, has not kept pace with LLMs. In this work, we design a large-scale vision-language foun-dation model (Intern VL), which scales up the vision foun-dation model to 6 billion parameters and progressively aligns it with the LLM, using web-scale image-text data from various sources. This model can be broadly applied to and achieve state-of-the-art performance on 32 generic visual-linguistic benchmarks including visual perception tasks such as image-level or pixel-level recognition, vision-language tasks such as zero-shot image/video classification, zero-shot image/video-text retrieval, and link with LLMs to create multi-modal dialogue systems. It has powerful visual capabilities and can be a good alternative to the ViT-22B. We hope that our research could contribute to the development of multi-modal large models.",
+        "year": 2023,
+        "citation_count": 1524,
+        "relevance": 2,
+        "explanation": "This paper discusses scaling up vision-language models and aligning them with language models, similar to the goals of BEIT-3. It partially depends on the findings of the source paper regarding model scaling and alignment."
+    },
+    {
+        "paperId": "04315a45024d76d2434d1dbba86ca1b5579b0bf7",
+        "title": "DINOv2 Meets Text: A Unified Framework for Image- and Pixel-Level Vision-Language Alignment",
+        "abstract": "Self-supervised visual foundation models produce powerful embeddings that achieve remarkable performance on a wide range of downstream tasks. However, unlike vision-language models such as CLIP [67], self-supervised visual features are not readily aligned with language, hindering their adoption in open-vocabulary tasks. Our method, named dino.txt, unlocks this new ability for DINOv2 [63], a widely used self-supervised visual encoder. We build upon the LiT training strategy [97], which trains a text encoder to align with a frozen vision model but leads to unsatisfactory results on dense tasks. We propose several key ingredients to improve performance on both global and dense tasks, such as concatenating the [CLS] token with the patch average to train the alignment and curating data using both text and image modalities. With these, we successfully train a CLIP-like model with only a fraction of the computational cost compared to CLIP while achieving state-of-the-art results in zero-shot classification and open-vocabulary semantic segmentation.",
+        "year": 2024,
+        "citation_count": 19,
+        "relevance": 2,
+        "explanation": "This paper discusses a framework for vision-language alignment at both image and pixel levels, which directly relates to the source paper's focus on aligning vision-language models with large language models."
+    },
+    {
+        "paperId": "f46d9fe6243d4d2a95ca4d915d20c8882803eb59",
+        "title": "Talking to DINO: Bridging Self-Supervised Vision Backbones with Language for Open-Vocabulary Segmentation",
+        "abstract": "Open-Vocabulary Segmentation (OVS) aims at segmenting images from free-form textual concepts without predefined training classes. While existing vision-language models such as CLIP can generate segmentation masks by leveraging coarse spatial information from Vision Transformers, they face challenges in spatial localization due to their global alignment of image and text features. Conversely, self-supervised visual models like DINO excel in fine-grained visual encoding but lack integration with language. To bridge this gap, we present Talk2DINO, a novel hybrid approach that combines the spatial accuracy of DINOv2 with the language understanding of CLIP. Our approach aligns the textual embeddings of CLIP to the patch-level features of DINOv2 through a learned mapping function without the need to fine-tune the underlying backbones. At training time, we exploit the attention maps of DINOv2 to selectively align local visual patches with textual embeddings. We show that the powerful semantic and localization abilities of Talk2DINO can enhance the segmentation process, resulting in more natural and less noisy segmentations, and that our approach can also effectively distinguish foreground objects from the background. Experimental results demonstrate that Talk2DINO achieves state-of-the-art performance across several unsupervised OVS benchmarks. Source code and models are publicly available at: https://lorebianchi98.github.io/Talk2DINO/.",
+        "year": 2024,
+        "citation_count": 4,
+        "relevance": 2,
+        "explanation": "This paper is highly relevant as it directly addresses the challenge identified in the source paper: integrating self-supervised visual models like DINO with language models. It proposes a hybrid approach that aligns DINOv2's visual features with CLIP's language embeddings, building on the source paper's methodology and findings."
+    },
+    {
+        "paperId": "8f7436d38eb9d0ce9393c4d73d55255ae7b6f0c2",
+        "title": "Talk2SAM: Text-Guided Semantic Enhancement for Complex-Shaped Object Segmentation",
+        "abstract": "Segmenting objects with complex shapes, such as wires, bicycles, or structural grids, remains a significant challenge for current segmentation models, including the Segment Anything Model (SAM) and its high-quality variant SAM-HQ. These models often struggle with thin structures and fine boundaries, leading to poor segmentation quality. We propose Talk2SAM, a novel approach that integrates textual guidance to improve segmentation of such challenging objects. The method uses CLIP-based embeddings derived from user-provided text prompts to identify relevant semantic regions, which are then projected into the DINO feature space. These features serve as additional prompts for SAM-HQ, enhancing its ability to focus on the target object. Beyond improving segmentation accuracy, Talk2SAM allows user-controllable segmentation, enabling disambiguation of objects within a single bounding box based on textual input. We evaluate our approach on three benchmarks: BIG, ThinObject5K, and DIS5K. Talk2SAM consistently outperforms SAM-HQ, achieving up to +5.9\\% IoU and +8.3\\% boundary IoU improvements. Our results demonstrate that incorporating natural language guidance provides a flexible and effective means for precise object segmentation, particularly in cases where traditional prompt-based methods fail. The source code is available on GitHub: https://github.com/richlukich/Talk2SAM",
+        "year": 2025,
+        "citation_count": 0,
+        "relevance": 2,
+        "explanation": "Talk2SAM builds on the idea of integrating textual guidance with visual features for segmentation, similar to the source paper's approach of aligning textual embeddings with visual features. The use of CLIP and DINO for enhancing segmentation aligns with the source paper's methodology, making this paper partially dependent on the source paper's findings."
+    }
+]

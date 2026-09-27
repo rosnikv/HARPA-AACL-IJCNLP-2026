@@ -1,0 +1,2409 @@
+{
+    "topic_description": "intersectional fairness evaluation in LLM-based recommender systems using CFaiRLLM with preference alignment and diverse user profile sampling strategies",
+    "all_queries": [
+        "KeywordQuery(\"intersectional fairness evaluation in llm-based recommender systems using cfairllm with preference alignment and diverse user profile sampling strategies\")",
+        "PaperQuery(\"d9d50e6d98f01f357357eafde24ab66370fc3559\")",
+        "KeywordQuery(\"fairness in language model recommender systems\")",
+        "GetReferences(\"d9d50e6d98f01f357357eafde24ab66370fc3559\")",
+        "PaperQuery(\"2e92b3699668f920a8d692535622ebeaa53315e2\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "d9d50e6d98f01f357357eafde24ab66370fc3559",
+            "paperId": "d9d50e6d98f01f357357eafde24ab66370fc3559",
+            "title": "CFaiRLLM: Consumer Fairness Evaluation in Large-Language Model Recommender System",
+            "year": 2024,
+            "citationCount": 25,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.05668, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces CFaiRLLM, an enhanced evaluation framework that not only incorporates true preference alignment but also rigorously examines intersectional fairness by considering overlapping sensitive attributes in Large Language Model-based recommender systems."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                },
+                {
+                    "authorId": "1737962",
+                    "name": "T. D. Noia"
+                }
+            ],
+            "abstract": "This work takes a critical stance on previous studies concerning fairness evaluation in Large Language Model (LLM)-based recommender systems, which have primarily assessed consumer fairness by comparing recommendation lists generated with and without sensitive user attributes. Such approaches implicitly treat discrepancies in recommended items as biases, overlooking whether these changes might stem from genuine personalization aligned with true preferences of users. Moreover, these earlier studies typically address single sensitive attributes in isolation, neglecting the complex interplay of intersectional identities. In response to these shortcomings, we introduce CFaiRLLM, an enhanced evaluation framework that not only incorporates true preference alignment but also rigorously examines intersectional fairness by considering overlapping sensitive attributes. Additionally, CFaiRLLM introduces diverse user profile sampling strategies\u2014random, top-rated, and recency-focused\u2014to better understand the impact of profile generation fed to LLMs in light of inherent token limitations in these systems. Given that fairness depends on accurately understanding users\u2019 tastes and preferences, these strategies provide a more realistic assessment of fairness within RecLLMs. To validate the efficacy of CFaiRLLM, we conducted extensive experiments using MovieLens and LastFM datasets, applying various sampling strategies and sensitive attribute configurations. The evaluation metrics include both item similarity measures and true preference alignment considering both hit and ranking (Jaccard Similarity and PRAG), thereby conducting a multifaceted analysis of recommendation fairness. The results demonstrated that true preference alignment offers a more personalized and fair assessment compared to similarity-based measures, revealing significant disparities when sensitive and intersectional attributes are incorporated. Notably, our study finds that intersectional attributes amplify fairness gaps more prominently, especially in less structured domains such as music recommendations in LastFM. These findings suggest that future fairness evaluations in RecLLMs should incorporate true preference alignment to ensure equitable and genuinely personalized recommendations.",
+            "score": 10
+        },
+        {
+            "id": "f454b3b3feb4abae67b62abc617d5adf871c86d3",
+            "paperId": "f454b3b3feb4abae67b62abc617d5adf871c86d3",
+            "title": "UP5: Unbiased Foundation Model for Fairness-aware Recommendation",
+            "year": 2023,
+            "citationCount": 54,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.12090",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.12090, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel Counterfactually-Fair-Prompt (CFP) method towards Unbiased Foundation mOdels (UFO) for fairness-aware LLM-based recommendation and discusses appropriate methods for promoting equitable treatment of users in LLM-based recommendation models."
+            },
+            "authors": [
+                {
+                    "authorId": "2007245028",
+                    "name": "Wenyue Hua"
+                },
+                {
+                    "authorId": "152988336",
+                    "name": "Yingqiang Ge"
+                },
+                {
+                    "authorId": "2111044480",
+                    "name": "Shuyuan Xu"
+                },
+                {
+                    "authorId": "2111810606",
+                    "name": "Jianchao Ji"
+                },
+                {
+                    "authorId": "2145038716",
+                    "name": "Yongfeng Zhang"
+                }
+            ],
+            "abstract": "Recent advances in Foundation Models such as Large Language Models (LLMs) have propelled them to the forefront of Recommender Systems (RS). Despite their utility, there is a growing concern that LLMs might inadvertently perpetuate societal stereotypes, resulting in unfair recommendations. Since fairness is critical for RS as many users take it for decision-making and demand fulfillment, this paper focuses on user-side fairness for LLM-based recommendation where the users may require a recommender system to be fair on specific sensitive features such as gender or age. In this paper, we dive into the extent of unfairness exhibited by LLM-based recommender models based on both T5 and LLaMA backbones, and discuss appropriate methods for promoting equitable treatment of users in LLM-based recommendation models. We introduce a novel Counterfactually-Fair-Prompt (CFP) method towards Unbiased Foundation mOdels (UFO) for fairness-aware LLM-based recommendation. Experiments are conducted on two real-world datasets, MovieLens-1M and Insurance, and compared with both matching-based and sequential-based fairness-aware recommendation models. Results show that CFP achieves better recommendation performance with a high level of fairness.",
+            "score": 8
+        },
+        {
+            "id": "2e92b3699668f920a8d692535622ebeaa53315e2",
+            "paperId": "2e92b3699668f920a8d692535622ebeaa53315e2",
+            "title": "Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation",
+            "year": 2023,
+            "citationCount": 178,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2305.07609",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.07609, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2145957648",
+                    "name": "Yang Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "7792071",
+                    "name": "Xiangnan He"
+                }
+            ],
+            "abstract": "The remarkable achievements of Large Language Models (LLMs) have led to the emergence of a novel recommendation paradigm \u2014 Recommendation via LLM (RecLLM). Nevertheless, it is important to note that LLMs may contain social prejudices, and therefore, the fairness of recommendations made by RecLLM requires further investigation. To avoid the potential risks of RecLLM, it is imperative to evaluate the fairness of RecLLM with respect to various sensitive attributes on the user side. Due to the differences between the RecLLM paradigm and the traditional recommendation paradigm, it is problematic to directly use the fairness benchmark of traditional recommendation. To address the dilemma, we propose a novel benchmark called Fairness of Recommendation via LLM (FaiRLLM). This benchmark comprises carefully crafted metrics and a dataset that accounts for eight sensitive attributes1 in two recommendation scenarios: music and movies. By utilizing our FaiRLLM benchmark, we conducted an evaluation of ChatGPT and discovered that it still exhibits unfairness to some sensitive attributes when generating recommendations. Our code and dataset can be found at https://github.com/jizhi-zhang/FaiRLLM.",
+            "score": 8
+        },
+        {
+            "id": "8eb33fc5c8783b53cbd9c32300acd337ada632fa",
+            "paperId": "8eb33fc5c8783b53cbd9c32300acd337ada632fa",
+            "title": "A Normative Framework for Benchmarking Consumer Fairness in Large Language Model Recommender System",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.02219, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A normative framework to benchmark consumer fairness in LLM-powered recommender systems (RecLLMs) is proposed, and it is hoped that it could provide a formal, principled approach for auditing and mitigating bias in RecLLMs."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                }
+            ],
+            "abstract": "The rapid adoption of large language models (LLMs) in recommender systems (RS) presents new challenges in understanding and evaluating their biases, which can result in unfairness or the amplification of stereotypes. Traditional fairness evaluations in RS primarily focus on collaborative filtering (CF) settings, which may not fully capture the complexities of LLMs, as these models often inherit biases from large, unregulated data. This paper proposes a normative framework to benchmark consumer fairness in LLM-powered recommender systems (RecLLMs). We critically examine how fairness norms in classical RS fall short in addressing the challenges posed by LLMs. We argue that this gap can lead to arbitrary conclusions about fairness, and we propose a more structured, formal approach to evaluate fairness in such systems. Our experiments on the MovieLens dataset on consumer fairness, using in-context learning (zero-shot vs. few-shot) reveal fairness deviations in age-based recommendations, particularly when additional contextual examples are introduced (ICL-2). Statistical significance tests confirm that these deviations are not random, highlighting the need for robust evaluation methods. While this work offers a preliminary discussion on a proposed normative framework, our hope is that it could provide a formal, principled approach for auditing and mitigating bias in RecLLMs. The code and dataset used for this work will be shared at\"gihub-anonymized\".",
+            "score": 7
+        },
+        {
+            "id": "81571f64e0b4b75fedae6a4279290e59e4143976",
+            "paperId": "81571f64e0b4b75fedae6a4279290e59e4143976",
+            "title": "Item-side Fairness of Large Language Model-based Recommendation System",
+            "year": 2024,
+            "citationCount": 24,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2402.15215",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.15215, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study examines the property of LRS with respect to item-side fairness and reveals the influencing factors of both historical users' interactions and inherent semantic biases of LLMs, shedding light on the need to extend conventional item-side fairness methods for LRS."
+            },
+            "authors": [
+                {
+                    "authorId": "2225076028",
+                    "name": "Meng Jiang"
+                },
+                {
+                    "authorId": "2188063534",
+                    "name": "Keqin Bao"
+                },
+                {
+                    "authorId": "2116265843",
+                    "name": "Jizhi Zhang"
+                },
+                {
+                    "authorId": "2117833732",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2261748725",
+                    "name": "Zhengyi Yang"
+                },
+                {
+                    "authorId": "2163400298",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2239071206",
+                    "name": "Xiangnan He"
+                }
+            ],
+            "abstract": "Recommendation systems for Web content distribution intricately connect to the information access and exposure opportunities for vulnerable populations. The emergence of Large Language Models-based Recommendation System (LRS) may introduce additional societal challenges to recommendation systems due to the inherent biases in Large Language Models (LLMs). From the perspective of item-side fairness, there remains a lack of comprehensive investigation into the item-side fairness of LRS given the unique characteristics of LRS compared to conventional recommendation systems. To bridge this gap, this study examines the property of LRS with respect to item-side fairness and reveals the influencing factors of both historical users' interactions and inherent semantic biases of LLMs, shedding light on the need to extend conventional item-side fairness methods for LRS. Towards this goal, we develop a concise and effective framework called IFairLRS to enhance the item-side fairness of an LRS. IFairLRS covers the main stages of building an LRS with specifically adapted strategies to calibrate the recommendations of LRS. We utilize IFairLRS to fine-tune LLaMA, a representative LLM, on MovieLens and Steam datasets, and observe significant item-side fairness improvements. The code can be found in https://github.com/JiangM-C/IFairLRS.git.",
+            "score": 7
+        },
+        {
+            "id": "4cd5b371e1ec819753794be4b1bba1863ce3a84b",
+            "paperId": "4cd5b371e1ec819753794be4b1bba1863ce3a84b",
+            "title": "Improving Recommendation Fairness without Sensitive Attributes Using Multi-Persona LLMs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2505.19473, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel LLM-enhanced framework for Fair recommendation withOut Sensitive Attributes (LLMFOSA) is proposed, leveraging the remarkable reasoning abilities of Large Language Models (LLMs) to improve recommendation fairness without any access to sensitive attributes."
+            },
+            "authors": [
+                {
+                    "authorId": "2057309402",
+                    "name": "Haoran Xin"
+                },
+                {
+                    "authorId": "2363493220",
+                    "name": "Ying Sun"
+                },
+                {
+                    "authorId": "2290272239",
+                    "name": "Chao Wang"
+                },
+                {
+                    "authorId": "2363563602",
+                    "name": "Yanke Yu"
+                },
+                {
+                    "authorId": "2363511482",
+                    "name": "Weijia Zhang"
+                },
+                {
+                    "authorId": "2345015457",
+                    "name": "Hui Xiong"
+                }
+            ],
+            "abstract": "Despite the success of recommender systems in alleviating information overload, fairness issues have raised concerns in recent years, potentially leading to unequal treatment for certain user groups. While efforts have been made to improve recommendation fairness, they often assume that users' sensitive attributes are available during model training. However, collecting sensitive information can be difficult, especially on platforms that involve no personal information disclosure. Therefore, we aim to improve recommendation fairness without any access to sensitive attributes. However, this is a non-trivial task because uncovering latent sensitive patterns from complicated user behaviors without explicit sensitive attributes can be difficult. Consequently, suboptimal estimates of sensitive distributions can hinder the fairness training process. To address these challenges, leveraging the remarkable reasoning abilities of Large Language Models (LLMs), we propose a novel LLM-enhanced framework for Fair recommendation withOut Sensitive Attributes (LLMFOSA). A Multi-Persona Sensitive Information Inference module employs LLMs with distinct personas that mimic diverse human perceptions to infer and distill sensitive information. Furthermore, a Confusion-Aware Sensitive Representation Learning module incorporates inference results and rationales to develop robust sensitive representations, considering the mislabeling confusion and collective consensus among agents. The model is then optimized by a formulated mutual information objective. Extensive experiments on two public datasets validate the effectiveness of LLMFOSA in improving fairness.",
+            "score": 6
+        },
+        {
+            "id": "86c0128529a59ca815bfb0d27beb191760da31e7",
+            "paperId": "86c0128529a59ca815bfb0d27beb191760da31e7",
+            "title": "Understanding Biases in ChatGPT-based Recommender Systems: Provider Fairness, Temporal Stability, and Recency",
+            "year": 2024,
+            "citationCount": 44,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.10545, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                }
+            ],
+            "abstract": "This paper explores the biases inherent in ChatGPT-based recommender systems, focusing on provider fairness (item-side fairness). Through extensive experiments and over a thousand API calls, we investigate the impact of prompt design strategies\u2014including structure, system role, and intent\u2014on evaluation metrics such as provider fairness, catalog coverage, temporal stability, and recency. The first experiment examines these strategies in classical top-K recommendations, while the second evaluates sequential in-context learning (ICL). In the first experiment, we assess seven distinct prompt scenarios on top-K recommendation accuracy and fairness. Accuracy-oriented prompts, like Simple and Chain-of-Thought (COT), outperform diversification prompts, which, despite enhancing temporal freshness, reduce accuracy by up to 50%. Embedding fairness into system roles, such as \u201cact as a fair recommender\u201d, proved more effective than fairness directives within prompts. We also found that diversification prompts led to recommending newer movies, offering broader genre distribution compared to traditional collaborative filtering (CF) models. The system showed high consistency across multiple runs. The second experiment explores sequential ICL, comparing zero-shot and few-shot learning scenarios. Results indicate that including user demographic information in prompts affects model biases and stereotypes. However, ICL did not consistently improve item fairness and catalog coverage over zero-shot learning. Zero-shot learning achieved higher NDCG and coverage, while ICL-2 showed slight improvements in hit rate (HR) when age-group context was included. Overall, our study provides insights into biases of RecLLMs, particularly in provider fairness and catalog coverage. By examining prompt design, learning strategies, and system roles, we highlight the potential and challenges of integrating large language models into recommendation systems, paving the way for future research. Further details can be found at https://github.com/yasdel/Benchmark_RecLLM_Fairness.",
+            "score": 6
+        },
+        {
+            "id": "f8a2813614f4e9c8adab3da2cbb667ad7e4d6bcf",
+            "paperId": "f8a2813614f4e9c8adab3da2cbb667ad7e4d6bcf",
+            "title": "Enhancing Recommender Systems with Large Language Model Reasoning Graphs",
+            "year": 2023,
+            "citationCount": 55,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2308.10835",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2308.10835, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This approach demonstrates how LLMs can enable more logical and interpretable recommender systems through personalized reasoning graphs through LLMRG, which allows recommendations to benefit from both engineered recommendation systems and LLM-derived reasoning graphs."
+            },
+            "authors": [
+                {
+                    "authorId": "2205710030",
+                    "name": "Yan Wang"
+                },
+                {
+                    "authorId": "1491708389",
+                    "name": "Zhixuan Chu"
+                },
+                {
+                    "authorId": "2262613411",
+                    "name": "Ouyang Xin"
+                },
+                {
+                    "authorId": "2143244250",
+                    "name": "Simeng Wang"
+                },
+                {
+                    "authorId": "2065513241",
+                    "name": "Hongyan Hao"
+                },
+                {
+                    "authorId": "2180240771",
+                    "name": "Yue Shen"
+                },
+                {
+                    "authorId": "50771151",
+                    "name": "Jinjie Gu"
+                },
+                {
+                    "authorId": "2149919635",
+                    "name": "Siqiao Xue"
+                },
+                {
+                    "authorId": "2124955096",
+                    "name": "James Y. Zhang"
+                },
+                {
+                    "authorId": "145742001",
+                    "name": "Qing Cui"
+                },
+                {
+                    "authorId": "2151580",
+                    "name": "Longfei Li"
+                },
+                {
+                    "authorId": "2151550753",
+                    "name": "Jun Zhou"
+                },
+                {
+                    "authorId": "2153698676",
+                    "name": "Shenghe Li"
+                }
+            ],
+            "abstract": "Recommendation systems aim to provide users with relevant suggestions, but often lack interpretability and fail to capture higher-level semantic relationships between user behaviors and profiles. In this paper, we propose a novel approach that leverages large language models (LLMs) to construct personalized reasoning graphs. These graphs link a user's profile and behavioral sequences through causal and logical inferences, representing the user's interests in an interpretable way. Our approach, LLM reasoning graphs (LLMRG), has four components: chained graph reasoning, divergent extension, self-verification and scoring, and knowledge base self-improvement. The resulting reasoning graph is encoded using graph neural networks, which serves as additional input to improve conventional recommender systems, without requiring extra user or item information. Our approach demonstrates how LLMs can enable more logical and interpretable recommender systems through personalized reasoning graphs. LLMRG allows recommendations to benefit from both engineered recommendation systems and LLM-derived reasoning graphs. We demonstrate the effectiveness of LLMRG on benchmarks and real-world scenarios in enhancing base recommendation models.",
+            "score": 5
+        },
+        {
+            "id": "8cdadf2c186a63528d2094de7d48e4635147a66c",
+            "paperId": "8cdadf2c186a63528d2094de7d48e4635147a66c",
+            "title": "Ensuring User-side Fairness in Dynamic Recommender Systems",
+            "year": 2023,
+            "citationCount": 20,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2308.15651",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2308.15651, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes FAir Dynamic rEcommender (FADE), an end-to-end fine-tuning framework to dynamically ensure user-side fairness over time and introduces Differentiable Hit (DH) as an improvement over the recent NeuralNDCG method, not only alleviating its gradient vanishing issue but also achieving higher efficiency."
+            },
+            "authors": [
+                {
+                    "authorId": "2154454915",
+                    "name": "Hyunsik Yoo"
+                },
+                {
+                    "authorId": "2215437587",
+                    "name": "Zhichen Zeng"
+                },
+                {
+                    "authorId": "2111625448",
+                    "name": "Jian Kang"
+                },
+                {
+                    "authorId": "4691481",
+                    "name": "Zhining Liu"
+                },
+                {
+                    "authorId": "2235338301",
+                    "name": "David Zhou"
+                },
+                {
+                    "authorId": "1682816",
+                    "name": "Fei Wang"
+                },
+                {
+                    "authorId": "2235777469",
+                    "name": "Eunice Chan"
+                },
+                {
+                    "authorId": "2058143613",
+                    "name": "H. Tong"
+                }
+            ],
+            "abstract": "User-side group fairness is crucial for modern recommender systems, alleviating performance disparities among user groups defined by sensitive attributes like gender, race, or age. In the everevolving landscape of user-item interactions, continual adaptation to newly collected data is crucial for recommender systems to stay aligned with the latest user preferences. However, we observe that such continual adaptation often worsen performance disparities. This necessitates a thorough investigation into user-side fairness in dynamic recommender systems. This problem is challenging due to distribution shifts, frequent model updates, and nondifferentiability of ranking metrics. To our knowledge, this paper presents the first principled study on ensuring user-side fairness in dynamic recommender systems. We start with theoretical analyses on fine-tuning v.s. retraining, showing that the best practice is incremental fine-tuning with restart. Guided by our theoretical analyses, we propose FAir Dynamic rEcommender (FADE), an end-to-end fine-tuning framework to dynamically ensure user-side fairness over time. To overcome the non-differentiability of recommendation metrics in the fairness loss, we further introduce Differentiable Hit (DH) as an improvement over the recent NeuralNDCG method, not only alleviating its gradient vanishing issue but also achieving higher efficiency. Besides that, we also address the instability issue of the fairness loss by leveraging the competing nature between the recommendation loss and the fairness loss. Through extensive experiments on real-world datasets, we demonstrate that FADE effectively and efficiently reduces performance disparities with little sacrifice in the overall recommendation performance.",
+            "score": 5
+        },
+        {
+            "id": "eee126bdd382de4951a50a0ebe81c657543bc63a",
+            "paperId": "eee126bdd382de4951a50a0ebe81c657543bc63a",
+            "title": "LettinGo: Explore User Profile Generation for Recommendation System",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.18309, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2163383329",
+                    "name": "Lu Wang"
+                },
+                {
+                    "authorId": "2371066244",
+                    "name": "Di Zhang"
+                },
+                {
+                    "authorId": "2261394438",
+                    "name": "Fangkai Yang"
+                },
+                {
+                    "authorId": "2261423358",
+                    "name": "Pu Zhao"
+                },
+                {
+                    "authorId": "2284937854",
+                    "name": "Jianfeng Liu"
+                },
+                {
+                    "authorId": "2279698244",
+                    "name": "Yuefeng Zhan"
+                },
+                {
+                    "authorId": "2279736148",
+                    "name": "Hao Sun"
+                },
+                {
+                    "authorId": "2303522901",
+                    "name": "Qingwei Lin"
+                },
+                {
+                    "authorId": "2066621592",
+                    "name": "Weiwei Deng"
+                },
+                {
+                    "authorId": "2307618254",
+                    "name": "Dongmei Zhang"
+                },
+                {
+                    "authorId": "2329333486",
+                    "name": "Feng Sun"
+                },
+                {
+                    "authorId": "2279711828",
+                    "name": "Qi Zhang"
+                }
+            ],
+            "abstract": "User profiling is pivotal for recommendation systems, as it transforms raw user interaction data into concise and structured representations that drive personalized recommendations. While traditional embedding-based profiles lack interpretability and adaptability, recent advances with large language models (LLMs) enable text-based profiles that are semantically richer and more transparent. However, existing methods often adhere to fixed formats that limit their ability to capture the full diversity of user behaviors. In this paper, we introduce LettinGo, a novel framework for generating diverse and adaptive user profiles. By leveraging the expressive power of LLMs and incorporating direct feedback from downstream recommendation tasks, our approach avoids the rigid constraints imposed by supervised fine-tuning (SFT). Instead, we employ Direct Preference Optimization (DPO) to align the profile generator with task-specific performance, ensuring that the profiles remain adaptive and effective. LettinGo operates in three stages: (1) exploring diverse user profiles via multiple LLMs, (2) evaluating profile quality based on their impact in recommendation systems, and (3) aligning the profile generation through pairwise preference data derived from task performance. Experimental results demonstrate that our framework significantly enhances recommendation accuracy, flexibility, and contextual awareness. This work enhances profile generation as a key innovation for next-generation recommendation systems.",
+            "score": 5
+        },
+        {
+            "id": "1cfca9dd5268d7c02e67c55a6661a0ddf6ecb3ce",
+            "paperId": "1cfca9dd5268d7c02e67c55a6661a0ddf6ecb3ce",
+            "title": "BiFair: A Fairness-aware Training Framework for LLM-enhanced Recommender Systems via Bi-level Optimization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04294, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2221337674",
+                    "name": "Jiaming Zhang"
+                },
+                {
+                    "authorId": "1527113700",
+                    "name": "Yuyuan Li"
+                },
+                {
+                    "authorId": "2373011066",
+                    "name": "Yiqun Xu"
+                },
+                {
+                    "authorId": "2310870343",
+                    "name": "Li Zhang"
+                },
+                {
+                    "authorId": "2314871557",
+                    "name": "Xiaohua Feng"
+                },
+                {
+                    "authorId": "2374309235",
+                    "name": "Zhifei Ren"
+                },
+                {
+                    "authorId": "2251485995",
+                    "name": "Chao-Jun Chen"
+                }
+            ],
+            "abstract": "Large Language Model-enhanced Recommender Systems (LLM-enhanced RSs) have emerged as a powerful approach to improving recommendation quality by leveraging LLMs to generate item representations. Despite these advancements, the integration of LLMs raises severe fairness concerns. Existing studies reveal that LLM-based RSs exhibit greater unfairness than traditional RSs, yet fairness issues in LLM-enhanced RSs remain largely unexplored. In this paper, our empirical study reveals that while LLM-enhanced RSs improve fairness across item groups, a significant fairness gap persists. Further enhancement remains challenging due to the architectural differences and varying sources of unfairness inherent in LLM-enhanced RSs. To bridge this gap, we first decompose unfairness into i) \\textit{prior unfairness} in LLM-generated representations and ii) \\textit{training unfairness} in recommendation models. Then, we propose BiFair, a bi-level optimization-based fairness-aware training framework designed to mitigate both prior and training unfairness simultaneously. BiFair optimizes two sets of learnable parameters: LLM-generated representations and a trainable projector in the recommendation model, using a two-level nested optimization process. Additionally, we introduce an adaptive inter-group balancing mechanism, leveraging multi-objective optimization principles to dynamically balance fairness across item groups. Extensive experiments on three real-world datasets demonstrate that BiFair significantly mitigates unfairness and outperforms previous state-of-the-art methods.",
+            "score": 4
+        },
+        {
+            "id": "8d90cbcabac68940867b2bc86cc1aed4dd951cd6",
+            "paperId": "8d90cbcabac68940867b2bc86cc1aed4dd951cd6",
+            "title": "A Fairness-aware Hybrid Recommender System",
+            "year": 2018,
+            "citationCount": 60,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1809.09030, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a hybrid fairness-aware recommender system that provides efficient and accurate recommendations by incorporating multiple user-user and item-item similarity measures, content, and demographic information, while addressing recommendation biases."
+            },
+            "authors": [
+                {
+                    "authorId": "2086602",
+                    "name": "G. Farnadi"
+                },
+                {
+                    "authorId": "2635901",
+                    "name": "Pigi Kouki"
+                },
+                {
+                    "authorId": "49259570",
+                    "name": "Spencer K. Thompson"
+                },
+                {
+                    "authorId": "40615554",
+                    "name": "S. Srinivasan"
+                },
+                {
+                    "authorId": "1746034",
+                    "name": "L. Getoor"
+                }
+            ],
+            "abstract": "Recommender systems are used in variety of domains affecting people's lives. This has raised concerns about possible biases and discrimination that such systems might exacerbate. There are two primary kinds of biases inherent in recommender systems: observation bias and bias stemming from imbalanced data. Observation bias exists due to a feedback loop which causes the model to learn to only predict recommendations similar to previous ones. Imbalance in data occurs when systematic societal, historical, or other ambient bias is present in the data. In this paper, we address both biases by proposing a hybrid fairness-aware recommender system. Our model provides efficient and accurate recommendations by incorporating multiple user-user and item-item similarity measures, content, and demographic information, while addressing recommendation biases. We implement our model using a powerful and expressive probabilistic programming language called probabilistic soft logic. We experimentally evaluate our approach on a popular movie recommendation dataset, showing that our proposed model can provide more accurate and fairer recommendations, compared to a state-of-the art fair recommender system.",
+            "score": 4
+        },
+        {
+            "id": "6531e6b6b8e43901a804fe3f03dd941c4e781718",
+            "paperId": "6531e6b6b8e43901a804fe3f03dd941c4e781718",
+            "title": "Collaborative Large Language Model for Recommender Systems",
+            "year": 2023,
+            "citationCount": 85,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2311.01343, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel soft+hard prompting strategy is proposed to effectively learn user/item collaborative/content token embeddings via language modeling on RS-specific corpora, and a novel recommendation-oriented finetuning strategy is proposed for CLLM4Rec."
+            },
+            "authors": [
+                {
+                    "authorId": "2261804201",
+                    "name": "Yaochen Zhu"
+                },
+                {
+                    "authorId": "2264480350",
+                    "name": "Liang Wu"
+                },
+                {
+                    "authorId": "2170992709",
+                    "name": "Qilnli Guo"
+                },
+                {
+                    "authorId": "2264620213",
+                    "name": "Liangjie Hong"
+                },
+                {
+                    "authorId": "2257373563",
+                    "name": "Jundong Li"
+                }
+            ],
+            "abstract": "Recently, there has been growing interest in developing the next-generation recommender systems (RSs) based on pretrained large language models (LLMs). However, the semantic gap between natural language and recommendation tasks is still not well addressed, leading to multiple issues such as spuriously correlated user/item descriptors, ineffective language modeling on user/item data, inefficient recommendations via auto-regression, etc. In this paper, we propose CLLM4Rec, the first generative RS that tightly integrates the LLM paradigm and ID paradigm of RSs, aiming to address the above challenges simultaneously. We first extend the vocabulary of pretrained LLMs with user/item ID tokens to faithfully model user/item collaborative and content semantics. Accordingly, a novel soft+hard prompting strategy is proposed to effectively learn user/item collaborative/content token embeddings via language modeling on RS-specific corpora, where each document is split into a prompt consisting of heterogeneous soft (user/item) tokens and hard (vocab) tokens and a main text consisting of homogeneous item tokens or vocab tokens to facilitate stable and effective language modeling. In addition, a novel mutual regularization strategy is introduced to encourage CLLM4Rec to capture recommendation-related information from noisy user/item content. Finally, we propose a novel recommendation-oriented finetuning strategy for CLLM4Rec, where an item prediction head with multinomial likelihood is added to the pretrained CLLM4Rec backbone to predict hold-out items based on soft+hard prompts established from masked user-item interaction history, where recommendations of multiple items can be generated efficiently without hallucination.",
+            "score": 4
+        },
+        {
+            "id": "f7d3c17ad1dee97377651e0f5646b3fc6d047fc0",
+            "paperId": "f7d3c17ad1dee97377651e0f5646b3fc6d047fc0",
+            "title": "Evaluating ChatGPT as a Recommender System: A Rigorous Approach",
+            "year": 2023,
+            "citationCount": 30,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.03613",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.03613, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2240534691",
+                    "name": "Dario Di Palma"
+                },
+                {
+                    "authorId": "71307529",
+                    "name": "Giovanni Maria Biancofiore"
+                },
+                {
+                    "authorId": "2431124",
+                    "name": "V. W. Anelli"
+                },
+                {
+                    "authorId": "1741231",
+                    "name": "F. Narducci"
+                },
+                {
+                    "authorId": "1737962",
+                    "name": "T. D. Noia"
+                },
+                {
+                    "authorId": "1738818",
+                    "name": "E. Sciascio"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) have recently shown impressive abilities in handling various natural language-related tasks. Among different LLMs, current studies have assessed ChatGPT's superior performance across manifold tasks, especially under the zero/few-shot prompting conditions. Given such successes, the Recommender Systems (RSs) research community have started investigating its potential applications within the recommendation scenario. However, although various methods have been proposed to integrate ChatGPT's capabilities into RSs, current research struggles to comprehensively evaluate such models while considering the peculiarities of generative models. Often, evaluations do not consider hallucinations, duplications, and out-of-the-closed domain recommendations and solely focus on accuracy metrics, neglecting the impact on beyond-accuracy facets. To bridge this gap, we propose a robust evaluation pipeline to assess ChatGPT's ability as an RS and post-process ChatGPT recommendations to account for these aspects. Through this pipeline, we investigate ChatGPT-3.5 and ChatGPT-4 performance in the recommendation task under the zero-shot condition employing the role-playing prompt. We analyze the model's functionality in three settings: the Top-N Recommendation, the cold-start recommendation, and the re-ranking of a list of recommendations, and in three domains: movies, music, and books. The experiments reveal that ChatGPT exhibits higher accuracy than the baselines on books domain. It also excels in re-ranking and cold-start scenarios while maintaining reasonable beyond-accuracy metrics. Furthermore, we measure the similarity between the ChatGPT recommendations and the other recommenders, providing insights about how ChatGPT could be categorized in the realm of recommender systems. The evaluation pipeline is publicly released for future research.",
+            "score": 4
+        },
+        {
+            "id": "17c36e4f1addd6ad3acd6e4bb7cc0e6156e5d790",
+            "paperId": "17c36e4f1addd6ad3acd6e4bb7cc0e6156e5d790",
+            "title": "A Preliminary Study of ChatGPT on News Recommendation: Personalization, Provider Fairness, Fake News",
+            "year": 2023,
+            "citationCount": 34,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2306.10702",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.10702, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "48570095",
+                    "name": "Xinyi Li"
+                },
+                {
+                    "authorId": "1739818",
+                    "name": "Yongfeng Zhang"
+                },
+                {
+                    "authorId": "2161653",
+                    "name": "E. Malthouse"
+                }
+            ],
+            "abstract": "Online news platforms commonly employ personalized news recommendation methods to assist users in discovering interesting articles, and many previous works have utilized language model techniques to capture user interests and understand news content. With the emergence of large language models like GPT-3 and T-5, a new recommendation paradigm has emerged, leveraging pre-trained language models for making recommendations. ChatGPT, with its user-friendly interface and growing popularity, has become a prominent choice for text-based tasks. Considering the growing reliance on ChatGPT for language tasks, the importance of news recommendation in addressing social issues, and the trend of using language models in recommendations, this study conducts an initial investigation of ChatGPT's performance in news recommendations, focusing on three perspectives: personalized news recommendation, news provider fairness, and fake news detection. ChatGPT has the limitation that its output is sensitive to the input phrasing. We therefore aim to explore the constraints present in the generated responses of ChatGPT for each perspective. Additionally, we investigate whether specific prompt formats can alleviate these constraints or if these limitations require further attention from researchers in the future. We also surpass fixed evaluations by developing a webpage to monitor ChatGPT's performance on weekly basis on the tasks and prompts we investigated. Our aim is to contribute to and encourage more researchers to engage in the study of enhancing news recommendation performance through the utilization of large language models such as ChatGPT.",
+            "score": 4
+        },
+        {
+            "id": "aa388554455f06dfc94b42e6d0d6effd775c36c2",
+            "paperId": "aa388554455f06dfc94b42e6d0d6effd775c36c2",
+            "title": "RecRankerEval: A Flexible and Extensible Framework for Top-k LLM-based Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.05880, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2293970394",
+                    "name": "Zeyuan Meng"
+                },
+                {
+                    "authorId": "30678834",
+                    "name": "Zixuan Yi"
+                },
+                {
+                    "authorId": "1698205",
+                    "name": "I. Ounis"
+                }
+            ],
+            "abstract": "A recent Large language model (LLM)-based recommendation model, called RecRanker, has demonstrated a superior performance in the top-k recommendation task compared to other models. In particular, RecRanker samples users via clustering, generates an initial ranking list using an initial recommendation model, and fine-tunes an LLM through hybrid instruction tuning to infer user preferences. However, the contribution of each core component remains underexplored. In this work, we inspect the reproducibility of RecRanker, and study the impact and role of its various components. We begin by reproducing the RecRanker pipeline through the implementation of all its key components. Our reproduction shows that the pairwise and listwise methods achieve a performance comparable to that reported in the original paper. For the pointwise method, while we are also able to reproduce the original paper's results, further analysis shows that the performance is abnormally high due to data leakage from the inclusion of ground-truth information in the prompts. To enable a fair and comprehensive evaluation of LLM-based top-k recommendations, we propose RecRankerEval, an extensible framework that covers five key dimensions: user sampling strategy, initial recommendation model, LLM backbone, dataset selection, and instruction tuning method. Using the RecRankerEval framework, we show that the original results of RecRanker can be reproduced on the ML-100K and ML-1M datasets, as well as the additional Amazon-Music dataset, but not on BookCrossing due to the lack of timestamp information in the original RecRanker paper. Furthermore, we demonstrate that RecRanker's performance can be improved by employing alternative user sampling methods, stronger initial recommenders, and more capable LLMs.",
+            "score": 4
+        },
+        {
+            "id": "a4f0f155108625ffe6e4d68559090be2a3b6718c",
+            "paperId": "a4f0f155108625ffe6e4d68559090be2a3b6718c",
+            "title": "Heterogeneous User Modeling for LLM-based Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04626, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2301153513",
+                    "name": "Honghui Bao"
+                },
+                {
+                    "authorId": "2326948181",
+                    "name": "Wenjie Wang"
+                },
+                {
+                    "authorId": "2192203811",
+                    "name": "Xinyu Lin"
+                },
+                {
+                    "authorId": "31734386",
+                    "name": "Fengbin Zhu"
+                },
+                {
+                    "authorId": "2279960663",
+                    "name": "Teng Sun"
+                },
+                {
+                    "authorId": "2280911299",
+                    "name": "Fuli Feng"
+                },
+                {
+                    "authorId": "2279753672",
+                    "name": "Tat-Seng Chua"
+                }
+            ],
+            "abstract": "Leveraging Large Language Models (LLMs) for recommendation has demonstrated notable success in various domains, showcasing their potential for open-domain recommendation. A key challenge to advancing open-domain recommendation lies in effectively modeling user preferences from users'heterogeneous behaviors across multiple domains. Existing approaches, including ID-based and semantic-based modeling, struggle with poor generalization, an inability to compress noisy interactions effectively, and the domain seesaw phenomenon. To address these challenges, we propose a Heterogeneous User Modeling (HUM) method, which incorporates a compression enhancer and a robustness enhancer for LLM-based recommendation. The compression enhancer uses a customized prompt to compress heterogeneous behaviors into a tailored token, while a masking mechanism enhances cross-domain knowledge extraction and understanding. The robustness enhancer introduces a domain importance score to mitigate the domain seesaw phenomenon by guiding domain optimization. Extensive experiments on heterogeneous datasets validate that HUM effectively models user heterogeneity by achieving both high efficacy and robustness, leading to superior performance in open-domain recommendation.",
+            "score": 4
+        },
+        {
+            "id": "1822f71506428ad503518304e0084b811a54161d",
+            "paperId": "1822f71506428ad503518304e0084b811a54161d",
+            "title": "Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02000, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "30537439",
+                    "name": "Yongsen Zheng"
+                },
+                {
+                    "authorId": null,
+                    "name": "Zongxuan Xie"
+                },
+                {
+                    "authorId": "2282194057",
+                    "name": "Guohua Wang"
+                },
+                {
+                    "authorId": "2117941651",
+                    "name": "Ziyao Liu"
+                },
+                {
+                    "authorId": "2261777366",
+                    "name": "Liang Lin"
+                },
+                {
+                    "authorId": "2329736443",
+                    "name": "Kwok-Yan Lam"
+                }
+            ],
+            "abstract": "Unfairness is a well-known challenge in Recommender Systems (RSs), often resulting in biased outcomes that disadvantage users or items based on attributes such as gender, race, age, or popularity. Although some approaches have started to improve fairness recommendation in offline or static contexts, the issue of unfairness often exacerbates over time, leading to significant problems like the Matthew effect, filter bubbles, and echo chambers. To address these challenges, we proposed a novel framework, Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System (HyFairCRS), aiming to promote multi-interest diversity fairness in dynamic and interactive Conversational Recommender Systems (CRSs). HyFairCRS first captures a wide range of user interests by establishing diverse hypergraphs through contrastive learning. These interests are then utilized in conversations to generate informative responses and ensure fair item predictions within the dynamic user-system feedback loop. Experiments on two CRS-based datasets show that HyFairCRS achieves a new state-of-the-art performance while effectively alleviating unfairness. Our code is available at https://github.com/zysensmile/HyFairCRS.",
+            "score": 3
+        },
+        {
+            "id": "c7b279896e90bd1723c4fd5e2f1e3e03a3a12a43",
+            "paperId": "c7b279896e90bd1723c4fd5e2f1e3e03a3a12a43",
+            "title": "Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.08486, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374149879",
+                    "name": "Parker Whitfill"
+                },
+                {
+                    "authorId": "2375743983",
+                    "name": "Stewy Slocum"
+                }
+            ],
+            "abstract": "Alignment techniques for LLMs rely on optimizing preference-based objectives -- where these preferences are typically elicited as ordinal, binary choices between responses. Recent work has focused on improving label quality or mitigating particular biases, but we identify a more fundamental limitation: these methods collect the wrong kind of data. We prove an impossibility result: no algorithm relying solely on ordinal comparisons can systematically recover the most preferred model. Intuitively, ordinal data lacks the information needed to resolve tradeoffs -- e.g., fixing a factual error on one prompt versus improving style on another. We show that selecting the optimal model requires recovering preferences over \\emph{models} (rather than just responses), which can only be identified given cardinal feedback about response quality. To address this, we collect and publicly release a dataset of 25,000 cardinal judgments using willingness-to-pay elicitations, a well-established tool from experimental economics. Empirically, we find that incorporating cardinal feedback into preference fine-tuning allows models to prioritize high-impact improvements and outperform ordinal-only methods on downstream benchmarks, such as Arena-Hard.",
+            "score": 3
+        },
+        {
+            "id": "937942ed07cb2c77296686fbfb75308b2f49b5d1",
+            "paperId": "937942ed07cb2c77296686fbfb75308b2f49b5d1",
+            "title": "Guiding LLM Decision-Making with Fairness Reward Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11344, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373458483",
+                    "name": "Zara Hall"
+                },
+                {
+                    "authorId": "2065894334",
+                    "name": "Melanie Subbiah"
+                },
+                {
+                    "authorId": "2198489301",
+                    "name": "Thomas Zollo"
+                },
+                {
+                    "authorId": "2284767355",
+                    "name": "Kathleen McKeown"
+                },
+                {
+                    "authorId": "2261362897",
+                    "name": "Richard Zemel"
+                }
+            ],
+            "abstract": "Large language models are increasingly used to support high-stakes decisions, potentially influencing who is granted bail or receives a loan. Naive chain-of-thought sampling can improve average decision accuracy, but has also been shown to amplify unfair bias. To address this challenge and enable the trustworthy use of reasoning models in high-stakes decision-making, we propose a framework for training a generalizable Fairness Reward Model (FRM). Our model assigns a fairness score to LLM reasoning, enabling the system to down-weight biased trajectories and favor equitable ones when aggregating decisions across reasoning chains. We show that a single Fairness Reward Model, trained on weakly supervised, LLM-annotated examples of biased versus unbiased reasoning, transfers across tasks, domains, and model families without additional fine-tuning. Applied to real-world decision-making tasks including recidivism prediction and social media moderation, we show that our approach consistently improves fairness while matching, or even surpassing, baseline accuracy.",
+            "score": 3
+        },
+        {
+            "id": "751c14cbe54ad37e217f1fdde1738d88e649c1ee",
+            "paperId": "751c14cbe54ad37e217f1fdde1738d88e649c1ee",
+            "title": "Algorithmic Collective Action with Two Collectives",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2505.00195, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces a first of a kind framework for studying collective action with two or more collectives that strategically behave to manipulate data-driven systems and illustrates a framework for people to actively use their own data to promote their own interests."
+            },
+            "authors": [
+                {
+                    "authorId": "2052403136",
+                    "name": "Aditya Karan"
+                },
+                {
+                    "authorId": "2253609109",
+                    "name": "Nicholas Vincent"
+                },
+                {
+                    "authorId": "1680270",
+                    "name": "Karrie Karahalios"
+                },
+                {
+                    "authorId": "1775376",
+                    "name": "Hari Sundaram"
+                }
+            ],
+            "abstract": "Given that data-dependent algorithmic systems have become impactful in more domains of life \u2013 from finding media to influencing hiring \u2013 the need for individuals to promote their own interests and hold algorithms accountable has grown. The large amount of data these systems use means that individuals cannot impact system behavior by acting alone. To have meaningful influence, individuals must band together to engage in collective action. The groups that engage in such algorithmic collective action are likely to vary in size, membership characteristics, ability to act on data, and crucially, objectives. In this work, we introduce a first of a kind framework for studying collective action with two or more collectives that strategically behave to manipulate data-driven systems. With more than one collective acting on a system, unexpected interactions may occur. We use this framework to conduct experiments with language model-based classifiers and recommender systems where two collectives each attempt to achieve their own individual objectives. We examine how differing objectives, strategies, sizes, and homogeneity can impact a collective\u2019s efficacy. We find that the unintentional interactions between collectives can be quite significant. We find cases in which a collective acting in isolation can achieve their objective (e.g., improve classification outcomes for themselves or promote a particular item), but when a second collective acts simultaneously, the efficacy of the first group drops by as much as 75%. We find that, in the recommender system context, neither fully heterogeneous nor fully homogeneous collectives stand out as most efficacious and that the impact of heterogeneity is secondary compared to collective size. Our results signal the need for more transparency in both the underlying algorithmic models and the different behaviors individuals or collectives may take on these systems. This approach also allows collectives to hold algorithmic system developers accountable and illustrates a framework for people to actively use their own data to promote their own interests.",
+            "score": 3
+        },
+        {
+            "id": "d0d172650c6118eb6e30d9de160c0d0888783c65",
+            "paperId": "d0d172650c6118eb6e30d9de160c0d0888783c65",
+            "title": "Language Model Evolutionary Algorithms for Recommender Systems: Benchmarks and Algorithm Comparisons",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2411.10697, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper introduces a benchmark problem set, named RSBench, specifically designed to assess the performance of LLM-based EAs in recommendation prompt optimization, and develops three LLM-based EAs based on established EA frameworks and experimentally evaluates their performance using RSBench."
+            },
+            "authors": [
+                {
+                    "authorId": "2321587889",
+                    "name": "Jiao Liu"
+                },
+                {
+                    "authorId": "2307218248",
+                    "name": "Zhu Sun"
+                },
+                {
+                    "authorId": "2290907607",
+                    "name": "Shanshan Feng"
+                },
+                {
+                    "authorId": "101252726",
+                    "name": "Y. Ong"
+                }
+            ],
+            "abstract": "In the evolutionary computing community, the remarkable language-handling capabilities and reasoning power of large language models (LLMs) have significantly enhanced the functionality of evolutionary algorithms (EAs), enabling them to tackle optimization problems involving structured language or program code. Although this field is still in its early stages, its impressive potential has led to the development of various LLM-based EAs. To effectively evaluate the performance and practical applicability of these LLM-based EAs, benchmarks with real-world relevance are essential. In this paper, we focus on LLM-based recommender systems (RSs) and introduce a benchmark problem set, named RSBench, specifically designed to assess the performance of LLM-based EAs in recommendation prompt optimization. RSBench emphasizes session-based recommendations, aiming to discover a set of Pareto optimal prompts that guide the recommendation process, providing accurate, diverse, and fair recommendations. We develop three LLM-based EAs based on established EA frameworks and experimentally evaluate their performance using RSBench. Our study offers valuable insights into the application of EAs in LLM-based RSs. Additionally, we explore key components that may influence the overall performance of the RS, providing meaningful guidance for future research on the development of LLM-based EAs in RSs.",
+            "score": 3
+        },
+        {
+            "id": "27892516b6a20ddab6c5851efb5abaacdc077691",
+            "paperId": "27892516b6a20ddab6c5851efb5abaacdc077691",
+            "title": "XAI4LLM. Let Machine Learning Models and LLMs Collaborate for Enhanced In-Context Learning in Healthcare",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.06270, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "30917303",
+                    "name": "Fatemeh Nazary"
+                },
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                },
+                {
+                    "authorId": "1737962",
+                    "name": "T. D. Noia"
+                },
+                {
+                    "authorId": "1738818",
+                    "name": "E. Sciascio"
+                }
+            ],
+            "abstract": "Clinical decision support systems require models that are not only highly accurate but also equitable and sensitive to the implications of missed diagnoses. In this study, we introduce a knowledge-guided in-context learning (ICL) framework designed to enable large language models (LLMs) to effectively process structured clinical data. Our approach integrates domain-specific feature groupings, carefully balanced few-shot examples, and task-specific prompting strategies. We systematically evaluate this method across seventy distinct ICL designs by various prompt variations and two different communication styles-natural-language narrative and numeric conversational-and compare its performance to robust classical machine learning (ML) benchmarks on tasks involving heart disease and diabetes prediction. Our findings indicate that while traditional ML models maintain superior performance in balanced precision-recall scenarios, LLMs employing narrative prompts with integrated domain knowledge achieve higher recall and significantly reduce gender bias, effectively narrowing fairness disparities by an order of magnitude. Despite the current limitation of increased inference latency, LLMs provide notable advantages, including the capacity for zero-shot deployment and enhanced equity. This research offers the first comprehensive analysis of ICL design considerations for applying LLMs to tabular clinical tasks and highlights distillation and multimodal extensions as promising directions for future research.",
+            "score": 3
+        },
+        {
+            "id": "79395f4ef32b925381f7ec9a824b05bdb982fd33",
+            "paperId": "79395f4ef32b925381f7ec9a824b05bdb982fd33",
+            "title": "Large Language Models as Zero-Shot Conversational Recommenders",
+            "year": 2023,
+            "citationCount": 162,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3583780.3614949",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2308.10053, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "51002202",
+                    "name": "Zhankui He"
+                },
+                {
+                    "authorId": "2153722757",
+                    "name": "Zhouhang Xie"
+                },
+                {
+                    "authorId": "144598922",
+                    "name": "Rahul Jha"
+                },
+                {
+                    "authorId": "2454529",
+                    "name": "H. Steck"
+                },
+                {
+                    "authorId": "1702877",
+                    "name": "Dawen Liang"
+                },
+                {
+                    "authorId": "2232924715",
+                    "name": "Yesu Feng"
+                },
+                {
+                    "authorId": "3165738",
+                    "name": "Bodhisattwa Prasad Majumder"
+                },
+                {
+                    "authorId": "3174388",
+                    "name": "Nathan Kallus"
+                },
+                {
+                    "authorId": "35660011",
+                    "name": "Julian McAuley"
+                }
+            ],
+            "abstract": "In this paper, we present empirical studies on conversational recommendation tasks using representative large language models in a zero-shot setting with three primary contributions. (1) Data: To gain insights into model behavior in \"in-the-wild\" conversational recommendation scenarios, we construct a new dataset of recommendation-related conversations by scraping a popular discussion website. This is the largest public real-world conversational recommendation dataset to date. (2) Evaluation: On the new dataset and two existing conversational recommendation datasets, we observe that even without fine-tuning, large language models can outperform existing fine-tuned conversational recommendation models. (3) Analysis: We propose various probing tasks to investigate the mechanisms behind the remarkable performance of large language models in conversational recommendation. We analyze both the large language models' behaviors and the characteristics of the datasets, providing a holistic understanding of the models' effectiveness, limitations and suggesting directions for the design of future conversational recommenders.",
+            "score": 3
+        },
+        {
+            "id": "98ca8e34ff11836b653ab9e27207c04c8dd135f4",
+            "paperId": "98ca8e34ff11836b653ab9e27207c04c8dd135f4",
+            "title": "Large Language Models are Competitive Near Cold-start Recommenders for Language- and Item-based Preferences",
+            "year": 2023,
+            "citationCount": 113,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3604915.3608845",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2307.14225, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1732536",
+                    "name": "S. Sanner"
+                },
+                {
+                    "authorId": "1680484",
+                    "name": "K. Balog"
+                },
+                {
+                    "authorId": "1803571",
+                    "name": "Filip Radlinski"
+                },
+                {
+                    "authorId": "2010374630",
+                    "name": "Benjamin D. Wedin"
+                },
+                {
+                    "authorId": "2065639113",
+                    "name": "Lucas Dixon"
+                }
+            ],
+            "abstract": "Traditional recommender systems leverage users\u2019 item preference history to recommend novel content that users may like. However, modern dialog interfaces that allow users to express language-based preferences offer a fundamentally different modality for preference input. Inspired by recent successes of prompting paradigms for large language models (LLMs), we study their use for making recommendations from both item-based and language-based preferences in comparison to state-of-the-art item-based collaborative filtering (CF) methods. To support this investigation, we collect a new dataset consisting of both item-based and language-based preferences elicited from users along with their ratings on a variety of (biased) recommended items and (unbiased) random items. Among numerous experimental results, we find that LLMs provide competitive recommendation performance for pure language-based preferences (no item preferences) in the near cold-start case in comparison to item-based CF methods, despite having no supervised training for this specific task (zero-shot) or only a few labels (few-shot). This is particularly promising as language-based preference representations are more explainable and scrutable than item-based or vector-based representations.",
+            "score": 3
+        },
+        {
+            "id": "f4e723958a93762befb4d4a039b44a7d752f9917",
+            "paperId": "f4e723958a93762befb4d4a039b44a7d752f9917",
+            "title": "Large Language Models are Zero-Shot Rankers for Recommender Systems",
+            "year": 2023,
+            "citationCount": 353,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.08845",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.08845, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "151472453",
+                    "name": "Yupeng Hou"
+                },
+                {
+                    "authorId": "2120518257",
+                    "name": "Junjie Zhang"
+                },
+                {
+                    "authorId": "2112304962",
+                    "name": "Zihan Lin"
+                },
+                {
+                    "authorId": "2115863242",
+                    "name": "Hongyu Lu"
+                },
+                {
+                    "authorId": "3360722",
+                    "name": "Ruobing Xie"
+                },
+                {
+                    "authorId": "35660011",
+                    "name": "Julian McAuley"
+                },
+                {
+                    "authorId": "2542603",
+                    "name": "Wayne Xin Zhao"
+                }
+            ],
+            "abstract": "Recently, large language models (LLMs) (e.g., GPT-4) have demonstrated impressive general-purpose task-solving abilities, including the potential to approach recommendation tasks. Along this line of research, this work aims to investigate the capacity of LLMs that act as the ranking model for recommender systems. We first formalize the recommendation problem as a conditional ranking task, considering sequential interaction histories as conditions and the items retrieved by other candidate generation models as candidates. To solve the ranking task by LLMs, we carefully design the prompting template and conduct extensive experiments on two widely-used datasets. We show that LLMs have promising zero-shot ranking abilities but (1) struggle to perceive the order of historical interactions, and (2) can be biased by popularity or item positions in the prompts. We demonstrate that these issues can be alleviated using specially designed prompting and bootstrapping strategies. Equipped with these insights, zero-shot LLMs can even challenge conventional recommendation models when ranking candidates are retrieved by multiple candidate generators. The code and processed datasets are available at https://github.com/RUCAIBox/LLMRank.",
+            "score": 3
+        },
+        {
+            "id": "f9bc3a99fedbfcade99d66740682fde1d2a8ee5f",
+            "paperId": "f9bc3a99fedbfcade99d66740682fde1d2a8ee5f",
+            "title": "Revisiting Prompt Engineering: A Comprehensive Evaluation for LLM-based Personalized Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13525, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2312762426",
+                    "name": "Genki Kusano"
+                },
+                {
+                    "authorId": "2273675486",
+                    "name": "Kosuke Akimoto"
+                },
+                {
+                    "authorId": "72198234",
+                    "name": "Kunihiro Takeoka"
+                }
+            ],
+            "abstract": "Large language models (LLMs) can perform recommendation tasks by taking prompts written in natural language as input. Compared to traditional methods such as collaborative filtering, LLM-based recommendation offers advantages in handling cold-start, cross-domain, and zero-shot scenarios, as well as supporting flexible input formats and generating explanations of user behavior. In this paper, we focus on a single-user setting, where no information from other users is used. This setting is practical for privacy-sensitive or data-limited applications. In such cases, prompt engineering becomes especially important for controlling the output generated by the LLM. We conduct a large-scale comparison of 23 prompt types across 8 public datasets and 12 LLMs. We use statistical tests and linear mixed-effects models to evaluate both accuracy and inference cost. Our results show that for cost-efficient LLMs, three types of prompts are especially effective: those that rephrase instructions, consider background knowledge, and make the reasoning process easier to follow. For high-performance LLMs, simple prompts often outperform more complex ones while reducing cost. In contrast, commonly used prompting styles in natural language processing, such as step-by-step reasoning, or the use of reasoning models often lead to lower accuracy. Based on these findings, we provide practical suggestions for selecting prompts and LLMs depending on the required balance between accuracy and cost.",
+            "score": 3
+        },
+        {
+            "id": "e9241c66e1b83cac2156c0a53d75e7eb51f2f080",
+            "paperId": "e9241c66e1b83cac2156c0a53d75e7eb51f2f080",
+            "title": "Evaluating Position Bias in Large Language Model Recommendations",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.02020, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374480915",
+                    "name": "Ethan Bito"
+                },
+                {
+                    "authorId": "2374500459",
+                    "name": "Yongli Ren"
+                },
+                {
+                    "authorId": "2374473584",
+                    "name": "Estrid He"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) are being increasingly explored as general-purpose tools for recommendation tasks, enabling zero-shot and instruction-following capabilities without the need for task-specific training. While the research community is enthusiastically embracing LLMs, there are important caveats to directly adapting them for recommendation tasks. In this paper, we show that LLM-based recommendation models suffer from position bias, where the order of candidate items in a prompt can disproportionately influence the recommendations produced by LLMs. First, we analyse the position bias of LLM-based recommendations on real-world datasets, where results uncover systemic biases of LLMs with high sensitivity to input orders. Furthermore, we introduce a new prompting strategy to mitigate the position bias of LLM recommendation models called Ranking via Iterative SElection (RISE). We compare our proposed method against various baselines on key benchmark datasets. Experiment results show that our method reduces sensitivity to input ordering and improves stability without requiring model fine-tuning or post-processing.",
+            "score": 3
+        },
+        {
+            "id": "3b6ae2cba73dedf88648a37c99eac564cd4f4505",
+            "paperId": "3b6ae2cba73dedf88648a37c99eac564cd4f4505",
+            "title": "On Negative-aware Preference Optimization for Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.09653, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2313929104",
+                    "name": "Chenlu Ding"
+                },
+                {
+                    "authorId": "2376079814",
+                    "name": "Daoxuan Liu"
+                },
+                {
+                    "authorId": "1491035012",
+                    "name": "Jiancan Wu"
+                },
+                {
+                    "authorId": "2375992606",
+                    "name": "Xingyu Hu"
+                },
+                {
+                    "authorId": "2260622979",
+                    "name": "Junkang Wu"
+                },
+                {
+                    "authorId": "2268634539",
+                    "name": "Haitao Wang"
+                },
+                {
+                    "authorId": "2108836630",
+                    "name": "Yongkang Wang"
+                },
+                {
+                    "authorId": "2375855637",
+                    "name": "Xingxing Wang"
+                },
+                {
+                    "authorId": "2319188381",
+                    "name": "Xiang Wang"
+                }
+            ],
+            "abstract": "Recommendation systems leverage user interaction data to suggest relevant items while filtering out irrelevant (negative) ones. The rise of large language models (LLMs) has garnered increasing attention for their potential in recommendation tasks. However, existing methods for optimizing LLM-based recommenders face challenges in effectively utilizing negative samples. Simply integrating large numbers of negative samples can improve ranking accuracy and mitigate popularity bias but often leads to increased computational overhead and memory costs. Additionally, current approaches fail to account for the varying informativeness of negative samples, leading to suboptimal optimization performance. To address these issues, we propose NAPO (\\textbf{N}egative-\\textbf{A}ware \\textbf{P}reference \\textbf{O}ptimization), an enhanced framework for preference optimization in LLM-based recommendation. NAPO introduces two key innovations: (1) in-batch negative sharing, which expands the pool of negative samples without additional memory overhead, and (2) dynamic reward margin adjustment, which adapts model updates based on the confidence of negative samples. Extensive experiments on three public datasets demonstrate that NAPO outperforms existing methods in both recommendation accuracy and popularity bias reduction.",
+            "score": 3
+        },
+        {
+            "id": "bd2df223a4522ca29f18180b6cf055a76d76bdaa",
+            "paperId": "bd2df223a4522ca29f18180b6cf055a76d76bdaa",
+            "title": "Towards Comprehensible Recommendation with Large Language Model Fine-tuning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.07595, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Yunze Luo"
+                },
+                {
+                    "authorId": "2360585448",
+                    "name": "Yinjie Jiang"
+                },
+                {
+                    "authorId": "2325520496",
+                    "name": "Gaode Chen"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xinghua Zhang"
+                },
+                {
+                    "authorId": "2375837119",
+                    "name": "Jun Zhang"
+                },
+                {
+                    "authorId": "2375703411",
+                    "name": "Jian Liang"
+                },
+                {
+                    "authorId": "2316995626",
+                    "name": "Kaigui Bian"
+                }
+            ],
+            "abstract": "Recommender systems have become increasingly ubiquitous in daily life. While traditional recommendation approaches primarily rely on ID-based representations or item-side content features, they often fall short in capturing the underlying semantics aligned with user preferences (e.g., recommendation reasons for items), leading to a semantic-collaborative gap. Recently emerged LLM-based feature extraction approaches also face a key challenge: how to ensure that LLMs possess recommendation-aligned reasoning capabilities and can generate accurate, personalized reasons to mitigate the semantic-collaborative gap. To address these issues, we propose a novel Content Understanding from a Collaborative Perspective framework (CURec), which generates collaborative-aligned content features for more comprehensive recommendations. \\method first aligns the LLM with recommendation objectives through pretraining, equipping it with instruction-following and chain-of-thought reasoning capabilities. Next, we design a reward model inspired by traditional recommendation architectures to evaluate the quality of the recommendation reasons generated by the LLM. Finally, using the reward signals, CURec fine-tunes the LLM through RL and corrects the generated reasons to ensure their accuracy. The corrected reasons are then integrated into a downstream recommender model to enhance comprehensibility and recommendation performance. Extensive experiments on public benchmarks demonstrate the superiority of CURec over existing methods.",
+            "score": 3
+        },
+        {
+            "id": "e4da64527471ecdee10a4f40e953128f15f9af9f",
+            "paperId": "e4da64527471ecdee10a4f40e953128f15f9af9f",
+            "title": "End-to-End Personalization: Unifying Recommender Systems with Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01514, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2160629248",
+                    "name": "Danial Ebrat"
+                },
+                {
+                    "authorId": "2374472599",
+                    "name": "Tina Aminian"
+                },
+                {
+                    "authorId": "2374050418",
+                    "name": "Sepideh Ahmadian"
+                },
+                {
+                    "authorId": "2302800192",
+                    "name": "Luis Rueda"
+                }
+            ],
+            "abstract": "Recommender systems are essential for guiding users through the vast and diverse landscape of digital content by delivering personalized and relevant suggestions. However, improving both personalization and interpretability remains a challenge, particularly in scenarios involving limited user feedback or heterogeneous item attributes. In this article, we propose a novel hybrid recommendation framework that combines Graph Attention Networks (GATs) with Large Language Models (LLMs) to address these limitations. LLMs are first used to enrich user and item representations by generating semantically meaningful profiles based on metadata such as titles, genres, and overviews. These enriched embeddings serve as initial node features in a user and movie bipartite graph, which is processed using a GAT based collaborative filtering model. To enhance ranking accuracy, we introduce a hybrid loss function that combines Bayesian Personalized Ranking (BPR), cosine similarity, and robust negative sampling. Post-processing involves reranking the GAT-generated recommendations using the LLM, which also generates natural-language justifications to improve transparency. We evaluated our model on benchmark datasets, including MovieLens 100k and 1M, where it consistently outperforms strong baselines. Ablation studies confirm that LLM-based embeddings and the cosine similarity term significantly contribute to performance gains. This work demonstrates the potential of integrating LLMs to improve both the accuracy and interpretability of recommender systems.",
+            "score": 3
+        },
+        {
+            "id": "28793033b897bd196f7e680889ed098a4b14c7cd",
+            "paperId": "28793033b897bd196f7e680889ed098a4b14c7cd",
+            "title": "A Reproducibility Study of Product-side Fairness in Bundle Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.14352, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2110493359",
+                    "name": "Huy-Son Nguyen"
+                },
+                {
+                    "authorId": "2281287475",
+                    "name": "Yuanna Liu"
+                },
+                {
+                    "authorId": "2238954435",
+                    "name": "Masoud Mansoury"
+                },
+                {
+                    "authorId": "2268408728",
+                    "name": "Mohammad Alian Nejadi"
+                },
+                {
+                    "authorId": "2373038068",
+                    "name": "Alan Hanjalic"
+                },
+                {
+                    "authorId": "2265490493",
+                    "name": "M. D. Rijke"
+                }
+            ],
+            "abstract": "Recommender systems are known to exhibit fairness issues, particularly on the product side, where products and their associated suppliers receive unequal exposure in recommended results. While this problem has been widely studied in traditional recommendation settings, its implications for bundle recommendation (BR) remain largely unexplored. This emerging task introduces additional complexity: recommendations are generated at the bundle level, yet user satisfaction and product (or supplier) exposure depend on both the bundle and the individual items it contains. Existing fairness frameworks and metrics designed for traditional recommender systems may not directly translate to this multi-layered setting. In this paper, we conduct a comprehensive reproducibility study of product-side fairness in BR across three real-world datasets using four state-of-the-art BR methods. We analyze exposure disparities at both the bundle and item levels using multiple fairness metrics, uncovering important patterns. Our results show that exposure patterns differ notably between bundles and items, revealing the need for fairness interventions that go beyond bundle-level assumptions. We also find that fairness assessments vary considerably depending on the metric used, reinforcing the need for multi-faceted evaluation. Furthermore, user behavior plays a critical role: when users interact more frequently with bundles than with individual items, BR systems tend to yield fairer exposure distributions across both levels. Overall, our findings offer actionable insights for building fairer bundle recommender systems and establish a vital foundation for future research in this emerging domain.",
+            "score": 2
+        },
+        {
+            "id": "747daa14c921121205b338d7d8664b8ade01d6c5",
+            "paperId": "747daa14c921121205b338d7d8664b8ade01d6c5",
+            "title": "No Bias Left Behind: Fairness Testing for Deep Recommender Systems Targeting General Disadvantaged Groups",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3728948?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3728948, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2335625075",
+                    "name": "Zhuo Wu"
+                },
+                {
+                    "authorId": "2312403315",
+                    "name": "Zan Wang"
+                },
+                {
+                    "authorId": "2259560083",
+                    "name": "Chuan Luo"
+                },
+                {
+                    "authorId": "2269034293",
+                    "name": "Xiaoning Du"
+                },
+                {
+                    "authorId": "2268796945",
+                    "name": "Junjie Chen"
+                }
+            ],
+            "abstract": "Recommender systems play an increasingly important role in modern society, powering digital platforms that suggest a wide array of content, from news and music to job listings, and influencing many aspects of daily life. To improve personalization, these systems often use demographic information. However, ensuring fairness in recommendation quality across demographic groups is challenging, especially since recommender systems are susceptible to the \"rich get richer'' Matthew effect due to user feedback loops. With the adoption of deep learning algorithms, uncovering fairness issues has become even more complex. Researchers have started to explore methods for identifying the most disadvantaged user groups using optimization algorithms. Despite this, suboptimal disadvantaged groups remain underexplored, which leaves the risk of bias amplification due to the Matthew effect unaddressed. In this paper, we argue for the necessity of identifying both the most disadvantaged and suboptimal disadvantaged groups. We introduce FairAS, an adaptive sampling based approach, to achieve this goal. Through evaluations on four deep recommender systems and six datasets, FairAS demonstrates an average improvement of 19.2% in identifying the most disadvantaged groups over the state-of-the-art fairness testing approach (FairRec), while reducing testing time by 43.07%. Additionally, the extra suboptimal disadvantaged groups identified by FairAS help improve system fairness, achieving an average improvement of 70.27% over FairRec across all subjects.",
+            "score": 2
+        },
+        {
+            "id": "c0cb57d9a23d2b14c55b3bffd8073eb42f9a3f55",
+            "paperId": "c0cb57d9a23d2b14c55b3bffd8073eb42f9a3f55",
+            "title": "Mitigating Popularity Bias in Fair and Explainable Recommender Systems Using SHAP",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.29130/dubited.1667105?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.29130/dubited.1667105, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374856044",
+                    "name": "Tu\u011fba T\u00fcrko\u011flu Kaya"
+                }
+            ],
+            "abstract": "Popularity bias is a prevalent issue in recommendation systems, where popular items dominate recommendation lists, leading to reduced diversity and fairness. Traditional methods evaluate popularity bias based on overall item frequency, disregarding individual user tendencies. This study introduces a novel post-processing ranking method called Dynamic User Tendency Re-ranking (DUTR) to mitigate popularity bias in multi-criteria recommendation systems by incorporating user-specific preferences. DUTR leverages SHAP (SHapley Additive exPlanations) analysis to determine the influence of different criteria on user decision-making. Unlike conventional methods, which classify item popularity based on general trends, DUTR dynamically assesses each user's priority preferences. It then classifies items as popular or less popular based on individual preference patterns. This approach ensures that recommendation lists align more closely with user-specific interests while maintaining a balance between popular and less popular items. To validate the effectiveness of DUTR, extensive experiments were conducted on the YM10 and YM20 datasets. The results show that DUTR significantly reduces popularity bias while improving diversity and fairness in recommendations. Moreover, the integration of SHAP values enhances the explainability of the recommendation process, providing users with personalized and transparent suggestions. In conclusion, comparative analysis with existing techniques demonstrates that DUTR outperforms traditional methods in balancing popularity and personalization.",
+            "score": 2
+        },
+        {
+            "id": "10b5a3cbd2daa63e397cb9d16e3dfb663fa3b680",
+            "paperId": "10b5a3cbd2daa63e397cb9d16e3dfb663fa3b680",
+            "title": "Bias vs Bias - Dawn of Justice: A Fair Fight in Recommendation Systems",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.18327, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2293394627",
+                    "name": "Tahsin Alamgir Kheya"
+                },
+                {
+                    "authorId": "3080469",
+                    "name": "Mohamed Reda Bouadjenek"
+                },
+                {
+                    "authorId": "2256860681",
+                    "name": "Sunil Aryal"
+                }
+            ],
+            "abstract": "Recommendation systems play a crucial role in our daily lives by impacting user experience across various domains, including e-commerce, job advertisements, entertainment, etc. Given the vital role of such systems in our lives, practitioners must ensure they do not produce unfair and imbalanced recommendations. Previous work addressing bias in recommendations overlooked bias in certain item categories, potentially leaving some biases unaddressed. Additionally, most previous work on fair re-ranking focused on binary-sensitive attributes. In this paper, we address these issues by proposing a fairness-aware re-ranking approach that helps mitigate bias in different categories of items. This re-ranking approach leverages existing biases to correct disparities in recommendations across various demographic groups. We show how our approach can mitigate bias on multiple sensitive attributes, including gender, age, and occupation. We experimented on three real-world datasets to evaluate the effectiveness of our re-ranking scheme in mitigating bias in recommendations. Our results show how this approach helps mitigate social bias with little to no degradation in performance.",
+            "score": 2
+        },
+        {
+            "id": "13a95944898109bd3073b2957571ebcdb3240034",
+            "paperId": "13a95944898109bd3073b2957571ebcdb3240034",
+            "title": "Consistent Explainers or Unreliable Narrators? Understanding LLM-generated Group Recommendations",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13705, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2359454508",
+                    "name": "Cedric Waterschoot"
+                },
+                {
+                    "authorId": "1803171",
+                    "name": "N. Tintarev"
+                },
+                {
+                    "authorId": "2239104329",
+                    "name": "Francesco Barile"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) are increasingly being implemented as joint decision-makers and explanation generators for Group Recommender Systems (GRS). In this paper, we evaluate these recommendations and explanations by comparing them to social choice-based aggregation strategies. Our results indicate that LLM-generated recommendations often resembled those produced by Additive Utilitarian (ADD) aggregation. However, the explanations typically referred to averaging ratings (resembling but not identical to ADD aggregation). Group structure, uniform or divergent, did not impact the recommendations. Furthermore, LLMs regularly claimed additional criteria such as user or item similarity, diversity, or used undefined popularity metrics or thresholds. Our findings have important implications for LLMs in the GRS pipeline as well as standard aggregation strategies. Additional criteria in explanations were dependent on the number of ratings in the group scenario, indicating potential inefficiency of standard aggregation methods at larger item set sizes. Additionally, inconsistent and ambiguous explanations undermine transparency and explainability, which are key motivations behind the use of LLMs for GRS.",
+            "score": 2
+        },
+        {
+            "id": "e9b83f49620bb50c0210a6a5826c3c0325e93d70",
+            "paperId": "e9b83f49620bb50c0210a6a5826c3c0325e93d70",
+            "title": "Using LLMs to Capture Users'Temporal Context for Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.08512, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3305596",
+                    "name": "Milad Sabouri"
+                },
+                {
+                    "authorId": "3437010",
+                    "name": "M. Mansoury"
+                },
+                {
+                    "authorId": null,
+                    "name": "Kun Lin"
+                },
+                {
+                    "authorId": "1684679",
+                    "name": "B. Mobasher"
+                }
+            ],
+            "abstract": "Effective recommender systems demand dynamic user understanding, especially in complex, evolving environments. Traditional user profiling often fails to capture the nuanced, temporal contextual factors of user preferences, such as transient short-term interests and enduring long-term tastes. This paper presents an assessment of Large Language Models (LLMs) for generating semantically rich, time-aware user profiles. We do not propose a novel end-to-end recommendation architecture; instead, the core contribution is a systematic investigation into the degree of LLM effectiveness in capturing the dynamics of user context by disentangling short-term and long-term preferences. This approach, framing temporal preferences as dynamic user contexts for recommendations, adaptively fuses these distinct contextual components into comprehensive user embeddings. The evaluation across Movies&TV and Video Games domains suggests that while LLM-generated profiles offer semantic depth and temporal structure, their effectiveness for context-aware recommendations is notably contingent on the richness of user interaction histories. Significant gains are observed in dense domains (e.g., Movies&TV), whereas improvements are less pronounced in sparse environments (e.g., Video Games). This work highlights LLMs'nuanced potential in enhancing user profiling for adaptive, context-aware recommendations, emphasizing the critical role of dataset characteristics for practical applicability.",
+            "score": 2
+        },
+        {
+            "id": "b6e785374e86becbcac74ee63dd714c6688e285f",
+            "paperId": "b6e785374e86becbcac74ee63dd714c6688e285f",
+            "title": "ReFAIR: Toward a Context-Aware Recommender for Fairness Requirements Engineering",
+            "year": 2024,
+            "citationCount": 9,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3597503.3639185",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3597503.3639185?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3597503.3639185, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "RefAir is proposed, a novel context-aware requirements engineering framework that allows to classify sensitive features from User Stories by exploiting natural language processing and word embedding techniques and recommends which are the context-specific sensitive features to be considered during the implementation."
+            },
+            "authors": [
+                {
+                    "authorId": "2267911659",
+                    "name": "Carmine Ferrara"
+                },
+                {
+                    "authorId": "2151823377",
+                    "name": "Francesco Casillo"
+                },
+                {
+                    "authorId": "2217989",
+                    "name": "C. Gravino"
+                },
+                {
+                    "authorId": "72187755",
+                    "name": "A. De Lucia"
+                },
+                {
+                    "authorId": "34946033",
+                    "name": "Fabio Palomba"
+                }
+            ],
+            "abstract": "Machine learning (ML) is increasingly being used as a key component of most software systems, yet serious concerns have been raised about the fairness of ML predictions. Researchers have been proposing novel methods to support the development of fair machine learning solutions. Nonetheless, most of them can only be used in late development stages, e.g., during model training, while there is a lack of methods that may provide practitioners with early fairness analytics enabling the treatment of fairness throughout the development lifecycle. This paper proposes RefAir, a novel context-aware requirements engineering framework that allows to classify sensitive features from User Stories. By exploiting natural language processing and word embedding techniques, our framework first identifies both the use case domain and the machine learning task to be performed in the system being developed; afterward, it recommends which are the context-specific sensitive features to be considered during the implementation. We assess the capabilities of RefAir by experimenting it against a synthetic dataset-which we built as part of our research-composed of 12,401 User Stories related to 34 application domains. Our findings showcase the high accuracy of RefAir, other than highlighting its current limitations.",
+            "score": 2
+        },
+        {
+            "id": "2e7c94fe213098f4f96e2d082ee044d80266c099",
+            "paperId": "2e7c94fe213098f4f96e2d082ee044d80266c099",
+            "title": "Belle: Large Language Model-Based Conversational Recommender Systems for Beauty Products",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICADEIS65852.2025.10933248?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICADEIS65852.2025.10933248, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Belle is a beauty product recommender system that integrates a Large Language Model (LLM) with a Conversational Recommender System (CRS) and demonstrates that the beauty product recommendations generated are more personalized, flexible, and relevant to each user."
+            },
+            "authors": [
+                {
+                    "authorId": "2352089045",
+                    "name": "Elvira Wulandari"
+                },
+                {
+                    "authorId": "9172850",
+                    "name": "Z. Baizal"
+                }
+            ],
+            "abstract": "The beauty product industry has become one of the sectors influenced by technological advancements and changes in consumer behavior. In this industry, the main challenges include the wide variety of products, diverse consumer preferences, and the difficulty consumers select the right products when shopping online. Conventional recommender systems often struggle to provide personalized and relevant suggestions tailored to individual needs, leading to a less satisfying shopping experience. To address this issue, we introduce Belle, a beauty product recommender system that integrates a Large Language Model (LLM) with a Conversational Recommender System (CRS). Belle is designed to provide more personalized and dynamic beauty product recommendations by utilizing the fine-tuned GPT-4o model, which better understands user preferences and supports more natural conversational interactions. Belle was developed through a fine-tuning process on the GPT-4o model using a dataset of 53,511 tokens over three epochs. This process significantly improved, with a training loss of 0.5344 and a validation loss of 0.3643. Semantic similarity evaluation showed improved results compared to prefine-tuning values, with the final BERTScore (Precision: 0.8676, Recall: 0.9182, F1: 0.8921) and Cosine Similarity (0.7227). Additionally, the Distinct@1 value increased from 0.7089 to 0.9081, indicating more diverse and natural responses after fine-tuning. By leveraging the strengths of LLM and CRS, Belle demonstrates that the beauty product recommendations generated are more personalized, flexible, and relevant to each user.",
+            "score": 2
+        },
+        {
+            "id": "f503338212fa63fcd4144b5e00432abcd9ada6b9",
+            "paperId": "f503338212fa63fcd4144b5e00432abcd9ada6b9",
+            "title": "Automated Synthetic Data Generation Pipeline Using Large Language Models for Enhanced Model Robustness and Fairness in Deep Learning Systems",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICONAT61936.2024.10774980?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICONAT61936.2024.10774980, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This research investigates the potential of Large Language Models to generate synthetic datasets that not only mimic real-world data distributions but also incorporate enhanced diversity and anomaly features, and explores how synthetic data can improve model robustness against adversarial attacks and promote fairness across different demographic groups."
+            },
+            "authors": [
+                {
+                    "authorId": "2290091251",
+                    "name": "S. Modi"
+                },
+                {
+                    "authorId": "2327560421",
+                    "name": "Bhargava Bokkena"
+                },
+                {
+                    "authorId": "2334763900",
+                    "name": "Priyanka Avhad"
+                },
+                {
+                    "authorId": "2334761092",
+                    "name": "Vedanti Kshirsagar"
+                },
+                {
+                    "authorId": "2334760112",
+                    "name": "Tejas Dahiya"
+                },
+                {
+                    "authorId": "2334760225",
+                    "name": "Tanay Parikh"
+                }
+            ],
+            "abstract": "In the domain of data-driven decision-making, the availability of robust and unbiased datasets is crucial for training effective deep learning models. This research investigates the potential of Large Language Models (LLMs) to generate synthetic datasets that not only mimic real-world data distributions but also incorporate enhanced diversity and anomaly features. By leveraging the generative capabilities of LLMs, this study introduces innovative methodologies for producing textual, tabular, and structured data, which are then used to train deep learning models across various domains. We assess the authenticity and utility of this synthetic data compared to traditional datasets, focusing on statistical properties and the enhancement of model performance. Furthermore, the paper explores how synthetic data can improve model robustness against adversarial attacks and promote fairness across different demographic groups. Through iterative refinements and automated data augmentation pipelines, our approach continuously adapts to emerging data characteristics, addressing the dual challenge of data scarcity and inherent biases. This research not only broadens the understanding of LLM-based data synthesis but also showcases its practical implications in domains where data collection is restricted by privacy concerns or logistical challenges.",
+            "score": 2
+        },
+        {
+            "id": "bfae171a5f0715e5e7594934145435095393e3b6",
+            "paperId": "bfae171a5f0715e5e7594934145435095393e3b6",
+            "title": "Tutorial on Recommendation with Generative Models (Gen-RecSys)",
+            "year": 2025,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3701551.3703485?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3701551.3703485, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                },
+                {
+                    "authorId": "51002202",
+                    "name": "Zhankui He"
+                },
+                {
+                    "authorId": "2293314461",
+                    "name": "Julian J. McAuley"
+                },
+                {
+                    "authorId": "2123355559",
+                    "name": "A. Korikov"
+                },
+                {
+                    "authorId": "2287430916",
+                    "name": "Scott Sanner"
+                },
+                {
+                    "authorId": "1780343",
+                    "name": "Arnau Ramisa"
+                },
+                {
+                    "authorId": "2294360080",
+                    "name": "Ren\u00e9 Vidal"
+                },
+                {
+                    "authorId": "3221924",
+                    "name": "M. Sathiamoorthy"
+                },
+                {
+                    "authorId": "51880633",
+                    "name": "Atoosa Kasirzadeh"
+                },
+                {
+                    "authorId": "2294359066",
+                    "name": "Silvia Milano"
+                }
+            ],
+            "abstract": "This intermediate-level tutorial, titled \"Gen-RecSys\", merges both industrial and academic perspectives on recent advances in Generative AI for recommender systems (beyond LLMs). It aims to highlight the transformative role of generative models in modern recommender systems, which have significantly impacted the AI field-particularly with the rise of large language models (LLMs) like ChatGPT-and have contributed to a rapid convergence of the fields of search, data mining, and recommendation. By providing attendees with a modern perspective on GenAI applications in recommendation, the tutorial will emphasize how generative models can drive recommendation by unlocking and interacting with rich data representations, including behavioral, textual, and multi-modal data-knowledge highly transferable across many applications of interest to the WSDM community. Participants will learn about the categorization of generative models in recommender systems based on underlying data modalities: (i) ID-based collaborative models, (ii) text-driven models such as LLMs, and (iii) multi-modal models. Within each category, various deep generative model paradigms (e.g., AR, GAN, diffusion models) will be introduced, along with insights into their application areas. The tutorial will also cover evaluation aspects, including benchmarks, metrics, and assessments of social and ethical impacts and harms. This tutorial presents a condensed version of the industrial and academic work featured in the forthcoming book at FntIR 2024-25, titled \"Recommendation with Generative Models [7],\" and a shorter version prepared, and presented by the team, see GenRecSys-Survey [6].",
+            "score": 2
+        },
+        {
+            "id": "784a638353de33e7484973633d4897b1f0f4fa4f",
+            "paperId": "784a638353de33e7484973633d4897b1f0f4fa4f",
+            "title": "Recommendation with Generative Models",
+            "year": 2024,
+            "citationCount": 21,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.15173, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                },
+                {
+                    "authorId": "51002202",
+                    "name": "Zhankui He"
+                },
+                {
+                    "authorId": "2258552056",
+                    "name": "Julian McAuley"
+                },
+                {
+                    "authorId": "2123355559",
+                    "name": "A. Korikov"
+                },
+                {
+                    "authorId": "2287430916",
+                    "name": "Scott Sanner"
+                },
+                {
+                    "authorId": "1780343",
+                    "name": "Arnau Ramisa"
+                },
+                {
+                    "authorId": "2294360080",
+                    "name": "Ren\u00e9 Vidal"
+                },
+                {
+                    "authorId": "3221924",
+                    "name": "M. Sathiamoorthy"
+                },
+                {
+                    "authorId": "2316486923",
+                    "name": "Atoosa Kasrizadeh"
+                },
+                {
+                    "authorId": "2294359066",
+                    "name": "Silvia Milano"
+                },
+                {
+                    "authorId": "2316486576",
+                    "name": "Francesco Ricci"
+                }
+            ],
+            "abstract": "Generative models are a class of AI models capable of creating new instances of data by learning and sampling from their statistical distributions. In recent years, these models have gained prominence in machine learning due to the development of approaches such as generative adversarial networks (GANs), variational autoencoders (VAEs), and transformer-based architectures such as GPT. These models have applications across various domains, such as image generation, text synthesis, and music composition. In recommender systems, generative models, referred to as Gen-RecSys, improve the accuracy and diversity of recommendations by generating structured outputs, text-based interactions, and multimedia content. By leveraging these capabilities, Gen-RecSys can produce more personalized, engaging, and dynamic user experiences, expanding the role of AI in eCommerce, media, and beyond. Our book goes beyond existing literature by offering a comprehensive understanding of generative models and their applications, with a special focus on deep generative models (DGMs) and their classification. We introduce a taxonomy that categorizes DGMs into three types: ID-driven models, large language models (LLMs), and multimodal models. Each category addresses unique technical and architectural advancements within its respective research area. This taxonomy allows researchers to easily navigate developments in Gen-RecSys across domains such as conversational AI and multimodal content generation. Additionally, we examine the impact and potential risks of generative models, emphasizing the importance of robust evaluation frameworks.",
+            "score": 2
+        },
+        {
+            "id": "793eb805800c4af0b06260079e178efa0377b9d7",
+            "paperId": "793eb805800c4af0b06260079e178efa0377b9d7",
+            "title": "ChatGPT-HealthPrompt. Harnessing the Power of XAI in Prompt-Based Healthcare Decision Support using ChatGPT",
+            "year": 2023,
+            "citationCount": 16,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2308.09731",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2308.09731, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "30917303",
+                    "name": "Fatemeh Nazary"
+                },
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                },
+                {
+                    "authorId": "1737962",
+                    "name": "T. D. Noia"
+                }
+            ],
+            "abstract": "This study presents an innovative approach to the application of large language models (LLMs) in clinical decision-making, focusing on OpenAI's ChatGPT. Our approach introduces the use of contextual prompts-strategically designed to include task description, feature description, and crucially, integration of domain knowledge-for high-quality binary classification tasks even in data-scarce scenarios. The novelty of our work lies in the utilization of domain knowledge, obtained from high-performing interpretable ML models, and its seamless incorporation into prompt design. By viewing these ML models as medical experts, we extract key insights on feature importance to aid in decision-making processes. This interplay of domain knowledge and AI holds significant promise in creating a more insightful diagnostic tool. Additionally, our research explores the dynamics of zero-shot and few-shot prompt learning based on LLMs. By comparing the performance of OpenAI's ChatGPT with traditional supervised ML models in different data conditions, we aim to provide insights into the effectiveness of prompt engineering strategies under varied data availability. In essence, this paper bridges the gap between AI and healthcare, proposing a novel methodology for LLMs application in clinical decision support systems. It highlights the transformative potential of effective prompt design, domain knowledge integration, and flexible learning approaches in enhancing automated decision-making.",
+            "score": 2
+        },
+        {
+            "id": "f3d5ff52104f86dcb4efe9f78490caf0481fe50b",
+            "paperId": "f3d5ff52104f86dcb4efe9f78490caf0481fe50b",
+            "title": "Fairness of ChatGPT and the Role Of Explainable-Guided Prompts",
+            "year": 2023,
+            "citationCount": 21,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2307.11761",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2307.11761, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2614755",
+                    "name": "Yashar Deldjoo"
+                }
+            ],
+            "abstract": "Our research investigates the potential of Large-scale Language Models (LLMs), specifically OpenAI's GPT, in credit risk assessment-a binary classification task. Our findings suggest that LLMs, when directed by judiciously designed prompts and supplemented with domain-specific knowledge, can parallel the performance of traditional Machine Learning (ML) models. Intriguingly, they achieve this with significantly less data-40 times less, utilizing merely 20 data points compared to the ML's 800. LLMs particularly excel in minimizing false positives and enhancing fairness, both being vital aspects of risk analysis. While our results did not surpass those of classical ML models, they underscore the potential of LLMs in analogous tasks, laying a groundwork for future explorations into harnessing the capabilities of LLMs in diverse ML tasks.",
+            "score": 2
+        },
+        {
+            "id": "27f607837027dce2097b396023c01810b3035836",
+            "paperId": "27f607837027dce2097b396023c01810b3035836",
+            "title": "Alleviating User-Sensitive bias with Fair Generative Sequential Recommendation Model",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.19777, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370964915",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "2110924018",
+                    "name": "Feng Wu"
+                },
+                {
+                    "authorId": "2371466685",
+                    "name": "Xuefang Zhu"
+                }
+            ],
+            "abstract": "Recommendation fairness has recently attracted much attention. In the real world, recommendation systems are driven by user behavior, and since users with the same sensitive feature (e.g., gender and age) tend to have the same patterns, recommendation models can easily capture the strong correlation preference of sensitive features and thus cause recommendation unfairness. Diffusion model (DM) as a new generative model paradigm has achieved great success in recommendation systems. DM's ability to model uncertainty and represent diversity, and its modeling mechanism has a high degree of adaptability with the real-world recommendation process with bias. Therefore, we use DM to effectively model the fairness of recommendation and enhance the diversity. This paper proposes a FairGENerative sequential Recommendation model based on DM, FairGENRec. In the training phase, we inject random noise into the original distribution under the guidance of the sensitive feature recognition model, and a sequential denoise model is designed for the reverse reconstruction of items. Simultaneously, recommendation fairness modeling is completed by injecting multi-interests representational information that eliminates the bias of sensitive user features into the generated results. In the inference phase, the model obtains the noise in the form of noise addition by using the history interactions which is followed by reverse iteration to reconstruct the target item representation. Finally, our extensive experiments on three datasets demonstrate the dual enhancement effect of FairGENRec on accuracy and fairness, while the statistical analysis of the cases visualizes the degree of improvement on the fairness of the recommendation.",
+            "score": 2
+        },
+        {
+            "id": "3b7226601278945b5eb582a89d7792c82f1f36ab",
+            "paperId": "3b7226601278945b5eb582a89d7792c82f1f36ab",
+            "title": "A Language-Driven Framework for Improving Personalized Recommendations: Merging LLMs with Traditional Algorithms",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.07251, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2361832260",
+                    "name": "Aaron Goldstein"
+                },
+                {
+                    "authorId": "2361846046",
+                    "name": "Ayan Dutta"
+                }
+            ],
+            "abstract": "Traditional recommendation algorithms are not designed to provide personalized recommendations based on user preferences provided through text, e.g.,\"I enjoy light-hearted comedies with a lot of humor\". Large Language Models (LLMs) have emerged as one of the most promising tools for natural language processing in recent years. This research proposes a novel framework that mimics how a close friend would recommend items based on their knowledge of an individual's tastes. We leverage LLMs to enhance movie recommendation systems by refining traditional algorithm outputs and integrating them with language-based user preference inputs. We employ Singular Value Decomposition (SVD) or SVD++ algorithms to generate initial movie recommendations, implemented using the Surprise Python library and trained on the MovieLens-Latest-Small dataset. We compare the performance of the base algorithms with our LLM-enhanced versions using leave-one-out validation hit rates and cumulative hit rates. Additionally, to compare the performance of our framework against the current state-of-the-art recommendation systems, we use rating and ranking metrics with an item-based stratified 0.75 train, 0.25 test split. Our framework can generate preference profiles automatically based on users'favorite movies or allow manual preference specification for more personalized results. Using an automated approach, our framework overwhelmingly surpassed SVD and SVD++ on every evaluation metric used (e.g., improvements of up to ~6x in cumulative hit rate, ~3.7x in NDCG, etc.), albeit at the cost of a slight increase in computational overhead.",
+            "score": 2
+        },
+        {
+            "id": "4a8c907e71a76ff0596a940434716840249d5bc2",
+            "paperId": "4a8c907e71a76ff0596a940434716840249d5bc2",
+            "title": "A Metric for MLLM Alignment in Large-scale Recommendation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04963, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375296274",
+                    "name": "Yubin Zhang"
+                },
+                {
+                    "authorId": "2292485947",
+                    "name": "Yanhua Huang"
+                },
+                {
+                    "authorId": "2376022950",
+                    "name": "Haiming Xu"
+                },
+                {
+                    "authorId": "2359456169",
+                    "name": "Mingliang Qi"
+                },
+                {
+                    "authorId": "2375824249",
+                    "name": "Chang Wang"
+                },
+                {
+                    "authorId": "2375377154",
+                    "name": "Jiarui Jin"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xiangyuan Ren"
+                },
+                {
+                    "authorId": "2317140399",
+                    "name": "Xiaodan Wang"
+                },
+                {
+                    "authorId": "2292215243",
+                    "name": "Ruiwen Xu"
+                }
+            ],
+            "abstract": "Multimodal recommendation has emerged as a critical technique in modern recommender systems, leveraging content representations from advanced multimodal large language models (MLLMs). To ensure these representations are well-adapted, alignment with the recommender system is essential. However, evaluating the alignment of MLLMs for recommendation presents significant challenges due to three key issues: (1) static benchmarks are inaccurate because of the dynamism in real-world applications, (2) evaluations with online system, while accurate, are prohibitively expensive at scale, and (3) conventional metrics fail to provide actionable insights when learned representations underperform. To address these challenges, we propose the Leakage Impact Score (LIS), a novel metric for multimodal recommendation. Rather than directly assessing MLLMs, LIS efficiently measures the upper bound of preference data. We also share practical insights on deploying MLLMs with LIS in real-world scenarios. Online A/B tests on both Content Feed and Display Ads of Xiaohongshu's Explore Feed production demonstrate the effectiveness of our proposed method, showing significant improvements in user spent time and advertiser value.",
+            "score": 2
+        },
+        {
+            "id": "d30732a5c06b7a1cbf2bd385260835bc30a5809a",
+            "paperId": "d30732a5c06b7a1cbf2bd385260835bc30a5809a",
+            "title": "ITDR: An Instruction Tuning Dataset for Enhancing Large Language Models in Recommendations",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.05667, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375831136",
+                    "name": "Zekun Liu"
+                },
+                {
+                    "authorId": "47933218",
+                    "name": "Xiaowen Huang"
+                },
+                {
+                    "authorId": "2242075668",
+                    "name": "Jitao Sang"
+                }
+            ],
+            "abstract": "Large language models (LLMs) have demonstrated outstanding performance in natural language processing tasks. However, in the field of recommendation systems, due to the structural differences between user behavior data and natural language, LLMs struggle to effectively model the associations between user preferences and items. Although prompt-based methods can generate recommendation results, their inadequate understanding of recommendation tasks leads to constrained performance. To address this gap, in this work, we construct a sufficient instruction tuning dataset, ITDR, which encompasses 7 subtasks across two core root tasks--user-item interaction and user-item understanding. The dataset integrates data from 13 public recommendation datasets and is built using manually crafted standardized templates, comprising approximately 200,000 instances. Experimental results demonstrate that ITDR significantly enhances the performance of mainstream open-source LLMs such as GLM-4, Qwen2.5, Qwen2.5-Instruct and LLaMA-3.2 on recommendation tasks. Furthermore, we analyze the correlations between tasks and explore the impact of task descriptions and data scale on instruction tuning effectiveness. Finally, we perform comparative experiments against closed-source LLMs with substantial parameters. Our tuning dataset ITDR and the fine-tuned large recommendation models can be accessed at https://github.com/hellolzk/ITDR.",
+            "score": 2
+        },
+        {
+            "id": "146d7616054f1d00236979c695b3ffbdf836e726",
+            "paperId": "146d7616054f1d00236979c695b3ffbdf836e726",
+            "title": "Evaluating Podcast Recommendations with Profile-Aware LLM-as-a-Judge",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.08777, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2260654046",
+                    "name": "Francesco Fabbri"
+                },
+                {
+                    "authorId": "2326978918",
+                    "name": "Gustavo Penha"
+                },
+                {
+                    "authorId": "2375739727",
+                    "name": "Edoardo D'Amico"
+                },
+                {
+                    "authorId": "2290580199",
+                    "name": "Alice Wang"
+                },
+                {
+                    "authorId": "2121217899",
+                    "name": "Marco De Nadai"
+                },
+                {
+                    "authorId": "2375755562",
+                    "name": "Jackie Doremus"
+                },
+                {
+                    "authorId": "2375739719",
+                    "name": "Paul Gigioli"
+                },
+                {
+                    "authorId": "2260653452",
+                    "name": "Andreas Damianou"
+                },
+                {
+                    "authorId": "2375745211",
+                    "name": "Oskar Stal"
+                },
+                {
+                    "authorId": "1684032",
+                    "name": "M. Lalmas"
+                }
+            ],
+            "abstract": "Evaluating personalized recommendations remains a central challenge, especially in long-form audio domains like podcasts, where traditional offline metrics suffer from exposure bias and online methods such as A/B testing are costly and operationally constrained. In this paper, we propose a novel framework that leverages Large Language Models (LLMs) as offline judges to assess the quality of podcast recommendations in a scalable and interpretable manner. Our two-stage profile-aware approach first constructs natural-language user profiles distilled from 90 days of listening history. These profiles summarize both topical interests and behavioral patterns, serving as compact, interpretable representations of user preferences. Rather than prompting the LLM with raw data, we use these profiles to provide high-level, semantically rich context-enabling the LLM to reason more effectively about alignment between a user's interests and recommended episodes. This reduces input complexity and improves interpretability. The LLM is then prompted to deliver fine-grained pointwise and pairwise judgments based on the profile-episode match. In a controlled study with 47 participants, our profile-aware judge matched human judgments with high fidelity and outperformed or matched a variant using raw listening histories. The framework enables efficient, profile-aware evaluation for iterative testing and model selection in recommender systems.",
+            "score": 2
+        },
+        {
+            "id": "16f9f72f1b2d5c0b34b597e87c75a4812a3213eb",
+            "paperId": "16f9f72f1b2d5c0b34b597e87c75a4812a3213eb",
+            "title": "Improving the Performance of Sequential Recommendation Systems with an Extended Large Language Model",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19990, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373583574",
+                    "name": "Sinnyum Choi"
+                },
+                {
+                    "authorId": "2373777140",
+                    "name": "Woong Kim"
+                }
+            ],
+            "abstract": "Recently, competition in the field of artificial intelligence (AI) has intensified among major technological companies, resulting in the continuous release of new large-language models (LLMs) that exhibit improved language understanding and context-based reasoning capabilities. It is expected that these advances will enable more efficient personalized recommendations in LLM-based recommendation systems through improved quality of training data and architectural design. However, many studies have not considered these recent developments. In this study, it was proposed to improve LLM-based recommendation systems by replacing Llama2 with Llama3 in the LlamaRec framework. To ensure a fair comparison, random seed values were set and identical input data was provided during preprocessing and training. The experimental results show average performance improvements of 38.65\\%, 8.69\\%, and 8.19\\% for the ML-100K, Beauty, and Games datasets, respectively, thus confirming the practicality of this method. Notably, the significant improvements achieved by model replacement indicate that the recommendation quality can be improved cost-effectively without the need to make structural changes to the system. Based on these results, it is our contention that the proposed approach is a viable solution for improving the performance of current recommendation systems.",
+            "score": 2
+        },
+        {
+            "id": "f22d543a68d56a4c7fe5c6d23508d6ec99c6ad0f",
+            "paperId": "f22d543a68d56a4c7fe5c6d23508d6ec99c6ad0f",
+            "title": "Beyond Single Labels: Improving Conversational Recommendation through LLM-Powered Data Augmentation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.05657, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373545916",
+                    "name": "Haozhe Xu"
+                },
+                {
+                    "authorId": "2273537815",
+                    "name": "Xiaohua Wang"
+                },
+                {
+                    "authorId": "2220896023",
+                    "name": "Changze Lv"
+                },
+                {
+                    "authorId": "2257315404",
+                    "name": "Xiaoqing Zheng"
+                }
+            ],
+            "abstract": "Conversational recommender systems (CRSs) enhance recommendation quality by engaging users in multi-turn dialogues, capturing nuanced preferences through natural language interactions. However, these systems often face the false negative issue, where items that a user might like are incorrectly labeled as negative during training, leading to suboptimal recommendations.Expanding the label set through data augmentation presents an intuitive solution but faces the challenge of balancing two key aspects: ensuring semantic relevance and preserving the collaborative information inherent in CRS datasets. To address these issues, we propose a novel data augmentation framework that first leverages an LLM-based semantic retriever to identify diverse and semantically relevant items, which are then filtered by a relevance scorer to remove noisy candidates. Building on this, we introduce a two-stage training strategy balancing semantic relevance and collaborative information. Extensive experiments on two benchmark datasets and user simulators demonstrate significant and consistent performance improvements across various recommenders, highlighting the effectiveness of our approach in advancing CRS performance.",
+            "score": 2
+        },
+        {
+            "id": "91d29d6fecc8bdaec90a1ab9372726aab373e923",
+            "paperId": "91d29d6fecc8bdaec90a1ab9372726aab373e923",
+            "title": "EXPRESS: Too Narrow to Help? Unveiling How Recommendation Agents\u2019 Specialization Impacts User Choices",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1177/10949968251358181?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1177/10949968251358181, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "133561547",
+                    "name": "Angelo Baccelloni"
+                },
+                {
+                    "authorId": "2375434783",
+                    "name": "Matteo De Angelis"
+                },
+                {
+                    "authorId": "2361333934",
+                    "name": "Francesco Ricotta"
+                },
+                {
+                    "authorId": "13161063",
+                    "name": "M. Mazz\u00f9"
+                }
+            ],
+            "abstract": "On many online platforms, professional human recommenders have largely been replaced by Recommendation Agents (RAs): algorithms that can\u2014at lower cost and higher speed\u2014incorporate users\u2019 explicit and tacit preferences into customized search results that help with the purchase decision process. RAs are often built around understanding users\u2019 past preferences in order to make accurate recommendations that generally reinforce said preferences. This approach offers several advantages, but also limits consumers\u2019 ability to consider options outside of their past interests\u2014the so-called specialization issue. The present research hypothesizes that a specialized RA (vs. a generalized preference-weighted RA) reduce users\u2019 willingness to accept the recommendation. This effect is sequentially mediated by users\u2019 perceived breadth of knowledge, perceived control over the choice process and perceived reciprocity with the RA. To test these hypotheses, the authors programmed a functioning RA and implemented it in three experimental studies involving 705 online participants. Results confirm the hypotheses suggesting that users do sometimes want RAs to help them expand on, rather than merely reaffirm, their existing preferences, particularly when their product expertise is relatively low. Theoretical and managerial implications as well as avenues for future research are finally discussed.",
+            "score": 1
+        },
+        {
+            "id": "268e3b6772e235aabfc7d4848df1d90d0a2601f6",
+            "paperId": "268e3b6772e235aabfc7d4848df1d90d0a2601f6",
+            "title": "Pragmatic Fairness: Evaluating ML Fairness Within the Constraints of Industry",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3715275.3732040?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3715275.3732040, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2109849714",
+                    "name": "Jessie J. Smith"
+                },
+                {
+                    "authorId": "2253398736",
+                    "name": "Michael Madaio"
+                },
+                {
+                    "authorId": "2275628746",
+                    "name": "Robin Burke"
+                },
+                {
+                    "authorId": "2301048462",
+                    "name": "Casey Fiesler"
+                }
+            ],
+            "abstract": "Machine learning (ML) fairness evaluation in real-world, industry settings presents unique challenges due to business-driven constraints that influence decision-making processes. While prior research has proposed fairness frameworks and evaluation methodologies, these approaches often focus on idealized conditions and may lack consideration for the practical realities faced by industry practitioners. To understand these practical realities, we conducted a semi-structured interview study with 21 experts from academia and industry specializing in ML fairness. Through this study, we explore three constraints of ML fairness evaluation in industry\u2014balancing competing interests, lacking power/access, and getting buy-in\u2014and how these constraints lead to satisficing, seeking satisfactory rather than ideal outcomes. We define the path from these constraints to satisficing as pragmatic fairness. Using recommender systems as a case study, we explore how practitioners navigate these constraints and highlight actionable strategies to improve fairness evaluations within these business-minded boundaries. This paper provides practical insights to guide fairness evaluations in industry while also showcasing how the FAccT community can better align research goals with the operational realities of practitioners.",
+            "score": 1
+        },
+        {
+            "id": "27c5df35967e6edde290eea07b7e55d24380a282",
+            "paperId": "27c5df35967e6edde290eea07b7e55d24380a282",
+            "title": "Group Fair Rated Preference Aggregation: Ties Are (Mostly) All You Need",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3715275.3732042?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3715275.3732042, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2176779395",
+                    "name": "K. Cachel"
+                },
+                {
+                    "authorId": "2260740400",
+                    "name": "E. Rundensteiner"
+                }
+            ],
+            "abstract": "Rated preference aggregation is conventionally performed by averaging ratings from multiple evaluators to create a consensus ordering of candidates from highest to lowest average rating. Ideally, the consensus is fair, meaning critical opportunities are not withheld from marginalized groups of candidates, even if group biases may be present in the to-be-combined ratings. Prior work operationalizing fairness in preference aggregation is limited to settings where evaluators provide rankings of candidates (e.g., Joe > Jack > Jill). Yet, in practice, many evaluators assign ratings such as Likert scales or categories (e.g., yes, no, maybe) to each candidate. Ratings convey different information than rankings leading to distinct fairness issues during their aggregation. The existing literature does not characterize these fairness concerns nor provide applicable bias-mitigation solutions. Unlike the ranked setting studied previously, two unique forms of bias arise in rating aggregation. First, biased rating stems from group disparities in to-be-aggregated evaluator ratings. Second, biased tie-breaking occurs because ties in average ratings must be resolved when aggregating ratings into a consensus ranking, and this tie-breaking act can unfairly advantage certain groups. To address this gap, we define the open fair rated preference aggregation problem and introduce the corresponding Fate methodology. Fate offers the first group fairness metric specifically for rated preference data. We propose two Fate algorithms. Fate-Break works in settings when ties need to be broken, explicitly fairness-enhancing such processes without lowering consensus utility. Fate-Rate mitigates disparities in how groups are rated, by using a Markov-chain approach to generate outcomes where groups are, in as much as possible, equally represented. Our experimental study illustrates the FATE methods provide the most bias-mitigation compared to adapting prior methods to fair tie-breaking and rating aggregation.",
+            "score": 1
+        },
+        {
+            "id": "9f489a3c2c53712155152bc17ca808ce0883d6fd",
+            "paperId": "9f489a3c2c53712155152bc17ca808ce0883d6fd",
+            "title": "Looking for Fairness in Recommender Systems",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.12242, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373447341",
+                    "name": "C'ecile Log'e"
+                }
+            ],
+            "abstract": "Recommender systems can be found everywhere today, shaping our everyday experience whenever we're consuming content, ordering food, buying groceries online, or even just reading the news. Let's imagine we're in the process of building a recommender system to make content suggestions to users on social media. When thinking about fairness, it becomes clear there are several perspectives to consider: the users asking for tailored suggestions, the content creators hoping for some limelight, and society at large, navigating the repercussions of algorithmic recommendations. A shared fairness concern across all three is the emergence of filter bubbles, a side-effect that takes place when recommender systems are almost\"too good\", making recommendations so tailored that users become inadvertently confined to a narrow set of opinions/themes and isolated from alternative ideas. From the user's perspective, this is akin to manipulation. From the small content creator's perspective, this is an obstacle preventing them access to a whole range of potential fans. From society's perspective, the potential consequences are far-reaching, influencing collective opinions, social behavior and political decisions. How can our recommender system be fine-tuned to avoid the creation of filter bubbles, and ensure a more inclusive and diverse content landscape? Approaching this problem involves defining one (or more) performance metric to represent diversity, and tweaking our recommender system's performance through the lens of fairness. By incorporating this metric into our evaluation framework, we aim to strike a balance between personalized recommendations and the broader societal goal of fostering rich and varied cultures and points of view.",
+            "score": 1
+        },
+        {
+            "id": "a80f9ceeee2009ba830b018115f167e318aec91f",
+            "paperId": "a80f9ceeee2009ba830b018115f167e318aec91f",
+            "title": "PrefPalette: Personalized Preference Modeling with Latent Attributes",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.13541, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2295954288",
+                    "name": "Shuyue Stella Li"
+                },
+                {
+                    "authorId": "2360310862",
+                    "name": "Melanie Sclar"
+                },
+                {
+                    "authorId": "2344615856",
+                    "name": "Hunter Lang"
+                },
+                {
+                    "authorId": "2372245747",
+                    "name": "Ansong Ni"
+                },
+                {
+                    "authorId": "2372241811",
+                    "name": "Jacqueline He"
+                },
+                {
+                    "authorId": "2374360884",
+                    "name": "Puxin Xu"
+                },
+                {
+                    "authorId": "2374363378",
+                    "name": "Andrew Cohen"
+                },
+                {
+                    "authorId": "50487261",
+                    "name": "Chan Young Park"
+                },
+                {
+                    "authorId": "2324782612",
+                    "name": "Yulia Tsvetkov"
+                },
+                {
+                    "authorId": "2288520099",
+                    "name": "Asli Celikyilmaz"
+                }
+            ],
+            "abstract": "Personalizing AI systems requires understanding not just what users prefer, but the reasons that underlie those preferences - yet current preference models typically treat human judgment as a black box. We introduce PrefPalette, a framework that decomposes preferences into attribute dimensions and tailors its preference prediction to distinct social community values in a human-interpretable manner. PrefPalette operationalizes a cognitive science principle known as multi-attribute decision making in two ways: (1) a scalable counterfactual attribute synthesis step that involves generating synthetic training data to isolate for individual attribute effects (e.g., formality, humor, cultural values), and (2) attention-based preference modeling that learns how different social communities dynamically weight these attributes. This approach moves beyond aggregate preference modeling to capture the diverse evaluation frameworks that drive human judgment. When evaluated on 45 social communities from the online platform Reddit, PrefPalette outperforms GPT-4o by 46.6% in average prediction accuracy. Beyond raw predictive improvements, PrefPalette also shed light on intuitive, community-specific profiles: scholarly communities prioritize verbosity and stimulation, conflict-oriented communities value sarcasm and directness, and support-based communities emphasize empathy. By modeling the attribute-mediated structure of human judgment, PrefPalette delivers both superior preference modeling and transparent, interpretable insights, and serves as a first step toward more trustworthy, value-aware personalized applications.",
+            "score": 1
+        },
+        {
+            "id": "22c24ba9775242384f3bd02ee8d3ffb1b618186e",
+            "paperId": "22c24ba9775242384f3bd02ee8d3ffb1b618186e",
+            "title": "Causal Inference for Multi-Criteria Rating Recommender Systems",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3757737?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3757737, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2155267207",
+                    "name": "Zhihao Guo"
+                },
+                {
+                    "authorId": "2057359148",
+                    "name": "Peng Song"
+                },
+                {
+                    "authorId": "1576027875",
+                    "name": "Chenjiao Feng"
+                },
+                {
+                    "authorId": "2294946396",
+                    "name": "Kaixuan Yao"
+                },
+                {
+                    "authorId": "2237914945",
+                    "name": "Jiye Liang"
+                }
+            ],
+            "abstract": "\n Recommender systems are designed to assist users in discovering interesting items and bringing profits to online platforms. The existing works primarily explore the correlation between historical feedback and model predictions through the data-driven paradigm based on a single user-item rating matrix (i.e., overall rating). However, this single-criterion methods ignore the users\u2019 multi-criteria (MC) behavioral characteristics. For example, a hotel system allows users to rate from multiple dimensions, such as environment and location (i.e., MC ratings). Moreover, selection bias is pervasive in user behavior data. Traditional data-driven methods may induce spurious association and amplified biases. To address the above challenges, we propose a debiasing framework called\n Multi-Criteria Causal Recommendation\n (MCCR), which encapsulates users\u2019 diverse MC preferences and employs causal inference to construct novel training and inference strategies. Specifically, we first represent the causal relationships among variables in MC scenarios through the structural causal model. Then, we mitigate the negative impact of selection bias through the back-door adjustment. Next, a graph representation learning framework suitable for MC ratings is developed, which is used to extract higher-order information and infer the heterogeneity of users\u2019 preferences with different criteria. Experimental results on six real datasets demonstrate that the MCCR significantly outperforms the existing baselines.\n",
+            "score": 1
+        },
+        {
+            "id": "34c8706ff74d4b2619e263e75046622ac954f102",
+            "paperId": "34c8706ff74d4b2619e263e75046622ac954f102",
+            "title": "Counterfactual Reciprocal Recommender Systems for User-to-User Matching",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01867, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2353812603",
+                    "name": "Kazuki Kawamura"
+                },
+                {
+                    "authorId": "2066986168",
+                    "name": "Takuma Udagawa"
+                },
+                {
+                    "authorId": "2125186011",
+                    "name": "Kei Tateno"
+                }
+            ],
+            "abstract": "Reciprocal recommender systems (RRS) in dating, gaming, and talent platforms require mutual acceptance for a match. Logged data, however, over-represents popular profiles due to past exposure policies, creating feedback loops that skew learning and fairness. We introduce Counterfactual Reciprocal Recommender Systems (CFRR), a causal framework to mitigate this bias. CFRR uses inverse propensity scored, self-normalized objectives. Experiments show CFRR improves NDCG@10 by up to 3.5% (e.g., from 0.459 to 0.475 on DBLP, from 0.299 to 0.307 on Synthetic), increases long-tail user coverage by up to 51% (from 0.504 to 0.763 on Synthetic), and reduces Gini exposure inequality by up to 24% (from 0.708 to 0.535 on Synthetic). CFRR offers a promising approach for more accurate and fair user-to-user matching.",
+            "score": 1
+        },
+        {
+            "id": "35615286cfc35acb3b06efce59f12f7477de6aea",
+            "paperId": "35615286cfc35acb3b06efce59f12f7477de6aea",
+            "title": "On the Reliability of Sampling Strategies in Offline Recommender Evaluation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.05398, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2055084899",
+                    "name": "Bruno Laporais Pereira"
+                },
+                {
+                    "authorId": "2375137609",
+                    "name": "Alan Said"
+                },
+                {
+                    "authorId": "2375265755",
+                    "name": "Rodrygo L. T. Santos"
+                }
+            ],
+            "abstract": "Offline evaluation plays a central role in benchmarking recommender systems when online testing is impractical or risky. However, it is susceptible to two key sources of bias: exposure bias, where users only interact with items they are shown, and sampling bias, introduced when evaluation is performed on a subset of logged items rather than the full catalog. While prior work has proposed methods to mitigate sampling bias, these are typically assessed on fixed logged datasets rather than for their ability to support reliable model comparisons under varying exposure conditions or relative to true user preferences. In this paper, we investigate how different combinations of logging and sampling choices affect the reliability of offline evaluation. Using a fully observed dataset as ground truth, we systematically simulate diverse exposure biases and assess the reliability of common sampling strategies along four dimensions: sampling resolution (recommender model separability), fidelity (agreement with full evaluation), robustness (stability under exposure bias), and predictive power (alignment with ground truth). Our findings highlight when and how sampling distorts evaluation outcomes and offer practical guidance for selecting strategies that yield faithful and robust offline comparisons.",
+            "score": 1
+        },
+        {
+            "id": "49f97e7b63b0c6e592e256c0d47eb1f4150ad7e1",
+            "paperId": "49f97e7b63b0c6e592e256c0d47eb1f4150ad7e1",
+            "title": "Proactive Conversational Agents in the Post-ChatGPT World",
+            "year": 2023,
+            "citationCount": 75,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3539618.3594250",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3539618.3594250?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3539618.3594250, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2053831159",
+                    "name": "Lizi Liao"
+                },
+                {
+                    "authorId": "2109540870",
+                    "name": "Grace Hui Yang"
+                },
+                {
+                    "authorId": "2187814378",
+                    "name": "Chirag Shah"
+                }
+            ],
+            "abstract": "ChatGPT and similar large language model (LLM) based conversational agents have brought shock waves to the research world. Although astonished by their human-like performance, we find they share a significant weakness with many other existing conversational agents in that they all take a passive approach in responding to user queries. This limits their capacity to understand the users and the task better and to offer recommendations based on a broader context than a given conversation. Proactiveness is still missing in these agents, including their ability to initiate a conversation, shift topics, or offer recommendations that take into account a more extensive context. To address this limitation, this tutorial reviews methods for equipping conversational agents with proactive interaction abilities. The full-day tutorial is divided into four parts, including multiple interactive exercises. We will begin the tutorial with an interactive exercise and cover the design of existing conversational systems architecture and challenges. The content includes coverage of LLM-based recent advancements such as ChatGPT and Bard, along with reinforcement learning with human feedback (RLHF) technique. Then we will introduce the concept of proactive conversation agents and preset recent advancements in proactiveness of conversational agents, including actively driving conversations by asking questions, topic shifting, and methods that support strategic planning of conversation. Next, we will discuss important issues in conversational responses' quality control, including safety, appropriateness, language detoxication, hallucination, and alignment. Lastly, we will launch another interactive exercise and discussion with the audience to arrive at concluding remarks, prospecting open challenges and new directions. By exploring new techniques for enhancing conversational agents' proactive behavior to improve user engagement, this tutorial aims to help researchers and practitioners develop more effective conversational agents that can better understand and respond to user needs proactively and safely.",
+            "score": 1
+        },
+        {
+            "id": "83edcfbb206ddad38a971d605da09390604248ea",
+            "paperId": "83edcfbb206ddad38a971d605da09390604248ea",
+            "title": "BloombergGPT: A Large Language Model for Finance",
+            "year": 2023,
+            "citationCount": 897,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.17564, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "50425845",
+                    "name": "Shijie Wu"
+                },
+                {
+                    "authorId": "2329943",
+                    "name": "Ozan Irsoy"
+                },
+                {
+                    "authorId": "2144851146",
+                    "name": "Steven Lu"
+                },
+                {
+                    "authorId": "2213265733",
+                    "name": "Vadim Dabravolski"
+                },
+                {
+                    "authorId": "1782853",
+                    "name": "Mark Dredze"
+                },
+                {
+                    "authorId": "3159346",
+                    "name": "Sebastian Gehrmann"
+                },
+                {
+                    "authorId": "2071549",
+                    "name": "P. Kambadur"
+                },
+                {
+                    "authorId": "2064188376",
+                    "name": "D. Rosenberg"
+                },
+                {
+                    "authorId": "2065970358",
+                    "name": "Gideon Mann"
+                }
+            ],
+            "abstract": "The use of NLP in the realm of financial technology is broad and complex, with applications ranging from sentiment analysis and named entity recognition to question answering. Large Language Models (LLMs) have been shown to be effective on a variety of tasks; however, no LLM specialized for the financial domain has been reported in literature. In this work, we present BloombergGPT, a 50 billion parameter language model that is trained on a wide range of financial data. We construct a 363 billion token dataset based on Bloomberg's extensive data sources, perhaps the largest domain-specific dataset yet, augmented with 345 billion tokens from general purpose datasets. We validate BloombergGPT on standard LLM benchmarks, open financial benchmarks, and a suite of internal benchmarks that most accurately reflect our intended usage. Our mixed dataset training leads to a model that outperforms existing models on financial tasks by significant margins without sacrificing performance on general LLM benchmarks. Additionally, we explain our modeling choices, training process, and evaluation methodology. We release Training Chronicles (Appendix C) detailing our experience in training BloombergGPT.",
+            "score": 1
+        },
+        {
+            "id": "6c7ba2af4b3e472bd8a5717367b88dcdd4abbd31",
+            "paperId": "6c7ba2af4b3e472bd8a5717367b88dcdd4abbd31",
+            "title": "Evaluating the Feasibility of ChatGPT in Healthcare: An Analysis of Multiple Clinical and Research Scenarios",
+            "year": 2023,
+            "citationCount": 799,
+            "openAccessPdf": {
+                "url": "https://link.springer.com/content/pdf/10.1007/s10916-023-01925-4.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9985086, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "7547313",
+                    "name": "M. Cascella"
+                },
+                {
+                    "authorId": "4239573",
+                    "name": "J. Montomoli"
+                },
+                {
+                    "authorId": "8663537",
+                    "name": "Valentina Bellini"
+                },
+                {
+                    "authorId": "4155267",
+                    "name": "E. Bignami"
+                }
+            ],
+            "abstract": "This paper aims to highlight the potential applications and limits of a large language model (LLM) in healthcare. ChatGPT is a recently developed LLM that was trained on a massive dataset of text for dialogue with users. Although AI-based language models like ChatGPT have demonstrated impressive capabilities, it is uncertain how well they will perform in real-world scenarios, particularly in fields such as medicine where high-level and complex thinking is necessary. Furthermore, while the use of ChatGPT in writing scientific articles and other scientific outputs may have potential benefits, important ethical concerns must also be addressed. Consequently, we investigated the feasibility of ChatGPT in clinical and research scenarios: (1) support of the clinical practice, (2) scientific production, (3) misuse in medicine and research, and (4) reasoning about public health topics. Results indicated that it is important to recognize and promote education on the appropriate use and potential pitfalls of AI-based LLMs in medicine.",
+            "score": 1
+        },
+        {
+            "id": "992be993d9dba7000b0a415a44c5e43042fe2452",
+            "paperId": "992be993d9dba7000b0a415a44c5e43042fe2452",
+            "title": "ChatGPT for (Finance) Research: The Bananarama Conjecture",
+            "year": 2023,
+            "citationCount": 444,
+            "openAccessPdf": {
+                "url": "https://doras.dcu.ie/28062/1/1-s2.0-S1544612323000363-main.pdf",
+                "status": "GREEN",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.2139/ssrn.4322651?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.2139/ssrn.4322651, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145985638",
+                    "name": "M. Dowling"
+                },
+                {
+                    "authorId": "144647699",
+                    "name": "B. Lucey"
+                }
+            ],
+            "abstract": "We show, based on ratings by finance journal reviewers of generated output, that the recently released AI chatbot ChatGPT can significantly assist with finance research. In principle, these results should be generalisable across research domains. There are clear advantages for idea generation and data identification. The technology, however, is weaker on literature synthesis and developing appropriate testing frameworks. Importantly, we further demonstrate that the extent of private data and researcher domain expertise input, are key factors in determining the quality of output. We conclude by considering the implications, particularly the ethical implications, which arise from this new technology.",
+            "score": 1
+        },
+        {
+            "id": "c4c3e35df13850fda0e553668fe5f93ebcd59295",
+            "paperId": "c4c3e35df13850fda0e553668fe5f93ebcd59295",
+            "title": "Fashion-AlterEval: A Dataset for Improved Evaluation of Conversational Recommendation Systems with Alternative Relevant Items",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.18017, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "50213457",
+                    "name": "M. Vlachou"
+                }
+            ],
+            "abstract": "In Conversational Recommendation Systems (CRS), a user provides feedback on recommended items at each turn, leading the CRS towards improved recommendations. Due to the need for a large amount of data, a user simulator is employed for both training and evaluation. Such user simulators critique the current retrieved item based on knowledge of a single target item. However, system evaluation in offline settings with simulators is limited by the focus on a single target item and their unlimited patience over a large number of turns. To overcome these limitations of existing simulators, we propose Fashion-AlterEval, a new dataset that contains human judgments for a selection of alternative items by adding new annotations in common fashion CRS datasets. Consequently, we propose two novel meta-user simulators that use the collected judgments and allow simulated users not only to express their preferences about alternative items to their original target, but also to change their mind and level of patience. In our experiments using the Shoes and Fashion IQ as the original datasets and three CRS models, we find that using the knowledge of alternatives by the simulator can have a considerable impact on the evaluation of existing CRS models, specifically that the existing single-target evaluation underestimates their effectiveness, and when simulatedusers are allowed to instead consider alternative relevant items, the system can rapidly respond to more quickly satisfy the user.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.139035
+}

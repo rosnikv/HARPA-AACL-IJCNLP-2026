@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>0de0a44b859a3719d11834479112314b4caba669</p>
+<hr>
+<section><h2>Title</h2>
+<p>AttentionFlow: A Dynamic Visualization Tool for Interpreting Transformer Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current attention visualization tools for transformer models like BERT and GPT-2 often focus on static heatmaps, which fail to capture the dynamic nature of attention across layers and don't provide insights into how information propagates through the model. This limits our understanding of how these models process and integrate information, potentially obscuring important patterns or bottlenecks in the model's reasoning process.</p>
+<h3>Motivation</h3>
+<p>Existing visualization tools typically use heatmaps or line graphs to visualize attention weights for individual layers or heads. While some advanced tools allow for interactive exploration of attention patterns, they don't provide a comprehensive view of information flow through the entire model. By visualizing the flow of attention and information across layers, we can gain deeper insights into how transformer models process and integrate information, potentially uncovering unexpected patterns or bottlenecks in the model's reasoning process. This approach is inspired by the dynamic nature of information processing in neural networks and aims to provide a more intuitive and comprehensive understanding of transformer models' inner workings.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose 'AttentionFlow', a novel visualization tool that treats attention as a dynamic process flowing through the transformer layers. The core idea is to represent each token as a node in a graph, with edges representing attention connections. As we move through layers, the graph evolves, showing how attention shifts and information propagates. We use a force-directed graph layout algorithm that updates in real-time as the user explores different layers. The size of each node represents the amount of 'information' it holds, calculated using a novel metric combining attention scores and value vector magnitudes. Edge thickness represents attention strength, and color gradients show the direction of information flow. Users can 'play' the attention flow like a video, seeing how it evolves across layers. Additionally, we implement a 'token tracing' feature that allows users to select a specific token and visualize its influence throughout the network, highlighting potential long-range dependencies.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Select a set of diverse input sequences from standard NLP datasets such as GLUE, SQuAD, and WikiText-103. Ensure a mix of short and long sequences, as well as different types of tasks (e.g., classification, question answering, language modeling).</p><p><strong>Step 2: Model Selection</strong></p><p>Choose BERT-base and GPT-2-medium as our target models for visualization. Use the Hugging Face Transformers library to load pre-trained versions of these models.</p><p><strong>Step 3: Attention Extraction</strong></p><p>Implement a function to extract attention weights and value vectors from all layers of the selected models for a given input sequence. Use the transformers library's model hooks to access these intermediate outputs.</p><p><strong>Step 4: Information Flow Metric</strong></p><p>Develop a novel metric to quantify the 'information' held by each token at each layer. This metric should combine attention scores and value vector magnitudes. For example: Info(token_i, layer_l) = sum(attention_scores_i * ||value_vectors_i||) across all attention heads.</p><p><strong>Step 5: Graph Construction</strong></p><p>For each layer, construct a graph where nodes represent tokens and edges represent attention connections. Use the NetworkX library for graph operations. Node size should be proportional to the information metric, edge thickness to attention strength, and edge color to indicate direction of information flow.</p><p><strong>Step 6: Visualization Implementation</strong></p><p>Use D3.js to create an interactive web-based visualization. Implement the force-directed graph layout and animation between layers. Add controls for playing through layers, adjusting animation speed, and selecting specific tokens for tracing.</p><p><strong>Step 7: Token Tracing Feature</strong></p><p>Implement a feature that allows users to select a specific token and highlight its connections and influence across all layers. This should visually emphasize the selected token's node and all its incoming and outgoing edges throughout the network.</p><p><strong>Step 8: User Interface Design</strong></p><p>Design an intuitive user interface that allows users to input custom sequences, select models, and control the visualization. Include options for adjusting graph layout parameters and exporting visualizations.</p><p><strong>Step 9: Performance Optimization</strong></p><p>Optimize the visualization for performance, especially for longer sequences. This may involve techniques like edge pruning (only showing strongest connections) or using WebGL for rendering.</p><p><strong>Step 10: Evaluation</strong></p><p>Conduct a user study with 20 NLP researchers and practitioners. Have them use both AttentionFlow and a traditional heatmap visualization tool (e.g., BertViz) for analyzing attention in specific NLP tasks. Collect quantitative feedback on tool usability and qualitative feedback on insights gained.</p><p><strong>Step 11: Comparative Analysis</strong></p><p>Compare insights gained using AttentionFlow versus traditional heatmap visualizations on tasks such as sentiment analysis and named entity recognition. Document specific cases where AttentionFlow revealed patterns not apparent in static visualizations.</p><p><strong>Step 12: Quantitative Evaluation</strong></p><p>Measure correlations between our 'information flow' metric and traditional interpretability measures like integrated gradients. Analyze how well our metric predicts important tokens for model decision-making.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Traditional Heatmap)</strong></p><p>Visualize attention weights for the sentence 'The cat sat on the mat.' using BERT-base model.</p><p><strong>Baseline Prompt Expected Output (Traditional Heatmap)</strong></p><p>A static heatmap showing attention weights for each layer and head, with rows and columns representing tokens.</p><p><strong>Proposed Prompt Input (AttentionFlow)</strong></p><p>Visualize attention flow for the sentence 'The cat sat on the mat.' using BERT-base model.</p><p><strong>Proposed Prompt Expected Output (AttentionFlow)</strong></p><p>An interactive graph visualization showing tokens as nodes and attention as edges. The graph evolves through layers, with node sizes changing based on information content and edge thicknesses representing attention strength. Users can play through layers, trace specific tokens, and interact with the graph.</p><p><strong>Explanation</strong></p><p>AttentionFlow provides a dynamic, intuitive visualization of how attention and information flow through the model. Unlike static heatmaps, it allows users to see how attention patterns evolve across layers and trace the influence of specific tokens, potentially revealing long-range dependencies and complex reasoning patterns that are not apparent in traditional visualizations.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed AttentionFlow visualization does not provide significant improvements in interpretability over traditional methods, we can pivot the project in several ways. First, we could focus on analyzing why the dynamic visualization is not as effective as expected, which could provide insights into the limitations of current attention-based interpretability methods. This analysis could involve comparing our information flow metric with other interpretability measures across a wide range of NLP tasks, potentially revealing task-specific patterns in how transformers process information. Alternatively, we could extend the tool to visualize not just attention, but also other aspects of the transformer architecture, such as feed-forward network activations or residual connections. This could provide a more comprehensive view of information flow in these models. Finally, we could shift focus to using our visualization method for model debugging and improvement, analyzing how attention patterns change during fine-tuning or how they differ between well-performing and poorly-performing models on specific tasks.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/1e83c20def5c84efa6d4a0d80aa3159f55cb9c3f" target="_blank">Attention is not Explanation</a> (2019)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1abec8d03b8d1435ae920edea9b437be913a30ca" target="_blank">Seq2seq-Vis: A Visual Debugging Tool for Sequence-to-Sequence Models</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a039ea239e37f53a2cb60c68e0a1967994353166" target="_blank">Analyzing the Structure of Attention in a Transformer Language Model</a> (2019)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2cc8d8a0bdb5c2d922a0304642a8f0d35eefc492" target="_blank">Back Attention: Understanding and Enhancing Multi-Hop Reasoning in Large Language Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/45fc7014fae3c73921ea3541ab405beb19e52637" target="_blank">Toward Practical Usage of the Attention Mechanism as a Tool for Interpretability</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/d8c37474aa0c755d925eec9c9f9856fa48a3e580" target="_blank">Who Reasons in the Large Language Models?</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/58695c4827c55b409e0151d9288675847a44d380" target="_blank">Visual Interrogation of Attention-Based Models for Natural Language Inference and Machine Comprehension</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8f3db9e062b2a5e0c3eab6997af2bad7f23fcd93" target="_blank">Interactive Visualization and Manipulation of Attention-based Neural Machine Translation</a> (2017)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0fa5f7a6769eed965bbfd6610b2068fedaff74e7" target="_blank">Naturalness of Attention: Revisiting Attention in Code Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1e58313d7d78548e8f289f4a0f8bd164032e77a0" target="_blank">Understanding Matching Mechanisms in Cross-Encoders</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

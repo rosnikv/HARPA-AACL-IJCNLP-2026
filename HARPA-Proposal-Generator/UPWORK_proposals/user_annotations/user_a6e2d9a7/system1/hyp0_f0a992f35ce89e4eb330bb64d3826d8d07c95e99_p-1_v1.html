@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>f0a992f35ce89e4eb330bb64d3826d8d07c95e99</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating CTGANs with AutoML-based stacking to enhance breast cancer type prediction accuracy.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Conditional Tabular GANs with AutoML-based stacking will improve the precision and recall of breast cancer type predictions by enhancing dataset diversity and addressing class imbalance.</p>
+<h3>Motivation</h3>
+<p>Existing methods for improving breast cancer type prediction often focus on either synthetic data generation or ensemble learning separately, without fully exploring the potential of integrating specific GAN architectures with unique ensemble frameworks. Most studies utilize traditional GANs or basic ensemble methods, overlooking the potential of combining Conditional Tabular GANs (CTGANs) with AutoML-based stacking to address class imbalance and enhance dataset diversity. This hypothesis addresses the gap by testing this novel combination, which has not been extensively explored, particularly in the context of breast cancer type prediction. The hypothesis aims to leverage CTGANs' ability to handle categorical data and AutoML's optimization capabilities to improve precision and recall in an automated and efficient manner.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Conditional Tabular GANs (CTGANs) with AutoML-based stacking to enhance the prediction accuracy of breast cancer types. CTGANs are employed to generate synthetic tabular data, particularly focusing on underrepresented classes, thereby addressing class imbalance and enhancing dataset diversity. The generated synthetic data is then used to augment the original dataset. AutoML-based stacking is utilized to automatically select and combine the best-performing models, optimizing the ensemble framework for improved prediction accuracy. This approach is expected to enhance precision and recall by leveraging CTGANs' ability to generate realistic synthetic data and AutoML's capability to optimize model selection and combination. The hypothesis addresses the gap in existing research by combining these two advanced techniques, which have not been extensively tested together in the context of breast cancer prediction. The expected outcome is a significant improvement in the model's ability to accurately predict breast cancer types, particularly for minority classes, leading to better diagnostic accuracy and patient outcomes.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/30fd8f62c56a63e55088b0ec0c2a5a2abb681508">Conditional Tabular GANs (CTGANs)</a>: CTGANs are a type of GAN specifically designed for generating synthetic tabular data with categorical variables. They use conditional vectors to guide the generation process, ensuring that the synthetic data aligns with the desired class distributions. In this experiment, CTGANs will be configured to generate additional samples for underrepresented breast cancer types, thereby addressing class imbalance. The generated data will be evaluated for diversity and realism, with the expectation that it will enhance the training dataset's representativeness. The choice of CTGANs over other GAN variants is due to their proven effectiveness in handling categorical data and generating high-quality synthetic samples, which are critical for improving model performance in imbalanced datasets.</p>
+<p><a href="https://www.semanticscholar.org/paper/2b1b6a8320f80029df789fe929e743a04dce45c8">AutoML-based Stacking</a>: AutoML-based stacking involves using automated machine learning tools to optimize the selection and combination of base models in a stacking ensemble. This approach leverages AutoML frameworks to automatically tune hyperparameters and select the best-performing models for stacking. In this experiment, AutoML-based stacking will be used to combine predictions from multiple models trained on the augmented dataset, with the goal of improving precision and recall. The meta-model, trained on the outputs of these selected models, will make the final prediction. The choice of AutoML-based stacking is motivated by its ability to efficiently explore a wide range of model configurations and select the optimal ensemble, thereby enhancing prediction accuracy and robustness.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves two main components: Conditional Tabular GANs (CTGANs) for synthetic data generation and AutoML-based stacking for model optimization. First, CTGANs will be trained on the original breast cancer dataset to generate synthetic samples for underrepresented classes. This involves configuring the CTGAN to use conditional vectors that ensure the generated data aligns with the desired class distributions. The synthetic data will be evaluated for diversity and realism, ensuring it enhances the dataset's representativeness. Next, the augmented dataset, comprising both real and synthetic data, will be used to train multiple base models. AutoML-based stacking will then be employed to automatically select and combine the best-performing models. This involves using an AutoML framework to explore various model configurations, tune hyperparameters, and select the optimal ensemble. The meta-model, trained on the outputs of the selected base models, will make the final prediction. The integration of CTGANs and AutoML-based stacking is expected to improve precision and recall by addressing class imbalance and optimizing model selection. The entire process will be implemented using Python-based experiments, with the ASD Agent executing the experiments in containers and analyzing the results across multiple runs.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Conditional Tabular GANs (CTGANs) with AutoML-based stacking will improve the precision and recall of breast cancer type predictions by enhancing dataset diversity and addressing class imbalance.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<p>Use the SEER breast cancer database for this experiment. If the exact SEER database is not available, use a publicly available breast cancer dataset with multiple cancer types/classes (such as the Wisconsin Breast Cancer dataset or METABRIC dataset) that exhibits class imbalance. The dataset should contain features related to breast cancer diagnosis and a target variable representing different cancer types.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Implementation</strong></h4>
+<p>Implement three pilot modes controlled by a global variable PILOT_MODE which can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':<br />
+- MINI_PILOT: Use only 5% of the dataset, run 1 training iteration of CTGAN, and limit AutoML to evaluating only 3 base models with minimal hyperparameter tuning. This should complete in under 10 minutes.<br />
+- PILOT: Use 20% of the dataset, run 5 training iterations of CTGAN, and allow AutoML to evaluate up to 10 base models with moderate hyperparameter tuning. This should complete in under 2 hours.<br />
+- FULL_EXPERIMENT: Use the entire dataset, run full CTGAN training until convergence, and allow AutoML to evaluate all available models with comprehensive hyperparameter tuning.</p></p>
+<p><p>Start by running the MINI_PILOT first, then if everything looks good, run the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Experimental Setup</strong></h4>
+<p>Implement and compare the following approaches:</p></p>
+<p><ol>
+<li>Baseline 1: Standard ML models (without synthetic data augmentation or stacking)</li>
+<li>Train individual ML models (Decision Tree, Random Forest, XGBoost, Logistic Regression, SVM) on the original imbalanced dataset</li>
+<li>Evaluate each model's performance using precision, recall, F1-score, and ROC-AUC, with special attention to minority class performance</li>
+</ol></p>
+<p><ol>
+<li>Baseline 2: Traditional GAN + Standard Stacking</li>
+<li>Train a traditional GAN (without conditional vectors) on the original dataset</li>
+<li>Generate synthetic samples to balance the dataset</li>
+<li>Train individual ML models on the augmented dataset</li>
+<li>Implement a standard stacking ensemble (without AutoML optimization) using these models</li>
+<li>Evaluate performance using the same metrics</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>Experimental: CTGAN + AutoML Stacking (our proposed method)</li>
+<li>Train a CTGAN on the original dataset, conditioning on the cancer type</li>
+<li>Generate synthetic samples specifically for underrepresented cancer types to balance the dataset</li>
+<li>Use AutoML to select and optimize base models trained on the augmented dataset</li>
+<li>Implement AutoML-based stacking to combine these models</li>
+<li>Evaluate performance using the same metrics</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>CTGAN Implementation</strong></h4>
+<ol>
+<li>Preprocess the dataset (normalize numerical features, encode categorical features)</li>
+<li>Identify minority classes in the dataset</li>
+<li>Train the CTGAN model on the original dataset</li>
+<li>Generate synthetic samples for minority classes to achieve balanced class distribution</li>
+<li>Evaluate the quality of synthetic data (statistical similarity to original data)</li>
+<li>Combine original and synthetic data to create an augmented dataset</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>AutoML Stacking Implementation</strong></h4>
+<ol>
+<li>Define a set of base models (Decision Tree, Random Forest, XGBoost, Logistic Regression, SVM)</li>
+<li>Use AutoML to optimize hyperparameters for each base model</li>
+<li>Train base models on the augmented dataset</li>
+<li>Generate predictions from each base model</li>
+<li>Train a meta-model (using AutoML for selection and optimization) on the base model predictions</li>
+<li>Evaluate the stacking ensemble's performance</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>Perform stratified k-fold cross-validation (k=5) for all approaches</li>
+<li>Calculate precision, recall, F1-score, and ROC-AUC for each class and overall</li>
+<li>Conduct statistical significance testing (bootstrap resampling) to compare the approaches</li>
+<li>Generate confusion matrices for each approach</li>
+<li>Create visualizations comparing performance across approaches, with emphasis on minority class performance</li>
+<li>Report detailed results in a structured format</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output Requirements</strong></h4>
+<ol>
+<li>Save all trained models (CTGAN, base models, meta-models)</li>
+<li>Generate a sample of synthetic data for inspection</li>
+<li>Create visualizations comparing original and synthetic data distributions</li>
+<li>Produce detailed performance metrics for all approaches</li>
+<li>Generate a comprehensive report summarizing the findings</li>
+<li>Include statistical analysis of performance differences between approaches</li>
+</ol></p>
+<p><p>Please implement this experiment using the specified codeblocks and ensure proper error handling, logging, and documentation throughout the code.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/f0a992f35ce89e4eb330bb64d3826d8d07c95e99">Paper 0: Deep Learning Based Analysis of Breast Cancer Using Advanced Ensemble Classifier and Linear Discriminant Analysis</a> (31 citations, 2020). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/c43b0ba2bb7ae2725adbb045ebdc64fbf7ab2b99">Paper 1</a>. The analysis of the source and related papers reveals a progression from using deep learning frameworks for breast cancer classification to applying optimized ensemble learning for multiple cancer types. The key challenge addressed is the low-intensity ratio during classification, which affects the accuracy of predictions. While the related paper introduces an optimization technique for feature selection, there remains an opportunity to explore how these models can be further enhanced by integrating additional data modalities or leveraging novel ensemble strategies that do not rely on external datasets. This can potentially improve the robustness and generalization of cancer prediction models.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/f0a992f35ce89e4eb330bb64d3826d8d07c95e99" target="_blank">Deep Learning Based Analysis of Breast Cancer Using Advanced Ensemble Classifier and Linear Discriminant Analysis</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/c43b0ba2bb7ae2725adbb045ebdc64fbf7ab2b99" target="_blank">Intelligent and novel multi-type cancer prediction model using optimized ensemble learning</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/2c71af76a8e926695ec42a0cbab166cc8f4267a5" target="_blank">Synthetic Boosted Resampling Using Deep Generative Adversarial Networks: A Novel Approach to Improve Cancer Prediction from Imbalanced Datasets</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/2c989551571aa6e8533993a14863b63c162a935a" target="_blank">AI in 2D Mammography: Improving Breast Cancer Screening Accuracy</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/bf68dc950fb660ced459a5a71c32937d4deeb88f" target="_blank">Improving Cancer Detection Classification Performance Using GANs in Breast Cancer Data</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/0f3e46c8ce12d991dc30b7f309c66b2fc8807297" target="_blank">Generating Synthetic Fermentation Data of Shindari, a Traditional Jeju Beverage, Using Multiple Imputation Ensemble and Generative Adversarial Networks</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/2d8e16e79db2d30cb672678c3f9ef3a19bc53ce5" target="_blank">Binary Imbalanced Data Classification Based on Modified D2GAN Oversampling and Classifier Fusion</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/30fd8f62c56a63e55088b0ec0c2a5a2abb681508" target="_blank">Rebalancing the Scales: A Systematic Mapping Study of Generative Adversarial Networks (GANs) in Addressing Data Imbalance</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/ca1d87f926eb7d2aba6eb9836f2d76dfce9e2079" target="_blank">A review of ensemble learning and data augmentation models for class imbalanced problems: combination, implementation and evaluation</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/18ed0e58695eb67d5e1daa0c4a783ca88269c530" target="_blank">Generation of Controlled Synthetic Samples and Impact of Hyper-Tuning Parameters to Effectively Classify the Complex Structure of Overlapping Region</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/ba7549a179c236b0cb3cd4add7cf2e3d2a5c92a1" target="_blank">Cultivating Ensemble Diversity through Targeted Injection of Synthetic Data: Path Loss Prediction Examples</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/01c56d14fe41f810589849a742ac6048efcab76d" target="_blank">Private Synthetic Data Meets Ensemble Learning</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/2b1b6a8320f80029df789fe929e743a04dce45c8" target="_blank">Advancing breast cancer prediction: Comparative analysis of ML models and deep learning-based multi-model ensembles on original and synthetic datasets</a> (2025)</li>
+</ol>
+</body>
+</html>

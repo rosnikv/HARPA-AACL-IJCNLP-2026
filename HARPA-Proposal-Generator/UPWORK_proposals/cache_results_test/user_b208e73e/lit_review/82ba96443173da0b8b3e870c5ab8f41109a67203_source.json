@@ -1,0 +1,2021 @@
+{
+    "topic_description": "projected GAN training for large-scale image synthesis with StyleGAN-XL on ImageNet",
+    "all_queries": [
+        "KeywordQuery(\"projected gan training for large-scale image synthesis with stylegan-xl on imagenet\")",
+        "PaperQuery(\"82ba96443173da0b8b3e870c5ab8f41109a67203\")",
+        "GetReferences(\"82ba96443173da0b8b3e870c5ab8f41109a67203\")",
+        "KeywordQuery(\"stylegan image synthesis imagenet\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "82ba96443173da0b8b3e870c5ab8f41109a67203",
+            "paperId": "82ba96443173da0b8b3e870c5ab8f41109a67203",
+            "title": "StyleGAN-XL: Scaling StyleGAN to Large Diverse Datasets",
+            "year": 2022,
+            "citationCount": 528,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2202.00273",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2202.00273, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The final model, StyleGAN-XL, sets a new state-of-the-art on large-scale image synthesis and is the first to generate images at a resolution of 10242 at such a dataset scale."
+            },
+            "authors": [
+                {
+                    "authorId": "40562186",
+                    "name": "Axel Sauer"
+                },
+                {
+                    "authorId": "40502376",
+                    "name": "Katja Schwarz"
+                },
+                {
+                    "authorId": "47237027",
+                    "name": "Andreas Geiger"
+                }
+            ],
+            "abstract": "Computer graphics has experienced a recent surge of data-centric approaches for photorealistic and controllable content creation. StyleGAN in particular sets new standards for generative modeling regarding image quality and controllability. However, StyleGAN\u2019s performance severely degrades on large unstructured datasets such as ImageNet. StyleGAN was designed for controllability; hence, prior works suspect its restrictive design to be unsuitable for diverse datasets. In contrast, we find the main limiting factor to be the current training strategy. Following the recently introduced Projected GAN paradigm, we leverage powerful neural network priors and a progressive growing strategy to successfully train the latest StyleGAN3 generator on ImageNet. Our final model, StyleGAN-XL, sets a new state-of-the-art on large-scale image synthesis and is the first to generate images at a resolution of 10242 at such a dataset scale. We demonstrate that this model can invert and edit images beyond the narrow domain of portraits or specific object classes. Code, models, and supplementary videos can be found at https://sites.google.com/view/stylegan-xl/ .",
+            "score": 10
+        },
+        {
+            "id": "ffd43946c7fe947ef3213e7a668a36e9d41c8f4b",
+            "paperId": "ffd43946c7fe947ef3213e7a668a36e9d41c8f4b",
+            "title": "Projected GANs Converge Faster",
+            "year": 2021,
+            "citationCount": 245,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2111.01007, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "40562186",
+                    "name": "Axel Sauer"
+                },
+                {
+                    "authorId": "31352445",
+                    "name": "Kashyap Chitta"
+                },
+                {
+                    "authorId": "2057007308",
+                    "name": "Jens Muller"
+                },
+                {
+                    "authorId": "47237027",
+                    "name": "Andreas Geiger"
+                }
+            ],
+            "abstract": "Generative Adversarial Networks (GANs) produce high-quality images but are challenging to train. They need careful regularization, vast amounts of compute, and expensive hyper-parameter sweeps. We make significant headway on these issues by projecting generated and real samples into a fixed, pretrained feature space. Motivated by the finding that the discriminator cannot fully exploit features from deeper layers of the pretrained model, we propose a more effective strategy that mixes features across channels and resolutions. Our Projected GAN improves image quality, sample efficiency, and convergence speed. It is further compatible with resolutions of up to one Megapixel and advances the state-of-the-art Fr\\'echet Inception Distance (FID) on twenty-two benchmark datasets. Importantly, Projected GANs match the previously lowest FIDs up to 40 times faster, cutting the wall-clock time from 5 days to less than 3 hours given the same computational resources.",
+            "score": 8
+        },
+        {
+            "id": "0930fe943d7d9b5bb943613d87c4ca92850dd43a",
+            "paperId": "0930fe943d7d9b5bb943613d87c4ca92850dd43a",
+            "title": "Scaling up GANs for Text-to-Image Synthesis",
+            "year": 2023,
+            "citationCount": 496,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2303.05511",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.05511, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "GigaGAN is introduced, a new GAN architecture that far exceeds this limit, demonstrating GANs as a viable option for text-to-image synthesis and supports various latent space editing applications such as latent interpolation, style mixing, and vector arithmetic operations."
+            },
+            "authors": [
+                {
+                    "authorId": "2153110145",
+                    "name": "Minguk Kang"
+                },
+                {
+                    "authorId": "1922024303",
+                    "name": "Jun-Yan Zhu"
+                },
+                {
+                    "authorId": "2109976035",
+                    "name": "Richard Zhang"
+                },
+                {
+                    "authorId": "2109193504",
+                    "name": "Jaesik Park"
+                },
+                {
+                    "authorId": "2177801",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "145799132",
+                    "name": "Sylvain Paris"
+                },
+                {
+                    "authorId": "2071929129",
+                    "name": "Taesung Park"
+                }
+            ],
+            "abstract": "The recent success of text-to-image synthesis has taken the world by storm and captured the general public's imagination. From a technical standpoint, it also marked a drastic change in the favored architecture to design generative image models. GANs used to be the de facto choice, with techniques like StyleGAN. With DALL.E 2, autoregressive and diffusion models became the new standard for large-scale generative models overnight. This rapid shift raises a fundamental question: can we scale up GANs to benefit from large datasets like LAION? We find that na\u00efvely increasing the capacity of the StyleGan architecture quickly becomes unstable. We introduce GigaGAN, a new GAN architecture that far exceeds this limit, demonstrating GANs as a viable option for text-to-image synthesis. GigaGAN offers three major advantages. First, it is orders of magnitude faster at inference time, taking only 0.13 seconds to synthesize a 512px image. Second, it can synthesize high-resolution images, for example, 16-megapixel images in 3.66 seconds. Finally, GigaGAN supports various latent space editing applications such as latent interpolation, style mixing, and vector arithmetic operations.",
+            "score": 5
+        },
+        {
+            "id": "d33be7c99b7265652edbb2b0f832b479e2162ae1",
+            "paperId": "d33be7c99b7265652edbb2b0f832b479e2162ae1",
+            "title": "StyleGAN-T: Unlocking the Power of GANs for Fast Large-Scale Text-to-Image Synthesis",
+            "year": 2023,
+            "citationCount": 226,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2301.09515",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2301.09515, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed model, StyleGAN-T, addresses the specific requirements of large-scale text-to-image synthesis, such as large capacity, stable training on diverse datasets, strong text alignment, and controllable variation vs. text alignment tradeoff."
+            },
+            "authors": [
+                {
+                    "authorId": "40562186",
+                    "name": "Axel Sauer"
+                },
+                {
+                    "authorId": "2976930",
+                    "name": "Tero Karras"
+                },
+                {
+                    "authorId": "36436218",
+                    "name": "S. Laine"
+                },
+                {
+                    "authorId": "47237027",
+                    "name": "Andreas Geiger"
+                },
+                {
+                    "authorId": "1761103",
+                    "name": "Timo Aila"
+                }
+            ],
+            "abstract": "Text-to-image synthesis has recently seen significant progress thanks to large pretrained language models, large-scale training data, and the introduction of scalable model families such as diffusion and autoregressive models. However, the best-performing models require iterative evaluation to generate a single sample. In contrast, generative adversarial networks (GANs) only need a single forward pass. They are thus much faster, but they currently remain far behind the state-of-the-art in large-scale text-to-image synthesis. This paper aims to identify the necessary steps to regain competitiveness. Our proposed model, StyleGAN-T, addresses the specific requirements of large-scale text-to-image synthesis, such as large capacity, stable training on diverse datasets, strong text alignment, and controllable variation vs. text alignment tradeoff. StyleGAN-T significantly improves over previous GANs and outperforms distilled diffusion models - the previous state-of-the-art in fast text-to-image synthesis - in terms of sample quality and speed.",
+            "score": 4
+        },
+        {
+            "id": "45130ce7f59612ed06579a29c5cc6318c6f279b1",
+            "paperId": "45130ce7f59612ed06579a29c5cc6318c6f279b1",
+            "title": "BigDatasetGAN: Synthesizing ImageNet with Pixel-wise Annotations",
+            "year": 2022,
+            "citationCount": 111,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2201.04684",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2201.04684, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "48108537",
+                    "name": "Daiqing Li"
+                },
+                {
+                    "authorId": "18900686",
+                    "name": "Huan Ling"
+                },
+                {
+                    "authorId": "2596437",
+                    "name": "Seung Wook Kim"
+                },
+                {
+                    "authorId": "32113848",
+                    "name": "Karsten Kreis"
+                },
+                {
+                    "authorId": "2063937685",
+                    "name": "Adela Barriuso"
+                },
+                {
+                    "authorId": "37895334",
+                    "name": "S. Fidler"
+                },
+                {
+                    "authorId": "143805211",
+                    "name": "A. Torralba"
+                }
+            ],
+            "abstract": "Annotating images with pixel-wise labels is a time consuming and costly process. Recently, DatasetGAN [78] showcased a promising alternative - to synthesize a large labeled dataset via a generative adversarial network (GAN) by exploiting a small set of manually labeled, GAN generated images. Here, we scale DatasetGAN to ImageNet scale of class diversity. We take image samples from the class-conditional generative model BigGAN [5] trained on ImageNet, and manually annotate only 5 images per class, for all 1k classes. By training an effective feature segmentation architecture on top of BigGAN, we turn Big GAN into a labeled dataset generator. We further show that VQGAN [18] can similarly serve as a dataset generator, leveraging the already annotated data. We create a new ImageNet benchmark by labeling an additional set of real images and evaluate segmentation performance in a variety of settings. Through an extensive ablation study, we show big gains in leveraging a large generated dataset to train different supervised and self-supervised backbone models on pixel-wise tasks. Furthermore, we demonstrate that using our synthesized datasets for pre-training leads to improvements over standard ImageNet pre-training on several downstream datasets, such as PASCAL-VOC, MS-COCO, Cityscapes and chest X-ray, as well as tasks (detection, segmentation). Our benchmark will be made public and maintain a leaderboard for this challenging task. Project Page: https://nv-tlabs.github.io/big-datasetgan/",
+            "score": 3
+        },
+        {
+            "id": "9bd1814af7c845e7bd46f77ac15d6bedf64e276f",
+            "paperId": "9bd1814af7c845e7bd46f77ac15d6bedf64e276f",
+            "title": "Instance-Conditioned GAN",
+            "year": 2021,
+            "citationCount": 140,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2109.05070, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "8742492",
+                    "name": "Arantxa Casanova"
+                },
+                {
+                    "authorId": "2126496026",
+                    "name": "Marlene Careil"
+                },
+                {
+                    "authorId": "34602236",
+                    "name": "Jakob Verbeek"
+                },
+                {
+                    "authorId": "3325894",
+                    "name": "M. Drozdzal"
+                },
+                {
+                    "authorId": "1456285042",
+                    "name": "Adriana Romero-Soriano"
+                }
+            ],
+            "abstract": "Generative Adversarial Networks (GANs) can generate near photo realistic images in narrow domains such as human faces. Yet, modeling complex distributions of datasets such as ImageNet and COCO-Stuff remains challenging in unconditional settings. In this paper, we take inspiration from kernel density estimation techniques and introduce a non-parametric approach to modeling distributions of complex datasets. We partition the data manifold into a mixture of overlapping neighborhoods described by a datapoint and its nearest neighbors, and introduce a model, called instance-conditioned GAN (IC-GAN), which learns the distribution around each datapoint. Experimental results on ImageNet and COCO-Stuff show that IC-GAN significantly improves over unconditional models and unsupervised data partitioning baselines. Moreover, we show that IC-GAN can effortlessly transfer to datasets not seen during training by simply changing the conditioning instances, and still generate realistic images. Finally, we extend IC-GAN to the class-conditional case and show semantically controllable generation and competitive quantitative results on ImageNet; while improving over BigGAN on ImageNet-LT. Code and trained models to reproduce the reported results are available at https://github.com/facebookresearch/ic_gan.",
+            "score": 3
+        },
+        {
+            "id": "c1ff08b59f00c44f34dfdde55cd53370733a2c19",
+            "paperId": "c1ff08b59f00c44f34dfdde55cd53370733a2c19",
+            "title": "Alias-Free Generative Adversarial Networks",
+            "year": 2021,
+            "citationCount": 1640,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.12423, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2976930",
+                    "name": "Tero Karras"
+                },
+                {
+                    "authorId": "1907688",
+                    "name": "M. Aittala"
+                },
+                {
+                    "authorId": "36436218",
+                    "name": "S. Laine"
+                },
+                {
+                    "authorId": "103642338",
+                    "name": "Erik H\u00e4rk\u00f6nen"
+                },
+                {
+                    "authorId": "1454226629",
+                    "name": "Janne Hellsten"
+                },
+                {
+                    "authorId": "49244945",
+                    "name": "J. Lehtinen"
+                },
+                {
+                    "authorId": "1761103",
+                    "name": "Timo Aila"
+                }
+            ],
+            "abstract": "We observe that despite their hierarchical convolutional nature, the synthesis process of typical generative adversarial networks depends on absolute pixel coordinates in an unhealthy manner. This manifests itself as, e.g., detail appearing to be glued to image coordinates instead of the surfaces of depicted objects. We trace the root cause to careless signal processing that causes aliasing in the generator network. Interpreting all signals in the network as continuous, we derive generally applicable, small architectural changes that guarantee that unwanted information cannot leak into the hierarchical synthesis process. The resulting networks match the FID of StyleGAN2 but differ dramatically in their internal representations, and they are fully equivariant to translation and rotation even at subpixel scales. Our results pave the way for generative models better suited for video and animation.",
+            "score": 3
+        },
+        {
+            "id": "0f183bcfe65781c06b1a48a6f56e0f3c63e8e4a4",
+            "paperId": "0f183bcfe65781c06b1a48a6f56e0f3c63e8e4a4",
+            "title": "Cascaded Diffusion Models for High Fidelity Image Generation",
+            "year": 2021,
+            "citationCount": 1293,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.15282, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2126278",
+                    "name": "Jonathan Ho"
+                },
+                {
+                    "authorId": "2314850972",
+                    "name": "Chitwan Saharia"
+                },
+                {
+                    "authorId": "144333684",
+                    "name": "William Chan"
+                },
+                {
+                    "authorId": "1793739",
+                    "name": "David J. Fleet"
+                },
+                {
+                    "authorId": "144739074",
+                    "name": "Mohammad Norouzi"
+                },
+                {
+                    "authorId": "2887364",
+                    "name": "Tim Salimans"
+                }
+            ],
+            "abstract": "We show that cascaded diffusion models are capable of generating high fidelity images on the class-conditional ImageNet generation benchmark, without any assistance from auxiliary image classifiers to boost sample quality. A cascaded diffusion model comprises a pipeline of multiple diffusion models that generate images of increasing resolution, beginning with a standard diffusion model at the lowest resolution, followed by one or more super-resolution diffusion models that successively upsample the image and add higher resolution details. We find that the sample quality of a cascading pipeline relies crucially on conditioning augmentation, our proposed method of data augmentation of the lower resolution conditioning inputs to the super-resolution models. Our experiments show that conditioning augmentation prevents compounding error during sampling in a cascaded model, helping us to train cascading pipelines achieving FID scores of 1.48 at 64x64, 3.52 at 128x128 and 4.88 at 256x256 resolutions, outperforming BigGAN-deep, and classification accuracy scores of 63.02% (top-1) and 84.06% (top-5) at 256x256, outperforming VQ-VAE-2.",
+            "score": 3
+        },
+        {
+            "id": "64ea8f180d0682e6c18d1eb688afdb2027c02794",
+            "paperId": "64ea8f180d0682e6c18d1eb688afdb2027c02794",
+            "title": "Diffusion Models Beat GANs on Image Synthesis",
+            "year": 2021,
+            "citationCount": 8396,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2105.05233, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "6515819",
+                    "name": "Prafulla Dhariwal"
+                },
+                {
+                    "authorId": "38967461",
+                    "name": "Alex Nichol"
+                }
+            ],
+            "abstract": "We show that diffusion models can achieve image sample quality superior to the current state-of-the-art generative models. We achieve this on unconditional image synthesis by finding a better architecture through a series of ablations. For conditional image synthesis, we further improve sample quality with classifier guidance: a simple, compute-efficient method for trading off diversity for fidelity using gradients from a classifier. We achieve an FID of 2.97 on ImageNet 128$\\times$128, 4.59 on ImageNet 256$\\times$256, and 7.72 on ImageNet 512$\\times$512, and we match BigGAN-deep even with as few as 25 forward passes per sample, all while maintaining better coverage of the distribution. Finally, we find that classifier guidance combines well with upsampling diffusion models, further improving FID to 3.94 on ImageNet 256$\\times$256 and 3.85 on ImageNet 512$\\times$512. We release our code at https://github.com/openai/guided-diffusion",
+            "score": 3
+        },
+        {
+            "id": "22aab110058ebbd198edb1f1e7b4f69fb13c0613",
+            "paperId": "22aab110058ebbd198edb1f1e7b4f69fb13c0613",
+            "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+            "year": 2018,
+            "citationCount": 5481,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1809.11096, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "It is found that applying orthogonal regularization to the generator renders it amenable to a simple \"truncation trick,\" allowing fine control over the trade-off between sample fidelity and variety by reducing the variance of the Generator's input."
+            },
+            "authors": [
+                {
+                    "authorId": "2065040247",
+                    "name": "Andrew Brock"
+                },
+                {
+                    "authorId": "7408951",
+                    "name": "Jeff Donahue"
+                },
+                {
+                    "authorId": "34838386",
+                    "name": "K. Simonyan"
+                }
+            ],
+            "abstract": "Despite recent progress in generative image modeling, successfully generating high-resolution, diverse samples from complex datasets such as ImageNet remains an elusive goal. To this end, we train Generative Adversarial Networks at the largest scale yet attempted, and study the instabilities specific to such scale. We find that applying orthogonal regularization to the generator renders it amenable to a simple \"truncation trick,\" allowing fine control over the trade-off between sample fidelity and variety by reducing the variance of the Generator's input. Our modifications lead to models which set the new state of the art in class-conditional image synthesis. When trained on ImageNet at 128x128 resolution, our models (BigGANs) achieve an Inception Score (IS) of 166.5 and Frechet Inception Distance (FID) of 7.4, improving over the previous best IS of 52.52 and FID of 18.6.",
+            "score": 3
+        },
+        {
+            "id": "cc6fc3c546b354abf6a0aa3b553f28a6b812489f",
+            "paperId": "cc6fc3c546b354abf6a0aa3b553f28a6b812489f",
+            "title": "Improved Distribution Matching Distillation for Fast Image Synthesis",
+            "year": 2024,
+            "citationCount": 143,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.14867, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "DMD2 is introduced, a set of techniques that lift the regression loss and the need for expensive dataset construction and improve DMD training, and can generate megapixel images by distilling SDXL, demonstrating exceptional visual quality among few-step methods."
+            },
+            "authors": [
+                {
+                    "authorId": "2068568214",
+                    "name": "Tianwei Yin"
+                },
+                {
+                    "authorId": "2268761379",
+                    "name": "Michael Gharbi"
+                },
+                {
+                    "authorId": "2268818883",
+                    "name": "Taesung Park"
+                },
+                {
+                    "authorId": "2268806125",
+                    "name": "Richard Zhang"
+                },
+                {
+                    "authorId": "2268760396",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "2268759923",
+                    "name": "Fr\u00e9do Durand"
+                },
+                {
+                    "authorId": "2268759945",
+                    "name": "William T. Freeman"
+                }
+            ],
+            "abstract": "Recent approaches have shown promises distilling diffusion models into efficient one-step generators. Among them, Distribution Matching Distillation (DMD) produces one-step generators that match their teacher in distribution, without enforcing a one-to-one correspondence with the sampling trajectories of their teachers. However, to ensure stable training, DMD requires an additional regression loss computed using a large set of noise-image pairs generated by the teacher with many steps of a deterministic sampler. This is costly for large-scale text-to-image synthesis and limits the student's quality, tying it too closely to the teacher's original sampling paths. We introduce DMD2, a set of techniques that lift this limitation and improve DMD training. First, we eliminate the regression loss and the need for expensive dataset construction. We show that the resulting instability is due to the fake critic not estimating the distribution of generated samples accurately and propose a two time-scale update rule as a remedy. Second, we integrate a GAN loss into the distillation procedure, discriminating between generated samples and real images. This lets us train the student model on real data, mitigating the imperfect real score estimation from the teacher model, and enhancing quality. Lastly, we modify the training procedure to enable multi-step sampling. We identify and address the training-inference input mismatch problem in this setting, by simulating inference-time generator samples during training time. Taken together, our improvements set new benchmarks in one-step image generation, with FID scores of 1.28 on ImageNet-64x64 and 8.35 on zero-shot COCO 2014, surpassing the original teacher despite a 500X reduction in inference cost. Further, we show our approach can generate megapixel images by distilling SDXL, demonstrating exceptional visual quality among few-step methods.",
+            "score": 3
+        },
+        {
+            "id": "169fd6c457d99a21c32b6f23bbfd1e09a2513684",
+            "paperId": "169fd6c457d99a21c32b6f23bbfd1e09a2513684",
+            "title": "Relay Diffusion: Unifying diffusion process across resolutions for image synthesis",
+            "year": 2023,
+            "citationCount": 50,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.03350",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.03350, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Relay Diffusion Model (RDM) is presented, which transfers a low-resolution image or noise into an equivalent high-resolution one for diffusion model via blurring diffusion and block noise, and achieves state-of-the-art FID on CelebA-HQ and sFID on ImageNet 256."
+            },
+            "authors": [
+                {
+                    "authorId": "2238205354",
+                    "name": "Jiayan Teng"
+                },
+                {
+                    "authorId": "2163967642",
+                    "name": "Wendi Zheng"
+                },
+                {
+                    "authorId": "2055623340",
+                    "name": "Ming Ding"
+                },
+                {
+                    "authorId": "2105844599",
+                    "name": "Wenyi Hong"
+                },
+                {
+                    "authorId": "3383269",
+                    "name": "Jianqiao Wangni"
+                },
+                {
+                    "authorId": "2109506541",
+                    "name": "Zhuoyi Yang"
+                },
+                {
+                    "authorId": "2238207092",
+                    "name": "Jie Tang"
+                }
+            ],
+            "abstract": "Diffusion models achieved great success in image synthesis, but still face challenges in high-resolution generation. Through the lens of discrete cosine transformation, we find the main reason is that \\emph{the same noise level on a higher resolution results in a higher Signal-to-Noise Ratio in the frequency domain}. In this work, we present Relay Diffusion Model (RDM), which transfers a low-resolution image or noise into an equivalent high-resolution one for diffusion model via blurring diffusion and block noise. Therefore, the diffusion process can continue seamlessly in any new resolution or model without restarting from pure noise or low-resolution conditioning. RDM achieves state-of-the-art FID on CelebA-HQ and sFID on ImageNet 256$\\times$256, surpassing previous works such as ADM, LDM and DiT by a large margin. All the codes and checkpoints are open-sourced at \\url{https://github.com/THUDM/RelayDiffusion}.",
+            "score": 3
+        },
+        {
+            "id": "6d8601eddd073284ea56ecee042be0aa87823643",
+            "paperId": "6d8601eddd073284ea56ecee042be0aa87823643",
+            "title": "When, Why, and Which Pretrained GANs Are Useful?",
+            "year": 2022,
+            "citationCount": 22,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2202.08937, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "89005571",
+                    "name": "T. Grigoryev"
+                },
+                {
+                    "authorId": "74254200",
+                    "name": "A. Voynov"
+                },
+                {
+                    "authorId": "143743802",
+                    "name": "Artem Babenko"
+                }
+            ],
+            "abstract": "The literature has proposed several methods to finetune pretrained GANs on new datasets, which typically results in higher performance compared to training from scratch, especially in the limited-data regime. However, despite the apparent empirical benefits of GAN pretraining, its inner mechanisms were not analyzed in-depth, and understanding of its role is not entirely clear. Moreover, the essential practical details, e.g., selecting a proper pretrained GAN checkpoint, currently do not have rigorous grounding and are typically determined by trial and error. This work aims to dissect the process of GAN finetuning. First, we show that initializing the GAN training process by a pretrained checkpoint primarily affects the model's coverage rather than the fidelity of individual samples. Second, we explicitly describe how pretrained generators and discriminators contribute to the finetuning process and explain the previous evidence on the importance of pretraining both of them. Finally, as an immediate practical benefit of our analysis, we describe a simple recipe to choose an appropriate GAN checkpoint that is the most suitable for finetuning to a particular target task. Importantly, for most of the target tasks, Imagenet-pretrained GAN, despite having poor visual quality, appears to be an excellent starting point for finetuning, resembling the typical pretraining scenario of discriminative computer vision models.",
+            "score": 2
+        },
+        {
+            "id": "9194bebb54e91bbac8a7c7c1e12be9ff148d6428",
+            "paperId": "9194bebb54e91bbac8a7c7c1e12be9ff148d6428",
+            "title": "Third Time's the Charm? Image and Video Editing with StyleGAN3",
+            "year": 2022,
+            "citationCount": 72,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2201.13433, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1850630812",
+                    "name": "Yuval Alaluf"
+                },
+                {
+                    "authorId": "2819477",
+                    "name": "Or Patashnik"
+                },
+                {
+                    "authorId": "34815981",
+                    "name": "Zongze Wu"
+                },
+                {
+                    "authorId": "2151793491",
+                    "name": "Asif Zamir"
+                },
+                {
+                    "authorId": "2177801",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "70018371",
+                    "name": "D. Lischinski"
+                },
+                {
+                    "authorId": "1388323541",
+                    "name": "D. Cohen-Or"
+                }
+            ],
+            "abstract": "StyleGAN is arguably one of the most intriguing and well-studied generative models, demonstrating impressive performance in image generation, inversion, and manipulation. In this work, we explore the recent StyleGAN3 architecture, compare it to its predecessor, and investigate its unique advantages, as well as drawbacks. In particular, we demonstrate that while StyleGAN3 can be trained on unaligned data, one can still use aligned data for training, without hindering the ability to generate unaligned imagery. Next, our analysis of the disentanglement of the different latent spaces of StyleGAN3 indicates that the commonly used W/W+ spaces are more entangled than their StyleGAN2 counterparts, underscoring the benefits of using the StyleSpace for fine-grained editing. Considering image inversion, we observe that existing encoder-based techniques struggle when trained on unaligned data. We therefore propose an encoding scheme trained solely on aligned data, yet can still invert unaligned images. Finally, we introduce a novel video inversion and editing workflow that leverages the capabilities of a fine-tuned StyleGAN3 generator to reduce texture sticking and expand the field of view of the edited video.",
+            "score": 2
+        },
+        {
+            "id": "958cd33eb354d7f3d117767c2ff981614c940c8f",
+            "paperId": "958cd33eb354d7f3d117767c2ff981614c940c8f",
+            "title": "StyleMC: Multi-Channel Based Fast Text-Guided Image Generation and Manipulation",
+            "year": 2021,
+            "citationCount": 63,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2112.08493, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2145258020",
+                    "name": "Umut Kocasari"
+                },
+                {
+                    "authorId": "2145260636",
+                    "name": "Alara Dirik"
+                },
+                {
+                    "authorId": "34907481",
+                    "name": "Mert Tiftikci"
+                },
+                {
+                    "authorId": "3137679",
+                    "name": "Pinar Yanardag"
+                }
+            ],
+            "abstract": "Discovering meaningful directions in the latent space of GANs to manipulate semantic attributes typically requires large amounts of labeled data. Recent work aims to overcome this limitation by leveraging the power of Contrastive Language-Image Pre-training (CLIP), a joint text-image model. While promising, these methods require several hours of preprocessing or training to achieve the desired manipulations. In this paper, we present StyleMC, a fast and efficient method for text-driven image generation and manipulation. StyleMC uses a CLIP-based loss and an identity loss to manipulate images via a single text prompt without significantly affecting other attributes. Unlike prior work, StyleMC requires only a few seconds of training per text prompt to find stable global directions, does not require prompt engineering and can be used with any pre-trained StyleGAN2 model. We demonstrate the effectiveness of our method and compare it to state-of-the-art methods. Our code can be found at http://catlab-team.github.io/stylemc.",
+            "score": 2
+        },
+        {
+            "id": "d98f22eca403263a57018a160195950ebead3d33",
+            "paperId": "d98f22eca403263a57018a160195950ebead3d33",
+            "title": "EditGAN: High-Precision Semantic Image Editing",
+            "year": 2021,
+            "citationCount": 207,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2111.03186, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "18900686",
+                    "name": "Huan Ling"
+                },
+                {
+                    "authorId": "32113848",
+                    "name": "Karsten Kreis"
+                },
+                {
+                    "authorId": "2108864987",
+                    "name": "Daiqing Li"
+                },
+                {
+                    "authorId": "2128102197",
+                    "name": "Seung Wook Kim"
+                },
+                {
+                    "authorId": "143805211",
+                    "name": "A. Torralba"
+                },
+                {
+                    "authorId": "37895334",
+                    "name": "S. Fidler"
+                }
+            ],
+            "abstract": "Generative adversarial networks (GANs) have recently found applications in image editing. However, most GAN based image editing methods often require large scale datasets with semantic segmentation annotations for training, only provide high level control, or merely interpolate between different images. Here, we propose EditGAN, a novel method for high quality, high precision semantic image editing, allowing users to edit images by modifying their highly detailed part segmentation masks, e.g., drawing a new mask for the headlight of a car. EditGAN builds on a GAN framework that jointly models images and their semantic segmentations, requiring only a handful of labeled examples, making it a scalable tool for editing. Specifically, we embed an image into the GAN latent space and perform conditional latent code optimization according to the segmentation edit, which effectively also modifies the image. To amortize optimization, we find editing vectors in latent space that realize the edits. The framework allows us to learn an arbitrary number of editing vectors, which can then be directly applied on other images at interactive rates. We experimentally show that EditGAN can manipulate images with an unprecedented level of detail and freedom, while preserving full image quality.We can also easily combine multiple edits and perform plausible edits beyond EditGAN training data. We demonstrate EditGAN on a wide variety of image types and quantitatively outperform several previous editing methods on standard editing benchmark tasks.",
+            "score": 2
+        },
+        {
+            "id": "e27b881192cd14a04018c372352b12e531870fc1",
+            "paperId": "e27b881192cd14a04018c372352b12e531870fc1",
+            "title": "Pivotal Tuning for Latent-based Editing of Real Images",
+            "year": 2021,
+            "citationCount": 547,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2106.05744",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.05744, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2110687042",
+                    "name": "Daniel Roich"
+                },
+                {
+                    "authorId": "147940380",
+                    "name": "Ron Mokady"
+                },
+                {
+                    "authorId": "1755628",
+                    "name": "Amit H. Bermano"
+                },
+                {
+                    "authorId": "1388323541",
+                    "name": "D. Cohen-Or"
+                }
+            ],
+            "abstract": "Recently, numerous facial editing techniques have been proposed that leverage the generative power of a pretrained StyleGAN. To successfully edit an image this way, one must first project (or invert) the image into the pretrained generator\u2019s domain. As it turns out, StyleGAN\u2019s latent space induces an inherent tradeoff between distortion and editability, i.e., between maintaining the original appearance and convincingly altering its attributes. Hence, it remains challenging to apply ID-preserving edits to real facial images. In this article, we present an approach to bridge this gap. The idea is Pivotal Tuning\u2014a brief training process that preserves editing quality, while surgically changing the portrayed identity and appearance. In Pivotal Tuning Inversion, an initial inverted latent code serves as a pivot, around which the generator is fine-tuned. At the same time, a regularization term keeps nearby identities intact, to locally contain the effect. We further show that Pivotal Tuning also applies to accommodating for a multitude of faces, while introducing negligible distortion on the rest of the domain. We validate our technique through inversion and editing metrics and show preferable scores to state-of-the-art methods. Last, we present successful editing for harder cases, including elaborate make-up or headwear.",
+            "score": 2
+        },
+        {
+            "id": "8f9d1de9e1bd60783eb75fd80c42bf99ec67363a",
+            "paperId": "8f9d1de9e1bd60783eb75fd80c42bf99ec67363a",
+            "title": "Ensembling with Deep Generative Views",
+            "year": 2021,
+            "citationCount": 71,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2104.14551",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.14551, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "51322829",
+                    "name": "Lucy Chai"
+                },
+                {
+                    "authorId": "1922024303",
+                    "name": "Jun-Yan Zhu"
+                },
+                {
+                    "authorId": "2177801",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "2094770",
+                    "name": "Phillip Isola"
+                },
+                {
+                    "authorId": "2109976035",
+                    "name": "Richard Zhang"
+                }
+            ],
+            "abstract": "Recent generative models can synthesize \"views\" of artificial images that mimic real-world variations, such as changes in color or pose, simply by learning from unlabeled image collections. Here, we investigate whether such views can be applied to real images to benefit downstream analysis tasks such as image classification. Using a pre-trained generator, we first find the latent code corresponding to a given real input image. Applying perturbations to the code creates natural variations of the image, which can then be ensembled together at test-time. We use StyleGAN2 as the source of generative augmentations and investigate this setup on classification tasks involving facial attributes, cat faces, and cars. Critically, we find that several design decisions are required towards making this process work; the perturbation procedure, weighting between the augmentations and original image, and training the classifier on synthesized images can all impact the result. Currently, we find that while test-time ensembling with GAN-based augmentations can offer some small improvements, the remaining bottlenecks are the efficiency and accuracy of the GAN reconstructions, coupled with classifier sensitivities to artifacts in GAN-generated images.",
+            "score": 2
+        },
+        {
+            "id": "bc7e6165b00f0c39d40ca2c7a4eb33fcc0e3200d",
+            "paperId": "bc7e6165b00f0c39d40ca2c7a4eb33fcc0e3200d",
+            "title": "Image Super-Resolution via Iterative Refinement",
+            "year": 2021,
+            "citationCount": 1888,
+            "openAccessPdf": {
+                "url": "https://ieeexplore.ieee.org/ielx7/34/4359286/09887996.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.07636, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "51497543",
+                    "name": "Chitwan Saharia"
+                },
+                {
+                    "authorId": "2126278",
+                    "name": "Jonathan Ho"
+                },
+                {
+                    "authorId": "144333684",
+                    "name": "William Chan"
+                },
+                {
+                    "authorId": "2887364",
+                    "name": "Tim Salimans"
+                },
+                {
+                    "authorId": "1793739",
+                    "name": "David J. Fleet"
+                },
+                {
+                    "authorId": "144739074",
+                    "name": "Mohammad Norouzi"
+                }
+            ],
+            "abstract": "We present SR3, an approach to image Super-Resolution via Repeated Refinement. SR3 adapts denoising diffusion probabilistic models (Ho et al. 2020), (Sohl-Dickstein et al. 2015) to image-to-image translation, and performs super-resolution through a stochastic iterative denoising process. Output images are initialized with pure Gaussian noise and iteratively refined using a U-Net architecture that is trained on denoising at various noise levels, conditioned on a low-resolution input image. SR3 exhibits strong performance on super-resolution tasks at different magnification factors, on faces and natural images. We conduct human evaluation on a standard 8\u00d7 face super-resolution task on CelebA-HQ for which SR3 achieves a fool rate close to 50%, suggesting photo-realistic outputs, while GAN baselines do not exceed a fool rate of 34%. We evaluate SR3 on a 4\u00d7 super-resolution task on ImageNet, where SR3 outperforms baselines in human evaluation and classification accuracy of a ResNet-50 classifier trained on high-resolution images. We further show the effectiveness of SR3 in cascaded image generation, where a generative model is chained with super-resolution models to synthesize high-resolution images with competitive FID scores on the class-conditional 256\u00d7256 ImageNet generation challenge.",
+            "score": 2
+        },
+        {
+            "id": "44c0446bb53e951cca8df07af91f1dea96045aea",
+            "paperId": "44c0446bb53e951cca8df07af91f1dea96045aea",
+            "title": "ReStyle: A Residual-Based StyleGAN Encoder via Iterative Refinement",
+            "year": 2021,
+            "citationCount": 352,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2104.02699",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.02699, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1850630812",
+                    "name": "Yuval Alaluf"
+                },
+                {
+                    "authorId": "2819477",
+                    "name": "Or Patashnik"
+                },
+                {
+                    "authorId": "1388323541",
+                    "name": "D. Cohen-Or"
+                }
+            ],
+            "abstract": "Recently, the power of unconditional image synthesis has significantly advanced through the use of Generative Adversarial Networks (GANs). The task of inverting an image into its corresponding latent code of the trained GAN is of utmost importance as it allows for the manipulation of real images, leveraging the rich semantics learned by the network. Recognizing the limitations of current inversion approaches, in this work we present a novel inversion scheme that extends current encoder-based inversion methods by introducing an iterative refinement mechanism. Instead of directly predicting the latent code of a given real image using a single pass, the encoder is tasked with predicting a residual with respect to the current estimate of the inverted latent code in a self-correcting manner. Our residual-based encoder, named ReStyle, attains improved accuracy compared to current state-of-the-art encoder-based methods with a negligible increase in inference time. We analyze the behavior of ReStyle to gain valuable insights into its iterative nature. We then evaluate the performance of our residual encoder and analyze its robustness compared to optimization-based inversion and state-of-the-art encoders. Code is available via our project page: https: //yuval-alaluf.github.io/restyle-encoder/",
+            "score": 2
+        },
+        {
+            "id": "aaa99de83292370a964fcaa51e6e866a96726bb2",
+            "paperId": "aaa99de83292370a964fcaa51e6e866a96726bb2",
+            "title": "StyleCLIP: Text-Driven Manipulation of StyleGAN Imagery",
+            "year": 2021,
+            "citationCount": 1235,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2103.17249",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2103.17249, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2819477",
+                    "name": "Or Patashnik"
+                },
+                {
+                    "authorId": "34815981",
+                    "name": "Zongze Wu"
+                },
+                {
+                    "authorId": "2177801",
+                    "name": "Eli Shechtman"
+                },
+                {
+                    "authorId": "1388323541",
+                    "name": "D. Cohen-Or"
+                },
+                {
+                    "authorId": "70018371",
+                    "name": "D. Lischinski"
+                }
+            ],
+            "abstract": "Inspired by the ability of StyleGAN to generate highly realistic images in a variety of domains, much recent work has focused on understanding how to use the latent spaces of StyleGAN to manipulate generated and real images. However, discovering semantically meaningful latent manipulations typically involves painstaking human examination of the many degrees of freedom, or an annotated collection of images for each desired manipulation. In this work, we explore leveraging the power of recently introduced Contrastive Language-Image Pre-training (CLIP) models in order to develop a text-based interface for StyleGAN image manipulation that does not require such manual effort. We first introduce an optimization scheme that utilizes a CLIP-based loss to modify an input latent vector in response to a user-provided text prompt. Next, we describe a latent mapper that infers a text-guided latent manipulation step for a given input image, allowing faster and more stable text-based manipulation. Finally, we present a method for mapping text prompts to input-agnostic directions in StyleGAN\u2019s style space, enabling interactive text-driven image manipulation. Extensive results and comparisons demonstrate the effectiveness of our approaches.",
+            "score": 2
+        },
+        {
+            "id": "704f305591853a6e8575517ec1f7fe836f3b3255",
+            "paperId": "704f305591853a6e8575517ec1f7fe836f3b3255",
+            "title": "Controllable retinal image synthesis using conditional StyleGAN and latent space manipulation for improved diagnosis and grading of diabetic retinopathy",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.07422, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A framework for controllably generating high-fidelity and diverse DR fundus images and a novel, effective SeFa-based data augmentation strategy, helping the classifier focus on discriminative regions while ignoring redundant features are proposed."
+            },
+            "authors": [
+                {
+                    "authorId": "2320729693",
+                    "name": "Somayeh Pakdelmoez"
+                },
+                {
+                    "authorId": "2320725189",
+                    "name": "Saba Omidikia"
+                },
+                {
+                    "authorId": "2885289",
+                    "name": "S. Seyyedsalehi"
+                },
+                {
+                    "authorId": "2949234",
+                    "name": "Seyyede Zohreh Seyyedsalehi"
+                }
+            ],
+            "abstract": "Diabetic retinopathy (DR) is a consequence of diabetes mellitus characterized by vascular damage within the retinal tissue. Timely detection is paramount to mitigate the risk of vision loss. However, training robust grading models is hindered by a shortage of annotated data, particularly for severe cases. This paper proposes a framework for controllably generating high-fidelity and diverse DR fundus images, thereby improving classifier performance in DR grading and detection. We achieve comprehensive control over DR severity and visual features (optic disc, vessel structure, lesion areas) within generated images solely through a conditional StyleGAN, eliminating the need for feature masks or auxiliary networks. Specifically, leveraging the SeFa algorithm to identify meaningful semantics within the latent space, we manipulate the DR images generated conditionally on grades, further enhancing the dataset diversity. Additionally, we propose a novel, effective SeFa-based data augmentation strategy, helping the classifier focus on discriminative regions while ignoring redundant features. Using this approach, a ResNet50 model trained for DR detection achieves 98.09% accuracy, 99.44% specificity, 99.45% precision, and an F1-score of 98.09%. Moreover, incorporating synthetic images generated by conditional StyleGAN into ResNet50 training for DR grading yields 83.33% accuracy, a quadratic kappa score of 87.64%, 95.67% specificity, and 72.24% precision. Extensive experiments conducted on the APTOS 2019 dataset demonstrate the exceptional realism of the generated images and the superior performance of our classifier compared to recent studies.",
+            "score": 2
+        },
+        {
+            "id": "9b91b3031ea159e4964d18b2ce703168660ecf46",
+            "paperId": "9b91b3031ea159e4964d18b2ce703168660ecf46",
+            "title": "Scalable High-Resolution Pixel-Space Image Synthesis with Hourglass Diffusion Transformers",
+            "year": 2024,
+            "citationCount": 61,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2401.11605, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": null
+            },
+            "authors": [
+                {
+                    "authorId": "2280143905",
+                    "name": "Katherine Crowson"
+                },
+                {
+                    "authorId": "2273653312",
+                    "name": "Stefan Andreas Baumann"
+                },
+                {
+                    "authorId": "2280144333",
+                    "name": "Alex Birch"
+                },
+                {
+                    "authorId": "2280143099",
+                    "name": "Tanishq Mathew Abraham"
+                },
+                {
+                    "authorId": "2280145134",
+                    "name": "Daniel Z. Kaplan"
+                },
+                {
+                    "authorId": "2280144537",
+                    "name": "Enrico Shippole"
+                }
+            ],
+            "abstract": "We present the Hourglass Diffusion Transformer (HDiT), an image generative model that exhibits linear scaling with pixel count, supporting training at high-resolution (e.g. $1024 \\times 1024$) directly in pixel-space. Building on the Transformer architecture, which is known to scale to billions of parameters, it bridges the gap between the efficiency of convolutional U-Nets and the scalability of Transformers. HDiT trains successfully without typical high-resolution training techniques such as multiscale architectures, latent autoencoders or self-conditioning. We demonstrate that HDiT performs competitively with existing models on ImageNet $256^2$, and sets a new state-of-the-art for diffusion models on FFHQ-$1024^2$.",
+            "score": 2
+        },
+        {
+            "id": "1a47926f35211ba5aeeaff0e5d373d1f1e44f6d0",
+            "paperId": "1a47926f35211ba5aeeaff0e5d373d1f1e44f6d0",
+            "title": "Injecting 3D Perception of Controllable NeRF-GAN into StyleGAN for Editable Portrait Image Synthesis",
+            "year": 2022,
+            "citationCount": 25,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2207.10257",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2207.10257, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work introduces a novel 3D-aware GAN, SURF-GAN, which is capable of discovering semantic attributes during training and controlling them in an unsupervised manner, and injects the prior of SURf-GAN into StyleGAN to obtain a high-fidelity3D-controllable generator."
+            },
+            "authors": [
+                {
+                    "authorId": "2016481042",
+                    "name": "Jeong-gi Kwak"
+                },
+                {
+                    "authorId": "2111164052",
+                    "name": "Yuanming Li"
+                },
+                {
+                    "authorId": "2146861723",
+                    "name": "Dongsik Yoon"
+                },
+                {
+                    "authorId": "2145183568",
+                    "name": "Donghyeon Kim"
+                },
+                {
+                    "authorId": "2757702",
+                    "name": "D. Han"
+                },
+                {
+                    "authorId": "144878703",
+                    "name": "Hanseok Ko"
+                }
+            ],
+            "abstract": "Over the years, 2D GANs have achieved great successes in photorealistic portrait generation. However, they lack 3D understanding in the generation process, thus they suffer from multi-view inconsistency problem. To alleviate the issue, many 3D-aware GANs have been proposed and shown notable results, but 3D GANs struggle with editing semantic attributes. The controllability and interpretability of 3D GANs have not been much explored. In this work, we propose two solutions to overcome these weaknesses of 2D GANs and 3D-aware GANs. We first introduce a novel 3D-aware GAN, SURF-GAN, which is capable of discovering semantic attributes during training and controlling them in an unsupervised manner. After that, we inject the prior of SURF-GAN into StyleGAN to obtain a high-fidelity 3D-controllable generator. Unlike existing latent-based methods allowing implicit pose control, the proposed 3D-controllable StyleGAN enables explicit pose control over portrait generation. This distillation allows direct compatibility between 3D control and many StyleGAN-based techniques (e.g., inversion and stylization), and also brings an advantage in terms of computational resources. Our codes are available at https://github.com/jgkwak95/SURF-GAN.",
+            "score": 2
+        },
+        {
+            "id": "283a74f5f3cd53b3b087b2da77f67e43423e5289",
+            "paperId": "283a74f5f3cd53b3b087b2da77f67e43423e5289",
+            "title": "StyLandGAN: A StyleGAN based Landscape Image Synthesis using Depth-map",
+            "year": 2022,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2205.06611",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2205.06611, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel framework StyLandGAN is proposed, which synthesizes desired landscape images using a depth map which has higher expressive power and a '2-phase inference' pipeline which generates diverse depth maps and shifts local parts so that it can easily reflect user's intend."
+            },
+            "authors": [
+                {
+                    "authorId": "1876298072",
+                    "name": "Gun-Hee Lee"
+                },
+                {
+                    "authorId": "26906197",
+                    "name": "Jonghwa Yim"
+                },
+                {
+                    "authorId": "40865042",
+                    "name": "Chanran Kim"
+                },
+                {
+                    "authorId": "2117955134",
+                    "name": "Min-Jung Kim"
+                }
+            ],
+            "abstract": "Despite recent success in conditional image synthesis, prevalent input conditions such as semantics and edges are not clear enough to express `Linear (Ridges)' and `Planar (Scale)' representations. To address this problem, we propose a novel framework StyLandGAN, which synthesizes desired landscape images using a depth map which has higher expressive power. Our StyleLandGAN is extended from the unconditional generation model to accept input conditions. We also propose a '2-phase inference' pipeline which generates diverse depth maps and shifts local parts so that it can easily reflect user's intend. As a comparison, we modified the existing semantic image synthesis models to accept a depth map as well. Experimental results show that our method is superior to existing methods in quality, diversity, and depth-accuracy.",
+            "score": 2
+        },
+        {
+            "id": "bea8541268e34fbd550a390d2bce242f768d96b7",
+            "paperId": "bea8541268e34fbd550a390d2bce242f768d96b7",
+            "title": "Revisiting Non-Autoregressive Transformers for Efficient Image Synthesis",
+            "year": 2024,
+            "citationCount": 18,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2406.05478",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2406.05478, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper identifies the complexities in properly configuring non-autoregressive Transformers strategies and indicates the possible sub-optimality in existing heuristic-driven designs and proposes to go beyond existing methods by directly solving the optimal strategies in an automatic framework."
+            },
+            "authors": [
+                {
+                    "authorId": "1749325163",
+                    "name": "Zanlin Ni"
+                },
+                {
+                    "authorId": "2115664591",
+                    "name": "Yulin Wang"
+                },
+                {
+                    "authorId": "2308989020",
+                    "name": "Renping Zhou"
+                },
+                {
+                    "authorId": "2148900054",
+                    "name": "Jiayi Guo"
+                },
+                {
+                    "authorId": "92837695",
+                    "name": "Jinyi Hu"
+                },
+                {
+                    "authorId": "2305652650",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "2235964292",
+                    "name": "Shiji Song"
+                },
+                {
+                    "authorId": "1390925224",
+                    "name": "Yuan Yao"
+                },
+                {
+                    "authorId": "2292186450",
+                    "name": "Gao Huang"
+                }
+            ],
+            "abstract": "The field of image synthesis is currently flourishing due to the advancements in diffusion models. While diffusion models have been successful, their computational inten-sity has prompted the pursuit of more efficient alternatives. As a representative work, non-autoregressive Transformers (NATs) have been recognized for their rapid generation. However, a major drawback of these models is their in-ferior performance compared to diffusion models. In this paper, we aim to re-evaluate the full potential of NATs by revisiting the design of their training and inference strategies. Specifically, we identify the complexities in properly configuring these strategies and indicate the possible sub-optimality in existing heuristic-driven designs. Recognizing this, we propose to go beyond existing methods by directly solving the optimal strategies in an automatic framework. The resulting method, named AutoNAT, advances the performance boundaries of NATs notably, and is able to perform comparably with the latest diffusion models with a significantly reduced inference cost. The effectiveness of AutoNAT is comprehensively validated on four benchmark datasets, i.e., ImageNet-256 & 512, MS-COCO, and CC3M. Code and pretrained models will be available at htt P s: / /gi thub. com/LeapLabTHU/ImprovedNAT.",
+            "score": 2
+        },
+        {
+            "id": "24dfd76a4de22dea0bbf780997b9756c83eadec9",
+            "paperId": "24dfd76a4de22dea0bbf780997b9756c83eadec9",
+            "title": "Few-shot Semantic Image Synthesis Using StyleGAN Prior",
+            "year": 2021,
+            "citationCount": 9,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2103.14877, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper presents a training strategy that performs pseudo labeling of semantic masks using the StyleGAN prior that can synthesize high-quality images from not only dense semantic masks but also sparse inputs such as landmarks and scribbles."
+            },
+            "authors": [
+                {
+                    "authorId": "2420042",
+                    "name": "Yuki Endo"
+                },
+                {
+                    "authorId": "2504432",
+                    "name": "Yoshihiro Kanamori"
+                }
+            ],
+            "abstract": "This paper tackles a challenging problem of generating photorealistic images from semantic layouts in few-shot scenarios where annotated training pairs are hardly available but pixel-wise annotation is quite costly. We present a training strategy that performs pseudo labeling of semantic masks using the StyleGAN prior. Our key idea is to construct a simple mapping between the StyleGAN feature and each semantic class from a few examples of semantic masks. With such mappings, we can generate an unlimited number of pseudo semantic masks from random noise to train an encoder for controlling a pre-trained StyleGAN generator. Although the pseudo semantic masks might be too coarse for previous approaches that require pixel-aligned masks, our framework can synthesize high-quality images from not only dense semantic masks but also sparse inputs such as landmarks and scribbles. Qualitative and quantitative results with various datasets demonstrate improvement over previous approaches with respect to layout fidelity and visual quality in as few as one- or five-shot settings.",
+            "score": 2
+        },
+        {
+            "id": "9293ec0a9d2c8c400d9f8282c9681377a48178b4",
+            "paperId": "9293ec0a9d2c8c400d9f8282c9681377a48178b4",
+            "title": "AIComposer: Any Style and Content Image Composition via Feature Integration",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.20721, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Haowen Li"
+                },
+                {
+                    "authorId": "2374085746",
+                    "name": "Zhenfeng Fan"
+                },
+                {
+                    "authorId": "2375248991",
+                    "name": "Zhang Wen"
+                },
+                {
+                    "authorId": "2374086373",
+                    "name": "Zhengzhou Zhu"
+                },
+                {
+                    "authorId": "2374457067",
+                    "name": "Yunjin Li"
+                }
+            ],
+            "abstract": "Image composition has advanced significantly with large-scale pre-trained T2I diffusion models. Despite progress in same-domain composition, cross-domain composition remains under-explored. The main challenges are the stochastic nature of diffusion models and the style gap between input images, leading to failures and artifacts. Additionally, heavy reliance on text prompts limits practical applications. This paper presents the first cross-domain image composition method that does not require text prompts, allowing natural stylization and seamless compositions. Our method is efficient and robust, preserving the diffusion prior, as it involves minor steps for backward inversion and forward denoising without training the diffuser. Our method also uses a simple multilayer perceptron network to integrate CLIP features from foreground and background, manipulating diffusion with a local cross-attention strategy. It effectively preserves foreground content while enabling stable stylization without a pre-stylization network. Finally, we create a benchmark dataset with diverse contents and styles for fair evaluation, addressing the lack of testing datasets for cross-domain image composition. Our method outperforms state-of-the-art techniques in both qualitative and quantitative evaluations, significantly improving the LPIPS score by 30.5% and the CSD metric by 18.1%. We believe our method will advance future research and applications. Code and benchmark at https://github.com/sherlhw/AIComposer.",
+            "score": 1
+        },
+        {
+            "id": "914f9667a3538353d7521ce1aca29ee5475e9b1a",
+            "paperId": "914f9667a3538353d7521ce1aca29ee5475e9b1a",
+            "title": "Synthetic Scientific Image Generation with VAE, GAN, and Diffusion Model Architectures",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/jimaging11080252?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/jimaging11080252, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2267907323",
+                    "name": "Zineb Sordo"
+                },
+                {
+                    "authorId": "2271183137",
+                    "name": "Eric Chagnon"
+                },
+                {
+                    "authorId": "2336327611",
+                    "name": "Zixi Hu"
+                },
+                {
+                    "authorId": "2271179857",
+                    "name": "Jeffrey J. Donatelli"
+                },
+                {
+                    "authorId": "7688463",
+                    "name": "Peter F. Andeer"
+                },
+                {
+                    "authorId": "2284204423",
+                    "name": "Peter S. Nico"
+                },
+                {
+                    "authorId": "2266327633",
+                    "name": "Trent R. Northen"
+                },
+                {
+                    "authorId": "2276224795",
+                    "name": "Daniela Ushizima"
+                }
+            ],
+            "abstract": "Generative AI (genAI) has emerged as a powerful tool for synthesizing diverse and complex image data, offering new possibilities for scientific imaging applications. This review presents a comprehensive comparative analysis of leading generative architectures, ranging from Variational Autoencoders (VAEs) to Generative Adversarial Networks (GANs) on through to Diffusion Models, in the context of scientific image synthesis. We examine each model\u2019s foundational principles, recent architectural advancements, and practical trade-offs. Our evaluation, conducted on domain-specific datasets including microCT scans of rocks and composite fibers, as well as high-resolution images of plant roots, integrates both quantitative metrics (SSIM, LPIPS, FID, CLIPScore) and expert-driven qualitative assessments. Results show that GANs, particularly StyleGAN, produce images with high perceptual quality and structural coherence. Diffusion-based models for inpainting and image variation, such as DALL-E 2, delivered high realism and semantic alignment but generally struggled in balancing visual fidelity with scientific accuracy. Importantly, our findings reveal limitations of standard quantitative metrics in capturing scientific relevance, underscoring the need for domain-expert validation. We conclude by discussing key challenges such as model interpretability, computational cost, and verification protocols, and discuss future directions where generative AI can drive innovation in data augmentation, simulation, and hypothesis generation in scientific research.",
+            "score": 1
+        },
+        {
+            "id": "7b6eeb3d8a558016d5f6e54f3e90df07d5dd4023",
+            "paperId": "7b6eeb3d8a558016d5f6e54f3e90df07d5dd4023",
+            "title": "LatentStyleGAN: One-Shot Face Face Stylization Using GAN Inversion",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/ijsrem50374?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/ijsrem50374, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368025855",
+                    "name": "Maya Sai Gopala Krishna"
+                }
+            ],
+            "abstract": "Image stylization has become a prominent area in computer vision, enabling creative transformations of real-world photos into artistic formats like sketches and cartoons. This paper introduces StyleWeb, a web-based application that allows users to convert ordinary images into stylized outputs in real time. The system integrates two core approaches: sketch generation using traditional image processing techniques and cartoonization powered by a pre-trained AnimeGANv3 model converted into ONNX format for optimized performance. Developed using the Django framework, StyleWeb offers a secure and responsive backend for efficient image processing and delivery. Through a simple interface, users can upload images, choose a desired style, and receive processed results with minimal delay. The platform bridges modern deep learning methods with practical web deployment, providing an accessible solution for stylized image generation suitable for artists, educators, and casual users alike. StyleWeb showcases how AI-driven creativity can be brought to everyday applications through thoughtful system design and implementation.",
+            "score": 1
+        },
+        {
+            "id": "5f0d64f139cdfa9c1673ceaeb3dcad99db5d7b41",
+            "paperId": "5f0d64f139cdfa9c1673ceaeb3dcad99db5d7b41",
+            "title": "Artistic Font Style Transfer Based on Deep Convolutional Generative Adversarial Networks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1142/s012915642540779x?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1142/s012915642540779x, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373998569",
+                    "name": "Yang Jiang"
+                }
+            ],
+            "abstract": "Artistic font style transfer is a pivotal research domain within computational creativity, aligning seamlessly with the scope in Computer Science in exploring advanced machine learning applications. Traditional style transfer techniques, despite their successes, face challenges in capturing fine stylistic details, balancing content fidelity, and ensuring computational efficiency. Addressing these gaps, this study proposes an innovative approach leveraging Deep Convolutional Generative Adversarial Networks (DC-GANs) integrated with hierarchical feature decomposition, multi-scale style adaptation, and adaptive optimization strategies. The core methodology introduces a generative framework that disentangles content and style representations while utilizing a novel dual-space learning mechanism to enhance stylistic richness and precision. The adaptive style control strategy dynamically balances content-style trade-offs and ensures domain-specific regularization, enabling high-quality synthesis across diverse artistic styles. Experimental results demonstrate the superiority of the proposed method, achieving state-of-the-art performance in terms of perceptual quality, computational efficiency, and flexibility in style interpolation. This work not only advances the field of artistic font transformation but also lays a foundation for broader applications in computer-aided design and digital artistry.",
+            "score": 1
+        },
+        {
+            "id": "030f0ee82f4b713cb941497f50e9e6760c581f50",
+            "paperId": "030f0ee82f4b713cb941497f50e9e6760c581f50",
+            "title": "LangScene-X: Reconstruct Generalizable 3D Language-Embedded Scenes with TriMap Video Diffusion",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02813, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2273665760",
+                    "name": "Fangfu Liu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Hao Li"
+                },
+                {
+                    "authorId": "2353268970",
+                    "name": "Jiawei Chi"
+                },
+                {
+                    "authorId": "2291393860",
+                    "name": "Hanyang Wang"
+                },
+                {
+                    "authorId": "2372357382",
+                    "name": "Minghui Yang"
+                },
+                {
+                    "authorId": "2336579213",
+                    "name": "Fudong Wang"
+                },
+                {
+                    "authorId": "2274036307",
+                    "name": "Yueqi Duan"
+                }
+            ],
+            "abstract": "Recovering 3D structures with open-vocabulary scene understanding from 2D images is a fundamental but daunting task. Recent developments have achieved this by performing per-scene optimization with embedded language information. However, they heavily rely on the calibrated dense-view reconstruction paradigm, thereby suffering from severe rendering artifacts and implausible semantic synthesis when limited views are available. In this paper, we introduce a novel generative framework, coined LangScene-X, to unify and generate 3D consistent multi-modality information for reconstruction and understanding. Powered by the generative capability of creating more consistent novel observations, we can build generalizable 3D language-embedded scenes from only sparse views. Specifically, we first train a TriMap video diffusion model that can generate appearance (RGBs), geometry (normals), and semantics (segmentation maps) from sparse inputs through progressive knowledge integration. Furthermore, we propose a Language Quantized Compressor (LQC), trained on large-scale image datasets, to efficiently encode language embeddings, enabling cross-scene generalization without per-scene retraining. Finally, we reconstruct the language surface fields by aligning language information onto the surface of 3D scenes, enabling open-ended language queries. Extensive experiments on real-world data demonstrate the superiority of our LangScene-X over state-of-the-art methods in terms of quality and generalizability. Project Page: https://liuff19.github.io/LangScene-X.",
+            "score": 1
+        },
+        {
+            "id": "f646f8db3db66ac45585771bcf8e92e0ac127547",
+            "paperId": "f646f8db3db66ac45585771bcf8e92e0ac127547",
+            "title": "LACONIC: A 3D Layout Adapter for Controllable Image Creation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.03257, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2323373064",
+                    "name": "L'eopold Maillard"
+                },
+                {
+                    "authorId": "2323374784",
+                    "name": "Tom Durand"
+                },
+                {
+                    "authorId": "2238455575",
+                    "name": "Adrien Ramanana Rahary"
+                },
+                {
+                    "authorId": "1690177",
+                    "name": "M. Ovsjanikov"
+                }
+            ],
+            "abstract": "Existing generative approaches for guided image synthesis of multi-object scenes typically rely on 2D controls in the image or text space. As a result, these methods struggle to maintain and respect consistent three-dimensional geometric structure, underlying the scene. In this paper, we propose a novel conditioning approach, training method and adapter network that can be plugged into pretrained text-to-image diffusion models. Our approach provides a way to endow such models with 3D-awareness, while leveraging their rich prior knowledge. Our method supports camera control, conditioning on explicit 3D geometries and, for the first time, accounts for the entire context of a scene, i.e., both on and off-screen items, to synthesize plausible and semantically rich images. Despite its multi-modal nature, our model is lightweight, requires a reasonable number of data for supervised learning and shows remarkable generalization power. We also introduce methods for intuitive and consistent image editing and restyling, e.g., by positioning, rotating or resizing individual objects in a scene. Our method integrates well within various image creation workflows and enables a richer set of applications compared to previous approaches.",
+            "score": 1
+        },
+        {
+            "id": "654572f31e51bad219ceffbefd73c4b8b7b618bd",
+            "paperId": "654572f31e51bad219ceffbefd73c4b8b7b618bd",
+            "title": "RichControl: Structure- and Appearance-Rich Training-Free Spatial Control for Text-to-Image Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.02792, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372296857",
+                    "name": "Liheng Zhang"
+                },
+                {
+                    "authorId": "2372254865",
+                    "name": "Lexi Pang"
+                },
+                {
+                    "authorId": "2305525491",
+                    "name": "Hang Ye"
+                },
+                {
+                    "authorId": "2136501721",
+                    "name": "Xiaoxuan Ma"
+                },
+                {
+                    "authorId": "2305557417",
+                    "name": "Yizhou Wang"
+                }
+            ],
+            "abstract": "Text-to-image (T2I) diffusion models have shown remarkable success in generating high-quality images from text prompts. Recent efforts extend these models to incorporate conditional images (e.g., depth or pose maps) for fine-grained spatial control. Among them, feature injection methods have emerged as a training-free alternative to traditional fine-tuning approaches. However, they often suffer from structural misalignment, condition leakage, and visual artifacts, especially when the condition image diverges significantly from natural RGB distributions. By revisiting existing methods, we identify a core limitation: the synchronous injection of condition features fails to account for the trade-off between domain alignment and structural preservation during denoising. Inspired by this observation, we propose a flexible feature injection framework that decouples the injection timestep from the denoising process. At its core is a structure-rich injection module, which enables the model to better adapt to the evolving interplay between alignment and structure preservation throughout the diffusion steps, resulting in more faithful structural generation. In addition, we introduce appearance-rich prompting and a restart refinement strategy to further enhance appearance control and visual quality. Together, these designs enable training-free generation that is both structure-rich and appearance-rich. Extensive experiments show that our approach achieves state-of-the-art performance across diverse zero-shot conditioning scenarios.",
+            "score": 1
+        },
+        {
+            "id": "5c7c30114c0d9f685a305969f951dc26042a1606",
+            "paperId": "5c7c30114c0d9f685a305969f951dc26042a1606",
+            "title": "SeqTex: Generate Mesh Textures in Video Sequence",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.04285, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Ze Yuan"
+                },
+                {
+                    "authorId": "2373736128",
+                    "name": "Xin Yu"
+                },
+                {
+                    "authorId": "2371476170",
+                    "name": "Yang-Tian Sun"
+                },
+                {
+                    "authorId": "2326725881",
+                    "name": "Yuan-Chen Guo"
+                },
+                {
+                    "authorId": "2330274209",
+                    "name": "Yan-Pei Cao"
+                },
+                {
+                    "authorId": "2273647142",
+                    "name": "Ding Liang"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xiaojuan Qi"
+                }
+            ],
+            "abstract": "Training native 3D texture generative models remains a fundamental yet challenging problem, largely due to the limited availability of large-scale, high-quality 3D texture datasets. This scarcity hinders generalization to real-world scenarios. To address this, most existing methods finetune foundation image generative models to exploit their learned visual priors. However, these approaches typically generate only multi-view images and rely on post-processing to produce UV texture maps -- an essential representation in modern graphics pipelines. Such two-stage pipelines often suffer from error accumulation and spatial inconsistencies across the 3D surface. In this paper, we introduce SeqTex, a novel end-to-end framework that leverages the visual knowledge encoded in pretrained video foundation models to directly generate complete UV texture maps. Unlike previous methods that model the distribution of UV textures in isolation, SeqTex reformulates the task as a sequence generation problem, enabling the model to learn the joint distribution of multi-view renderings and UV textures. This design effectively transfers the consistent image-space priors from video foundation models into the UV domain. To further enhance performance, we propose several architectural innovations: a decoupled multi-view and UV branch design, geometry-informed attention to guide cross-domain feature alignment, and adaptive token resolution to preserve fine texture details while maintaining computational efficiency. Together, these components allow SeqTex to fully utilize pretrained video priors and synthesize high-fidelity UV texture maps without the need for post-processing. Extensive experiments show that SeqTex achieves state-of-the-art performance on both image-conditioned and text-conditioned 3D texture generation tasks, with superior 3D consistency, texture-geometry alignment, and real-world generalization.",
+            "score": 1
+        },
+        {
+            "id": "69cda728e05f333d9a7e793d7a7c4cc1bf3dca7f",
+            "paperId": "69cda728e05f333d9a7e793d7a7c4cc1bf3dca7f",
+            "title": "Dataset Condensation with Color Compensation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01139, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375070538",
+                    "name": "Huyu Wu"
+                },
+                {
+                    "authorId": "2301064350",
+                    "name": "Duo Su"
+                },
+                {
+                    "authorId": "2302134929",
+                    "name": "Junjie Hou"
+                },
+                {
+                    "authorId": "2375098411",
+                    "name": "Guang Li"
+                }
+            ],
+            "abstract": "Dataset condensation always faces a constitutive trade-off: balancing performance and fidelity under extreme compression. Existing methods struggle with two bottlenecks: image-level selection methods (Coreset Selection, Dataset Quantization) suffer from inefficiency condensation, while pixel-level optimization (Dataset Distillation) introduces semantic distortion due to over-parameterization. With empirical observations, we find that a critical problem in dataset condensation is the oversight of color's dual role as an information carrier and a basic semantic representation unit. We argue that improving the colorfulness of condensed images is beneficial for representation learning. Motivated by this, we propose DC3: a Dataset Condensation framework with Color Compensation. After a calibrated selection strategy, DC3 utilizes the latent diffusion model to enhance the color diversity of an image rather than creating a brand-new one. Extensive experiments demonstrate the superior performance and generalization of DC3 that outperforms SOTA methods across multiple benchmarks. To the best of our knowledge, besides focusing on downstream tasks, DC3 is the first research to fine-tune pre-trained diffusion models with condensed datasets. The FID results prove that training networks with our high-quality datasets is feasible without model collapse or other degradation issues. Code and generated data will be released soon.",
+            "score": 1
+        },
+        {
+            "id": "349a7739c6e0a97f1becaa683bf0ab78cff21c21",
+            "paperId": "349a7739c6e0a97f1becaa683bf0ab78cff21c21",
+            "title": "Style Composition within Distinct LoRA modules for Traditional Art",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11986, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372476733",
+                    "name": "Jaehyun Lee"
+                },
+                {
+                    "authorId": "2237805902",
+                    "name": "Wonhark Park"
+                },
+                {
+                    "authorId": "2237802303",
+                    "name": "Wonsik Shin"
+                },
+                {
+                    "authorId": "2278847261",
+                    "name": "Hyunho Lee"
+                },
+                {
+                    "authorId": "2372719789",
+                    "name": "Hyoung Min Na"
+                },
+                {
+                    "authorId": "101880623",
+                    "name": "N. Kwak"
+                }
+            ],
+            "abstract": "Diffusion-based text-to-image models have achieved remarkable results in synthesizing diverse images from text prompts and can capture specific artistic styles via style personalization. However, their entangled latent space and lack of smooth interpolation make it difficult to apply distinct painting techniques in a controlled, regional manner, often causing one style to dominate. To overcome this, we propose a zero-shot diffusion pipeline that naturally blends multiple styles by performing style composition on the denoised latents predicted during the flow-matching denoising process of separately trained, style-specialized models. We leverage the fact that lower-noise latents carry stronger stylistic information and fuse them across heterogeneous diffusion pipelines using spatial masks, enabling precise, region-specific style control. This mechanism preserves the fidelity of each individual style while allowing user-guided mixing. Furthermore, to ensure structural coherence across different models, we incorporate depth-map conditioning via ControlNet into the diffusion framework. Qualitative and quantitative experiments demonstrate that our method successfully achieves region-specific style mixing according to the given masks.",
+            "score": 1
+        },
+        {
+            "id": "05a7a39ef34343f38749aadf3122881876f05830",
+            "paperId": "05a7a39ef34343f38749aadf3122881876f05830",
+            "title": "Generating Synthetic Invoices via Layout-Preserving Content Replacement",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.03754, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375046187",
+                    "name": "V. Bevin"
+                },
+                {
+                    "authorId": "2375047008",
+                    "name": "V. AnanthakrishnanP"
+                },
+                {
+                    "authorId": "2375046654",
+                    "name": "KR Ragesh"
+                },
+                {
+                    "authorId": "2375048235",
+                    "name": "M. Sanjay"
+                },
+                {
+                    "authorId": "2375046360",
+                    "name": "S. Vineeth"
+                },
+                {
+                    "authorId": "2375059310",
+                    "name": "Bibin Wilson"
+                }
+            ],
+            "abstract": "The performance of machine learning models for automated invoice processing is critically dependent on large-scale, diverse datasets. However, the acquisition of such datasets is often constrained by privacy regulations and the high cost of manual annotation. To address this, we present a novel pipeline for generating high-fidelity, synthetic invoice documents and their corresponding structured data. Our method first utilizes Optical Character Recognition (OCR) to extract the text content and precise spatial layout from a source invoice. Select data fields are then replaced with contextually realistic, synthetic content generated by a large language model (LLM). Finally, we employ an inpainting technique to erase the original text from the image and render the new, synthetic text in its place, preserving the exact layout and font characteristics. This process yields a pair of outputs: a visually realistic new invoice image and a perfectly aligned structured data file (JSON) reflecting the synthetic content. Our approach provides a scalable and automated solution to amplify small, private datasets, enabling the creation of large, varied corpora for training more robust and accurate document intelligence models.",
+            "score": 1
+        },
+        {
+            "id": "e583c94d1afef01027ab40b8f222db5816699cc1",
+            "paperId": "e583c94d1afef01027ab40b8f222db5816699cc1",
+            "title": "GPT-IMAGE-EDIT-1.5M: A Million-Scale, GPT-Generated Image Dataset",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.21033, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2353384836",
+                    "name": "Yuhan Wang"
+                },
+                {
+                    "authorId": "2284185238",
+                    "name": "Siwei Yang"
+                },
+                {
+                    "authorId": "2239378815",
+                    "name": "Bingchen Zhao"
+                },
+                {
+                    "authorId": "2256393322",
+                    "name": "Letian Zhang"
+                },
+                {
+                    "authorId": "2305753935",
+                    "name": "Qing Liu"
+                },
+                {
+                    "authorId": "2363408686",
+                    "name": "Yuyin Zhou"
+                },
+                {
+                    "authorId": "2239227247",
+                    "name": "Cihang Xie"
+                }
+            ],
+            "abstract": "Recent advancements in large multimodal models like GPT-4o have set a new standard for high-fidelity, instruction-guided image editing. However, the proprietary nature of these models and their training data creates a significant barrier for open-source research. To bridge this gap, we introduce GPT-IMAGE-EDIT-1.5M, a publicly available, large-scale image-editing corpus containing more than 1.5 million high-quality triplets (instruction, source image, edited image). We systematically construct this dataset by leveraging the versatile capabilities of GPT-4o to unify and refine three popular image-editing datasets: OmniEdit, HQ-Edit, and UltraEdit. Specifically, our methodology involves 1) regenerating output images to enhance visual quality and instruction alignment, and 2) selectively rewriting prompts to improve semantic clarity. To validate the efficacy of our dataset, we fine-tune advanced open-source models on GPT-IMAGE-EDIT-1.5M. The empirical results are exciting, e.g., the fine-tuned FluxKontext achieves highly competitive performance across a comprehensive suite of benchmarks, including 7.24 on GEdit-EN, 3.80 on ImgEdit-Full, and 8.78 on Complex-Edit, showing stronger instruction following and higher perceptual quality while maintaining identity. These scores markedly exceed all previously published open-source methods and substantially narrow the gap to leading proprietary models. We hope the full release of GPT-IMAGE-EDIT-1.5M can help to catalyze further open research in instruction-guided image editing.",
+            "score": 1
+        },
+        {
+            "id": "6a3c982c0072281ae70b7deaa5a6df709b9b4714",
+            "paperId": "6a3c982c0072281ae70b7deaa5a6df709b9b4714",
+            "title": "High-resolution image inpainting using a probabilistic framework for diverse images with large arbitrary masks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12290406, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373454301",
+                    "name": "Zitong Yu"
+                },
+                {
+                    "authorId": "2374309538",
+                    "name": "Shuo Ye"
+                },
+                {
+                    "authorId": "2283501700",
+                    "name": "G. Sumathi"
+                },
+                {
+                    "authorId": "2331584249",
+                    "name": "M. Uma"
+                }
+            ],
+            "abstract": "Addressing inpainting challenges in high-resolution images remains a complex task. The most recent image inpainting techniques rely on machine learning models; however, a major limitation of supervised methods is their dependence on end-to-end training. Even minor changes to the input often necessitate retraining, making the process inefficient. As a result, unsupervised learning approaches have gained prominence in image inpainting. State-of-the-art methods, particularly those using generative adversarial networks (GANs), have achieved promising results. However, generating photorealistic outputs for high-resolution images with arbitrary large-region masks remains difficult. Inpainted images often suffer from deformed structures and blurry textures, compromising quality. Additionally, building a model capable of handling a diverse range of images presents further challenges. These challenges are addressed by proposing a novel probabilistic model that utilizes picture priors to learn prominent features within StyleGAN3. The priors are constructed using cosine similarity, mean, and intensity, where intensity is computed using the improved Papoulis\u2013Gerchberg algorithm. The image is reconstructed using the probabilistic maximum a posteriori estimate. Variational inference is then applied to obtain the optimal solution using a modified Bayes-by-Backprop approach. The model is evaluated on 70,000 images from the Flickr-Faces-HQ, DIV2K, and brain datasets and surpasses state-of-the-art techniques in reconstruction quality.",
+            "score": 1
+        },
+        {
+            "id": "673faf9ef5382001595a5ed25476dd79fb20a5b0",
+            "paperId": "673faf9ef5382001595a5ed25476dd79fb20a5b0",
+            "title": "Wafer Defect Image Generation Method Based on Improved Styleganv3 Network",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/mi16080844?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/mi16080844, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Jialin Zou"
+                },
+                {
+                    "authorId": "2247827239",
+                    "name": "Hongcheng Wang"
+                },
+                {
+                    "authorId": "2374431351",
+                    "name": "Jiajin Zhong"
+                }
+            ],
+            "abstract": "This paper takes a look at training a generator model based on a limited dataset that can fit the distribution of the original dataset, improving the reconstruction ability of wafer datasets. High-fidelity wafer defect image generation remains challenging due to limited real data and poor physical authenticity of existing methods. We propose an enhanced StyleGANv3 framework with two key innovations: (1) a Heterogeneous Kernel Fusion Unit (HKFU) enabling multi-scale defect feature refinement via spatiotemporal attention and dynamic gating; (2) a Dynamic Adaptive Attention Module (DAAM) adaptively boosting discriminator sensitivity. Experiments on Mixtype-WM38 and MIR-WM811K datasets demonstrate state-of-the-art performance, achieving FID scores of 25.20 and 28.70 alongside SDS values of 36.00 and 35.45. The proposed method in this article helps alleviate the problem of limited datasets and makes an important contribution to data preparation for downstream classification and detection tasks.",
+            "score": 1
+        },
+        {
+            "id": "21abec4140c514ea0f906980c077ace1d5aa40c3",
+            "paperId": "21abec4140c514ea0f906980c077ace1d5aa40c3",
+            "title": "TanDiT: Tangent-Plane Diffusion Transformer for High-Quality 360{\\deg} Panorama Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21681, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373444322",
+                    "name": "Hakan cCapuk"
+                },
+                {
+                    "authorId": null,
+                    "name": "Andrew Bond"
+                },
+                {
+                    "authorId": "2331512300",
+                    "name": "Muhammed Burak Kizil"
+                },
+                {
+                    "authorId": "2373439894",
+                    "name": "Emir Goccen"
+                },
+                {
+                    "authorId": "152330322",
+                    "name": "Erkut Erdem"
+                },
+                {
+                    "authorId": "2253752451",
+                    "name": "Aykut Erdem"
+                }
+            ],
+            "abstract": "Recent advances in image generation have led to remarkable improvements in synthesizing perspective images. However, these models still struggle with panoramic image generation due to unique challenges, including varying levels of geometric distortion and the requirement for seamless loop-consistency. To address these issues while leveraging the strengths of the existing models, we introduce TanDiT, a method that synthesizes panoramic scenes by generating grids of tangent-plane images covering the entire 360$^\\circ$ view. Unlike previous methods relying on multiple diffusion branches, TanDiT utilizes a unified diffusion model trained to produce these tangent-plane images simultaneously within a single denoising iteration. Furthermore, we propose a model-agnostic post-processing step specifically designed to enhance global coherence across the generated panoramas. To accurately assess panoramic image quality, we also present two specialized metrics, TangentIS and TangentFID, and provide a comprehensive benchmark comprising captioned panoramic datasets and standardized evaluation scripts. Extensive experiments demonstrate that our method generalizes effectively beyond its training data, robustly interprets detailed and complex text prompts, and seamlessly integrates with various generative models to yield high-quality, diverse panoramic images.",
+            "score": 1
+        },
+        {
+            "id": "e673966539c880ee0dac0525ae3fadfd328c7939",
+            "paperId": "e673966539c880ee0dac0525ae3fadfd328c7939",
+            "title": "Text-To-Image Generator Using Deeping Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.55041/isjem04863?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.55041/isjem04863, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373861868",
+                    "name": "A.TWINKLE Vanishree"
+                },
+                {
+                    "authorId": "2372027001",
+                    "name": "Pinnamraju T S Priya"
+                }
+            ],
+            "abstract": "Text-to-image generation is a transformative field in artificial intelligence that focuses on synthesizing realistic images from natural language descriptions. This paper explores the integration of diffusion models and transformer-based architectures to achieve high-quality, semantically aligned image generation from textual prompts. Diffusion models, known for their superior generative capabilities, gradually transform noise into images through a learned denoising process. Meanwhile, transformers, particularly pre-trained language and vision-language models like CLIP, are employed to understand and encode textual semantics into meaningful embeddings. By conditioning the diffusion process on these embeddings, the system generates images that accurately reflect the input text. This combination has led to significant advancements in image quality, diversity, and text-image alignment, as demonstrated by state-of-the-art systems such as DALL\u00b7E 2, Imagen, and Stable Diffusion. The study presents an in-depth overview of the underlying architecture, training methodology, and real-world applications, highlighting the potential of these models in creative design, digital content generation, and human-computer interaction.\n\nIndex Terms:\u00a0 Text-to-Image Generation, Django, Hugging Face API, AI-generated image, Digital Art, Creative Assistant, User-Friendly UI.",
+            "score": 1
+        },
+        {
+            "id": "1835aab7b125911a9299b424c4b50f84843f5b7e",
+            "paperId": "1835aab7b125911a9299b424c4b50f84843f5b7e",
+            "title": "Advancing Multimodal LLMs by Large-Scale 3D Visual Instruction Dataset Generation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.08513, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2311605355",
+                    "name": "Liu He"
+                },
+                {
+                    "authorId": "2372870380",
+                    "name": "Xiao Zeng"
+                },
+                {
+                    "authorId": "2340114123",
+                    "name": "Yizhi Song"
+                },
+                {
+                    "authorId": "2294783998",
+                    "name": "Albert Y. C. Chen"
+                },
+                {
+                    "authorId": "2365398930",
+                    "name": "Lu Xia"
+                },
+                {
+                    "authorId": "2372040016",
+                    "name": "Shashwat Verma"
+                },
+                {
+                    "authorId": "2356357404",
+                    "name": "Sankalp Dayal"
+                },
+                {
+                    "authorId": "2362365417",
+                    "name": "Min Sun"
+                },
+                {
+                    "authorId": "2259972955",
+                    "name": "Cheng-Hao Kuo"
+                },
+                {
+                    "authorId": "2311500736",
+                    "name": "Daniel G. Aliaga"
+                }
+            ],
+            "abstract": "Multimodal Large Language Models (MLLMs) struggle with accurately capturing camera-object relations, especially for object orientation, camera viewpoint, and camera shots. This stems from the fact that existing MLLMs are trained on images with limited diverse camera-object relations and corresponding textual descriptions. To address this, we propose a synthetic generation pipeline to create large-scale 3D visual instruction datasets. Our framework takes 3D assets as input and uses rendering and diffusion-based image generation models to create photorealistic images preserving precise camera-object relations. Additionally, large language models (LLMs) are used to generate text prompts for guiding visual instruction tuning and controlling image generation. We create Ultimate3D, a dataset of 240K VQAs with precise camera-object annotations, and corresponding benchmark. MLLMs fine-tuned on our proposed dataset outperform commercial models by a large margin, achieving an average accuracy improvement of 33.4% on camera-object relation recognition tasks. Our code, dataset, and benchmark will contribute to broad MLLM applications.",
+            "score": 1
+        },
+        {
+            "id": "531584653c918c2963c69d92de7b106b7bad6538",
+            "paperId": "531584653c918c2963c69d92de7b106b7bad6538",
+            "title": "SCALAR: Scale-wise Controllable Visual Autoregressive Learning",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19946, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Ryan Xu"
+                },
+                {
+                    "authorId": "2373608151",
+                    "name": "Dongyang Jin"
+                },
+                {
+                    "authorId": "2349393705",
+                    "name": "Yancheng Bai"
+                },
+                {
+                    "authorId": "2359272531",
+                    "name": "Rui Lan"
+                },
+                {
+                    "authorId": "2360271730",
+                    "name": "Xu Duan"
+                },
+                {
+                    "authorId": "2349398734",
+                    "name": "Lei Sun"
+                },
+                {
+                    "authorId": "2349447896",
+                    "name": "Xiangxiang Chu"
+                }
+            ],
+            "abstract": "Controllable image synthesis, which enables fine-grained control over generated outputs, has emerged as a key focus in visual generative modeling. However, controllable generation remains challenging for Visual Autoregressive (VAR) models due to their hierarchical, next-scale prediction style. Existing VAR-based methods often suffer from inefficient control encoding and disruptive injection mechanisms that compromise both fidelity and efficiency. In this work, we present SCALAR, a controllable generation method based on VAR, incorporating a novel Scale-wise Conditional Decoding mechanism. SCALAR leverages a pretrained image encoder to extract semantic control signal encodings, which are projected into scale-specific representations and injected into the corresponding layers of the VAR backbone. This design provides persistent and structurally aligned guidance throughout the generation process. Building on SCALAR, we develop SCALAR-Uni, a unified extension that aligns multiple control modalities into a shared latent space, supporting flexible multi-conditional guidance in a single model. Extensive experiments show that SCALAR achieves superior generation quality and control precision across various tasks.",
+            "score": 1
+        },
+        {
+            "id": "cfa6574d46a68048822b1e27d6aa107f2efe39a1",
+            "paperId": "cfa6574d46a68048822b1e27d6aa107f2efe39a1",
+            "title": "Learning and Generation of Drawing Sequences Using a Deep Network for a Drawing Support System",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/app15137038?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/app15137038, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Homari Matsumoto"
+                },
+                {
+                    "authorId": "2368465644",
+                    "name": "Atomu Nakamura"
+                },
+                {
+                    "authorId": "2368464805",
+                    "name": "Shun Nishide"
+                }
+            ],
+            "abstract": "With rapid advances in image-generative AI, interest has grown in applying these technologies across diverse domains. While current models excel at producing high-quality final images, they rarely model the intermediate stages of the drawing process. This study proposes a drawing support system that leverages generative AI to sequentially generate and modify images during the drawing process. To train the system, we constructed a custom dataset of time-series drawing images, which are typically unavailable in existing AI models. We developed an encoder\u2013decoder model based on convolutional neural networks to predict the next frame from a current input image. To address error accumulation during recursive generation, we introduced a noise-augmented training method, incorporating noisy images into the dataset. Experimental results show that standard training suffers from image degradation over time, while the noise-augmented approach significantly improves stability and quality throughout the sequence. Averaged across all generated frames, the noise-augmented training achieved a PSNR of 20.48, SSIM of 0.81, and LPIPS of 0.13. As a benchmark, we compared this approach to PredRNN, a representative temporal model, which achieved a PSNR of 24.05, SSIM of 0.88, and LPIPS of 0.08. These results demonstrate the effectiveness of noise-augmented learning while also highlighting potential performance gains using temporal architectures. PredRNN also required more computation, with 6.41 M parameters and a 0.188 s inference time per sequence, compared to 5.20 M and 0.005 s for our model. Furthermore, in a sample-level analysis of 10 final images, the proposed model outperformed PredRNN in three cases across all metrics, suggesting its robustness in certain sequences despite architectural simplicity. Future directions include using more advanced models such as Variational Autoencoders and diffusion models, and enhancing consistency in long-term sequences. Our work confirms the feasibility of generating interactive drawing sequences using AI and sets the foundation for more robust and creative drawing support tools.",
+            "score": 1
+        },
+        {
+            "id": "00aa82d1fb6acafa3e750efd970935af79ebe1fd",
+            "paperId": "00aa82d1fb6acafa3e750efd970935af79ebe1fd",
+            "title": "Do Self-Supervised and Supervised Methods Learn Similar Visual Representations?",
+            "year": 2021,
+            "citationCount": 27,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2110.00528, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2130464692",
+                    "name": "Tom George Grigg"
+                },
+                {
+                    "authorId": "46254693",
+                    "name": "Dan Busbridge"
+                },
+                {
+                    "authorId": "16092809",
+                    "name": "Jason Ramapuram"
+                },
+                {
+                    "authorId": "51138986",
+                    "name": "Russ Webb"
+                }
+            ],
+            "abstract": "Despite the success of a number of recent techniques for visual self-supervised deep learning, there has been limited investigation into the representations that are ultimately learned. By leveraging recent advances in the comparison of neural representations, we explore in this direction by comparing a contrastive self-supervised algorithm to supervision for simple image data in a common architecture. We find that the methods learn similar intermediate representations through dissimilar means, and that the representations diverge rapidly in the final few layers. We investigate this divergence, finding that these layers strongly fit to their distinct learning objectives. We also find that the contrastive objective implicitly fits the supervised objective in intermediate layers, but that the reverse is not true. Our work particularly highlights the importance of the learned intermediate representations, and raises critical questions for auxiliary task design.",
+            "score": 1
+        },
+        {
+            "id": "7a9a708ca61c14886aa0dcd6d13dac7879713f5f",
+            "paperId": "7a9a708ca61c14886aa0dcd6d13dac7879713f5f",
+            "title": "SwinIR: Image Restoration Using Swin Transformer",
+            "year": 2021,
+            "citationCount": 3115,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2108.10257",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2108.10257, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145270228",
+                    "name": "Jingyun Liang"
+                },
+                {
+                    "authorId": "2109811424",
+                    "name": "Jie Cao"
+                },
+                {
+                    "authorId": "15839174",
+                    "name": "Guolei Sun"
+                },
+                {
+                    "authorId": "144110274",
+                    "name": "K. Zhang"
+                },
+                {
+                    "authorId": "1681236",
+                    "name": "L. Gool"
+                },
+                {
+                    "authorId": "1732855",
+                    "name": "R. Timofte"
+                }
+            ],
+            "abstract": "Image restoration is a long-standing low-level vision problem that aims to restore high-quality images from low-quality images (e.g., downscaled, noisy and compressed images). While state-of-the-art image restoration methods are based on convolutional neural networks, few attempts have been made with Transformers which show impressive performance on high-level vision tasks. In this paper, we propose a strong baseline model SwinIR for image restoration based on the Swin Transformer. SwinIR consists of three parts: shallow feature extraction, deep feature extraction and high-quality image reconstruction. In particular, the deep feature extraction module is composed of several residual Swin Transformer blocks (RSTB), each of which has several Swin Transformer layers together with a residual connection. We conduct experiments on three representative tasks: image super-resolution (including classical, lightweight and real-world image super-resolution), image denoising (including grayscale and color image denoising) and JPEG compression artifact reduction. Experimental results demonstrate that SwinIR outperforms state-of-the-art methods on different tasks by up to 0.14\u223c0.45dB, while the total number of parameters can be reduced by up to 67%.",
+            "score": 1
+        },
+        {
+            "id": "39b492db00faead70bc3f4fb4b0364d94398ffdb",
+            "paperId": "39b492db00faead70bc3f4fb4b0364d94398ffdb",
+            "title": "Do Vision Transformers See Like Convolutional Neural Networks?",
+            "year": 2021,
+            "citationCount": 993,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2108.08810, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "40297238",
+                    "name": "M. Raghu"
+                },
+                {
+                    "authorId": "2465270",
+                    "name": "Thomas Unterthiner"
+                },
+                {
+                    "authorId": "40464924",
+                    "name": "Simon Kornblith"
+                },
+                {
+                    "authorId": "2145179541",
+                    "name": "Chiyuan Zhang"
+                },
+                {
+                    "authorId": "2841331",
+                    "name": "Alexey Dosovitskiy"
+                }
+            ],
+            "abstract": "Convolutional neural networks (CNNs) have so far been the de-facto model for visual data. Recent work has shown that (Vision) Transformer models (ViT) can achieve comparable or even superior performance on image classification tasks. This raises a central question: how are Vision Transformers solving these tasks? Are they acting like convolutional networks, or learning entirely different visual representations? Analyzing the internal representation structure of ViTs and CNNs on image classification benchmarks, we find striking differences between the two architectures, such as ViT having more uniform representations across all layers. We explore how these differences arise, finding crucial roles played by self-attention, which enables early aggregation of global information, and ViT residual connections, which strongly propagate features from lower to higher layers. We study the ramifications for spatial localization, demonstrating ViTs successfully preserve input spatial information, with noticeable effects from different classification methods. Finally, we study the effect of (pretraining) dataset scale on intermediate features and transfer learning, and conclude with a discussion on connections to new architectures such as the MLP-Mixer.",
+            "score": 1
+        },
+        {
+            "id": "95f5bafba97beb9b4f8c1fe607f04ec28efab7f9",
+            "paperId": "95f5bafba97beb9b4f8c1fe607f04ec28efab7f9",
+            "title": "Learning to Efficiently Sample from Diffusion Probabilistic Models",
+            "year": 2021,
+            "citationCount": 140,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.03802, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2065080158",
+                    "name": "Daniel Watson"
+                },
+                {
+                    "authorId": "2126278",
+                    "name": "Jonathan Ho"
+                },
+                {
+                    "authorId": "144739074",
+                    "name": "Mohammad Norouzi"
+                },
+                {
+                    "authorId": "144333684",
+                    "name": "William Chan"
+                }
+            ],
+            "abstract": "Denoising Diffusion Probabilistic Models (DDPMs) have emerged as a powerful family of generative models that can yield high-fidelity samples and competitive log-likelihoods across a range of domains, including image and speech synthesis. Key advantages of DDPMs include ease of training, in contrast to generative adversarial networks, and speed of generation, in contrast to autoregressive models. However, DDPMs typically require hundreds-to-thousands of steps to generate a high fidelity sample, making them prohibitively expensive for high dimensional problems. Fortunately, DDPMs allow trading generation speed for sample quality through adjusting the number of refinement steps as a post process. Prior work has been successful in improving generation speed through handcrafting the time schedule by trial and error. We instead view the selection of the inference time schedules as an optimization problem, and introduce an exact dynamic programming algorithm that finds the optimal discrete time schedules for any pre-trained DDPM. Our method exploits the fact that ELBO can be decomposed into separate KL terms, and given any computation budget, discovers the time schedule that maximizes the training ELBO exactly. Our method is efficient, has no hyper-parameters of its own, and can be applied to any pre-trained DDPM with no retraining. We discover inference time schedules requiring as few as 32 refinement steps, while sacrificing less than 0.1 bits per dimension compared to the default 4,000 steps used on ImageNet 64x64 [Ho et al., 2020; Nichol and Dhariwal, 2021].",
+            "score": 1
+        },
+        {
+            "id": "2841a41690bfbdeb552b845a85c3b76d586084ae",
+            "paperId": "2841a41690bfbdeb552b845a85c3b76d586084ae",
+            "title": "The Intrinsic Dimension of Images and Its Impact on Learning",
+            "year": 2021,
+            "citationCount": 281,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2104.08894, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "105000868",
+                    "name": "Phillip E. Pope"
+                },
+                {
+                    "authorId": "1431754650",
+                    "name": "Chen Zhu"
+                },
+                {
+                    "authorId": "1661064623",
+                    "name": "Ahmed Abdelkader"
+                },
+                {
+                    "authorId": "121592562",
+                    "name": "Micah Goldblum"
+                },
+                {
+                    "authorId": "1962083",
+                    "name": "T. Goldstein"
+                }
+            ],
+            "abstract": "It is widely believed that natural image data exhibits low-dimensional structure despite the high dimensionality of conventional pixel representations. This idea underlies a common intuition for the remarkable success of deep learning in computer vision. In this work, we apply dimension estimation tools to popular datasets and investigate the role of low-dimensional structure in deep learning. We find that common natural image datasets indeed have very low intrinsic dimension relative to the high number of pixels in the images. Additionally, we find that low dimensional datasets are easier for neural networks to learn, and models solving these tasks generalize better from training to test data. Along the way, we develop a technique for validating our dimension estimation tools on synthetic data generated by GANs allowing us to actively manipulate the intrinsic dimension by controlling the image generation process. Code for our experiments may be found here https://github.com/ppope/dimensions.",
+            "score": 1
+        },
+        {
+            "id": "f620f6c60c38de1851bcaaf33f095835e4edf27a",
+            "paperId": "f620f6c60c38de1851bcaaf33f095835e4edf27a",
+            "title": "2S-ODIS: Two-Stage Omni-Directional Image Synthesis by Geometric Distortion Correction",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.09969, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel omni-directional image synthesis method, 2S-ODIS (Two-Stage Omni-Directional Image Synthesis), which generated high-quality omni-directional images but drastically reduced the training time, by utilizing the VQGAN (Vector Quantized GAN) model pre-trained on a large-scale NFoV image database such as ImageNet without fine-tuning."
+            },
+            "authors": [
+                {
+                    "authorId": "2242563443",
+                    "name": "Atsuya Nakata"
+                },
+                {
+                    "authorId": "2321405637",
+                    "name": "Takao Yamanaka"
+                }
+            ],
+            "abstract": "Omni-directional images have been increasingly used in various applications, including virtual reality and SNS (Social Networking Services). However, their availability is comparatively limited in contrast to normal field of view (NFoV) images, since specialized cameras are required to take omni-directional images. Consequently, several methods have been proposed based on generative adversarial networks (GAN) to synthesize omni-directional images, but these approaches have shown difficulties in training of the models, due to instability and/or significant time consumption in the training. To address these problems, this paper proposes a novel omni-directional image synthesis method, 2S-ODIS (Two-Stage Omni-Directional Image Synthesis), which generated high-quality omni-directional images but drastically reduced the training time. This was realized by utilizing the VQGAN (Vector Quantized GAN) model pre-trained on a large-scale NFoV image database such as ImageNet without fine-tuning. Since this pre-trained model does not represent distortions of omni-directional images in the equi-rectangular projection (ERP), it cannot be applied directly to the omni-directional image synthesis in ERP. Therefore, two-stage structure was adopted to first create a global coarse image in ERP and then refine the image by integrating multiple local NFoV images in the higher resolution to compensate the distortions in ERP, both of which are based on the pre-trained VQGAN model. As a result, the proposed method, 2S-ODIS, achieved the reduction of the training time from 14 days in OmniDreamer to four days in higher image quality.",
+            "score": 1
+        },
+        {
+            "id": "d232190a7f7bf4bcdd6d1956823159d1cd6a51b4",
+            "paperId": "d232190a7f7bf4bcdd6d1956823159d1cd6a51b4",
+            "title": "From Text to Canvas: Unleashing the Artistry of GAN-Driven Image Synthesis",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICITEICS61368.2024.10625170?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICITEICS61368.2024.10625170, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This research investigates the accuracy and loss metrics of many text-to-image synthesis models, such as VQGAN+CLIP, BigGAN, StyleGAN, SR3, Imagen, and Glide to discover their ability to develop high-quality images from textual descriptions."
+            },
+            "authors": [
+                {
+                    "authorId": "2302591609",
+                    "name": "Vijay Madaan"
+                },
+                {
+                    "authorId": "2258983626",
+                    "name": "Neha Sharma"
+                },
+                {
+                    "authorId": "2237854942",
+                    "name": "Rahul Chauhan"
+                },
+                {
+                    "authorId": "2078898440",
+                    "name": "Akanksha Kapruwan"
+                }
+            ],
+            "abstract": "This research investigates the accuracy and loss metrics of many text-to-image synthesis models, such as VQGAN+CLIP, BigGAN, StyleGAN, SR3, Imagen, and Glide. We aim to study these models to discover their ability to develop high-quality images from textual descriptions. Models with a 95% classification accuracy or greater exhibit significant semantic coherence between text and visuals, indicating their potential to effectively depict the intended information. Thoroughly analyzing these metrics reveals important information about the strengths, weaknesses, and ways to enhance models for text-to-image synthesis. Research and development efforts in the field of text-to-image synthesis models are advanced by these discoveries. They serve as a roadmap for future efforts to improve these models' performance in a variety of contexts, such as multimedia synthesis, content development, and creative design. Words such as SR3, Image, Accuracy, Glide, Model evaluation, Performance metrics, Computational efficiency, and Semantic coherence are used in the index.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.10334700000000001
+}

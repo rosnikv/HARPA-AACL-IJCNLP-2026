@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>5471114e37448bea2457b74894b1ecb92bbcfdf6</p>
+<hr>
+<section><h2>Title</h2>
+<p>Bias-Aware Contrastive Learning for Fair Media Bias Detection in Language Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current language models struggle to consistently detect and classify media bias across different demographic groups and topics, leading to unfair treatment in hate speech and misinformation detection. This inconsistency can result in biased outcomes, potentially amplifying societal inequalities and undermining the effectiveness of content moderation systems.</p>
+<h3>Motivation</h3>
+<p>Existing methods often rely on supervised fine-tuning on labeled datasets or prompt engineering for zero-shot classification, which may not generalize well across diverse contexts and can perpetuate biases present in training data. Recent advances in contrastive learning and adversarial training inspire our novel approach to make language models more robust and fair in detecting media bias. By leveraging synthetic data generation and adversarial techniques, we aim to create a model that can identify bias while remaining invariant to specific demographic attributes.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Bias-Aware Contrastive Learning (BACL), a two-stage training process. First, we generate a large corpus of synthetic biased and unbiased text pairs using a diverse set of demographic attributes and topics. We then train the model using a contrastive loss that encourages it to distinguish between biased and unbiased versions of the same content. To ensure fairness, we incorporate an adversarial component that penalizes the model for relying too heavily on specific demographic attributes when making bias predictions. This is achieved by training a separate adversarial classifier to predict the demographic attributes from the model's internal representations, and adding a gradient reversal layer to discourage the main model from learning these spurious correlations. Additionally, we introduce a novel 'bias swapping' data augmentation technique, where we automatically transform biased text to target different demographic groups, forcing the model to focus on the underlying bias rather than specific group associations.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use GPT-4 to generate a synthetic dataset of 10,000 text pairs (biased and unbiased versions) covering various topics and demographic attributes. Ensure diversity in topics (e.g., politics, sports, entertainment) and demographic attributes (e.g., race, gender, age, religion). Use prompts like: 'Generate a biased news headline about [TOPIC] targeting [DEMOGRAPHIC]. Now rewrite it as an unbiased version.'</p><p><strong>Step 2: Model Selection</strong></p><p>Choose BERT-base-uncased as the base model for fine-tuning. We'll use the Hugging Face Transformers library for implementation.</p><p><strong>Step 3: Implement BACL</strong></p><p>a) Contrastive Learning: Implement a contrastive loss function that maximizes the similarity between the embeddings of a text and its unbiased version while minimizing similarity with other samples. b) Adversarial Component: Implement an adversarial classifier that tries to predict demographic attributes from the model's representations. Use a gradient reversal layer to make the main model invariant to these attributes. c) Bias Swapping: Implement a function that takes a biased text and swaps demographic attributes to create additional training samples.</p><p><strong>Step 4: Training</strong></p><p>Train the model using the BACL approach. Use 80% of the synthetic data for training and 20% for validation. Monitor the contrastive loss and the adversarial classifier's performance during training.</p><p><strong>Step 5: Evaluation</strong></p><p>Evaluate the model on existing media bias datasets such as MBIC and BABE, as well as on hate speech detection benchmarks like HateXplain. Compare against baselines including fine-tuned BERT and RoBERTa models, as well as few-shot prompting with GPT-3.5 and GPT-4. Metrics to use: accuracy, F1-score, and demographic parity difference (to measure fairness across groups).</p><p><strong>Step 6: Ablation Studies</strong></p><p>Conduct ablation studies to quantify the impact of each component of BACL: a) Train without the adversarial component. b) Train without bias swapping. c) Train with different sizes of synthetic data.</p><p><strong>Step 7: Analysis</strong></p><p>Analyze the model's performance across different demographic groups and topics. Use techniques like LIME or SHAP to interpret the model's decisions and ensure it's not relying on spurious correlations.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Fine-tuned BERT)</strong></p><p>Immigrants are flooding into our country, taking jobs from hardworking citizens.</p><p><strong>Baseline Prompt Expected Output (Fine-tuned BERT)</strong></p><p>Biased</p><p><strong>Baseline Prompt Input (Few-shot GPT-4)</strong></p><p>Classify the following statement as biased or unbiased: 'Women are too emotional to be effective leaders in high-stress situations.'</p><p><strong>Baseline Prompt Expected Output (Few-shot GPT-4)</strong></p><p>Biased</p><p><strong>Proposed Prompt Input (BACL)</strong></p><p>Young people these days are lazy and entitled, always expecting handouts.</p><p><strong>Proposed Prompt Expected Output (BACL)</strong></p><p>Biased (with confidence score and explanation: 'This statement makes a sweeping generalization about an entire age group, using negative stereotypes without factual basis.')</p><p><strong>Explanation</strong></p><p>While both baselines can identify obvious bias, BACL provides a more nuanced understanding by offering confidence scores and explanations. It's also designed to be more consistent across different demographic groups, which we would demonstrate through multiple examples targeting various groups.</p>
+<h3>Fallback Plan</h3>
+<p>If BACL doesn't significantly outperform baselines, we can pivot to an analysis paper exploring the challenges of fair bias detection. We would conduct a thorough error analysis to understand where and why the model fails, particularly focusing on differences across demographic groups. We could also explore the quality and diversity of our synthetic data, analyzing how different prompting strategies for data generation affect model performance. Additionally, we might investigate how the model's performance varies with the subtlety of bias, creating a spectrum from obvious to very subtle biases and analyzing performance across this spectrum. This could provide valuable insights into the limitations of current approaches and guide future research directions in fair AI for content moderation.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/eed651fccf53b1ba5f93a8aeb819808b1c1720ed" target="_blank">MAGPIE: Multi-Task Analysis of Media-Bias Generalization with Pre-Trained Identification of Expressions</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6e2e48ea6bdf5ed01c067e154c4bd1b212c7ca39" target="_blank">IndiTag: An Online Media Bias Analysis and Annotation System Using Fine-Grained Bias Indicators</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/44a322995fee92b592ee1a9c08a1221a3edc400c" target="_blank">Detection of Conspiracy Theories Beyond Keyword Bias in German-Language Telegram Using Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/37aae94e2105f1c1db5e00804ce10ff6876e0aa2" target="_blank">CEA-LIST at CheckThat! 2025: Evaluating LLMs as Detectors of Bias and Opinion in Text</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5da5c2c910c9b566959c337f647af92ffc3f36da" target="_blank">Is External Information Useful for Stance Detection with LLMs?</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b95de885eac4000b98449afc4c69c86972693bc2" target="_blank">ChatGPT v.s. Media Bias: A Comparative Study of GPT-3.5 and Fine-tuned Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0fd73d32176189f7980847206a9d797c3b0f4e1d" target="_blank">Investigating Bias in LLM-Based Bias Detection: Disparities between LLMs and Human Perception</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8a36bde6c15a2dc06079a0fb41a4be35be4ef51b" target="_blank">IndiVec: An Exploration of Leveraging Large Language Models for Media Bias Detection with Fine-Grained Bias Indicators</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/14ba788bf3b55ddcb515aad2deb45c6a4422e473" target="_blank">ROBBIE: Robust Bias Evaluation of Large Generative Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2b45f31315ac29bead83431f1f22206f2719ef32" target="_blank">Ceasefire at FIGNEWS 2024 Shared Task: Automated Detection and Annotation of Media Bias Using Large Language Models</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

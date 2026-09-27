@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7c1707db9aafd209aa93db3251e7ebd593d55876</p>
+<hr>
+<section><h2>Title</h2>
+<p>Calibrated Sampling for Zero-Shot Fact Verification: Leveraging WikiBio Data to Improve LLM Factual Accuracy</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing fact verification methods for large language models (LLMs) often rely on labeled training data or external knowledge bases, limiting their applicability in zero-resource settings. This research aims to develop a novel approach that improves fact verification without requiring labeled data or external resources, making it suitable for zero-shot scenarios.</p>
+<h3>Motivation</h3>
+<p>Current approaches typically use retrieval-augmented generation or fine-tuning on labeled datasets, which are not suitable for zero-shot scenarios. By leveraging the inherent knowledge within LLMs and the structured nature of WikiBio data, we can develop a sampling-based method that improves fact verification without requiring labeled data or external resources. This approach is inspired by the idea that LLMs can generate plausible variations of biographical facts, which can be used to create a probability distribution over possible facts and assess the likelihood of a given claim.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Calibrated Sampling for Zero-Shot Fact Verification (CSZFV), which uses WikiBio data to generate multiple plausible variations of biographical facts. For a given claim, CSZFV prompts the LLM to generate N alternative versions of the claim, each with slight variations in entities, dates, or other factual details. These variations are then used to create a probability distribution over possible facts. The LLM is then prompted to rate the likelihood of each variation, including the original claim. By comparing the likelihood of the original claim to the distribution of generated alternatives, we can assess its factual accuracy. To calibrate this process, we use a small set of known true and false claims from WikiBio to adjust the decision threshold dynamically. This calibration step helps account for the LLM's inherent biases and improves the reliability of the fact-checking process.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Extract a diverse set of biographical claims from the WikiBio dataset. Create a test set of 1000 claims, with 500 true claims directly from WikiBio and 500 false claims by introducing errors in the true claims (e.g., changing dates, names, or locations).</p><p><strong>Step 2: Implement CSZFV</strong></p><p>a) Develop a prompt template for generating N alternative versions of a given claim. Example prompt: 'Generate {N} alternative versions of the following biographical claim, each with slight variations in entities, dates, or other factual details: {claim}'<br />
+b) Create a prompt template for rating the likelihood of each variation. Example prompt: 'Rate the likelihood of the following biographical claim on a scale of 1 to 10, where 1 is extremely unlikely and 10 is extremely likely: {claim}'<br />
+c) Implement the calibration process using a small set of 100 known true and 100 known false claims from WikiBio.</p><p><strong>Step 3: Baseline Implementation</strong></p><p>Implement two zero-shot baselines: a) Direct prompting: Ask the LLM to classify the claim as true or false. Example prompt: 'Is the following biographical claim true or false? {claim}'<br />
+b) Chain-of-thought reasoning: Ask the LLM to reason about the claim before classifying it. Example prompt: 'Consider the following biographical claim: {claim}. Reason step-by-step about its plausibility, then classify it as true or false.'</p><p><strong>Step 4: Model Selection</strong></p><p>Use GPT-3.5 (text-davinci-003) and GPT-4 from the OpenAI API for all experiments.</p><p><strong>Step 5: Experiment Execution</strong></p><p>a) For each claim in the test set, run the CSZFV method with N=5, 10, and 20 alternative versions.<br />
+b) Run the two baseline methods on the same test set.<br />
+c) For CSZFV, experiment with different decision thresholds based on the calibration process.</p><p><strong>Step 6: Evaluation</strong></p><p>a) Calculate precision, recall, and F1 scores for CSZFV and the baselines.<br />
+b) Analyze the impact of N (number of alternative versions) on performance.<br />
+c) Evaluate the effectiveness of the calibration process by comparing results with and without calibration.</p><p><strong>Step 7: Error Analysis</strong></p><p>Manually review a sample of 100 misclassified claims to identify patterns in errors and potential areas for improvement.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Direct Prompting)</strong></p><p>Is the following biographical claim true or false? Albert Einstein was born in Ulm, Germany in 1879.</p><p><strong>Baseline Prompt Expected Output (Direct Prompting)</strong></p><p>True</p><p><strong>Baseline Prompt Input (Chain-of-Thought Prompting)</strong></p><p>Consider the following biographical claim: Albert Einstein was born in Ulm, Germany in 1879. Reason step-by-step about its plausibility, then classify it as true or false.</p><p><strong>Baseline Prompt Expected Output (Chain-of-Thought Prompting)</strong></p><p>Step 1: Albert Einstein is a well-known historical figure, so information about his birth is likely to be accurate and widely available.<br />
+Step 2: Ulm is a city in Germany, which aligns with Einstein's known German heritage.<br />
+Step 3: The year 1879 falls within the expected time frame for Einstein's birth, considering his known lifespan and career.<br />
+Step 4: This information matches widely accepted historical records about Einstein's birth.<br />
+Conclusion: Based on these steps, the claim appears to be true.</p><p><strong>Proposed Prompt Input (CSZFV; Step 1: Generate Alternatives)</strong></p><p>Generate 5 alternative versions of the following biographical claim, each with slight variations in entities, dates, or other factual details: Albert Einstein was born in Ulm, Germany in 1879.</p><p><strong>Proposed Prompt Expected Output (CSZFV; Step 1: Generate Alternatives)</strong></p><ol>
+<li>Albert Einstein was born in Munich, Germany in 1879.</li>
+<li>Albert Einstein was born in Ulm, Germany in 1880.</li>
+<li>Albert Einstein was born in Ulm, Austria in 1879.</li>
+<li>Albert Einstein was born in Ulm, Germany in 1878.</li>
+<li>Albert Einstein was born in Stuttgart, Germany in 1879.</li>
+</ol><p><strong>Proposed Prompt Input (CSZFV; Step 2: Rate Likelihoods)</strong></p><p>Rate the likelihood of the following biographical claims on a scale of 1 to 10, where 1 is extremely unlikely and 10 is extremely likely:<br />
+1. Albert Einstein was born in Ulm, Germany in 1879.<br />
+2. Albert Einstein was born in Munich, Germany in 1879.<br />
+3. Albert Einstein was born in Ulm, Germany in 1880.<br />
+4. Albert Einstein was born in Ulm, Austria in 1879.<br />
+5. Albert Einstein was born in Ulm, Germany in 1878.<br />
+6. Albert Einstein was born in Stuttgart, Germany in 1879.</p><p><strong>Proposed Prompt Expected Output (CSZFV; Step 2: Rate Likelihoods)</strong></p><ol>
+<li>10</li>
+<li>6</li>
+<li>8</li>
+<li>3</li>
+<li>7</li>
+<li>5</li>
+</ol><p><strong>explanation</strong></p><p>CSZFV generates plausible variations of the claim and assesses their likelihoods, allowing for a more nuanced evaluation of the original claim's factuality. This approach leverages the LLM's inherent knowledge without relying on external resources, potentially leading to more accurate fact verification in zero-shot settings.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed CSZFV method does not significantly outperform the baselines, we can explore several alternative directions. First, we could analyze the generated alternative claims to understand if they are sufficiently diverse and relevant. If not, we might need to refine our prompting strategy to encourage more meaningful variations. Second, we could investigate the likelihood ratings to see if they are consistent and informative. If the LLM struggles to differentiate between true and false claims, we might need to explore different prompting techniques for the rating step. Additionally, we could turn this into an analysis paper by conducting a thorough investigation of how LLMs generate and evaluate factual claims in zero-shot settings. This could involve examining the types of errors made by different models, the impact of claim complexity on verification accuracy, and the potential biases in the models' factual knowledge. Finally, we could explore combining CSZFV with lightweight retrieval methods, using the generated alternatives as queries to improve fact verification without full-scale retrieval-augmented generation.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/72cf69817d3836103db7263000fbf87395def6eb" target="_blank">FActBench: A Benchmark for Fine-grained Automatic Evaluation of LLM-Generated Text in the Medical Domain</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b321b31298ae20b5ef66f3c74d8a4f5b11635d26" target="_blank">Robust Claim Verification Through Fact Detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a5cd606537a666e4807f1c9d342cfeb2b71c4a34" target="_blank">Are Large Language Models Table-based Fact-Checkers?</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/3cebb93c399db7e1434741338b0a24db19786b15" target="_blank">Prompt to be Consistent is Better than Self-Consistent? Few-Shot and Zero-Shot Fact Verification with Pre-trained Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/47c9f319a0d1dcc018a2cd3d63f9acbe678eaf46" target="_blank">Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4917d60c82ce041afad1b63887d49d0062031f66" target="_blank">Zero-Shot Fact Verification via Natural Logic and Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/02721d09a2d9d10872f45ff6d7a6bc429aca3522" target="_blank">The Missing Parts: Augmenting Fact Verification with Half-Truth Detection</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d33ec996f8d845577db941f906df4056314c6e3" target="_blank">Connecting the Dots Between Fact Verification and Fake News Detection</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/44e9c292c3a23bb250fde91b0b2fc3a3a6c3e745" target="_blank">Transforming relation extraction into fact verification utilizing large language models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7e8cfd4aabb155a07156b7d5099ccc4f54bf610a" target="_blank">ClimateViz: A Benchmark for Statistical Reasoning and Fact Verification on Scientific Charts</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

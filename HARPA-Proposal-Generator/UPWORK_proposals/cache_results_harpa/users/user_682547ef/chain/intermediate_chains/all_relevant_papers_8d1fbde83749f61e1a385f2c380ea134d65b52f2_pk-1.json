@@ -1,0 +1,29 @@
+[
+    {
+        "paperId": "2e6fb965aff683fd6afe29c18523b4776442009a",
+        "title": "Incremental Object Detection with CLIP",
+        "abstract": "In contrast to the incremental classification task, the incremental detection task is characterized by the presence of data ambiguity, as an image may have differently labeled bounding boxes across multiple continuous learning stages. This phenomenon often impairs the model's ability to effectively learn new classes. However, existing research has paid less attention to the forward compatibility of the model, which limits its suitability for incremental learning. To overcome this obstacle, we propose leveraging a visual-language model such as CLIP to generate text feature embeddings for different class sets, which enhances the feature space globally. We then employ super-classes to replace the unavailable novel classes in the early learning stage to simulate the incremental scenario. Finally, we utilize the CLIP image encoder to accurately identify potential objects. We incorporate the finely recognized detection boxes as pseudo-annotations into the training process, thereby further improving the detection performance. We evaluate our approach on various incremental learning settings using the PASCAL VOC 2007 dataset, and our approach outperforms state-of-the-art methods, particularly for recognizing the new classes.",
+        "year": 2023,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper addresses incremental object detection using a visual-language model to enhance feature space and improve detection performance. It is directly related to the source paper as it deals with incremental object detection, making it relevant."
+    },
+    {
+        "paperId": "4f78d2ef7f18907c04c7ab77b88172784e342f40",
+        "title": "Augmented Box Replay: Overcoming Foreground Shift for Incremental Object Detection",
+        "abstract": "In incremental learning, replaying stored samples from previous tasks together with current task samples is one of the most efficient approaches to address catastrophic forgetting. However, unlike incremental classification, image replay has not been successfully applied to incremental object detection (IOD). In this paper, we identify the overlooked problem of foreground shift as the main reason for this. Foreground shift only occurs when replaying images of previous tasks and refers to the fact that their background might contain foreground objects of the current task. To overcome this problem, a novel and efficient Augmented Box Replay (ABR) method is developed that only stores and replays foreground objects and thereby circumvents the foreground shift problem. In addition, we propose an innovative Attentive RoI Distillation loss that uses spatial attention from region-of-interest (RoI) features to constrain current model to focus on the most important information from old model. ABR significantly reduces forgetting of previous classes while maintaining high plasticity in current classes. Moreover, it considerably reduces the storage requirements when compared to standard image replay. Comprehensive experiments on Pascal-VOC and COCO datasets support the state-of-the-art performance of our model1.",
+        "year": 2023,
+        "citation_count": 29,
+        "relevance": 2,
+        "explanation": "This paper proposes a method to address foreground shift in incremental object detection, directly tackling challenges in IOD, similar to the source paper. It is highly relevant as it focuses on improving IOD techniques."
+    },
+    {
+        "paperId": "b06ba19750e28cc3c83462a61334424a72aa22fc",
+        "title": "SSD-MonoDETR: Supervised Scale-Aware Deformable Transformer for Monocular 3D Object Detection",
+        "abstract": "Transformer-based methods have demonstrated superior performance for monocular 3D object detection recently, which aims at predicting 3D attributes from a single 2D image. Most existing transformer-based methods leverage both visual and depth representations to explore valuable query points on objects, and the quality of the learned query points has a great impact on detection accuracy. Unfortunately, existing unsupervised attention mechanisms in transformers are prone to generate low-quality query features due to inaccurate receptive fields, especially on hard objects. To tackle this problem, this article proposes a novel \u201cSupervised Scale-aware Deformable Attention\u201d (SSDA) for monocular 3D object detection. Specifically, SSDA presets several masks with different scales and utilizes depth and visual features to adaptively learn a scale-aware filter for object query augmentation. Imposing the scale awareness, SSDA could well predict the accurate receptive field of an object query to support robust query feature generation. Aside from this, SSDA is assigned with a Weighted Scale Matching (WSM) loss to supervise scale prediction, which presents more confident results as compared to the unsupervised attention mechanisms. Extensive experiments on the KITTI and Waymo Open datasets demonstrate that SSDA significantly improves the detection accuracy, especially on moderate and hard objects, yielding state-of-the-art performance as compared to the existing approaches.",
+        "year": 2023,
+        "citation_count": 16,
+        "relevance": 1,
+        "explanation": "This paper focuses on monocular 3D object detection using transformers, which is related to the source paper's focus on transformer-based methods. However, it does not specifically address incremental object detection, limiting its relevance."
+    }
+]

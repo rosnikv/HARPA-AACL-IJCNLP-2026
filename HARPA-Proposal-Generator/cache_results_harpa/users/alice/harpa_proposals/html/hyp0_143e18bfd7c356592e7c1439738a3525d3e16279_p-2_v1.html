@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>143e18bfd7c356592e7c1439738a3525d3e16279</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating Self-Evolving Curriculum with Adaptive Difficulty Learning to enhance LLM reasoning on complex tasks.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Motivation</h3>
+<p>The source paper is <a href="https://www.semanticscholar.org/paper/143e18bfd7c356592e7c1439738a3525d3e16279">Paper 0: Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?</a> (185 citations, 2025). This idea builds on a progression of related work <a href="https://www.semanticscholar.org/paper/09b2a0f0d7c1164ab334e13e70eb0d65b5b96393">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0">Paper 2</a>.</p>
+<p>The analysis of the related papers reveals a trend towards minimizing reliance on external data in RLVR, with the Absolute Zero paradigm and 1-shot RLVR demonstrating significant advancements in this area. However, these approaches primarily focus on data efficiency and do not address the core issue identified in the source paper: the inability of current RLVR methods to elicit fundamentally new reasoning patterns beyond the base model. To advance the field, a research idea should focus on developing a novel RLVR paradigm that not only reduces data dependency but also enhances the reasoning capabilities of LLMs by introducing new reasoning patterns.</p>
+<h3>Hypothesis</h3>
+<p>Integrating a Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning will enhance the reasoning capabilities of LLMs on complex mathematical tasks, leading to improved performance on benchmarks like MATH500 compared to using either method alone.</p>
+<h3>Research Gap</h3>
+<p>Current RLVR methods often fail to elicit fundamentally new reasoning patterns, as they primarily optimize existing strategies without introducing novel capabilities. This hypothesis addresses the gap by exploring the integration of a Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning to dynamically adjust problem difficulty based on the model's evolving capabilities.</p>
+<h3>Hypothesis Elements</h3>
+<p>Independent variable: Integration of Self-Evolving Curriculum using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning</p>
+<p>Dependent variable: Reasoning capabilities of LLMs on complex mathematical tasks, measured by accuracy on MATH500 benchmark and problem-solving efficiency</p>
+<p>Comparison groups: Models trained with integrated SEC+ADCL approach vs. models trained with SEC only vs. models trained with ADCL only</p>
+<p>Baseline/control: Self-Evolving Curriculum (SEC) only and Adaptive Difficulty Curriculum Learning (ADCL) only</p>
+<p>Context/setting: Training LLMs on mathematical reasoning tasks using the MATH500 benchmark dataset</p>
+<p>Assumptions: The Difficulty Shift phenomenon exists and can be addressed by periodically re-estimating problem difficulty; immediate learning gains can be measured using absolute advantage from policy gradient methods</p>
+<p>Relationship type: Causal - the integration of SEC and ADCL will cause enhanced reasoning capabilities</p>
+<p>Population: Large Language Models (LLMs)</p>
+<p>Timeframe: Duration of curriculum iterations (5 iterations for mini-pilot, 20 for pilot, 100 for full experiment)</p>
+<p>Measurement method: Accuracy on MATH500 benchmark (primary metric) and problem-solving efficiency measured by number of attempts required (secondary metric)</p>
+<hr>
+<h2>Proposed Method</h2>
+<h3>Overview</h3>
+<p>This research explores the integration of a Self-Evolving Curriculum (SEC) with Adaptive Difficulty Curriculum Learning (ADCL) to enhance the reasoning capabilities of large language models (LLMs) on complex mathematical tasks. The SEC is implemented using a non-stationary Multi-Armed Bandit (MAB) framework, where each problem category is treated as an individual arm. The curriculum policy dynamically selects problem categories that maximize immediate learning gains, measured using the absolute advantage from policy gradient methods. The selection process is guided by a Boltzmann distribution for sampling, and the curriculum policy is updated using the TD(0) method. ADCL addresses the Difficulty Shift phenomenon by periodically re-estimating problem difficulty within upcoming data batches to maintain alignment with the model's evolving capabilities. This integration aims to ensure that the model is consistently challenged with appropriately difficult tasks, facilitating effective learning and generalization. The hypothesis will be tested on the MATH500 benchmark, comparing the performance of models trained with the integrated approach against those trained with each method individually. The expected outcome is that the integrated approach will lead to improved reasoning capabilities, as measured by accuracy and problem-solving efficiency, due to the synergistic effects of dynamic curriculum adjustment and adaptive difficulty alignment.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb">Self-Evolving Curriculum</a>: The Self-Evolving Curriculum (SEC) is implemented using a non-stationary Multi-Armed Bandit (MAB) framework. Each problem category, such as difficulty level or problem type, is treated as an individual arm. The curriculum policy dynamically selects problem categories to maximize immediate learning gains, which are measured using the absolute advantage from policy gradient methods. The selection process is guided by a Boltzmann distribution for sampling, and the curriculum policy is updated using the TD(0) method. This approach allows the curriculum to adapt to the model's evolving capabilities by adjusting the difficulty of the problems presented during training. The SEC framework is expected to improve reasoning capabilities across diverse domains by enabling better generalization to harder, out-of-distribution test problems.</p>
+<p><a href="https://www.semanticscholar.org/paper/99195e486c8d7057e91efcc6660cf386180c6d99">Adaptive Difficulty Curriculum Learning</a>: Adaptive Difficulty Curriculum Learning (ADCL) involves dynamically adjusting the difficulty of training tasks based on the model's evolving capabilities. This strategy tackles the Difficulty Shift phenomenon by periodically re-estimating difficulty within upcoming data batches to maintain alignment with the model's learning progress. Implementation requires a system that can assess the model's current performance and adjust the curriculum accordingly, often using a teacher model to guide the process. This approach ensures that the model is consistently challenged, promoting deeper understanding and better generalization. ADCL is expected to enhance performance on complex reasoning benchmarks by ensuring that the model is consistently challenged with appropriately difficult tasks.</p>
+<h3>Implementation</h3>
+<p>The hypothesis will be implemented by integrating the Self-Evolving Curriculum (SEC) with Adaptive Difficulty Curriculum Learning (ADCL) within the ASD Agent's capabilities. The SEC will be implemented using a non-stationary Multi-Armed Bandit (MAB) framework, where each problem category is treated as an individual arm. The curriculum policy will dynamically select problem categories that maximize immediate learning gains, measured using the absolute advantage from policy gradient methods. The selection process will be guided by a Boltzmann distribution for sampling, and the curriculum policy will be updated using the TD(0) method. ADCL will be implemented by periodically re-estimating problem difficulty within upcoming data batches to maintain alignment with the model's evolving capabilities. This will involve assessing the model's current performance and adjusting the curriculum accordingly, using a teacher model to guide the process. The integration will ensure that the model is consistently challenged with appropriately difficult tasks, facilitating effective learning and generalization. The hypothesis will be tested on the MATH500 benchmark, comparing the performance of models trained with the integrated approach against those trained with each method individually. The expected outcome is that the integrated approach will lead to improved reasoning capabilities, as measured by accuracy and problem-solving efficiency, due to the synergistic effects of dynamic curriculum adjustment and adaptive difficulty alignment.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating a Self-Evolving Curriculum (SEC) using a non-stationary Multi-Armed Bandit framework with Adaptive Difficulty Curriculum Learning (ADCL) will enhance the reasoning capabilities of LLMs on complex mathematical tasks, leading to improved performance on benchmarks like MATH500 compared to using either method alone.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three curriculum learning approaches for training LLMs on mathematical reasoning tasks:<br />
+1. Self-Evolving Curriculum (SEC) only (Baseline 1)<br />
+2. Adaptive Difficulty Curriculum Learning (ADCL) only (Baseline 2)<br />
+3. Integrated SEC+ADCL approach (Experimental)</p></p>
+<p><p>The experiment should evaluate these approaches using the MATH500 benchmark dataset, measuring both accuracy (primary metric) and problem-solving efficiency (secondary metric).</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4>
+<p>Implement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.</p></p>
+<p><ul>
+<li>MINI_PILOT: Use only 10 problems from each category in MATH500 for training and 5 problems for evaluation. Run for only 5 curriculum iterations. This should complete in under 10 minutes and is for code verification only.</li>
+<li>PILOT: Use 50 problems from each category for training and 20 problems for evaluation. Run for 20 curriculum iterations. This should complete in 1-2 hours and is to verify if the experimental approach shows promise compared to baselines.</li>
+<li>FULL_EXPERIMENT: Use the complete MATH500 dataset with proper train/validation/test splits and run for the full 100 curriculum iterations.</li>
+</ul></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then if successful, run in PILOT mode. It should NOT automatically proceed to FULL_EXPERIMENT mode (this will be manually triggered after human verification of pilot results).</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Preparation</strong></h4>
+<ol>
+<li>Load the MATH500 dataset.</li>
+<li>Categorize problems by both difficulty level (1-5) and problem type (algebra, geometry, calculus, etc.).</li>
+<li>Create appropriate train/validation/test splits (80/10/10) for each pilot mode.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Self-Evolving Curriculum (SEC) Implementation</strong></h4>
+<ol>
+<li>Implement a non-stationary Multi-Armed Bandit framework where each problem category (combination of difficulty level and problem type) is treated as an arm.</li>
+<li>Initialize Q-values for each arm (category) to 0.</li>
+<li>For each curriculum iteration:<br />
+   a. Select a problem category using Boltzmann distribution sampling based on current Q-values.<br />
+   b. Present problems from the selected category to the LLM.<br />
+   c. Measure the learning gain (absolute advantage) from the LLM's performance on these problems.<br />
+   d. Update the Q-value for the selected category using the TD(0) method: Q(a) ← Q(a) + α[r - Q(a)], where r is the learning gain and α is the learning rate.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Adaptive Difficulty Curriculum Learning (ADCL) Implementation</strong></h4>
+<ol>
+<li>Initialize a difficulty estimator for each problem in the dataset.</li>
+<li>For each curriculum iteration:<br />
+   a. Assess the model's current performance level.<br />
+   b. Re-estimate the difficulty of problems in the upcoming batch based on recent performance.<br />
+   c. Select problems that are slightly above the model's current capability level.<br />
+   d. Update difficulty estimates based on the model's performance on the selected problems.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Integrated SEC+ADCL Implementation</strong></h4>
+<ol>
+<li>Implement both SEC and ADCL components as described above.</li>
+<li>For each curriculum iteration:<br />
+   a. Use SEC to select the problem category.<br />
+   b. Within the selected category, use ADCL to choose specific problems that match the appropriate difficulty level for the model's current capabilities.<br />
+   c. Update both the SEC Q-values and ADCL difficulty estimates based on performance.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>LLM Configuration</strong></h4>
+<ol>
+<li>Use a consistent LLM across all conditions (e.g., GPT-4 or another suitable model).</li>
+<li>Implement a standardized prompting strategy for presenting mathematical problems.</li>
+<li>Track the number of attempts required to solve each problem correctly.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<ol>
+<li>Primary Metric: Accuracy on the MATH500 benchmark (percentage of problems solved correctly).</li>
+<li>Secondary Metric: Problem-solving efficiency (average number of attempts required to solve problems).</li>
+<li>Learning Curve: Plot accuracy over curriculum iterations to visualize learning progress.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Statistical Analysis</strong></h4>
+<ol>
+<li>Compare the performance of the three approaches using appropriate statistical tests (e.g., paired t-tests or bootstrap resampling).</li>
+<li>Calculate effect sizes to quantify the magnitude of differences between approaches.</li>
+<li>Analyze performance across different problem categories and difficulty levels to identify where the integrated approach provides the most benefit.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Logging and Reporting</strong></h4>
+<ol>
+<li>Log detailed information for each curriculum iteration, including:</li>
+<li>Selected problem categories</li>
+<li>Problem difficulties</li>
+<li>Model performance</li>
+<li>Q-value updates</li>
+<li>Difficulty estimate updates</li>
+<li>Generate a comprehensive report with:</li>
+<li>Overall accuracy and efficiency metrics for each approach</li>
+<li>Statistical significance of differences</li>
+<li>Learning curves</li>
+<li>Analysis by problem category and difficulty level</li>
+<li>Recommendations for further improvements</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4>
+<ul>
+<li>Ensure that the SEC implementation properly handles the non-stationarity of the learning environment.</li>
+<li>The Boltzmann distribution sampling should include a temperature parameter that can be tuned.</li>
+<li>The TD(0) update should use an appropriate learning rate (α) that balances stability and adaptability.</li>
+<li>The ADCL implementation should include a mechanism to prevent getting stuck in local optima of difficulty.</li>
+<li>All random processes should use fixed seeds for reproducibility.</li>
+</ul></p>
+<p><p>Please implement this experiment following the structure outlined above, starting with the MINI_PILOT mode to verify functionality, then proceeding to PILOT mode if successful. The code should be modular and well-documented to facilitate future extensions and modifications.</p></p>
+</div></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li>
+<p>Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model? (2025). Paper ID: 143e18bfd7c356592e7c1439738a3525d3e16279</p>
+</li>
+<li>
+<p>Absolute Zero: Reinforced Self-play Reasoning with Zero Data (2025). Paper ID: 09b2a0f0d7c1164ab334e13e70eb0d65b5b96393</p>
+</li>
+<li>
+<p>Reinforcement Learning for Reasoning in Large Language Models with One Training Example (2025). Paper ID: 1122b654f8b47c1aa9c04ff6bbe7561c798e2ad0</p>
+</li>
+<li>
+<p>Self-Evolving Curriculum for LLM Reasoning (2025). Paper ID: be1985ec9f0bce3b45c81e7b28b93acbaf7e20eb</p>
+</li>
+<li>
+<p>Learning Like Humans: Advancing LLM Reasoning Capabilities via Adaptive Difficulty Curriculum Learning and Expert-Guided Self-Reformulation (2025). Paper ID: 99195e486c8d7057e91efcc6660cf386180c6d99</p>
+</li>
+</ol>
+</body>
+</html>

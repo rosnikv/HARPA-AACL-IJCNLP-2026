@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3950df97ea527009a32569cb7016bc3df1383dca</p>
+<hr>
+<section><h2>Title</h2>
+<p>Dynamic Knowledge Graph Expansion for Enhanced Question Answering with Large Language Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current knowledge graph question answering (KGQA) systems struggle with queries that require information not explicitly present in the original knowledge graph, leading to incomplete or incorrect answers. This limitation hinders the ability to answer complex questions that require reasoning beyond the static information in the knowledge graph.</p>
+<h3>Motivation</h3>
+<p>Existing KGQA approaches typically rely on static knowledge graphs or limited expansion techniques, often failing to capture the full context needed for complex queries. By dynamically expanding the knowledge graph during the reasoning process, we can leverage the language model's ability to infer new relationships and entities, potentially uncovering crucial information for answering the query. This approach combines the structured nature of knowledge graphs with the flexible reasoning capabilities of large language models, potentially leading to more comprehensive and accurate answers.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Dynamic Knowledge Graph Expansion (DKGE), a novel approach that iteratively expands the knowledge graph using a large language model (LLM) as the expansion engine. The method works as follows:<br />
+1. Given a query, retrieve a relevant subgraph from the original KG.<br />
+2. Prompt the LLM to generate potential new entities and relationships based on the query and existing subgraph.<br />
+3. Validate the generated elements against a confidence threshold using a separate verifier model.<br />
+4. Add valid expansions to the subgraph.<br />
+5. Repeat steps 2-4 for a fixed number of iterations or until the expanded graph reaches a certain size.<br />
+6. Use the final expanded graph for reasoning and answering the original query.<br />
+7. Employ a graph attention mechanism to weigh the importance of both original and newly added nodes/edges during the reasoning process.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use the WebQuestionsSP and ComplexWebQuestions datasets for evaluation. Split each dataset into train, validation, and test sets if not already done.</p><p><strong>Step 2: Baseline Implementation</strong></p><p>Implement state-of-the-art KGQA methods as baselines, such as GraftNet, PullNet, and EmbedKGQA. Use their publicly available implementations or reimplement them if necessary.</p><p><strong>Step 3: DKGE Implementation</strong></p><p>a) Implement the subgraph retrieval module using techniques like personalized PageRank or n-hop expansion.<br />
+b) Set up the LLM API (e.g., GPT-3.5 or GPT-4) for graph expansion.<br />
+c) Implement the verifier model using a smaller, fine-tuned language model or a graph neural network.<br />
+d) Develop the graph attention mechanism for final reasoning.</p><p><strong>Step 4: LLM Prompting</strong></p><p>Design prompts for the LLM to generate new entities and relationships. Example prompt:<br />
+"Given the following subgraph and question, suggest new entities and relationships that could be relevant for answering the question. Format your response as a list of triples (entity1, relationship, entity2).<br />
+Subgraph: [serialized subgraph]<br />
+Question: [question]<br />
+New triples:"</p><p><strong>Step 5: Hyperparameter Tuning</strong></p><p>Tune key hyperparameters on the validation set, including:<br />
+a) Number of expansion iterations (e.g., 1, 2, 3, 5)<br />
+b) Confidence threshold for the verifier (e.g., 0.7, 0.8, 0.9)<br />
+c) Maximum expanded graph size (e.g., 100, 200, 500 nodes)</p><p><strong>Step 6: Evaluation</strong></p><p>a) Evaluate DKGE and baselines on the test sets of WebQuestionsSP and ComplexWebQuestions.<br />
+b) Use standard metrics: Hits@1, F1 score, and ExactMatch.<br />
+c) Perform statistical significance tests (e.g., paired t-test) to compare DKGE with baselines.</p><p><strong>Step 7: Ablation Studies</strong></p><p>Conduct ablation studies to assess the impact of different components:<br />
+a) DKGE without iterative expansion (single expansion only)<br />
+b) DKGE without the verifier model<br />
+c) DKGE with different graph attention mechanisms</p><p><strong>Step 8: Error Analysis</strong></p><p>Analyze cases where DKGE performs better or worse than baselines. Categorize error types and identify potential areas for improvement.</p><p><strong>Step 9: Computational Efficiency Analysis</strong></p><p>Measure and compare the runtime and memory usage of DKGE against baselines for different query complexities.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Input</strong></p><p>Who is the spouse of the founder of Facebook?</p><p><strong>Baseline Output</strong></p><p>Unable to answer. The knowledge graph does not contain information about the spouse of Facebook's founder.</p><p><strong>DKGE Input</strong></p><p>Who is the spouse of the founder of Facebook?</p><p><strong>DKGE Output</strong></p><p>Priscilla Chan is the spouse of Mark Zuckerberg, the founder of Facebook.</p><p><strong>Explanation</strong></p><p>The baseline method fails because the original knowledge graph might not contain the marriage information. DKGE, however, can expand the graph by inferring that Mark Zuckerberg is the founder of Facebook and then finding information about his spouse, Priscilla Chan, through the dynamic expansion process.</p>
+<h3>Fallback Plan</h3>
+<p>If DKGE does not significantly outperform baselines, we can pivot the project in several ways. First, we could conduct a detailed analysis of the expansion process, examining which types of expansions are most beneficial and which might introduce noise. This could lead to insights on how to improve the expansion strategy or develop more sophisticated filtering mechanisms. Second, we could investigate the interplay between the original knowledge graph and the expanded information, potentially leading to a hybrid approach that better balances static and dynamic knowledge. Third, we could explore using DKGE as a data augmentation technique for training more robust KGQA models, rather than as a runtime expansion method. Finally, if the LLM-based expansion proves challenging, we could explore alternative expansion methods such as using pre-trained knowledge base completion models or leveraging external structured data sources for more controlled expansion.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/9ef5f1c54f254589541ae63c33408ea1d3ad899a" target="_blank">Graph-constrained Reasoning: Faithful Reasoning on Knowledge Graphs with Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/10955e63aa49fab146267949f8ebc9ebe8275183" target="_blank">Knowledge-Driven CoT: Exploring Faithful Reasoning in LLMs for Knowledge-intensive Question Answering</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a681b1085c088c51347cdb9358dd344081d29c99" target="_blank">Think-on-Graph 2.0: Deep and Faithful Large Language Model Reasoning with Knowledge-guided Retrieval Augmented Generation</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/dffb86781047f64315df45a1081ed0a1352733e2" target="_blank">KARPA: A Training-free Method of Adapting Knowledge Graph as References for Large Language Model's Reasoning Path Aggregation</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f8d9decb348a2a6daeb54c8cad82350bfec3e1b0" target="_blank">FiDeLiS: Faithful Reasoning in Large Language Model for Knowledge Graph Question Answering</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/13483e7c1834487ca2163c42d2a89d53b6e6007f" target="_blank">QAVSA: Question Answering using Vector Symbolic Algebras</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ae0839885c0317560cf8c1c286fe2aad65f4aba6" target="_blank">Graph Reasoning for Question Answering with Triplet Retrieval</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8074a5421d77b63bdd8fe9cca2b49e5f4a4de277" target="_blank">Dynamic Heterogeneous-Graph Reasoning with Language Models and Knowledge Representation Learning for Commonsense Question Answering</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/9b31288d4aba4858dd143646b33b4ad58c3bb6d5" target="_blank">Memory-augmented Query Reconstruction for LLM-based Knowledge Graph Reasoning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/59395cf4f9346ef4ccb37499a3a7e52c2978fc61" target="_blank">Right for Right Reasons: Large Language Models for Verifiable Commonsense Knowledge Graph Question Answering</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

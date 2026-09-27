@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>356fb62f0f9acf17c5f3a8c2669436e8c4ebd632</p>
+<hr>
+<section><h2>Title</h2>
+<p>Multi-Modal Graph Attention Network for Urdu Fake News Detection</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current Urdu fake news detection models ignore crucial visual and social context information that can provide important cues for identifying misinformation. This limits their ability to accurately detect fake news in real-world scenarios where news items often contain multiple modalities of information and spread through complex social networks.</p>
+<h3>Motivation</h3>
+<p>Existing approaches focus solely on text content using traditional NLP techniques or basic deep learning models. However, fake news often leverages manipulated images or exploits specific sharing patterns on social media. By incorporating multi-modal information and modeling the social propagation patterns of news, we can significantly improve fake news detection accuracy. This approach aligns with how humans naturally assess the credibility of news by considering not just the text, but also accompanying visuals and the source/spread of information.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a novel multi-modal graph attention network for Urdu fake news detection. The model consists of three main components: 1) A text encoder using a pre-trained Urdu language model (e.g., UrduBERT) to process the textual content. 2) An image encoder using a vision transformer (e.g., ViT) to extract features from accompanying images. 3) A graph attention network to model social propagation patterns, where each news item is a node in the graph, with edges representing social connections and sharing patterns. These components will be jointly trained end-to-end to classify news as real or fake. The graph attention mechanism allows the model to focus on the most relevant social connections and propagation patterns for each news item, improving overall detection accuracy.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Creation</strong></p><p>Create a large-scale dataset of Urdu news posts from social media platforms like Twitter and Facebook. Collect text content, accompanying images, and social context information (user profiles, sharing patterns, timestamps, etc.). Annotate a subset of this data for ground truth labels (real/fake) using expert fact-checkers or by cross-referencing with reputable news sources.</p><p><strong>Step 2: Data Preprocessing</strong></p><p>Clean and preprocess the text data, including tokenization, removing special characters, and handling Urdu-specific linguistic features. Resize and normalize the images. Create a graph structure where each news item is a node, and edges represent social connections or sharing patterns.</p><p><strong>Step 3: Model Implementation</strong></p><p>Implement the multi-modal graph attention network using PyTorch. Use the Hugging Face Transformers library to load a pre-trained UrduBERT model for the text encoder. Implement the image encoder using a pre-trained ViT model. Implement the graph attention network using the PyTorch Geometric library.</p><p><strong>Step 4: Training</strong></p><p>Split the dataset into training, validation, and test sets. Train the model end-to-end using cross-entropy loss for the binary classification task (real/fake). Use Adam optimizer with learning rate scheduling. Implement early stopping based on validation performance.</p><p><strong>Step 5: Baseline Models</strong></p><p>Implement text-only baselines for comparison: 1) A simple LSTM-based model, 2) A fine-tuned UrduBERT model, 3) A state-of-the-art Urdu fake news detection model from recent literature.</p><p><strong>Step 6: Evaluation</strong></p><p>Evaluate all models on the test set using accuracy, precision, recall, F1-score, and AUC-ROC as metrics. Perform ablation studies to assess the impact of each modality (text, image, graph) and the graph attention mechanism.</p><p><strong>Step 7: Analysis</strong></p><p>Conduct error analysis to identify types of fake news that are still challenging for the model. Visualize attention weights to interpret which parts of the text, image, and graph structure the model focuses on for its decisions.</p><p><strong>Step 8: Robustness Testing</strong></p><p>Test the model's performance on out-of-distribution data, such as news from a different time period or from a different social media platform, to assess generalization capabilities.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Text-only LSTM)</strong></p><p>کیا آپ نے سنا ہے کہ پاکستان میں ایک نئی ویکسین دریافت ہوئی ہے جو کورونا وائرس کو 24 گھنٹوں میں ختم کر دیتی ہے؟</p><p><strong>Baseline Prompt Expected Output (Text-only LSTM)</strong></p><p>Real (Score: 0.65)</p><p><strong>Baseline Prompt Input (Fine-tuned UrduBERT)</strong></p><p>کیا آپ نے سنا ہے کہ پاکستان میں ایک نئی ویکسین دریافت ہوئی ہے جو کورونا وائرس کو 24 گھنٹوں میں ختم کر دیتی ہے؟</p><p><strong>Baseline Prompt Expected Output (Fine-tuned UrduBERT)</strong></p><p>Fake (Score: 0.72)</p><p><strong>Proposed Prompt Input (Multi-Modal Graph Attention)</strong></p><p>{"text": "کیا آپ نے سنا ہے کہ پاکستان میں ایک نئی ویکسین دریافت ہوئی ہے جو کورونا وائرس کو 24 گھنٹوں میں ختم کر دیتی ہے؟", "image": [image_tensor], "graph": [adjacency_matrix, node_features]}</p><p><strong>Proposed Prompt Expected Output (Multi-Modal Graph Attention)</strong></p><p>Fake (Score: 0.95)</p><p><strong>Explanation</strong></p><p>The text-only LSTM model fails to correctly classify the news as fake, likely due to its inability to capture complex linguistic nuances. The fine-tuned UrduBERT performs better but still with relatively low confidence. Our proposed multi-modal graph attention model correctly classifies the news as fake with high confidence, leveraging not just the text but also the accompanying image (which might show signs of manipulation) and the social propagation patterns (which might indicate suspicious sharing behavior typical of fake news).</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed multi-modal graph attention model doesn't significantly outperform the baselines, we can explore several alternatives. First, we could conduct a thorough analysis of each component (text, image, graph) to understand which parts are underperforming. This could lead to targeted improvements, such as using a more sophisticated Urdu language model or a better image feature extractor. We could also experiment with different graph construction methods, such as using weighted edges based on user interaction strength or incorporating temporal information into the graph structure. If the multi-modal approach still doesn't yield improvements, we could pivot to an ensemble method, combining predictions from separate text, image, and graph models. This could provide insights into which modalities are most informative for different types of fake news. Additionally, we could focus on creating a more comprehensive and cleaner dataset, as the quality of multi-modal data is crucial for the success of such models. Finally, we could explore transfer learning approaches, pre-training our model on a larger English fake news dataset and then fine-tuning on the Urdu dataset to leverage cross-lingual knowledge transfer.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/cf3848151a4e9163d6445dab8f2248e5e08d8826" target="_blank">Fake News Detection in Model Integral: A Hybrid CNN-BiLSTM Model</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8042cad4116c61566dd45c143f9bc23a72f05917" target="_blank">TweetGuard: Combining Transformer and Bi-LSTM Architectures for Fake News Detection in Large-Scale Tweets</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a14eafad0eb069b72f60e792b2c42ead24bf41d1" target="_blank">Fake News Detection in Urdu using Deep Learning</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/3b3c4caa4010445eb9bcb3408ea41e4d9bb565ad" target="_blank">Benchmarking Hook and Bait Urdu news dataset for domain-agnostic and multilingual fake news detection using large language models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2e045c23f0ed291da4eae0f0617df7a4b36aa4c0" target="_blank">Machine Learning Techniques for Fake News Detection in Low-Resource Hindi Language: A Comparative Study</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ceaa7eb3a2bf2b0a21f3c611b79ef6d471925ecf" target="_blank">Automatic identification of Urdu fake news using Logistic Regression Model</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a2fe9a67f783d6a4940203586cb7ee0f1f92376c" target="_blank">Multi-Task Counterpropaganda Semantic Learning for Detecting Fake News</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/72f2d83b8da7d466c47bafc53bcd17bd6a0e5702" target="_blank">Detecting Fake News in Urdu Language Using Machine Learning, Deep Learning, and Large Language Model-Based Approaches</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/eaf01166f8541d970661e8f51dc2db20cb4b0691" target="_blank">Improving Fake News Detection Accuracy with Lexicon-based Approach and LSTM through Text Preprocessing</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f946d55b2d59e3288da28111cc2f623fcf2f50b7" target="_blank">Detection of Human and Machine-Authored Fake News in Urdu</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

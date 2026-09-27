@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>45653ad43124f02dc2cf2db3357be1d1d78ddb18</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating Conformal Alignment with Conditional Coverage Constraints to enhance LLM factuality across domains.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Conformal Alignment with Conditional Coverage Constraints will significantly enhance the factuality of LLM outputs and reduce hallucination rates across medical QA, biography, and legal domains.</p>
+<h3>Motivation</h3>
+<p>Existing methods often focus on either conformal prediction or adaptive scoring functions in isolation, without exploring their combined potential in enhancing LLM factuality across diverse domains. While conformal prediction provides statistical guarantees, it lacks dynamic adaptability to domain-specific feature variations. Conversely, adaptive scoring functions offer flexibility but lack rigorous statistical backing. This hypothesis addresses the gap by integrating conformal prediction with adaptive scoring functions to dynamically adjust factuality guarantees across medical QA, biography, and legal domains. This integration has not been extensively tested, particularly in scenarios involving domain-specific feature variability, which is crucial for reducing hallucination rates and improving accuracy.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of Conformal Alignment with Conditional Coverage Constraints to improve the factuality and reduce hallucination rates of LLM outputs across medical QA, biography, and legal domains. Conformal Alignment ensures that a prescribed fraction of model outputs meet alignment criteria, controlling the false discovery rate of untrustworthy outputs. Conditional Coverage Constraints adapt coverage guarantees based on domain-specific feature variations, ensuring that factuality is maintained across diverse contexts. This integration is expected to provide robust factuality guarantees by leveraging the statistical rigor of conformal prediction and the adaptability of coverage constraints. The hypothesis will be tested using GPT-3 in medical QA, biography, and legal reasoning tasks, evaluating improvements in factuality and reductions in hallucination rates. The chosen domains are ideal due to their high stakes and the need for accurate, trustworthy outputs. This approach addresses gaps in existing research by providing a novel, dynamic solution to factuality challenges in LLMs, leveraging the strengths of both conformal prediction and adaptive scoring functions.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/d789e286837bbe3dde93a69404c9de48ae684c03">Conformal Alignment</a>: Conformal Alignment is a method that ensures a prescribed fraction of selected model outputs are trustworthy and meet alignment criteria. It involves training an alignment predictor on reference data and selecting outputs whose predicted alignment scores exceed a calibrated threshold. This method is particularly useful in ensuring factual correctness in LLM outputs, controlling the false discovery rate of untrustworthy outputs. In this experiment, Conformal Alignment will be configured to work with GPT-3, focusing on outputs in medical QA, biography, and legal domains. The expected role of Conformal Alignment is to enhance factual accuracy by filtering outputs based on alignment scores, ensuring that only outputs meeting the alignment criteria are retained. This method is measurable by assessing the reduction in false positives and improvement in precision metrics.</p>
+<p><a href="https://www.semanticscholar.org/paper/ce9f672df0da5cf91e1551513f04c2fba756eeaf">Conditional Coverage Constraints</a>: Conditional Coverage Constraints are implemented to ensure that coverage holds in different parts of the feature space, adapting based on context or domain. This involves setting specific thresholds for conformity scores that dynamically adjust coverage guarantees. In this experiment, Conditional Coverage Constraints will be applied to GPT-3 outputs in medical QA, biography, and legal domains. The expected role is to provide dynamic adaptability to domain-specific feature variations, ensuring that factuality is maintained across diverse contexts. This method will be assessed by measuring the consistency of coverage across different domains and the reduction in hallucination rates. A simple example would be adjusting the coverage threshold in medical QA based on the complexity of the medical terminology involved, ensuring that outputs remain factual and reliable.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates Conformal Alignment with Conditional Coverage Constraints to enhance factuality and reduce hallucination rates in LLM outputs across medical QA, biography, and legal domains. The implementation begins with training an alignment predictor using reference data from each domain, establishing a calibrated threshold for alignment scores. This predictor filters outputs, retaining only those meeting the alignment criteria. Concurrently, Conditional Coverage Constraints are applied, dynamically adjusting coverage thresholds based on domain-specific feature variations. This involves analyzing the feature space of each domain and setting conformity score thresholds that adapt to context, ensuring consistent coverage. The integration occurs at the output filtering stage, where alignment scores and coverage thresholds jointly determine output retention. The data flows from input through the alignment predictor and coverage constraint module, with outputs filtered based on combined criteria. The expected outcome is a significant reduction in hallucination rates and improved factuality, measured by precision and recall metrics. The method leverages the statistical rigor of conformal prediction and the adaptability of coverage constraints, providing a robust, dynamic solution to factuality challenges in LLMs. The implementation is feasible using existing codeblocks for conformal prediction and adaptive scoring, with minor modifications to integrate the two components effectively.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating Conformal Alignment with Conditional Coverage Constraints enhances the factuality of LLM outputs and reduces hallucination rates across medical QA, biography, and legal domains. This experiment should be structured as a series of pilot experiments with increasing scale.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>The experiment will compare four conditions:<br />
+1. Baseline: Standard GPT-3 outputs without any conformal adjustments<br />
+2. Conformal Alignment Only: GPT-3 outputs filtered using only Conformal Alignment<br />
+3. Conditional Coverage Only: GPT-3 outputs filtered using only Conditional Coverage Constraints<br />
+4. Integrated Approach (Experimental): GPT-3 outputs filtered using both Conformal Alignment and Conditional Coverage Constraints integrated at the output filtering stage</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Conformal Alignment Module</strong></h4>
+<ol>
+<li>Train an alignment predictor on reference data from each domain (medical, biography, legal)</li>
+<li>The predictor should output an alignment score for each LLM response</li>
+<li>Establish a calibrated threshold for alignment scores</li>
+<li>Filter outputs, retaining only those meeting the alignment criteria</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Conditional Coverage Constraints Module</strong></h4>
+<ol>
+<li>Analyze the feature space of each domain (medical, biography, legal)</li>
+<li>Set conformity score thresholds that adapt to domain-specific contexts</li>
+<li>Implement dynamic adjustment of coverage thresholds based on domain features</li>
+<li>For example, adjust thresholds based on medical terminology complexity in medical QA</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Integrated Approach</strong></h4>
+<ol>
+<li>Combine both modules at the output filtering stage</li>
+<li>Use alignment scores from Conformal Alignment module</li>
+<li>Apply domain-specific coverage thresholds from Conditional Coverage Constraints module</li>
+<li>Only retain outputs that meet both criteria</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Datasets</strong></h4>
+<ol>
+<li>Medical QA: Use a subset of MMLU medical questions</li>
+<li>Biography: Create or use an existing dataset of biographical questions about historical figures</li>
+<li>Legal Reasoning: Use a subset of LegalBench tasks</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<ol>
+<li>Precision: Proportion of factual statements among all statements made</li>
+<li>Recall: Proportion of relevant factual information provided</li>
+<li>F1 Score: Harmonic mean of precision and recall</li>
+<li>Hallucination Rate: Proportion of generated statements that are factually incorrect</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>Pilot Experiment Settings</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><h4 class="custom-heading"><strong>MINI_PILOT</strong></h4>
+<ul>
+<li>Medical QA: 10 questions</li>
+<li>Biography: 10 questions</li>
+<li>Legal: 10 questions</li>
+<li>Use GPT-3 (text-davinci-003) for generation</li>
+<li>Run time: Should complete in under 30 minutes</li>
+<li>Purpose: Fast debugging and verification of code</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>PILOT</strong></h4>
+<ul>
+<li>Medical QA: 50 questions</li>
+<li>Biography: 50 questions</li>
+<li>Legal: 50 questions</li>
+<li>Use GPT-3 (text-davinci-003) for generation</li>
+<li>Run time: Should complete in under 2 hours</li>
+<li>Purpose: Preliminary assessment of whether the integrated approach shows promise compared to baselines</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>FULL_EXPERIMENT</strong></h4>
+<ul>
+<li>Medical QA: Full MMLU medical subset</li>
+<li>Biography: 200+ biographical questions</li>
+<li>Legal: Full relevant LegalBench tasks</li>
+<li>Use GPT-3 (text-davinci-003) for generation</li>
+<li>Run time: May take several hours</li>
+<li>Purpose: Complete evaluation of the hypothesis</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4>
+<ol>
+<li>Set up the GPT-3 API connection</li>
+<li>Load and preprocess the datasets for each domain</li>
+<li>Implement the Conformal Alignment module</li>
+<li>Implement the Conditional Coverage Constraints module</li>
+<li>Integrate both modules for the experimental condition</li>
+<li>Run each condition on the datasets</li>
+<li>Calculate evaluation metrics for each condition</li>
+<li>Perform statistical analysis to compare conditions</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Statistical Analysis</strong></h4>
+<ol>
+<li>Calculate mean and standard deviation for each metric across domains</li>
+<li>Perform paired t-tests or bootstrap resampling to determine statistical significance</li>
+<li>Create visualizations comparing the four conditions</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output Requirements</strong></h4>
+<ol>
+<li>Log files containing all model inputs and outputs</li>
+<li>Summary statistics for each condition and domain</li>
+<li>Statistical analysis results</li>
+<li>Visualizations comparing conditions</li>
+</ol></p>
+<p><p>Please run the MINI_PILOT first. If everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if appropriate).</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18">Paper 0: Language Models Hallucinate, but May Excel at Fact Verification</a> (36 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/2495700b4303512784fbdbfccc58c6c4f7771ac2">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/2c85de293de93582e3d457ab9a5760a5ac71aa11">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/00d4e5bccaba9248538295f4e117c9620f676ec1">Paper 3</a>. The analysis reveals a progression from identifying the hallucination problem in LLMs to developing frameworks and methods for ensuring factuality through conformal prediction. The papers address various challenges, such as uncertainty quantification, conditional validity, and application-specific accuracy. However, a gap remains in exploring how these methods can be generalized across different domains and integrated into a unified framework for real-time applications. A research idea that advances the field could involve developing a domain-agnostic, real-time fact verification system that leverages conformal prediction and adaptive scoring functions.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18" target="_blank">Language Models Hallucinate, but May Excel at Fact Verification</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/2495700b4303512784fbdbfccc58c6c4f7771ac2" target="_blank">Language Models with Conformal Factuality Guarantees</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/2c85de293de93582e3d457ab9a5760a5ac71aa11" target="_blank">Large language model validity via enhanced conformal prediction methods</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/00d4e5bccaba9248538295f4e117c9620f676ec1" target="_blank">K-QA: A Real-World Medical Q&A Benchmark</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/6161fb794c07951852685a7072e39531901f3954" target="_blank">Conformal P-Value in Multiple-Choice Question Answering Tasks with Provable Risk Control</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/8b1dfcc9ea6cc22cf4987dcbb4bb8348b571a800" target="_blank">Towards Robust Legal Reasoning: Harnessing Logical LLMs in Law</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/0a10d2e8b19971cc912a07609daaa422a1173369" target="_blank">Conformal Prediction Adaptive to Unknown Subpopulation Shifts</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/4472c250486e569a59df39747c58e81edc0a04e0" target="_blank">Correctness Coverage Evaluation for Medical Multiple-Choice Question Answering Based on the Enhanced Conformal Prediction Framework</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/ce9f672df0da5cf91e1551513f04c2fba756eeaf" target="_blank">Prune'n Predict: Optimizing LLM Decision-making with Conformal Prediction</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/9402cd05b5e77518d76907fbee979e12cdf31ac1" target="_blank">Detecting Errors through Ensembling Prompts (DEEP): An End-to-End LLM Framework for Detecting Factual Errors</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/03fab98a9be74a253688840dba9144737a8ca92d" target="_blank">Survey on Factuality in Large Language Models: Knowledge, Retrieval and Domain-Specificity</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/d789e286837bbe3dde93a69404c9de48ae684c03" target="_blank">Conformal Prediction: A Data Perspective</a> (2024)</li>
+</ol>
+</body>
+</html>

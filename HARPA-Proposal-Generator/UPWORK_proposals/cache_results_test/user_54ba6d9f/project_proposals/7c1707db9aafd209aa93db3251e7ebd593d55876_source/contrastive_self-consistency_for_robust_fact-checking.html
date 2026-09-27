@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>7c1707db9aafd209aa93db3251e7ebd593d55876</p>
+<hr>
+<section><h2>Title</h2>
+<p>CSRF: Contrastive Self-Consistency for Robust Fact-Checking in Zero-Resource Settings</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Zero-resource fact-checking for large language models (LLMs) is challenging due to the lack of labeled data and potential model inconsistency across different prompts or generations. Existing methods often rely on single-pass generation or simple prompting strategies, which may not fully leverage the model's knowledge or account for generation inconsistencies.</p>
+<h3>Motivation</h3>
+<p>By exploiting the structured information in WikiBio and implementing a contrastive learning approach, we can improve the robustness and consistency of fact-checking in zero-resource settings. Current zero-shot approaches often fail to fully leverage the model's internal knowledge and struggle with maintaining consistency across different prompts. Our proposed method, CSRF, addresses these limitations by generating contrastive examples and encouraging logical coherence in the model's judgments.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Contrastive Self-Consistency for Robust Fact-Checking (CSRF), a novel method that leverages the structure of WikiBio data to generate contrastive examples for self-supervised learning. CSRF works as follows: 1) For a given claim, we extract relevant entity and attribute pairs from WikiBio. 2) We generate multiple contrastive claims by swapping entities or modifying attributes while maintaining grammatical correctness. 3) We prompt the LLM to verify both the original and contrastive claims, encouraging consistency in its judgments. 4) We implement a self-consistency scoring mechanism that rewards the model for maintaining logical coherence across related claims. 5) We use a contrastive loss function that maximizes the distance between embeddings of true and false claims while minimizing the distance between consistent judgments.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>1.1 Download and preprocess the WikiBio dataset.<br />
+1.2 Extract entity-attribute pairs from WikiBio entries.<br />
+1.3 Generate a set of true claims based on the extracted pairs.<br />
+1.4 Create a set of false claims by swapping entities or modifying attributes.<br />
+1.5 Split the data into training and testing sets.</p><p><strong>Step 2: Implement CSRF Method</strong></p><p>2.1 Develop a function to generate contrastive claims for a given input claim.<br />
+2.2 Implement the self-consistency scoring mechanism.<br />
+2.3 Design the contrastive loss function.<br />
+2.4 Create a prompting template for fact verification.</p><p><strong>Step 3: Baseline Implementation</strong></p><p>3.1 Implement zero-shot prompting baseline.<br />
+3.2 Implement few-shot prompting baseline.<br />
+3.3 Implement a simple sampling-based method (e.g., majority voting across multiple generations).</p><p><strong>Step 4: Model Selection and API Setup</strong></p><p>4.1 Set up API access for GPT-3.5 and GPT-4.<br />
+4.2 Implement a wrapper function to handle API calls and rate limiting.</p><p><strong>Step 5: Training and Evaluation</strong></p><p>5.1 For each claim in the training set:<br />
+    a) Generate contrastive claims<br />
+    b) Prompt the LLM to verify original and contrastive claims<br />
+    c) Calculate self-consistency scores<br />
+    d) Compute contrastive loss<br />
+5.2 Evaluate CSRF and baselines on the test set:<br />
+    a) Calculate accuracy<br />
+    b) Measure consistency scores<br />
+    c) Assess robustness to adversarial examples</p><p><strong>Step 6: Analysis and Ablation Studies</strong></p><p>6.1 Analyze the impact of the number of contrastive examples on performance.<br />
+6.2 Evaluate the effectiveness of the self-consistency scoring mechanism.<br />
+6.3 Assess the contribution of the contrastive loss function.<br />
+6.4 Analyze model performance across different types of claims and entities.</p><p><strong>Step 7: Qualitative Analysis</strong></p><p>7.1 Manually review a sample of model outputs to assess reasoning quality.<br />
+7.2 Analyze cases where CSRF outperforms baselines and vice versa.<br />
+7.3 Evaluate the model's ability to generalize to facts outside the WikiBio domain.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Verify the following claim: Albert Einstein was born in Ulm, Germany.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>The claim is true. Albert Einstein was indeed born in Ulm, Germany on March 14, 1879.</p><p><strong>Proposed Prompt Input</strong></p><p>Verify the following claims:<br />
+1. Albert Einstein was born in Ulm, Germany.<br />
+2. Albert Einstein was born in Munich, Germany.<br />
+3. Isaac Newton was born in Ulm, Germany.</p><p><strong>Proposed Prompt Expected Output</strong></p><ol>
+<li>True. Albert Einstein was born in Ulm, Germany on March 14, 1879.</li>
+<li>False. Albert Einstein was born in Ulm, not Munich.</li>
+<li>False. Isaac Newton was born in Woolsthorpe-by-Colsterworth, United Kingdom, not Ulm, Germany.</li>
+</ol><p><strong>Explanation</strong></p><p>The CSRF method prompts the model with multiple related claims, encouraging it to maintain consistency across its judgments. This approach helps the model to be more robust against potential inconsistencies and to leverage its knowledge more effectively.</p>
+<h3>Fallback Plan</h3>
+<p>If CSRF does not significantly outperform baselines, we can pivot the project to an analysis paper. We would focus on understanding why the contrastive approach didn't yield the expected improvements. This could involve: 1) Analyzing the quality and diversity of generated contrastive examples to ensure they're challenging yet relevant. 2) Investigating the model's consistency across different types of claims and entities to identify potential weaknesses. 3) Examining the effectiveness of the self-consistency scoring mechanism and exploring alternative formulations. 4) Conducting a more in-depth error analysis to categorize the types of mistakes made by both CSRF and baselines. 5) Exploring how the model's performance varies with different prompting strategies or input formats. This analysis could provide valuable insights into the challenges of zero-resource fact-checking and guide future research in this area.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/72cf69817d3836103db7263000fbf87395def6eb" target="_blank">FActBench: A Benchmark for Fine-grained Automatic Evaluation of LLM-Generated Text in the Medical Domain</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b321b31298ae20b5ef66f3c74d8a4f5b11635d26" target="_blank">Robust Claim Verification Through Fact Detection</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a5cd606537a666e4807f1c9d342cfeb2b71c4a34" target="_blank">Are Large Language Models Table-based Fact-Checkers?</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/3cebb93c399db7e1434741338b0a24db19786b15" target="_blank">Prompt to be Consistent is Better than Self-Consistent? Few-Shot and Zero-Shot Fact Verification with Pre-trained Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/47c9f319a0d1dcc018a2cd3d63f9acbe678eaf46" target="_blank">Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4917d60c82ce041afad1b63887d49d0062031f66" target="_blank">Zero-Shot Fact Verification via Natural Logic and Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/02721d09a2d9d10872f45ff6d7a6bc429aca3522" target="_blank">The Missing Parts: Augmenting Fact Verification with Half-Truth Detection</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5d33ec996f8d845577db941f906df4056314c6e3" target="_blank">Connecting the Dots Between Fact Verification and Fake News Detection</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/44e9c292c3a23bb250fde91b0b2fc3a3a6c3e745" target="_blank">Transforming relation extraction into fact verification utilizing large language models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7e8cfd4aabb155a07156b7d5099ccc4f54bf610a" target="_blank">ClimateViz: A Benchmark for Statistical Reasoning and Fact Verification on Scientific Charts</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

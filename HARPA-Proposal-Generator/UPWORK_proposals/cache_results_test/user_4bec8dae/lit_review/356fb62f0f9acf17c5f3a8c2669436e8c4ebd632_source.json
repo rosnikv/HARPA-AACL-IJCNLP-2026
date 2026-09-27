@@ -1,0 +1,1765 @@
+{
+    "topic_description": "urdu fake news detection dataset creation and classification using adaboost",
+    "all_queries": [
+        "KeywordQuery(\"urdu fake news detection dataset creation and classification using adaboost\")",
+        "PaperQuery(\"356fb62f0f9acf17c5f3a8c2669436e8c4ebd632\")",
+        "GetReferences(\"356fb62f0f9acf17c5f3a8c2669436e8c4ebd632\")",
+        "KeywordQuery(\"fake news detection Urdu language\")",
+        "PaperQuery(\"3b3c4caa4010445eb9bcb3408ea41e4d9bb565ad\")",
+        "PaperQuery(\"82631e971de8f04ce28c90e8a40505d508b2902c\")",
+        "KeywordQuery(\"Urdu fake news dataset creation techniques\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "356fb62f0f9acf17c5f3a8c2669436e8c4ebd632",
+            "paperId": "356fb62f0f9acf17c5f3a8c2669436e8c4ebd632",
+            "title": "\"Bend the truth\": Benchmark dataset for fake news detection in Urdu language and its evaluation",
+            "year": 2020,
+            "citationCount": 56,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3233/jifs-179905?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3233/jifs-179905, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A manually assembled and verified dataset containing 900 news articles, 500 annotated as real and 400, as fake, allowing the investigation of automated fake news detection approaches in Urdu, along with the baseline classification and its evaluation."
+            },
+            "authors": [
+                {
+                    "authorId": "153942516",
+                    "name": "Maaz Amjad"
+                },
+                {
+                    "authorId": "144140335",
+                    "name": "G. Sidorov"
+                },
+                {
+                    "authorId": "1684668",
+                    "name": "Alisa Zhila"
+                },
+                {
+                    "authorId": "1403763319",
+                    "name": "Helena G\u00f3mez-Adorno"
+                },
+                {
+                    "authorId": "2065256181",
+                    "name": "Ilia Voronkov"
+                },
+                {
+                    "authorId": "1747784",
+                    "name": "Alexander Gelbukh"
+                }
+            ],
+            "abstract": "The paper presents a new corpus for fake news detection in the Urdu language along with the baseline classification and its evaluation. With the escalating use of the Internet worldwide and substantially increasing impact produced by the availability of ambiguous information, the challenge to quickly identify fake news in digital media in various languages becomes more acute. We provide a manually assembled and verified dataset containing 900 news articles, 500 annotated as real and 400, as fake, allowing the investigation of automated fake news detection approaches in Urdu. The news articles in the truthful subset come from legitimate news sources, and their validity has been manually verified. In the fake subset, the known difficulty of finding fake news was solved by hiring professional journalists native in Urdu who were instructed to intentionally write deceptive news articles. The dataset contains 5 different topics: (i) Business, (ii) Health, (iii) Showbiz, (iv) Sports, and (v) Technology. To establish our Urdu dataset as a benchmark, we performed baseline classification. We crafted a variety of text representation feature sets including word n-grams, character n-grams, functional word n-grams, and their combinations. After applying a variety of feature weighting schemes, we ran a series of classifiers on the train-test split. The results show sizable performance gains by AdaBoost classifier with 0.87 F1Fake and 0.90 F1Real. We provide the results evaluated against different metrics for a convenient comparison of future research. The dataset is publicly available for research purposes.",
+            "score": 10
+        },
+        {
+            "id": "ee8045eb578ca2f560e82c02a9908731066d4352",
+            "paperId": "ee8045eb578ca2f560e82c02a9908731066d4352",
+            "title": "Ax-to-Grind Urdu: Benchmark Dataset for Urdu Fake News Detection",
+            "year": 2023,
+            "citationCount": 5,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2403.14037",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.14037, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The first largest publicly available dataset for Urdu FND, \"Ax-to-Grind Urdu\", is curated and contribute to bridge the identified gaps and limitations of existing Urdu datasets in the literature to demonstrate the effectiveness of the proposed approach for Urdu FND."
+            },
+            "authors": [
+                {
+                    "authorId": "2224904920",
+                    "name": "Sheetal Harris"
+                },
+                {
+                    "authorId": "2244572727",
+                    "name": "Jinshuo Liu"
+                },
+                {
+                    "authorId": "1500419209",
+                    "name": "Hassan Jalil Hadi"
+                },
+                {
+                    "authorId": "2292492698",
+                    "name": "Yue Cao"
+                }
+            ],
+            "abstract": "Misinformation can seriously impact society, affecting anything from public opinion to institutional confidence and the political horizon of a state. Fake News (FN) proliferation on online websites and Online Social Networks (OSNs) has increased profusely. Various fact-checking websites include news in English and barely provide information about FN in regional languages. Thus the Urdu FN purveyors cannot be discerned using fact-checking portals. State-of-the-art (SOTA) approaches for Fake News Detection (FND) count upon appropriately labelled and large datasets. FND in regional and resource-constrained languages lags due to the lack of limited-sized datasets and legitimate lexical resources. The previous datasets for Urdu FND are limited-sized, domain-restricted, publicly unavailable and not manually verified where the news is translated from English into Urdu. In this paper, we curate and contribute the first largest publicly available dataset for Urdu FND, \"Ax-to-Grind Urdu\", to bridge the identified gaps and limitations of existing Urdu datasets in the literature. It constitutes 10,083 fake and real news on fifteen domains collected from leading and authentic Urdu newspapers and news channel websites in Pakistan and India. FN for the Ax-to-Grind dataset is collected from websites and crowdsourcing. The dataset contains news items in Urdu from the year 2017 to the year 2023. Expert journalists annotated the dataset. We benchmark the dataset with an ensemble model of mBERT, XLNet, and XLM-RoBERTa. The selected models are originally trained on multilingual large corpora. The results of the proposed model are based on performance metrics, F1-score, accuracy, precision, recall and MCC value. F1-score of 0.924, accuracy of 0.956, precision of 0.942, recall of 0.940 and an MCC value of 0.902 demonstrate the effectiveness of the proposed approach for Urdu FND. Comparison analysis with SOTA ML and DL models and existing Urdu benchmark datasets exhibit that the ensemble model outperforms them for Urdu FND. The dataset used for our experiments is publicly available at https://github.com/HjH-Whu-CRC/Ax-to-Grind-Urdu for further analysis and validation.",
+            "score": 10
+        },
+        {
+            "id": "3b3c4caa4010445eb9bcb3408ea41e4d9bb565ad",
+            "paperId": "3b3c4caa4010445eb9bcb3408ea41e4d9bb565ad",
+            "title": "Benchmarking Hook and Bait Urdu news dataset for domain-agnostic and multilingual fake news detection using large language models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBYNCND",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12049497, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study curates the first large-sized multi-domain corpus, the Hook and Bait Urdu, and fine-tuned the LLaMA 2-based framework for multilingual FND using the curated dataset (in Urdu) and the ISOT Fake News dataset (in English)."
+            },
+            "authors": [
+                {
+                    "authorId": "2224904920",
+                    "name": "Sheetal Harris"
+                },
+                {
+                    "authorId": "2244572727",
+                    "name": "Jinshuo Liu"
+                },
+                {
+                    "authorId": "1500419209",
+                    "name": "Hassan Jalil Hadi"
+                },
+                {
+                    "authorId": "2348211406",
+                    "name": "Naveed Ahmad"
+                },
+                {
+                    "authorId": "121908897",
+                    "name": "M. Alshara"
+                }
+            ],
+            "abstract": "Fake News (FN) prevalence on Online Social Networks (OSNs) and online websites is a worldwide issue. The previous studies on Fake News Detection (FND) have focused on rich-resource languages with limited relevance to users other than native speakers. Despite the progressing multilingual approaches, FND in low-resource languages remains obscure due to a lack of large-sized annotated corpora of real-world news. Large Language Models (LLMs) have emerged as a promising solution for multilingual FND. This study leverages the power of LLMs for an automated mechanism compared to traditional feature extraction methods. We curate the first large-sized multi-domain corpus, the Hook and Bait Urdu, with 78,409 fake and true news, and fine-tune the LLaMA 2 model for our proposed approach. We implement the curated dataset for two experiments. First, this study evaluates the dataset for unimodal text-based Urdu FND. The proposed LLaMA-based approach shows an accuracy of 0.978 and an F1-score of 0.971. For our second experiment, we fine-tuned the LLaMA 2-based framework for multilingual FND using the curated dataset (in Urdu) and the ISOT Fake News dataset (in English). Analytical and prediction performance comparisons with the previous studies validate the efficacy of the proposed framework with an accuracy of 0.984 and an F1-score of 0.980. The lightweight LoRA fine-tuning method, with 0.032% trainable parameters, ensured robust data handling, computational efficiency while leveraging early stopping and optimized hyperparameters for reliable and high-performing monolingual and multilingual FND. The real-world news dataset is publicly available for developing an automated FND mechanism to curb the threat of FN and related cybercrimes.",
+            "score": 9
+        },
+        {
+            "id": "82631e971de8f04ce28c90e8a40505d508b2902c",
+            "paperId": "82631e971de8f04ce28c90e8a40505d508b2902c",
+            "title": "Fake news detection in Urdu language using machine learning",
+            "year": 2023,
+            "citationCount": 17,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.7717/peerj-cs.1353",
+                "status": "CLOSED",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10280395, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study investigates issues and proposes fake news classier for Urdu news, using feature stacking, where feature vectors of preprocessed text and verbs extracted from the pre Processed text are combined."
+            },
+            "authors": [
+                {
+                    "authorId": "2143502060",
+                    "name": "M. Farooq"
+                },
+                {
+                    "authorId": "2188219511",
+                    "name": "Ansar Naseem"
+                },
+                {
+                    "authorId": "1430656665",
+                    "name": "F. Rustam"
+                },
+                {
+                    "authorId": "2007377902",
+                    "name": "Imran Ashraf"
+                }
+            ],
+            "abstract": "With the rise of social media, the dissemination of forged content and news has been on the rise. Consequently, fake news detection has emerged as an important research problem. Several approaches have been presented to discriminate fake news from real news, however, such approaches lack robustness for multi-domain datasets, especially within the context of Urdu news. In addition, some studies use machine-translated datasets using English to Urdu Google translator and manual verification is not carried out. This limits the wide use of such approaches for real-world applications. This study investigates these issues and proposes fake news classier for Urdu news. The dataset has been collected covering nine different domains and constitutes 4097 news. Experiments are performed using the term frequency-inverse document frequency (TF-IDF) and a bag of words (BoW) with the combination of n-grams. The major contribution of this study is the use of feature stacking, where feature vectors of preprocessed text and verbs extracted from the preprocessed text are combined. Support vector machine, k-nearest neighbor, and ensemble models like random forest (RF) and extra tree (ET) were used for bagging while stacking was applied with ET and RF as base learners with logistic regression as the meta learner. To check the robustness of models, fivefold and independent set testing were employed. Experimental results indicate that stacking achieves 93.39%, 88.96%, 96.33%, 86.2%, and 93.17% scores for accuracy, specificity, sensitivity, MCC, ROC, and F1 score, respectively.",
+            "score": 8
+        },
+        {
+            "id": "d892f6dda036eac1e70d0a9e74bdc208b93fe57d",
+            "paperId": "d892f6dda036eac1e70d0a9e74bdc208b93fe57d",
+            "title": "Multi-domain Urdu fake news detection using pre-trained ensemble model",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBYNCND",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC11906872, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Stacked ensemble learning of PLMs, ELECTRA, mBERT and XLM-RoBERTa is applied after apposite fine-tuning and hyperparameter optimization to overcome the limitations of each pre-trained transformer model and the prediction performance results of the proposed stacking approach surpass the performance of each pre-trained model."
+            },
+            "authors": [
+                {
+                    "authorId": "2224904920",
+                    "name": "Sheetal Harris"
+                },
+                {
+                    "authorId": "1500419209",
+                    "name": "Hassan Jalil Hadi"
+                },
+                {
+                    "authorId": "2348211406",
+                    "name": "Naveed Ahmad"
+                },
+                {
+                    "authorId": "121908897",
+                    "name": "M. Alshara"
+                }
+            ],
+            "abstract": "Fake News (FN) dissemination on websites and online platforms influences human behaviours, socio-political domains, and the sovereignty of a country. The outpour of biased news and propaganda on online portals can be addressed by restricting online propaganda using an automated mechanism. Proving the authenticity of news and information on online platforms in regional languages, such as Urdu, with limited resources and datasets, is challenging. Furthermore, limited research in resource-constrained languages has created language bias in Artificial Intelligence (AI) research, which is concentrated in this study. Natural Language Processing (NLP) techniques have been used for Fake News Detection (FND) for English news and various language-related tasks. Previous studies used Machine Learning (ML), Deep Learning (DL), and individual Pre-trained Language Models (PLMs) for Urdu FND. ML-based ensemble model showed better performance than pre-trained models for Urdu FND. We propose a methodology for Urdu FND by applying stacked ensemble learning of PLMs, ELECTRA, mBERT and XLM-RoBERTa after apposite fine-tuning and hyperparameter optimization. To overcome the limitations of each pre-trained transformer model, these are fine-tuned individually using a publicly available Urdu dataset. The prediction performance results of the proposed stacking approach surpass the performance of each pre-trained model. An Accuracy of 0.914, a Matthews Correlation Co-efficient (MCC) value of 0.898, and an F1-score of 0.904 validate the efficacy of the proposed ensemble model. Supplementary Information The online version contains supplementary material available at 10.1038/s41598-025-91054-4.",
+            "score": 8
+        },
+        {
+            "id": "a14eafad0eb069b72f60e792b2c42ead24bf41d1",
+            "paperId": "a14eafad0eb069b72f60e792b2c42ead24bf41d1",
+            "title": "Fake News Detection in Urdu using Deep Learning",
+            "year": 2022,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "https://vfast.org/journals/index.php/VTSE/article/download/1290/1094",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.21015/vtse.v10i4.1290?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.21015/vtse.v10i4.1290, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The experiments with the various systems have indicated that the MuRIL model significantly improves over the other models, such as the T5 Model, and attains an average F1 score of 0.96 and\u00a0a validation accuracy of 0.83."
+            },
+            "authors": [
+                {
+                    "authorId": "2279506977",
+                    "name": "Farah Rauf"
+                },
+                {
+                    "authorId": "2279507614",
+                    "name": "Roha Irfan"
+                },
+                {
+                    "authorId": "2279502897",
+                    "name": "Lyba Mushtaq"
+                },
+                {
+                    "authorId": "2279472863",
+                    "name": "Mohsin Ashraf"
+                }
+            ],
+            "abstract": "An increase in the volume of false information circulating as a direct consequence of the rise in the growth of social media has an effect of misguiding the general population. Therefore, a mechanism for identifying fake\u00a0news is required to prevent such repercussions. Almost all of these already existing algorithms for detecting fake news work with resource-rich languages such as\u00a0Spanish and English; however, few techniques can work for resource-constrained languages such as Urdu. The study aims to identify instances of fake news written in Urdu by applying deep learning and machine learning methodologies. We use the MuRIL and T5 models for the implementation process because these models were developed specifically for Urdu and Hindi language recognition. The newspaper articles included in the valid subset derived from credible news sources, and the accuracy of these items have been checked by hand. Inside the misinformation subsection, the problem of how challenging it was to discover fake news was overcome by employing experienced reporters who were native Urdu speakers and instructing them to compose deceptive news items purposefully. It has allowed the researchers to overcome the problem. The dataset covers various subjects, including business, sports, health, showbiz, and technologies. We have carried out baseline classification to use our Urdu database as a standard for other datasets. The experiments with the various systems have indicated that the MuRIL model significantly improves over the other models, such as the T5 Model, and attains an average F1 score of 0.96 and\u00a0a validation accuracy of 0.83. These results have been determined based on the findings of the experiments.",
+            "score": 8
+        },
+        {
+            "id": "a88605174364bc2c5aaa287418d1e2ec1bc3a3a9",
+            "paperId": "a88605174364bc2c5aaa287418d1e2ec1bc3a3a9",
+            "title": "Normalized effect size (NES): a novel feature selection model for Urdu fake news classification",
+            "year": 2023,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.7717/peerj-cs.1612",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC10702998, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A globally weighted term selection approach named normalized effect size (NES) to select highly discriminative features for Urdu fake news classification is proposed, based on the traditional inverse document frequency (TF-IDF) weighting measure."
+            },
+            "authors": [
+                {
+                    "authorId": "2257120363",
+                    "name": "Muhammad Wasim"
+                },
+                {
+                    "authorId": "32619786",
+                    "name": "Sehrish Munawar Cheema"
+                },
+                {
+                    "authorId": "2257070839",
+                    "name": "Ivan Miguel Pires"
+                }
+            ],
+            "abstract": "Social media has become an essential source of news for everyday users. However, the rise of fake news on social media has made it more difficult for users to trust the information on these platforms. Most research studies focus on fake news detection in the English language, and only a limited number of studies deal with fake news in resource-poor languages such as Urdu. This article proposes a globally weighted term selection approach named normalized effect size (NES) to select highly discriminative features for Urdu fake news classification. The proposed model is based on the traditional inverse document frequency (TF-IDF) weighting measure. TF-IDF transforms the textual data into a weighted term-document matrix and is usually prone to the curse of dimensionality. Our novel statistical model filters the most discriminative terms to reduce the data\u2019s dimensionality and improve classification accuracy. We compare the proposed approach with the seven well-known feature selection and ranking techniques, namely normalized difference measure (NDM), bi-normal separation (BNS), odds ratio (OR), GINI, distinguished feature selector (DFS), information gain (IG), and Chi square (Chi). Our ensemble-based approach achieves high performance on two benchmark datasets, BET and UFN, achieving an accuracy of 88% and 90%, respectively.",
+            "score": 8
+        },
+        {
+            "id": "72f2d83b8da7d466c47bafc53bcd17bd6a0e5702",
+            "paperId": "72f2d83b8da7d466c47bafc53bcd17bd6a0e5702",
+            "title": "Detecting Fake News in Urdu Language Using Machine Learning, Deep Learning, and Large Language Model-Based Approaches",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/info16070595?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/info16070595, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study aims to solve the problem of finding fake news in Urdu by creating a detailed process and training models using machine learning, deep learning, and large language models (LLMs)."
+            },
+            "authors": [
+                {
+                    "authorId": "2143502060",
+                    "name": "M. Farooq"
+                },
+                {
+                    "authorId": "2342438406",
+                    "name": "Syed Muhammad Asadullah Gilani"
+                },
+                {
+                    "authorId": "2005093317",
+                    "name": "Muhammad Faraz Manzoor"
+                },
+                {
+                    "authorId": "2292413929",
+                    "name": "Momina Shaheen"
+                }
+            ],
+            "abstract": "Fake news is false or misleading information that looks like real news and spreads through traditional and social media. It has a big impact on our social lives, especially in politics. In Pakistan, where Urdu is the main language, finding fake news in Urdu is difficult because there are not many effective systems for this. This study aims to solve this problem by creating a detailed process and training models using machine learning, deep learning, and large language models (LLMs). The research uses methods that look at the features of documents and classes to detect fake news in Urdu. Different models were tested, including machine learning models like Na\u00efve Bayes and Support Vector Machine (SVM), as well as deep learning models like Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM), which used embedding techniques. The study also used advanced models like BERT and GPT to improve the detection process. These models were first evaluated on the Bend-the-Truth dataset, where CNN achieved an F1 score of 72%, Na\u00efve Bayes scored 78%, and the BERT Transformer achieved the highest F1 score of 79% on Bend the Truth dataset. To further validate the approach, the models were tested on a more diverse dataset, Ax-to-Grind, where both SVM and LSTM achieved an F1 score of 89%, while BERT outperformed them with an F1 score of 93%.",
+            "score": 7
+        },
+        {
+            "id": "70ac4997e7b5e4ef5ea7d59e1419a409a35a5ccb",
+            "paperId": "70ac4997e7b5e4ef5ea7d59e1419a409a35a5ccb",
+            "title": "Comparative analysis of machine learning methods to detect fake news in an Urdu language corpus",
+            "year": 2022,
+            "citationCount": 10,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.7717/peerj-cs.1004",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9299232, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study analyzes the use and efficacy of various machine learning classifiers along with a deep learning model to detect fake news in the Urdu language and suggests that machine learning models tend to show better performance than deep learning models."
+            },
+            "authors": [
+                {
+                    "authorId": "2145649133",
+                    "name": "Adnan Rafique"
+                },
+                {
+                    "authorId": "1430656665",
+                    "name": "F. Rustam"
+                },
+                {
+                    "authorId": "1820791764",
+                    "name": "Manideep Narra"
+                },
+                {
+                    "authorId": "1403306506",
+                    "name": "A. Mehmood"
+                },
+                {
+                    "authorId": "2149210109",
+                    "name": "Ernesto Lee"
+                },
+                {
+                    "authorId": "2007377902",
+                    "name": "Imran Ashraf"
+                }
+            ],
+            "abstract": "Wide availability and large use of social media enable easy and rapid dissemination of news. The extensive spread of engineered news with intentionally false information has been observed over the past few years. Consequently, fake news detection has emerged as an important research area. Fake news detection in the Urdu language spoken by more than 230 million people has not been investigated very well. This study analyzes the use and efficacy of various machine learning classifiers along with a deep learning model to detect fake news in the Urdu language. Logistic regression, support vector machine, random forest (RF), naive Bayes, gradient boosting, and passive aggression have been utilized to this end. The influence of term frequency-inverse document frequency and BoW features has also been investigated. For experiments, a manually collected dataset that contains 900 news articles was used. Results suggest that RF performs better and achieves the highest accuracy of 0.92 for Urdu fake news with BoW features. In comparison with machine learning models, neural networks models long short term memory, and multi-layer perceptron are used. Machine learning models tend to show better performance than deep learning models.",
+            "score": 7
+        },
+        {
+            "id": "f946d55b2d59e3288da28111cc2f623fcf2f50b7",
+            "paperId": "f946d55b2d59e3288da28111cc2f623fcf2f50b7",
+            "title": "Detection of Human and Machine-Authored Fake News in Urdu",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.19517, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work updated detection schema to include machine-generated news with focus on the Urdu language, and proposes a hierarchical detection strategy to improve the accuracy and robustness."
+            },
+            "authors": [
+                {
+                    "authorId": "2328022615",
+                    "name": "Muhammad Zain Ali"
+                },
+                {
+                    "authorId": "2327940440",
+                    "name": "Yuxia Wang"
+                },
+                {
+                    "authorId": "2272612908",
+                    "name": "Bernhard Pfahringer"
+                },
+                {
+                    "authorId": "2148366922",
+                    "name": "Tony Smith"
+                }
+            ],
+            "abstract": "The rise of social media has amplified the spread of fake news, now further complicated by large language models (LLMs) like ChatGPT, which ease the generation of highly convincing, error-free misinformation, making it increasingly challenging for the public to discern truth from falsehood. Traditional fake news detection methods relying on linguistic cues also becomes less effective. Moreover, current detectors primarily focus on binary classification and English texts, often overlooking the distinction between machine-generated true vs. fake news and the detection in low-resource languages. To this end, we updated detection schema to include machine-generated news with focus on the Urdu language. We further propose a hierarchical detection strategy to improve the accuracy and robustness. Experiments show its effectiveness across four datasets in various settings.",
+            "score": 7
+        },
+        {
+            "id": "ceaa7eb3a2bf2b0a21f3c611b79ef6d471925ecf",
+            "paperId": "ceaa7eb3a2bf2b0a21f3c611b79ef6d471925ecf",
+            "title": "Automatic identification of Urdu fake news using Logistic Regression Model",
+            "year": 2022,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICOSST57195.2022.10016840?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICOSST57195.2022.10016840, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study proposes a methodology to identify Urdu fake news based on machine learning techniques and uses the TF-IDF feature extraction technique and Logistic regression classifier to classify Urdufake news automatically."
+            },
+            "authors": [
+                {
+                    "authorId": "2202014846",
+                    "name": "Rana Salahuddin"
+                },
+                {
+                    "authorId": "2202015152",
+                    "name": "Muhammad Wasim"
+                }
+            ],
+            "abstract": "Social media offers a platform to disseminate information with family and friends quickly. The spread of fake news on social media has a significant social and economic impact. With the ever-increasing amount of social media data, it is challenging to quickly differentiate between real and fake news. In previous years, the research community focused on Fake news classification for the English language. However, many resource-poor languages, such as Urdu, still require efficient methods to classify and contain fake news. This study proposes a methodology to identify Urdu fake news based on machine learning techniques. Our proposed methodology uses the TF-IDF feature extraction technique and Logistic regression classifier to classify Urdu fake news automatically. The proposed approach outperforms the baseline with a 72%f1 score.",
+            "score": 7
+        },
+        {
+            "id": "d11de8b62c13f21ec7332b99c59bcc52ca57c7f8",
+            "paperId": "d11de8b62c13f21ec7332b99c59bcc52ca57c7f8",
+            "title": "Fake News Identification in Urdu Tweets Using Machine Learning Models",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "https://abbdm.com/index.php/Journal/article/download/105/77",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.62019/abbdm.v4i1.105?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.62019/abbdm.v4i1.105, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The study's findings suggest that deep learning models hold much promise for resolving the problem of inaccurate information in Urdu, and opens the door for additional research and the creation of real-time algorithms for spotting false information."
+            },
+            "authors": [
+                {
+                    "authorId": "2293511151",
+                    "name": "Zahid Iqbal"
+                },
+                {
+                    "authorId": "2263773697",
+                    "name": "Fida Muhammad Khan"
+                },
+                {
+                    "authorId": "2263783989",
+                    "name": "Inam Ullah Khan"
+                }
+            ],
+            "abstract": "\n\n\n\nThere is an increasing number of people who generate and distribute content online, especially via social media platforms, which is primarily responsible for the proliferation of fake information. Fake information can cause controversy and distort people's perspectives, so it needs to be addressed immediately. The goal of this work is to detect false information in Urdu tweets, a difficult task given the language's large user population and particular grammatical difficulties. We offer an all-inclusive machine learning system that reliably classifies tweets in Urdu as legitimate or false. The methodology we use consists of several key steps: preprocessing, which includes normalizing, tokenizing, removing stop words, and stemming to prepare the data for analysis; data collection, which involves compiling and annotating a sizable dataset of Urdu tweets; and feature extraction, which makes use of technique TF-IDF to extract the semantic and syntactic nuances of the language. We investigate various machine learning models, including RNNs and CNNs, and more sophisticated neural networks like SVM, Random Forest, Logistic Regression, Naive Bayes, and Decision Tree to find the most efficient method for resolving this classification problem. The models are put through a rigorous training and assessment process using measures including the F1 score, accuracy, precision, and recall. Furthermore, a thorough examination of their confusion matrices is done. Our study's findings suggest that deep learning models hold much promise for resolving the problem of inaccurate information in Urdu. This opens the door for additional research and the creation of real-time algorithms for spotting false information. The subject of information integrity in Urdu language content is improved by this work, which also sheds light on the applicability of machine learning techniques in many linguistic contexts. Using SVM, Random Forest, Logistic Regression, Naive Bayes, and Decision Tree we achieved accuracies of 74%,91%, 76%, 78%, and 67% respectively. Meanwhile, CNN and RNN are the classifiers with the highest accuracy levels at 91% and 99% respectively. The results demonstrate that the CNN Model achieved 99% highest accuracy in detecting fake news from Urdu Tweets.\n\n\n\n",
+            "score": 7
+        },
+        {
+            "id": "5a0407d9bc61046b4064e5864d7007cd1f80313f",
+            "paperId": "5a0407d9bc61046b4064e5864d7007cd1f80313f",
+            "title": "The 2021 Urdu Fake News Detection Task using Supervised Machine Learning and Feature Combinations",
+            "year": 2022,
+            "citationCount": 7,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2204.03064",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2204.03064, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": null
+            },
+            "authors": [
+                {
+                    "authorId": "2701610",
+                    "name": "Muhammad Humayoun"
+                }
+            ],
+            "abstract": "This paper presents the system description submitted at the FIRE Shared Task:\"The 2021 Fake News Detection in the Urdu Language\". This challenge aims at automatically identifying Fake news written in Urdu. Our submitted results ranked fifth in the competition. However, after the result declaration of the competition, we managed to attain even better results than the submitted results. The best F1 Macro score achieved by one of our models is 0.6674, higher than the second-best score in the competition. The result is achieved on Support Vector Machines (polynomial kernel degree 1) with stopwords removed, lemmatization applied, and selecting the 20K best features out of 1.557 million features in total (which were produced by Word n-grams n=1,2,3,4 and Char n-grams n=2,3,4,5,6). The code is made available for reproducibility.",
+            "score": 6
+        },
+        {
+            "id": "2e045c23f0ed291da4eae0f0617df7a4b36aa4c0",
+            "paperId": "2e045c23f0ed291da4eae0f0617df7a4b36aa4c0",
+            "title": "Machine Learning Techniques for Fake News Detection in Low-Resource Hindi Language: A Comparative Study",
+            "year": 2023,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICCCNT56998.2023.10307399?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICCCNT56998.2023.10307399, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A benchmark dataset of 15355 fake news articles and 18849 real news articles is presented, as well as a Supervised Machine Learning technique for detecting Hindi false news using grammatical features, which fared significantly better than all the other variants of SVM."
+            },
+            "authors": [
+                {
+                    "authorId": "2268074412",
+                    "name": "Apoorva Anand Kulkarni"
+                },
+                {
+                    "authorId": "2268162583",
+                    "name": "Rakshith Shenoy"
+                },
+                {
+                    "authorId": "2268071998",
+                    "name": "Josh Baradia"
+                },
+                {
+                    "authorId": "2268188763",
+                    "name": "Richa Sharma"
+                },
+                {
+                    "authorId": "2268072676",
+                    "name": "Arti Arya"
+                }
+            ],
+            "abstract": "The dissemination of fake news is a key concern as it can lead to serious negative consequences. It has the potential to sway the minds of the public which passively consumes their information without verifying its content. This happens due to an abundance of unverified sources available online, which accelerates the spread of fake news. It occurs primarily through regional languages, where minimal fact-checking is done. There is a dire need to identify these news articles and stop the propagation of misinformation through these platforms. Due to a scarcity of resources for detecting false news in Hindi, the creation of a comprehensive, high-quality dataset was necessary. This paper presents a benchmark dataset of 15355 fake news articles and 18849 real news articles, as well as a Supervised Machine Learning technique for detecting Hindi false news using grammatical features. As Support Vector Machine(SVM) is one of the most sophisticated yet simple-to-implement algorithms, different variants of SVM were compared. Ensemble learning techniques such as Adaboost were also explored. With an accuracy of 87.71%, linear SVM fared significantly better than all the other variants. Adaboost had the best performance with an accuracy of 90.1%.",
+            "score": 6
+        },
+        {
+            "id": "b3a4665b557e89f3b6104b791fddd5856cbb9e9a",
+            "paperId": "b3a4665b557e89f3b6104b791fddd5856cbb9e9a",
+            "title": "Overview of the Shared Task on Fake News Detection in Urdu at FIRE 2021",
+            "year": 2022,
+            "citationCount": 19,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2207.05133",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2207.05133, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The technical reports submitted by the participants demonstrated different data representation techniques ranging from count-based BoW features to word vector embeddings as well as the use of numerous machine learning algorithms ranging from traditional SVM to various neural network architectures including Transformers such as BERT and RoBERTa."
+            },
+            "authors": [
+                {
+                    "authorId": "153942516",
+                    "name": "Maaz Amjad"
+                },
+                {
+                    "authorId": "144140335",
+                    "name": "G. Sidorov"
+                },
+                {
+                    "authorId": "1684668",
+                    "name": "Alisa Zhila"
+                },
+                {
+                    "authorId": "1747784",
+                    "name": "Alexander Gelbukh"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                }
+            ],
+            "abstract": "Automatic detection of fake news is a highly important task in the contemporary world. This study reports the 2nd shared task called UrduFake@FIRE2021 on identifying fake news detection in Urdu. The goal of the shared task is to motivate the community to come up with efficient methods for solving this vital problem, particularly for the Urdu language. The task is posed as a binary classification problem to label a given news article as a real or a fake news article. The organizers provide a dataset comprising news in five domains: (i) Health, (ii) Sports, (iii) Showbiz, (iv) Technology, and (v) Business, split into training and testing sets. The training set contains 1300 annotated news articles -- 750 real news, 550 fake news, while the testing set contains 300 news articles -- 200 real, 100 fake news. 34 teams from 7 different countries (China, Egypt, Israel, India, Mexico, Pakistan, and UAE) registered to participate in the UrduFake@FIRE2021 shared task. Out of those, 18 teams submitted their experimental results, and 11 of those submitted their technical reports, which is substantially higher compared to the UrduFake shared task in 2020 when only 6 teams submitted their technical reports. The technical reports submitted by the participants demonstrated different data representation techniques ranging from count-based BoW features to word vector embeddings as well as the use of numerous machine learning algorithms ranging from traditional SVM to various neural network architectures including Transformers such as BERT and RoBERTa. In this year's competition, the best performing system obtained an F1-macro score of 0.679, which is lower than the past year's best result of 0.907 F1-macro. Admittedly, while training sets from the past and the current years overlap to a large extent, the testing set provided this year is completely different.",
+            "score": 5
+        },
+        {
+            "id": "ce31b3010f8852fc892d8ab07f1079b058887e9b",
+            "paperId": "ce31b3010f8852fc892d8ab07f1079b058887e9b",
+            "title": "Overview of the Shared Task on Fake News Detection in Urdu at FIRE 2020",
+            "year": 2022,
+            "citationCount": 15,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2207.11893",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2207.11893, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The first shared task on fake news detection in Urdu language was posed as a binary classification task, in which the goal is to differentiate between real and fake news."
+            },
+            "authors": [
+                {
+                    "authorId": "153942516",
+                    "name": "Maaz Amjad"
+                },
+                {
+                    "authorId": "144140335",
+                    "name": "G. Sidorov"
+                },
+                {
+                    "authorId": "1684668",
+                    "name": "Alisa Zhila"
+                },
+                {
+                    "authorId": "1381961498",
+                    "name": "A. Gelbukh"
+                },
+                {
+                    "authorId": "143752702",
+                    "name": "Paolo Rosso"
+                }
+            ],
+            "abstract": "This overview paper describes the first shared task on fake news detection in Urdu language. The task was posed as a binary classification task, in which the goal is to differentiate between real and fake news. We provided a dataset divided into 900 annotated news articles for training and 400 news articles for testing. The dataset contained news in five domains: (i) Health, (ii) Sports, (iii) Showbiz, (iv) Technology, and (v) Business. 42 teams from 6 different countries (India, China, Egypt, Germany, Pakistan, and the UK) registered for the task. 9 teams submitted their experimental results. The participants used various machine learning methods ranging from feature-based traditional machine learning to neural networks techniques. The best performing system achieved an F-score value of 0.90, showing that the BERT-based approach outperforms other machine learning techniques",
+            "score": 5
+        },
+        {
+            "id": "a2fe9a67f783d6a4940203586cb7ee0f1f92376c",
+            "paperId": "a2fe9a67f783d6a4940203586cb7ee0f1f92376c",
+            "title": "Multi-Task Counterpropaganda Semantic Learning for Detecting Fake News",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2025.3587145?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2025.3587145, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Ming-Jhe Hu"
+                },
+                {
+                    "authorId": "41186721",
+                    "name": "Hung-Yu Kao"
+                }
+            ],
+            "abstract": "With the surge in online information, unverified claims and fake news, especially in politics and economics, have become rampant. This rise makes distinguishing true from false news crucial, as fake news can manipulate public perception and cause socio-economic harm. Previous research indicates that human-written fake news often employs propaganda techniques to seem credible. However, the smaller volume of fake news data compared to real news leads to imbalances in training datasets. This imbalance can cause models to learn incorrect correlations instead of accurately identifying the semantic features of deceptive content. This paper introduces a counterpropaganda semantic learning framework for detecting fake news. Utilizing existing fake news datasets, we automatically generate propaganda-related summaries, reasons, and scores using a large language model. We then create counterpropaganda semantics by enhancing the potential propaganda elements in news content. The model learns the relationship between news and propaganda through a multi-task learning strategy. Experimental results demonstrate that this framework improves small language models\u2019 accuracy and semantic understanding in detecting fake news while reducing the need for intermediary pre-training and manual review of generated training data. Our model, data, and code are open-source at https://github.com/Ryan-Hu-AI/MTCPSL",
+            "score": 4
+        },
+        {
+            "id": "8042cad4116c61566dd45c143f9bc23a72f05917",
+            "paperId": "8042cad4116c61566dd45c143f9bc23a72f05917",
+            "title": "TweetGuard: Combining Transformer and Bi-LSTM Architectures for Fake News Detection in Large-Scale Tweets",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.11648/j.ijdsa.20251102.12?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.11648/j.ijdsa.20251102.12, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368884536",
+                    "name": "Kowshik Roy"
+                },
+                {
+                    "authorId": "2213736090",
+                    "name": "Farhana Bina"
+                }
+            ],
+            "abstract": "The proliferation of misinformation on platforms like Twitter, where rapid dissemination can significantly impact public discourse, underscores the urgent need for effective automated fake news detection systems. These systems are crucial in preventing the spread of falsehoods and maintaining informational integrity. Traditionally, one of the challenges in developing such systems has been the lack of comprehensive benchmark datasets, which are essential for reliably training and testing detection models. Additionally, the rapid evolution of deceptive tactics makes traditional methods less effective, necessitating new approaches that can adapt to emerging misinformation patterns. In response to the challenges, a robust model named \"TweetGuard\" has developed, leveraging the 'TruthSeeker' dataset, a recently published benchmark offering a rich collection of annotated tweets. This dataset provides a solid foundation for training and refining our detection techniques. The proposed model employs a novel classification architecture that integrates transformer and Bi-LSTM technologies in a concatenation mode, enhanced by advanced preprocessing steps, including BERTweet, for effective tokenization and contextual understanding. An ablation study highlights the individual contributions of the Bi-LSTM and Transformer components, as well as their combined effect, demonstrating their critical roles in enhancing the model's performance. Compared to conventional classifiers, including various CNN, LSTM, Bi-LSTM, BERT and Transformer configurations, the proposed model demonstrates superior performance, as evidenced by comprehensive statistical testing. TweetGuard achieves an accuracy of 94.02%, an F1-score of 93.84%, and a ROC-AUC score of 0.9614 on the TruthSeeker dataset. Additional metrics, such as a Matthews Correlation Coefficient (MCC) of 0.8802 and a fake news detection rate of 93.70%, also demonstrate the model's stability and robustness. Its effectiveness and generalizability are further validated through rigorous testing across three additional fake news datasets, confirming its reliability and adaptability in diverse informational settings. This evaluation not only highlights our model's superior ability to identify and classify misinformation accurately but also establishes a new benchmark for automated fake news detection on social media platforms.\n",
+            "score": 4
+        },
+        {
+            "id": "cf3848151a4e9163d6445dab8f2248e5e08d8826",
+            "paperId": "cf3848151a4e9163d6445dab8f2248e5e08d8826",
+            "title": "Fake News Detection in Model Integral: A Hybrid CNN-BiLSTM Model",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.52088/ijesty.v5i3.1058?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.52088/ijesty.v5i3.1058, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2369126786",
+                    "name": "Renuka Nyayadhish"
+                },
+                {
+                    "authorId": "2369123879",
+                    "name": "Chaya Jadhav"
+                },
+                {
+                    "authorId": "117763873",
+                    "name": "Ch Bhupati"
+                },
+                {
+                    "authorId": "2369130664",
+                    "name": "R.A. Mabel Rose"
+                },
+                {
+                    "authorId": "2369125202",
+                    "name": "M. Prabhu"
+                }
+            ],
+            "abstract": "The act of recognizing news that intentionally spreads false information via social media or traditional news sources is known as fake news detection. The characteristics of fake news make it difficult to identify. The spread of fake news and misleading information has increased dramatically due to social media's role as a communication tool and the quick advancement of technology. There is an urgent need for automated and intelligent systems that can differentiate between authentic and fraudulent information due to the fast dissemination of unverified content. The proposed hybrid model efficiently captures regional and worldwide relationships in textual details to address this by combining multiscale residual CNN and BiLSTM layers. The BiLSTM layers manage contextual representations and sequential dependencies, while the CNN layers concentrate on extracting deep local features. The model's capacity to recognize patterns of deception in textual content and comprehend semantic flow is enhanced by this dual architecture. The Edge-IIoT set data and the IoT-23 information from Aposemat were utilized in this study to assess the suggested framework empirically. A concept based on information transfer and sophisticated adaptive systems, we provide an understanding of outliers management paradigm of \"generation\u2013spread\u2013identification\u2013refutation\" for identifying false information during emergencies. Findings from experiments clearly illustrate the superiority of the BiLSTM approach, demonstrating not only its state-of-the-art efficacy in identifying fake news but also its significant edge over traditional machine learning algorithms. This highlights the BiLSTM approach's critical role in protecting our information ecosystems from the ubiquitous threat of misinformation.",
+            "score": 3
+        },
+        {
+            "id": "eaf01166f8541d970661e8f51dc2db20cb4b0691",
+            "paperId": "eaf01166f8541d970661e8f51dc2db20cb4b0691",
+            "title": "Improving Fake News Detection Accuracy with Lexicon-based Approach and LSTM through Text Preprocessing",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.14710/vol15iss2pp285-292?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.14710/vol15iss2pp285-292, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2081177376",
+                    "name": "Chamdan Mashuri"
+                },
+                {
+                    "authorId": "2369155774",
+                    "name": "Edwin Hari Agus Prastyo"
+                },
+                {
+                    "authorId": "2120648612",
+                    "name": "Fajar Rohman Hariri"
+                }
+            ],
+            "abstract": "Fake news detection has become a critical issue in the digital era, especially with the rapid growth of social media and online platforms. This research aims to enhance the accuracy of detecting fake news in Indonesian by developing a model using lexicon-based and Long Short-Term Memory (LSTM) approaches. The study integrates sentiment analysis with lexicon-based scoring to identify key features in news articles, while LSTM is employed to analyze sequential patterns in the data. The methods were tested on a dataset consisting of both hoax and non-hoax news collected from reliable sources. The results indicate that the hybrid model significantly improves the detection accuracy, achieving an impressive accuracy rate of 99%. This research demonstrates the potential of combining lexicon-based and LSTM approaches to overcome challenges in detecting fake news, especially in low-resource languages like Indonesian. The findings contribute to advancing the development of reliable and efficient systems for combating misinformation in the digital age.",
+            "score": 3
+        },
+        {
+            "id": "e9fb5c4282d5ba05254f485b55553fb2e3e6e449",
+            "paperId": "e9fb5c4282d5ba05254f485b55553fb2e3e6e449",
+            "title": "Detecting Fake News in Social Media: An Approach Utilizing Machine Learning to Uncover Disinformation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.24996/ijs.2025.66.7.27?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.24996/ijs.2025.66.7.27, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374754762",
+                    "name": "Mustafa Abdul-Razzaq Kareem"
+                },
+                {
+                    "authorId": "73697223",
+                    "name": "A. A. Abdulrahman"
+                }
+            ],
+            "abstract": "The increasing number of untruths on social media has become a critical concern, affecting public sentiment and confidence. The broad spread of misleading information on the Internet and other social platforms presents a substantial barrier, exerting an impact on public sentiment, influencing political discussions, and eroding the reliability of information sources. Identifying false information on the X platform, previously known as Twitter, is an intricate task because of the network's attributes, such as conciseness, swift spread, and varied user engagements. Extracting crucial information from brief texts, such as tweets, is challenging, even with precise labeling. This study focuses on recognizing misinformation on social media platforms. The CIC Truth-Seeker Dataset 2023, one of the most extensive datasets in its category, contains over 134,000 labeled tweets. The study introduces novel methods in the field of short text classification, incorporating machine learning and natural language processing techniques (NLP). These techniques involve feature extraction using the term frequency-inverse document frequency (TF-IDF) algorithm after the dataset is preprocessed. The study then tests a number of machine learning models, including Random Forest RF, K-Nearest Neighbor KNN, Decision Tree DT, Logistic Regression LR, Naive Bayes NB, and stochastic gradient descent SGD, to see which ones can tell the most accurate difference between real and fake tweets. The findings demonstrated significant advancements in models designed to handle short text effectively, effectively addressing a practical issue such as automatically identifying fake content on social media platforms. Furthermore, we have achieved a significant advantage over previous research on the same dataset. When implementing the models on the news data, the random forest method attained the utmost accuracy at 93%, while the K-Nearest Neighbor strategy yielded a lower accuracy of 68%. This research paper aims to offer helpful information and practical answers to recognizing and reducing false news on social media platforms, specifically focusing on the X platform. Through a Truth-Seeker dataset, we will utilize machine learning methods to enhance previous text classification models.",
+            "score": 3
+        },
+        {
+            "id": "6ea93669079439817ed89bb77fe200a4c6a0b6b0",
+            "paperId": "6ea93669079439817ed89bb77fe200a4c6a0b6b0",
+            "title": "Development of a Machine Learning-Based Model In Detecting Fake News",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.71274/ijpp.v13i2.569?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.71274/ijpp.v13i2.569, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372918581",
+                    "name": "Esther Kinkosi Tomba"
+                },
+                {
+                    "authorId": "81012453",
+                    "name": "L. M. Muriira"
+                },
+                {
+                    "authorId": "2372918517",
+                    "name": "Timothy Anondo"
+                }
+            ],
+            "abstract": "Information through social media and other news outlets made detecting fake news crucial for individuals. The Pew Research Centre conducted surveys in the U.S.A to examine how adults consume news via social media, aiming to understand the behaviours and demographics of those relying on such platforms. This study addressed a critical gap in traditional fake news detection methods, which mainly used manual approaches and lacked advanced machine learning or AI techniques. Traditional methods are insufficient to handle the complexity, and contextual manipulation, where accurate information is presented misleadingly. To overcome these limitations, the study developed a ML Based model for detecting fake news, by analysing article content, and identifying patterns of misinformation. It employed advanced natural language processing techniques and supervised learning algorithms such as Decision Trees with 99.67% of accuracy, Logistic Regression with 99.13%, and Random Forest with 99.15%. Methods like Tokenization and TF-IDF were used to train the model using the ISO Fake news dataset. This dataset included real news from Reuters.com and fake news from unreliable sources flagged by PolitiFact and Wikipedia. Additional labelled datasets like LIAR and FakeNewsNet, along with newly gathered data, were used to supplement the training. Model performance was assessed using accuracy, precision, recall and F1-Score, all achieving 99.67%, demonstrating superior detection capabilities. The research contributed to ML by advancing NLP Techniques and improving fake news detection models. The study recommends future researchers, engineers and all those involved in developing machine learning systems to enhance further effectiveness should expand datasets and including diverse languages, applying deep learning models like RNN, CNN, and Transformers, (e.g., BERT, ROBERTa) for better contextual analysis, and establishing benchmarks using real-world case studies. \u00a0\u00a0\u00a0",
+            "score": 3
+        },
+        {
+            "id": "7d10cc3dce28d751dfdd35eecf7d50f290e14c93",
+            "paperId": "7d10cc3dce28d751dfdd35eecf7d50f290e14c93",
+            "title": "Fake News Detection: A Machine Learning Approach",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.51584/ijrias.2025.100500041?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.51584/ijrias.2025.100500041, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2365796166",
+                    "name": "Moses Daniel Kwaknat"
+                },
+                {
+                    "authorId": "2025208",
+                    "name": "Nentawe Gurumdimma"
+                }
+            ],
+            "abstract": "Fake news has become one of the most discussed topics around the world today because of the influence it has on the decision making of individuals and even top government bodies around the world. It has become a real menace to society especially as it is easily disseminated on the internet through the use of social media. Many algorithms and models have been developed over the years to help checkmate the spread of fake news on the internet. However, there has been no real implementation of these algorithms online for the public to use. This research built a fake news detection model using three different binary classifiers: naive Bayes, logistic regression, and random forest. The logistic regression classifier was found to be the most accurate with an accuracy of 96%. The dataset was sourced from Kaggle and comprises labeled real and fake news articles. Evaluation was extended to include precision, recall, and F1-score for better performance insight. The model was deployed as a web application.",
+            "score": 3
+        },
+        {
+            "id": "e4c7caaad0767aaa2590e7380f70efe3323147f7",
+            "paperId": "e4c7caaad0767aaa2590e7380f70efe3323147f7",
+            "title": "A Data-Driven Framework for Fake News Detection Via Web Scraping and Machine Learning Approach",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.38124/ijisrt/25jun1003?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.38124/ijisrt/25jun1003, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368349389",
+                    "name": "Sarvesh Kumar"
+                },
+                {
+                    "authorId": "2909154",
+                    "name": "Dr. Yusuf Perwej"
+                },
+                {
+                    "authorId": "2368378365",
+                    "name": "Farheen Siddiqui"
+                },
+                {
+                    "authorId": "2368463320",
+                    "name": "Ankit Shukla"
+                },
+                {
+                    "authorId": "145799041",
+                    "name": "Nikhat Akhtar"
+                }
+            ],
+            "abstract": "A great deal of misinformation has been circulated on a global scale in recent years due to the explosion of social\nmedia. The spread of false information has been worsened by recent political events. Some 1835 news stories were completely\nmade up, like the one about \"Bat-men on the moon.\" There has to be a system in place for checking claims, particularly\nthose that get a lot of attention before being debunked by reliable sources. In order to properly categorize and identify fake\nnews, a plethora of machine learning techniques have been used. The technique for spotting fake news inside datasets is the\nfocus of this study. Online traditional news stories and news from other sources make up the bulk of the collection. The\noutcomes are compared to those of deep learning and traditional machine learning methods applied to the datasets, as well\nas long short-term memory (LSTM). Several example procedures are compared with the recommended methodology, and\nthe results are given. In a number of respects, our work is superior than current methods. This approach has laid the\ngroundwork for a system that can spot several red flags associated with fake news, classifying the material as either genuine\nor fraudulent and making decisions easier.",
+            "score": 3
+        },
+        {
+            "id": "7be3517fbd7c474a4286bfb2cc788b3d5810b877",
+            "paperId": "7be3517fbd7c474a4286bfb2cc788b3d5810b877",
+            "title": "Classification of Real and Fake News Using the Artificial Neural Network Method",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.33795/jartel.v15i2.7422?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.33795/jartel.v15i2.7422, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "98115782",
+                    "name": "Gaguk Suprianto"
+                },
+                {
+                    "authorId": "2369357683",
+                    "name": "Muhammad Septama Prasetya"
+                },
+                {
+                    "authorId": "2369354967",
+                    "name": "Raizsa Noor Jevera Meimo Nakashita"
+                }
+            ],
+            "abstract": "The rapid spread of fake news through digital platforms poses a significant challenge in the current era, as misinformation can quickly influence public perception and disrupt social stability. This research focuses on the development and implementation of an Artificial Neural Network (ANN) model to classify news articles as either real or fake. The study utilizes news data collected from the past year, which is processed through several stages including data preprocessing, feature extraction, model training, and evaluation. The ANN model is designed to recognize complex patterns in news text, enabling it to distinguish between authentic and fabricated information with high accuracy. Experimental results indicate that the proposed ANN approach achieves an accuracy rate of 98% in classifying news articles. The findings also reveal annual fluctuations in the distribution of fake and real news, with a notable decline in fake news observed in 2025, which may reflect increased public awareness and improved verification practices. The study highlights the ongoing risks posed by digital misinformation and underscores the importance of integrating ANN-based solutions into information systems to enhance digital literacy and support more reliable news dissemination. This contribution is expected to assist stakeholders in mitigating the negative impacts of fake news and fostering a more trustworthy digital information environment.",
+            "score": 3
+        },
+        {
+            "id": "b24794704babc89a6d22e05b740d0b5bc6dd0c1b",
+            "paperId": "b24794704babc89a6d22e05b740d0b5bc6dd0c1b",
+            "title": "Fake News Detection Model Ndetect Using Ensemble Machine Learning Techniques",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.64252/yff1d378?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.64252/yff1d378, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2345017727",
+                    "name": "Jyoti"
+                },
+                {
+                    "authorId": "2287965310",
+                    "name": "Yogesh Kumar"
+                }
+            ],
+            "abstract": "Abstract: Social media's ability to disseminate information quickly has made it possible for both fake and legitimate news to proliferate, endangering political processes, public confidence, and personal reputations. This paper addresses this issue by putting forth the ensemble machine learning model NDetect, which successfully detects fake news from textual content by combining Decision Tree, Support Vector Machine, Logistic Regression, and Random Forest classifiers. The ISOT Fake News Dataset, which included more than 44,000 news stories with labels, was used to train and test the model. Enhancing the accuracy of fake news identification by utilizing the capabilities of many classifiers through ensemble learning was the main goal of this study. The conventional measures of accuracy, precision, recall, F1-score, and ROC-AUC were used to thoroughly assess NDetect's performance. With a ROC-AUC score of 0.957 and an accuracy of 89%, the suggested model outperformed all baseline models, including Random Forest (52%), SVM (54%), Logistic Regression (53%), and individual Decision Tree (87%).",
+            "score": 3
+        },
+        {
+            "id": "41e34f0b9c3b0b1cc4e7547ebf2197f19217f3b3",
+            "paperId": "41e34f0b9c3b0b1cc4e7547ebf2197f19217f3b3",
+            "title": "Enhanced Fake News Detection with Domain-Specific Word Embeddings: A TorchText-Based Method for News Semantics Representation.",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.33022/ijcs.v14i4.4831?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.33022/ijcs.v14i4.4831, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "108811411",
+                    "name": "Sikhumbuzo Ngwenya"
+                },
+                {
+                    "authorId": "2309347572",
+                    "name": "Tinashe Crispen Garidzira"
+                }
+            ],
+            "abstract": "\n \n \n \n\u00a0 \n\u00a0 \n \n \nThe prevalence of misinformation in digital media highlights the need for effective fake news detection methods. This paper presents a novel approach that leverages domain-specific word embeddings, trained specifically on news content, to improve the accuracy of fake news classification. Using TorchText, we generated 128-dimensional embeddings, optimized with Bi-LSTM and GRU models, achieving a test accuracy of 93.51% with a margin of error of 0.255. Two models were developed to classify fake news based on news headlines. The first model using pre-trained embeddings achieved a test accuracy of 96.51% with a margin of error of 0.102, and the second model trained without pre-trained embeddings, resulting in slightly worse resulting in a slightly lower accuracy of 96.23% with a loss of 0.104. The comparison highlights the significant impact of domain-specific integration on model performance. This study demonstrates the value of custom integration to improve semantic representation and fake news detection accuracy, providing a powerful tool to combat misinformation. \n \n \n \n",
+            "score": 3
+        },
+        {
+            "id": "a5e8d9d2e5017e6e7337597add886f9f9b3f9c89",
+            "paperId": "a5e8d9d2e5017e6e7337597add886f9f9b3f9c89",
+            "title": "Detecting Fake News based on Information Retrieval, NLP, Machine Learning, its Impact by Auto-Populating",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICICV64824.2025.11085456?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICICV64824.2025.11085456, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2339475514",
+                    "name": "P. Kalaiarasi"
+                },
+                {
+                    "authorId": "2372140320",
+                    "name": "Pujari Komala"
+                },
+                {
+                    "authorId": "2372133849",
+                    "name": "Annapareddy Harika"
+                },
+                {
+                    "authorId": "2372134727",
+                    "name": "Neela Bhavani"
+                },
+                {
+                    "authorId": "2372134223",
+                    "name": "R. Theja"
+                }
+            ],
+            "abstract": "In the era of rapid misinformation dissemination, the identification of fake news has become increasingly important. Our approach endeavors to develop a comprehensive approach for detecting fake news by analyzing three critical inputs: text, image, and URL. The framework comprises information retrieval, natural language processing, and machine learning. We employ web scraping techniques to collect pertinent data for analysis. It mainly goes through a four-layer checking process, which increases the probability of identifying and analyzing the patterns of the news and produce the most accurate results as compared to the existing methodologies",
+            "score": 3
+        },
+        {
+            "id": "196a028f84e1cebb79630593c51b74326484ab51",
+            "paperId": "196a028f84e1cebb79630593c51b74326484ab51",
+            "title": "Fake News Detection using a Modified Fully Connected Attention Mechanism for CNN BI-LSTM",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.47992/ijaeml.2581.7000.0242?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.47992/ijaeml.2581.7000.0242, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373193648",
+                    "name": "D. Srikanth"
+                },
+                {
+                    "authorId": "2373196733",
+                    "name": "K. Krishna Prasad"
+                },
+                {
+                    "authorId": "2372532858",
+                    "name": "M. Kannan"
+                },
+                {
+                    "authorId": "2373196709",
+                    "name": "D. Kanchana"
+                }
+            ],
+            "abstract": "Individuals utilize social media platforms to express their perspectives and thoughts and connect with others on a wide scale. Consumers are generating more information than ever before, and sharing the information growing exponentially. Data presented on social media platforms are in an unstructured fashion, just like articles, videos, and audio. In the current digital era, the growth of falsification has triggered to the spread problem due to bogus news via social networking sites and online news sources. Some people are utilizing this helpful medium to disseminate stories that have no connection with truth. The swift spread of inaccurate information on social media platforms has become a significant problem; which brings significant negative effects to society; it might be difficult to distinguish between real news and hoaxes. Finding and identifying bogus news is challenging, manually finding fake news is tedious. Computational techniques are employed to determine whether the news data in social media platforms is authentic or not. Maintaining the integrity of information is essential. The proposed model to identify hoax news using fully modified connection attention mechanism for CNN- Bi-LSTM . It incorporates CNN and Bi-LSTM networks with a modified fully connected (Modified FC) attention mechanism. This architecture utilizes the powerful fusion of CNN with Bi-LSTM networks to collect effectively the semantic and contextual features of news articles; the Modified Fully Connected AM improves the design ability to concentrate on suitable information and detects fake news presented in social media platforms.",
+            "score": 3
+        },
+        {
+            "id": "a7a34134131fee22036517a1139dec355dfe1109",
+            "paperId": "a7a34134131fee22036517a1139dec355dfe1109",
+            "title": "End-To-End Fake News Detection Using Machine Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.22214/ijraset.2025.73401?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.22214/ijraset.2025.73401, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374607489",
+                    "name": "Yelleti Sai Venkata Sravan Kumar"
+                }
+            ],
+            "abstract": "The digital era has ushered in unprecedented access to information but also a surge in fake news, undermining public\ntrust, swaying political landscapes, and threatening societal stability. This research introduces a robust, AI-driven fake news\ndetection system that integrates advanced Natural Language Processing (NLP) and machine learning to distinguish authentic\nnews from fabricated content. The system leverages a fine-tuned DistilBERT transformer model for deep contextual text\nanalysis, complemented by Logistic Regression and Random Forest classifiers, unified through a weighted ensemble approach to\nachieve a remarkable 93.2% accuracy. Trained on a huge samples of 100,000 articles from Kaggle, ISOT, and FakeNewsNet,\nspanning politics, health, and technology, the system ensures the broad applicability. A scalable web platform, built with Flask,\nFastAPI, and styled using Tailwind CSS, offers an intuitive interface for users to submit articles, view real-time predictions, and\nexplore interactive visualizations like attention heatmaps and feature importance charts. Explainable AI (XAI) techniques\nenhance transparency, fostering trust among journalists, educators, policymakers, and the public. Deployed on a cloud-native\narchitecture with PostgreSQL and Celery, the system complies with GDPR and India\u2019s IT Act, 2000, ensuring data privacy and\nscalability. This solution empowers stakeholders to combat misinformation effectively, bridging the gap between advanced AI\nand practical, user-centric applications.",
+            "score": 3
+        },
+        {
+            "id": "3e6bb5d431ca31cbbdb18c1c13c85d053924a044",
+            "paperId": "3e6bb5d431ca31cbbdb18c1c13c85d053924a044",
+            "title": "Fake News Detection on Social Media Platforms Using Machine Learning and Ensemble Techniques",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.71146/kjmr488?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.71146/kjmr488, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368909480",
+                    "name": "Hafsa Hussain"
+                },
+                {
+                    "authorId": "2284382175",
+                    "name": "Naeem Aslam"
+                },
+                {
+                    "authorId": "2284379735",
+                    "name": "Muhammad Fuzail"
+                },
+                {
+                    "authorId": "2350489541",
+                    "name": "Tanzeel-Ur-Rehman"
+                },
+                {
+                    "authorId": "2358728611",
+                    "name": "Farwa Nazim"
+                }
+            ],
+            "abstract": "Today, information plays a key role like gold did earlier and news is now mostly read on social media rather than in daily newspapers (18% to 39% share). Due to this change, stories that aren\u2019t real and are meant to shape people\u2019s opinions or harm anyone\u2019s reputation get more attention than genuine news reports on social media. The objective is to help identify reliable news from fake news on social media apps by analyzing and comparing machine learning algorithms.In this study, many machine learning classifiers like K-Nearest Neighbors (KNN), Logistic Regression and Support Vector Machines (SVM) are tested and made better with valuable data preparation techniques. Ensemble methods are tested against single classifiers to see which gives the most accurate, precise and recall results. Investigating over 6,335 articles, the study used a 30-70 method of dividing into training and testing sets to determine which processing helps most and tests the use of the proposed models in real time.The results prove that fake news systems work better, assisting media, social networks and the public. The research aids in academia by collecting and comparing different methods for classification and preprocessing, especially to manage problems related to Disinformation, Distortion and Disruption in the digital age.",
+            "score": 3
+        },
+        {
+            "id": "c143dbc87eed42d90d2490bb60184b12d6463299",
+            "paperId": "c143dbc87eed42d90d2490bb60184b12d6463299",
+            "title": "Fakespeak-RUS: building a corpus of Russian fake news",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1515/lingvan-2024-0198?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1515/lingvan-2024-0198, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2041940348",
+                    "name": "Elizaveta Kibisova"
+                },
+                {
+                    "authorId": "2373933822",
+                    "name": "Silje Susanne Alvestad"
+                }
+            ],
+            "abstract": "\n This article presents the methodology behind the creation of the Fakespeak-RUS corpus, a dataset of Russian fake and genuine news articles developed as part of the broader Fakespeak project. The most prominent challenge in compiling the corpus relates to the veracity of the articles. A previously used credibility-based approach, which relied on the reputation of news outlets, has been argued to be ineffective: even well-known fake news outlets occasionally publish truthful content, and vice versa. For the Russian data, the surge of low-credibility texts even in fact-checking requires attention to the expertise and potential bias of the fact-checkers. The carefully chosen solution for our corpus is to collect news articles labelled for veracity by the now Estonia-based, formerly Russian, independent fact-checking agency Provereno.Media. Another challenge, stemming from the diversity of the collected texts, lies in building a reference corpus of genuine news, which involves controlling for multiple variables, including source, register, size, authorship, and topic. To address this challenge and construct a quality reference dataset, we gather and verify genuine news articles from the same outlets as those included in the fake news corpus. The corpus is well suited for linguistic research on the language of fake news in Russian.",
+            "score": 2
+        },
+        {
+            "id": "bfe35924635b79396bb099ca57b99e315279c59b",
+            "paperId": "bfe35924635b79396bb099ca57b99e315279c59b",
+            "title": "Fake News Detection Using NLP",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.62647/ijitce2025v13i2spp524-530?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.62647/ijitce2025v13i2spp524-530, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2369351169",
+                    "name": "Mohammed Naveed Qureshi"
+                },
+                {
+                    "authorId": "2368919690",
+                    "name": "Dr. Syed Asadullah Hussaini"
+                }
+            ],
+            "abstract": "AI Fake News Analysis is an advanced AI-poweredplatform designed to revolutionize the way peopleconsume news by transforming lengthy andscattered information from various formats\u2014suchas video, audio, and text\u2014into concise andmeaningful summaries. With the ever-increasingvolume of content and the growing concern overfake news, this platform addresses the core issues ofinformation overload, lack of verification, andinefficiency in traditional news consumption. Theplatform is built to cater to the needs of busyprofessionals, students, journalists, and the generalpublic, providing them with an efficient, reliable,and engaging way to stay updated. Users no longerneed to spend time watching entire videos or readinglengthy articles; instead, they receive quick,digestible summaries extracted using cutting-edgeAI technologies such as natural language processing(NLP), speech-to-text conversion, and computervision. A key feature of the system is its fake newsdetection module, which evaluates the credibility ofnews sources and content, thereby reducing the riskof misinformation. Another standout capability isthe interactive cross-questioning AI that allows usersto ask follow-up questions and receive intelligentresponses, enhancing engagement andunderstanding. The platform also includes a dailylive news feed, ensuring users have access to themost recent and relevant information. Byautomating news verification and summarization,the platform not only saves time but also enhancesthe decision-making process in various fields.Overall, AI Fake News Analysis is a practical andinnovative solution that streamlines the newsconsumption process, ensures content authenticity,and fosters critical engagement, addressing thegrowing challenges in the modern informationecosystem.",
+            "score": 2
+        },
+        {
+            "id": "61d31385559236175cbffe19f03523927c2581e7",
+            "paperId": "61d31385559236175cbffe19f03523927c2581e7",
+            "title": "Multilingual Hate Speech Detection in Social Media Using Translation-Based Approaches with Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.08147, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2325561359",
+                    "name": "M. Usman"
+                },
+                {
+                    "authorId": "2326103777",
+                    "name": "Muhammad Ahmad"
+                },
+                {
+                    "authorId": "2192603925",
+                    "name": "M. Tash"
+                },
+                {
+                    "authorId": "2295625601",
+                    "name": "Irina Gelbukh"
+                },
+                {
+                    "authorId": "2366161502",
+                    "name": "Rolando Quintero Tellez"
+                },
+                {
+                    "authorId": "2261403157",
+                    "name": "Grigori Sidorov"
+                }
+            ],
+            "abstract": "Social media platforms are critical spaces for public discourse, shaping opinions and community dynamics, yet their widespread use has amplified harmful content, particularly hate speech, threatening online safety and inclusivity. While hate speech detection has been extensively studied in languages like English and Spanish, Urdu remains underexplored, especially using translation-based approaches. To address this gap, we introduce a trilingual dataset of 10,193 tweets in English (3,834 samples), Urdu (3,197 samples), and Spanish (3,162 samples), collected via keyword filtering, with a balanced distribution of 4,849 Hateful and 5,344 Not-Hateful labels. Our methodology leverages attention layers as a precursor to transformer-based models and large language models (LLMs), enhancing feature extraction for multilingual hate speech detection. For non-transformer models, we use TF-IDF for feature extraction. The dataset is benchmarked using state-of-the-art models, including GPT-3.5 Turbo and Qwen 2.5 72B, alongside traditional machine learning models like SVM and other transformers (e.g., BERT, RoBERTa). Three annotators, following rigorous guidelines, ensured high dataset quality, achieving a Fleiss' Kappa of 0.821. Our approach, integrating attention layers with GPT-3.5 Turbo and Qwen 2.5 72B, achieves strong performance, with macro F1 scores of 0.87 for English (GPT-3.5 Turbo), 0.85 for Spanish (GPT-3.5 Turbo), 0.81 for Urdu (Qwen 2.5 72B), and 0.88 for the joint multilingual model (Qwen 2.5 72B). These results reflect improvements of 8.75% in English (over SVM baseline 0.80), 8.97% in Spanish (over SVM baseline 0.78), 5.19% in Urdu (over SVM baseline 0.77), and 7.32% in the joint multilingual model (over SVM baseline 0.82). Our framework offers a robust solution for multilingual hate speech detection, fostering safer digital communities worldwide.",
+            "score": 2
+        },
+        {
+            "id": "b90bb5884850ff325fee864f4be86596e80a3692",
+            "paperId": "b90bb5884850ff325fee864f4be86596e80a3692",
+            "title": "Leveraging LLMs for COVID-19 Fake News Generation and Detection: A Comparative Analysis on Twitter Data",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2025.3592943?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2025.3592943, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2192856311",
+                    "name": "Hong N. Dao"
+                },
+                {
+                    "authorId": "2342609221",
+                    "name": "Yasuhiro Hashimoto"
+                },
+                {
+                    "authorId": "2085863246",
+                    "name": "I. Paik"
+                },
+                {
+                    "authorId": "2154128968",
+                    "name": "Truong Cong Thang"
+                }
+            ],
+            "abstract": "The rapid spread of rumors on social media, especially during crises like the COVID-19 pandemic, highlights an urgent need for advanced tools to detect fake news. Large Language Models (LLMs), with their vast knowledge and emergent abilities, show great promise in tackling this challenge. This study investigates five state-of-the-art LLMs \u2014 DeepSeek, GPT-3.5, GPT-4, Gemini, and Claude\u2014 in creating and detecting fake news. Especially, we consider not only the performance but also the similarity of the models. Regarding tweet generation, we identify interesting patterns about similarity among the outputs of the models. Specifically, the outputs of DeepSeek are most similar to those of GPT models, while Gemini\u2019s outputs are more distinct from the others. Regarding detection, no model demonstrates strong performance, even on its own generated dataset. Still, the decisions of DeepSeek are most similar to those of GPT-3.5, while the decisions of Gemini are the least similar to those of the other models. This study provides valuable insights into the dual role of LLMs as both detectors and potential sources of rumors, contributing to the development of more robust and reliable fake news detection systems.",
+            "score": 2
+        },
+        {
+            "id": "868352f361ad68c8edd2bd7d1715394272ff1572",
+            "paperId": "868352f361ad68c8edd2bd7d1715394272ff1572",
+            "title": "Rethinking Hate Speech Detection on Social Media: Can LLMs Replace Traditional Models?",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.12744, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2275567635",
+                    "name": "Daman Deep Singh"
+                },
+                {
+                    "authorId": "2338315252",
+                    "name": "Ramanuj Bhattacharjee"
+                },
+                {
+                    "authorId": "2287929592",
+                    "name": "Abhijnan Chakraborty"
+                }
+            ],
+            "abstract": "Hate speech detection across contemporary social media presents unique challenges due to linguistic diversity and the informal nature of online discourse. These challenges are further amplified in settings involving code-mixing, transliteration, and culturally nuanced expressions. While fine-tuned transformer models, such as BERT, have become standard for this task, we argue that recent large language models (LLMs) not only surpass them but also redefine the landscape of hate speech detection more broadly. To support this claim, we introduce IndoHateMix, a diverse, high-quality dataset capturing Hindi-English code-mixing and transliteration in the Indian context, providing a realistic benchmark to evaluate model robustness in complex multilingual scenarios where existing NLP methods often struggle. Our extensive experiments show that cutting-edge LLMs (such as LLaMA-3.1) consistently outperform task-specific BERT-based models, even when fine-tuned on significantly less data. With their superior generalization and adaptability, LLMs offer a transformative approach to mitigating online hate in diverse environments. This raises the question of whether future works should prioritize developing specialized models or focus on curating richer and more varied datasets to further enhance the effectiveness of LLMs.",
+            "score": 2
+        },
+        {
+            "id": "7fa7e8abee7df601130ab7a8ea67a1a3dc4830fb",
+            "paperId": "7fa7e8abee7df601130ab7a8ea67a1a3dc4830fb",
+            "title": "Comparison of Social Media Between Tiktok and Instagram to Detect Negative Content Using Natural Language Processing Method",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.35746/jtim.v7i3.730?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.35746/jtim.v7i3.730, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368066912",
+                    "name": "Tri Antaka Jagad Laga"
+                },
+                {
+                    "authorId": "2368069882",
+                    "name": "Nur Widjiyati"
+                }
+            ],
+            "abstract": "In the digital era, social media platforms have become essential tools for communication, content creation, and information dissemination. However, with the increasing volume of user-generated content, the spread of negative or harmful content has emerged as a major challenge for platform administrators and users alike. This study aims to compare TikTok and Instagram in their capacity to detect and manage negative content using Natural Language Processing (NLP) techniques. A dataset of 2,000 user comments was collected\u20141,000 from each platform\u2014through web scraping. These comments were analyzed using a variety of NLP methods, including sentiment analysis tools (VADER and TextBlob), text classification algorithms (Support Vector Machine and Random Forest), and Named Entity Recognition (NER) using the spaCy library. The comparison was conducted based on the classification performance of each NLP technique in detecting negative content, considering metrics such as accuracy, precision, recall, and F1-score. The results showed that while both SVM and Random Forest performed well in classification tasks, SVM outperformed the others in terms of overall accuracy and consistency across platforms. Sentiment analysis provided a general overview of content polarity, but it was less effective in detecting nuanced or sarcastic language. NER contributed to identifying specific entities that may be associated with negative expressions, enriching the contextual understanding of comments. This study highlights the potential of combining multiple NLP methods to improve automated content moderation systems. It also underlines the importance of platform-specific characteristics, such as user behavior and engagement style, which influence the nature and frequency of negative content. Future work should focus on improving the handling of contextual ambiguity and sarcasm to ensure more robust and adaptive moderation technologies across different social media platforms.",
+            "score": 2
+        },
+        {
+            "id": "410582a9db32365773708f2c734e946aaf4a61a5",
+            "paperId": "410582a9db32365773708f2c734e946aaf4a61a5",
+            "title": "Identifying Machine-Generated Tweets with Deep Learning and FastText Embeddings on Social Media",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.36893/iej.2025.v54i05.005?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.36893/iej.2025.v54i05.005, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2365865435",
+                    "name": "Mr.Mude Sasikanth"
+                },
+                {
+                    "authorId": "2365857320",
+                    "name": "Mr.Bathineedi Ajaykumar"
+                },
+                {
+                    "authorId": "2365799826",
+                    "name": "Mr.NalaMolu Sai Mohan"
+                },
+                {
+                    "authorId": "2366069157",
+                    "name": "Mr.Gatta Likith Reddy"
+                },
+                {
+                    "authorId": "2365856220",
+                    "name": "Mr.Konuganti Gnaneshwar Reddy"
+                }
+            ],
+            "abstract": "The integrity of information on social media platforms is seriously threatened by deepfake technology, which manipulates media using artificial intelligence. Deepfake content has proliferated in India, particularly in the political and entertainment sectors, where disinformation has been spread by AIgenerated movies and fake news. The main goal is to create a strong artificial intelligence model that can reliably identify deepfake content on social media sites, with an emphasis on machine-generated tweets that use FastText embeddings. Conventional techniques included manual social media post filtering using preset criteria and keyword matching, human moderation, and fact-checking organisations. These techniques lacked the scalability to handle the enormous volume of online content and were timeconsuming and frequently wrong. Deepfake and AIgenerated content detection done by hand is incredibly ineffective, prone to mistakes, and unable to process the enormous amount of social media data in real time. As a result, false and damaging information may proliferate before being discovered or eliminated. The goal of this study is to counteract false information and protect the integrity of online debate in light of social media's increasing power to shape public opinion. By automating the study of social media information, deep learning models in particular can greatly enhance the detection of deepfakes. While deep learning models can be used to determine if a tweet was created by an AI or a human, FastText embeddings will transform tweets into meaningful word vectors. This approach enables real-time detection, greater accuracy, and scalability compared to existing approaches",
+            "score": 2
+        },
+        {
+            "id": "1eec6752b2729933a99f64a9af3b99182e76ae67",
+            "paperId": "1eec6752b2729933a99f64a9af3b99182e76ae67",
+            "title": "SARCASTIC NEWS AND POSTS DETECTION USING HIDDEN MARKOV MODEL AND BERT",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.21917/ijsc.2025.0538?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.21917/ijsc.2025.0538, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2057896835",
+                    "name": "Saberi Goswami"
+                },
+                {
+                    "authorId": null,
+                    "name": "Supratim Bhattacharya"
+                },
+                {
+                    "authorId": "1887670",
+                    "name": "Jayanta Poray"
+                }
+            ],
+            "abstract": "Sentiment analysis has been quite a critical task in natural language processing or NLP which is used in the classification of opinions or sentiments in texts as positive, neutral or negative. But there are few challenges in understanding sarcastic, ambiguous and implicit texts, which usually limit the performance of traditional models like Na\u00efve Bayes, SVM, Machine Learning, LSTM. Here we have taken social media and news into consideration, to show how different news or posts on twitter on Facebook can be analysed to extract information about the sentiments or opinion of the user even if it is sarcastic or ambiguous in nature, which can be a very challenging task. This paper proposes a novel framework using Hidden Markov Model with Contextual Embedding Layers using BERT (HMM-BERT), to address these said challenges. The unique combination of deep contextual understanding provided by pre-trained contextual embeddings like BERT with the sequential pattern learning of Hidden Markov Models enhances sentiment prediction by integrating sarcasm detection and word sense disambiguation techniques to manage complex contextual relationships within texts, and achieves an accuracy of 89-95% which is almost 10-20% better than the traditional and base models Thus, this method marks a considerable improvement in the sentiment analysis of ambiguous and sarcastic texts.",
+            "score": 2
+        },
+        {
+            "id": "b1c484d4ba3604ab50af22a6e97adfc0a8c7a2e6",
+            "paperId": "b1c484d4ba3604ab50af22a6e97adfc0a8c7a2e6",
+            "title": "POLygraph: Polish Fake News Dataset",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2407.01393, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The POLygraph dataset, a unique resource for fake news detection in Polish, is created by an interdisciplinary team and developed a software tool that uses advanced machine learning techniques to analyze the data and determine content authenticity."
+            },
+            "authors": [
+                {
+                    "authorId": "2264800628",
+                    "name": "Daniel Dzienisiewicz"
+                },
+                {
+                    "authorId": "2282467362",
+                    "name": "Filip Grali'nski"
+                },
+                {
+                    "authorId": "2338833423",
+                    "name": "Piotr Jab\u0142o\u0144ski"
+                },
+                {
+                    "authorId": "2305684914",
+                    "name": "Marek Kubis"
+                },
+                {
+                    "authorId": "2305685856",
+                    "name": "Pawel Sk'orzewski"
+                },
+                {
+                    "authorId": "2282467338",
+                    "name": "Piotr Wierzcho'n"
+                }
+            ],
+            "abstract": "This paper presents the POLygraph dataset, a unique resource for fake news detection in Polish. The dataset, created by an interdisciplinary team, is composed of two parts: the \u201cfake-or-not\u201d dataset with 11,360 pairs of news articles (identified by their URLs) and corresponding labels, and the \u201cfake-they-say\u201d dataset with 5,082 news articles (identified by their URLs) and tweets commenting on them. Unlike existing datasets, POLygraph encompasses a variety of approaches from source literature, providing a comprehensive resource for fake news detection. The data was collected through manual annotation by expert and non-expert annotators. The project also developed a software tool that uses advanced machine learning techniques to analyze the data and determine content authenticity. The tool and dataset are expected to benefit various entities, from public sector institutions to publishers and fact-checking organizations. Further dataset exploration will foster fake news detection and potentially stimulate the implementation of similar models in other languages. The paper focuses on the creation and composition of the dataset, so it does not include a detailed evaluation of the software tool for content authenticity analysis, which is planned at a later stage of the project.",
+            "score": 2
+        },
+        {
+            "id": "2f7bde9b18cadde1daebce503e3936189ac36fc0",
+            "paperId": "2f7bde9b18cadde1daebce503e3936189ac36fc0",
+            "title": "Fake News Prediction and Analysis in LIAR Dataset Using Advanced Machine Learning Techniques",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "https://bbejournal.com/BBE/article/download/748/706",
+                "status": "HYBRID",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.61506/01.00255?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.61506/01.00255, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed research study has used a novel approach to deal with the fake news prediction accurately and this approach outperforms in this scenario for the same dataset and the Na\u00efve Bayes classifier for classification shows more improved results than other prior classifiers and the accuracy value was 99%."
+            },
+            "authors": [
+                {
+                    "authorId": "2136835109",
+                    "name": "Ansa Mushtaq"
+                },
+                {
+                    "authorId": "2211192191",
+                    "name": "Muhammad Javaid Iqbal"
+                },
+                {
+                    "authorId": "2295536236",
+                    "name": "Saba Ramzan"
+                },
+                {
+                    "authorId": "2301678612",
+                    "name": "Sobia Yaqoob"
+                },
+                {
+                    "authorId": "1505763776",
+                    "name": "Ali Asif"
+                },
+                {
+                    "authorId": "2172451036",
+                    "name": "Inam ul Haq"
+                }
+            ],
+            "abstract": "Fake news detection and prediction is the crucial research issue in now a day because it is very difficult to know the news authenticity on social media. It has a devastating impact on societies and democratic institutions as online life in these days are one of the principal news hotspots for many individuals around the world because of their minimal effort, simple access, and quickly spread of the unauthorized news. However, measurable ways to deal with battling fake news have been drastically restricted by the absence of named benchmark datasets. Smart machine learning classifiers are used to solve the problem of fake news prediction and classification. The proposed research study works on the LIAR dataset, the open-source available dataset for fake news classification with 12.8K decade-long, hand-labelled short statements in various contexts. The proposed research study has used a novel approach to deal with the fake news prediction accurately and this approach outperforms in this scenario for the same dataset. Na\u00efve Bayes classifier for classification is used to reduce the variance values in the dataset to get rid of the overfitting issue. This classifier shows more improved results than other prior classifiers and the accuracy value was 99%. The proposed research study performed experiments and evaluated through different evaluation measures, the results of accuracy for the Na\u00efve Bayes are best as compared to Random Forest, Decision tree, and Neural Networks are computed for each algorithm. The proposed research study could be applied in real-time applications to deal the fake news prediction in social media and digital media platforms.",
+            "score": 2
+        },
+        {
+            "id": "3d799b5df0ea37b878d49d107b724835856101dd",
+            "paperId": "3d799b5df0ea37b878d49d107b724835856101dd",
+            "title": "Ensemble Techniques for Robust Fake News Detection: Integrating Transformers, Natural Language Processing, and Machine Learning",
+            "year": 2024,
+            "citationCount": 10,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.3390/s24186062",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC11436232, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study proposes a comprehensive framework for fake news detection integrating text, images, and videos using machine learning and deep learning techniques, developing a multimodal approach combining BERT for text analysis and a modified CNN for visual data."
+            },
+            "authors": [
+                {
+                    "authorId": "2015585236",
+                    "name": "Mohammed Al-alshaqi"
+                },
+                {
+                    "authorId": "2238331727",
+                    "name": "Danda B. Rawat"
+                },
+                {
+                    "authorId": "2272028077",
+                    "name": "Chunmei Liu"
+                }
+            ],
+            "abstract": "The proliferation of fake news across multiple modalities has emerged as a critical challenge in the modern information landscape, necessitating advanced detection methods. This study proposes a comprehensive framework for fake news detection integrating text, images, and videos using machine learning and deep learning techniques. The research employs a dual-phased methodology, first analyzing textual data using various classifiers, then developing a multimodal approach combining BERT for text analysis and a modified CNN for visual data. Experiments on the ISOT fake news dataset and MediaEval 2016 image verification corpus demonstrate the effectiveness of the proposed models. For textual data, the Random Forest classifier achieved 99% accuracy, outperforming other algorithms. The multimodal approach showed superior performance compared to baseline models, with a 3.1% accuracy improvement over existing multimodal techniques. This research contributes to the ongoing efforts to combat misinformation by providing a robust, adaptable framework for detecting fake news across different media formats, addressing the complexities of modern information dissemination and manipulation.",
+            "score": 2
+        },
+        {
+            "id": "37aae94e2105f1c1db5e00804ce10ff6876e0aa2",
+            "paperId": "37aae94e2105f1c1db5e00804ce10ff6876e0aa2",
+            "title": "CEA-LIST at CheckThat! 2025: Evaluating LLMs as Detectors of Bias and Opinion in Text",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.07539, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2363498084",
+                    "name": "Akram Elbouanani"
+                },
+                {
+                    "authorId": "2082765117",
+                    "name": "Evan Dufraisse"
+                },
+                {
+                    "authorId": "2373365872",
+                    "name": "Aboubacar Tuo"
+                },
+                {
+                    "authorId": "2316558716",
+                    "name": "Adrian Popescu"
+                }
+            ],
+            "abstract": "This paper presents a competitive approach to multilingual subjectivity detection using large language models (LLMs) with few-shot prompting. We participated in Task 1: Subjectivity of the CheckThat! 2025 evaluation campaign. We show that LLMs, when paired with carefully designed prompts, can match or outperform fine-tuned smaller language models (SLMs), particularly in noisy or low-quality data settings. Despite experimenting with advanced prompt engineering techniques, such as debating LLMs and various example selection strategies, we found limited benefit beyond well-crafted standard few-shot prompts. Our system achieved top rankings across multiple languages in the CheckThat! 2025 subjectivity detection task, including first place in Arabic and Polish, and top-four finishes in Italian, English, German, and multilingual tracks. Notably, our method proved especially robust on the Arabic dataset, likely due to its resilience to annotation inconsistencies. These findings highlight the effectiveness and adaptability of LLM-based few-shot learning for multilingual sentiment tasks, offering a strong alternative to traditional fine-tuning, particularly when labeled data is scarce or inconsistent.",
+            "score": 1
+        },
+        {
+            "id": "7bc2bd822f263599df452b993c1ff14e3cc38f18",
+            "paperId": "7bc2bd822f263599df452b993c1ff14e3cc38f18",
+            "title": "TeSent: A Benchmark Dataset for Fairness-aware Explainable Sentiment Classification in Telugu",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01486, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374496673",
+                    "name": "Vallabhaneni Raj Kumar"
+                },
+                {
+                    "authorId": "2374472840",
+                    "name": "S. Ashwin"
+                },
+                {
+                    "authorId": "2314111543",
+                    "name": "Supriya Manna"
+                },
+                {
+                    "authorId": "2067056081",
+                    "name": "Niladri Sett"
+                },
+                {
+                    "authorId": "2374475545",
+                    "name": "Cheedella V S N M S Hema Harshitha"
+                },
+                {
+                    "authorId": "2374472244",
+                    "name": "Kurakula Harshitha"
+                },
+                {
+                    "authorId": "2374800037",
+                    "name": "Anand Kumar Sharma"
+                },
+                {
+                    "authorId": "2374475550",
+                    "name": "Basina Deepakraj"
+                },
+                {
+                    "authorId": "2374473027",
+                    "name": "Tanuj Sarkar"
+                },
+                {
+                    "authorId": "2374472527",
+                    "name": "Bondada Navaneeth Krishna"
+                },
+                {
+                    "authorId": "2374472183",
+                    "name": "Samanthapudi Shakeer"
+                }
+            ],
+            "abstract": "In the Indian subcontinent, Telugu, one of India's six classical languages, is the most widely spoken Dravidian Language. Despite its 96 million speaker base worldwide, Telugu remains underrepresented in the global NLP and Machine Learning landscape, mainly due to lack of high-quality annotated resources. This work introduces TeSent, a comprehensive benchmark dataset for sentiment classification, a key text classification problem, in Telugu. TeSent not only provides ground truth labels for the sentences, but also supplements with provisions for evaluating explainability and fairness, two critical requirements in modern-day machine learning tasks. We scraped Telugu texts covering multiple domains from various social media platforms, news websites and web-blogs to preprocess and generate 26,150 sentences, and developed a custom-built annotation platform and a carefully crafted annotation protocol for collecting the ground truth labels along with their human-annotated rationales. We then fine-tuned several SOTA pre-trained models in two ways: with rationales, and without rationales. Further, we provide a detailed plausibility and faithfulness evaluation suite, which exploits the rationales, for six widely used post-hoc explainers applied on the trained models. Lastly, we curate TeEEC, Equity Evaluation Corpus in Telugu, a corpus to evaluate fairness of Telugu sentiment and emotion related NLP tasks, and provide a fairness evaluation suite for the trained classifier models. Our experimental results suggest that training with rationales may improve model accuracy, reduce bias in models, and make the explainers'output more aligned to human reasoning.",
+            "score": 1
+        },
+        {
+            "id": "44387c30a0ac8039660c898fd1663fa25affdb5c",
+            "paperId": "44387c30a0ac8039660c898fd1663fa25affdb5c",
+            "title": "Comparative Evaluation of ChatGPT and DeepSeek Across Key NLP Tasks: Strengths, Weaknesses, and Domain-Specific Performance",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.18501, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370935444",
+                    "name": "Wael Etaiwi"
+                },
+                {
+                    "authorId": "2370934019",
+                    "name": "Bushra Alhijawi"
+                }
+            ],
+            "abstract": "The increasing use of large language models (LLMs) in natural language processing (NLP) tasks has sparked significant interest in evaluating their effectiveness across diverse applications. While models like ChatGPT and DeepSeek have shown strong results in many NLP domains, a comprehensive evaluation is needed to understand their strengths, weaknesses, and domain-specific abilities. This is critical as these models are applied to various tasks, from sentiment analysis to more nuanced tasks like textual entailment and translation. This study aims to evaluate ChatGPT and DeepSeek across five key NLP tasks: sentiment analysis, topic classification, text summarization, machine translation, and textual entailment. A structured experimental protocol is used to ensure fairness and minimize variability. Both models are tested with identical, neutral prompts and evaluated on two benchmark datasets per task, covering domains like news, reviews, and formal/informal texts. The results show that DeepSeek excels in classification stability and logical reasoning, while ChatGPT performs better in tasks requiring nuanced understanding and flexibility. These findings provide valuable insights for selecting the appropriate LLM based on task requirements.",
+            "score": 1
+        },
+        {
+            "id": "a7fb5bb2309a4d6c5974eba837af050524d50554",
+            "paperId": "a7fb5bb2309a4d6c5974eba837af050524d50554",
+            "title": "QU-NLP at CheckThat! 2025: Multilingual Subjectivity in News Articles Detection using Feature-Augmented Transformer Models with Sequential Cross-Lingual Fine-Tuning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.21095, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373731967",
+                    "name": "Mohammad AL-Smadi"
+                }
+            ],
+            "abstract": "This paper presents our approach to the CheckThat! 2025 Task 1 on subjectivity detection, where systems are challenged to distinguish whether a sentence from a news article expresses the subjective view of the author or presents an objective view on the covered topic. We propose a feature-augmented transformer architecture that combines contextual embeddings from pre-trained language models with statistical and linguistic features. Our system leveraged pre-trained transformers with additional lexical features: for Arabic we used AraELECTRA augmented with part-of-speech (POS) tags and TF-IDF features, while for the other languages we fine-tuned a cross-lingual DeBERTa~V3 model combined with TF-IDF features through a gating mechanism. We evaluated our system in monolingual, multilingual, and zero-shot settings across multiple languages including English, Arabic, German, Italian, and several unseen languages. The results demonstrate the effectiveness of our approach, achieving competitive performance across different languages with notable success in the monolingual setting for English (rank 1st with macro-F1=0.8052), German (rank 3rd with macro-F1=0.8013), Arabic (rank 4th with macro-F1=0.5771), and Romanian (rank 1st with macro-F1=0.8126) in the zero-shot setting. We also conducted an ablation analysis that demonstrated the importance of combining TF-IDF features with the gating mechanism and the cross-lingual transfer for subjectivity detection. Furthermore, our analysis reveals the model's sensitivity to both the order of cross-lingual fine-tuning and the linguistic proximity of the training languages.",
+            "score": 1
+        },
+        {
+            "id": "038ed1e52bdf92a4db0c91d31d1db28b2c5051fb",
+            "paperId": "038ed1e52bdf92a4db0c91d31d1db28b2c5051fb",
+            "title": "Exploring the Deceptive Power of LLM-Generated Fake News: A Study of Real-World Detection Challenges",
+            "year": 2024,
+            "citationCount": 33,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.18249, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a strong fake news attack method called conditional Variational-autoencoder-Like Prompt (VLPrompt), which eliminates the need for additional data collection while maintaining contextual coherence and preserving the intricacies of the original text."
+            },
+            "authors": [
+                {
+                    "authorId": "1966961",
+                    "name": "Yanshen Sun"
+                },
+                {
+                    "authorId": "2239274607",
+                    "name": "Jianfeng He"
+                },
+                {
+                    "authorId": "2293779433",
+                    "name": "Limeng Cui"
+                },
+                {
+                    "authorId": "3433489",
+                    "name": "Shuo Lei"
+                },
+                {
+                    "authorId": "2249846863",
+                    "name": "Chang-Tien Lu"
+                }
+            ],
+            "abstract": "Recent advancements in Large Language Models (LLMs) have enabled the creation of fake news, particularly in complex fields like healthcare. Studies highlight the gap in the deceptive power of LLM-generated fake news with and without human assistance, yet the potential of prompting techniques has not been fully explored. Thus, this work aims to determine whether prompting strategies can effectively narrow this gap. Current LLM-based fake news attacks require human intervention for information gathering and often miss details and fail to maintain context consistency. Therefore, to better understand threat tactics, we propose a strong fake news attack method called conditional Variational-autoencoder-Like Prompt (VLPrompt). Unlike current methods, VLPrompt eliminates the need for additional data collection while maintaining contextual coherence and preserving the intricacies of the original text. To propel future research on detecting VLPrompt attacks, we created a new dataset named VLPrompt fake news (VLPFN) containing real and fake texts. Our experiments, including various detection methods and novel human study metrics, were conducted to assess their performance on our dataset, yielding numerous findings.",
+            "score": 1
+        },
+        {
+            "id": "1a23ed979aee638ae05c030dae6d7d1f13ee3f78",
+            "paperId": "1a23ed979aee638ae05c030dae6d7d1f13ee3f78",
+            "title": "Factify 2: A multimodal fake news and satire news dataset",
+            "year": 2023,
+            "citationCount": 29,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2304.03897",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2304.03897, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper provides a multi-modal fact-checking dataset called FACTIFY 2, improving Factify 1 by using new data sources and adding satire articles, and provides a BERT and Vison Transformer based baseline, which achieves 65% F1 score in the test set."
+            },
+            "authors": [
+                {
+                    "authorId": "2183788283",
+                    "name": "S. Suryavardan"
+                },
+                {
+                    "authorId": "2183731959",
+                    "name": "Shreyash Mishra"
+                },
+                {
+                    "authorId": "1579818535",
+                    "name": "Parth Patwa"
+                },
+                {
+                    "authorId": "2212098521",
+                    "name": "Megha Chakraborty"
+                },
+                {
+                    "authorId": "2106627712",
+                    "name": "Anku Rani"
+                },
+                {
+                    "authorId": "8856206",
+                    "name": "Aishwarya N. Reganti"
+                },
+                {
+                    "authorId": "40016108",
+                    "name": "Aman Chadha"
+                },
+                {
+                    "authorId": "48806891",
+                    "name": "Amitava Das"
+                },
+                {
+                    "authorId": "2064342742",
+                    "name": "Amit P. Sheth"
+                },
+                {
+                    "authorId": "2031480",
+                    "name": "Manoj Kumar Chinnakotla"
+                },
+                {
+                    "authorId": "1734904",
+                    "name": "Asif Ekbal"
+                },
+                {
+                    "authorId": "2109543348",
+                    "name": "Srijan Kumar"
+                }
+            ],
+            "abstract": "The internet gives the world an open platform to express their views and share their stories. While this is very valuable, it makes fake news one of our society's most pressing problems. Manual fact checking process is time consuming, which makes it challenging to disprove misleading assertions before they cause significant harm. This is he driving interest in automatic fact or claim verification. Some of the existing datasets aim to support development of automating fact-checking techniques, however, most of them are text based. Multi-modal fact verification has received relatively scant attention. In this paper, we provide a multi-modal fact-checking dataset called FACTIFY 2, improving Factify 1 by using new data sources and adding satire articles. Factify 2 has 50,000 new data instances. Similar to FACTIFY 1.0, we have three broad categories - support, no-evidence, and refute, with sub-categories based on the entailment of visual and textual data. We also provide a BERT and Vison Transformer based baseline, which achieves 65% F1 score in the test set. The baseline codes and the dataset will be made available at https://github.com/surya1701/Factify-2.0.",
+            "score": 1
+        },
+        {
+            "id": "fcedb4ad4a04e2f55596bf9b67ad7e2180a3b9e7",
+            "paperId": "fcedb4ad4a04e2f55596bf9b67ad7e2180a3b9e7",
+            "title": "Numbers Do Not Lie: A Bibliometric Examination of Machine Learning Techniques in Fake News Research",
+            "year": 2024,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "https://www.mdpi.com/1999-4893/17/2/70/pdf?version=1707127877",
+                "status": "GOLD",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/a17020070?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/a17020070, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The distinctions between fake news, misinformation, and disinformation are clarified, along with conducting a thorough analysis of the most widely read academic papers that have tackled the topic of fake news research using various machine learning techniques."
+            },
+            "authors": [
+                {
+                    "authorId": "2274611969",
+                    "name": "Andra Sandu"
+                },
+                {
+                    "authorId": "2280020646",
+                    "name": "Ioana Ioanas"
+                },
+                {
+                    "authorId": "2877513",
+                    "name": "Camelia Delcea"
+                },
+                {
+                    "authorId": "78091604",
+                    "name": "M. Florescu"
+                },
+                {
+                    "authorId": "2805410",
+                    "name": "Liviu-Adrian Cotfas"
+                }
+            ],
+            "abstract": "Fake news is an explosive subject, being undoubtedly among the most controversial and difficult challenges facing society in the present-day environment of technology and information, which greatly affects the individuals who are vulnerable and easily influenced, shaping their decisions, actions, and even beliefs. In the course of discussing the gravity and dissemination of the fake news phenomenon, this article aims to clarify the distinctions between fake news, misinformation, and disinformation, along with conducting a thorough analysis of the most widely read academic papers that have tackled the topic of fake news research using various machine learning techniques. Utilizing specific keywords for dataset extraction from Clarivate Analytics\u2019 Web of Science Core Collection, the bibliometric analysis spans six years, offering valuable insights aimed at identifying key trends, methodologies, and notable strategies within this multidisciplinary field. The analysis encompasses the examination of prolific authors, prominent journals, collaborative efforts, prior publications, covered subjects, keywords, bigrams, trigrams, theme maps, co-occurrence networks, and various other relevant topics. One noteworthy aspect related to the extracted dataset is the remarkable growth rate observed in association with the analyzed subject, indicating an impressive increase of 179.31%. The growth rate value, coupled with the relatively short timeframe, further emphasizes the research community\u2019s keen interest in this subject. In light of these findings, the paper draws attention to key contributions and gaps in the existing literature, providing researchers and decision-makers innovative viewpoints and perspectives on the ongoing battle against the spread of fake news in the age of information.",
+            "score": 1
+        },
+        {
+            "id": "bd2480049c2719c4d1ccc4df2084290182b60fc1",
+            "paperId": "bd2480049c2719c4d1ccc4df2084290182b60fc1",
+            "title": "MegaFake: A Theory-Driven Dataset of Fake News Generated by Large Language Models",
+            "year": 2024,
+            "citationCount": 4,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2408.11871, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This study analyzes the creation of fake news from a social psychology perspective and develops a comprehensive LLM-based theoretical framework, LLM-Fake Theory, which introduces a novel pipeline that automates the generation of fake news using LLMs, thereby eliminating the need for manual annotation."
+            },
+            "authors": [
+                {
+                    "authorId": "2313044677",
+                    "name": "Lionel Z. Wang"
+                },
+                {
+                    "authorId": "2313068557",
+                    "name": "Yiming Ma"
+                },
+                {
+                    "authorId": "2316701799",
+                    "name": "Renfei Gao"
+                },
+                {
+                    "authorId": "2316908179",
+                    "name": "Beichen Guo"
+                },
+                {
+                    "authorId": "2323143711",
+                    "name": "Zhuoran Li"
+                },
+                {
+                    "authorId": "2316882532",
+                    "name": "Han Zhu"
+                },
+                {
+                    "authorId": "2316638383",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2316671282",
+                    "name": "Zexin Lu"
+                },
+                {
+                    "authorId": "2316802315",
+                    "name": "Ka Chung Ng"
+                }
+            ],
+            "abstract": "The advent of large language models (LLMs) has revolutionized online content creation, making it much easier to generate high-quality fake news. This misuse threatens the integrity of our digital environment and ethical standards. Therefore, understanding the motivations and mechanisms behind LLM-generated fake news is crucial. In this study, we analyze the creation of fake news from a social psychology perspective and develop a comprehensive LLM-based theoretical framework, LLM-Fake Theory. We introduce a novel pipeline that automates the generation of fake news using LLMs, thereby eliminating the need for manual annotation. Utilizing this pipeline, we create a theoretically informed Machine-generated Fake news dataset, MegaFake, derived from the GossipCop dataset. We conduct comprehensive analyses to evaluate our MegaFake dataset. We believe that our dataset and insights will provide valuable contributions to future research focused on the detection and governance of fake news in the era of LLMs.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.149478
+}

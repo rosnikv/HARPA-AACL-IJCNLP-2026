@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>0cfdd655100055f234fd23ebecd915504b8e00e3</p>
+<hr>
+<section><h2>Title</h2>
+<p>IPEG: Interactive Preference Elicitation Game for Cross-Domain Recommendations using Large Language Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Conversational recommender systems often struggle to efficiently elicit user preferences, especially across multiple domains, leading to suboptimal recommendations and user fatigue. This problem is particularly challenging when dealing with cross-domain recommendations, where user preferences in one domain may not directly translate to another.</p>
+<h3>Motivation</h3>
+<p>Existing methods typically use predefined question templates or extract attributes from user utterances, which can be inflexible and fail to capture nuanced preferences. Gamification has shown promise in increasing user engagement and data quality in various domains. By framing preference elicitation as an interactive game powered by LLMs, we can potentially make the process more engaging and effective at uncovering latent user preferences across multiple domains.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce the Interactive Preference Elicitation Game (IPEG), a novel framework that turns cross-domain preference elicitation into an engaging, LLM-powered game. IPEG works as follows: 1) The LLM takes on the role of a 'preference detective' and initiates a playful dialogue with the user. 2) Instead of direct questions, the LLM presents the user with hypothetical scenarios, would-you-rather choices, and creative challenges that indirectly reveal preferences. 3) The LLM dynamically generates these prompts based on the ongoing conversation and identified preference patterns, ensuring relevance across multiple domains. 4) User responses are analyzed in real-time to update a multi-dimensional preference vector. 5) The game incorporates elements like points, levels, and surprises to maintain engagement. 6) Once sufficient preferences are elicited, the LLM generates a 'preference profile' narrative, which the user can edit or approve. This profile is then used to make cross-domain recommendations.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Create a synthetic dataset of user profiles with preferences across multiple domains (e.g., movies, books, music, travel). Each profile should include explicit preferences in some domains and implicit preferences that can be inferred from other domains.</p><p><strong>Step 2: LLM Selection and API Setup</strong></p><p>Choose GPT-4 as the primary LLM for the experiment. Set up API access and ensure proper rate limiting and error handling.</p><p><strong>Step 3: IPEG Framework Implementation</strong></p><p>Implement the IPEG framework as a Python module with the following components: a) Dialogue Manager: Handles the conversation flow and game mechanics. b) Prompt Generator: Creates dynamic, engaging prompts based on the conversation history and identified preference patterns. c) Response Analyzer: Processes user responses and updates the preference vector. d) Recommendation Engine: Generates cross-domain recommendations based on the elicited preferences.</p><p><strong>Step 4: Prompt Engineering</strong></p><p>Design a set of few-shot examples to guide the LLM in generating appropriate prompts for the game. These should include examples of hypothetical scenarios, would-you-rather questions, and creative challenges that span multiple domains.</p><p><strong>Step 5: Baseline Implementation</strong></p><p>Implement two baseline methods for comparison: a) Traditional questionnaire-based preference elicitation. b) Standard conversational recommender using direct questions.</p><p><strong>Step 6: Evaluation Metrics</strong></p><p>Implement the following evaluation metrics: a) Preference Elicitation Efficiency: Time taken to reach stable recommendations. b) Recommendation Accuracy: Use metrics like NDCG and MAP on held-out preferences. c) User Engagement: Measure session length and return rate (simulated for synthetic users). d) Cross-Domain Effectiveness: Measure recommendation quality in a target domain after preference elicitation in a source domain.</p><p><strong>Step 7: Experiment Execution</strong></p><p>Run the IPEG framework and baselines on the synthetic dataset. For each user profile: a) Simulate user responses based on the profile's preferences. b) Record the preference elicitation process, including all prompts and responses. c) Generate recommendations for each domain based on the elicited preferences. d) Calculate evaluation metrics.</p><p><strong>Step 8: Analysis and Visualization</strong></p><p>Analyze the results and create visualizations to compare IPEG with the baselines. Include: a) Comparison of evaluation metrics across methods. b) Analysis of preference vector evolution over time. c) Examples of successful cross-domain preference transfer. d) Analysis of most effective prompt types for preference elicitation.</p><p><strong>Step 9: Ablation Studies</strong></p><p>Conduct ablation studies to understand the impact of different components: a) Remove gamification elements. b) Use static instead of dynamic prompt generation. c) Vary the number of domains considered.</p><p><strong>Step 10: Error Analysis and Refinement</strong></p><p>Analyze cases where IPEG underperforms and refine the framework accordingly. This may involve adjusting prompt templates, tuning the response analysis algorithm, or modifying the game mechanics.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Traditional Questionnaire)</strong></p><p>Please rate your interest in the following movie genres on a scale of 1-5: Action, Comedy, Drama, Sci-Fi, Romance</p><p><strong>Baseline Prompt Expected Output (Traditional Questionnaire)</strong></p><p>Action: 4, Comedy: 3, Drama: 2, Sci-Fi: 5, Romance: 1</p><p><strong>Baseline Prompt Input (Standard Conversational Recommender)</strong></p><p>What kind of movies do you enjoy watching?</p><p><strong>Baseline Prompt Expected Output (Standard Conversational Recommender)</strong></p><p>I enjoy watching science fiction and action movies. I'm not a big fan of romantic comedies.</p><p><strong>Proposed Prompt Input (IPEG)</strong></p><p>Welcome to the Preference Detective Game! I'm your host, and we're about to embark on a fun journey to uncover your tastes across different areas. Let's start with an intriguing scenario: You've been chosen to curate a time capsule that will be opened in 100 years. You can include one book, one movie, and one travel destination. What would you choose and why?</p><p><strong>Proposed Prompt Expected Output (IPEG)</strong></p><p>For the book, I'd choose '1984' by George Orwell because it's a timeless classic that explores themes of surveillance and totalitarianism, which might be even more relevant in 100 years. For the movie, I'd pick 'Inception' as it showcases innovative storytelling and visual effects that could be interesting to compare with future filmmaking techniques. As for the travel destination, I'd include information about the Great Barrier Reef, as it's a natural wonder that might significantly change or even disappear in a century due to climate change.</p><p><strong>explanation</strong></p><p>The IPEG approach engages the user in a more interactive and thought-provoking manner, potentially revealing deeper insights about their preferences across multiple domains (literature, film, travel) without asking direct questions. This method can uncover latent preferences and connections between domains that might not be apparent through traditional questionnaires or standard conversational approaches.</p>
+<h3>Fallback Plan</h3>
+<p>If the IPEG framework doesn't show significant improvements over the baselines, we can pivot the project in several ways. First, we could conduct a more in-depth analysis of the preference elicitation process, examining which types of prompts are most effective at uncovering cross-domain preferences. This could lead to insights on how to improve conversational recommenders even without the full gamification aspect. Second, we could investigate the LLM's ability to infer preferences across domains and analyze cases where these inferences are successful or fail. This could result in a paper on the capabilities and limitations of LLMs in cross-domain reasoning. Finally, we could focus on the engagement aspect, comparing user interactions with IPEG versus traditional methods. Even if recommendation accuracy doesn't improve significantly, if we can show that users are more engaged and enjoy the process more, this could be a valuable contribution to the field of human-AI interaction in recommender systems.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/47c7649f88123a67fe7703659add12e57f17ab05" target="_blank">TrackRec: Iterative Alternating Feedback with Chain-of-Thought via Preference Alignment for Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0cfdd655100055f234fd23ebecd915504b8e00e3" target="_blank">Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4113c669be04ec2957114f4ce523ebc7bc1d2537" target="_blank">LLM-Enhanced Multimodal Fusion for Cross-Domain Sequential Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e03319ab296aa0ae7ac2ebe761a31d9dd4973e1e" target="_blank">Research on Conversational Recommender System Considering Consumer Types</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/ecef4fdbf413e3e7f749c83323c7290d06a94f38" target="_blank">Cross-Domain Recommendation Meets Large Language Models</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e33f51c13728bedeeb54a76b398949a381d6152f" target="_blank">LLMCDSR: Enhancing Cross-Domain Sequential Recommendation with Large Language Models</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/d12a368ad0aa485b129f400a374de85711e6f564" target="_blank">Refining Text Generation for Realistic Conversational Recommendation via Direct Preference Optimization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f22d543a68d56a4c7fe5c6d23508d6ec99c6ad0f" target="_blank">Beyond Single Labels: Improving Conversational Recommendation through LLM-Powered Data Augmentation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b339e74f5e88ed4fc34f0ce81eefc63757e30733" target="_blank">LLM-RecG: A Semantic Bias-Aware Framework for Zero-Shot Sequential Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/bd2df223a4522ca29f18180b6cf055a76d76bdaa" target="_blank">Towards Comprehensible Recommendation with Large Language Model Fine-tuning</a> (2025)
+</li>
+</ol>
+</section>
+</body></html>

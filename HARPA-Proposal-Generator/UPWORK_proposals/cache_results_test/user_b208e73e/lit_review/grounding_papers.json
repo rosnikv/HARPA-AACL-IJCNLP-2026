@@ -1,0 +1,384 @@
+[
+  {
+    "id": "d98f22eca403263a57018a160195950ebead3d33",
+    "paperId": "d98f22eca403263a57018a160195950ebead3d33",
+    "title": "EditGAN: High-Precision Semantic Image Editing",
+    "year": 2021,
+    "citationCount": 207,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2111.03186, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "18900686",
+        "name": "Huan Ling"
+      },
+      {
+        "authorId": "32113848",
+        "name": "Karsten Kreis"
+      },
+      {
+        "authorId": "2108864987",
+        "name": "Daiqing Li"
+      },
+      {
+        "authorId": "2128102197",
+        "name": "Seung Wook Kim"
+      },
+      {
+        "authorId": "143805211",
+        "name": "A. Torralba"
+      },
+      {
+        "authorId": "37895334",
+        "name": "S. Fidler"
+      }
+    ],
+    "abstract": "Generative adversarial networks (GANs) have recently found applications in image editing. However, most GAN based image editing methods often require large scale datasets with semantic segmentation annotations for training, only provide high level control, or merely interpolate between different images. Here, we propose EditGAN, a novel method for high quality, high precision semantic image editing, allowing users to edit images by modifying their highly detailed part segmentation masks, e.g., drawing a new mask for the headlight of a car. EditGAN builds on a GAN framework that jointly models images and their semantic segmentations, requiring only a handful of labeled examples, making it a scalable tool for editing. Specifically, we embed an image into the GAN latent space and perform conditional latent code optimization according to the segmentation edit, which effectively also modifies the image. To amortize optimization, we find editing vectors in latent space that realize the edits. The framework allows us to learn an arbitrary number of editing vectors, which can then be directly applied on other images at interactive rates. We experimentally show that EditGAN can manipulate images with an unprecedented level of detail and freedom, while preserving full image quality.We can also easily combine multiple edits and perform plausible edits beyond EditGAN training data. We demonstrate EditGAN on a wide variety of image types and quantitatively outperform several previous editing methods on standard editing benchmark tasks.",
+    "score": 2
+  },
+  {
+    "id": "c1ff08b59f00c44f34dfdde55cd53370733a2c19",
+    "paperId": "c1ff08b59f00c44f34dfdde55cd53370733a2c19",
+    "title": "Alias-Free Generative Adversarial Networks",
+    "year": 2021,
+    "citationCount": 1640,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.12423, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2976930",
+        "name": "Tero Karras"
+      },
+      {
+        "authorId": "1907688",
+        "name": "M. Aittala"
+      },
+      {
+        "authorId": "36436218",
+        "name": "S. Laine"
+      },
+      {
+        "authorId": "103642338",
+        "name": "Erik Härkönen"
+      },
+      {
+        "authorId": "1454226629",
+        "name": "Janne Hellsten"
+      },
+      {
+        "authorId": "49244945",
+        "name": "J. Lehtinen"
+      },
+      {
+        "authorId": "1761103",
+        "name": "Timo Aila"
+      }
+    ],
+    "abstract": "We observe that despite their hierarchical convolutional nature, the synthesis process of typical generative adversarial networks depends on absolute pixel coordinates in an unhealthy manner. This manifests itself as, e.g., detail appearing to be glued to image coordinates instead of the surfaces of depicted objects. We trace the root cause to careless signal processing that causes aliasing in the generator network. Interpreting all signals in the network as continuous, we derive generally applicable, small architectural changes that guarantee that unwanted information cannot leak into the hierarchical synthesis process. The resulting networks match the FID of StyleGAN2 but differ dramatically in their internal representations, and they are fully equivariant to translation and rotation even at subpixel scales. Our results pave the way for generative models better suited for video and animation.",
+    "score": 3
+  },
+  {
+    "id": "9194bebb54e91bbac8a7c7c1e12be9ff148d6428",
+    "paperId": "9194bebb54e91bbac8a7c7c1e12be9ff148d6428",
+    "title": "Third Time's the Charm? Image and Video Editing with StyleGAN3",
+    "year": 2022,
+    "citationCount": 72,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2201.13433, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "1850630812",
+        "name": "Yuval Alaluf"
+      },
+      {
+        "authorId": "2819477",
+        "name": "Or Patashnik"
+      },
+      {
+        "authorId": "34815981",
+        "name": "Zongze Wu"
+      },
+      {
+        "authorId": "2151793491",
+        "name": "Asif Zamir"
+      },
+      {
+        "authorId": "2177801",
+        "name": "Eli Shechtman"
+      },
+      {
+        "authorId": "70018371",
+        "name": "D. Lischinski"
+      },
+      {
+        "authorId": "1388323541",
+        "name": "D. Cohen-Or"
+      }
+    ],
+    "abstract": "StyleGAN is arguably one of the most intriguing and well-studied generative models, demonstrating impressive performance in image generation, inversion, and manipulation. In this work, we explore the recent StyleGAN3 architecture, compare it to its predecessor, and investigate its unique advantages, as well as drawbacks. In particular, we demonstrate that while StyleGAN3 can be trained on unaligned data, one can still use aligned data for training, without hindering the ability to generate unaligned imagery. Next, our analysis of the disentanglement of the different latent spaces of StyleGAN3 indicates that the commonly used W/W+ spaces are more entangled than their StyleGAN2 counterparts, underscoring the benefits of using the StyleSpace for fine-grained editing. Considering image inversion, we observe that existing encoder-based techniques struggle when trained on unaligned data. We therefore propose an encoding scheme trained solely on aligned data, yet can still invert unaligned images. Finally, we introduce a novel video inversion and editing workflow that leverages the capabilities of a fine-tuned StyleGAN3 generator to reduce texture sticking and expand the field of view of the edited video.",
+    "score": 2
+  },
+  {
+    "id": "169fd6c457d99a21c32b6f23bbfd1e09a2513684",
+    "paperId": "169fd6c457d99a21c32b6f23bbfd1e09a2513684",
+    "title": "Relay Diffusion: Unifying diffusion process across resolutions for image synthesis",
+    "year": 2023,
+    "citationCount": 50,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2309.03350",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.03350, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "Relay Diffusion Model (RDM) is presented, which transfers a low-resolution image or noise into an equivalent high-resolution one for diffusion model via blurring diffusion and block noise, and achieves state-of-the-art FID on CelebA-HQ and sFID on ImageNet 256."
+    },
+    "authors": [
+      {
+        "authorId": "2238205354",
+        "name": "Jiayan Teng"
+      },
+      {
+        "authorId": "2163967642",
+        "name": "Wendi Zheng"
+      },
+      {
+        "authorId": "2055623340",
+        "name": "Ming Ding"
+      },
+      {
+        "authorId": "2105844599",
+        "name": "Wenyi Hong"
+      },
+      {
+        "authorId": "3383269",
+        "name": "Jianqiao Wangni"
+      },
+      {
+        "authorId": "2109506541",
+        "name": "Zhuoyi Yang"
+      },
+      {
+        "authorId": "2238207092",
+        "name": "Jie Tang"
+      }
+    ],
+    "abstract": "Diffusion models achieved great success in image synthesis, but still face challenges in high-resolution generation. Through the lens of discrete cosine transformation, we find the main reason is that \\emph{the same noise level on a higher resolution results in a higher Signal-to-Noise Ratio in the frequency domain}. In this work, we present Relay Diffusion Model (RDM), which transfers a low-resolution image or noise into an equivalent high-resolution one for diffusion model via blurring diffusion and block noise. Therefore, the diffusion process can continue seamlessly in any new resolution or model without restarting from pure noise or low-resolution conditioning. RDM achieves state-of-the-art FID on CelebA-HQ and sFID on ImageNet 256$\\times$256, surpassing previous works such as ADM, LDM and DiT by a large margin. All the codes and checkpoints are open-sourced at \\url{https://github.com/THUDM/RelayDiffusion}.",
+    "score": 3
+  },
+  {
+    "id": "6d8601eddd073284ea56ecee042be0aa87823643",
+    "paperId": "6d8601eddd073284ea56ecee042be0aa87823643",
+    "title": "When, Why, and Which Pretrained GANs Are Useful?",
+    "year": 2022,
+    "citationCount": 22,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2202.08937, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "89005571",
+        "name": "T. Grigoryev"
+      },
+      {
+        "authorId": "74254200",
+        "name": "A. Voynov"
+      },
+      {
+        "authorId": "143743802",
+        "name": "Artem Babenko"
+      }
+    ],
+    "abstract": "The literature has proposed several methods to finetune pretrained GANs on new datasets, which typically results in higher performance compared to training from scratch, especially in the limited-data regime. However, despite the apparent empirical benefits of GAN pretraining, its inner mechanisms were not analyzed in-depth, and understanding of its role is not entirely clear. Moreover, the essential practical details, e.g., selecting a proper pretrained GAN checkpoint, currently do not have rigorous grounding and are typically determined by trial and error. This work aims to dissect the process of GAN finetuning. First, we show that initializing the GAN training process by a pretrained checkpoint primarily affects the model's coverage rather than the fidelity of individual samples. Second, we explicitly describe how pretrained generators and discriminators contribute to the finetuning process and explain the previous evidence on the importance of pretraining both of them. Finally, as an immediate practical benefit of our analysis, we describe a simple recipe to choose an appropriate GAN checkpoint that is the most suitable for finetuning to a particular target task. Importantly, for most of the target tasks, Imagenet-pretrained GAN, despite having poor visual quality, appears to be an excellent starting point for finetuning, resembling the typical pretraining scenario of discriminative computer vision models.",
+    "score": 2
+  },
+  {
+    "id": "958cd33eb354d7f3d117767c2ff981614c940c8f",
+    "paperId": "958cd33eb354d7f3d117767c2ff981614c940c8f",
+    "title": "StyleMC: Multi-Channel Based Fast Text-Guided Image Generation and Manipulation",
+    "year": 2021,
+    "citationCount": 63,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2112.08493, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2145258020",
+        "name": "Umut Kocasari"
+      },
+      {
+        "authorId": "2145260636",
+        "name": "Alara Dirik"
+      },
+      {
+        "authorId": "34907481",
+        "name": "Mert Tiftikci"
+      },
+      {
+        "authorId": "3137679",
+        "name": "Pinar Yanardag"
+      }
+    ],
+    "abstract": "Discovering meaningful directions in the latent space of GANs to manipulate semantic attributes typically requires large amounts of labeled data. Recent work aims to overcome this limitation by leveraging the power of Contrastive Language-Image Pre-training (CLIP), a joint text-image model. While promising, these methods require several hours of preprocessing or training to achieve the desired manipulations. In this paper, we present StyleMC, a fast and efficient method for text-driven image generation and manipulation. StyleMC uses a CLIP-based loss and an identity loss to manipulate images via a single text prompt without significantly affecting other attributes. Unlike prior work, StyleMC requires only a few seconds of training per text prompt to find stable global directions, does not require prompt engineering and can be used with any pre-trained StyleGAN2 model. We demonstrate the effectiveness of our method and compare it to state-of-the-art methods. Our code can be found at http://catlab-team.github.io/stylemc.",
+    "score": 2
+  },
+  {
+    "id": "0930fe943d7d9b5bb943613d87c4ca92850dd43a",
+    "paperId": "0930fe943d7d9b5bb943613d87c4ca92850dd43a",
+    "title": "Scaling up GANs for Text-to-Image Synthesis",
+    "year": 2023,
+    "citationCount": 496,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/2303.05511",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.05511, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "GigaGAN is introduced, a new GAN architecture that far exceeds this limit, demonstrating GANs as a viable option for text-to-image synthesis and supports various latent space editing applications such as latent interpolation, style mixing, and vector arithmetic operations."
+    },
+    "authors": [
+      {
+        "authorId": "2153110145",
+        "name": "Minguk Kang"
+      },
+      {
+        "authorId": "1922024303",
+        "name": "Jun-Yan Zhu"
+      },
+      {
+        "authorId": "2109976035",
+        "name": "Richard Zhang"
+      },
+      {
+        "authorId": "2109193504",
+        "name": "Jaesik Park"
+      },
+      {
+        "authorId": "2177801",
+        "name": "Eli Shechtman"
+      },
+      {
+        "authorId": "145799132",
+        "name": "Sylvain Paris"
+      },
+      {
+        "authorId": "2071929129",
+        "name": "Taesung Park"
+      }
+    ],
+    "abstract": "The recent success of text-to-image synthesis has taken the world by storm and captured the general public's imagination. From a technical standpoint, it also marked a drastic change in the favored architecture to design generative image models. GANs used to be the de facto choice, with techniques like StyleGAN. With DALL.E 2, autoregressive and diffusion models became the new standard for large-scale generative models overnight. This rapid shift raises a fundamental question: can we scale up GANs to benefit from large datasets like LAION? We find that naïvely increasing the capacity of the StyleGan architecture quickly becomes unstable. We introduce GigaGAN, a new GAN architecture that far exceeds this limit, demonstrating GANs as a viable option for text-to-image synthesis. GigaGAN offers three major advantages. First, it is orders of magnitude faster at inference time, taking only 0.13 seconds to synthesize a 512px image. Second, it can synthesize high-resolution images, for example, 16-megapixel images in 3.66 seconds. Finally, GigaGAN supports various latent space editing applications such as latent interpolation, style mixing, and vector arithmetic operations.",
+    "score": 5
+  },
+  {
+    "id": "22aab110058ebbd198edb1f1e7b4f69fb13c0613",
+    "paperId": "22aab110058ebbd198edb1f1e7b4f69fb13c0613",
+    "title": "Large Scale GAN Training for High Fidelity Natural Image Synthesis",
+    "year": 2018,
+    "citationCount": 5481,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1809.11096, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "tldr": {
+      "model": "tldr@v2.0.0",
+      "text": "It is found that applying orthogonal regularization to the generator renders it amenable to a simple \"truncation trick,\" allowing fine control over the trade-off between sample fidelity and variety by reducing the variance of the Generator's input."
+    },
+    "authors": [
+      {
+        "authorId": "2065040247",
+        "name": "Andrew Brock"
+      },
+      {
+        "authorId": "7408951",
+        "name": "Jeff Donahue"
+      },
+      {
+        "authorId": "34838386",
+        "name": "K. Simonyan"
+      }
+    ],
+    "abstract": "Despite recent progress in generative image modeling, successfully generating high-resolution, diverse samples from complex datasets such as ImageNet remains an elusive goal. To this end, we train Generative Adversarial Networks at the largest scale yet attempted, and study the instabilities specific to such scale. We find that applying orthogonal regularization to the generator renders it amenable to a simple \"truncation trick,\" allowing fine control over the trade-off between sample fidelity and variety by reducing the variance of the Generator's input. Our modifications lead to models which set the new state of the art in class-conditional image synthesis. When trained on ImageNet at 128x128 resolution, our models (BigGANs) achieve an Inception Score (IS) of 166.5 and Frechet Inception Distance (FID) of 7.4, improving over the previous best IS of 52.52 and FID of 18.6.",
+    "score": 3
+  },
+  {
+    "id": "64ea8f180d0682e6c18d1eb688afdb2027c02794",
+    "paperId": "64ea8f180d0682e6c18d1eb688afdb2027c02794",
+    "title": "Diffusion Models Beat GANs on Image Synthesis",
+    "year": 2021,
+    "citationCount": 8396,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2105.05233, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "6515819",
+        "name": "Prafulla Dhariwal"
+      },
+      {
+        "authorId": "38967461",
+        "name": "Alex Nichol"
+      }
+    ],
+    "abstract": "We show that diffusion models can achieve image sample quality superior to the current state-of-the-art generative models. We achieve this on unconditional image synthesis by finding a better architecture through a series of ablations. For conditional image synthesis, we further improve sample quality with classifier guidance: a simple, compute-efficient method for trading off diversity for fidelity using gradients from a classifier. We achieve an FID of 2.97 on ImageNet 128$\\times$128, 4.59 on ImageNet 256$\\times$256, and 7.72 on ImageNet 512$\\times$512, and we match BigGAN-deep even with as few as 25 forward passes per sample, all while maintaining better coverage of the distribution. Finally, we find that classifier guidance combines well with upsampling diffusion models, further improving FID to 3.94 on ImageNet 256$\\times$256 and 3.85 on ImageNet 512$\\times$512. We release our code at https://github.com/openai/guided-diffusion",
+    "score": 3
+  },
+  {
+    "id": "e27b881192cd14a04018c372352b12e531870fc1",
+    "paperId": "e27b881192cd14a04018c372352b12e531870fc1",
+    "title": "Pivotal Tuning for Latent-based Editing of Real Images",
+    "year": 2021,
+    "citationCount": 547,
+    "openAccessPdf": {
+      "url": "https://arxiv.org/pdf/2106.05744",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.05744, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2110687042",
+        "name": "Daniel Roich"
+      },
+      {
+        "authorId": "147940380",
+        "name": "Ron Mokady"
+      },
+      {
+        "authorId": "1755628",
+        "name": "Amit H. Bermano"
+      },
+      {
+        "authorId": "1388323541",
+        "name": "D. Cohen-Or"
+      }
+    ],
+    "abstract": "Recently, numerous facial editing techniques have been proposed that leverage the generative power of a pretrained StyleGAN. To successfully edit an image this way, one must first project (or invert) the image into the pretrained generator’s domain. As it turns out, StyleGAN’s latent space induces an inherent tradeoff between distortion and editability, i.e., between maintaining the original appearance and convincingly altering its attributes. Hence, it remains challenging to apply ID-preserving edits to real facial images. In this article, we present an approach to bridge this gap. The idea is Pivotal Tuning—a brief training process that preserves editing quality, while surgically changing the portrayed identity and appearance. In Pivotal Tuning Inversion, an initial inverted latent code serves as a pivot, around which the generator is fine-tuned. At the same time, a regularization term keeps nearby identities intact, to locally contain the effect. We further show that Pivotal Tuning also applies to accommodating for a multitude of faces, while introducing negligible distortion on the rest of the domain. We validate our technique through inversion and editing metrics and show preferable scores to state-of-the-art methods. Last, we present successful editing for harder cases, including elaborate make-up or headwear.",
+    "score": 2
+  }
+]

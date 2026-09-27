@@ -1,0 +1,28 @@
+[
+    {
+        "paperId": "1fcaafeb72142fe3d1a5d698a072d69778d244b0",
+        "pmid": "2503.09516",
+        "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+        "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+        "year": 2025,
+        "citation_count": 194
+    },
+    {
+        "paperId": "04fd5c534a7f4f7b3318493c16d7ba01d8c09a7e",
+        "title": "DeepRAG: Thinking to Retrieve Step by Step for Large Language Models",
+        "abstract": "Large Language Models (LLMs) have shown remarkable reasoning capabilities, while their practical applications are limited by severe factual hallucinations due to limitations in the timeliness, accuracy, and comprehensiveness of their parametric knowledge. Meanwhile, enhancing retrieval-augmented generation (RAG) with reasoning remains challenging due to ineffective task decomposition and redundant retrieval, which can introduce noise and degrade response quality. In this paper, we propose DeepRAG, a framework that models retrieval-augmented reasoning as a Markov Decision Process (MDP), enabling reasonable and adaptive retrieval. By iteratively decomposing queries, DeepRAG dynamically determines whether to retrieve external knowledge or rely on parametric reasoning at each step. Experiments show that DeepRAG improves retrieval efficiency and boosts answer accuracy by 26.4%, demonstrating its effectiveness in enhancing retrieval-augmented reasoning.",
+        "year": 2025,
+        "citation_count": 10,
+        "relevance": 2,
+        "explanation": "DeepRAG shares a similar goal with the source paper in enhancing retrieval-augmented reasoning. It models retrieval as a Markov Decision Process, which aligns with the source paper's use of reinforcement learning for search optimization, indicating partial dependence on the source paper's findings."
+    },
+    {
+        "paperId": "89a5223e14896e7404d8c2fbd246f989ab3bcaac",
+        "title": "Search Wisely: Mitigating Sub-optimal Agentic Searches By Reducing Uncertainty",
+        "abstract": "Agentic Retrieval-Augmented Generation (RAG) systems enhance Large Language Models (LLMs) by enabling dynamic, multi-step reasoning and information retrieval. However, these systems often exhibit sub-optimal search behaviors like over-search (retrieving redundant information) and under-search (failing to retrieve necessary information), which hinder efficiency and reliability. This work formally defines and quantifies these behaviors, revealing their prevalence across multiple QA datasets and agentic RAG systems (e.g., one model could have avoided searching in 27.7% of its search steps). Furthermore, we demonstrate a crucial link between these inefficiencies and the models' uncertainty regarding their own knowledge boundaries, where response accuracy correlates with model's uncertainty in its search decisions. To address this, we propose $\\beta$-GRPO, a reinforcement learning-based training method that incorporates confidence threshold to reward high-certainty search decisions. Experiments on seven QA benchmarks show that $\\beta$-GRPO enable a 3B model with better agentic RAG ability, outperforming other strong baselines with a 4% higher average exact match score.",
+        "year": 2025,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper addresses sub-optimal search behaviors in agentic retrieval-augmented generation, which is related to the source paper's focus on improving retrieval efficiency and reasoning quality. It shares a conceptual link with the source paper's approach to retrieval-augmented reasoning."
+    }
+]

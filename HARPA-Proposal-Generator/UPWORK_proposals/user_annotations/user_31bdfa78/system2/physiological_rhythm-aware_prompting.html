@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>3a6d34a21e9c7344c564dc502e117b6769f10c47</p>
+<hr>
+<section><h2>Title</h2>
+<p>Physiological Rhythm-Aware Prompting for Personalized Health Prediction</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current health prediction models using wearable data often fail to capture the complex temporal dynamics and individual variations in physiological rhythms, leading to inaccurate predictions, especially for subtle health changes. This problem is particularly important as it directly impacts the effectiveness of early health intervention and personalized healthcare strategies.</p>
+<h3>Motivation</h3>
+<p>Existing methods typically use standard time-series analysis or simple deep learning models that don't account for individual circadian rhythms or contextual factors. Human physiological processes follow complex rhythms that vary between individuals and are influenced by contextual factors. By incorporating these rhythms into the prompting process, we can create more personalized and accurate health predictions. Our proposed method, Physiological Rhythm-Aware Prompting (PRAP), is inspired by the human body's intricate rhythms and aims to dynamically adjust prompts based on detected physiological patterns and contextual information.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce Physiological Rhythm-Aware Prompting (PRAP), a novel approach that dynamically adjusts prompts based on detected physiological rhythms and contextual information. The method consists of three main steps: 1) Rhythm Extraction: We use a wavelet-based algorithm to extract individual-specific rhythms from multi-modal physiological data (heart rate, skin temperature, activity levels). 2) Prompt Generation: We train a transformer-based model to generate rhythm-aware prompts that incorporate these extracted rhythms and contextual information (time of day, recent activities, sleep patterns). 3) Health Prediction: We fine-tune a large language model on a dataset of anonymized health records and wearable data, teaching it to interpret these rhythm-aware prompts and generate health predictions.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Collect and preprocess a dataset of 10,000 individuals wearing consumer health devices for 6 months, with labeled health events. The data should include heart rate, skin temperature, activity levels, sleep patterns, and any reported health events.</p><p><strong>Step 2: Rhythm Extraction</strong></p><p>Implement a wavelet-based algorithm to extract individual-specific rhythms from the multi-modal physiological data. Use the PyWavelets library for wavelet transformation. Extract daily, weekly, and monthly rhythms for each physiological measure.</p><p><strong>Step 3: Prompt Generation Model</strong></p><p>Train a transformer-based model (e.g., GPT-2) to generate rhythm-aware prompts. The input will be the extracted rhythms and contextual information, and the output will be a prompt that highlights the most relevant physiological patterns for health prediction. Use the Hugging Face Transformers library for implementation.</p><p><strong>Step 4: Health Prediction Model</strong></p><p>Fine-tune a large language model (e.g., GPT-3.5 via API) on the dataset of anonymized health records and wearable data. The input will be the rhythm-aware prompts, and the output will be health predictions.</p><p><strong>Step 5: Baseline Models</strong></p><p>Implement standard time-series models (e.g., ARIMA, Prophet) and simple deep learning models (e.g., LSTM) as baselines. Also implement a non-rhythm-aware prompting method for comparison.</p><p><strong>Step 6: Evaluation</strong></p><p>Evaluate PRAP against the baselines on the test set. Use metrics such as prediction accuracy, F1 score, and time-to-detection for various health conditions. Conduct ablation studies to assess the impact of different rhythm components and contextual factors.</p><p><strong>Step 7: Analysis</strong></p><p>Analyze the results, focusing on how PRAP performs compared to baselines, especially for subtle health changes and individual variations. Examine the generated prompts to understand how they capture physiological rhythms and contextual information.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Standard Time-Series Model)</strong></p><p>Predict the likelihood of a cardiovascular event in the next 7 days based on the following time-series data: [heart rate and activity level data for the past 30 days]</p><p><strong>Baseline Prompt Expected Output (Standard Time-Series Model)</strong></p><p>Based on the time-series analysis of heart rate and activity level data for the past 30 days, the likelihood of a cardiovascular event in the next 7 days is 15%.</p><p><strong>Proposed Prompt Input (PRAP)</strong></p><p>Given the following rhythm-aware context: [Individual's extracted daily and weekly heart rate rhythms, recent deviations from typical patterns, sleep quality trends, and contextual information about recent stressful events], predict the likelihood of a cardiovascular event in the next 7 days.</p><p><strong>Proposed Prompt Expected Output (PRAP)</strong></p><p>Analyzing the provided rhythm-aware context:<br />
+1. The individual's heart rate shows an elevated nocturnal pattern compared to their typical daily rhythm.<br />
+2. There's a significant deviation in the weekly heart rate rhythm, particularly in the last 3 days.<br />
+3. Sleep quality has deteriorated over the past week, with increased fragmentation.<br />
+4. Contextual information indicates high stress levels due to work deadlines.</p>
+<p>Considering these factors, especially the disrupted heart rate rhythms and sleep patterns combined with high stress, I estimate a 35% likelihood of a cardiovascular event in the next 7 days. This elevated risk suggests the need for immediate lifestyle adjustments and potentially medical consultation.</p><p><strong>Explanation</strong></p><p>The PRAP method provides a more nuanced and personalized prediction by incorporating individual-specific physiological rhythms and relevant contextual information. This allows for the detection of subtle deviations from normal patterns, which may indicate increased health risks that standard time-series models might miss.</p>
+<h3>Fallback Plan</h3>
+<p>If PRAP doesn't significantly outperform baselines, we can pivot to an analysis paper focusing on the challenges of incorporating physiological rhythms into health predictions. We would conduct a series of experiments to understand which components of PRAP are most effective and under what circumstances. This could include: 1) Analyzing the quality and relevance of extracted rhythms, 2) Evaluating the prompt generation model's ability to capture meaningful patterns, 3) Investigating how different types of contextual information impact prediction accuracy. We could also explore combining PRAP with other methods, such as ensemble approaches or hybrid models that incorporate both rhythm-aware prompts and traditional time-series features. Additionally, we could investigate whether PRAP performs better for specific health conditions or demographic groups, which could provide valuable insights for targeted healthcare applications.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/071c76b22aa70cbb758d1c4153b0d5ca9e735aa7" target="_blank">Internet of Things-enabled Smart Devices, Biomedical Big Data, and Real-Time Clinical Monitoring in COVID-19 Patient Health Prediction</a> (2020)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f91793909fa8342f87933196cdcacbd26749e8c2" target="_blank">Beyond Scale: Small Language Models are Comparable to GPT-4 in Mental Health Understanding</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e55f26c176c847e561e2629d3718f8e5a373008e" target="_blank">IoT-Dew Computing-Inspired Real-Time Monitoring of Indoor Environment for Irregular Health Prediction</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/66315d04823e7523d57994ad3bf98b819b6c074c" target="_blank">Predicting dominant hand from spatiotemporal context varying physiological data</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1f3638575caf18e68c91242e8613149e23c3fd8d" target="_blank">Hybrid disease prediction approach leveraging digital twin and metaverse technologies for health consumer</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/d1971c0085e02d5bbb21ad64782e0a5d6f39ca68" target="_blank">The Importance of Time-Domain HRV Analysis in Cardiac Health Prediction</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/007fe6b94d33270242cddb9475fbc6dbc3724904" target="_blank">Use of consumer wearables to monitor and predict pain in patients with sickle cell disease</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/357ce99bf8b56c6c4b21db79ceebdaef63e16186" target="_blank">CovidRhythm: A Deep Learning Model for Passive Prediction of Covid-19 Using Biobehavioral Rhythms Derived From Wearable Physiological Data</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/4882a2fd6bca482f6377e472366905725ef80ff1" target="_blank">From Lab to Wrist: Bridging Metabolic Monitoring and Consumer Wearables for Heart Rate and Oxygen Consumption Modeling</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/994d85bae14925d0dd1a1b1518bfff86450782eb" target="_blank">Decisional Support System with Artificial Intelligence oriented on Health Prediction using a Wearable Device and Big Data</a> (2020)
+</li>
+</ol>
+</section>
+</body></html>

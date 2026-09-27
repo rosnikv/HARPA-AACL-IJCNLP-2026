@@ -1,0 +1,165 @@
+{
+  "paper_id": "0cfdd655100055f234fd23ebecd915504b8e00e3",
+  "research_idea_evaluation_rubric": [
+    {
+      "criteria_name": "Time-Aware Embeddings Implementation",
+      "criteria_met_question": "Does the experiment implement embeddings that incorporate temporal information (such as timestamps of user-item interactions) into user and item representations to capture preference dynamics over time?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Real-Time Data Processing System",
+      "criteria_met_question": "Does the experiment implement a streaming data architecture that continuously updates the recommendation model with new interaction data as it becomes available (rather than batch processing)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Graph Augmentation Strategy",
+      "criteria_met_question": "Does the experiment implement a method to reinforce user-item interaction edges using LLMs and a Bayesian Personalized Ranking (BPR) sampling algorithm that identifies items users may like or dislike based on textual content?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Integrated System Implementation",
+      "criteria_met_question": "Does the experiment integrate all three components (time-aware embeddings, real-time data processing, and graph augmentation) into a single recommendation system that can be evaluated end-to-end?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Appropriate Dataset Selection",
+      "criteria_met_question": "Does the experiment use a dataset (such as MovieLens-100K or MovieLens-1M) that captures temporal user interactions with timestamps to enable evaluation of time-aware recommendations?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline Implementation: Basic Matrix Factorization",
+      "criteria_met_question": "Does the experiment implement a basic matrix factorization model (without time-awareness or graph enhancement) as a baseline comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline Implementation: Time-Aware Matrix Factorization",
+      "criteria_met_question": "Does the experiment implement a time-aware matrix factorization model (incorporating temporal dynamics but without graph enhancement) as a baseline comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Baseline Implementation: Graph-Enhanced Matrix Factorization",
+      "criteria_met_question": "Does the experiment implement a graph-enhanced matrix factorization model (incorporating graph structure but without time-awareness) as a baseline comparison?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Precision Metric Implementation",
+      "criteria_met_question": "Does the experiment calculate and report Precision@K (the proportion of recommended items that are relevant to the user) for various values of K (e.g., K=5, K=10)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Recall Metric Implementation",
+      "criteria_met_question": "Does the experiment calculate and report Recall@K (the proportion of relevant items successfully recommended) for various values of K (e.g., K=5, K=10)?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "NDCG Metric Implementation",
+      "criteria_met_question": "Does the experiment calculate and report Normalized Discounted Cumulative Gain (NDCG@K) to evaluate the ranking quality of recommendations?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Mean Average Precision Implementation",
+      "criteria_met_question": "Does the experiment calculate and report Mean Average Precision (MAP) to evaluate the overall recommendation quality?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "User Satisfaction Metric",
+      "criteria_met_question": "Does the experiment implement a method to measure user satisfaction, either through explicit ratings, implicit signals (e.g., click patterns), or simulation of user feedback?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Statistical Significance Testing",
+      "criteria_met_question": "Does the experiment perform statistical significance tests (e.g., t-tests or ANOVA) to determine if the performance differences between the proposed method and baselines are statistically significant?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Temporal Evaluation",
+      "criteria_met_question": "Does the experiment evaluate the recommendation performance over different time periods to demonstrate the effectiveness of time-aware embeddings?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Ablation Study",
+      "criteria_met_question": "Does the experiment include an ablation study that evaluates the contribution of each component (time-aware embeddings, real-time processing, graph augmentation) to the overall performance?",
+      "required_or_optional": "required"
+    },
+    {
+      "criteria_name": "Cold Start Evaluation",
+      "criteria_met_question": "Does the experiment evaluate the system's performance on cold-start scenarios (new users or items with limited interaction history)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Computational Efficiency Analysis",
+      "criteria_met_question": "Does the experiment analyze and report the computational efficiency (e.g., training time, inference time, memory usage) of the proposed method compared to baselines?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Hyperparameter Sensitivity Analysis",
+      "criteria_met_question": "Does the experiment include a sensitivity analysis to understand how the performance varies with different hyperparameter settings (e.g., embedding dimensions, learning rate, regularization)?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Visualization of User-Item Interaction Graph",
+      "criteria_met_question": "Does the experiment provide visualizations of the user-item interaction graph before and after applying the graph augmentation strategy?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Diversity and Novelty Metrics",
+      "criteria_met_question": "Does the experiment evaluate recommendation diversity (variety of recommended items) and novelty (recommending items users haven't seen before) in addition to accuracy metrics?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Long-term User Engagement Analysis",
+      "criteria_met_question": "Does the experiment analyze or simulate long-term user engagement metrics (e.g., retention, session length) to evaluate the sustained impact of the recommendation system?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Scalability Analysis",
+      "criteria_met_question": "Does the experiment analyze how the proposed method scales with increasing dataset size or user base?",
+      "required_or_optional": "optional"
+    },
+    {
+      "criteria_name": "Explainability Analysis",
+      "criteria_met_question": "Does the experiment evaluate or implement methods to explain why specific items are recommended to users?",
+      "required_or_optional": "optional"
+    }
+  ],
+  "summary": {
+    "research_idea_short_description": "Integrating time-aware embeddings with real-time data processing and graph augmentation to improve recommendations.",
+    "research_idea_hypothesis": "Integrating time-aware embeddings with real-time data processing and graph augmentation strategies, specifically reinforcing user-item interaction edges, will improve recommendation accuracy and user satisfaction in LLM-based recommender systems.",
+    "description": "The proposed research aims to test the hypothesis that integrating time-aware embeddings with real-time data processing and graph augmentation strategies, specifically reinforcing user-item interaction edges, will enhance recommendation accuracy and user satisfaction in LLM-based recommender systems. Time-aware embeddings will be used to capture the temporal dynamics of user preferences and item popularity, allowing the model to adapt to changes over time. Real-time data processing will ensure that the system continuously updates with the latest user interactions, maintaining the relevance and accuracy of recommendations. The graph augmentation strategy of reinforcing user-item interaction edges will be applied to strengthen the connections in the interaction graph, improving the representation of user-item relationships. This combination is expected to address the limitations of existing models by providing a more comprehensive and dynamic understanding of user preferences, leading to more accurate and satisfying recommendations. The evaluation will focus on measuring improvements in precision, recall, and user feedback scores, using a dataset that captures real-time user interactions. This approach is novel because it combines elements that have been explored individually but not in conjunction, offering a new perspective on enhancing LLM-based recommender systems.",
+    "research_gap": "Existing methods in LLM-based recommender systems often overlook the integration of temporal dynamics with real-time data processing and graph augmentation strategies. While some studies have explored dynamic updates and temporal modeling, they have not extensively tested the combined effect of time-aware embeddings with real-time data processing and graph augmentation strategies like reinforcing user-item interaction edges. This gap is crucial because it limits the system's ability to adapt to rapidly changing user preferences and interaction patterns, which are essential for maintaining high recommendation accuracy and user satisfaction. By addressing this gap, the proposed hypothesis aims to enhance the adaptability and precision of recommender systems in dynamic environments.",
+    "research_idea_variables": "[Time-Aware Embeddings](https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f): Time-aware embeddings incorporate temporal information into user and item representations, allowing the model to capture the dynamics of user preferences and item popularity over time. This variable is crucial for adapting to changes in user behavior and ensuring that recommendations remain relevant. The embeddings will be implemented using existing techniques that embed temporal features into the model's architecture. This approach was selected because it offers a way to balance historical and recent interactions, providing a more nuanced understanding of user preferences. The expected outcome is an improvement in recommendation accuracy, as the model can better account for temporal shifts in user interests.\n\n[Real-Time Data Processing](https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f): Real-time data processing involves continuously updating the recommendation model with new interaction data as it becomes available. This ensures that the recommendations reflect the most recent user behaviors and trends. The process will be implemented using streaming data architectures that support real-time data ingestion and processing. This variable was chosen because it addresses the issue of outdated recommendations in rapidly changing environments. By maintaining up-to-date user profiles and interaction data, the system is expected to deliver more accurate and timely recommendations, improving user satisfaction.\n\n[Graph Augmentation Strategy - Reinforcing User-Item Interaction Edges](https://www.semanticscholar.org/paper/5aa3b1009955ce2c8f896e0d5e94e06155ef1e43): This strategy involves using LLMs to strengthen the edges between users and items in the interaction graph. The process utilizes a Bayesian Personalized Ranking (BPR) sampling algorithm to identify items that users may like or dislike based on textual content. These items are then used as positive and negative samples in the BPR training process. This approach enhances the representation of user-item interactions, leading to improved recommendation accuracy. The strategy will be implemented by integrating LLMs with the interaction graph to reinforce connections based on user preferences. This variable was selected because it addresses the issue of sparse interaction data, providing a richer representation of user-item relationships.",
+    "Explanation": "Time-aware embeddings capture temporal dynamics, allowing the model to adapt to changes in user preferences and item popularity. Real-time data processing ensures that the system remains up-to-date with the latest user interactions, maintaining the relevance and accuracy of recommendations. Graph augmentation, specifically reinforcing user-item interaction edges, enhances the representation of user-item relationships, addressing the issue of sparse interaction data. Together, these components provide a comprehensive and dynamic understanding of user preferences, leading to more accurate and satisfying recommendations. The chosen evaluation domain, which includes real-time user interactions, is appropriate because it reflects the dynamic nature of user preferences and provides a basis for measuring the impact of the proposed method.",
+    "research_idea_long_description": "Time-aware embeddings provide temporal context to user and item representations, which is used by the real-time data processing module to update the model with the latest interactions. The graph augmentation strategy then leverages this updated information to reinforce user-item interaction edges, improving the representation of relationships in the interaction graph. This synergy ensures that the system can adapt to changes in user preferences and deliver more accurate and satisfying recommendations.",
+    "research_idea_design_prompt": "The proposed method involves integrating time-aware embeddings, real-time data processing, and graph augmentation strategies to enhance LLM-based recommender systems. The process begins with the implementation of time-aware embeddings, which incorporate temporal information into user and item representations. This is achieved by embedding temporal features, such as timestamps, into the model's architecture, allowing it to capture the dynamics of user preferences and item popularity over time. Next, real-time data processing is employed to continuously update the recommendation model with new interaction data. This involves setting up a streaming data architecture that supports real-time data ingestion and processing, ensuring that the system remains up-to-date with the latest user behaviors and trends. The final component is the graph augmentation strategy, specifically reinforcing user-item interaction edges. This involves using LLMs to strengthen the connections in the interaction graph, utilizing a Bayesian Personalized Ranking (BPR) sampling algorithm to identify items that users may like or dislike based on textual content. These items are used as positive and negative samples in the BPR training process, enhancing the representation of user-item interactions. The integration of these components is expected to improve recommendation accuracy and user satisfaction by providing a more comprehensive and dynamic understanding of user preferences. The evaluation will focus on measuring improvements in precision, recall, and user feedback scores, using a dataset that captures real-time user interactions. The process is designed to be feasible for implementation using the ASD agent's capabilities, with each step clearly defined and linked to the overall hypothesis.",
+    "research_idea_elements": "Independent variable: Integration of time-aware embeddings with real-time data processing and graph augmentation strategies (specifically reinforcing user-item interaction edges)\n\nDependent variable: Recommendation accuracy and user satisfaction\n\nComparison groups: Dynamic Graph-Enhanced Recommendation System vs. Basic Matrix Factorization, Time-Aware Matrix Factorization, and Graph-Enhanced Matrix Factorization\n\nBaseline/control: Basic Matrix Factorization, Time-Aware Matrix Factorization, and Graph-Enhanced Matrix Factorization\n\nContext/setting: LLM-based recommender systems\n\nAssumptions: Temporal dynamics of user preferences and item popularity can be captured through embeddings; real-time data processing maintains relevance; graph augmentation improves representation of user-item relationships\n\nRelationship type: Causation (integration of components will improve outcomes)\n\nPopulation: Users interacting with recommendation systems (using MovieLens-100K or MovieLens-1M dataset)\n\nTimeframe: Not specified explicitly, but involves temporal ordering of interactions and time-aware processing\n\nMeasurement method: Precision@K, Recall@K, NDCG@K, Mean Average Precision (MAP), and simulated user satisfaction metrics",
+    "motivation": "The source paper is [Paper 0: Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System](https://www.semanticscholar.org/paper/0cfdd655100055f234fd23ebecd915504b8e00e3) (324 citations, 2023). This idea draws upon a trajectory of prior work, as seen in the following sequence: [Paper 1](https://www.semanticscholar.org/paper/3487c12512fa41d3a4d64f00cb842525a8590ad3) --> [Paper 2](https://www.semanticscholar.org/paper/4829b73a47be18f73e9e8d90f3c23c8f84d0fccb) --> [Paper 3](https://www.semanticscholar.org/paper/5aa3b1009955ce2c8f896e0d5e94e06155ef1e43) --> [Paper 4](https://www.semanticscholar.org/paper/0383e049e98c9eedbc61be728d4ef037300bbedf) --> [Paper 5](https://www.semanticscholar.org/paper/429e6c09eeadf54e2b245b8f2cddfbf157f9da4c). The analysis reveals a progression from aligning LLMs with recommendation tasks to enhancing them through representation learning, graph augmentation, and instruction following. Each paper builds on the previous by addressing specific challenges like data sparsity, user interaction, and behavior comprehension. However, there remains a gap in exploring the dynamic adaptation of LLMs to evolving user preferences over time. A research idea that focuses on real-time adaptation of LLMs in recommender systems could advance the field by addressing the limitations of static models and enhancing user satisfaction.\nThe initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend \u2014 it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge."
+  },
+  "operationalization": "# Dynamic Graph-Enhanced Recommendations Experiment\n\nImplement and evaluate a recommendation system that integrates time-aware embeddings with real-time data processing and graph augmentation strategies to improve recommendation accuracy and user satisfaction.\n\n## Experiment Overview\n\nThis experiment tests the hypothesis that integrating time-aware embeddings with real-time data processing and graph augmentation strategies, specifically reinforcing user-item interaction edges, will improve recommendation accuracy and user satisfaction in LLM-based recommender systems.\n\n## Pilot Experiment Settings\n\nImplement a global variable `PILOT_MODE` with three possible settings: `MINI_PILOT`, `PILOT`, or `FULL_EXPERIMENT`. The experiment should start with `MINI_PILOT` mode, then proceed to `PILOT` mode if successful. The `FULL_EXPERIMENT` mode should not be run automatically (a human will verify results and manually change to this mode if needed).\n\n- **MINI_PILOT**: Use a very small subset of data (e.g., 50 users, 100 items, 500 interactions) to verify code functionality. Run for 5 epochs with minimal hyperparameter tuning. This should complete in under 10 minutes.\n- **PILOT**: Use a moderate subset of data (e.g., 500 users, 1000 items, 10,000 interactions). Run for 10 epochs with basic hyperparameter tuning on the validation set. This should complete in under 2 hours.\n- **FULL_EXPERIMENT**: Use the complete dataset with comprehensive hyperparameter tuning and full training. Run for the optimal number of epochs determined from pilot experiments.\n\n## Dataset Requirements\n\n1. Use the MovieLens-100K or MovieLens-1M dataset for this experiment, which contains user-item interactions with timestamps.\n2. Split the dataset into training (70%), validation (15%), and test (15%) sets, ensuring that the splits preserve the temporal ordering (i.e., validation and test sets contain interactions that occurred after those in the training set).\n3. For the MINI_PILOT, randomly sample a small subset from the training data.\n\n## System Components to Implement\n\n### 1. Time-Aware Embeddings\n\nImplement a time-aware embedding module that incorporates temporal information into user and item representations:\n\n- Create embeddings for users and items that capture their base preferences/attributes.\n- Incorporate temporal features by adding time-dependent components to these embeddings.\n- Implement time decay functions that give more weight to recent interactions.\n- The embedding dimension should be configurable (default: 64).\n\n### 2. Simulated Real-Time Data Processing\n\nSince we cannot implement a full streaming architecture in this experiment, simulate real-time data processing by:\n\n- Ordering the dataset chronologically.\n- Processing data in sequential batches to simulate streaming.\n- Implementing an incremental update mechanism that updates the model after each batch.\n- For each new batch of interactions, update the user and item embeddings accordingly.\n\n### 3. Graph Augmentation Strategy\n\nImplement a graph augmentation strategy that reinforces user-item interaction edges:\n\n- Construct a user-item interaction graph where nodes represent users and items, and edges represent interactions.\n- Use a pre-trained LLM (e.g., GPT-2 small or BERT-base) to analyze item descriptions/features and user profiles.\n- Implement a Bayesian Personalized Ranking (BPR) sampling algorithm to identify potential positive and negative samples.\n- Use the LLM to generate textual explanations for why a user might like or dislike an item.\n- Based on these explanations, adjust the weights of edges in the interaction graph.\n\n## Baseline and Experimental Models\n\nImplement and compare the following models:\n\n### Baseline Models\n\n1. **Basic Matrix Factorization**: A standard collaborative filtering approach without temporal information or graph enhancement.\n2. **Time-Aware Matrix Factorization**: Incorporates temporal information but without graph augmentation.\n3. **Graph-Enhanced Matrix Factorization**: Uses graph structure but without temporal awareness.\n\n### Experimental Model\n\n**Dynamic Graph-Enhanced Recommendation System**: Integrates all three components - time-aware embeddings, simulated real-time processing, and graph augmentation.\n\n## Evaluation Metrics\n\nEvaluate all models using the following metrics:\n\n1. **Precision@K** (for K=5, 10): The proportion of recommended items that are relevant.\n2. **Recall@K** (for K=5, 10): The proportion of relevant items that are recommended.\n3. **NDCG@K** (for K=5, 10): Normalized Discounted Cumulative Gain, which takes into account the ranking position of relevant items.\n4. **Mean Average Precision (MAP)**: Average precision across all users.\n5. **Simulated User Satisfaction**: Since we cannot collect real user feedback, simulate user satisfaction based on the relevance of recommendations and diversity of items.\n\n## Implementation Steps\n\n1. **Data Preparation**:\n   - Load and preprocess the dataset.\n   - Split into training, validation, and test sets with temporal ordering preserved.\n   - Create user and item mappings.\n\n2. **Model Implementation**:\n   - Implement the baseline models.\n   - Implement the time-aware embedding module.\n   - Implement the simulated real-time processing module.\n   - Implement the graph augmentation strategy.\n   - Integrate all components into the experimental model.\n\n3. **Training**:\n   - Train all models on the training set.\n   - Use the validation set for hyperparameter tuning and early stopping.\n   - Save model checkpoints.\n\n4. **Evaluation**:\n   - Evaluate all models on the test set using the defined metrics.\n   - Compare performance between baseline and experimental models.\n   - Conduct statistical significance tests (e.g., paired t-tests) to determine if differences are significant.\n\n5. **Analysis**:\n   - Analyze the impact of each component (time-aware embeddings, real-time processing, graph augmentation) on recommendation performance.\n   - Visualize the user-item interaction graph before and after augmentation.\n   - Examine how recommendations change over time for specific users.\n\n## Expected Output\n\n1. **Performance Metrics**: Tables and charts comparing all models across all evaluation metrics.\n2. **Statistical Analysis**: Results of significance tests comparing baseline and experimental models.\n3. **Visualizations**: \n   - User-item interaction graphs before and after augmentation.\n   - Temporal evolution of recommendations for sample users.\n   - Embedding visualizations using dimensionality reduction techniques (e.g., t-SNE).\n4. **Sample Recommendations**: Examples of recommendations from each model for selected users, with explanations generated by the LLM.\n\n## Additional Requirements\n\n1. Implement proper logging to track experiment progress and results.\n2. Ensure reproducibility by setting random seeds.\n3. Provide clear documentation for all components and functions.\n4. Include error handling and validation checks throughout the implementation.\n\nPlease run the MINI_PILOT first to verify code functionality, then proceed to the PILOT if successful. Do not run the FULL_EXPERIMENT automatically - wait for human verification of pilot results.",
+  "core_related_works": [
+    {
+      "title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond",
+      "paperId": "7e06467f1af79880640ff1f2790255741103e48f",
+      "url": "https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f",
+      "year": 2024,
+      "source_variable": "Time-Aware Embeddings",
+      "source_paper_lookup_title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond"
+    },
+    {
+      "title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond",
+      "paperId": "7e06467f1af79880640ff1f2790255741103e48f",
+      "url": "https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f",
+      "year": 2024,
+      "source_variable": "Real-Time Data Processing",
+      "source_paper_lookup_title": "Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond"
+    },
+    {
+      "title": "LLMRec: Large Language Models with Graph Augmentation for Recommendation",
+      "paperId": "5aa3b1009955ce2c8f896e0d5e94e06155ef1e43",
+      "url": "https://www.semanticscholar.org/paper/5aa3b1009955ce2c8f896e0d5e94e06155ef1e43",
+      "year": 2023,
+      "source_variable": "Graph Augmentation Strategy - Reinforcing User-Item Interaction Edges",
+      "source_paper_lookup_title": "LLMRec: Large Language Models with Graph Augmentation for Recommendation"
+    }
+  ],
+  "references": "1. Chat-REC: Towards Interactive and Explainable LLMs-Augmented Recommender System (2023). Paper ID: 0cfdd655100055f234fd23ebecd915504b8e00e3\n\n2. TALLRec: An Effective and Efficient Tuning Framework to Align Large Language Model with Recommendation (2023). Paper ID: 3487c12512fa41d3a4d64f00cb842525a8590ad3\n\n3. Representation Learning with Large Language Models for Recommendation (2023). Paper ID: 4829b73a47be18f73e9e8d90f3c23c8f84d0fccb\n\n4. LLMRec: Large Language Models with Graph Augmentation for Recommendation (2023). Paper ID: 5aa3b1009955ce2c8f896e0d5e94e06155ef1e43\n\n5. Recommendation as Instruction Following: A Large Language Model Empowered Recommendation Approach (2023). Paper ID: 0383e049e98c9eedbc61be728d4ef037300bbedf\n\n6. ReLLa: Retrieval-enhanced Large Language Models for Lifelong Sequential Behavior Comprehension in Recommendation (2023). Paper ID: 429e6c09eeadf54e2b245b8f2cddfbf157f9da4c\n\n7. Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond (2023). Paper ID: 7e06467f1af79880640ff1f2790255741103e48f\n\n8. Multi-Armed Bandits Meet Large Language Models (2023). Paper ID: fb555ebb79f859e786e3c9f18f1faf0207a53294\n\n9. Diagnostic-Guided Dynamic Profile Optimization for LLM-based User Simulators in Sequential Recommendation (2025). Paper ID: ec021492810c9ff289d206b2bf2b32e895d169d4\n\n10. Real-Time Personalization for LLM-based Recommendation with Customized In-Context Learning (2024). Paper ID: c4ee306ce489cb9ab295d0401f7e57358d50358d\n\n11. Unsupervised Adaptation of the user Interests (2020). Paper ID: a86b66ef6573c9719ab672ea999351e191583436\n\n12. Analysis and Design of a Personalized Recommendation System Based on a Dynamic User Interest Model (2020). Paper ID: 7ea9e43a860cc3b78648cf673c730143c68cc355\n\n13. Modeling user preference dynamics with coupled tensor factorization for social media recommendation (2020). Paper ID: 56cf1241d235bde1b29b42e09d71ab4f6d40356b\n\n14. Deep Adaptive Interest Network: Personalized Recommendation with Context-Aware Learning (2024). Paper ID: ac281a25bd6a66415d8d6b7b101b12fe6b8954a7\n\n15. Review-based Recommender Systems: A Survey of Approaches, Challenges and Future Perspectives (2024). Paper ID: 058b07a2ce1f6003ff97153ac2d2f21da057dbec\n\n16. Multi-objective contextual bandits in recommendation systems for smart tourism (2021). Paper ID: 7ae32ab335d19d512d230da69409f683a2204fcf"
+}

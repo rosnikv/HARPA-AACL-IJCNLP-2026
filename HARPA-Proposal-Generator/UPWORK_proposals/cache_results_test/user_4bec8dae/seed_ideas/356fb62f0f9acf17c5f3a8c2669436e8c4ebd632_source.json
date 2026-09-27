@@ -1,0 +1,21 @@
+{
+    "topic_description": "urdu fake news detection dataset creation and classification using adaboost",
+    "ideas": [
+        {
+            "Cross-Lingual Fake News Detection via Urdu-English Parallel Corpus": {
+                "Problem": "Existing Urdu fake news detection models struggle with limited labeled data and fail to leverage the abundance of English fake news resources.",
+                "Existing Methods": "Current approaches rely on small Urdu-only datasets and traditional machine learning models like AdaBoost.",
+                "Motivation": "By creating a large parallel Urdu-English fake news corpus, we can leverage cross-lingual transfer learning to improve Urdu fake news detection.",
+                "Proposed Method": "We propose a novel cross-lingual fake news detection framework. First, we will create a large parallel Urdu-English fake news corpus by machine translating existing English fake news datasets into Urdu and having human annotators verify and correct the translations. We will then train a multilingual BERT model on this parallel corpus using a contrastive learning objective that aligns the representations of equivalent Urdu and English fake news articles. Finally, we will fine-tune this model on Urdu fake news detection using a small amount of human-labeled Urdu data. The contrastive pre-training will allow the model to leverage knowledge from both languages, while the Urdu fine-tuning will specialize it for the target task.",
+                "Experiment Plan": "We will evaluate our method against Urdu-only baselines like AdaBoost on existing Urdu fake news datasets. We will also create a new, larger Urdu fake news test set to assess generalization. Metrics will include accuracy, F1-score, and AUC-ROC."
+            },
+            "Multi-Modal Urdu Fake News Detection with Social Context Graph Attention": {
+                "Problem": "Current Urdu fake news detection models ignore crucial visual and social context information that can provide important cues for identifying misinformation.",
+                "Existing Methods": "Existing approaches focus solely on text content using traditional NLP techniques or basic deep learning models.",
+                "Motivation": "Incorporating multi-modal information and modeling the social propagation patterns of news can significantly improve fake news detection accuracy.",
+                "Proposed Method": "We propose a novel multi-modal graph attention network for Urdu fake news detection. First, we will create a large-scale dataset of Urdu news posts from social media, including text, images, and social context (user profiles, sharing patterns, etc.). We will represent each news item as a node in a graph, with edges representing social connections and sharing patterns. The model will have three components: 1) A text encoder using a pre-trained Urdu language model, 2) An image encoder using a vision transformer, and 3) A graph attention network to model social propagation patterns. These components will be jointly trained end-to-end to classify news as real or fake. The graph attention mechanism will allow the model to focus on the most relevant social connections and propagation patterns for each news item.",
+                "Experiment Plan": "We will compare our multi-modal graph attention model against text-only baselines on both existing Urdu fake news datasets and our newly created multi-modal dataset. We will conduct ablation studies to assess the impact of each modality and the graph attention mechanism. Evaluation metrics will include accuracy, F1-score, and AUC-ROC."
+            }
+        }
+    ]
+}

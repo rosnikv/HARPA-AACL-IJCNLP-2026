@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>d9d50e6d98f01f357357eafde24ab66370fc3559</p>
+<hr>
+<section><h2>Title</h2>
+<p>Dynamic Fairness Adaptation in LLM-based Recommender Systems: A Preference-Aligned Approach</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Static fairness interventions in LLM-based recommender systems fail to adapt to changing user preferences and societal norms, potentially leading to outdated or misaligned fairness criteria over time. This problem is particularly acute in domains where user preferences and societal values evolve rapidly, such as content recommendation or job matching platforms.</p>
+<h3>Motivation</h3>
+<p>Existing fairness approaches for recommender systems typically use fixed fairness constraints or objectives defined at training time. While some dynamic methods exist, they often focus on item-side fairness or single-attribute user fairness, neglecting the multifaceted nature of user preferences and intersectional fairness concerns. Our proposed Dynamic Fairness Adaptation (DFA) framework is motivated by the need to continuously update fairness criteria in alignment with evolving user expectations and values. By leveraging the natural language understanding capabilities of LLMs, we can engage users in meaningful dialogues about fairness, extract structured representations of their preferences, and adapt the recommender system accordingly.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose Dynamic Fairness Adaptation (DFA), a novel framework for continuously updating fairness criteria in LLM-based recommenders. DFA consists of three main components: 1) Fairness Perception Elicitation: We design prompts for the LLM to engage users in dialogues about their fairness perceptions, extracting structured representations of user-specific fairness criteria. 2) Adaptive Fairness Aggregation: We develop a mechanism to aggregate individual user fairness perceptions into a global fairness objective, using techniques from social choice theory and multi-stakeholder optimization. This aggregated fairness objective evolves over time as new user feedback is incorporated. 3) Online Fairness Fine-tuning: We introduce a novel online learning algorithm that allows the LLM to continuously fine-tune its representations and outputs to align with the evolving fairness objective. This algorithm balances exploration of new fairness criteria with exploitation of known good practices.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Use the MovieLens-25M dataset with temporal information. Preprocess the data to include user demographic attributes (age, gender, occupation) and movie attributes (genre, release year, etc.). Split the data into training, validation, and test sets while preserving temporal order.</p><p><strong>Step 2: Baseline LLM Recommender</strong></p><p>Fine-tune a pre-trained LLM (e.g., GPT-3.5) on the MovieLens dataset to create a baseline recommender system. Use prompts like 'Recommend a movie for a [age] [gender] who likes [favorite genres].' Evaluate the baseline recommender using standard metrics (NDCG, MAP) and fairness measures (demographic parity, equal opportunity) computed over sliding time windows.</p><p><strong>Step 3: Fairness Perception Elicitation</strong></p><p>Design a set of prompts for the LLM to engage users in dialogues about fairness in movie recommendations. Example prompt: 'How important is it to you that movie recommendations are balanced across different genres? What about representation of diverse actors and directors?' Extract structured fairness criteria from user responses using named entity recognition and sentiment analysis.</p><p><strong>Step 4: Adaptive Fairness Aggregation</strong></p><p>Implement an aggregation mechanism that combines individual user fairness criteria into a global fairness objective. Use techniques like weighted majority voting or Borda count to balance different user preferences. Update this aggregated objective periodically (e.g., daily or weekly) based on new user feedback.</p><p><strong>Step 5: Online Fairness Fine-tuning</strong></p><p>Develop an online learning algorithm that fine-tunes the LLM's outputs based on the evolving fairness objective. Use a multi-armed bandit approach to balance exploration of new fairness criteria with exploitation of known good practices. Implement this as a prompt augmentation technique that dynamically adjusts the LLM's recommendation generation process.</p><p><strong>Step 6: Evaluation</strong></p><p>Compare DFA against the baseline recommender and static fairness approaches. Use a sliding window approach to compute recommendation quality metrics (NDCG, MAP) and fairness measures (demographic parity, equal opportunity) over time. Analyze how these metrics change as user preferences and the fairness objective evolve.</p><p><strong>Step 7: User Study</strong></p><p>Conduct a small-scale user study with 50-100 participants. Ask users to interact with both the baseline and DFA-enhanced recommender systems over a period of 2-4 weeks. Collect feedback on perceived fairness, recommendation quality, and overall satisfaction. Use qualitative analysis techniques to identify themes in user responses.</p><p><strong>Step 8: Ablation Studies</strong></p><p>Perform ablation studies to assess the impact of each component of DFA. Compare performance with and without the fairness perception elicitation, adaptive aggregation, and online fine-tuning components. This will help identify which aspects of the framework contribute most to improved fairness and recommendation quality.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Recommend a movie for a 35-year-old female who likes action and sci-fi movies.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>I recommend 'The Matrix' (1999). It's a groundbreaking sci-fi action film that combines intense action sequences with mind-bending concepts. The movie features strong performances, innovative special effects, and a compelling storyline that should appeal to fans of both action and science fiction genres.</p><p><strong>Proposed Prompt Input (Fairness Perception Elicitation)</strong></p><p>How important is it to you that movie recommendations include diverse representation in terms of directors, actors, and cultural perspectives? Please explain your thoughts on balancing this with your genre preferences.</p><p><strong>Proposed Prompt Expected Output (Fairness Perception Elicitation)</strong></p><p>Diversity in movie recommendations is quite important to me. I believe it's valuable to see different perspectives and experiences in film. However, I wouldn't want this to completely override my genre preferences. Ideally, I'd like to see a mix of movies that includes diverse representations within the action and sci-fi genres I enjoy. For example, recommending sci-fi films from different countries or action movies with female directors would be great.</p><p><strong>Proposed Prompt Input (DFA-enhanced Recommendation)</strong></p><p>Recommend a movie for a 35-year-old female who likes action and sci-fi movies, taking into account her preference for diverse representation while maintaining genre alignment.</p><p><strong>Proposed Prompt Expected Output (DFA-enhanced Recommendation)</strong></p><p>I recommend 'Black Panther' (2018) directed by Ryan Coogler. This film brilliantly combines elements of action and sci-fi, aligning with your genre preferences. It offers groundbreaking representation with a predominantly Black cast and explores themes of African culture and technology. The movie features strong female characters, innovative special effects, and a compelling storyline that should appeal to fans of both action and science fiction genres while also providing the diverse representation you value.</p><p><strong>Explanation</strong></p><p>The DFA-enhanced recommendation takes into account both the user's genre preferences and their expressed interest in diverse representation. It suggests a movie that not only fits the action and sci-fi genres but also offers diversity in terms of cast, cultural perspective, and strong female characters. This demonstrates how DFA can adapt recommendations to evolving fairness criteria while maintaining relevance to user preferences.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed DFA method doesn't significantly improve fairness metrics or user satisfaction compared to baselines, we can pivot the project to focus on analyzing why dynamic fairness adaptation is challenging in this context. We could conduct a more in-depth analysis of how user fairness perceptions change over time and how these changes correlate with recommendation quality and satisfaction. This could involve developing a taxonomy of fairness criteria in movie recommendations and tracking their prevalence and importance to users over time. Additionally, we could investigate potential barriers to implementing dynamic fairness in recommender systems, such as conflicting user preferences or limitations in LLM understanding of complex fairness concepts. This analysis could provide valuable insights for future work on adaptive fairness in AI systems and help identify specific challenges that need to be addressed in the next generation of fair recommender systems.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/c7b279896e90bd1723c4fd5e2f1e3e03a3a12a43" target="_blank">Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1822f71506428ad503518304e0084b811a54161d" target="_blank">Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8eb33fc5c8783b53cbd9c32300acd337ada632fa" target="_blank">A Normative Framework for Benchmarking Consumer Fairness in Large Language Model Recommender System</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f8a2813614f4e9c8adab3da2cbb667ad7e4d6bcf" target="_blank">Enhancing Recommender Systems with Large Language Model Reasoning Graphs</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/86c0128529a59ca815bfb0d27beb191760da31e7" target="_blank">Understanding Biases in ChatGPT-based Recommender Systems: Provider Fairness, Temporal Stability, and Recency</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2e92b3699668f920a8d692535622ebeaa53315e2" target="_blank">Is ChatGPT Fair for Recommendation? Evaluating Fairness in Large Language Model Recommendation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/1cfca9dd5268d7c02e67c55a6661a0ddf6ecb3ce" target="_blank">BiFair: A Fairness-aware Training Framework for LLM-enhanced Recommender Systems via Bi-level Optimization</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a4f0f155108625ffe6e4d68559090be2a3b6718c" target="_blank">Heterogeneous User Modeling for LLM-based Recommendation</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/8cdadf2c186a63528d2094de7d48e4635147a66c" target="_blank">Ensuring User-side Fairness in Dynamic Recommender Systems</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f7d3c17ad1dee97377651e0f5646b3fc6d047fc0" target="_blank">Evaluating ChatGPT as a Recommender System: A Rigorous Approach</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

@@ -1,0 +1,915 @@
+[
+    {
+        "year": 2021,
+        "source_paper": {
+            "paperId": "3950df97ea527009a32569cb7016bc3df1383dca",
+            "pmid": "2104.06378",
+            "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering",
+            "abstract": "The problem of answering questions using knowledge from pre-trained language models (LMs) and knowledge graphs (KGs) presents two challenges: given a QA context (question and answer choice), methods need to (i) identify relevant knowledge from large KGs, and (ii) perform joint reasoning over the QA context and KG. Here we propose a new model, QA-GNN, which addresses the above challenges through two key innovations: (i) relevance scoring, where we use LMs to estimate the importance of KG nodes relative to the given QA context, and (ii) joint reasoning, where we connect the QA context and KG to form a joint graph, and mutually update their representations through graph-based message passing. We evaluate QA-GNN on the CommonsenseQA and OpenBookQA datasets, and show its improvement over existing LM and LM+KG models, as well as its capability to perform interpretable and structured reasoning, e.g., correctly handling negation in questions.",
+            "year": 2021,
+            "citation_count": 628
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. HeteroQA: Learning towards Question-and-Answering through Multiple Information Sources via Heterogeneous Graph Modeling": {
+                    "explanation": "This paper explores question answering using heterogeneous graphs, which is related to the source paper's use of knowledge graphs for QA. However, it focuses on community question answering and multiple information sources, which is a different context from the source paper's focus on integrating language models with knowledge graphs.",
+                    "relevance": 0
+                },
+                "2. You Don\u2019t Need Labeled Data for Open-Book Question Answering": {
+                    "explanation": "This paper addresses open-book question answering without labeled data, which is a different approach from the source paper's focus on using knowledge graphs and language models for reasoning. The methodologies and focus areas differ significantly.",
+                    "relevance": 0
+                },
+                "3. Best of Both Worlds: A Hybrid Approach for Multi-Hop Explanation with Declarative Facts": {
+                    "explanation": "This paper focuses on multi-hop explanation generation, which relates to the source paper's interest in reasoning. However, it does not directly build upon the source paper's innovations in integrating language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "4. JointLK: Joint Reasoning with Language Models and Knowledge Graphs for Commonsense Question Answering": {
+                    "explanation": "This paper directly builds upon the source paper's approach by proposing a model that performs joint reasoning with language models and knowledge graphs, similar to QA-GNN. It addresses similar challenges and builds on the concept of integrating LM and KG for QA.",
+                    "relevance": 2
+                },
+                "5. Human Parity on CommonsenseQA: Augmenting Self-Attention with External Attention": {
+                    "explanation": "This paper focuses on augmenting transformer models with external attention for commonsense reasoning, which is related to the source paper's focus on commonsense QA. However, it does not directly build on the specific innovations of the source paper.",
+                    "relevance": 0
+                },
+                "6. Graph-augmented Learning to Rank for Querying Large-scale Knowledge Graph": {
+                    "explanation": "This paper deals with learning to rank for querying large-scale knowledge graphs, which is tangentially related to the source paper's use of knowledge graphs for QA. However, the focus is on ranking and retrieval rather than reasoning with language models.",
+                    "relevance": 0
+                },
+                "7. SMORE: Knowledge Graph Completion and Multi-hop Reasoning in Massive Knowledge Graphs": {
+                    "explanation": "SMORE focuses on multi-hop reasoning in knowledge graphs, which aligns with the source paper's interest in reasoning. However, it does not directly depend on or build upon the specific methods introduced in the source paper.",
+                    "relevance": 0
+                },
+                "8. Meta-Knowledge Transfer for Inductive Knowledge Graph Embedding": {
+                    "explanation": "This paper addresses knowledge graph embedding for inductive settings, which is not directly related to the source paper's focus on QA using language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "9. SQALER: Scaling Question Answering by Decoupling Multi-Hop and Logical Reasoning": {
+                    "explanation": "SQALER addresses multi-hop reasoning in question answering, which is related to the source paper's focus on reasoning. However, it does not directly build on the specific innovations of the source paper.",
+                    "relevance": 0
+                },
+                "10. Evidential Relational-Graph Convolutional Networks for Entity Classification in Knowledge Graphs": {
+                    "explanation": "This paper focuses on entity classification in knowledge graphs using evidential learning, which is not directly related to the source paper's focus on QA and reasoning with language models and knowledge graphs.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. JointLK: Joint Reasoning with Language Models and Knowledge Graphs for Commonsense Question Answering": {
+                    "explanation": "This paper directly builds upon the source paper's approach by proposing a model that performs joint reasoning with language models and knowledge graphs, similar to QA-GNN. It addresses similar challenges and builds on the concept of integrating LM and KG for QA.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2021,
+        "source_paper": {
+            "paperId": "3950df97ea527009a32569cb7016bc3df1383dca",
+            "pmid": "2104.06378",
+            "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering",
+            "abstract": "The problem of answering questions using knowledge from pre-trained language models (LMs) and knowledge graphs (KGs) presents two challenges: given a QA context (question and answer choice), methods need to (i) identify relevant knowledge from large KGs, and (ii) perform joint reasoning over the QA context and KG. Here we propose a new model, QA-GNN, which addresses the above challenges through two key innovations: (i) relevance scoring, where we use LMs to estimate the importance of KG nodes relative to the given QA context, and (ii) joint reasoning, where we connect the QA context and KG to form a joint graph, and mutually update their representations through graph-based message passing. We evaluate QA-GNN on the CommonsenseQA and OpenBookQA datasets, and show its improvement over existing LM and LM+KG models, as well as its capability to perform interpretable and structured reasoning, e.g., correctly handling negation in questions.",
+            "year": 2021,
+            "citation_count": 628
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Generated Knowledge Prompting for Commonsense Reasoning": {
+                    "explanation": "This paper explores the use of generated knowledge from language models for commonsense reasoning, which is related to the source paper's focus on using language models and knowledge graphs for question answering. However, it does not directly build upon the specific methods or findings of QA-GNN, so it is only inspired by the general idea of integrating external knowledge for reasoning.",
+                    "relevance": 1
+                },
+                "2.GNN is a Counter? Revisiting GNN for Question Answering": {
+                    "explanation": "This paper directly critiques and analyzes the reasoning capabilities of GNN-based modules for question answering, which is highly relevant to the source paper's focus on using GNNs for joint reasoning over knowledge graphs and QA contexts. It builds upon the findings of QA-GNN by dissecting the reasoning process of GNNs.",
+                    "relevance": 2
+                },
+                "3.Combating Fake News with Transformers: A Comparative Analysis of Stance Detection and Subjectivity Analysis": {
+                    "explanation": "This paper focuses on stance detection and subjectivity analysis for fake news, which is unrelated to the source paper's focus on question answering using language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "4.Is There More Pattern in Knowledge Graph? Exploring Proximity Pattern for Knowledge Graph Embedding": {
+                    "explanation": "This paper explores a new pattern in knowledge graph embeddings, which is related to the source paper's use of knowledge graphs for question answering. However, it does not directly depend on or extend the findings of QA-GNN.",
+                    "relevance": 1
+                },
+                "5.How Does Knowledge Graph Embedding Extrapolate to Unseen Data: a Semantic Evidence View": {
+                    "explanation": "This paper discusses knowledge graph embedding and extrapolation, which is related to the source paper's use of knowledge graphs for reasoning. However, it does not directly build upon the specific methods or findings of QA-GNN.",
+                    "relevance": 1
+                },
+                "6.BiRdQA: A Bilingual Dataset for Question Answering on Tricky Riddles": {
+                    "explanation": "This paper introduces a dataset for question answering on riddles, which is not directly related to the source paper's focus on reasoning with language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "7.LM-GVP: A Generalizable Deep Learning Framework for Protein Property Prediction from Sequence and Structure": {
+                    "explanation": "This paper focuses on protein property prediction using a framework combining language models and GNNs, which is unrelated to the source paper's focus on question answering.",
+                    "relevance": 0
+                },
+                "8.Exploiting Reasoning Chains for Multi-hop Science Question Answering": {
+                    "explanation": "This paper proposes a framework for multi-hop science question answering, which is related to the source paper's focus on reasoning for question answering. However, it does not directly build upon the specific methods or findings of QA-GNN.",
+                    "relevance": 1
+                },
+                "9.Complex Knowledge Base Question Answering: A Survey": {
+                    "explanation": "This is a survey paper on knowledge base question answering, summarizing existing literature without introducing novel hypotheses or findings.",
+                    "relevance": 0
+                },
+                "10.Neural Bellman-Ford Networks: A General Graph Neural Network Framework for Link Prediction": {
+                    "explanation": "This paper proposes a GNN framework for link prediction, which is not directly related to the source paper's focus on question answering with language models and knowledge graphs.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.GNN is a Counter? Revisiting GNN for Question Answering": {
+                    "explanation": "This paper directly critiques and analyzes the reasoning capabilities of GNN-based modules for question answering, which is highly relevant to the source paper's focus on using GNNs for joint reasoning over knowledge graphs and QA contexts. It builds upon the findings of QA-GNN by dissecting the reasoning process of GNNs.",
+                    "relevance": 2
+                },
+                "2.Generated Knowledge Prompting for Commonsense Reasoning": {
+                    "explanation": "This paper explores the use of generated knowledge from language models for commonsense reasoning, which is related to the source paper's focus on using language models and knowledge graphs for question answering. However, it does not directly build upon the specific methods or findings of QA-GNN, so it is only inspired by the general idea of integrating external knowledge for reasoning.",
+                    "relevance": 1
+                },
+                "3.Is There More Pattern in Knowledge Graph? Exploring Proximity Pattern for Knowledge Graph Embedding": {
+                    "explanation": "This paper explores a new pattern in knowledge graph embeddings, which is related to the source paper's use of knowledge graphs for question answering. However, it does not directly depend on or extend the findings of QA-GNN.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2021,
+        "source_paper": {
+            "paperId": "3950df97ea527009a32569cb7016bc3df1383dca",
+            "pmid": "2104.06378",
+            "title": "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering",
+            "abstract": "The problem of answering questions using knowledge from pre-trained language models (LMs) and knowledge graphs (KGs) presents two challenges: given a QA context (question and answer choice), methods need to (i) identify relevant knowledge from large KGs, and (ii) perform joint reasoning over the QA context and KG. Here we propose a new model, QA-GNN, which addresses the above challenges through two key innovations: (i) relevance scoring, where we use LMs to estimate the importance of KG nodes relative to the given QA context, and (ii) joint reasoning, where we connect the QA context and KG to form a joint graph, and mutually update their representations through graph-based message passing. We evaluate QA-GNN on the CommonsenseQA and OpenBookQA datasets, and show its improvement over existing LM and LM+KG models, as well as its capability to perform interpretable and structured reasoning, e.g., correctly handling negation in questions.",
+            "year": 2021,
+            "citation_count": 628
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Fact-Driven Logical Reasoning for Machine Reading Comprehension": {
+                    "explanation": "This paper focuses on logical reasoning for reading comprehension by using entity-aware knowledge and temporary facts, which is a different approach compared to the QA-GNN's focus on integrating language models and knowledge graphs for question answering. It does not directly build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "2.SalKG: Learning From Knowledge Graph Explanations for Commonsense Reasoning": {
+                    "explanation": "This paper explores the use of saliency explanations to improve KG-augmented models for commonsense reasoning. It is partially dependent on the findings of the source paper as it involves using knowledge graphs for reasoning tasks, similar to QA-GNN's approach of integrating LMs and KGs for question answering.",
+                    "relevance": 2
+                },
+                "3.RiddleSense: Reasoning about Riddle Questions Featuring Linguistic Creativity and Commonsense Knowledge": {
+                    "explanation": "RiddleSense introduces a dataset for answering riddle-style questions, focusing on commonsense reasoning and linguistic creativity. While it involves reasoning, it does not directly relate to the QA-GNN's method of integrating LMs and KGs for question answering.",
+                    "relevance": 0
+                },
+                "4.Extend, don\u2019t rebuild: Phrasing conditional graph modification as autoregressive sequence labelling": {
+                    "explanation": "This paper deals with graph modification techniques for information extraction, which is not directly related to the QA-GNN's focus on reasoning with language models and knowledge graphs for question answering.",
+                    "relevance": 0
+                },
+                "5.Improving Unsupervised Commonsense Reasoning Using Knowledge-Enabled Natural Language Inference": {
+                    "explanation": "This paper focuses on unsupervised commonsense reasoning using NLI and knowledge injection from sources like ATOMIC 2020 and ConceptNet. It shares a thematic similarity with the source paper in terms of using knowledge sources for reasoning, but it does not directly build on the QA-GNN's specific approach.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.SalKG: Learning From Knowledge Graph Explanations for Commonsense Reasoning": {
+                    "explanation": "This paper explores the use of saliency explanations to improve KG-augmented models for commonsense reasoning. It is partially dependent on the findings of the source paper as it involves using knowledge graphs for reasoning tasks, similar to QA-GNN's approach of integrating LMs and KGs for question answering.",
+                    "relevance": 2
+                },
+                "2.Improving Unsupervised Commonsense Reasoning Using Knowledge-Enabled Natural Language Inference": {
+                    "explanation": "This paper focuses on unsupervised commonsense reasoning using NLI and knowledge injection from sources like ATOMIC 2020 and ConceptNet. It shares a thematic similarity with the source paper in terms of using knowledge sources for reasoning, but it does not directly build on the QA-GNN's specific approach.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "83c4b8fcef3c214cfae45818a5b4b637372f3083",
+            "title": "JointLK: Joint Reasoning with Language Models and Knowledge Graphs for Commonsense Question Answering",
+            "abstract": "Existing KG-augmented models for commonsense question answering primarily focus on designing elaborate Graph Neural Networks (GNNs) to model knowledge graphs (KGs). However, they ignore (i) the effectively fusing and reasoning over question context representations and the KG representations, and (ii) automatically selecting relevant nodes from the noisy KGs during reasoning. In this paper, we propose a novel model, JointLK, which solves the above limitations through the joint reasoning of LM and GNN and the dynamic KGs pruning mechanism. Specifically, JointLK performs joint reasoning between LM and GNN through a novel dense bidirectional attention module, in which each question token attends on KG nodes and each KG node attends on question tokens, and the two modal representations fuse and update mutually by multi-step interactions. Then, the dynamic pruning module uses the attention weights generated by joint reasoning to prune irrelevant KG nodes recursively. We evaluate JointLK on the CommonsenseQA and OpenBookQA datasets, and demonstrate its improvements to the existing LM and LM+KG models, as well as its capability to perform interpretable reasoning.",
+            "year": 2021,
+            "citation_count": 76,
+            "relevance": 2,
+            "explanation": "This paper directly builds upon the source paper's approach by proposing a model that performs joint reasoning with language models and knowledge graphs, similar to QA-GNN. It addresses similar challenges and builds on the concept of integrating LM and KG for QA."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. A Survey on Knowledge-Enhanced Pre-trained Language Models": {
+                    "explanation": "This paper is a review paper that provides an overview of knowledge-enhanced pre-trained language models. It does not propose any novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "2. Relation-aware Language-Graph Transformer for Question Answering": {
+                    "explanation": "This paper proposes a model for question answering that jointly reasons over language and graphs, similar to the source paper's approach with JointLK. It builds on the idea of integrating language models with knowledge graphs for improved reasoning, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "3. A Survey of Knowledge Enhanced Pre-Trained Language Models": {
+                    "explanation": "This is another review paper that summarizes existing literature on knowledge-enhanced pre-trained language models, without introducing new hypotheses or findings related to the source paper.",
+                    "relevance": 0
+                },
+                "4. Deep Bidirectional Language-Knowledge Graph Pretraining": {
+                    "explanation": "This paper discusses a model that deeply integrates language and knowledge graph representations, similar to the joint reasoning approach in the source paper. It builds on the concept of fusing language models and knowledge graphs, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "5. KALM: Knowledge-Aware Integration of Local, Document, and Global Contexts for Long Document Understanding": {
+                    "explanation": "While this paper discusses the integration of knowledge graphs with language models, its focus is on long document understanding rather than commonsense question answering. It does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. The Effectiveness of Masked Language Modeling and Adapters for Factual Knowledge Injection": {
+                    "explanation": "This paper focuses on injecting factual knowledge into language models using adapters, which is not directly related to the joint reasoning approach of the source paper.",
+                    "relevance": 0
+                },
+                "7. DRLK: Dynamic Hierarchical Reasoning with Language Model and Knowledge Graph for Question Answering": {
+                    "explanation": "This paper proposes a model for question answering that utilizes dynamic hierarchical interactions between the QA context and knowledge graphs, similar to the joint reasoning approach in the source paper. It builds on the idea of integrating language models with knowledge graphs for improved reasoning, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "8. ACENet: Attention Guided Commonsense Reasoning on Hybrid Knowledge Graph": {
+                    "explanation": "This paper discusses a model for commonsense reasoning that integrates hybrid knowledge graphs with language models, similar to the joint reasoning approach in the source paper. It builds on the concept of integrating language models with knowledge graphs, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Relation-aware Language-Graph Transformer for Question Answering": {
+                    "explanation": "This paper proposes a model for question answering that jointly reasons over language and graphs, similar to the source paper's approach with JointLK. It builds on the idea of integrating language models with knowledge graphs for improved reasoning, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "2. Deep Bidirectional Language-Knowledge Graph Pretraining": {
+                    "explanation": "This paper discusses a model that deeply integrates language and knowledge graph representations, similar to the joint reasoning approach in the source paper. It builds on the concept of fusing language models and knowledge graphs, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "3. DRLK: Dynamic Hierarchical Reasoning with Language Model and Knowledge Graph for Question Answering": {
+                    "explanation": "This paper proposes a model for question answering that utilizes dynamic hierarchical interactions between the QA context and knowledge graphs, similar to the joint reasoning approach in the source paper. It builds on the idea of integrating language models with knowledge graphs for improved reasoning, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "ad3dfb2514cb0c899fcb9a14d229ff2a6018892f",
+            "title": "Deep Bidirectional Language-Knowledge Graph Pretraining",
+            "abstract": "Pretraining a language model (LM) on text has been shown to help various downstream NLP tasks. Recent works show that a knowledge graph (KG) can complement text data, offering structured background knowledge that provides a useful scaffold for reasoning. However, these works are not pretrained to learn a deep fusion of the two modalities at scale, limiting the potential to acquire fully joint representations of text and KG. Here we propose DRAGON (Deep Bidirectional Language-Knowledge Graph Pretraining), a self-supervised approach to pretraining a deeply joint language-knowledge foundation model from text and KG at scale. Specifically, our model takes pairs of text segments and relevant KG subgraphs as input and bidirectionally fuses information from both modalities. We pretrain this model by unifying two self-supervised reasoning tasks, masked language modeling and KG link prediction. DRAGON outperforms existing LM and LM+KG models on diverse downstream tasks including question answering across general and biomedical domains, with +5% absolute gain on average. In particular, DRAGON achieves notable performance on complex reasoning about language and knowledge (+10% on questions involving long contexts or multi-step reasoning) and low-resource QA (+8% on OBQA and RiddleSense), and new state-of-the-art results on various BioNLP tasks. Our code and trained models are available at https://github.com/michiyasunaga/dragon.",
+            "year": 2022,
+            "citation_count": 213,
+            "relevance": 2,
+            "explanation": "This paper discusses a model that deeply integrates language and knowledge graph representations, similar to the joint reasoning approach in the source paper. It builds on the concept of fusing language models and knowledge graphs, making it partially dependent on the findings of the source paper."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Democratising Knowledge Representation with BioCypher": {
+                    "explanation": "This paper focuses on standardizing the framework for creating biomedical knowledge graphs, which is related to the source paper's use of knowledge graphs. However, it does not directly build upon or depend on the findings of the source paper regarding the joint pretraining of language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "2. Large language models encode clinical knowledge": {
+                    "explanation": "This paper discusses the capabilities of large language models in the clinical domain and introduces a benchmark for evaluating them. While it deals with language models, it does not focus on the integration of knowledge graphs as in the source paper, nor does it build upon the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Graph Learning and Its Advancements on Large Language Models: A Holistic Survey": {
+                    "explanation": "This is a survey paper that reviews advancements in graph learning and its integration with large language models. It does not present novel hypotheses or findings directly related to the source paper's focus on joint pretraining of language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "4. A Survey of Knowledge Graph Reasoning on Graph Types: Static, Dynamic, and Multi-Modal": {
+                    "explanation": "This paper is a survey on knowledge graph reasoning, which is related to the source paper's use of knowledge graphs. However, it does not directly build upon or depend on the findings of the source paper regarding joint pretraining of language models and knowledge graphs.",
+                    "relevance": 0
+                },
+                "5. A Unified Knowledge Graph Augmentation Service for Boosting Domain-specific NLP Tasks": {
+                    "explanation": "This paper proposes a service for augmenting domain-specific NLP tasks with knowledge graphs, which aligns with the source paper's focus on integrating knowledge graphs with language models. However, it does not specifically build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering": {
+                    "explanation": "This paper introduces a model for visual question answering that integrates structured and unstructured knowledge, similar to the source paper's integration of language models and knowledge graphs. However, it focuses on a different application domain and does not directly build upon the source paper's findings.",
+                    "relevance": 1
+                },
+                "7. UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models": {
+                    "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models": {
+                    "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs.",
+                    "relevance": 2
+                },
+                "2. A Unified Knowledge Graph Augmentation Service for Boosting Domain-specific NLP Tasks": {
+                    "explanation": "This paper proposes a service for augmenting domain-specific NLP tasks with knowledge graphs, which aligns with the source paper's focus on integrating knowledge graphs with language models. However, it does not specifically build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. VQA-GNN: Reasoning with Multimodal Knowledge via Graph Neural Networks for Visual Question Answering": {
+                    "explanation": "This paper introduces a model for visual question answering that integrates structured and unstructured knowledge, similar to the source paper's integration of language models and knowledge graphs. However, it focuses on a different application domain and does not directly build upon the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Three-stage Logical Table-to-Text Generation based on Type Control": {
+                    "explanation": "This paper focuses on logical Table-to-Text generation, which is a specific task within the broader domain of structured knowledge grounding. However, it does not directly build upon the UnifiedSKG framework or its findings. The paper does not use the unified approach of combining multiple SKG tasks as proposed in the source paper.",
+                    "relevance": 0
+                },
+                "2.OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization": {
+                    "explanation": "This paper discusses instruction-tuning of language models, which is related to the multi-task learning aspect of UnifiedSKG. However, it does not directly depend on the findings of UnifiedSKG or use its framework. It focuses more on instruction meta-learning rather than structured knowledge grounding.",
+                    "relevance": 0
+                },
+                "3.Optimization Techniques for Unsupervised Complex Table Reasoning via Self-Training Framework": {
+                    "explanation": "This paper addresses unsupervised complex table reasoning, which is related to structured knowledge tasks. However, it does not directly build upon or depend on the UnifiedSKG framework. It proposes a self-training framework rather than a unified multi-task approach.",
+                    "relevance": 0
+                },
+                "4.MIGA: A Unified Multi-task Generation Framework for Conversational Text-to-SQL": {
+                    "explanation": "This paper presents a unified multi-task generation framework for conversational text-to-SQL, which aligns with the multi-task and unified approach of UnifiedSKG. It leverages generative pre-trained language models similar to the approach in UnifiedSKG, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "5.Natural Language to Code Generation in Interactive Data Science Notebooks": {
+                    "explanation": "This paper focuses on code generation in data science notebooks, which is not directly related to structured knowledge grounding or the unified approach of UnifiedSKG. It does not build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6.Don\u2019t Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments": {
+                    "explanation": "This paper proposes a framework for grounded language understanding, which is related to structured knowledge grounding. However, it focuses on a discriminative approach rather than the generative multi-task approach of UnifiedSKG, and does not directly build upon its findings.",
+                    "relevance": 0
+                },
+                "7.Query Enhanced Knowledge-Intensive Conversation via Unsupervised Joint Modeling": {
+                    "explanation": "This paper proposes an unsupervised approach for knowledge-intensive conversations, which is related to structured knowledge tasks. However, it does not directly build upon or depend on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "8.Improving Cross-task Generalization of Unified Table-to-text Models with Compositional Task Configurations": {
+                    "explanation": "This paper directly builds upon the UnifiedSKG framework by proposing improvements for cross-task generalization using compositional task configurations. It is highly relevant as it seeks to enhance the unified approach proposed in the source paper.",
+                    "relevance": 2
+                },
+                "9.Importance of Synthesizing High-quality Data for Text-to-SQL Parsing": {
+                    "explanation": "This paper focuses on data synthesis for text-to-SQL tasks, which is related to structured knowledge grounding. However, it does not directly build upon the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "10.Enhancing Multi-modal Multi-hop Question Answering via Structured Knowledge and Unified Retrieval-Generation": {
+                    "explanation": "This paper proposes a unified approach for multi-modal multi-hop question answering, which is related to structured knowledge grounding. However, it does not directly build upon the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.MIGA: A Unified Multi-task Generation Framework for Conversational Text-to-SQL": {
+                    "explanation": "This paper presents a unified multi-task generation framework for conversational text-to-SQL, which aligns with the multi-task and unified approach of UnifiedSKG. It leverages generative pre-trained language models similar to the approach in UnifiedSKG, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "2.Improving Cross-task Generalization of Unified Table-to-text Models with Compositional Task Configurations": {
+                    "explanation": "This paper directly builds upon the UnifiedSKG framework by proposing improvements for cross-task generalization using compositional task configurations. It is highly relevant as it seeks to enhance the unified approach proposed in the source paper.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Multi-VALUE: A Framework for Cross-Dialectal English NLP": {
+                    "explanation": "This paper focuses on dialectal differences in NLP tasks, which is a different focus from the source paper's aim of unifying structured knowledge grounding tasks. There is no direct connection between the two.",
+                    "relevance": 0
+                },
+                "2.OFASys: A Multi-Modal Multi-Task Learning System for Building Generalist Models": {
+                    "explanation": "OFASys is about multi-modal multi-task learning, which shares a thematic similarity with UnifiedSKG's multi-task approach. However, OFASys does not directly build on the findings or hypotheses of UnifiedSKG, focusing instead on multi-modal tasks rather than structured knowledge grounding.",
+                    "relevance": 1
+                },
+                "3.DiSTRICT: Dialogue State Tracking with Retriever Driven In-Context Tuning": {
+                    "explanation": "DiSTRICT is focused on dialogue state tracking, which is a specific application within NLP. While it involves structured data, it does not directly relate to the unification of SKG tasks as proposed by UnifiedSKG.",
+                    "relevance": 0
+                },
+                "4.KPT: Keyword-guided Pre-training for Grounded Dialog Generation": {
+                    "explanation": "KPT deals with knowledge-grounded dialog generation, which is related to structured knowledge grounding. However, it does not directly build on the unification framework or findings of UnifiedSKG.",
+                    "relevance": 1
+                },
+                "5.On the Vulnerabilities of Text-to-SQL Models": {
+                    "explanation": "This paper explores vulnerabilities in Text-to-SQL models, which is a specific task within structured knowledge grounding. It does not build on the unification framework of UnifiedSKG but is related to one of the tasks UnifiedSKG addresses.",
+                    "relevance": 1
+                },
+                "6.UniMSE: Towards Unified Multimodal Sentiment Analysis and Emotion Recognition": {
+                    "explanation": "UniMSE focuses on sentiment analysis and emotion recognition, which are not directly related to the structured knowledge grounding tasks unified by UnifiedSKG.",
+                    "relevance": 0
+                },
+                "7.UnifiedABSA: A Unified ABSA Framework Based on Multi-task Instruction Tuning": {
+                    "explanation": "UnifiedABSA shares a thematic similarity with UnifiedSKG in terms of unifying multiple tasks under a single framework. However, it focuses on aspect-based sentiment analysis, which is not directly related to structured knowledge grounding.",
+                    "relevance": 1
+                },
+                "8.Knowledge Graph Generation From Text": {
+                    "explanation": "This paper is about generating knowledge graphs from text, which is related to structured knowledge grounding. However, it does not directly build on the unification framework or findings of UnifiedSKG.",
+                    "relevance": 1
+                },
+                "9.PromptCap: Prompt-Guided Task-Aware Image Captioning": {
+                    "explanation": "PromptCap focuses on image captioning for visual question answering, which is not directly related to the structured knowledge grounding tasks unified by UnifiedSKG.",
+                    "relevance": 0
+                },
+                "10.A Survey of Knowledge Enhanced Pre-Trained Language Models": {
+                    "explanation": "This paper is a review of knowledge-enhanced pre-trained language models and does not present a novel hypothesis or findings that build on UnifiedSKG.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.OFASys: A Multi-Modal Multi-Task Learning System for Building Generalist Models": {
+                    "explanation": "OFASys is about multi-modal multi-task learning, which shares a thematic similarity with UnifiedSKG's multi-task approach. However, OFASys does not directly build on the findings or hypotheses of UnifiedSKG, focusing instead on multi-modal tasks rather than structured knowledge grounding.",
+                    "relevance": 1
+                },
+                "2.KPT: Keyword-guided Pre-training for Grounded Dialog Generation": {
+                    "explanation": "KPT deals with knowledge-grounded dialog generation, which is related to structured knowledge grounding. However, it does not directly build on the unification framework or findings of UnifiedSKG.",
+                    "relevance": 1
+                },
+                "3.On the Vulnerabilities of Text-to-SQL Models": {
+                    "explanation": "This paper explores vulnerabilities in Text-to-SQL models, which is a specific task within structured knowledge grounding. It does not build on the unification framework of UnifiedSKG but is related to one of the tasks UnifiedSKG addresses.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Uni-Parser: Unified Semantic Parser for Question Answering on Knowledge Base and Database": {
+                    "explanation": "This paper is relevant as it proposes a unified semantic parser for question answering on both knowledge bases and databases, which aligns with the source paper's aim to unify structured knowledge grounding tasks. The concept of unification and handling multiple modalities is inspired by the source paper.",
+                    "relevance": 1
+                },
+                "2. MOCHA: A Multi-Task Training Approach for Coherent Text Generation from Cognitive Perspective": {
+                    "explanation": "This paper focuses on text generation and coherence from a cognitive perspective, which is not directly related to structured knowledge grounding or the unification of SKG tasks as proposed in the source paper.",
+                    "relevance": 0
+                },
+                "3. XRICL: Cross-lingual Retrieval-Augmented In-Context Learning for Cross-lingual Text-to-SQL Semantic Parsing": {
+                    "explanation": "This paper focuses on cross-lingual text-to-SQL semantic parsing, which is a specific task within the broader SKG framework. While it deals with semantic parsing, it does not directly build upon the unification framework of the source paper.",
+                    "relevance": 0
+                },
+                "4. TIARA: Multi-grained Retrieval for Robust Question Answering over Large Knowledge Base": {
+                    "explanation": "TIARA addresses question answering over knowledge bases, which is a task within the SKG framework discussed in the source paper. However, it does not explicitly build upon the unification or multi-tasking aspects of the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "5. Towards Generalizable and Robust Text-to-SQL Parsing": {
+                    "explanation": "This paper focuses on improving the generalizability and robustness of text-to-SQL parsing, which is a specific task within the SKG framework. It does not directly build upon the unification or multi-tasking aspects of the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "6. ReasTAP: Injecting Table Reasoning Skills During Pre-training via Synthetic Reasoning Examples": {
+                    "explanation": "ReasTAP focuses on table reasoning skills and pre-training, which is not directly related to the unification of structured knowledge grounding tasks as proposed in the source paper.",
+                    "relevance": 0
+                },
+                "7. ProGen: Progressive Zero-shot Dataset Generation via In-context Feedback": {
+                    "explanation": "ProGen deals with zero-shot dataset generation and does not directly relate to the unification of structured knowledge grounding tasks or the multi-tasking aspect of the source paper.",
+                    "relevance": 0
+                },
+                "8. Augmenting Multi-Turn Text-to-SQL Datasets with Self-Play": {
+                    "explanation": "This paper focuses on augmenting text-to-SQL datasets, which is a specific task within the SKG framework. It does not directly build upon the unification or multi-tasking aspects of the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "9. N-Best Hypotheses Reranking for Text-to-SQL Systems": {
+                    "explanation": "This paper focuses on reranking hypotheses for text-to-SQL systems, which is a specific task within the SKG framework. It does not directly build upon the unification or multi-tasking aspects of the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "10. Investigating the Robustness of Natural Language Generation from Logical Forms via Counterfactual Samples": {
+                    "explanation": "This paper investigates robustness in natural language generation from logical forms, which is not directly related to the unification of structured knowledge grounding tasks as proposed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Uni-Parser: Unified Semantic Parser for Question Answering on Knowledge Base and Database": {
+                    "explanation": "This paper is relevant as it proposes a unified semantic parser for question answering on both knowledge bases and databases, which aligns with the source paper's aim to unify structured knowledge grounding tasks. The concept of unification and handling multiple modalities is inspired by the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Q-TOD: A Query-driven Task-oriented Dialogue System": {
+                    "explanation": "This paper focuses on task-oriented dialogue systems and does not directly relate to structured knowledge grounding or the UnifiedSKG framework. It does not build on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "2. Large Language Models are few(1)-shot Table Reasoners": {
+                    "explanation": "This paper explores the capabilities of large language models in table reasoning tasks with few-shot learning. While it discusses few-shot learning, it does not directly build on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "3. Entity Tracking via Effective Use of Multi-Task Learning Model and Mention-guided Decoding": {
+                    "explanation": "This paper discusses multi-task learning and entity tracking, which are relevant to the multi-task learning aspect of UnifiedSKG. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "4. Task Compass: Scaling Multi-task Pre-training with Task Prefix": {
+                    "explanation": "This paper explores multi-task pre-training with task prefixes, which aligns with the multi-task learning approach in UnifiedSKG. It partially depends on the findings of the source paper regarding multi-task learning improvements.",
+                    "relevance": 2
+                },
+                "5. Reflection of Thought: Inversely Eliciting Numerical Reasoning in Language Models via Solving Linear Systems": {
+                    "explanation": "This paper focuses on numerical reasoning in language models and does not directly relate to structured knowledge grounding or the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "6. KALM: Knowledge-Aware Integration of Local, Document, and Global Contexts for Long Document Understanding": {
+                    "explanation": "This paper addresses knowledge integration in language models, which is related to the structured knowledge grounding aspect of UnifiedSKG. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. Binding Language Models in Symbolic Languages": {
+                    "explanation": "This paper discusses a neural-symbolic framework for language models, which does not directly relate to the structured knowledge grounding or multi-task learning aspects of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "8. A taxonomy and review of generalization research in NLP": {
+                    "explanation": "This is a review paper summarizing generalization research in NLP and does not present novel hypotheses or findings related to the source paper.",
+                    "relevance": 0
+                },
+                "9. Unveiling the Black Box of PLMs with Semantic Anchors: Towards Interpretable Neural Semantic Parsing": {
+                    "explanation": "This paper focuses on semantic parsing and interpretability, which are related to the structured knowledge grounding aspect of UnifiedSKG. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "10. DecAF: Joint Decoding of Answers and Logical Forms for Question Answering over Knowledge Bases": {
+                    "explanation": "This paper discusses question answering over knowledge bases, which is related to structured knowledge grounding. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Task Compass: Scaling Multi-task Pre-training with Task Prefix": {
+                    "explanation": "This paper explores multi-task pre-training with task prefixes, which aligns with the multi-task learning approach in UnifiedSKG. It partially depends on the findings of the source paper regarding multi-task learning improvements.",
+                    "relevance": 2
+                },
+                "2. Entity Tracking via Effective Use of Multi-Task Learning Model and Mention-guided Decoding": {
+                    "explanation": "This paper discusses multi-task learning and entity tracking, which are relevant to the multi-task learning aspect of UnifiedSKG. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. KALM: Knowledge-Aware Integration of Local, Document, and Global Contexts for Long Document Understanding": {
+                    "explanation": "This paper addresses knowledge integration in language models, which is related to the structured knowledge grounding aspect of UnifiedSKG. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. T5QL: Taming language models for SQL generation": {
+                    "explanation": "This paper focuses on SQL generation using smaller language models, specifically T5-Base, and aims to improve performance on benchmark datasets. While it uses the T5 model, which is also used in UnifiedSKG, it does not directly build on the findings or hypotheses of UnifiedSKG, as its focus is on SQL generation rather than the broader structured knowledge grounding tasks.",
+                    "relevance": 0
+                },
+                "2. Knowledge Is Flat: A Seq2Seq Generative Framework for Various Knowledge Graph Completion": {
+                    "explanation": "This paper proposes a framework for knowledge graph completion by unifying the representation of knowledge graph facts into flat text. While it shares the theme of unifying different tasks or representations, similar to UnifiedSKG, it does not directly depend on the findings or hypotheses of the source paper, as it focuses on knowledge graph completion rather than structured knowledge grounding across multiple tasks.",
+                    "relevance": 0
+                },
+                "3. PTab: Using the Pre-trained Language Model for Modeling Tabular Data": {
+                    "explanation": "PTab focuses on modeling tabular data using pre-trained language models. Although it involves structured data, it does not directly relate to the unified framework for structured knowledge grounding proposed by UnifiedSKG. The focus on tabular data modeling is distinct from the multi-tasking and unification of SKG tasks.",
+                    "relevance": 0
+                },
+                "4. SUN: Exploring Intrinsic Uncertainties in Text-to-SQL Parsers": {
+                    "explanation": "This paper addresses uncertainties in text-to-SQL parsing, a task that is part of the structured knowledge grounding tasks UnifiedSKG aims to unify. The exploration of intrinsic uncertainties in neural network-based text-to-SQL parsers is relevant to the structured knowledge grounding tasks, as it could benefit from the unified approach proposed by UnifiedSKG.",
+                    "relevance": 1
+                },
+                "5. Generative Visual Prompt: Unifying Distributional Control of Pre-Trained Generative Models": {
+                    "explanation": "This paper discusses generative models and their control using visual prompts, which is unrelated to the structured knowledge grounding tasks or the unified framework proposed in UnifiedSKG. It focuses on generative models rather than structured knowledge grounding.",
+                    "relevance": 0
+                },
+                "6. Knowledge Base Question Answering: A Semantic Parsing Perspective": {
+                    "explanation": "This paper is a review of question answering over knowledge bases from a semantic parsing perspective. It does not propose new hypotheses or findings that build on the UnifiedSKG framework, and it is more of a survey of existing literature.",
+                    "relevance": 0
+                },
+                "7. FOLIO: Natural Language Reasoning with First-Order Logic": {
+                    "explanation": "FOLIO focuses on natural language reasoning with first-order logic, which is distinct from the structured knowledge grounding tasks addressed by UnifiedSKG. It does not build on or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "8. AnaMeta: A Table Understanding Dataset of Field Metadata Knowledge Shared by Multi-dimensional Data Analysis Tasks": {
+                    "explanation": "AnaMeta introduces a dataset for understanding field metadata in tabular data, which is unrelated to the structured knowledge grounding tasks or the unified framework proposed in UnifiedSKG. It focuses on tabular data analysis rather than SKG tasks.",
+                    "relevance": 0
+                },
+                "9. A Survey on Text-to-SQL Parsing: Concepts, Methods, and Future Directions": {
+                    "explanation": "This paper is a survey on text-to-SQL parsing, providing an overview of the field rather than proposing new hypotheses or findings. It does not build on or depend on the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "10. Recent Advances in Text-to-SQL: A Survey of What We Have and What We Expect": {
+                    "explanation": "This is a survey paper on recent advances in text-to-SQL parsing. It does not propose new hypotheses or findings that build on the UnifiedSKG framework, and it is more of a review of existing literature.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. SUN: Exploring Intrinsic Uncertainties in Text-to-SQL Parsers": {
+                    "explanation": "This paper addresses uncertainties in text-to-SQL parsing, a task that is part of the structured knowledge grounding tasks UnifiedSKG aims to unify. The exploration of intrinsic uncertainties in neural network-based text-to-SQL parsers is relevant to the structured knowledge grounding tasks, as it could benefit from the unified approach proposed by UnifiedSKG.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Generation-Focused Table-Based Intermediate Pre-training for Free-Form Question Answering": {
+                    "explanation": "This paper focuses on enhancing table-based question answering, which is related to the structured knowledge grounding tasks discussed in UnifiedSKG. However, it does not directly build upon or depend on the findings of UnifiedSKG, as it introduces a new pre-training framework (GENTAP) rather than leveraging the unified approach of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "2.MVP: Multi-task Supervised Pre-training for Natural Language Generation": {
+                    "explanation": "MVP proposes a multi-task supervised pre-training approach for NLG, which is conceptually similar to the multi-task approach in UnifiedSKG. However, it does not specifically depend on the findings of UnifiedSKG, as it focuses on natural language generation rather than structured knowledge grounding.",
+                    "relevance": 0
+                },
+                "3.BenchCLAMP: A Benchmark for Evaluating Language Models on Syntactic and Semantic Parsing": {
+                    "explanation": "BenchCLAMP introduces a benchmark for evaluating language models on parsing tasks, which aligns with the evaluation aspect of UnifiedSKG. However, it does not build upon or require the findings of UnifiedSKG, as it focuses on constrained language model parsing rather than unifying SKG tasks.",
+                    "relevance": 0
+                },
+                "4.Insights into Pre-training via Simpler Synthetic Tasks": {
+                    "explanation": "This paper explores the properties of pre-training using synthetic tasks, which is a different focus from the structured knowledge grounding and multi-tasking approach of UnifiedSKG. It does not rely on or extend the findings of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "5.MultiHiertt: Numerical Reasoning over Multi Hierarchical Tabular and Textual Data": {
+                    "explanation": "MultiHiertt addresses numerical reasoning over hybrid data, which is related to structured knowledge tasks. However, it does not directly depend on or extend the findings of UnifiedSKG, as it introduces a new benchmark and QA model rather than building on the unified framework.",
+                    "relevance": 0
+                },
+                "6.Prompt Injection: Parameterization of Fixed Inputs": {
+                    "explanation": "Prompt Injection explores an efficient method for conditioning language models, which is related to the task formatting aspect of UnifiedSKG. However, it does not directly build upon the findings of UnifiedSKG, as it focuses on prompt efficiency rather than unifying SKG tasks.",
+                    "relevance": 0
+                },
+                "7.TaCube: Pre-computing Data Cubes for Answering Numerical-Reasoning Questions over Tabular Data": {
+                    "explanation": "TaCube addresses numerical reasoning over tabular data, which is relevant to structured knowledge tasks. However, it does not directly depend on or extend the findings of UnifiedSKG, as it focuses on pre-computation for numerical reasoning rather than unifying SKG tasks.",
+                    "relevance": 0
+                },
+                "8.R2D2: Robust Data-to-Text with Replacement Detection": {
+                    "explanation": "R2D2 focuses on improving the faithfulness of data-to-text generation, which is related to structured knowledge tasks. However, it does not directly build upon or require the findings of UnifiedSKG, as it introduces a new training framework rather than leveraging the unified approach.",
+                    "relevance": 0
+                },
+                "9.PLOG: Table-to-Logic Pretraining for Logical Table-to-Text Generation": {
+                    "explanation": "PLOG addresses logical table-to-text generation, which is related to structured knowledge tasks. However, it does not directly depend on or extend the findings of UnifiedSKG, as it focuses on logical fidelity rather than unifying SKG tasks.",
+                    "relevance": 0
+                },
+                "10.Evaluating the Impact of Model Scale for Compositional Generalization in Semantic Parsing": {
+                    "explanation": "This paper evaluates model scaling for compositional generalization in semantic parsing, which is related to structured knowledge tasks. However, it does not directly build upon or require the findings of UnifiedSKG, as it focuses on model scaling rather than unifying SKG tasks.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. UnifieR: A Unified Retriever for Large-Scale Retrieval": {
+                    "explanation": "This paper focuses on large-scale retrieval and proposes a unified model for dense-vector and lexicon-based retrieval. While it shares a theme of unification with the source paper, it does not directly build on the structured knowledge grounding framework or findings of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "2. Table Retrieval May Not Necessitate Table-specific Model Design": {
+                    "explanation": "This paper investigates table retrieval and questions the necessity of table-specific model designs. It does not directly relate to the structured knowledge grounding or multi-tasking framework proposed in UnifiedSKG.",
+                    "relevance": 0
+                },
+                "3. CQR-SQL: Conversational Question Reformulation Enhanced Context-Dependent Text-to-SQL Parsers": {
+                    "explanation": "CQR-SQL focuses on context-dependent text-to-SQL parsing, which is a specific SKG task. While it deals with SQL parsing, it does not directly depend on the findings or framework of UnifiedSKG, which aims to unify multiple SKG tasks.",
+                    "relevance": 0
+                },
+                "4. RASAT: Integrating Relational Structures into Pretrained Seq2Seq Model for Text-to-SQL": {
+                    "explanation": "RASAT focuses on text-to-SQL tasks by integrating relational structures into a seq2seq model. Although it is related to SKG tasks, it does not build on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "5. Natural Language to Code Translation with Execution": {
+                    "explanation": "This paper deals with natural language to code translation using execution-based methods. It does not relate to the structured knowledge grounding or the multi-tasking framework of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "6. ArcaneQA: Dynamic Program Induction and Contextualized Encoding for Knowledge Base Question Answering": {
+                    "explanation": "ArcaneQA addresses knowledge base question answering, which is a type of SKG task. However, it does not build on the UnifiedSKG framework or its findings, focusing instead on dynamic program induction and contextualized encoding.",
+                    "relevance": 0
+                },
+                "7. Super-NaturalInstructions: Generalization via Declarative Instructions on 1600+ NLP Tasks": {
+                    "explanation": "This paper introduces a benchmark for generalization across NLP tasks using declarative instructions. While it shares a multi-tasking theme, it does not directly build on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "8. In-BoXBART: Get Instructions into Biomedical Multi-Task Learning": {
+                    "explanation": "In-BoXBART explores multi-task learning in the biomedical domain using instructional prompts. Although it shares a multi-tasking theme, it does not build on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                },
+                "9. LinkBERT: Pretraining Language Models with Document Links": {
+                    "explanation": "LinkBERT focuses on pretraining language models with document links for improved downstream tasks. It does not relate to the structured knowledge grounding or multi-tasking framework of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "10. In-Context Learning for Few-Shot Dialogue State Tracking": {
+                    "explanation": "This paper proposes an in-context learning framework for dialogue state tracking, reformulating it as a text-to-SQL problem. While it involves SQL parsing, it does not build on the UnifiedSKG framework or its findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2022,
+        "source_paper": {
+            "paperId": "79950179d60ba39a74d5fe2aedc47a57c0bf4c03",
+            "title": "UnifiedSKG: Unifying and Multi-Tasking Structured Knowledge Grounding with Text-to-Text Language Models",
+            "abstract": "Structured knowledge grounding (SKG) leverages structured knowledge to complete user requests, such as semantic parsing over databases and question answering over knowledge bases. Since the inputs and outputs of SKG tasks are heterogeneous, they have been studied separately by different communities, which limits systematic and compatible research on SKG. In this paper, we overcome this limitation by proposing the UnifiedSKG framework, which unifies 21 SKG tasks into a text-to-text format, aiming to promote systematic SKG research, instead of being exclusive to a single task, domain, or dataset. We use UnifiedSKG to benchmark T5 with different sizes and show that T5, with simple modifications when necessary, achieves state-of-the-art performance on almost all of the 21 tasks. We further demonstrate that multi-task prefix-tuning improves the performance on most tasks, largely improving the overall performance. UnifiedSKG also facilitates the investigation of zero-shot and few-shot learning, and we show that T0, GPT-3, and Codex struggle in zero-shot and few-shot learning for SKG. We also use UnifiedSKG to conduct a series of controlled experiments on structured knowledge encoding variants across SKG tasks. UnifiedSKG is easily extensible to more tasks, and it is open-sourced at https://github.com/hkunlp/unifiedskg.",
+            "year": 2022,
+            "citation_count": 314,
+            "relevance": 2,
+            "explanation": "This paper proposes a framework for structured knowledge grounding using text-to-text language models, which relates to the source paper's focus on integrating structured knowledge with language models. It partially builds upon the idea of joint representation of text and knowledge graphs."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. UniSAr: a unified structure-aware autoregressive language model for text-to-SQL semantic parsing": {
+                    "explanation": "This paper builds on the concept of unifying multiple tasks into a single framework, similar to UnifiedSKG, but focuses specifically on text-to-SQL semantic parsing. It extends language models to be structure-aware, which aligns with the source paper's goal of unifying structured knowledge grounding tasks.",
+                    "relevance": 1
+                },
+                "2. Input-Tuning: Adapting Unfamiliar Inputs to Frozen Pretrained Models": {
+                    "explanation": "This paper discusses input-tuning for adapting inputs to pretrained models, which is related to the source paper's exploration of multi-task learning and model adaptation. However, it does not directly build on the specific findings or hypotheses of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "3. A Contrastive Framework for Neural Text Generation": {
+                    "explanation": "This paper focuses on text generation and contrastive training, which is not directly related to the structured knowledge grounding or multi-task learning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Table Pre-training: A Survey on Model Architectures, Pretraining Objectives, and Downstream Tasks": {
+                    "explanation": "This is a survey paper that reviews existing literature on table pre-training, which does not propose new hypotheses or findings directly related to the UnifiedSKG framework.",
+                    "relevance": 0
+                },
+                "5. Interactive Data Analysis with Next-step Natural Language Query Recommendation": {
+                    "explanation": "This paper discusses natural language interfaces for data analysis, which involves structured data interaction. However, it does not directly build on the findings or hypotheses of UnifiedSKG.",
+                    "relevance": 0
+                },
+                "6. Syntactic and Semantic Uniformity for Semantic Parsing and Task-Oriented Dialogue Systems": {
+                    "explanation": "The title suggests a focus on uniformity in semantic parsing, which could relate to the unification aspect of UnifiedSKG. However, without an abstract, it's unclear how directly it builds on the source paper's findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. UniSAr: a unified structure-aware autoregressive language model for text-to-SQL semantic parsing": {
+                    "explanation": "This paper builds on the concept of unifying multiple tasks into a single framework, similar to UnifiedSKG, but focuses specifically on text-to-SQL semantic parsing. It extends language models to be structure-aware, which aligns with the source paper's goal of unifying structured knowledge grounding tasks.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "0979695b5d74016e97ab8f306f632114e98bd6d9",
+            "title": "Task Compass: Scaling Multi-task Pre-training with Task Prefix",
+            "abstract": "Leveraging task-aware annotated data as supervised signals to assist with self-supervised learning on large-scale unlabeled data has become a new trend in pre-training language models. Existing studies show that multi-task learning with large-scale supervised tasks suffers from negative effects across tasks. To tackle the challenge, we propose a task prefix guided multi-task pre-training framework to explore the relationships among tasks. We conduct extensive experiments on 40 datasets, which show that our model can not only serve as the strong foundation backbone for a wide range of tasks but also be feasible as a probing tool for analyzing task relationships. The task relationships reflected by the prefixes align transfer learning performance between tasks. They also suggest directions for data augmentation with complementary tasks, which help our model achieve human-parity results on commonsense reasoning leaderboards. Code is available at https://github.com/cooelf/CompassMTL",
+            "year": 2022,
+            "citation_count": 17,
+            "relevance": 2,
+            "explanation": "This paper explores multi-task pre-training with task prefixes, which aligns with the multi-task learning approach in UnifiedSKG. It partially depends on the findings of the source paper regarding multi-task learning improvements."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Constituency Parsing using LLMs": {
+                    "explanation": "This paper focuses on constituency parsing using large language models, which is a different task from the multi-task pre-training and task prefix approach discussed in the source paper. There is no direct connection or dependency on the source paper's findings.",
+                    "relevance": 0
+                },
+                "2.Meta-CoT: Generalizable Chain-of-Thought Prompting in Mixed-task Scenarios with Large Language Models": {
+                    "explanation": "While this paper explores chain-of-thought prompting in mixed-task scenarios, it does not directly build upon or depend on the task prefix guided multi-task pre-training framework proposed in the source paper.",
+                    "relevance": 0
+                },
+                "3.Injecting a Structural Inductive Bias into a Seq2Seq Model by Simulation": {
+                    "explanation": "This paper discusses injecting structural inductive biases into seq2seq models, which is not directly related to the task prefix guided multi-task pre-training framework. There is no dependency on the source paper's findings.",
+                    "relevance": 0
+                },
+                "4.From Language Modeling to Instruction Following: Understanding the Behavior Shift in LLMs after Instruction Tuning": {
+                    "explanation": "This paper investigates the behavior shift in LLMs after instruction tuning, which is related to understanding task relationships and model tuning, similar to the source paper's focus on task prefix guided multi-task pre-training. However, it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "5.You Only Look at Screens: Multimodal Chain-of-Action Agents": {
+                    "explanation": "This paper focuses on multimodal GUI agents and does not relate to the task prefix guided multi-task pre-training framework. There is no connection to the source paper's findings.",
+                    "relevance": 0
+                },
+                "6.UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt": {
+                    "explanation": "This paper discusses task-aware automatic prompt generation in multi-task instruction tuning, which relates to the source paper's focus on task-aware approaches in multi-task pre-training. The hypothesis is partially dependent on the source paper's exploration of task relationships.",
+                    "relevance": 2
+                },
+                "7.Improved Active Multi-Task Representation Learning via Lasso": {
+                    "explanation": "This paper addresses active multi-task representation learning and task selection strategies, which is related to the source paper's focus on multi-task learning and task relationships. The hypothesis is inspired by the source paper's findings.",
+                    "relevance": 1
+                },
+                "8.Pretrained Language Model based Web Search Ranking: From Relevance to Satisfaction": {
+                    "explanation": "This paper focuses on web search ranking using PLMs, which is unrelated to the multi-task pre-training framework discussed in the source paper. There is no connection to the source paper's findings.",
+                    "relevance": 0
+                },
+                "9.Is ChatGPT a General-Purpose Natural Language Processing Task Solver?": {
+                    "explanation": "This paper evaluates ChatGPT's ability to perform NLP tasks zero-shot, which is not directly related to the task prefix guided multi-task pre-training framework. There is no dependency on the source paper's findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt": {
+                    "explanation": "This paper discusses task-aware automatic prompt generation in multi-task instruction tuning, which relates to the source paper's focus on task-aware approaches in multi-task pre-training. The hypothesis is partially dependent on the source paper's exploration of task relationships.",
+                    "relevance": 2
+                },
+                "2.From Language Modeling to Instruction Following: Understanding the Behavior Shift in LLMs after Instruction Tuning": {
+                    "explanation": "This paper investigates the behavior shift in LLMs after instruction tuning, which is related to understanding task relationships and model tuning, similar to the source paper's focus on task prefix guided multi-task pre-training. However, it does not directly depend on the source paper's findings.",
+                    "relevance": 1
+                },
+                "3.Improved Active Multi-Task Representation Learning via Lasso": {
+                    "explanation": "This paper addresses active multi-task representation learning and task selection strategies, which is related to the source paper's focus on multi-task learning and task relationships. The hypothesis is inspired by the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2023,
+        "source_paper": {
+            "paperId": "84886c484a0b04029fa8352a19297fd712b2afdc",
+            "title": "UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt",
+            "abstract": "Recent researches have shown that multi-task instruction tuning after pre-training greatly improves the model\u2019s robustness and transfer ability, which is crucial for building a high-quality dialog system. However, most previous works on multi-task instruction tuning rely heavily on human-defined input format or prompt, which is not optimal in quality and quantity.In this work, we propose to use Task-aware Automatic Prompt generation (TAP) to automatically generate high-quality prompts. Using the high-quality prompts generated, we scale the corpus of the pre-trained conversation model to 122 datasets from 15 dialog-related tasks, resulting in Universal Pre-trained Conversation Model (UniPCM), a powerful foundation model for various conversational tasks and different dialog systems. Extensive experiments have shown that UniPCM is robust to input prompts and capable of various dialog-related tasks. Moreover, UniPCM has strong transfer ability and excels at low resource scenarios, achieving SOTA results on 9 different datasets ranging from task-oriented dialog to open-domain conversation. Furthermore, we are amazed to find that TAP can generate prompts on par with those collected with crowdsourcing.",
+            "year": 2023,
+            "citation_count": 4,
+            "relevance": 2,
+            "explanation": "This paper discusses task-aware automatic prompt generation in multi-task instruction tuning, which relates to the source paper's focus on task-aware approaches in multi-task pre-training. The hypothesis is partially dependent on the source paper's exploration of task relationships."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Self-Explanation Prompting Improves Dialogue Understanding in Large Language Models": {
+                    "explanation": "This paper focuses on improving dialogue understanding in large language models through a novel prompting strategy. While it shares a theme of enhancing dialogue systems, it does not directly build upon the findings or hypotheses of the source paper, which focuses on task-aware automatic prompt generation for a universal pre-trained conversation model.",
+                    "relevance": 0
+                },
+                "2.MMICL: Empowering Vision-language Model with Multi-Modal In-Context Learning": {
+                    "explanation": "This paper addresses the challenges in vision-language models by introducing a multi-modal in-context learning approach. Although it involves pre-trained models and in-context learning, it is primarily focused on vision-language tasks rather than dialogue systems, and does not directly relate to the task-aware automatic prompt generation or findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "84886c484a0b04029fa8352a19297fd712b2afdc",
+            "title": "UniPCM: Universal Pre-trained Conversation Model with Task-aware Automatic Prompt",
+            "abstract": "Recent researches have shown that multi-task instruction tuning after pre-training greatly improves the model\u2019s robustness and transfer ability, which is crucial for building a high-quality dialog system. However, most previous works on multi-task instruction tuning rely heavily on human-defined input format or prompt, which is not optimal in quality and quantity.In this work, we propose to use Task-aware Automatic Prompt generation (TAP) to automatically generate high-quality prompts. Using the high-quality prompts generated, we scale the corpus of the pre-trained conversation model to 122 datasets from 15 dialog-related tasks, resulting in Universal Pre-trained Conversation Model (UniPCM), a powerful foundation model for various conversational tasks and different dialog systems. Extensive experiments have shown that UniPCM is robust to input prompts and capable of various dialog-related tasks. Moreover, UniPCM has strong transfer ability and excels at low resource scenarios, achieving SOTA results on 9 different datasets ranging from task-oriented dialog to open-domain conversation. Furthermore, we are amazed to find that TAP can generate prompts on par with those collected with crowdsourcing.",
+            "year": 2023,
+            "citation_count": 4,
+            "relevance": 2,
+            "explanation": "This paper discusses task-aware automatic prompt generation in multi-task instruction tuning, which relates to the source paper's focus on task-aware approaches in multi-task pre-training. The hypothesis is partially dependent on the source paper's exploration of task relationships."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. RealTalk-CN: A Realistic Chinese Speech-Text Dialogue Benchmark With Cross-Modal Interaction Analysis": {
+                    "explanation": "This paper introduces a new dataset for evaluating speech-based language models in Chinese, focusing on cross-modal interactions and real-world complexities like speech disfluencies. While it is related to dialogue systems, it does not directly build upon the source paper's focus on task-aware automatic prompt generation or the development of a universal pre-trained conversation model. Thus, it does not rely on the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

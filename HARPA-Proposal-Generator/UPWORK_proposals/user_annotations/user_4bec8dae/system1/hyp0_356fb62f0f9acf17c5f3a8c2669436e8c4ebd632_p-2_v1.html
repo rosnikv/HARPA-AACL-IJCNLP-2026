@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>356fb62f0f9acf17c5f3a8c2669436e8c4ebd632</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating TF-IDF and sentiment-aware embeddings with MuRIL for improved Urdu fake news detection.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating TF-IDF with character and word-level n-grams and sentiment-aware embeddings with the MuRIL model will enhance the F1 score of fake news detection in Urdu compared to using MuRIL alone.</p>
+<h3>Motivation</h3>
+<p>Existing methods for Urdu fake news detection often rely on either traditional feature extraction techniques like TF-IDF or sentiment-aware embeddings separately, without exploring their combined potential with transformer-based models like MuRIL. While some studies have integrated sentiment analysis with TF-IDF, they have not extensively tested the combination of TF-IDF with character and word-level n-grams and sentiment-aware embeddings in conjunction with a specialized transformer model for Urdu, such as MuRIL. This gap is significant because it overlooks the potential synergies between these methods in capturing both linguistic nuances and emotional cues, which are critical for detecting fake news in a linguistically rich and sentimentally expressive language like Urdu.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research aims to explore the combined effect of TF-IDF with character and word-level n-grams and sentiment-aware embeddings on the performance of the MuRIL model in detecting fake news in Urdu. The hypothesis posits that this integration will enhance the F1 score of fake news detection compared to using MuRIL alone. TF-IDF with character and word-level n-grams captures both fine-grained morphological patterns and broader contextual information, which are crucial for understanding the linguistic intricacies of Urdu. Sentiment-aware embeddings, on the other hand, provide insights into the emotional tone of the text, which can be indicative of fake news. By combining these techniques with MuRIL, a transformer model specifically fine-tuned for Urdu, the study aims to leverage both traditional feature extraction and modern deep learning techniques to improve detection accuracy. This approach addresses the gap in existing research by testing a novel combination of methods that have not been extensively explored together, particularly in the context of Urdu fake news detection. The expected outcome is an improved F1 score, indicating better precision and recall in distinguishing fake news from real news.</p>
+<h3>Background</h3>
+<p>TF-IDF with character and word-level n-grams: This variable involves using TF-IDF to extract features at both the character and word levels, employing n-grams to capture a wide range of textual patterns. Character-level n-grams capture morphological variations and subtle textual patterns, while word-level n-grams provide context and semantic information. This dual-level approach enhances the model's ability to detect fake news by capturing both fine-grained and broader textual features. The TF-IDF vectors will be generated from the Urdu text data and used as input features for the MuRIL model. This method is selected for its ability to highlight discriminative features in text, which are crucial for fake news detection.</p>
+<p>Sentiment-aware embeddings: Sentiment-aware embeddings incorporate sentiment information into the word embeddings to capture the emotional tone of the text. This approach involves training embeddings on a corpus where sentiment labels are available, allowing the model to learn representations that reflect both semantic meaning and sentiment. In the context of fake news detection, sentiment-aware embeddings can help identify misleading or exaggerated content by analyzing the sentiment patterns in the text. The embeddings will be generated using pre-trained sentiment analysis models and integrated with the TF-IDF features before being fed into the MuRIL model.</p>
+<p>MuRIL Model: MuRIL is a pre-trained transformer-based model specifically designed for recognizing Urdu and Hindi languages. It is fine-tuned for tasks like fake news detection by leveraging its pre-training on extensive Urdu datasets. The model's architecture includes multiple transformer layers that capture linguistic nuances specific to the Urdu language. In this study, MuRIL will be used as the base model, with TF-IDF and sentiment-aware embeddings as additional input features. This combination is expected to improve the model's ability to discern subtle differences in news content, enhancing fake news detection performance.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves several steps. First, preprocess the Urdu text data by tokenizing it into character and word-level n-grams. Then, apply TF-IDF to these n-grams to generate feature vectors that capture both fine-grained and broader textual patterns. Next, perform sentiment analysis on the text data to obtain sentiment scores, which are used to create sentiment-aware embeddings. These embeddings are integrated with the TF-IDF vectors to form a comprehensive feature set. The combined feature set is then fed into the MuRIL model, which has been fine-tuned for Urdu language tasks. The MuRIL model processes these inputs through its transformer layers, leveraging its pre-trained knowledge of Urdu linguistic nuances to classify the news articles as fake or real. The integration of TF-IDF and sentiment-aware embeddings is expected to enhance the model's performance by providing a richer representation of the text, capturing both linguistic and emotional cues. The hypothesis will be tested by comparing the F1 score of this integrated approach with that of the MuRIL model alone, using a benchmark Urdu fake news dataset.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating TF-IDF with character and word-level n-grams and sentiment-aware embeddings with the MuRIL model enhances the F1 score of fake news detection in Urdu compared to using MuRIL alone.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<p>Use the UrduFake@FIRE2021 Dataset for this experiment. This dataset contains Urdu news articles labeled as real or fake. If this specific dataset is not available, use any available Urdu fake news dataset with similar characteristics.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Configuration</strong></h4>
+<p>Implement a global variable PILOT_MODE that can be set to one of three values: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.<br />
+- For MINI_PILOT: Use only 20 articles (10 fake, 10 real) from the training set to verify code functionality. Run for 2 epochs with minimal hyperparameter tuning.<br />
+- For PILOT: Use 200 articles from the training set and 50 from the validation set. Run for 5 epochs with basic hyperparameter tuning.<br />
+- For FULL_EXPERIMENT: Use the entire dataset with proper train/validation/test splits. Run for 10+ epochs with comprehensive hyperparameter tuning.</p></p>
+<p><p>Start by running the MINI_PILOT first. If everything looks good, proceed to the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Models to Implement</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Baseline Model</strong></h4>
+<p>Implement a baseline model using only the MuRIL transformer for Urdu fake news detection:<br />
+1. Load the pre-trained MuRIL model from Hugging Face<br />
+2. Add a classification head on top of MuRIL<br />
+3. Fine-tune the model on the Urdu fake news dataset<br />
+4. Evaluate using F1 score, precision, recall, and accuracy</p></p>
+<p><h4 class="custom-heading"><strong>Experimental Model</strong></h4>
+<p>Implement an enhanced model that integrates TF-IDF features and sentiment-aware embeddings with MuRIL:</p></p>
+<p><ol>
+<li>Text Preprocessing:</li>
+<li>Tokenize Urdu text</li>
+<li>Handle Urdu-specific characters and normalization</li>
+<li>Remove stopwords and perform basic cleaning</li>
+</ol></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>TF-IDF Feature Extraction:</li>
+<li>Generate character-level n-grams (n=2,3,4)</li>
+<li>Generate word-level n-grams (n=1,2,3)</li>
+<li>Compute TF-IDF vectors for both types of n-grams</li>
+<li>Select the top 1000 features based on feature importance</li>
+</ol></p>
+<p><ol>
+<li>Sentiment Analysis:</li>
+<li>Use a pre-trained sentiment analysis model suitable for Urdu</li>
+<li>Extract sentiment scores (positive, negative, neutral) for each article</li>
+<li>Generate sentiment-aware embeddings</li>
+</ol></p>
+<p><ol>
+<li>Integration with MuRIL:</li>
+<li>Load the pre-trained MuRIL model</li>
+<li>Design a custom architecture that combines:<br />
+     a. MuRIL embeddings<br />
+     b. TF-IDF feature vectors<br />
+     c. Sentiment-aware embeddings</li>
+<li>Use a concatenation or attention mechanism to combine these features</li>
+<li>Add a classification head on top</li>
+</ol></p>
+<p><ol>
+<li>Training:</li>
+<li>Fine-tune the integrated model on the Urdu fake news dataset</li>
+<li>Use appropriate learning rate and batch size</li>
+<li>Implement early stopping based on validation F1 score</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>Primary Metric: F1 score</li>
+<li>Secondary Metrics: Precision, Recall, Accuracy</li>
+<li>Statistical Analysis:</li>
+<li>Perform bootstrap resampling to determine if the difference in F1 scores between the baseline and experimental models is statistically significant</li>
+<li>Calculate confidence intervals for all metrics</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4>
+<ol>
+<li>Generate a comprehensive report including:</li>
+<li>Performance metrics for both models</li>
+<li>Confusion matrices</li>
+<li>Statistical significance of the differences</li>
+<li>Learning curves during training</li>
+<li>Feature importance analysis</li>
+<li>Examples of correctly and incorrectly classified articles</li>
+</ol></p>
+<p><ol>
+<li>Save the trained models and feature extractors for future use</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4>
+<ul>
+<li>Ensure proper handling of Urdu text encoding</li>
+<li>Use appropriate preprocessing for Urdu language</li>
+<li>Implement cross-validation for robust evaluation</li>
+<li>Document any challenges or limitations encountered</li>
+<li>Provide clear instructions for reproducing the experiment</li>
+</ul></p>
+<p><p>Please implement this experiment following the pilot mode structure described above, starting with MINI_PILOT and then proceeding to PILOT if successful.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/356fb62f0f9acf17c5f3a8c2669436e8c4ebd632">Paper 0: "Bend the truth": Benchmark dataset for fake news detection in Urdu language and its evaluation</a> (56 citations, 2020). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/df809c9e651fa5719ab22a2ed501a57f97cbdb26">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/3dfe29590adb56c1ef57d7887696bf8e9d5e6076">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/a14eafad0eb069b72f60e792b2c42ead24bf41d1">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/9a8b26adb774c7c8b996863c68ed51084a8058cf">Paper 4</a>. The analysis reveals a progression from traditional machine learning models to ensemble methods and finally to deep learning models for fake news detection in Urdu. The advancements show a trend towards improving accuracy and adaptability of models to resource-constrained languages. However, there remains a gap in exploring the integration of semantic and contextual analysis with these models, as seen in multilingual settings. This integration could potentially enhance the detection capabilities further by capturing nuanced linguistic features specific to Urdu.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+</body>
+</html>

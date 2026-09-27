@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>1343dedea56bbf3ba48d0971aee177b5add61105</p>
+<hr>
+<section><h2>Title</h2>
+<p>Multi-Agent Debate for Hypothesis Refinement: Enhancing Scientific Ideation with Large Language Models</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current approaches to scientific hypothesis generation using LLMs often lack the rigorous scrutiny and refinement process that characterizes real scientific discourse, leading to potentially flawed or superficial hypotheses. Existing methods typically involve single-LLM generation or simple ensemble approaches, which do not fully capture the complexity of scientific debate and refinement processes.</p>
+<h3>Motivation</h3>
+<p>Scientific hypotheses in the real world are refined through rigorous debate and peer review. By simulating this process using multiple specialized agents, we can potentially generate more robust and well-considered scientific hypotheses. The proposed Multi-Agent Debate for Hypothesis Refinement (MADHR) system creates a virtual scientific community of specialized LLM agents, each with a distinct role, to mimic the collaborative and iterative nature of scientific discourse.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose a Multi-Agent Debate for Hypothesis Refinement (MADHR) system. MADHR creates a virtual scientific community of specialized LLM agents, each with a distinct role: (1) Hypothesis Generator, (2) Literature Expert, (3) Methodologist, (4) Devil's Advocate, (5) Interdisciplinary Connector, (6) Ethical Considerations Expert, and (7) Synthesis Agent. The debate process is structured as a multi-round discussion, where each agent contributes based on its specialty. We use a novel token-based turn-taking mechanism to ensure balanced participation, and a reinforcement learning approach to optimize the agents' debate strategies for producing high-quality hypotheses. The system also incorporates a facet-based exploration component, allowing users to guide the debate towards specific aspects by adjusting the importance weights of different agents.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Curate a diverse set of scientific ideation tasks from various domains, including biology, physics, and social sciences. Use existing datasets such as ScienceQA and AI2 Science Questions, and supplement with manually curated tasks from recent scientific literature.</p><p><strong>Step 2: Agent Prompt Design</strong></p><p>Design role-specific prompts for each agent type. For example, the Hypothesis Generator prompt might be: 'Given the current state of knowledge in [field], generate a novel and testable scientific hypothesis.' The Literature Expert prompt could be: 'Provide a summary of relevant existing research related to the proposed hypothesis.'</p><p><strong>Step 3: Debate Process Implementation</strong></p><p>Implement the multi-round debate process using GPT-4 API. Each round consists of: (1) Hypothesis generation/refinement, (2) Agent contributions, (3) Synthesis. Use a token-based system to manage turn-taking, with each agent allocated a fixed number of tokens per round.</p><p><strong>Step 4: Facet-based Exploration</strong></p><p>Implement a user interface that allows adjustment of agent importance weights. For example, users can increase the weight of the Methodologist to focus on experimental design aspects.</p><p><strong>Step 5: Reinforcement Learning Optimization</strong></p><p>Implement a reinforcement learning framework to optimize agent debate strategies. Use the quality of the final hypothesis (as judged by external evaluators) as the reward signal. Train the RL model using PPO (Proximal Policy Optimization) algorithm.</p><p><strong>Step 6: Baseline Implementation</strong></p><p>Implement baseline methods: (1) Single-LLM generation, (2) Simple ensemble of multiple LLMs, (3) Chain-of-Thought prompting.</p><p><strong>Step 7: Evaluation</strong></p><p>Evaluate MADHR against baselines using both quantitative metrics (novelty, logical consistency, interdisciplinary reach) and qualitative assessment by domain experts. Conduct an ablation study to measure the contribution of each specialized agent.</p><p><strong>Step 8: Analysis</strong></p><p>Analyze the debate transcripts to identify patterns in successful hypothesis refinement. Compare the refined hypotheses with initial hypotheses to quantify improvement.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Single-LLM)</strong></p><p>Generate a novel scientific hypothesis in the field of neuroscience related to memory formation.</p><p><strong>Baseline Prompt Expected Output (Single-LLM)</strong></p><p>Hypothesis: Rapid eye movement (REM) sleep plays a crucial role in the consolidation of emotional memories by facilitating the transfer of information from the hippocampus to the amygdala.</p><p><strong>Proposed Prompt Input (MADHR)</strong></p><p>Generate and refine a novel scientific hypothesis in the field of neuroscience related to memory formation. Use the multi-agent debate process to scrutinize and improve the initial hypothesis.</p><p><strong>Proposed Prompt Expected Output (MADHR)</strong></p><p>Initial Hypothesis (Hypothesis Generator): REM sleep facilitates emotional memory consolidation by transferring information from the hippocampus to the amygdala.</p>
+<p>Literature Expert: Recent studies have shown conflicting results regarding the role of REM sleep in emotional memory consolidation. Some research suggests that slow-wave sleep might be more important for this process.</p>
+<p>Methodologist: We need to design an experiment that can dissociate the effects of REM and slow-wave sleep on emotional memory consolidation. Consider using optogenetics to selectively suppress REM or slow-wave sleep in animal models.</p>
+<p>Devil's Advocate: The hypothesis assumes a unidirectional transfer of information. What if the process is bidirectional or involves other brain regions?</p>
+<p>Interdisciplinary Connector: Recent advances in neuroimaging techniques, such as high-resolution fMRI during sleep, could provide new insights into this process in humans.</p>
+<p>Ethical Considerations Expert: Ensure that any proposed animal studies adhere to ethical guidelines and consider non-invasive alternatives for human studies.</p>
+<p>Synthesis Agent: Refined Hypothesis: The consolidation of emotional memories involves a complex interplay between REM and slow-wave sleep, facilitated by bidirectional information transfer among the hippocampus, amygdala, and prefrontal cortex. This process can be studied using a combination of optogenetic manipulation in animal models and high-resolution fMRI in human subjects, with careful consideration of ethical implications.</p><p><strong>Explanation</strong></p><p>The MADHR system produces a more nuanced and comprehensive hypothesis compared to the single-LLM baseline. It incorporates recent conflicting evidence, suggests specific methodologies, considers alternative explanations, integrates interdisciplinary approaches, and addresses ethical concerns. This refined hypothesis is more likely to lead to meaningful scientific investigation.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed MADHR method doesn't significantly outperform baselines, we can pivot the project to an in-depth analysis of the debate process. We could examine how different agent combinations affect hypothesis quality, identify which types of scientific questions benefit most from multi-agent debate, and analyze the linguistic and reasoning patterns that emerge during successful debates. This analysis could provide valuable insights into the strengths and limitations of using LLMs for scientific reasoning. Additionally, we could explore alternative debate structures, such as hierarchical debates or debates with human intervention, to see if these modifications improve performance. Finally, we could investigate whether the MADHR system, even if not superior in hypothesis generation, excels in other aspects of the scientific process, such as experimental design or literature review, potentially repositioning the tool for different use cases in scientific research.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li>IdeaBench: Benchmarking Large Language Models for Research Idea Generation (2024). Paper ID: 28a3582ecab72e2a91ec9004075d744b8bac4640</li>
+<li>Improving Scientific Hypothesis Generation with Knowledge Grounded Large Language Models (2024). Paper ID: bb5f873632616c2cdc07ef1bb139db0c96c8e5f6</li>
+<li>MIR: Methodology Inspiration Retrieval for Scientific Research Problems (2025). Paper ID: 499a81b10c41ac9942fd1b3ff1c7ed1c317a17c6</li>
+<li>Toward Reliable Scientific Hypothesis Generation: Evaluating Truthfulness and Hallucination in Large Language Models (2025). Paper ID: a6e65f72bd9e62fdd4f0064f3eda21cc65f072a7</li>
+<li>CHIMERA: A Knowledge Base of Idea Recombination in Scientific Literature (2025). Paper ID: 8dc7696202d72fbf791143c15689180268b1e9c2</li>
+<li>Large Language Models are Zero Shot Hypothesis Proposers (2023). Paper ID: 713b604fb9cdd6631074cbd6bf36db029031992e</li>
+<li>Improving Research Idea Generation Through Data: An Empirical Investigation in Social Science (2025). Paper ID: abad68487d006e07675be42a2031ee7f2b9e00ee</li>
+<li>Scientific Hypothesis Generation and Validation: Methods, Datasets, and Future Directions (2025). Paper ID: 53ed83e96a42b1b6b3becc4d7196e45aa3428c2f</li>
+<li>Simulate Scientific Reasoning with Multiple Large Language Models: An Application to Alzheimer’s Disease Combinatorial Therapy (2024). Paper ID: a67e42ee34a4a0626006fd4111c74b0778d0a19e</li>
+<li>Predicting New Research Directions in Materials Science using Large Language Models and Concept Graphs (2025). Paper ID: f963e40e368555bcc87e6a9f41c727c031b41f53</li>
+</ol>
+</section>
+</body></html>

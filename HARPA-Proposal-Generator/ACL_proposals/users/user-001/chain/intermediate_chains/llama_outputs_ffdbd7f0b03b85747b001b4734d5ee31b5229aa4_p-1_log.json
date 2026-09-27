@@ -1,0 +1,1610 @@
+[
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Competition between AI foundation models: dynamics and policy recommendations": {
+                    "explanation": "This paper discusses the competitive dynamics and policy recommendations for AI foundation models, which is not directly related to the prompt tuning or parameter-efficient tuning explored in the source paper.",
+                    "relevance": 0
+                },
+                "2.Cross-Domain Tibetan Named Entity Recognition via Large Language Models": {
+                    "explanation": "This paper focuses on cross-domain named entity recognition using large language models and introduces a method involving domain-dependent prompts. While it touches on prompt usage, it does not directly build upon the findings of parameter-efficient prompt tuning from the source paper.",
+                    "relevance": 1
+                },
+                "3.UniRestorer: Universal Image Restoration via Adaptively Estimating Image Degradation at Proper Granularity": {
+                    "explanation": "This paper is about image restoration using a mixture-of-experts model and does not relate to language model prompt tuning or parameter efficiency.",
+                    "relevance": 0
+                },
+                "4.AIGT: AI Generative Table Based on Prompt": {
+                    "explanation": "This paper discusses generating synthetic tabular data using prompts, which is related to the concept of prompt usage but does not directly depend on the findings of parameter-efficient prompt tuning from the source paper.",
+                    "relevance": 1
+                },
+                "5.An LLM\u2010Based Method for Quality Information Extraction From Web Text for Crowed\u2010Sensing Spatiotemporal Data": {
+                    "explanation": "This paper involves fine-tuning large language models for extracting quality information, which is related to the general theme of tuning LLMs but does not specifically build on the prompt tuning findings of the source paper.",
+                    "relevance": 1
+                },
+                "6.Privacy in Fine-tuning Large Language Models: Attacks, Defenses, and Future Directions": {
+                    "explanation": "This is a review paper discussing privacy challenges in fine-tuning LLMs, which does not propose new hypotheses or findings directly related to the source paper's focus on prompt tuning.",
+                    "relevance": 0
+                },
+                "7.From General to Specific: Tailoring Large Language Models for Personalized Healthcare": {
+                    "explanation": "This paper discusses personalized healthcare using LLMs with personalized prompts, which is related to the concept of prompt tuning but does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "8.All-in-One Tuning and Structural Pruning for Domain-Specific LLMs": {
+                    "explanation": "This paper introduces a unified approach to tuning and pruning LLMs, which is closely related to the source paper's focus on parameter-efficient tuning methods.",
+                    "relevance": 2
+                },
+                "9.Transducer Tuning: Efficient Model Adaptation for Software Tasks Using Code Property Graphs": {
+                    "explanation": "This paper introduces a method for adapting models for software tasks using code property graphs, which is not directly related to prompt tuning or parameter-efficient tuning.",
+                    "relevance": 0
+                },
+                "10.A Comprehensive Evaluation of Parameter-Efficient Fine-Tuning on Code Smell Detection": {
+                    "explanation": "This paper evaluates parameter-efficient fine-tuning methods, including prompt tuning, which directly relates to the source paper's exploration of parameter-efficient prompt tuning.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1.All-in-One Tuning and Structural Pruning for Domain-Specific LLMs": {
+                    "explanation": "This paper introduces a unified approach to tuning and pruning LLMs, which is closely related to the source paper's focus on parameter-efficient tuning methods.",
+                    "relevance": 2
+                },
+                "2.A Comprehensive Evaluation of Parameter-Efficient Fine-Tuning on Code Smell Detection": {
+                    "explanation": "This paper evaluates parameter-efficient fine-tuning methods, including prompt tuning, which directly relates to the source paper's exploration of parameter-efficient prompt tuning.",
+                    "relevance": 2
+                },
+                "3.Cross-Domain Tibetan Named Entity Recognition via Large Language Models": {
+                    "explanation": "This paper focuses on cross-domain named entity recognition using large language models and introduces a method involving domain-dependent prompts. While it touches on prompt usage, it does not directly build upon the findings of parameter-efficient prompt tuning from the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. PromptDet: A Lightweight 3D Object Detection Framework with LiDAR Prompts": {
+                    "explanation": "This paper applies the concept of prompt learning from the source paper to a different domain, 3D object detection. However, it does not directly depend on the specific findings of the source paper regarding parameter-efficient prompt tuning for language models.",
+                    "relevance": 1
+                },
+                "2. LLMs are Also Effective Embedding Models: An In-depth Overview": {
+                    "explanation": "This is a review paper that provides an overview of large language models as embedding models. It does not propose a novel hypothesis or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. FineGates: LLMs Finetuning with Compression using Stochastic Gates": {
+                    "explanation": "This paper explores lightweight finetuning techniques for LLMs, which is related to the source paper's focus on parameter-efficient tuning. However, it does not directly depend on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "4. Enhancing Digital Libraries with Automated Definition Generation": {
+                    "explanation": "This paper focuses on definition generation in digital libraries using LLMs, which is unrelated to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5. GaLore+: Boosting Low-Rank Adaptation for LLMs with Cross-Head Projection": {
+                    "explanation": "This paper addresses low-rank adaptation for LLMs, which is related to the source paper's theme of efficient model tuning. However, it does not directly depend on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. Text Classification with Limited Training Data: Suicide Risk Detection on Social Media": {
+                    "explanation": "This paper explores prompt-based approaches for text classification with limited data. It is inspired by the source paper's exploration of prompt tuning, but it does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "7. Enhance Vision-Language Alignment with Noise": {
+                    "explanation": "This paper focuses on vision-language alignment using noise, which is unrelated to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "8. MambaPro: Multi-Modal Object Re-Identification with Mamba Aggregation and Synergistic Prompt": {
+                    "explanation": "This paper uses prompts for multi-modal object re-identification, which is inspired by the source paper's exploration of prompt tuning. However, it does not directly depend on its findings.",
+                    "relevance": 1
+                },
+                "9. DECOR: Decomposition and Projection of Text Embeddings for Text-to-Image Customization": {
+                    "explanation": "This paper focuses on text-to-image customization, which is unrelated to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. GReaTer: Gradients over Reasoning Makes Smaller Language Models Strong Prompt Optimizers": {
+                    "explanation": "This paper introduces a novel prompt optimization technique that builds on the concept of prompt tuning from the source paper. It is partially dependent on the source paper's findings regarding prompt tuning.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. GReaTer: Gradients over Reasoning Makes Smaller Language Models Strong Prompt Optimizers": {
+                    "explanation": "This paper introduces a novel prompt optimization technique that builds on the concept of prompt tuning from the source paper. It is partially dependent on the source paper's findings regarding prompt tuning.",
+                    "relevance": 2
+                },
+                "2. PromptDet: A Lightweight 3D Object Detection Framework with LiDAR Prompts": {
+                    "explanation": "This paper applies the concept of prompt learning from the source paper to a different domain, 3D object detection. However, it does not directly depend on the specific findings of the source paper regarding parameter-efficient prompt tuning for language models.",
+                    "relevance": 1
+                },
+                "3. FineGates: LLMs Finetuning with Compression using Stochastic Gates": {
+                    "explanation": "This paper explores lightweight finetuning techniques for LLMs, which is related to the source paper's focus on parameter-efficient tuning. However, it does not directly depend on the specific findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective": {
+                    "explanation": "This paper builds on prompt-based methods for continual relation extraction, which are inspired by prompt tuning techniques discussed in the source paper. However, it focuses on continual learning and variance handling, which are not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "2. Can Graph Neural Networks Learn Language with Extremely Weak Text Supervision?": {
+                    "explanation": "This paper explores a multi-modal prompt learning paradigm for adapting pre-trained GNNs, which is conceptually related to prompt tuning but does not directly depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Exploiting the Index Gradients for Optimization-Based Jailbreaking on Large Language Models": {
+                    "explanation": "This paper focuses on adversarial attacks on large language models, which is unrelated to the concept of prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Advancing Single- and Multi-task Text Classification through Large Language Model Fine-tuning": {
+                    "explanation": "This paper discusses fine-tuning of large language models for text classification, which is related to the source paper's discussion on model tuning, but it does not specifically focus on prompt tuning or parameter efficiency.",
+                    "relevance": 0
+                },
+                "5. PETALface: Parameter Efficient Transfer Learning for Low-Resolution Face Recognition": {
+                    "explanation": "This paper discusses parameter-efficient transfer learning, which is conceptually related to the source paper's focus on parameter-efficient prompt tuning. However, it applies to a different domain (face recognition) and does not directly build on the source paper's findings.",
+                    "relevance": 0
+                },
+                "6. Does Prompt-tuning Enhance Privacy in Large Language Models?": {
+                    "explanation": "This paper directly investigates prompt-tuning, a key concept from the source paper, in the context of privacy in large language models. It evaluates prompt-tuning's impact on data leakage, which is a novel application of the source paper's findings.",
+                    "relevance": 2
+                },
+                "7. KaSA: Knowledge-Aware Singular-Value Adaptation of Large Language Models": {
+                    "explanation": "This paper introduces a PEFT method that is related to the source paper's discussion on parameter-efficient tuning. However, it focuses on singular-value adaptation, which is a different approach from prompt tuning.",
+                    "relevance": 0
+                },
+                "8. Smoothie: Label Free Language Model Routing": {
+                    "explanation": "This paper explores unsupervised routing for language models, which is unrelated to the prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9. ClinicSum: Utilizing Language Models for Generating Clinical Summaries from Patient-Doctor Conversations": {
+                    "explanation": "This paper focuses on generating clinical summaries using language models, which is unrelated to the prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. FunduSAM: A Specialized Deep Learning Model for Enhanced Optic Disc and Cup Segmentation in Fundus Images": {
+                    "explanation": "This paper focuses on image segmentation using a specialized model, which is unrelated to the prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Adaptive Prompting for Continual Relation Extraction: A Within-Task Variance Perspective": {
+                    "explanation": "This paper builds on prompt-based methods for continual relation extraction, which are inspired by prompt tuning techniques discussed in the source paper. However, it focuses on continual learning and variance handling, which are not directly dependent on the source paper's findings.",
+                    "relevance": 1
+                },
+                "2. Does Prompt-tuning Enhance Privacy in Large Language Models?": {
+                    "explanation": "This paper directly investigates prompt-tuning, a key concept from the source paper, in the context of privacy in large language models. It evaluates prompt-tuning's impact on data leakage, which is a novel application of the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Parameter-Efficient Fine-Tuning of Large Pretrained Models for Instance Segmentation Tasks": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning methods, which are related to the source paper's focus on prompt tuning as a parameter-efficient strategy. However, the paper does not directly build upon the findings or hypotheses of the source paper, as it focuses on instance segmentation rather than language models.",
+                    "relevance": 0
+                },
+                "2.Teaching Segment-Anything-Model Domain-Specific Knowledge for Road Crack Segmentation From On-Board Cameras": {
+                    "explanation": "This paper focuses on adapting a vision foundation model for a specific task using lightweight adaptation layers, which is conceptually similar to prompt tuning. However, it does not directly build upon the findings or hypotheses of the source paper, as it deals with vision models rather than language models.",
+                    "relevance": 0
+                },
+                "3.Prompt as Free Lunch: Enhancing Diversity in Source-Free Cross-domain Few-shot Learning through Semantic-Guided Prompting": {
+                    "explanation": "This paper leverages prompting strategies to enhance diversity and improve model transfer efficiency, which aligns with the source paper's exploration of prompt tuning for efficient task adaptation. The hypothesis in this paper is inspired by the source paper's findings on the effectiveness of prompt tuning.",
+                    "relevance": 1
+                },
+                "4.An Overview of Trustworthy AI: Advances in IP Protection, Privacy-Preserving Federated Learning, Security Verification, and GAI Safety Alignment": {
+                    "explanation": "This is a review paper that provides an overview of various aspects of trustworthy AI, including privacy and security. It does not propose novel hypotheses or findings related to the source paper's focus on prompt tuning.",
+                    "relevance": 0
+                },
+                "5.Knowledge Graph-Based In-Context Learning for Advanced Fault Diagnosis in Sensor Networks": {
+                    "explanation": "This paper introduces a novel approach for fault diagnosis using knowledge graphs and large language models. While it involves language models, it does not directly relate to the source paper's focus on prompt tuning for parameter-efficient learning.",
+                    "relevance": 0
+                },
+                "6.Visual Modality Prompt for Adapting Vision-Language Object Detectors": {
+                    "explanation": "This paper proposes a visual prompt strategy for adapting vision-language detectors, which is conceptually related to prompt tuning. However, it focuses on vision-language models rather than language models, and does not directly build upon the source paper's findings.",
+                    "relevance": 0
+                },
+                "7.Resource-efficient Algorithms and Systems of Foundation Models: A Survey": {
+                    "explanation": "This is a survey paper that discusses resource-efficient strategies for large foundation models. It does not propose novel hypotheses or findings related to the source paper's focus on prompt tuning.",
+                    "relevance": 0
+                },
+                "8.Initialization using Update Approximation is a Silver Bullet for Extremely Efficient Low-Rank Fine-Tuning": {
+                    "explanation": "This paper explores low-rank fine-tuning strategies, which are related to the source paper's focus on parameter-efficient methods like prompt tuning. However, it does not directly build upon the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "9.PEFT-as-an-Attack! Jailbreaking Language Models during Federated Parameter-Efficient Fine-Tuning": {
+                    "explanation": "This paper discusses security implications of parameter-efficient fine-tuning, which is related to the source paper's focus on parameter-efficient methods. However, it does not directly build upon the findings or hypotheses of the source paper.",
+                    "relevance": 0
+                },
+                "10.CLIP meets DINO for Tuning Zero-Shot Classifier using Unlabeled Image Collections": {
+                    "explanation": "This paper proposes a prompt-tuning method for enhancing image classification performance, which is conceptually related to the source paper's exploration of prompt tuning. However, it focuses on vision models rather than language models.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Prompt as Free Lunch: Enhancing Diversity in Source-Free Cross-domain Few-shot Learning through Semantic-Guided Prompting": {
+                    "explanation": "This paper leverages prompting strategies to enhance diversity and improve model transfer efficiency, which aligns with the source paper's exploration of prompt tuning for efficient task adaptation. The hypothesis in this paper is inspired by the source paper's findings on the effectiveness of prompt tuning.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Personalized Federated Fine-Tuning for LLMs via Data-Driven Heterogeneous Model Architectures": {
+                    "explanation": "This paper focuses on federated learning and personalized model architectures, which is a different domain from the prompt tuning and parameter-efficient methods discussed in the source paper. There is no direct connection or dependency on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Enhancing Few-Shot Vision-Language Classification with Large Multimodal Model Features": {
+                    "explanation": "While this paper deals with few-shot learning, it focuses on vision-language models and sparse attention vectors, which are not directly related to the prompt tuning techniques or findings discussed in the source paper.",
+                    "relevance": 0
+                },
+                "3.How to Learn a New Language? An Efficient Solution for Self-Supervised Learning Models Unseen Languages Adaption in Low-Resource Scenario": {
+                    "explanation": "This paper addresses self-supervised learning models for speech recognition in low-resource languages, which is unrelated to the prompt tuning and parameter-efficient methods for language models discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Not All Adapters Matter: Selective Adapter Freezing for Memory-Efficient Fine-Tuning of Language Models": {
+                    "explanation": "This paper discusses adapter-tuning, a parameter-efficient fine-tuning method, which is related to the source paper's focus on prompt tuning as a parameter-efficient method. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "5.CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning": {
+                    "explanation": "CLOVER focuses on pruning and fine-tuning techniques for efficient model updates, which is related to the source paper's exploration of parameter-efficient methods. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6.Application of Prompt Engineering Techniques to Optimize Information Retrieval in the Metaverse": {
+                    "explanation": "This paper applies prompt engineering techniques to information retrieval, which is related to the source paper's focus on prompt tuning. However, it does not depend on the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "7.LoRA-Mini : Adaptation Matrices Decomposition and Selective Training": {
+                    "explanation": "LoRA-Mini focuses on optimizing LoRA, a parameter-efficient fine-tuning method, which is related to the source paper's exploration of parameter-efficient methods like prompt tuning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "8.Chameleon: Adaptive Caching and Scheduling for Many-Adapter LLM Inference Environments": {
+                    "explanation": "Chameleon addresses caching and scheduling for LLM inference, which is not directly related to the prompt tuning techniques or findings discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.LoBAM: LoRA-Based Backdoor Attack on Model Merging": {
+                    "explanation": "LoBAM discusses backdoor attacks in model merging using LoRA, which is not directly related to the prompt tuning techniques or findings discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10.Real-Time Text-to-Cypher Query Generation with Large Language Models for Graph Databases": {
+                    "explanation": "This paper focuses on text-to-query generation for graph databases, which is unrelated to the prompt tuning and parameter-efficient methods for language models discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Not All Adapters Matter: Selective Adapter Freezing for Memory-Efficient Fine-Tuning of Language Models": {
+                    "explanation": "This paper discusses adapter-tuning, a parameter-efficient fine-tuning method, which is related to the source paper's focus on prompt tuning as a parameter-efficient method.",
+                    "relevance": 1
+                },
+                "2.CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning": {
+                    "explanation": "CLOVER focuses on pruning and fine-tuning techniques for efficient model updates, which is related to the source paper's exploration of parameter-efficient methods.",
+                    "relevance": 1
+                },
+                "3.Application of Prompt Engineering Techniques to Optimize Information Retrieval in the Metaverse": {
+                    "explanation": "This paper applies prompt engineering techniques to information retrieval, which is related to the source paper's focus on prompt tuning.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. FedMLLM: Federated Fine-tuning MLLM on Multimodal Heterogeneity Data": {
+                    "explanation": "This paper focuses on federated fine-tuning of multimodal large language models, which is a different domain from the source paper's focus on prompt tuning for frozen language models. The connection to the source paper is minimal, as it does not build on the specific findings or hypotheses of prompt tuning.",
+                    "relevance": 0
+                },
+                "2. LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement": {
+                    "explanation": "While this paper discusses parameter-efficient fine-tuning methods like LoRA, which is related to the concept of parameter efficiency explored in the source paper, it does not specifically build on the findings of prompt tuning or its scalability with model size.",
+                    "relevance": 0
+                },
+                "3. Adversarial Prompt Distillation for Vision-Language Models": {
+                    "explanation": "This paper explores adversarial prompt tuning for vision-language models, which is related to the concept of prompt tuning in the source paper. However, it focuses on adversarial robustness and does not directly build on the findings of the source paper regarding prompt tuning for language models.",
+                    "relevance": 1
+                },
+                "4. DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding": {
+                    "explanation": "DINO-X focuses on vision models and object detection with flexible prompt options, which is tangentially related to prompt tuning but does not directly build on the findings of the source paper regarding language models and prompt tuning.",
+                    "relevance": 0
+                },
+                "5. GASP: Efficient Black-Box Generation of Adversarial Suffixes for Jailbreaking LLMs": {
+                    "explanation": "GASP addresses adversarial attacks on language models, which is related to the robustness aspect of the source paper. However, it focuses on generating adversarial prompts rather than leveraging prompt tuning for downstream tasks.",
+                    "relevance": 0
+                },
+                "6. Hymba: A Hybrid-head Architecture for Small Language Models": {
+                    "explanation": "Hymba introduces a hybrid-head architecture for small language models, which is a different approach from the prompt tuning discussed in the source paper. It does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "7. MC-LLaVA: Multi-Concept Personalized Vision-Language Model": {
+                    "explanation": "MC-LLaVA focuses on multi-concept personalization in vision-language models, which is unrelated to the prompt tuning and parameter efficiency explored in the source paper.",
+                    "relevance": 0
+                },
+                "8. LONG EXPOSURE: Accelerating Parameter-Efficient Fine-Tuning for LLMs under Shadowy Sparsity": {
+                    "explanation": "This paper addresses parameter-efficient fine-tuning, which is related to the source paper's focus on parameter efficiency. However, it does not directly build on the findings of prompt tuning or its scalability with model size.",
+                    "relevance": 0
+                },
+                "9. F3OCUS - Federated Finetuning of Vision-Language Foundation Models with Optimal Client Layer Updating Strategy via Multi-objective Meta-Heuristics": {
+                    "explanation": "F3OCUS deals with federated fine-tuning of vision-language models, which is unrelated to the prompt tuning of language models discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. AllRestorer: All-in-One Transformer for Image Restoration under Composite Degradations": {
+                    "explanation": "AllRestorer focuses on image restoration using transformers, which is unrelated to the prompt tuning and parameter efficiency explored in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Adversarial Prompt Distillation for Vision-Language Models": {
+                    "explanation": "This paper explores adversarial prompt tuning for vision-language models, which is related to the concept of prompt tuning in the source paper. However, it focuses on adversarial robustness and does not directly build on the findings of the source paper regarding prompt tuning for language models.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. IntentGPT: Few-shot Intent Discovery with Large Language Models": {
+                    "explanation": "This paper discusses a novel method for intent discovery using large language models, focusing on few-shot learning. While it uses large language models, it does not directly build upon the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2. On the Privacy Risk of In-context Learning": {
+                    "explanation": "This paper examines privacy risks associated with in-context learning using large language models. Although it involves large language models, it does not directly relate to the prompt tuning or parameter-efficient tuning methods of the source paper.",
+                    "relevance": 0
+                },
+                "3. Prompting and Fine-tuning Large Language Models for Automated Code Review Comment Generation": {
+                    "explanation": "This paper explores prompting and fine-tuning for code review comment generation. It involves prompt engineering, which is related to the source paper's focus on prompt tuning, but it does not specifically depend on the findings or methods of the source paper.",
+                    "relevance": 1
+                },
+                "4. A Practical Guide to Fine-tuning Language Models with Limited Data": {
+                    "explanation": "This paper is a review of fine-tuning methods for language models with limited data. It does not present novel hypotheses or findings directly related to the source paper's focus on prompt tuning.",
+                    "relevance": 0
+                },
+                "5. PyGen: A Collaborative Human-AI Approach to Python Package Creation": {
+                    "explanation": "This paper introduces an automation platform for Python package creation using large language models. While it uses language models, it does not directly relate to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "6. Efficient and Accurate Prompt Optimization: the Benefit of Memory in Exemplar-Guided Reflection": {
+                    "explanation": "This paper discusses prompt optimization techniques, which are directly related to the source paper's focus on prompt tuning. It builds on the idea of optimizing prompts, making it relevant to the source paper.",
+                    "relevance": 2
+                },
+                "7. New Emerged Security and Privacy of Pre-trained Model: a Survey and Outlook": {
+                    "explanation": "This paper is a survey on security and privacy issues of pre-trained models. It does not present novel hypotheses or findings directly related to the source paper's focus on prompt tuning.",
+                    "relevance": 0
+                },
+                "8. LLM-Neo: Parameter Efficient Knowledge Distillation for Large Language Models": {
+                    "explanation": "This paper discusses parameter-efficient methods for knowledge distillation in large language models, which is related to the source paper's focus on parameter-efficient prompt tuning. It builds on the idea of efficient tuning, making it relevant to the source paper.",
+                    "relevance": 2
+                },
+                "9. Online-LoRA: Task-Free Online Continual Learning via Low Rank Adaptation": {
+                    "explanation": "This paper introduces a framework for online continual learning using low-rank adaptation. While it involves parameter-efficient methods, it does not directly relate to the prompt tuning methods of the source paper.",
+                    "relevance": 0
+                },
+                "10. DiffLM: Controllable Synthetic Data Generation via Diffusion Language Models": {
+                    "explanation": "This paper discusses synthetic data generation using diffusion language models. It does not directly relate to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Efficient and Accurate Prompt Optimization: the Benefit of Memory in Exemplar-Guided Reflection": {
+                    "explanation": "This paper discusses prompt optimization techniques, which are directly related to the source paper's focus on prompt tuning. It builds on the idea of optimizing prompts, making it relevant to the source paper.",
+                    "relevance": 2
+                },
+                "2. LLM-Neo: Parameter Efficient Knowledge Distillation for Large Language Models": {
+                    "explanation": "This paper discusses parameter-efficient methods for knowledge distillation in large language models, which is related to the source paper's focus on parameter-efficient prompt tuning. It builds on the idea of efficient tuning, making it relevant to the source paper.",
+                    "relevance": 2
+                },
+                "3. Prompting and Fine-tuning Large Language Models for Automated Code Review Comment Generation": {
+                    "explanation": "This paper explores prompting and fine-tuning for code review comment generation. It involves prompt engineering, which is related to the source paper's focus on prompt tuning, but it does not specifically depend on the findings or methods of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Parameter-Efficient Fine-Tuning of Large Language Models for Unit Test Generation: An Empirical Study": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning methods, including prompt tuning, which directly relates to the source paper's exploration of prompt tuning for large language models. The study's focus on prompt tuning as a cost-effective method aligns with the source paper's findings on the efficiency of prompt tuning.",
+                    "relevance": 2
+                },
+                "2. Scalable Efficient Training of Large Language Models with Low-dimensional Projected Attention": {
+                    "explanation": "While this paper discusses efficiency in training large language models, it does not specifically focus on prompt tuning or parameter-efficient tuning methods like the source paper. It explores a different approach (Low-dimensional Projected Attention) that is not directly connected to the source paper's findings.",
+                    "relevance": 0
+                },
+                "3. FPPL: An Efficient and Non-IID Robust Federated Continual Learning Framework": {
+                    "explanation": "This paper focuses on federated continual learning and does not directly relate to prompt tuning or parameter-efficient methods discussed in the source paper. The focus is on federated learning and catastrophic forgetting, which are different research areas.",
+                    "relevance": 0
+                },
+                "4. A Large Language Model and Qualitative Comparative Analysis-Based Study of Trust in E-Commerce": {
+                    "explanation": "This paper uses large language models for analyzing trust in e-commerce, which is unrelated to prompt tuning or parameter-efficient tuning methods. The focus is on trust analysis, not on tuning methods.",
+                    "relevance": 0
+                },
+                "5. Investigating Large Language Models for Complex Word Identification in Multilingual and Multidomain Setups": {
+                    "explanation": "This paper investigates large language models for complex word identification but does not focus on prompt tuning or parameter-efficient tuning methods. It explores different applications of LLMs unrelated to the source paper's focus.",
+                    "relevance": 0
+                },
+                "6. UniGuard: Towards Universal Safety Guardrails for Jailbreak Attacks on Multimodal Large Language Models": {
+                    "explanation": "This paper addresses safety in multimodal large language models, which is unrelated to prompt tuning or parameter-efficient tuning methods discussed in the source paper. The focus is on safety and security, not tuning methods.",
+                    "relevance": 0
+                },
+                "7. Visual Fourier Prompt Tuning": {
+                    "explanation": "This paper introduces Visual Fourier Prompt Tuning, a parameter-efficient finetuning method inspired by prompt tuning, which directly relates to the source paper's exploration of prompt tuning. It extends the concept to visual models, showing a direct connection.",
+                    "relevance": 2
+                },
+                "8. PMoL: Parameter Efficient MoE for Preference Mixing of LLM Alignment": {
+                    "explanation": "This paper discusses parameter-efficient methods for preference alignment in LLMs, which is related to the source paper's focus on parameter-efficient tuning methods. However, it focuses on preference alignment rather than prompt tuning.",
+                    "relevance": 1
+                },
+                "9. Pin-Tuning: Parameter-Efficient In-Context Tuning for Few-Shot Molecular Property Prediction": {
+                    "explanation": "This paper introduces a parameter-efficient tuning method for molecular property prediction, which aligns with the source paper's focus on parameter-efficient tuning methods. However, it applies to a different domain (molecular property prediction).",
+                    "relevance": 1
+                },
+                "10. Prompt Tuning with Diffusion for Few-Shot Pre-trained Policy Generalization": {
+                    "explanation": "This paper explores prompt tuning in the context of few-shot learning and policy generalization, which is directly related to the source paper's focus on prompt tuning. It extends the concept to reinforcement learning, showing a connection.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Parameter-Efficient Fine-Tuning of Large Language Models for Unit Test Generation: An Empirical Study": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning methods, including prompt tuning, which directly relates to the source paper's exploration of prompt tuning for large language models. The study's focus on prompt tuning as a cost-effective method aligns with the source paper's findings on the efficiency of prompt tuning.",
+                    "relevance": 2
+                },
+                "2. Visual Fourier Prompt Tuning": {
+                    "explanation": "This paper introduces Visual Fourier Prompt Tuning, a parameter-efficient finetuning method inspired by prompt tuning, which directly relates to the source paper's exploration of prompt tuning. It extends the concept to visual models, showing a direct connection.",
+                    "relevance": 2
+                },
+                "3. Prompt Tuning with Diffusion for Few-Shot Pre-trained Policy Generalization": {
+                    "explanation": "This paper explores prompt tuning in the context of few-shot learning and policy generalization, which is directly related to the source paper's focus on prompt tuning. It extends the concept to reinforcement learning, showing a connection.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Open LLMs are Necessary for Current Private Adaptations and Outperform their Closed Alternatives": {
+                    "explanation": "This paper discusses the adaptation of LLMs for privacy-preserving tasks, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2. Dual Low-Rank Adaptation for Continual Learning with Pre-Trained Models": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning in the context of continual learning, which is related to the source paper's focus on parameter-efficient tuning, but it does not directly build upon the specific findings or hypotheses of the source paper.",
+                    "relevance": 1
+                },
+                "3. Prompt-Guided Semantic-Aware Distillation for Weakly Supervised Incremental Semantic Segmentation": {
+                    "explanation": "This paper uses prompt-guided methods for semantic segmentation, which is inspired by the use of prompts in the source paper, but it applies the concept to a different domain.",
+                    "relevance": 1
+                },
+                "4. CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition": {
+                    "explanation": "This paper utilizes prompt-based methods for emotion recognition, which is conceptually inspired by the source paper's exploration of prompt tuning, but it does not depend on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "5. Client-Customized Adaptation for Parameter-Efficient Federated Learning": {
+                    "explanation": "This paper discusses parameter-efficient fine-tuning in federated learning, which is related to the source paper's exploration of parameter-efficient methods, but does not directly rely on its findings.",
+                    "relevance": 1
+                },
+                "6. MoTaDual: Modality-Task Dual Alignment for Enhanced Zero-shot Composed Image Retrieval": {
+                    "explanation": "This paper addresses zero-shot learning and does not directly relate to prompt tuning or parameter-efficient methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. SmartLLMSentry: A Comprehensive LLM Based Smart Contract Vulnerability Detection Framework": {
+                    "explanation": "This paper focuses on using LLMs for smart contract vulnerability detection, which is unrelated to prompt tuning or parameter-efficient methods.",
+                    "relevance": 0
+                },
+                "8. MALoRA: Mixture of Asymmetric Low-Rank Adaptation for Enhanced Multi-Task Learning": {
+                    "explanation": "This paper discusses a new method for parameter-efficient fine-tuning in multi-task learning, which is related to the source paper's focus on parameter-efficient methods, but it does not directly build upon the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "9. DemoCraft: Using In-Context Learning to Improve Code Generation in Large Language Models": {
+                    "explanation": "This paper focuses on code generation using in-context learning, which is not directly related to prompt tuning or parameter-efficient methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. Towards Robust and Efficient Federated Low-Rank Adaptation with Heterogeneous Clients": {
+                    "explanation": "This paper discusses low-rank adaptation in federated learning, which is related to the source paper's exploration of parameter-efficient methods, but does not directly rely on its findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Dual Low-Rank Adaptation for Continual Learning with Pre-Trained Models": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning in the context of continual learning, which is related to the source paper's focus on parameter-efficient tuning.",
+                    "relevance": 1
+                },
+                "2. Prompt-Guided Semantic-Aware Distillation for Weakly Supervised Incremental Semantic Segmentation": {
+                    "explanation": "This paper uses prompt-guided methods for semantic segmentation, inspired by the use of prompts in the source paper.",
+                    "relevance": 1
+                },
+                "3. CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition": {
+                    "explanation": "This paper utilizes prompt-based methods for emotion recognition, conceptually inspired by the source paper's exploration of prompt tuning.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Dynamic Information Sub-Selection for Decision Support": {
+                    "explanation": "This paper focuses on decision support systems and does not directly relate to prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2.Lina-Speech: Gated Linear Attention is a Fast and Parameter-Efficient Learner for text-to-speech synthesis": {
+                    "explanation": "While this paper discusses parameter efficiency, it is in the context of text-to-speech synthesis and does not build upon or depend on the findings of the source paper regarding prompt tuning in language models.",
+                    "relevance": 0
+                },
+                "3.Exploring Gradient Subspaces: Addressing and Overcoming LoRA's Limitations in Federated Fine-Tuning of Large Language Models": {
+                    "explanation": "This paper addresses parameter-efficient fine-tuning strategies, specifically LoRA, which is related to the source paper's focus on parameter-efficient methods like prompt tuning. However, it does not directly build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "4.Cell2Sentence: Teaching Large Language Models the Language of Biology": {
+                    "explanation": "This paper applies large language models to biology, specifically single-cell transcriptomics, and does not relate to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5.MotionGPT-2: A General-Purpose Motion-Language Model for Motion Generation and Understanding": {
+                    "explanation": "This paper focuses on motion generation using language models and does not relate to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "6.Unified Domain Generalization and Adaptation for Multi-View 3D Object Detection": {
+                    "explanation": "This paper addresses domain generalization and adaptation in 3D object detection, which is unrelated to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7.Preserving Pre-trained Representation Space: On Effectiveness of Prefix-tuning for Large Multi-modal Models": {
+                    "explanation": "This paper discusses prefix-tuning, which is directly related to the source paper's discussion on prompt tuning and parameter-efficient methods. It builds upon the findings of the source paper regarding tuning strategies.",
+                    "relevance": 2
+                },
+                "8.SCULPT: Systematic Tuning of Long Prompts": {
+                    "explanation": "SCULPT addresses prompt optimization, which is directly related to the source paper's focus on prompt tuning. It builds upon the source paper's findings regarding prompt tuning strategies.",
+                    "relevance": 2
+                },
+                "9.GIST: Improving Parameter Efficient Fine-Tuning via Knowledge Interaction": {
+                    "explanation": "This paper proposes a novel framework for parameter-efficient fine-tuning, which is related to the source paper's focus on parameter-efficient methods like prompt tuning. It builds upon the source paper's findings.",
+                    "relevance": 2
+                },
+                "10.Boosting Speech Recognition Robustness to Modality-Distortion with Contrast-Augmented Prompts": {
+                    "explanation": "This paper focuses on speech recognition and modality-distortion, which is unrelated to the prompt tuning or parameter-efficient tuning methods discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Preserving Pre-trained Representation Space: On Effectiveness of Prefix-tuning for Large Multi-modal Models": {
+                    "explanation": "This paper discusses prefix-tuning, which is directly related to the source paper's discussion on prompt tuning and parameter-efficient methods. It builds upon the findings of the source paper regarding tuning strategies.",
+                    "relevance": 2
+                },
+                "2.SCULPT: Systematic Tuning of Long Prompts": {
+                    "explanation": "SCULPT addresses prompt optimization, which is directly related to the source paper's focus on prompt tuning. It builds upon the source paper's findings regarding prompt tuning strategies.",
+                    "relevance": 2
+                },
+                "3.GIST: Improving Parameter Efficient Fine-Tuning via Knowledge Interaction": {
+                    "explanation": "This paper proposes a novel framework for parameter-efficient fine-tuning, which is related to the source paper's focus on parameter-efficient methods like prompt tuning. It builds upon the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Rethinking the Effect of Uninformative Class Name in Prompt Learning": {
+                    "explanation": "This paper focuses on enhancing the semantic richness of class names in prompt learning for vision-language models, which is tangentially related to the source paper's exploration of prompt tuning in language models. However, it does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2. Enhancing Pre-trained ViTs for Downstream Task Adaptation: A Locality-Aware Prompt Learning Method": {
+                    "explanation": "This paper introduces a locality-aware prompt learning method for vision transformers, which is a different application domain compared to the language model prompt tuning discussed in the source paper. While both involve prompt learning, the methodologies and applications are distinct.",
+                    "relevance": 0
+                },
+                "3. Strada-LLM: Graph LLM for traffic prediction": {
+                    "explanation": "This paper applies LLMs to traffic prediction, focusing on graph-based approaches and few-shot adaptability. It does not directly relate to or build upon the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4. Collaborative Knowledge Fusion: A Novel Approach for Multi-task Recommender Systems via LLMs": {
+                    "explanation": "This paper discusses the integration of LLMs into recommender systems, focusing on collaborative knowledge fusion. It does not directly relate to prompt tuning or the specific findings of the source paper.",
+                    "relevance": 0
+                },
+                "5. MoBA: Mixture of Bi-directional Adapter for Multi-modal Sarcasm Detection": {
+                    "explanation": "This paper focuses on parameter-efficient fine-tuning for multi-modal sarcasm detection, which is related to the source paper's focus on parameter-efficient methods. However, it does not directly build upon the specific findings of the source paper regarding prompt tuning.",
+                    "relevance": 0
+                },
+                "6. CoPL: Parameter-Efficient Collaborative Prompt Learning for Audio-Visual Tasks": {
+                    "explanation": "This paper introduces a parameter-efficient collaborative prompt learning method for audio-visual tasks, which aligns with the source paper's focus on parameter-efficient prompt tuning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "7. MPT: Multi-grained Prompt Tuning for Text-Video Retrieval": {
+                    "explanation": "This paper discusses multi-grained prompt tuning for text-video retrieval, which is related to the source paper's exploration of prompt tuning. It builds upon the concept of prompt tuning but in a different application domain.",
+                    "relevance": 1
+                },
+                "8. Low-rank Prompt Interaction for Continual Vision-Language Retrieval": {
+                    "explanation": "This paper introduces a low-rank prompt interaction method for continual vision-language retrieval, which is related to the source paper's focus on prompt tuning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "9. Modal-Enhanced Semantic Modeling for Fine-Grained 3D Human Motion Retrieval": {
+                    "explanation": "This paper focuses on semantic modeling for 3D human motion retrieval, which is unrelated to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. A Descriptive Basketball Highlight Dataset for Automatic Commentary Generation": {
+                    "explanation": "This paper introduces a dataset for automatic commentary generation, which is unrelated to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. CoPL: Parameter-Efficient Collaborative Prompt Learning for Audio-Visual Tasks": {
+                    "explanation": "This paper introduces a parameter-efficient collaborative prompt learning method for audio-visual tasks, which aligns with the source paper's focus on parameter-efficient prompt tuning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2. MPT: Multi-grained Prompt Tuning for Text-Video Retrieval": {
+                    "explanation": "This paper discusses multi-grained prompt tuning for text-video retrieval, which is related to the source paper's exploration of prompt tuning. It builds upon the concept of prompt tuning but in a different application domain.",
+                    "relevance": 1
+                },
+                "3. Low-rank Prompt Interaction for Continual Vision-Language Retrieval": {
+                    "explanation": "This paper introduces a low-rank prompt interaction method for continual vision-language retrieval, which is related to the source paper's focus on prompt tuning. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.CREAM: Coarse-to-Fine Retrieval and Multi-modal Efficient Tuning for Document VQA": {
+                    "explanation": "This paper discusses parameter-efficient tuning methods for document VQA, which is related to the source paper's exploration of prompt tuning for language models. However, the focus on multi-modal document processing and retrieval is distinct from the source paper's focus on language model prompts. The connection is weak as it does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Fine-Tuning Pre-trained Model with Optimizable Prompt Learning for Code Vulnerability Detection": {
+                    "explanation": "This paper proposes a method for fine-tuning pre-trained models using prompt learning, which is directly related to the source paper's exploration of prompt tuning. The use of prompts to enhance model performance aligns with the source paper's findings, making this paper's hypothesis partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.SimCLIP: Refining Image-Text Alignment with Simple Prompts for Zero-/Few-shot Anomaly Detection": {
+                    "explanation": "SimCLIP focuses on refining image-text alignment using prompts for anomaly detection, which is a different application area than the source paper's focus on language models. While it involves prompt tuning, the connection to the source paper's findings is indirect and not dependent.",
+                    "relevance": 0
+                },
+                "4.MoS2: Mixture of Scale and Shift Experts for Text-Only Video Captioning": {
+                    "explanation": "This paper discusses video captioning using synthetic text data and a novel adaptation method, which is unrelated to the source paper's focus on prompt tuning for language models. There is no direct connection or dependency on the source paper's findings.",
+                    "relevance": 0
+                },
+                "5.InsVP: Efficient Instance Visual Prompting from Image Itself": {
+                    "explanation": "InsVP explores visual prompting for fine-tuning visual models, which is a different domain from the source paper's focus on language model prompts. The methodology of using prompts is similar, but the application and findings are distinct.",
+                    "relevance": 0
+                },
+                "6.LoRA Done RITE: Robust Invariant Transformation Equilibration for LoRA Optimization": {
+                    "explanation": "This paper discusses LoRA optimization, a parameter-efficient finetuning method for large language models, which is related to the source paper's exploration of prompt tuning. However, it focuses on a different optimization method, and while related in theme, it does not directly build on the source paper's findings.",
+                    "relevance": 0
+                },
+                "7.Vector Quantization Prompting for Continual Learning": {
+                    "explanation": "This paper explores prompt-based continual learning, which is related to the source paper's exploration of prompt tuning. The use of prompts in continual learning aligns with the source paper's findings, making this paper's hypothesis partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "8.Revealing and Reducing Gender Biases in Vision and Language Assistants (VLAs)": {
+                    "explanation": "This paper focuses on gender biases in vision and language assistants, which is unrelated to the source paper's focus on prompt tuning for language models. There is no direct connection or dependency on the source paper's findings.",
+                    "relevance": 0
+                },
+                "9.A Survey of Small Language Models": {
+                    "explanation": "This paper is a survey of small language models and does not present novel hypotheses or findings. It is a review paper and does not directly connect to the source paper's findings.",
+                    "relevance": 0
+                },
+                "10.AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant": {
+                    "explanation": "This paper discusses the integration of heterogeneous agents for computer tasks, which is unrelated to the source paper's focus on prompt tuning for language models. There is no direct connection or dependency on the source paper's findings.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Fine-Tuning Pre-trained Model with Optimizable Prompt Learning for Code Vulnerability Detection": {
+                    "explanation": "This paper proposes a method for fine-tuning pre-trained models using prompt learning, which is directly related to the source paper's exploration of prompt tuning. The use of prompts to enhance model performance aligns with the source paper's findings, making this paper's hypothesis partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.Vector Quantization Prompting for Continual Learning": {
+                    "explanation": "This paper explores prompt-based continual learning, which is related to the source paper's exploration of prompt tuning. The use of prompts in continual learning aligns with the source paper's findings, making this paper's hypothesis partially dependent on the source paper's findings.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Parameter-Efficient Fine-Tuning in Large Models: A Survey of Methodologies": {
+                    "explanation": "This paper is a review of methodologies related to parameter-efficient fine-tuning, which includes prompt tuning as discussed in the source paper. However, as a review paper, it does not present novel hypotheses or findings directly inspired by or dependent on the source paper.",
+                    "relevance": 0
+                },
+                "2. Label Set Optimization via Activation Distribution Kurtosis for Zero-shot Classification with Generative Models": {
+                    "explanation": "This paper focuses on zero-shot classification and label optimization, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper. It does not build upon or rely on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3. Enhancing Few-Shot Out-of-Distribution Detection With Pre-Trained Model Features": {
+                    "explanation": "This paper discusses the use of Parameter-Efficient Fine-Tuning (PEFT) techniques, such as visual prompt tuning, which is related to the concept of prompt tuning in the source paper. However, it applies these techniques in a different context (OOD detection) and does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "4. Closed-form merging of parameter-efficient modules for Federated Continual Learning": {
+                    "explanation": "This paper discusses model merging techniques and low-rank adaptation, which are not directly related to prompt tuning or the specific findings of the source paper. It does not rely on or extend the findings of the source paper.",
+                    "relevance": 0
+                },
+                "5. Understanding Layer Significance in LLM Alignment": {
+                    "explanation": "This paper focuses on layer significance in LLM alignment, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper. It does not build upon or rely on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6. Cross-model Control: Improving Multiple Large Language Models in One-time Training": {
+                    "explanation": "This paper introduces a method for improving multiple LLMs using a tiny language model, which is not directly related to prompt tuning or the specific findings of the source paper. It does not rely on or extend the findings of the source paper.",
+                    "relevance": 0
+                },
+                "7. The Tug of War Within: Mitigating the Fairness-Privacy Conflicts in Large Language Models": {
+                    "explanation": "This paper addresses fairness and privacy in LLMs, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper. It does not build upon or rely on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "8. PAPILLON: PrivAcy Preservation from Internet-based and Local Language MOdel ENsembles": {
+                    "explanation": "This paper focuses on privacy preservation in LLMs, which is not directly related to prompt tuning or the specific findings of the source paper. It does not rely on or extend the findings of the source paper.",
+                    "relevance": 0
+                },
+                "9. Beyond Retrieval: Generating Narratives in Conversational Recommender Systems": {
+                    "explanation": "This paper discusses the use of LLMs in conversational recommender systems, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper. It does not build upon or rely on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "10. LiNeS: Post-training Layer Scaling Prevents Forgetting and Enhances Model Merging": {
+                    "explanation": "This paper introduces a method for post-training layer scaling, which is not directly related to prompt tuning or the specific findings of the source paper. It does not rely on or extend the findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Enhancing Few-Shot Out-of-Distribution Detection With Pre-Trained Model Features": {
+                    "explanation": "This paper discusses the use of Parameter-Efficient Fine-Tuning (PEFT) techniques, such as visual prompt tuning, which is related to the concept of prompt tuning in the source paper. However, it applies these techniques in a different context (OOD detection) and does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.CausalEval: Towards Better Causal Reasoning in Language Models": {
+                    "explanation": "This paper is a comprehensive review of causal reasoning in language models and does not directly relate to prompt tuning or parameter-efficient tuning methods explored in the source paper.",
+                    "relevance": 0
+                },
+                "2.LoRA-C: Parameter-Efficient Fine-Tuning of Robust CNN for IoT Devices": {
+                    "explanation": "While this paper discusses parameter-efficient fine-tuning, it focuses on CNNs and IoT devices, which are unrelated to the prompt tuning and language model context of the source paper.",
+                    "relevance": 0
+                },
+                "3.xLSTM-Mixer: Multivariate Time Series Forecasting by Mixing via Scalar Memories": {
+                    "explanation": "This paper deals with time series forecasting using LSTM models and does not relate to prompt tuning or language models as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "4.Optimal Design for Reward Modeling in RLHF": {
+                    "explanation": "This paper discusses reinforcement learning from human feedback, which is a different domain from prompt tuning and parameter-efficient tuning methods for language models.",
+                    "relevance": 0
+                },
+                "5.In Context Learning and Reasoning for Symbolic Regression with Large Language Models": {
+                    "explanation": "This paper explores symbolic regression using large language models and involves in-context learning, which is somewhat related to prompt tuning as both involve adapting models to new tasks with minimal changes. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "6.Context-aware Prompt Tuning: Advancing In-Context Learning with Adversarial Methods": {
+                    "explanation": "This paper builds on the concept of prompt tuning by introducing context-aware prompt tuning, directly inspired by and extending the methods discussed in the source paper.",
+                    "relevance": 2
+                },
+                "7.Towards Optimal Adapter Placement for Efficient Transfer Learning": {
+                    "explanation": "This paper discusses parameter-efficient transfer learning using adapters, which is related to the source paper's focus on parameter-efficient prompt tuning. It explores a different method but shares the underlying goal of efficient model adaptation.",
+                    "relevance": 1
+                },
+                "8.Opportunities and Challenges of Generative-AI in Finance": {
+                    "explanation": "This is a review paper summarizing the applications of generative AI in finance, which is not directly connected to the prompt tuning methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9.SoftSRV: Learn to Generate Targeted Synthetic Data": {
+                    "explanation": "This paper focuses on generating synthetic data for fine-tuning models, which is a different application from prompt tuning in language models.",
+                    "relevance": 0
+                },
+                "10.Progressive Multimodal Pivot Learning: Towards Semantic Discordance Understanding as Humans": {
+                    "explanation": "This paper addresses multimodal recognition and semantic discordance, which is unrelated to the prompt tuning and language model context of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Context-aware Prompt Tuning: Advancing In-Context Learning with Adversarial Methods": {
+                    "explanation": "This paper builds on the concept of prompt tuning by introducing context-aware prompt tuning, directly inspired by and extending the methods discussed in the source paper.",
+                    "relevance": 2
+                },
+                "2.In Context Learning and Reasoning for Symbolic Regression with Large Language Models": {
+                    "explanation": "This paper explores symbolic regression using large language models and involves in-context learning, which is somewhat related to prompt tuning as both involve adapting models to new tasks with minimal changes. However, it does not directly build on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.Towards Optimal Adapter Placement for Efficient Transfer Learning": {
+                    "explanation": "This paper discusses parameter-efficient transfer learning using adapters, which is related to the source paper's focus on parameter-efficient prompt tuning. It explores a different method but shares the underlying goal of efficient model adaptation.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Integrating Structure and Text for Enhancing Hyper-relational Knowledge Graph Representation via Structure Soft Prompt Tuning": {
+                    "explanation": "This paper uses a concept of 'Structure Soft Prompt Tuning' which is inspired by the source paper's exploration of prompt tuning for language models. However, it applies the concept to a different domain (knowledge graphs) and focuses on integrating textual and structural information.",
+                    "relevance": 1
+                },
+                "2. LoRA-IR: Taming Low-Rank Experts for Efficient All-in-One Image Restoration": {
+                    "explanation": "This paper focuses on image restoration and does not directly relate to the concept of prompt tuning or language models as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "3. IPO: Interpretable Prompt Optimization for Vision-Language Models": {
+                    "explanation": "This paper discusses prompt optimization for vision-language models, which is related to the source paper's focus on prompt tuning for language models. It builds on the idea of prompt optimization, making it interpretable and applicable to vision-language tasks.",
+                    "relevance": 1
+                },
+                "4. BoostAdapter: Improving Vision-Language Test-Time Adaptation via Regional Bootstrapping": {
+                    "explanation": "This paper deals with test-time adaptation for vision-language models and does not focus on prompt tuning or parameter-efficient tuning as in the source paper.",
+                    "relevance": 0
+                },
+                "5. Imprompter: Tricking LLM Agents into Improper Tool Use": {
+                    "explanation": "This paper discusses adversarial prompt attacks on LLM agents, which is related to the source paper's focus on prompt tuning. It explores vulnerabilities in prompt optimization techniques.",
+                    "relevance": 1
+                },
+                "6. Unlearning Backdoor Attacks for LLMs with Weak-to-Strong Knowledge Distillation": {
+                    "explanation": "This paper focuses on defending against backdoor attacks in LLMs using knowledge distillation, which is not directly related to the prompt tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. Continual Learning With Knowledge Distillation: A Survey": {
+                    "explanation": "This is a survey paper and does not present novel hypotheses or findings directly related to prompt tuning.",
+                    "relevance": 0
+                },
+                "8. ST-MoE-BERT: A Spatial-Temporal Mixture-of-Experts Framework for Long-Term Cross-City Mobility Prediction": {
+                    "explanation": "This paper focuses on human mobility prediction using a mixture-of-experts framework and does not relate to prompt tuning or language models.",
+                    "relevance": 0
+                },
+                "9. Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs": {
+                    "explanation": "This paper discusses quantization techniques for LLMs, which is a different aspect of model efficiency compared to the prompt tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10. Improving Dietary Supplement Information Retrieval: Development of a Retrieval-Augmented Generation System With Large Language Models": {
+                    "explanation": "This paper focuses on information retrieval using LLMs and does not directly relate to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Integrating Structure and Text for Enhancing Hyper-relational Knowledge Graph Representation via Structure Soft Prompt Tuning": {
+                    "explanation": "This paper uses a concept of 'Structure Soft Prompt Tuning' which is inspired by the source paper's exploration of prompt tuning for language models. However, it applies the concept to a different domain (knowledge graphs) and focuses on integrating textual and structural information.",
+                    "relevance": 1
+                },
+                "2. IPO: Interpretable Prompt Optimization for Vision-Language Models": {
+                    "explanation": "This paper discusses prompt optimization for vision-language models, which is related to the source paper's focus on prompt tuning for language models. It builds on the idea of prompt optimization, making it interpretable and applicable to vision-language tasks.",
+                    "relevance": 1
+                },
+                "3. Imprompter: Tricking LLM Agents into Improper Tool Use": {
+                    "explanation": "This paper discusses adversarial prompt attacks on LLM agents, which is related to the source paper's focus on prompt tuning. It explores vulnerabilities in prompt optimization techniques.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Fine-Tuning Language Models on Multiple Datasets for Citation Intention Classification": {
+                    "explanation": "This paper focuses on fine-tuning language models for a specific task, which is related to the general concept of parameter-efficient tuning. However, it does not specifically build upon or depend on the findings from the source paper regarding prompt tuning.",
+                    "relevance": 0
+                },
+                "2.Bridging biomolecular modalities for knowledge transfer in bio-language models": {
+                    "explanation": "This paper explores knowledge transfer in bio-language models, which is unrelated to the concept of prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "3.How to Make LLMs Forget: On Reversing In-Context Knowledge Edits": {
+                    "explanation": "This paper deals with knowledge editing and reversal in language models, which is a different topic from prompt tuning and does not build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "4.Prompt Compression for Large Language Models: A Survey": {
+                    "explanation": "This is a survey paper on prompt compression techniques, which summarizes existing literature and lacks novel hypotheses or findings directly building on the source paper.",
+                    "relevance": 0
+                },
+                "5.Communication-Efficient and Tensorized Federated Fine-Tuning of Large Language Models": {
+                    "explanation": "This paper discusses federated fine-tuning of language models, which is a different approach from prompt tuning. It does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "6.Triple Modality Fusion: Aligning Visual, Textual, and Graph Data with Large Language Models for Multi-Behavior Recommendations": {
+                    "explanation": "This paper focuses on integrating multiple data modalities for recommendation systems, which is unrelated to the concept of prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7.MAX: Masked Autoencoder for X-ray Fluorescence in Geological Investigation": {
+                    "explanation": "This paper deals with geological data analysis using masked autoencoders, which is unrelated to the concept of prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "8.Mechanistic Unlearning: Robust Knowledge Unlearning and Editing via Mechanistic Localization": {
+                    "explanation": "This paper focuses on knowledge unlearning and editing in language models, which is a different topic from prompt tuning and does not build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "9.Embedding an Ethical Mind: Aligning Text-to-Image Synthesis via Lightweight Value Optimization": {
+                    "explanation": "This paper addresses ethical alignment in text-to-image synthesis models, which is unrelated to the concept of prompt tuning or parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 0
+                },
+                "10.Tree of Attributes Prompt Learning for Vision-Language Models": {
+                    "explanation": "This paper proposes a novel approach to prompt learning for vision-language models, which aligns with the concept of prompt tuning discussed in the source paper. However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Tree of Attributes Prompt Learning for Vision-Language Models": {
+                    "explanation": "This paper proposes a novel approach to prompt learning for vision-language models, which aligns with the concept of prompt tuning discussed in the source paper. However, it does not directly build upon or depend on the specific findings of the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Layer-wise Importance Matters: Less Memory for Better Performance in Parameter-efficient Fine-tuning of Large Language Models": {
+                    "explanation": "This paper builds on the concept of parameter-efficient fine-tuning (PEFT) methods, similar to prompt tuning discussed in the source paper. It introduces a novel approach to improve PEFT by considering layer-wise importance, which is a different aspect but related to the efficiency and performance improvements in large language models.",
+                    "relevance": 1
+                },
+                "2.Enhance Graph Alignment for Large Language Models": {
+                    "explanation": "This paper focuses on applying large language models to graph-structured data, which is a different domain than the source paper's focus on prompt tuning for language models. There is no direct connection to the source paper's hypothesis or findings.",
+                    "relevance": 0
+                },
+                "3.Bypassing the Exponential Dependency: Looped Transformers Efficiently Learn In-context by Multi-step Gradient Descent": {
+                    "explanation": "This paper explores the in-context learning capabilities of transformers, which is related to the broader topic of language model capabilities but does not directly build on the prompt tuning or parameter efficiency findings of the source paper.",
+                    "relevance": 0
+                },
+                "4.RoCoFT: Efficient Finetuning of Large Language Models with Row-Column Updates": {
+                    "explanation": "RoCoFT introduces a method for efficient fine-tuning of large language models, which is related to the source paper's focus on parameter-efficient methods like prompt tuning. It shares the goal of reducing computational and memory overheads in adapting large models.",
+                    "relevance": 1
+                },
+                "5.Federated Data-Efficient Instruction Tuning for Large Language Models": {
+                    "explanation": "This paper discusses federated instruction tuning, which is a different approach from the prompt tuning method in the source paper. While both aim to improve the efficiency of large language models, the methods and focus are distinct.",
+                    "relevance": 0
+                },
+                "6.Domain-Conditioned Transformer for Fully Test-time Adaptation": {
+                    "explanation": "The focus on test-time adaptation and domain conditioning in transformers is different from the source paper's exploration of prompt tuning and parameter efficiency. There is no direct connection to the source paper's hypothesis.",
+                    "relevance": 0
+                },
+                "7.Predicting from Strings: Language Model Embeddings for Bayesian Optimization": {
+                    "explanation": "This paper applies language model embeddings to Bayesian optimization, which is a different application area than the parameter-efficient prompt tuning discussed in the source paper. There is no direct connection to the source paper's findings.",
+                    "relevance": 0
+                },
+                "8.NT-LLM: A Novel Node Tokenizer for Integrating Graph Structure into Large Language Models": {
+                    "explanation": "NT-LLM focuses on integrating graph structures into language models, which is unrelated to the parameter-efficient prompt tuning discussed in the source paper. There is no direct connection to the source paper's hypothesis or findings.",
+                    "relevance": 0
+                },
+                "9.BiDoRA: Bi-level Optimization-Based Weight-Decomposed Low-Rank Adaptation": {
+                    "explanation": "BiDoRA explores a parameter-efficient fine-tuning method, similar to the prompt tuning discussed in the source paper. It shares the goal of improving efficiency in adapting large language models, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "10.Simultaneous Computation and Memory Efficient Zeroth-Order Optimizer for Fine-Tuning Large Language Models": {
+                    "explanation": "This paper introduces a memory-efficient optimizer for fine-tuning large language models, which is related to the source paper's focus on parameter-efficient methods. It shares the goal of reducing computational overheads in model adaptation.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1.BiDoRA: Bi-level Optimization-Based Weight-Decomposed Low-Rank Adaptation": {
+                    "explanation": "BiDoRA explores a parameter-efficient fine-tuning method, similar to the prompt tuning discussed in the source paper. It shares the goal of improving efficiency in adapting large language models, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2.Layer-wise Importance Matters: Less Memory for Better Performance in Parameter-efficient Fine-tuning of Large Language Models": {
+                    "explanation": "This paper builds on the concept of parameter-efficient fine-tuning (PEFT) methods, similar to prompt tuning discussed in the source paper. It introduces a novel approach to improve PEFT by considering layer-wise importance, which is a different aspect but related to the efficiency and performance improvements in large language models.",
+                    "relevance": 1
+                },
+                "3.RoCoFT: Efficient Finetuning of Large Language Models with Row-Column Updates": {
+                    "explanation": "RoCoFT introduces a method for efficient fine-tuning of large language models, which is related to the source paper's focus on parameter-efficient methods like prompt tuning. It shares the goal of reducing computational and memory overheads in adapting large models.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Targeted Vaccine: Safety Alignment for Large Language Models against Harmful Fine-Tuning via Layer-wise Perturbation": {
+                    "explanation": "This paper focuses on safety alignment for large language models against harmful fine-tuning, which is not directly related to the concept of prompt tuning or parameter-efficient tuning explored in the source paper.",
+                    "relevance": 0
+                },
+                "2. ALLoRA: Adaptive Learning Rate Mitigates LoRA Fatal Flaws": {
+                    "explanation": "This paper discusses improvements to the LoRA method for fine-tuning, which is related to parameter-efficient tuning. However, it does not directly build on the findings of the source paper, which focuses on prompt tuning.",
+                    "relevance": 1
+                },
+                "3. The Future of Learning in the Age of Generative AI: Automated Question Generation and Assessment with Large Language Models": {
+                    "explanation": "This paper is a review of the use of large language models in education, focusing on question generation and assessment. It does not propose novel hypotheses or findings directly related to prompt tuning.",
+                    "relevance": 0
+                },
+                "4. Towards Efficient Visual-Language Alignment of the Q-Former for Visual Reasoning Tasks": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning for visual-language tasks, which is related to the source paper's focus on efficient tuning methods. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "5. Continuous Risk Prediction": {
+                    "explanation": "This paper discusses lifelong learning for QA models using prompt-enhanced language models, which is related to the source paper's exploration of prompt tuning. However, it does not directly build on the specific findings of the source paper.",
+                    "relevance": 1
+                },
+                "6. Exact Aggregation for Federated and Efficient Fine-Tuning of Foundation Models": {
+                    "explanation": "This paper discusses federated learning and efficient fine-tuning using LoRA, which is related to parameter-efficient tuning. However, it does not directly build on the source paper's findings on prompt tuning.",
+                    "relevance": 1
+                },
+                "7. Emergent social conventions and collective bias in LLM populations": {
+                    "explanation": "This paper explores emergent social conventions in AI agents, which is not directly related to prompt tuning or parameter-efficient tuning.",
+                    "relevance": 0
+                },
+                "8. Parameter-Efficient Fine-Tuning of State Space Models": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning methods for state space models, which is related to the source paper's focus on efficient tuning methods. However, it does not directly depend on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "9. Federated Learning in Practice: Reflections and Projections": {
+                    "explanation": "This is a review paper on federated learning, discussing its challenges and future directions. It does not propose novel hypotheses or findings directly related to prompt tuning.",
+                    "relevance": 0
+                },
+                "10. Parameter-efficient fine-tuning of large language models using semantic knowledge tuning": {
+                    "explanation": "This paper proposes a novel method for prompt and prefix tuning, which is directly related to the source paper's focus on prompt tuning and parameter-efficient methods.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. ALLoRA: Adaptive Learning Rate Mitigates LoRA Fatal Flaws": {
+                    "explanation": "This paper discusses improvements to the LoRA method for fine-tuning, which is related to parameter-efficient tuning.",
+                    "relevance": 1
+                },
+                "2. Towards Efficient Visual-Language Alignment of the Q-Former for Visual Reasoning Tasks": {
+                    "explanation": "This paper explores parameter-efficient fine-tuning for visual-language tasks, which is related to the source paper's focus on efficient tuning methods.",
+                    "relevance": 1
+                },
+                "3. Parameter-efficient fine-tuning of large language models using semantic knowledge tuning": {
+                    "explanation": "This paper proposes a novel method for prompt and prefix tuning, which is directly related to the source paper's focus on prompt tuning and parameter-efficient methods.",
+                    "relevance": 2
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. StraGo: Harnessing Strategic Guidance for Prompt Optimization": {
+                    "explanation": "StraGo focuses on prompt optimization by mitigating prompt drifting and providing strategic guidance. While it deals with prompt tuning, it does not directly build upon the findings of the source paper regarding the scaling of prompt tuning with model size or the specific method of soft prompts.",
+                    "relevance": 0
+                },
+                "2. Zeroth-Order Fine-Tuning of LLMs in Random Subspaces": {
+                    "explanation": "This paper addresses the challenges of fine-tuning large language models using zeroth-order optimization methods, focusing on memory efficiency and gradient estimation. It does not directly relate to the source paper's focus on prompt tuning and parameter efficiency in the context of frozen models.",
+                    "relevance": 0
+                },
+                "3. SLIM: Let LLM Learn More and Forget Less with Soft LoRA and Identity Mixture": {
+                    "explanation": "SLIM introduces a parameter-efficient fine-tuning framework using Soft LoRA and Identity Mixture to mitigate catastrophic forgetting. While it shares the theme of parameter efficiency with the source paper, it does not specifically build on the findings or hypotheses related to prompt tuning and model scaling.",
+                    "relevance": 0
+                },
+                "4. Enhancing Zeroth-order Fine-tuning for Language Models with Low-rank Structures": {
+                    "explanation": "This paper proposes a low-rank zeroth-order algorithm for fine-tuning language models, focusing on memory efficiency and gradient approximation. It does not directly relate to the source paper's exploration of prompt tuning and the scaling benefits of soft prompts.",
+                    "relevance": 0
+                },
+                "5. What Makes Large Language Models Reason in (Multi-Turn) Code Generation?": {
+                    "explanation": "This paper investigates prompting strategies for code generation, focusing on reasoning and re-prompting techniques. While it deals with prompting, it does not build upon the specific findings of the source paper regarding soft prompts and model scaling.",
+                    "relevance": 0
+                },
+                "6. ACCEPT: Adaptive Codebook for Composite and Efficient Prompt Tuning": {
+                    "explanation": "ACCEPT introduces a method for efficient prompt tuning by using a shared codebook for soft prompts, which aligns with the source paper's focus on parameter-efficient prompt tuning. It builds on the idea of optimizing prompt tuning for large models, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "7. Parameter-Efficient Fine-Tuning in Spectral Domain for Point Cloud Learning": {
+                    "explanation": "This paper focuses on parameter-efficient fine-tuning for point cloud models, which is unrelated to the source paper's focus on language models and prompt tuning.",
+                    "relevance": 0
+                },
+                "8. StablePrompt : Automatic Prompt Tuning using Reinforcement Learning for Large Language Model": {
+                    "explanation": "StablePrompt uses reinforcement learning for prompt tuning, which is related to the source paper's focus on prompt tuning methods. However, it does not directly build upon the specific findings of the source paper regarding model scaling and soft prompts.",
+                    "relevance": 1
+                },
+                "9. COS-DPO: Conditioned One-Shot Multi-Objective Fine-Tuning Framework": {
+                    "explanation": "COS-DPO addresses multi-objective fine-tuning using a conditioned one-shot framework, which is not directly related to the source paper's exploration of prompt tuning and model scaling.",
+                    "relevance": 0
+                },
+                "10. Addax: Utilizing Zeroth-Order Gradients to Improve Memory Efficiency and Performance of SGD for Fine-Tuning Language Models": {
+                    "explanation": "Addax focuses on memory-efficient fine-tuning using zeroth-order gradients, which does not directly relate to the source paper's findings on prompt tuning and parameter efficiency with large models.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. ACCEPT: Adaptive Codebook for Composite and Efficient Prompt Tuning": {
+                    "explanation": "ACCEPT introduces a method for efficient prompt tuning by using a shared codebook for soft prompts, which aligns with the source paper's focus on parameter-efficient prompt tuning. It builds on the idea of optimizing prompt tuning for large models, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. StablePrompt : Automatic Prompt Tuning using Reinforcement Learning for Large Language Model": {
+                    "explanation": "StablePrompt uses reinforcement learning for prompt tuning, which is related to the source paper's focus on prompt tuning methods. However, it does not directly build upon the specific findings of the source paper regarding model scaling and soft prompts.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Towards Interpreting Visual Information Processing in Vision-Language Models": {
+                    "explanation": "This paper focuses on vision-language models and their processing of visual tokens, which is not directly related to prompt tuning or parameter-efficient tuning of language models as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "2.Glider: Global and Local Instruction-Driven Expert Router": {
+                    "explanation": "This paper discusses a routing mechanism for expert models, which is related to model architecture and task specialization rather than prompt tuning or parameter-efficient tuning as explored in the source paper.",
+                    "relevance": 0
+                },
+                "3.Deep Correlated Prompting for Visual Recognition with Missing Modalities": {
+                    "explanation": "This paper explores prompt learning in the context of multimodal models and missing modalities, which is related to prompt tuning but focuses on a different application area (multimodal models) than the source paper.",
+                    "relevance": 1
+                },
+                "4.Is C4 Dataset Optimal for Pruning? An Investigation of Calibration Data for LLM Pruning": {
+                    "explanation": "This paper investigates dataset choices for pruning large language models, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "5.Parameter-Efficient Fine-Tuning via Selective Discrete Cosine Transform": {
+                    "explanation": "This paper proposes a parameter-efficient fine-tuning method using discrete cosine transform, which aligns with the source paper's focus on parameter-efficient tuning methods.",
+                    "relevance": 2
+                },
+                "6.PII-Scope: A Comprehensive Study on Training Data PII Extraction Attacks in LLMs": {
+                    "explanation": "This paper focuses on PII extraction attacks in LLMs, which is unrelated to prompt tuning or parameter-efficient tuning as discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7.A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models": {
+                    "explanation": "This is a survey paper that discusses hardware and software design for LLMs, which is not directly related to the specific topic of prompt tuning or parameter-efficient tuning.",
+                    "relevance": 0
+                },
+                "8.PortLLM: Personalizing Evolving Large Language Models with Training-Free and Portable Model Patches": {
+                    "explanation": "This paper discusses a training-free framework for personalizing LLMs, which relates to the source paper's theme of efficient tuning and model adaptation.",
+                    "relevance": 1
+                },
+                "9.Generating Synthetic Datasets for Few-shot Prompt Tuning": {
+                    "explanation": "This paper addresses the challenge of few-shot prompt tuning by generating synthetic datasets, directly building on the concept of prompt tuning discussed in the source paper.",
+                    "relevance": 2
+                },
+                "10.A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges": {
+                    "explanation": "This is a survey paper on multi-agent systems using LLMs, which does not directly relate to the specific topic of prompt tuning or parameter-efficient tuning.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.Parameter-Efficient Fine-Tuning via Selective Discrete Cosine Transform": {
+                    "explanation": "This paper proposes a parameter-efficient fine-tuning method using discrete cosine transform, which aligns with the source paper's focus on parameter-efficient tuning methods.",
+                    "relevance": 2
+                },
+                "2.Generating Synthetic Datasets for Few-shot Prompt Tuning": {
+                    "explanation": "This paper addresses the challenge of few-shot prompt tuning by generating synthetic datasets, directly building on the concept of prompt tuning discussed in the source paper.",
+                    "relevance": 2
+                },
+                "3.Deep Correlated Prompting for Visual Recognition with Missing Modalities": {
+                    "explanation": "This paper explores prompt learning in the context of multimodal models and missing modalities, which is related to prompt tuning but focuses on a different application area (multimodal models) than the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.Hyper Adversarial Tuning for Boosting Adversarial Robustness of Pretrained Large Vision Models": {
+                    "explanation": "This paper focuses on adversarial robustness in vision models and does not directly relate to prompt tuning or language models, which are the focus of the source paper.",
+                    "relevance": 0
+                },
+                "2.Instructing and Prompting Large Language Models for Explainable Cross-domain Recommendations": {
+                    "explanation": "This paper uses large language models for cross-domain recommendations and involves prompting, which is conceptually related to the source paper's focus on prompt tuning. However, it does not directly build upon the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3.Prompt Tuning for Item Cold-start Recommendation": {
+                    "explanation": "This paper applies prompt tuning to recommender systems, which is directly inspired by the concept of prompt tuning discussed in the source paper. It adapts the technique for a new domain, showing a clear connection.",
+                    "relevance": 1
+                },
+                "4.TuneVLSeg: Prompt Tuning Benchmark for Vision-Language Segmentation Models": {
+                    "explanation": "This paper explores prompt tuning in the context of vision-language models, directly building on the concept of prompt tuning from the source paper, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "5.Provable Weak-to-Strong Generalization via Benign Overfitting": {
+                    "explanation": "This paper discusses weak-to-strong generalization in machine learning models and does not directly relate to prompt tuning or parameter-efficient tuning techniques.",
+                    "relevance": 0
+                },
+                "6.DiDOTS: Knowledge Distillation from Large-Language-Models for Dementia Obfuscation in Transcribed Speech": {
+                    "explanation": "While this paper involves large language models, its focus is on knowledge distillation for a specific application rather than prompt tuning or parameter-efficient tuning.",
+                    "relevance": 0
+                },
+                "7.Hyperbolic Fine-tuning for Large Language Models": {
+                    "explanation": "This paper discusses fine-tuning in hyperbolic space, which is a different approach from the prompt tuning discussed in the source paper. It does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "8.From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression": {
+                    "explanation": "This paper explores prompt compression, which is related to the concept of prompt tuning in the source paper. It builds on the idea of optimizing prompt usage, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "9.Auto-GDA: Automatic Domain Adaptation for Efficient Grounding Verification in Retrieval Augmented Generation": {
+                    "explanation": "This paper focuses on domain adaptation for grounding verification in retrieval-augmented generation, which is not directly related to prompt tuning or parameter-efficient tuning techniques.",
+                    "relevance": 0
+                },
+                "10.Function-Guided Conditional Generation Using Protein Language Models with Adapters": {
+                    "explanation": "This paper discusses conditional generation using protein language models, which is not directly related to prompt tuning or parameter-efficient tuning as discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1.TuneVLSeg: Prompt Tuning Benchmark for Vision-Language Segmentation Models": {
+                    "explanation": "This paper explores prompt tuning in the context of vision-language models, directly building on the concept of prompt tuning from the source paper, making it partially dependent on the findings of the source paper.",
+                    "relevance": 2
+                },
+                "2.From Reading to Compressing: Exploring the Multi-document Reader for Prompt Compression": {
+                    "explanation": "This paper explores prompt compression, which is related to the concept of prompt tuning in the source paper. It builds on the idea of optimizing prompt usage, making it partially dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "3.Prompt Tuning for Item Cold-start Recommendation": {
+                    "explanation": "This paper applies prompt tuning to recommender systems, which is directly inspired by the concept of prompt tuning discussed in the source paper. It adapts the technique for a new domain, showing a clear connection.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts": {
+                    "explanation": "This paper explores theoretical foundations of prompt-based techniques, including prompt-tuning, which is directly related to the source paper's exploration of prompt tuning for large language models. The paper builds on the concepts introduced in the source paper by examining the theoretical underpinnings of these methods.",
+                    "relevance": 2
+                },
+                "2. AttriPrompter: Auto-Prompting With Attribute Semantics for Zero-Shot Nuclei Detection via Visual-Language Pre-Trained Models": {
+                    "explanation": "This paper focuses on visual-language models for zero-shot nuclei detection and proposes an auto-prompting pipeline. While it uses prompt-based techniques, it is not directly inspired by or dependent on the findings of the source paper, which focuses on language model prompt tuning.",
+                    "relevance": 0
+                },
+                "3. Can Language Models Take A Hint? Prompting for Controllable Contextualized Commonsense Inference": {
+                    "explanation": "This paper introduces 'hinting' using both hard and soft prompts to guide commonsense inference, which relates to the source paper's exploration of prompt tuning. However, the focus is on a different application (commonsense inference) rather than the parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 1
+                },
+                "4. Theoretical Insights into Fine-Tuning Attention Mechanism: Generalization and Optimization": {
+                    "explanation": "This paper discusses fine-tuning strategies for attention mechanisms in large language models, which is a different focus from the source paper's exploration of prompt tuning. While both deal with large language models, the specific focus and methods differ.",
+                    "relevance": 0
+                },
+                "5. Fine-Tuning Language Models with Differential Privacy through Adaptive Noise Allocation": {
+                    "explanation": "This paper addresses differential privacy in the fine-tuning of language models, which is not directly related to the prompt tuning techniques explored in the source paper.",
+                    "relevance": 0
+                },
+                "6. Coal Mining Question Answering with LLMs": {
+                    "explanation": "This paper applies prompt engineering techniques to improve question answering in the domain of coal mining. While it uses prompt-based methods, it does not directly build upon or depend on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "7. Reward-RAG: Enhancing RAG with Reward Driven Supervision": {
+                    "explanation": "This paper introduces a novel approach to enhance Retrieval-Augmented Generation models with reward-driven supervision. It does not directly relate to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                },
+                "8. The Ghost at LLMs4OL 2024 Task A: Prompt-Tuning-Based Large Language Models for Term Typing": {
+                    "explanation": "This paper utilizes automatic prompt generation using soft prompts for term typing, which is directly related to the source paper's exploration of prompt tuning for large language models. It builds on the concepts introduced in the source paper.",
+                    "relevance": 2
+                },
+                "9. A Survey of Robot Intelligence with Large Language Models": {
+                    "explanation": "This is a review paper summarizing the use of large language models in robotics, which does not introduce novel hypotheses or findings directly related to the source paper.",
+                    "relevance": 0
+                },
+                "10. Question-guided Knowledge Graph Re-scoring and Injection for Knowledge Graph Question Answering": {
+                    "explanation": "This paper focuses on knowledge graph question answering and does not directly relate to the prompt tuning techniques discussed in the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {
+                "1. Revisiting Prefix-tuning: Statistical Benefits of Reparameterization among Prompts": {
+                    "explanation": "This paper explores theoretical foundations of prompt-based techniques, including prompt-tuning, which is directly related to the source paper's exploration of prompt tuning for large language models. The paper builds on the concepts introduced in the source paper by examining the theoretical underpinnings of these methods.",
+                    "relevance": 2
+                },
+                "2. The Ghost at LLMs4OL 2024 Task A: Prompt-Tuning-Based Large Language Models for Term Typing": {
+                    "explanation": "This paper utilizes automatic prompt generation using soft prompts for term typing, which is directly related to the source paper's exploration of prompt tuning for large language models. It builds on the concepts introduced in the source paper.",
+                    "relevance": 2
+                },
+                "3. Can Language Models Take A Hint? Prompting for Controllable Contextualized Commonsense Inference": {
+                    "explanation": "This paper introduces 'hinting' using both hard and soft prompts to guide commonsense inference, which relates to the source paper's exploration of prompt tuning. However, the focus is on a different application (commonsense inference) rather than the parameter-efficient tuning discussed in the source paper.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2024,
+        "source_paper": {
+            "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+            "pmid": "2104.08691",
+            "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            "abstract": "In this work, we explore \u201cprompt tuning,\u201d a simple yet effective mechanism for learning \u201csoft prompts\u201d to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3\u2019s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method \u201ccloses the gap\u201d and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed \u201cprefix tuning\u201d of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient \u201cprompt ensembling.\u201d We release code and model checkpoints to reproduce our experiments.",
+            "year": 2021,
+            "citation_count": 4242
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. NEAT: Nonlinear Parameter-efficient Adaptation of Pre-trained Models": {
+                    "explanation": "This paper discusses a new parameter-efficient fine-tuning method, which is related to the source paper's exploration of prompt tuning as a parameter-efficient method. However, NEAT focuses on nonlinear transformations rather than prompt tuning, making it inspired by the general theme of parameter efficiency but not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "2. Taxonomy Tree Generation from Citation Graph": {
+                    "explanation": "This paper focuses on taxonomy generation from citation graphs, which is unrelated to the source paper's focus on prompt tuning and parameter-efficient methods for language models.",
+                    "relevance": 0
+                },
+                "3. FedPT: Federated Proxy-Tuning of Large Language Models on Resource-Constrained Edge Devices": {
+                    "explanation": "FedPT addresses federated fine-tuning of large language models, which is a different approach from the prompt tuning discussed in the source paper. Although both deal with large language models, the methods and challenges addressed are distinct.",
+                    "relevance": 0
+                },
+                "4. Empowering Large Language Model for Continual Video Question Answering with Collaborative Prompting": {
+                    "explanation": "This paper explores prompt-based methods for continual learning in video question answering, which is related to the source paper's exploration of prompt tuning for language models. The focus on prompts and their application to new tasks aligns with the source paper's findings.",
+                    "relevance": 1
+                },
+                "5. HDMoLE: Mixture of LoRA Experts with Hierarchical Routing and Dynamic Thresholds for Fine-Tuning LLM-based ASR Models": {
+                    "explanation": "HDMoLE discusses a parameter-efficient method for fine-tuning models using LoRA, which is related to the source paper's exploration of parameter-efficient methods. However, it focuses on a different technique (LoRA) rather than prompt tuning.",
+                    "relevance": 1
+                },
+                "6. Fisher Information-based Efficient Curriculum Federated Learning with Large Language Models": {
+                    "explanation": "This paper addresses federated learning and efficient curriculum learning, which are not directly related to the prompt tuning and parameter efficiency discussed in the source paper.",
+                    "relevance": 0
+                },
+                "7. Multi-Objective Combinatorial Optimization Algorithm Based on Asynchronous Advantage Actor\u2013Critic and Graph Transformer Networks": {
+                    "explanation": "This paper focuses on combinatorial optimization using deep reinforcement learning, which is unrelated to the source paper's focus on prompt tuning and language models.",
+                    "relevance": 0
+                },
+                "8. Evaluating large language model workflows in clinical decision support: referral, triage, and diagnosis": {
+                    "explanation": "This paper evaluates large language models in clinical settings, which is not directly related to the prompt tuning or parameter-efficient methods discussed in the source paper.",
+                    "relevance": 0
+                },
+                "9. PEDRO: Parameter-Efficient Fine-tuning with Prompt DEpenDent Representation MOdification": {
+                    "explanation": "PEDRO introduces a parameter-efficient fine-tuning method involving prompts, which is directly related to the source paper's exploration of prompt tuning as a parameter-efficient method for language models.",
+                    "relevance": 2
+                },
+                "10. Cascade Prompt Learning for Vision-Language Model Adaptation": {
+                    "explanation": "This paper discusses prompt learning for vision-language models, which is related to the source paper's exploration of prompt tuning for language models. The focus on prompt learning aligns with the source paper's findings.",
+                    "relevance": 1
+                }
+            },
+            "top3_relevant_papers": {
+                "1. PEDRO: Parameter-Efficient Fine-tuning with Prompt DEpenDent Representation MOdification": {
+                    "explanation": "PEDRO introduces a parameter-efficient fine-tuning method involving prompts, which is directly related to the source paper's exploration of prompt tuning as a parameter-efficient method for language models.",
+                    "relevance": 2
+                },
+                "2. NEAT: Nonlinear Parameter-efficient Adaptation of Pre-trained Models": {
+                    "explanation": "This paper discusses a new parameter-efficient fine-tuning method, which is related to the source paper's exploration of prompt tuning as a parameter-efficient method. However, NEAT focuses on nonlinear transformations rather than prompt tuning, making it inspired by the general theme of parameter efficiency but not directly dependent on the findings of the source paper.",
+                    "relevance": 1
+                },
+                "3. Empowering Large Language Model for Continual Video Question Answering with Collaborative Prompting": {
+                    "explanation": "This paper explores prompt-based methods for continual learning in video question answering, which is related to the source paper's exploration of prompt tuning for language models. The focus on prompts and their application to new tasks aligns with the source paper's findings.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "6e8490d951de04002706b2f4cc43a338124af12a",
+            "title": "Visual Fourier Prompt Tuning",
+            "abstract": "With the scale of vision Transformer-based models continuing to grow, finetuning these large-scale pretrained models for new tasks has become increasingly parameter-intensive. Visual prompt tuning is introduced as a parameter-efficient finetuning (PEFT) method to this trend. Despite its successes, a notable research challenge persists within almost all PEFT approaches: significant performance degradation is observed when there is a substantial disparity between the datasets applied in pretraining and finetuning phases. To address this challenge, we draw inspiration from human visual cognition, and propose the Visual Fourier Prompt Tuning (VFPT) method as a general and effective solution for adapting large-scale transformer-based models. Our approach innovatively incorporates the Fast Fourier Transform into prompt embeddings and harmoniously considers both spatial and frequency domain information. Apart from its inherent simplicity and intuitiveness, VFPT exhibits superior performance across all datasets, offering a general solution to dataset challenges, irrespective of data disparities. Empirical results demonstrate that our approach outperforms current state-of-the-art baselines on two benchmarks, with low parameter usage (e.g., 0.57% of model parameters on VTAB-1k) and notable performance enhancements (e.g., 73.20% of mean accuracy on VTAB-1k). Our code is avaliable at https://github.com/runtsang/VFPT.",
+            "year": 2024,
+            "citation_count": 8,
+            "relevance": 2,
+            "explanation": "This paper introduces Visual Fourier Prompt Tuning, a parameter-efficient finetuning method inspired by prompt tuning, which directly relates to the source paper's exploration of prompt tuning. It extends the concept to visual models, showing a direct connection."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.GenFT: A Generative Parameter-Efficient Fine-Tuning Method for Pretrained Foundation Models": {
+                    "explanation": "This paper explores a new method for parameter-efficient fine-tuning (PEFT) by utilizing pretrained weights to guide task-specific updates. While it shares the PEFT theme with the source paper, it does not specifically build on the Fourier-based approach or findings of the source paper.",
+                    "relevance": 0
+                },
+                "2.Vision Graph Prompting via Semantic Low-Rank Decomposition": {
+                    "explanation": "This paper focuses on adapting vision graph structures using a novel prompting method, which is different from the Fourier-based prompt tuning in the source paper. It does not directly depend on or extend the findings of the source paper.",
+                    "relevance": 0
+                },
+                "3.Token Coordinated Prompt Attention is Needed for Visual Prompting": {
+                    "explanation": "This paper addresses the limitations of existing visual prompting techniques by introducing a token-specific attention mechanism. While it shares the goal of improving visual prompting, it does not specifically rely on the Fourier-based approach or findings from the source paper.",
+                    "relevance": 0
+                },
+                "4.Diff-Prompt: Diffusion-Driven Prompt Generator with Mask Supervision": {
+                    "explanation": "This paper introduces a diffusion-driven prompt generator for fine-tuning multimodal models, which is a different approach from the Fourier-based method in the source paper. It does not directly build on the findings of the source paper.",
+                    "relevance": 0
+                },
+                "5.Visual Variational Autoencoder Prompt Tuning": {
+                    "explanation": "This paper proposes a variational autoencoder-based method for generating dynamic prompts, which aligns with the source paper's focus on visual prompt tuning. However, it does not specifically depend on the Fourier-based approach or findings of the source paper.",
+                    "relevance": 0
+                },
+                "6.Re-Imagining Multimodal Instruction Tuning: A Representation View": {
+                    "explanation": "This paper introduces a novel approach for tuning multimodal representations, which is distinct from the visual Fourier prompt tuning method in the source paper. It does not rely on or extend the findings of the source paper.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

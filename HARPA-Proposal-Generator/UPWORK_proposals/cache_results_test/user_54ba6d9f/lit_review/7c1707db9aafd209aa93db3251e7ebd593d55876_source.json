@@ -1,0 +1,2996 @@
+{
+    "topic_description": "sampling-based fact-checking for large language models in zero-resource settings using wikibio data",
+    "all_queries": [
+        "KeywordQuery(\"sampling-based fact-checking for large language models in zero-resource settings using wikibio data\")",
+        "KeywordQuery(\"zero-shot fact verification language models\")",
+        "PaperQuery(\"47bf2d406ffc2e3d5d4055cfe8b47c9f4840b4ea\")",
+        "GetReferences(\"47bf2d406ffc2e3d5d4055cfe8b47c9f4840b4ea\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "47bf2d406ffc2e3d5d4055cfe8b47c9f4840b4ea",
+            "paperId": "47bf2d406ffc2e3d5d4055cfe8b47c9f4840b4ea",
+            "title": "ZeFaV: Boosting Large Language Models for Zero-Shot Fact Verification",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2411.11247, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": null
+            },
+            "authors": [
+                {
+                    "authorId": "2265679916",
+                    "name": "Son T. Luu"
+                },
+                {
+                    "authorId": "2304699643",
+                    "name": "Hiep Nguyen"
+                },
+                {
+                    "authorId": "2290078807",
+                    "name": "Trung Vo"
+                },
+                {
+                    "authorId": "2331496302",
+                    "name": "Le-Minh Nguyen"
+                }
+            ],
+            "abstract": "In this paper, we propose ZeFaV - a zero-shot based fact-checking verification framework to enhance the performance on fact verification task of large language models by leveraging the in-context learning ability of large language models to extract the relations among the entities within a claim, re-organized the information from the evidence in a relationally logical form, and combine the above information with the original evidence to generate the context from which our fact-checking model provide verdicts for the input claims. We conducted empirical experiments to evaluate our approach on two multi-hop fact-checking datasets including HoVer and FEVEROUS, and achieved potential results results comparable to other state-of-the-art fact verification task methods.",
+            "score": 7
+        },
+        {
+            "id": "3cebb93c399db7e1434741338b0a24db19786b15",
+            "paperId": "3cebb93c399db7e1434741338b0a24db19786b15",
+            "title": "Prompt to be Consistent is Better than Self-Consistent? Few-Shot and Zero-Shot Fact Verification with Pre-trained Language Models",
+            "year": 2023,
+            "citationCount": 7,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2306.02569",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.02569, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a novel method called ProToCo, to improve the factuality assessment capability of pre-trained language models (PLMs) by using parameter-efficient fine-tuning (PEFT), leading to more accurate predictions in few-shot and zero-shot fact verification tasks."
+            },
+            "authors": [
+                {
+                    "authorId": "1490766549",
+                    "name": "Fengzhu Zeng"
+                },
+                {
+                    "authorId": "2153576124",
+                    "name": "Wei Gao"
+                }
+            ],
+            "abstract": "Few-shot or zero-shot fact verification only relies on a few or no labeled training examples. In this paper, we propose a novel method called ProToCo, to \\underline{Pro}mpt pre-trained language models (PLMs) \\underline{To} be \\underline{Co}nsistent, for improving the factuality assessment capability of PLMs in the few-shot and zero-shot settings. Given a claim-evidence pair, ProToCo generates multiple variants of the claim with different relations and frames a simple consistency mechanism as constraints for making compatible predictions across these variants. We update PLMs by using parameter-efficient fine-tuning (PEFT), leading to more accurate predictions in few-shot and zero-shot fact verification tasks. Our experiments on three public verification datasets show that ProToCo significantly outperforms state-of-the-art few-shot fact verification baselines. With a small number of unlabeled instances, ProToCo also outperforms the strong zero-shot learner T0 on zero-shot verification. Compared to large PLMs using in-context learning (ICL) method, ProToCo outperforms OPT-30B and the Self-Consistency-enabled OPT-6.7B model in both few- and zero-shot settings.",
+            "score": 6
+        },
+        {
+            "id": "4917d60c82ce041afad1b63887d49d0062031f66",
+            "paperId": "4917d60c82ce041afad1b63887d49d0062031f66",
+            "title": "Zero-Shot Fact Verification via Natural Logic and Large Language Models",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.03341, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a zero-shot method that utilizes the generalization capabilities of instruction-tuned large language models and demonstrates that this approach outperforms other systems that were not specifically trained on natural logic data."
+            },
+            "authors": [
+                {
+                    "authorId": "2261283275",
+                    "name": "Marek Strong"
+                },
+                {
+                    "authorId": "134617539",
+                    "name": "Rami Aly"
+                },
+                {
+                    "authorId": "2273888020",
+                    "name": "Andreas Vlachos"
+                }
+            ],
+            "abstract": "The recent development of fact verification systems with natural logic has enhanced their explainability by aligning claims with evidence through set-theoretic operators, providing faithful justifications. Despite these advancements, such systems often rely on a large amount of training data annotated with natural logic. To address this issue, we propose a zero-shot method that utilizes the generalization capabilities of instruction-tuned large language models. To comprehensively assess the zero-shot capabilities of our method and other fact verification systems, we evaluate all models on both artificial and real-world claims, including multilingual datasets. We also compare our method against other fact verification systems in two setups. First, in the zero-shot generalization setup, we demonstrate that our approach outperforms other systems that were not specifically trained on natural logic data, achieving an average accuracy improvement of 8.96 points over the best-performing baseline. Second, in the zero-shot transfer setup, we show that current systems trained on natural logic data do not generalize well to other domains, and our method outperforms these systems across all datasets with real-world claims.",
+            "score": 6
+        },
+        {
+            "id": "e07e9a54f71c598e01f3d868bd02cfec7362eaa4",
+            "paperId": "e07e9a54f71c598e01f3d868bd02cfec7362eaa4",
+            "title": "Investigating Zero- and Few-shot Generalization in Fact Verification",
+            "year": 2023,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2309.09444",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2309.09444, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper constructs a benchmark dataset collection which contains 11 FV datasets representing 6 domains and finds that two directions of work improve generalization: incorporating domain knowledge via pretraining on specialized domains, and automatically generating training data via claim generation."
+            },
+            "authors": [
+                {
+                    "authorId": "3470231",
+                    "name": "Liangming Pan"
+                },
+                {
+                    "authorId": "2124948532",
+                    "name": "Yunxiang Zhang"
+                },
+                {
+                    "authorId": "37596605",
+                    "name": "Min-Yen Kan"
+                }
+            ],
+            "abstract": "In this paper, we explore zero- and few-shot generalization for fact verification (FV), which aims to generalize the FV model trained on well-resourced domains (e.g., Wikipedia) to low-resourced domains that lack human annotations. To this end, we first construct a benchmark dataset collection which contains 11 FV datasets representing 6 domains. We conduct an empirical analysis of generalization across these FV datasets, finding that current models generalize poorly. Our analysis reveals that several factors affect generalization, including dataset size, length of evidence, and the type of claims. Finally, we show that two directions of work improve generalization: 1) incorporating domain knowledge via pretraining on specialized domains, and 2) automatically generating training data via claim generation.",
+            "score": 6
+        },
+        {
+            "id": "5ca9b721b3dce19944751524289677eb478faf82",
+            "paperId": "5ca9b721b3dce19944751524289677eb478faf82",
+            "title": "FactGenius: Combining Zero-Shot Prompting and Fuzzy Relation Mining to Improve Fact Verification with Knowledge Graphs",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2406.01311, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper presents FactGenius, a novel method that enhances fact- checking by combining zero-shot prompting of large language models (LLMs) with fuzzy text matching on knowledge graphs (KGs)."
+            },
+            "authors": [
+                {
+                    "authorId": "2355081236",
+                    "name": "Sushant Gautam"
+                }
+            ],
+            "abstract": "Fact-checking is a crucial natural language processing (NLP) task that verifies the truthfulness of claims by considering reliable evidence. Traditional methods are labour- intensive, and most automatic approaches focus on using documents as evidence. In this paper, we focus on the relatively understudied fact-checking with Knowledge Graph data as evidence and experiment on the recently introduced FactKG benchmark. We present FactGenius, a novel method that enhances fact- checking by combining zero-shot prompting of large language models (LLMs) with fuzzy text matching on knowledge graphs (KGs). Our method employs LLMs for filtering relevant connections from the graph and validates these connections via distance-based matching. The evaluation of FactGenius on an existing benchmark demonstrates its effectiveness, as we show it significantly outperforms state-of- the-art methods. The code and materials are available at https://github.com/SushantGautam/FactGenius.",
+            "score": 5
+        },
+        {
+            "id": "ac6ac16a19e4133d5512c1e5187d779cabb2e503",
+            "paperId": "ac6ac16a19e4133d5512c1e5187d779cabb2e503",
+            "title": "A Fact Checking and Verification System for FEVEROUS Using a Zero-Shot Learning Approach",
+            "year": 2021,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "https://doi.org/10.18653/v1/2021.fever-1.13",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2021.fever-1.13, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A novel fact checking and verification system to check claims against Wikipedia content that retrieves relevant Wikipedia pages using Anserini, uses BERT-large-cased question answering model to select correct evidence, and verifies claims using XLNET natural language inference model by comparing it with the evidence."
+            },
+            "authors": [
+                {
+                    "authorId": "2138520272",
+                    "name": "Orkun Temiz"
+                },
+                {
+                    "authorId": "1405651273",
+                    "name": "Oz Kilic"
+                },
+                {
+                    "authorId": "2137400511",
+                    "name": "Arif Ozan K\u0131z\u0131lda\u011f"
+                },
+                {
+                    "authorId": "30088565",
+                    "name": "Tugba Taskaya Temizel"
+                }
+            ],
+            "abstract": "In this paper, we propose a novel fact checking and verification system to check claims against Wikipedia content. Our system retrieves relevant Wikipedia pages using Anserini, uses BERT-large-cased question answering model to select correct evidence, and verifies claims using XLNET natural language inference model by comparing it with the evidence. Table cell evidence is obtained through looking for entity-matching cell values and TAPAS table question answering model. The pipeline utilizes zero-shot capabilities of existing models and all the models used in the pipeline requires no additional training. Our system got a FEVEROUS score of 0.06 and a label accuracy of 0.39 in FEVEROUS challenge.",
+            "score": 5
+        },
+        {
+            "id": "a5cd606537a666e4807f1c9d342cfeb2b71c4a34",
+            "paperId": "a5cd606537a666e4807f1c9d342cfeb2b71c4a34",
+            "title": "Are Large Language Models Table-based Fact-Checkers?",
+            "year": 2024,
+            "citationCount": 4,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.02549, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work implements a preliminary study on whether LLMs are table-based fact-checkers, and designs various prompts to explore how in-context learning can help LLMs in TFV, i.e., zero-shot and few-shot TFV capability."
+            },
+            "authors": [
+                {
+                    "authorId": "2283319448",
+                    "name": "Hangwen Zhang"
+                },
+                {
+                    "authorId": "84109730",
+                    "name": "Q. Si"
+                },
+                {
+                    "authorId": "143655088",
+                    "name": "Peng Fu"
+                },
+                {
+                    "authorId": "2237093798",
+                    "name": "Zheng Lin"
+                },
+                {
+                    "authorId": "2154491752",
+                    "name": "Weiping Wang"
+                }
+            ],
+            "abstract": "Table-based Fact Verification (TFV) aims to extract the entailment relationship between statements and structured tables. Existing TFV methods based on small-scale models suffer from insufficient labeled data and weak zero-shot ability. Recently, the appearance of Large Language Models (LLMs) has gained lots of attraction in research fields. They have shown strong zero-shot and in-context learning capabilities on several NLP tasks, but their potential on TFV is still unknown. In this work, we implement a preliminary study on whether LLMs are table-based fact-checkers. In detail, we design various prompts to explore how in-context learning can help LLMs in TFV, i.e., zero-shot and few-shot TFV capability. Besides, we carefully design and construct TFV instructions to investigate the performance gain brought by the instruction tuning of LLMs. Experimental results demonstrate that LLMs can achieve acceptable results on zero-shot and few-shot TFV with prompt engineering, while instruction-tuning can stimulate the TFV capability significantly. We also make some valuable findings about the format of zero-shot prompts and the number of in-context examples. Finally, we analyze some possible directions to promote the accuracy of TFV via LLMs, which will benefit further research on table reasoning.",
+            "score": 5
+        },
+        {
+            "id": "b321b31298ae20b5ef66f3c74d8a4f5b11635d26",
+            "paperId": "b321b31298ae20b5ef66f3c74d8a4f5b11635d26",
+            "title": "Robust Claim Verification Through Fact Detection",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2407.18367, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The novel approach, FactDetect, leverages Large Language Models (LLMs) to generate concise factual statements from evidence and label these facts based on their semantic relevance to the claim and evidence to enhance the robustness and reasoning capabilities of automated claim verification."
+            },
+            "authors": [
+                {
+                    "authorId": "2294176199",
+                    "name": "Nazanin Jafari"
+                },
+                {
+                    "authorId": "2294176489",
+                    "name": "James Allan"
+                }
+            ],
+            "abstract": "Claim verification can be a challenging task. In this paper, we present a method to enhance the robustness and reasoning capabilities of automated claim verification through the extraction of short facts from evidence. Our novel approach, FactDetect, leverages Large Language Models (LLMs) to generate concise factual statements from evidence and label these facts based on their semantic relevance to the claim and evidence. The generated facts are then combined with the claim and evidence. To train a lightweight supervised model, we incorporate a fact-detection task into the claim verification process as a multitasking approach to improve both performance and explainability. We also show that augmenting FactDetect in the claim verification prompt enhances performance in zero-shot claim verification using LLMs. Our method demonstrates competitive results in the supervised claim verification model by 15% on the F1 score when evaluated for challenging scientific claim verification datasets. We also demonstrate that FactDetect can be augmented with claim and evidence for zero-shot prompting (AugFactDetect) in LLMs for verdict prediction. We show that AugFactDetect outperforms the baseline with statistical significance on three challenging scientific claim verification datasets with an average of 17.3% performance gain compared to the best performing baselines.",
+            "score": 5
+        },
+        {
+            "id": "2a9082223fd64018786a92c5c626b4923ab8bd72",
+            "paperId": "2a9082223fd64018786a92c5c626b4923ab8bd72",
+            "title": "Data-Efficient Auto-Regressive Document Retrieval for Fact Verification",
+            "year": 2022,
+            "citationCount": 7,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2211.09388",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2211.09388, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper introduces a distant-supervision method that does not require any annotation to train auto-regressive retrievers that attain competitive R-Precision and Recall in a zero-shot setting and shows that with task-specific supervised fine-tuning, auto- Regressive retrieval performance for two Wikipedia-based fact verification tasks can approach or even exceed full supervision using less than 1/4 of the annotated data."
+            },
+            "authors": [
+                {
+                    "authorId": "2053211210",
+                    "name": "James Thorne"
+                }
+            ],
+            "abstract": "Document retrieval is a core component of many knowledge-intensive natural language processing task formulations such as fact verification. Sources of textual knowledge such as Wikipedia articles condition the generation of answers from the models. Recent advances in retrieval use sequence-to-sequence models to incrementally predict the title of the appropriate Wikipedia page given an input instance. However, this method requires supervision in the form of human annotation to label which Wikipedia pages contain appropriate context.This paper introduces a distant-supervision method that does not require any annotation train auto-regressive retrievers that attain competitive R-Precision and Recall in a zero-shot setting.Furthermore we show that with task-specific supervised fine-tuning, auto-regressive retrieval performance for two Wikipedia-based fact verification tasks can approach or even exceed full supervision using less than 1/4 of the annotated data. We release all code and models",
+            "score": 5
+        },
+        {
+            "id": "44e9c292c3a23bb250fde91b0b2fc3a3a6c3e745",
+            "paperId": "44e9c292c3a23bb250fde91b0b2fc3a3a6c3e745",
+            "title": "Transforming relation extraction into fact verification utilizing large language models",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1117/12.3031294?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1117/12.3031294, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": null
+            },
+            "authors": [
+                {
+                    "authorId": "2312694882",
+                    "name": "Lei Wang"
+                },
+                {
+                    "authorId": "2312521945",
+                    "name": "Fuhai Song"
+                }
+            ],
+            "abstract": "This paper introduces an innovative approach for relation extraction utilizing large language models, named FVRE, which redefine the conventional task of information extraction as a process of fact verification to bridge the gap between pretraining and inference of this task. By aligning the task more closely with the inherent generative strengths of large models, this method notably bridges the gap between relation extraction and the models' capabilities. It thereby potentially increases the precision of extracted relations. We empirically validated our approach through rigorous testing on two distinct datasets: SemEval 2010 Task 8 and the CCKS 2019 IPRE corpus. The experimental results indicate that our method not only holds up under zero-shot scenarios but also significantly outperforms the baseline of directly applying large models to information extraction tasks. This demonstrates the robustness and effectiveness of our proposed paradigm in enhancing relation extraction performance for large language models.",
+            "score": 4
+        },
+        {
+            "id": "199d555aed6bf3e0d7ac43ab71a858bab36361ef",
+            "paperId": "199d555aed6bf3e0d7ac43ab71a858bab36361ef",
+            "title": "XFEVER: Exploring Fact Verification across Languages",
+            "year": 2023,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.16278, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Experimental results show that the multilingual language model can be used to build fact verification models in different languages efficiently, however, the performance varies by language and is somewhat inferior to the English case."
+            },
+            "authors": [
+                {
+                    "authorId": "2261678420",
+                    "name": "Yi-Chen Chang"
+                },
+                {
+                    "authorId": "2782010",
+                    "name": "Canasai Kruengkrai"
+                },
+                {
+                    "authorId": "2237174759",
+                    "name": "Junichi Yamagishi"
+                }
+            ],
+            "abstract": "This paper introduces the Cross-lingual Fact Extraction and VERification (XFEVER) dataset designed for benchmarking the fact verification models across different languages. We constructed it by translating the claim and evidence texts of the Fact Extraction and VERification (FEVER) dataset into six languages. The training and development sets were translated using machine translation, whereas the test set includes texts translated by professional translators and machine-translated texts. Using the XFEVER dataset, two cross-lingual fact verification scenarios, zero-shot learning and translate-train learning, are defined, and baseline models for each scenario are also proposed in this paper. Experimental results show that the multilingual language model can be used to build fact verification models in different languages efficiently. However, the performance varies by language and is somewhat inferior to the English case. We also found that we can effectively mitigate model miscalibration by considering the prediction similarity between the English and target languages. The XFEVER dataset, code, and model checkpoints are available at https://github.com/nii-yamagishilab/xfever.",
+            "score": 4
+        },
+        {
+            "id": "08c1d2e5a78d43fe8f4ca3f121fe2cf5c537c83a",
+            "paperId": "08c1d2e5a78d43fe8f4ca3f121fe2cf5c537c83a",
+            "title": "Knowledge-Enhanced Geospatial QA: Integrating Wikidata Fact Verification with LLMs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1609/aaaiss.v5i1.35609?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1609/aaaiss.v5i1.35609, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A hybrid framework that integrates LLMs with Wikidata for fact verification and retrieval, enhancing their geospatial reasoning capabilities is presented, showcasing its effectiveness in improving geospatial QA accuracy."
+            },
+            "authors": [
+                {
+                    "authorId": "2067205424",
+                    "name": "Sanaz Saki Norouzi"
+                },
+                {
+                    "authorId": "2265653053",
+                    "name": "Pascal Hitzler"
+                }
+            ],
+            "abstract": "Geospatial question answering (QA) challenges large language models (LLMs) in reasoning about geospatial relationships. This paper presents a hybrid framework that integrates LLMs with Wikidata for fact verification and retrieval, enhancing their geospatial reasoning capabilities. The framework generates facts, verifies them against Wikidata, and uses validated knowledge for use in a Retrieval-Augmented Generation (RAG) pipeline. Experimental results demonstrate that this approach outperforms zero-shot prompting for all tested models, including GPT-3.5-turbo-0125, Llama-3-8b, and Qwen-2.5-14b, showcasing its effectiveness in improving geospatial QA accuracy.",
+            "score": 4
+        },
+        {
+            "id": "5d33ec996f8d845577db941f906df4056314c6e3",
+            "paperId": "5d33ec996f8d845577db941f906df4056314c6e3",
+            "title": "Connecting the Dots Between Fact Verification and Fake News Detection",
+            "year": 2020,
+            "citationCount": 29,
+            "openAccessPdf": {
+                "url": "https://www.aclweb.org/anthology/2020.coling-main.165.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.05202, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The proposed approach makes use of the recent success of fact verification models and enables zero-shot fake news detection, alleviating the need of large scale training data to trainfake news detection models."
+            },
+            "authors": [
+                {
+                    "authorId": "2141309833",
+                    "name": "Qifei Li"
+                },
+                {
+                    "authorId": "150341221",
+                    "name": "Wangchunshu Zhou"
+                }
+            ],
+            "abstract": "Fact verification models have enjoyed a fast advancement in the last two years with the development of pre-trained language models like BERT and the release of large scale datasets such as FEVER. However, the challenging problem of fake news detection has not benefited from the improvement of fact verification models, which is closely related to fake news detection. In this paper, we propose a simple yet effective approach to connect the dots between fact verification and fake news detection. Our approach first employs a text summarization model pre-trained on news corpora to summarize the long news article into a short claim. Then we use a fact verification model pre-trained on the FEVER dataset to detect whether the input news article is real or fake. Our approach makes use of the recent success of fact verification models and enables zero-shot fake news detection, alleviating the need of large scale training data to train fake news detection models. Experimental results on FakenewsNet, a benchmark dataset for fake news detection, demonstrate the effectiveness of our proposed approach.",
+            "score": 4
+        },
+        {
+            "id": "19499cc52d7945d35811e9959fcec59f3b07f6f7",
+            "paperId": "19499cc52d7945d35811e9959fcec59f3b07f6f7",
+            "title": "Can LLMs Produce Faithful Explanations For Fact-checking? Towards Faithful Explainable Fact-Checking via Multi-Agent Debate",
+            "year": 2024,
+            "citationCount": 44,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.07401, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Experimental results demonstrate that MADR significantly improves the faithfulness of LLM-generated explanations to the evidence, advancing the credibility and trustworthiness of these explanations."
+            },
+            "authors": [
+                {
+                    "authorId": "2283916265",
+                    "name": "Kyungha Kim"
+                },
+                {
+                    "authorId": "2283873743",
+                    "name": "Sangyun Lee"
+                },
+                {
+                    "authorId": "1420116116",
+                    "name": "Kung-Hsiang Huang"
+                },
+                {
+                    "authorId": "2261082492",
+                    "name": "Hou Pong Chan"
+                },
+                {
+                    "authorId": "2118482058",
+                    "name": "Manling Li"
+                },
+                {
+                    "authorId": "2277409745",
+                    "name": "Heng Ji"
+                }
+            ],
+            "abstract": "Fact-checking research has extensively explored verification but less so the generation of natural-language explanations, crucial for user trust. While Large Language Models (LLMs) excel in text generation, their capability for producing faithful explanations in fact-checking remains underexamined. Our study investigates LLMs' ability to generate such explanations, finding that zero-shot prompts often result in unfaithfulness. To address these challenges, we propose the Multi-Agent Debate Refinement (MADR) framework, leveraging multiple LLMs as agents with diverse roles in an iterative refining process aimed at enhancing faithfulness in generated explanations. MADR ensures that the final explanation undergoes rigorous validation, significantly reducing the likelihood of unfaithful elements and aligning closely with the provided evidence. Experimental results demonstrate that MADR significantly improves the faithfulness of LLM-generated explanations to the evidence, advancing the credibility and trustworthiness of these explanations.",
+            "score": 4
+        },
+        {
+            "id": "02721d09a2d9d10872f45ff6d7a6bc429aca3522",
+            "paperId": "02721d09a2d9d10872f45ff6d7a6bc429aca3522",
+            "title": "The Missing Parts: Augmenting Fact Verification with Half-Truth Detection",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.00489, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2115421417",
+                    "name": "Yixuan Tang"
+                },
+                {
+                    "authorId": "2374424759",
+                    "name": "Jincheng Wang"
+                },
+                {
+                    "authorId": "2279709389",
+                    "name": "A. K. Tung"
+                }
+            ],
+            "abstract": "Fact verification systems typically assess whether a claim is supported by retrieved evidence, assuming that truthfulness depends solely on what is stated. However, many real-world claims are half-truths, factually correct yet misleading due to the omission of critical context. Existing models struggle with such cases, as they are not designed to reason about what is left unsaid. We introduce the task of half-truth detection, and propose PolitiFact-Hidden, a new benchmark with 15k political claims annotated with sentence-level evidence alignment and inferred claim intent. To address this challenge, we present TRACER, a modular re-assessment framework that identifies omission-based misinformation by aligning evidence, inferring implied intent, and estimating the causal impact of hidden content. TRACER can be integrated into existing fact-checking pipelines and consistently improves performance across multiple strong baselines. Notably, it boosts Half-True classification F1 by up to 16 points, highlighting the importance of modeling omissions for trustworthy fact verification.",
+            "score": 4
+        },
+        {
+            "id": "7e8cfd4aabb155a07156b7d5099ccc4f54bf610a",
+            "paperId": "7e8cfd4aabb155a07156b7d5099ccc4f54bf610a",
+            "title": "ClimateViz: A Benchmark for Statistical Reasoning and Fact Verification on Scientific Charts",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.08700, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "ClimateViz is introduced, the first large-scale benchmark for scientific fact-checking using expert-curated scientific charts, and state-of-the-art multimodal language models are evaluated, including both proprietary and open-source systems, in zero-shot and few-shot settings."
+            },
+            "authors": [
+                {
+                    "authorId": "2310437808",
+                    "name": "Ruiran Su"
+                },
+                {
+                    "authorId": "2366170988",
+                    "name": "Jiasheng Si"
+                },
+                {
+                    "authorId": "2681038",
+                    "name": "Zhijiang Guo"
+                },
+                {
+                    "authorId": "1970864",
+                    "name": "J. Pierrehumbert"
+                }
+            ],
+            "abstract": "Scientific fact-checking has mostly focused on text and tables, overlooking scientific charts, which are key for presenting quantitative evidence and statistical reasoning. We introduce ClimateViz, the first large-scale benchmark for scientific fact-checking using expert-curated scientific charts. ClimateViz contains 49,862 claims linked to 2,896 visualizations, each labeled as support, refute, or not enough information. To improve interpretability, each example includes structured knowledge graph explanations covering trends, comparisons, and causal relations. We evaluate state-of-the-art multimodal language models, including both proprietary and open-source systems, in zero-shot and few-shot settings. Results show that current models struggle with chart-based reasoning: even the best systems, such as Gemini 2.5 and InternVL 2.5, reach only 76.2 to 77.8 percent accuracy in label-only settings, far below human performance (89.3 and 92.7 percent). Explanation-augmented outputs improve performance in some models. We released our dataset and code alongside the paper.",
+            "score": 3
+        },
+        {
+            "id": "2fdc94b8f47dfbe483c68f9259535a05e25de075",
+            "paperId": "2fdc94b8f47dfbe483c68f9259535a05e25de075",
+            "title": "AuRED: Enabling Arabic Rumor Verification using Evidence from Authorities over Twitter",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2024.arabicnlp-1.3, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The experiments show that although evidence retrieval models perform relatively well on the task establishing strong baselines, there is still a big room for improvement in claim verification models, and existing claim verification models perform poorly on the task no matter how good the retrieval performance is."
+            },
+            "authors": [
+                {
+                    "authorId": "8685373",
+                    "name": "Fatima Haouari"
+                },
+                {
+                    "authorId": "1693370300",
+                    "name": "Tamer Elsayed"
+                },
+                {
+                    "authorId": "3378399",
+                    "name": "Reem Suwaileh"
+                }
+            ],
+            "abstract": "Diverging from the trend of the previous rumor verification studies, we introduce the new task of rumor verification using evidence that are exclusively captured from authorities, i.e., entities holding the right and knowledge to verify corresponding information. To enable research on this task for Arabic low-resourced language, we construct and release the first Authority-Rumor-Evidence Dataset (AuRED). The dataset comprises 160 rumors expressed in tweets and 692 Twitter timelines of authorities containing about 34k tweets. Additionally, we explore how existing evidence retrieval and claim verification models for fact-checking perform on our task under both the cross-lingual zero-shot and in-domain fine-tuning setups. Our experiments show that although evidence retrieval models perform relatively well on the task establishing strong baselines, there is still a big room for improvement. However, existing claim verification models perform poorly on the task no matter how good the retrieval performance is. The results also show that stance detection can be useful for evidence retrieval. Moreover, existing fact-checking datasets showed a potential in transfer learning to our task, however, further investigation using different datasets and setups is required.",
+            "score": 3
+        },
+        {
+            "id": "52b4c3288dc23a97dab9a9b0040a88affa2402f8",
+            "paperId": "52b4c3288dc23a97dab9a9b0040a88affa2402f8",
+            "title": "Unmasking Digital Falsehoods: A Comparative Analysis of LLM-Based Misinformation Detection Strategies",
+            "year": 2025,
+            "citationCount": 12,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2503.00724, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A comparison of LLM-based approaches to detecting misinformation between text-based, multimodal, and agentic approaches points towards the importance of hybrid approaches that pair structured verification protocols with adaptive learning techniques to enhance detection accuracy and explainability."
+            },
+            "authors": [
+                {
+                    "authorId": "2333899940",
+                    "name": "Tianyi Huang"
+                },
+                {
+                    "authorId": "2334520727",
+                    "name": "Jingyuan Yi"
+                },
+                {
+                    "authorId": "2333834043",
+                    "name": "Peiyang Yu"
+                },
+                {
+                    "authorId": "2338866050",
+                    "name": "Xiaochuan Xu"
+                }
+            ],
+            "abstract": "The proliferation of misinformation on social media has raised significant societal concerns, necessitating robust detection mechanisms. Large Language Models such as GPT-4 and LLaMA2 have been envisioned as possible tools for detecting misinformation based on their advanced natural language understanding and reasoning capabilities. This paper conducts a comparison of LLM-based approaches to detecting misinformation between text-based, multimodal, and agentic approaches. We evaluate the effectiveness of fine-tuned models, zero-shot learning, and systematic fact-checking mechanisms in detecting misinformation across different topic domains like public health, politics, and finance. We also discuss scalability, generalizability, and explainability of the models and recognize key challenges such as hallucination, adversarial attacks on misinformation, and computational resources. Our findings point towards the importance of hybrid approaches that pair structured verification protocols with adaptive learning techniques to enhance detection accuracy and explainability. The paper closes by suggesting potential avenues of future work, including real-time tracking of misinformation, federated learning, and cross-platform detection models.",
+            "score": 3
+        },
+        {
+            "id": "47c9f319a0d1dcc018a2cd3d63f9acbe678eaf46",
+            "paperId": "47c9f319a0d1dcc018a2cd3d63f9acbe678eaf46",
+            "title": "Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2504.14175, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Performance improvements consistently occurred for claims whose generated documents included sentences entailed by gold evidence, suggesting that knowledge leakage may be present in fact-verification benchmarks, potentially inflating the perceived performance of LLM-based query expansion methods."
+            },
+            "authors": [
+                {
+                    "authorId": "2162198417",
+                    "name": "Yejun Yoon"
+                },
+                {
+                    "authorId": "2326256512",
+                    "name": "Jaeyoon Jung"
+                },
+                {
+                    "authorId": "2284734425",
+                    "name": "Seunghyun Yoon"
+                },
+                {
+                    "authorId": "2284731591",
+                    "name": "Kunwoo Park"
+                }
+            ],
+            "abstract": "Query expansion methods powered by large language models (LLMs) have demonstrated effectiveness in zero-shot retrieval tasks. These methods assume that LLMs can generate hypothetical documents that, when incorporated into a query vector, enhance the retrieval of real evidence. However, we challenge this assumption by investigating whether knowledge leakage in benchmarks contributes to the observed performance gains. Using fact verification as a testbed, we analyze whether the generated documents contain information entailed by ground-truth evidence and assess their impact on performance. Our findings indicate that, on average, performance improvements consistently occurred for claims whose generated documents included sentences entailed by gold evidence. This suggests that knowledge leakage may be present in fact-verification benchmarks, potentially inflating the perceived performance of LLM-based query expansion methods.",
+            "score": 3
+        },
+        {
+            "id": "72cf69817d3836103db7263000fbf87395def6eb",
+            "paperId": "72cf69817d3836103db7263000fbf87395def6eb",
+            "title": "FActBench: A Benchmark for Fine-grained Automatic Evaluation of LLM-Generated Text in the Medical Domain",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.02198, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2256400700",
+                    "name": "Anum Afzal"
+                },
+                {
+                    "authorId": "2375557164",
+                    "name": "Juraj Vladika"
+                },
+                {
+                    "authorId": "2308482169",
+                    "name": "Florian Matthes"
+                }
+            ],
+            "abstract": "Large Language Models tend to struggle when dealing with specialized domains. While all aspects of evaluation hold importance, factuality is the most critical one. Similarly, reliable fact-checking tools and data sources are essential for hallucination mitigation. We address these issues by providing a comprehensive Fact-checking Benchmark FActBench covering four generation tasks and six state-of-the-art Large Language Models (LLMs) for the Medical domain. We use two state-of-the-art Fact-checking techniques: Chain-of-Thought (CoT) Prompting and Natural Language Inference (NLI). Our experiments show that the fact-checking scores acquired through the Unanimous Voting of both techniques correlate best with Domain Expert Evaluation.",
+            "score": 3
+        },
+        {
+            "id": "daa680bb86e17a29f6f27fe07c667c01f3814d1e",
+            "paperId": "daa680bb86e17a29f6f27fe07c667c01f3814d1e",
+            "title": "REVISE: A Framework for Paragraph-Level Misinformation Correction in Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/AITest66680.2025.00027?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/AITest66680.2025.00027, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2332559394",
+                    "name": "Shivangi Tripathi"
+                },
+                {
+                    "authorId": "2376342509",
+                    "name": "Teancy Jennifer"
+                },
+                {
+                    "authorId": "2192883302",
+                    "name": "Henry Griffith"
+                },
+                {
+                    "authorId": "2248231435",
+                    "name": "Heena Rathore"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language generation but remain prone to hallucinations\u2014producing factually incorrect yet plausible content. This paper presents a novel, structured framework for systematically identifying and revising misinformation in LLM-generated multi-sentence paragraphs. Unlike prior approaches that focus on isolated sentence-level corrections, our method ensures paragraph-level coherence through sequential sentence decomposition, fact-checking question generation, evidence retrieval via web APIs, and context-aware revision. Leveraging a semantic agreement gate and factual consistency scoring, our approach minimizes edits while preserving the original style and meaning. Empirical results demonstrate improved factual accuracy and coherence, validating the effectiveness of our framework for misinformation mitigation in generative AI systems.",
+            "score": 3
+        },
+        {
+            "id": "77c7375a3c5384611e35e5b8d1af23410987295a",
+            "paperId": "77c7375a3c5384611e35e5b8d1af23410987295a",
+            "title": "CANDY: Benchmarking LLMs'Limitations and Assistive Potential in Chinese Misinformation Fact-Checking",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.03957, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Ruiling Guo"
+                },
+                {
+                    "authorId": null,
+                    "name": "Xinwei Yang"
+                },
+                {
+                    "authorId": "2379043446",
+                    "name": "Chen Huang"
+                },
+                {
+                    "authorId": "2270989965",
+                    "name": "Tong Zhang"
+                },
+                {
+                    "authorId": "2287819393",
+                    "name": "Yong Hu"
+                }
+            ],
+            "abstract": "The effectiveness of large language models (LLMs) to fact-check misinformation remains uncertain, despite their growing use. To this end, we present CANDY, a benchmark designed to systematically evaluate the capabilities and limitations of LLMs in fact-checking Chinese misinformation. Specifically, we curate a carefully annotated dataset of ~20k instances. Our analysis shows that current LLMs exhibit limitations in generating accurate fact-checking conclusions, even when enhanced with chain-of-thought reasoning and few-shot prompting. To understand these limitations, we develop a taxonomy to categorize flawed LLM-generated explanations for their conclusions and identify factual fabrication as the most common failure mode. Although LLMs alone are unreliable for fact-checking, our findings indicate their considerable potential to augment human performance when deployed as assistive tools in scenarios. Our dataset and code can be accessed at https://github.com/SCUNLP/CANDY",
+            "score": 3
+        },
+        {
+            "id": "a8c12a6f007bc6ff0b7025165a1f7131337ba9f3",
+            "paperId": "a8c12a6f007bc6ff0b7025165a1f7131337ba9f3",
+            "title": "When Scale Meets Diversity: Evaluating Language Models on Fine-Grained Multilingual Claim Verification",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.20700, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373624057",
+                    "name": "Hanna Shcharbakova"
+                },
+                {
+                    "authorId": "2273062326",
+                    "name": "Tatiana Anikina"
+                },
+                {
+                    "authorId": "2101757994",
+                    "name": "N. Skachkova"
+                },
+                {
+                    "authorId": "7519068",
+                    "name": "Josef van Genabith"
+                }
+            ],
+            "abstract": "The rapid spread of multilingual misinformation requires robust automated fact verification systems capable of handling fine-grained veracity assessments across diverse languages. While large language models have shown remarkable capabilities across many NLP tasks, their effectiveness for multilingual claim verification with nuanced classification schemes remains understudied. We conduct a comprehensive evaluation of five state-of-the-art language models on the X-Fact dataset, which spans 25 languages with seven distinct veracity categories. Our experiments compare small language models (encoder-based XLM-R and mT5) with recent decoder-only LLMs (Llama 3.1, Qwen 2.5, Mistral Nemo) using both prompting and fine-tuning approaches. Surprisingly, we find that XLM-R (270M parameters) substantially outperforms all tested LLMs (7-12B parameters), achieving 57.7% macro-F1 compared to the best LLM performance of 16.9%. This represents a 15.8% improvement over the previous state-of-the-art (41.9%), establishing new performance benchmarks for multilingual fact verification. Our analysis reveals problematic patterns in LLM behavior, including systematic difficulties in leveraging evidence and pronounced biases toward frequent categories in imbalanced data settings. These findings suggest that for fine-grained multilingual fact verification, smaller specialized models may be more effective than general-purpose large models, with important implications for practical deployment of fact-checking systems.",
+            "score": 3
+        },
+        {
+            "id": "1477a634e05a07d7d73f2b7a9f7b9003ad7e6858",
+            "paperId": "1477a634e05a07d7d73f2b7a9f7b9003ad7e6858",
+            "title": "Are Large Language Models Good Fact Checkers: A Preliminary Study",
+            "year": 2023,
+            "citationCount": 8,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2311.17355, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2268054136",
+                    "name": "Han Cao"
+                },
+                {
+                    "authorId": "2267862082",
+                    "name": "Lingwei Wei"
+                },
+                {
+                    "authorId": "2267694909",
+                    "name": "Mengyang Chen"
+                },
+                {
+                    "authorId": "2256662678",
+                    "name": "Wei Zhou"
+                },
+                {
+                    "authorId": "2115190434",
+                    "name": "Song Hu"
+                }
+            ],
+            "abstract": "Recently, Large Language Models (LLMs) have drawn significant attention due to their outstanding reasoning capabilities and extensive knowledge repository, positioning them as superior in handling various natural language processing tasks compared to other language models. In this paper, we present a preliminary investigation into the potential of LLMs in fact-checking. This study aims to comprehensively evaluate various LLMs in tackling specific fact-checking subtasks, systematically evaluating their capabilities, and conducting a comparative analysis of their performance against pre-trained and state-of-the-art low-parameter models. Experiments demonstrate that LLMs achieve competitive performance compared to other small models in most scenarios. However, they encounter challenges in effectively handling Chinese fact verification and the entirety of the fact-checking pipeline due to language inconsistencies and hallucinations. These findings underscore the need for further exploration and research to enhance the proficiency of LLMs as reliable fact-checkers, unveiling the potential capability of LLMs and the possible challenges in fact-checking tasks.",
+            "score": 3
+        },
+        {
+            "id": "9d3a00516f526a5b582e916f626b8897612a2f41",
+            "paperId": "9d3a00516f526a5b582e916f626b8897612a2f41",
+            "title": "Cross-lingual Transfer Learning for Check-worthy Claim Identification over Twitter",
+            "year": 2022,
+            "citationCount": 4,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2211.05087",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2211.05087, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "The results show that for some language pairs, zero-shot cross-lingual transfer is possible and can perform as good as monolingual models that are trained on the target language and in some languages, this approach outperforms (or at least is comparable to) state-of-the-art models."
+            },
+            "authors": [
+                {
+                    "authorId": "2905745",
+                    "name": "Maram Hasanain"
+                },
+                {
+                    "authorId": "1693370300",
+                    "name": "Tamer Elsayed"
+                }
+            ],
+            "abstract": "Misinformation spread over social media has become an undeniable infodemic. However, not all spreading claims are made equal. If propagated, some claims can be destructive, not only on the individual level, but to organizations and even countries. Detecting claims that should be prioritized for fact-checking is considered the first step to fight against spread of fake news. With training data limited to a handful of languages, developing supervised models to tackle the problem over lower-resource languages is currently infeasible. Therefore, our work aims to investigate whether we can use existing datasets to train models for predicting worthiness of verification of claims in tweets in other languages. We present a systematic comparative study of six approaches for cross-lingual check-worthiness estimation across pairs of five diverse languages with the help of Multilingual BERT (mBERT) model. We run our experiments using a state-of-the-art multilingual Twitter dataset. Our results show that for some language pairs, zero-shot cross-lingual transfer is possible and can perform as good as monolingual models that are trained on the target language. We also show that in some languages, this approach outperforms (or at least is comparable to) state-of-the-art models.",
+            "score": 2
+        },
+        {
+            "id": "e7ad08848d5d7c5c47673ffe0da06af443643bda",
+            "paperId": "e7ad08848d5d7c5c47673ffe0da06af443643bda",
+            "title": "Large Language Models are Zero-Shot Reasoners",
+            "year": 2022,
+            "citationCount": 4957,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2205.11916, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Experimental results demonstrate that the Zero-shot-CoT, using the same single prompt template, significantly outperforms zero-shot LLM performances on diverse benchmark reasoning tasks including arithmetics, symbolic reasoning, and other logical reasoning tasks, without any hand-crafted few-shot examples."
+            },
+            "authors": [
+                {
+                    "authorId": "2081836120",
+                    "name": "Takeshi Kojima"
+                },
+                {
+                    "authorId": "2046135",
+                    "name": "S. Gu"
+                },
+                {
+                    "authorId": "1557386977",
+                    "name": "Machel Reid"
+                },
+                {
+                    "authorId": "2153732825",
+                    "name": "Yutaka Matsuo"
+                },
+                {
+                    "authorId": "1715282",
+                    "name": "Yusuke Iwasawa"
+                }
+            ],
+            "abstract": "Pretrained large language models (LLMs) are widely used in many sub-fields of natural language processing (NLP) and generally known as excellent few-shot learners with task-specific exemplars. Notably, chain of thought (CoT) prompting, a recent technique for eliciting complex multi-step reasoning through step-by-step answer examples, achieved the state-of-the-art performances in arithmetics and symbolic reasoning, difficult system-2 tasks that do not follow the standard scaling laws for LLMs. While these successes are often attributed to LLMs' ability for few-shot learning, we show that LLMs are decent zero-shot reasoners by simply adding\"Let's think step by step\"before each answer. Experimental results demonstrate that our Zero-shot-CoT, using the same single prompt template, significantly outperforms zero-shot LLM performances on diverse benchmark reasoning tasks including arithmetics (MultiArith, GSM8K, AQUA-RAT, SVAMP), symbolic reasoning (Last Letter, Coin Flip), and other logical reasoning tasks (Date Understanding, Tracking Shuffled Objects), without any hand-crafted few-shot examples, e.g. increasing the accuracy on MultiArith from 17.7% to 78.7% and GSM8K from 10.4% to 40.7% with large InstructGPT model (text-davinci-002), as well as similar magnitudes of improvements with another off-the-shelf large model, 540B parameter PaLM. The versatility of this single prompt across very diverse reasoning tasks hints at untapped and understudied fundamental zero-shot capabilities of LLMs, suggesting high-level, multi-task broad cognitive capabilities may be extracted by simple prompting. We hope our work not only serves as the minimal strongest zero-shot baseline for the challenging reasoning benchmarks, but also highlights the importance of carefully exploring and analyzing the enormous zero-shot knowledge hidden inside LLMs before crafting finetuning datasets or few-shot exemplars.",
+            "score": 2
+        },
+        {
+            "id": "07c0c911e026f08e91c2a4e5534e61bc24cf5b7b",
+            "paperId": "07c0c911e026f08e91c2a4e5534e61bc24cf5b7b",
+            "title": "T-REX: Table -- Refute or Entail eXplainer",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.14055, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2376328989",
+                    "name": "Tim Luka Horstmann"
+                },
+                {
+                    "authorId": "2376329039",
+                    "name": "Baptiste Geisenberger"
+                },
+                {
+                    "authorId": "2376501167",
+                    "name": "Mehwish Alam"
+                }
+            ],
+            "abstract": "Verifying textual claims against structured tabular data is a critical yet challenging task in Natural Language Processing with broad real-world impact. While recent advances in Large Language Models (LLMs) have enabled significant progress in table fact-checking, current solutions remain inaccessible to non-experts. We introduce T-REX (T-REX: Table -- Refute or Entail eXplainer), the first live, interactive tool for claim verification over multimodal, multilingual tables using state-of-the-art instruction-tuned reasoning LLMs. Designed for accuracy and transparency, T-REX empowers non-experts by providing access to advanced fact-checking technology. The system is openly available online.",
+            "score": 2
+        },
+        {
+            "id": "8f3e6b4f76949a8d66d9fa173cde902a619a2eed",
+            "paperId": "8f3e6b4f76949a8d66d9fa173cde902a619a2eed",
+            "title": "ruSciFact: Open Benchmark for Verifying Scientific Facts in Russian",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.28995/2075-7182-2025-23-435-459?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.28995/2075-7182-2025-23-435-459, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2351667667",
+                    "name": "A. Vatolin"
+                },
+                {
+                    "authorId": "2351664578",
+                    "name": "N. Gerasimenko"
+                },
+                {
+                    "authorId": "2377603165",
+                    "name": "N. Loukachevitch"
+                },
+                {
+                    "authorId": "2168394523",
+                    "name": "Lomonosovs Msu"
+                },
+                {
+                    "authorId": "2351668071",
+                    "name": "A. Ianina"
+                }
+            ],
+            "abstract": "Against the backdrop of active LLM development, their tendency to hallucinate, as well as the growing volume of texts they generate, the validation of facts has become increasingly important and relevant. We propose ruSciFact 1 , a new benchmark for fact-checking scientific claims in Russian. ruSciFact is structured as a NLI task, the goal is to verify whether a fact is confirmed by a given abstract. To generate facts, we used an 3-step pipeline based on LLaMA-405B, validating the resulting sentences with the help of assessors-terminologists. The ruSciFact dataset consists of 1128 pairs in the format <abstract, claim>, which we are releasing as open source together with the benchmark code. Additionally, we are open-sourcing the fact-generation pipeline 2 , which facilitates the expansion of the dataset to specific scientific domains. We evaluated several popular language models on ruSciFact, including text embedders and generative models. The results show that this benchmark allows to effectively assess the fact-checking capabilities of LLMs in Russian.",
+            "score": 2
+        },
+        {
+            "id": "3061de19f24e83659775199f9d3e1e4f5bc31a4e",
+            "paperId": "3061de19f24e83659775199f9d3e1e4f5bc31a4e",
+            "title": "UWBa at SemEval-2025 Task 7: Multilingual and Crosslingual Fact-Checked Claim Retrieval",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.09517, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2628715",
+                    "name": "Ladislav Lenc"
+                },
+                {
+                    "authorId": "2375817069",
+                    "name": "Daniel C'ifka"
+                },
+                {
+                    "authorId": "1704273783",
+                    "name": "Jivr'i Mart'inek"
+                },
+                {
+                    "authorId": "2375384038",
+                    "name": "Jakub vSm'id"
+                },
+                {
+                    "authorId": "2375384191",
+                    "name": "Pavel Kr'al"
+                }
+            ],
+            "abstract": "This paper presents a zero-shot system for fact-checked claim retrieval. We employed several state-of-the-art large language models to obtain text embeddings. The models were then combined to obtain the best possible result. Our approach achieved 7th place in monolingual and 9th in cross-lingual subtasks. We used only English translations as an input to the text embedding models since multilingual models did not achieve satisfactory results. We identified the most relevant claims for each post by leveraging the embeddings and measuring cosine similarity. Overall, the best results were obtained by the NVIDIA NV-Embed-v2 model. For some languages, we benefited from model combinations (NV-Embed&GPT or Mistral).",
+            "score": 2
+        },
+        {
+            "id": "b4df5e2282013d0f3e6e26a1c8a2d44d485faa66",
+            "paperId": "b4df5e2282013d0f3e6e26a1c8a2d44d485faa66",
+            "title": "Team HUMANE at AVeriTeC 2025: HerO 2 for Efficient Fact Verification",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11004, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2162198417",
+                    "name": "Yejun Yoon"
+                },
+                {
+                    "authorId": "2326256512",
+                    "name": "Jaeyoon Jung"
+                },
+                {
+                    "authorId": "2284734425",
+                    "name": "Seunghyun Yoon"
+                },
+                {
+                    "authorId": "2284731591",
+                    "name": "Kunwoo Park"
+                }
+            ],
+            "abstract": "This paper presents HerO 2, Team HUMANE's system for the AVeriTeC shared task at the FEVER-25 workshop. HerO 2 is an enhanced version of HerO, the best-performing open-source model from the previous year's challenge. It improves evidence quality through document summarization and answer reformulation, optimizes veracity prediction via post-training quantization under computational constraints, and enhances overall system performance by integrating updated language model (LM) backbones. HerO 2 ranked second on the leaderboard while achieving the shortest runtime among the top three systems, demonstrating both high efficiency and strong potential for real-world fact verification. The code is available at https://github.com/ssu-humane/HerO2.",
+            "score": 2
+        },
+        {
+            "id": "f534483bd3b0a4386ad4244bda4b9f78e4042e4b",
+            "paperId": "f534483bd3b0a4386ad4244bda4b9f78e4042e4b",
+            "title": "HiFACTMix: A Code-Mixed Benchmark and Graph-Aware Model for EvidenceBased Political Claim Verification in Hinglish",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.10001, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375903580",
+                    "name": "Rakesh Thakur"
+                },
+                {
+                    "authorId": "47192437",
+                    "name": "Sneha Sharma"
+                },
+                {
+                    "authorId": "2375903566",
+                    "name": "Gauri Chopra"
+                }
+            ],
+            "abstract": "Fact-checking in code-mixed, low-resource languages such as Hinglish remains an underexplored challenge in natural language processing. Existing fact-verification systems largely focus on high-resource, monolingual settings and fail to generalize to real-world political discourse in linguistically diverse regions like India. Given the widespread use of Hinglish by public figures, particularly political figures, and the growing influence of social media on public opinion, there's a critical need for robust, multilingual and context-aware fact-checking tools. To address this gap a novel benchmark HiFACT dataset is introduced with 1,500 realworld factual claims made by 28 Indian state Chief Ministers in Hinglish, under a highly code-mixed low-resource setting. Each claim is annotated with textual evidence and veracity labels. To evaluate this benchmark, a novel graphaware, retrieval-augmented fact-checking model is proposed that combines multilingual contextual encoding, claim-evidence semantic alignment, evidence graph construction, graph neural reasoning, and natural language explanation generation. Experimental results show that HiFACTMix outperformed accuracy in comparison to state of art multilingual baselines models and provides faithful justifications for its verdicts. This work opens a new direction for multilingual, code-mixed, and politically grounded fact verification research.",
+            "score": 2
+        },
+        {
+            "id": "eda4655ad91229a109db9075b81ad22a4774499b",
+            "paperId": "eda4655ad91229a109db9075b81ad22a4774499b",
+            "title": "QACHECK: A Demonstration System for Question-Guided Multi-Hop Fact-Checking",
+            "year": 2023,
+            "citationCount": 25,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/2310.07609",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2310.07609, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3470231",
+                    "name": "Liangming Pan"
+                },
+                {
+                    "authorId": "2124827801",
+                    "name": "Xinyuan Lu"
+                },
+                {
+                    "authorId": "2257033898",
+                    "name": "Min-Yen Kan"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                }
+            ],
+            "abstract": "Fact-checking real-world claims often requires complex, multi-step reasoning due to the absence of direct evidence to support or refute them. However, existing fact-checking systems often lack transparency in their decision-making, making it challenging for users to comprehend their reasoning process. To address this, we propose the Question-guided Multi-hop Fact-Checking (QACHECK) system, which guides the model's reasoning process by asking a series of questions critical for verifying a claim. QACHECK has five key modules: a claim verifier, a question generator, a question-answering module, a QA validator, and a reasoner. Users can input a claim into QACHECK, which then predicts its veracity and provides a comprehensive report detailing its reasoning process, guided by a sequence of (question, answer) pairs. QACHECK also provides the source of evidence supporting each question, fostering a transparent, explainable, and user-friendly fact-checking process. A recorded video of QACHECK is at https://www.youtube.com/watch?v=ju8kxSldM64",
+            "score": 2
+        },
+        {
+            "id": "8793066d170b6a742c4fcdb478d4f100c1e4bf17",
+            "paperId": "8793066d170b6a742c4fcdb478d4f100c1e4bf17",
+            "title": "Fact-Checking Complex Claims with Program-Guided Reasoning",
+            "year": 2023,
+            "citationCount": 150,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2305.12744",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.12744, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3470231",
+                    "name": "Liangming Pan"
+                },
+                {
+                    "authorId": "13901559",
+                    "name": "Xiaobao Wu"
+                },
+                {
+                    "authorId": "2124827801",
+                    "name": "Xinyuan Lu"
+                },
+                {
+                    "authorId": "1755919",
+                    "name": "A. Luu"
+                },
+                {
+                    "authorId": "1682479",
+                    "name": "William Yang Wang"
+                },
+                {
+                    "authorId": "37596605",
+                    "name": "Min-Yen Kan"
+                },
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                }
+            ],
+            "abstract": "Fact-checking real-world claims often requires collecting multiple pieces of evidence and applying complex multi-step reasoning. In this paper, we present Program-Guided Fact-Checking (ProgramFC), a novel fact-checking model that decomposes complex claims into simpler sub-tasks that can be solved using a shared library of specialized functions. We first leverage the in-context learning ability of large language models to generate reasoning programs to guide the verification process. Afterward, we execute the program by delegating each sub-task to the corresponding sub-task handler. This process makes our model both explanatory and data-efficient, providing clear explanations of its reasoning process and requiring minimal training data. We evaluate ProgramFC on two challenging fact-checking datasets and show that it outperforms seven fact-checking baselines across different settings of evidence availability, with explicit output programs that benefit human debugging. Our codes and data are publicly available at https://github.com/mbzuai-nlp/ProgramFC.",
+            "score": 2
+        },
+        {
+            "id": "38d243b9f6e2c786699dbc83513fb190372cde07",
+            "paperId": "38d243b9f6e2c786699dbc83513fb190372cde07",
+            "title": "Automated Fact-Checking for Assisting Human Fact-Checkers",
+            "year": 2021,
+            "citationCount": 244,
+            "openAccessPdf": {
+                "url": "https://www.ijcai.org/proceedings/2021/0619.pdf",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2103.07769, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2026545715",
+                    "name": "Preslav Nakov"
+                },
+                {
+                    "authorId": "1801487",
+                    "name": "D. Corney"
+                },
+                {
+                    "authorId": "2905745",
+                    "name": "Maram Hasanain"
+                },
+                {
+                    "authorId": "37784060",
+                    "name": "Firoj Alam"
+                },
+                {
+                    "authorId": "1693370300",
+                    "name": "Tamer Elsayed"
+                },
+                {
+                    "authorId": "2063950160",
+                    "name": "A. Barr'on-Cedeno"
+                },
+                {
+                    "authorId": "1802817",
+                    "name": "Paolo Papotti"
+                },
+                {
+                    "authorId": "65877664",
+                    "name": "Shaden Shaar"
+                },
+                {
+                    "authorId": "34086979",
+                    "name": "Giovanni Da San Martino"
+                }
+            ],
+            "abstract": "The reporting and the analysis of current events around the globe has expanded from professional, editor-lead journalism all the way to citizen journalism. Nowadays, politicians and other key players enjoy direct access to their audiences through social media, bypassing the filters of official cables or traditional media. However, the multiple advantages of free speech and direct communication are dimmed by the misuse of media to spread inaccurate or misleading claims. These phenomena have led to the modern incarnation of the fact-checker --- a professional whose main aim is to examine claims using available evidence and to assess their veracity. Here, we survey the available intelligent technologies that can support the human expert in the different steps of her fact-checking endeavor. These include identifying claims worth fact-checking, detecting relevant previously fact-checked claims, retrieving relevant evidence to fact-check a claim, and actually verifying a claim. In each case, we pay attention to the challenges and the potential impact on real-world fact-checking.",
+            "score": 2
+        },
+        {
+            "id": "1f8b1fe3a13169d73a5cdc3e0df47f244c722581",
+            "paperId": "1f8b1fe3a13169d73a5cdc3e0df47f244c722581",
+            "title": "HoVer: A Dataset for Many-Hop Fact Extraction And Claim Verification",
+            "year": 2020,
+            "citationCount": 169,
+            "openAccessPdf": {
+                "url": "https://www.aclweb.org/anthology/2020.findings-emnlp.309.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.03088, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "31688795",
+                    "name": "Yichen Jiang"
+                },
+                {
+                    "authorId": "88739501",
+                    "name": "Shikha Bordia"
+                },
+                {
+                    "authorId": "2069513210",
+                    "name": "Zheng Zhong"
+                },
+                {
+                    "authorId": "1389540493",
+                    "name": "Charles Dognin"
+                },
+                {
+                    "authorId": "1491308857",
+                    "name": "M. Singh"
+                },
+                {
+                    "authorId": "143977268",
+                    "name": "Mohit Bansal"
+                }
+            ],
+            "abstract": "We introduce HoVer (HOppy VERification), a dataset for many-hop evidence extraction and fact verification. It challenges models to extract facts from several Wikipedia articles that are relevant to a claim and classify whether the claim is supported or not-supported by the facts. In HoVer, the claims require evidence to be extracted from as many as four English Wikipedia articles and embody reasoning graphs of diverse shapes. Moreover, most of the 3/4-hop claims are written in multiple sentences, which adds to the complexity of understanding long-range dependency relations such as coreference. We show that the performance of an existing state-of-the-art semantic-matching model degrades significantly on our dataset as the number of reasoning hops increases, hence demonstrating the necessity of many-hop reasoning to achieve strong results. We hope that the introduction of this challenging dataset and the accompanying evaluation task will encourage research in many-hop fact retrieval and information verification.",
+            "score": 2
+        },
+        {
+            "id": "48151071d50240df76df400910dbcb5c65dabc07",
+            "paperId": "48151071d50240df76df400910dbcb5c65dabc07",
+            "title": "The Fact Extraction and VERification Over Unstructured and Structured information (FEVEROUS) Shared Task",
+            "year": 2021,
+            "citationCount": 104,
+            "openAccessPdf": {
+                "url": "https://aclanthology.org/2021.fever-1.1.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://aclanthology.org/2021.fever-1.1, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "134617539",
+                    "name": "Rami Aly"
+                },
+                {
+                    "authorId": "2681038",
+                    "name": "Zhijiang Guo"
+                },
+                {
+                    "authorId": "8804828",
+                    "name": "M. Schlichtkrull"
+                },
+                {
+                    "authorId": "2053211210",
+                    "name": "James Thorne"
+                },
+                {
+                    "authorId": "2064056928",
+                    "name": "Andreas Vlachos"
+                },
+                {
+                    "authorId": "2718039",
+                    "name": "Christos Christodoulopoulos"
+                },
+                {
+                    "authorId": "3458679",
+                    "name": "O. Cocarascu"
+                },
+                {
+                    "authorId": "2008596",
+                    "name": "Arpit Mittal"
+                }
+            ],
+            "abstract": "The Fact Extraction and VERification Over Unstructured and Structured information (FEVEROUS) shared task, asks participating systems to determine whether human-authored claims are Supported or Refuted based on evidence retrieved from Wikipedia (or NotEnoughInfo if the claim cannot be verified). Compared to the FEVER 2018 shared task, the main challenge is the addition of structured data (tables and lists) as a source of evidence. The claims in the FEVEROUS dataset can be verified using only structured evidence, only unstructured evidence, or a mixture of both. Submissions are evaluated using the FEVEROUS score that combines label accuracy and evidence retrieval. Unlike FEVER 2018, FEVEROUS requires partial evidence to be returned for NotEnoughInfo claims, and the claims are longer and thus more complex. The shared task received 13 entries, six of which were able to beat the baseline system. The winning team was \u201cBust a move!\u201d, achieving a FEVEROUS score of 27% (+9% compared to the baseline). In this paper we describe the shared task, present the full results and highlight commonalities and innovations among the participating systems.",
+            "score": 2
+        },
+        {
+            "id": "6cd1da7e6d6729687c4a4e8424fde2aa02f1984b",
+            "paperId": "6cd1da7e6d6729687c4a4e8424fde2aa02f1984b",
+            "title": "LyS at SemEval 2025 Task 8: Zero-Shot Code Generation for Tabular QA",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.09012, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375742335",
+                    "name": "Adri'an Gude"
+                },
+                {
+                    "authorId": "2375742076",
+                    "name": "Roi Santos-R'ios"
+                },
+                {
+                    "authorId": "2375738625",
+                    "name": "Francisco Prado-Valino"
+                },
+                {
+                    "authorId": "2375741321",
+                    "name": "Ana Ezquerro"
+                },
+                {
+                    "authorId": "2301620394",
+                    "name": "J. Vilares"
+                }
+            ],
+            "abstract": "This paper describes our participation in SemEval 2025 Task 8, focused on Tabular Question Answering. We developed a zero-shot pipeline that leverages an Large Language Model to generate functional code capable of extracting the relevant information from tabular data based on an input question. Our approach consists of a modular pipeline where the main code generator module is supported by additional components that identify the most relevant columns and analyze their data types to improve extraction accuracy. In the event that the generated code fails, an iterative refinement process is triggered, incorporating the error feedback into a new generation prompt to enhance robustness. Our results show that zero-shot code generation is a valid approach for Tabular QA, achieving rank 33 of 53 in the test phase despite the lack of task-specific fine-tuning.",
+            "score": 1
+        },
+        {
+            "id": "7891df934c1ab88d2add1787b93465fce3f0a87e",
+            "paperId": "7891df934c1ab88d2add1787b93465fce3f0a87e",
+            "title": "ReasonVQA: A Multi-hop Reasoning Benchmark with Structural Knowledge for Visual Question Answering",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.16403, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373483960",
+                    "name": "Duong T. Tran"
+                },
+                {
+                    "authorId": "2374109975",
+                    "name": "Trung-Kien Tran"
+                },
+                {
+                    "authorId": "2269896075",
+                    "name": "M. Hauswirth"
+                },
+                {
+                    "authorId": "2257190712",
+                    "name": "Danh Le Phuoc"
+                }
+            ],
+            "abstract": "In this paper, we propose a new dataset, ReasonVQA, for the Visual Question Answering (VQA) task. Our dataset is automatically integrated with structured encyclopedic knowledge and constructed using a low-cost framework, which is capable of generating complex, multi-hop questions. We evaluated state-of-the-art VQA models on ReasonVQA, and the empirical results demonstrate that ReasonVQA poses significant challenges to these models, highlighting its potential for benchmarking and advancing the field of VQA. Additionally, our dataset can be easily scaled with respect to input images; the current version surpasses the largest existing datasets requiring external knowledge by more than an order of magnitude.",
+            "score": 1
+        },
+        {
+            "id": "bac8bf5c3f07fcc5179c225965376a786edbc16a",
+            "paperId": "bac8bf5c3f07fcc5179c225965376a786edbc16a",
+            "title": "GLiDRE: Generalist Lightweight model for Document-level Relation Extraction",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.00757, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2374405809",
+                    "name": "Robin Armingaud"
+                },
+                {
+                    "authorId": "2371998193",
+                    "name": "Romaric Besanccon"
+                }
+            ],
+            "abstract": "Relation Extraction (RE) is a fundamental task in Natural Language Processing, and its document-level variant poses significant challenges, due to the need to model complex interactions between entities across sentences. Current approaches, largely based on the ATLOP architecture, are commonly evaluated on benchmarks like DocRED and Re-DocRED. However, their performance in zero-shot or few-shot settings remains largely underexplored due to the task's complexity. Recently, the GLiNER model has shown that a compact NER model can outperform much larger Large Language Models. With a similar motivation, we introduce GLiDRE, a new model for document-level relation extraction that builds on the key ideas of GliNER. We benchmark GLiDRE against state-of-the-art models across various data settings on the Re-DocRED dataset. Our results demonstrate that GLiDRE achieves state-of-the-art performance in few-shot scenarios. Our code is publicly available.",
+            "score": 1
+        },
+        {
+            "id": "432065729891ba16f96195085c35d2fe894870bf",
+            "paperId": "432065729891ba16f96195085c35d2fe894870bf",
+            "title": "When Punctuation Matters: A Large-Scale Comparison of Prompt Robustness Methods for LLMs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.11383, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2293940298",
+                    "name": "Mikhail Seleznyov"
+                },
+                {
+                    "authorId": "2315494605",
+                    "name": "Mikhail Chaichuk"
+                },
+                {
+                    "authorId": "2138498396",
+                    "name": "G. Ershov"
+                },
+                {
+                    "authorId": "2253459158",
+                    "name": "Alexander Panchenko"
+                },
+                {
+                    "authorId": "2360173475",
+                    "name": "Elena Tutubalina"
+                },
+                {
+                    "authorId": "2204672164",
+                    "name": "Oleg Somov"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) are highly sensitive to subtle, non-semantic variations in prompt phrasing and formatting. In this work, we present the first systematic evaluation of 5 methods for improving prompt robustness within a unified experimental framework. We benchmark these techniques on 8 models from Llama, Qwen and Gemma families across 52 tasks from Natural Instructions dataset. Our evaluation covers robustness methods from both fine-tuned and in-context learning paradigms, and tests their generalization against multiple types of distribution shifts. Finally, we extend our analysis to GPT-4.1 and DeepSeek V3 to assess frontier models'current robustness to format perturbations. Our findings offer actionable insights into the relative effectiveness of these robustness methods, enabling practitioners to make informed decisions when aiming for stable and reliable LLM performance in real-world applications. Code: https://github.com/AIRI-Institute/when-punctuation-matters.",
+            "score": 1
+        },
+        {
+            "id": "3fe181ca47c7de489404c975e271a4fad7094593",
+            "paperId": "3fe181ca47c7de489404c975e271a4fad7094593",
+            "title": "CEQuest: Benchmarking Large Language Models for Construction Estimation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.16081, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2376525118",
+                    "name": "Yanzhao Wu"
+                },
+                {
+                    "authorId": "2376524238",
+                    "name": "Lufan Wang"
+                },
+                {
+                    "authorId": "2376526575",
+                    "name": "Rui Liu"
+                }
+            ],
+            "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across a wide range of general-domain tasks. However, their effectiveness in specialized fields, such as construction, remains underexplored. In this paper, we introduce CEQuest, a novel benchmark dataset specifically designed to evaluate the performance of LLMs in answering construction-related questions, particularly in the areas of construction drawing interpretation and estimation. We conduct comprehensive experiments using five state-of-the-art LLMs, including Gemma 3, Phi4, LLaVA, Llama 3.3, and GPT-4.1, and evaluate their performance in terms of accuracy, execution time, and model size. Our experimental results demonstrate that current LLMs exhibit considerable room for improvement, highlighting the importance of integrating domain-specific knowledge into these models. To facilitate further research, we will open-source the proposed CEQuest dataset, aiming to foster the development of specialized large language models (LLMs) tailored to the construction domain.",
+            "score": 1
+        },
+        {
+            "id": "b01279fd960290339ce8381f3d33734cfea40671",
+            "paperId": "b01279fd960290339ce8381f3d33734cfea40671",
+            "title": "What is an \"Abstract Reasoner\"? Revisiting Experiments and Arguments about Large Language Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.22457, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2127600348",
+                    "name": "Tian Yun"
+                },
+                {
+                    "authorId": "2374174542",
+                    "name": "Chen Sun"
+                },
+                {
+                    "authorId": "2260118854",
+                    "name": "Ellie Pavlick"
+                }
+            ],
+            "abstract": "Recent work has argued that large language models (LLMs) are not\"abstract reasoners\", citing their poor zero-shot performance on a variety of challenging tasks as evidence. We revisit these experiments in order to add nuance to the claim. First, we show that while LLMs indeed perform poorly in a zero-shot setting, even tuning a small subset of parameters for input encoding can enable near-perfect performance. However, we also show that this finetuning does not necessarily transfer across datasets. We take this collection of empirical results as an invitation to (re-)open the discussion of what it means to be an\"abstract reasoner\", and why it matters whether LLMs fit the bill.",
+            "score": 1
+        },
+        {
+            "id": "61399f9b754bb8389bf5a6961541be5cf61880b2",
+            "paperId": "61399f9b754bb8389bf5a6961541be5cf61880b2",
+            "title": "Benchmarking for Domain-Specific LLMs: A Case Study on Academia and Beyond",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.07353, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2314169880",
+                    "name": "Rubing Chen"
+                },
+                {
+                    "authorId": "2313746412",
+                    "name": "Jiaxin Wu"
+                },
+                {
+                    "authorId": "2371455841",
+                    "name": "Jian Wang"
+                },
+                {
+                    "authorId": "2108162240",
+                    "name": "Xulu Zhang"
+                },
+                {
+                    "authorId": "2291324376",
+                    "name": "Wenqi Fan"
+                },
+                {
+                    "authorId": "2325842620",
+                    "name": "Chenghua Lin"
+                },
+                {
+                    "authorId": "2284036460",
+                    "name": "Xiao-Yong Wei"
+                },
+                {
+                    "authorId": "2293397899",
+                    "name": "Qing Li"
+                }
+            ],
+            "abstract": "The increasing demand for domain-specific evaluation of large language models (LLMs) has led to the development of numerous benchmarks. These efforts often adhere to the principle of data scaling, relying on large corpora or extensive question-answer (QA) sets to ensure broad coverage. However, the impact of corpus and QA set design on the precision and recall of domain-specific LLM performance remains poorly understood. In this paper, we argue that data scaling is not always the optimal principle for domain-specific benchmark construction. Instead, we introduce Comp-Comp, an iterative benchmarking framework grounded in the principle of comprehensiveness and compactness. Comprehensiveness ensures semantic recall by covering the full breadth of the domain, while compactness improves precision by reducing redundancy and noise. To demonstrate the effectiveness of our approach, we present a case study conducted at a well-renowned university, resulting in the creation of PolyBench, a large-scale, high-quality academic benchmark. Although this study focuses on academia, the Comp-Comp framework is domain-agnostic and readily adaptable to a wide range of specialized fields. The source code and datasets can be accessed at https://github.com/Anya-RB-Chen/COMP-COMP.",
+            "score": 1
+        },
+        {
+            "id": "c6d1115ab0320402a0921f84a4ff253154c5195b",
+            "paperId": "c6d1115ab0320402a0921f84a4ff253154c5195b",
+            "title": "UNH at CheckThat! 2025: Fine-tuning Vs Prompting in Claim Extraction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.06883, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373525003",
+                    "name": "Joe Wilder"
+                },
+                {
+                    "authorId": "2373521088",
+                    "name": "Nikhil Kadapala"
+                },
+                {
+                    "authorId": "2373588823",
+                    "name": "Benji Xu"
+                },
+                {
+                    "authorId": "2372598640",
+                    "name": "Mohammed Alsaadi"
+                },
+                {
+                    "authorId": "2373461360",
+                    "name": "Aiden Parsons"
+                },
+                {
+                    "authorId": "2372669125",
+                    "name": "Mitchell Rogers"
+                },
+                {
+                    "authorId": "2379666994",
+                    "name": "Palash Agarwal"
+                },
+                {
+                    "authorId": "2373525859",
+                    "name": "Adam Hassick"
+                },
+                {
+                    "authorId": "2372709536",
+                    "name": "Laura Dietz"
+                }
+            ],
+            "abstract": "We participate in CheckThat! Task 2 English and explore various methods of prompting and in-context learning, including few-shot prompting and fine-tuning with different LLM families, with the goal of extracting check-worthy claims from social media passages. Our best METEOR score is achieved by fine-tuning a FLAN-T5 model. However, we observe that higher-quality claims can sometimes be extracted using other methods, even when their METEOR scores are lower.",
+            "score": 1
+        },
+        {
+            "id": "a2fb474edd7ec47a1d41385cb89cdc9fe10381a2",
+            "paperId": "a2fb474edd7ec47a1d41385cb89cdc9fe10381a2",
+            "title": "DS@GT at CheckThat! 2025: A Simple Retrieval-First, LLM-Backed Framework for Claim Normalization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.17402, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2296697556",
+                    "name": "Aleksandar Pramov"
+                },
+                {
+                    "authorId": "2377467613",
+                    "name": "Jiangqin Ma"
+                },
+                {
+                    "authorId": "2377566571",
+                    "name": "Bina Patel"
+                }
+            ],
+            "abstract": "Claim normalization is an integral part of any automatic fact-check verification system. It parses the typically noisy claim data, such as social media posts into normalized claims, which are then fed into downstream veracity classification tasks. The CheckThat! 2025 Task 2 focuses specifically on claim normalization and spans 20 languages under monolingual and zero-shot conditions. Our proposed solution consists of a lightweight \\emph{retrieval-first, LLM-backed} pipeline, in which we either dynamically prompt a GPT-4o-mini with in-context examples, or retrieve the closest normalization from the train dataset directly. On the official test set, the system ranks near the top for most monolingual tracks, achieving first place in 7 out of of the 13 languages. In contrast, the system underperforms in the zero-shot setting, highlighting the limitation of the proposed solution.",
+            "score": 1
+        },
+        {
+            "id": "38d9061a2e7d777da6fa96a6962ffbafa0762972",
+            "paperId": "38d9061a2e7d777da6fa96a6962ffbafa0762972",
+            "title": "Information Re-Organization Improves Reasoning in Large Language Models",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2404.13985, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2149478197",
+                    "name": "Xiaoxia Cheng"
+                },
+                {
+                    "authorId": "2092670555",
+                    "name": "Zeqi Tan"
+                },
+                {
+                    "authorId": "2292408874",
+                    "name": "Weiming Lu"
+                }
+            ],
+            "abstract": "Improving the reasoning capabilities of large language models (LLMs) has attracted considerable interest. Recent approaches primarily focus on improving the reasoning process to yield a more precise final answer. However, in scenarios involving contextually aware reasoning, these methods neglect the importance of first identifying logical relationships from the context before proceeding with the reasoning. This oversight could lead to a superficial understanding and interaction with the context, potentially undermining the quality and reliability of the reasoning outcomes. In this paper, we propose an information re-organization (InfoRE) method before proceeding with the reasoning to enhance the reasoning ability of LLMs. Our re-organization method involves initially extracting logical relationships from the contextual content, such as documents or paragraphs, and subsequently pruning redundant content to minimize noise. Then, we utilize the re-organized information in the reasoning process. This enables LLMs to deeply understand the contextual content by clearly perceiving these logical relationships, while also ensuring high-quality responses by eliminating potential noise. To demonstrate the effectiveness of our approach in improving the reasoning ability, we conduct experiments using Llama2-70B, GPT-3.5, and GPT-4 on various contextually aware multi-hop reasoning tasks. Using only a zero-shot setting, our method achieves an average absolute improvement of 4% across all tasks, highlighting its potential to improve the reasoning performance of LLMs. Our source code is available at https://github.com/hustcxx/InfoRE.",
+            "score": 1
+        },
+        {
+            "id": "144ce53e85041c2f50164678cf77437e5f200c25",
+            "paperId": "144ce53e85041c2f50164678cf77437e5f200c25",
+            "title": "Rethinking Document-Level Relation Extraction: A Reality Check",
+            "year": 2023,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2306.08953",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2306.08953, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "92861683",
+                    "name": "Jing Li"
+                },
+                {
+                    "authorId": "2119256294",
+                    "name": "Yequan Wang"
+                },
+                {
+                    "authorId": "1583098764",
+                    "name": "Shuai Zhang"
+                },
+                {
+                    "authorId": "1700777",
+                    "name": "Min Zhang"
+                }
+            ],
+            "abstract": "Recently, numerous efforts have continued to push up performance boundaries of document-level relation extraction (DocRE) and have claimed significant progress in DocRE. In this paper, we do not aim at proposing a novel model for DocRE. Instead, we take a closer look at the field to see if these performance gains are actually true. By taking a comprehensive literature review and a thorough examination of popular DocRE datasets, we find that these performance gains are achieved upon a strong or even untenable assumption in common: all named entities are perfectly localized, normalized, and typed in advance. Next, we construct four types of entity mention attacks to examine the robustness of typical DocRE models by behavioral probing. We also have a close check on model usability in a more realistic setting. Our findings reveal that most of current DocRE models are vulnerable to entity mention attacks and difficult to be deployed in real-world end-user NLP applications. Our study calls more attentions for future research to stop simplifying problem setups, and to model DocRE in the wild rather than in an unrealistic Utopian world.",
+            "score": 1
+        },
+        {
+            "id": "163b4d6a79a5b19af88b8585456363340d9efd04",
+            "paperId": "163b4d6a79a5b19af88b8585456363340d9efd04",
+            "title": "GPT-4 Technical Report",
+            "year": 2023,
+            "citationCount": 16505,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.08774, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2275249853",
+                    "name": "OpenAI Josh Achiam"
+                },
+                {
+                    "authorId": "2275250875",
+                    "name": "Steven Adler"
+                },
+                {
+                    "authorId": "144517868",
+                    "name": "Sandhini Agarwal"
+                },
+                {
+                    "authorId": "2274773568",
+                    "name": "Lama Ahmad"
+                },
+                {
+                    "authorId": "2258629",
+                    "name": "Ilge Akkaya"
+                },
+                {
+                    "authorId": "2275244794",
+                    "name": "Florencia Leoni Aleman"
+                },
+                {
+                    "authorId": "2275252021",
+                    "name": "Diogo Almeida"
+                },
+                {
+                    "authorId": "2275252424",
+                    "name": "Janko Altenschmidt"
+                },
+                {
+                    "authorId": "2275245579",
+                    "name": "Sam Altman"
+                },
+                {
+                    "authorId": "2275246437",
+                    "name": "Shyamal Anadkat"
+                },
+                {
+                    "authorId": "2275139370",
+                    "name": "Red Avila"
+                },
+                {
+                    "authorId": "2256699302",
+                    "name": "Igor Babuschkin"
+                },
+                {
+                    "authorId": "2054519183",
+                    "name": "S. Balaji"
+                },
+                {
+                    "authorId": "2275251659",
+                    "name": "Valerie Balcom"
+                },
+                {
+                    "authorId": "47626612",
+                    "name": "Paul Baltescu"
+                },
+                {
+                    "authorId": "2275198557",
+                    "name": "Haim-ing Bao"
+                },
+                {
+                    "authorId": "2275251620",
+                    "name": "Mo Bavarian"
+                },
+                {
+                    "authorId": "2275245092",
+                    "name": "J. Belgum"
+                },
+                {
+                    "authorId": "4689792",
+                    "name": "Irwan Bello"
+                },
+                {
+                    "authorId": "2275245414",
+                    "name": "Jake Berdine"
+                },
+                {
+                    "authorId": "2275245581",
+                    "name": "Gabriel Bernadett-Shapiro"
+                },
+                {
+                    "authorId": "133740015",
+                    "name": "Christopher Berner"
+                },
+                {
+                    "authorId": "2275251674",
+                    "name": "Lenny Bogdonoff"
+                },
+                {
+                    "authorId": "2275246071",
+                    "name": "Oleg Boiko"
+                },
+                {
+                    "authorId": "2275248137",
+                    "name": "Made-laine Boyd"
+                },
+                {
+                    "authorId": "2275245419",
+                    "name": "Anna-Luisa Brakman"
+                },
+                {
+                    "authorId": "2065151121",
+                    "name": "Greg Brockman"
+                },
+                {
+                    "authorId": "2275219628",
+                    "name": "Tim Brooks"
+                },
+                {
+                    "authorId": "35167962",
+                    "name": "Miles Brundage"
+                },
+                {
+                    "authorId": "2146257251",
+                    "name": "Kevin Button"
+                },
+                {
+                    "authorId": "2275157286",
+                    "name": "Trevor Cai"
+                },
+                {
+                    "authorId": "2274782053",
+                    "name": "Rosie Campbell"
+                },
+                {
+                    "authorId": "2275245404",
+                    "name": "Andrew Cann"
+                },
+                {
+                    "authorId": "2275246368",
+                    "name": "Brittany Carey"
+                },
+                {
+                    "authorId": "2275120298",
+                    "name": "Chelsea Carlson"
+                },
+                {
+                    "authorId": "144114446",
+                    "name": "Rory Carmichael"
+                },
+                {
+                    "authorId": "1466431052",
+                    "name": "Brooke Chan"
+                },
+                {
+                    "authorId": "2275545855",
+                    "name": "Che Chang"
+                },
+                {
+                    "authorId": "2057091285",
+                    "name": "Fotis Chantzis"
+                },
+                {
+                    "authorId": "2253841704",
+                    "name": "Derek Chen"
+                },
+                {
+                    "authorId": "2275188918",
+                    "name": "Sully Chen"
+                },
+                {
+                    "authorId": "2275179180",
+                    "name": "Ruby Chen"
+                },
+                {
+                    "authorId": "2275289833",
+                    "name": "Jason Chen"
+                },
+                {
+                    "authorId": "2108828435",
+                    "name": "Mark Chen"
+                },
+                {
+                    "authorId": "1490681878",
+                    "name": "Benjamin Chess"
+                },
+                {
+                    "authorId": "2275251158",
+                    "name": "Chester Cho"
+                },
+                {
+                    "authorId": "2276186593",
+                    "name": "Casey Chu"
+                },
+                {
+                    "authorId": "2275839391",
+                    "name": "Hyung Won Chung"
+                },
+                {
+                    "authorId": "2275231534",
+                    "name": "Dave Cummings"
+                },
+                {
+                    "authorId": "49645091",
+                    "name": "Jeremiah Currier"
+                },
+                {
+                    "authorId": "2276187456",
+                    "name": "Yunxing Dai"
+                },
+                {
+                    "authorId": "2275251205",
+                    "name": "C. Decareaux"
+                },
+                {
+                    "authorId": "2275244920",
+                    "name": "Thomas Degry"
+                },
+                {
+                    "authorId": "2275247090",
+                    "name": "Noah Deutsch"
+                },
+                {
+                    "authorId": "2275251200",
+                    "name": "Damien Deville"
+                },
+                {
+                    "authorId": "2275244298",
+                    "name": "Arka Dhar"
+                },
+                {
+                    "authorId": "35363891",
+                    "name": "David Dohan"
+                },
+                {
+                    "authorId": "2275252295",
+                    "name": "Steve Dowling"
+                },
+                {
+                    "authorId": "2275245491",
+                    "name": "Sheila Dunning"
+                },
+                {
+                    "authorId": "66821245",
+                    "name": "Adrien Ecoffet"
+                },
+                {
+                    "authorId": "2275245457",
+                    "name": "Atty Eleti"
+                },
+                {
+                    "authorId": "2146257131",
+                    "name": "Tyna Eloundou"
+                },
+                {
+                    "authorId": "2065430571",
+                    "name": "David Farhi"
+                },
+                {
+                    "authorId": "2096916416",
+                    "name": "L. Fedus"
+                },
+                {
+                    "authorId": "2275249996",
+                    "name": "Niko Felix"
+                },
+                {
+                    "authorId": "2275245820",
+                    "name": "Sim'on Posada Fishman"
+                },
+                {
+                    "authorId": "2275244914",
+                    "name": "Juston Forte"
+                },
+                {
+                    "authorId": "2275251173",
+                    "name": "Is-abella Fulford"
+                },
+                {
+                    "authorId": "2027599537",
+                    "name": "Leo Gao"
+                },
+                {
+                    "authorId": "2275200811",
+                    "name": "Elie Georges"
+                },
+                {
+                    "authorId": "2275254804",
+                    "name": "C. Gibson"
+                },
+                {
+                    "authorId": "2275144649",
+                    "name": "Vik Goel"
+                },
+                {
+                    "authorId": "2325028819",
+                    "name": "Tarun Gogineni"
+                },
+                {
+                    "authorId": "2261041177",
+                    "name": "Gabriel Goh"
+                },
+                {
+                    "authorId": "2158366935",
+                    "name": "Raphael Gontijo-Lopes"
+                },
+                {
+                    "authorId": "2265066144",
+                    "name": "Jonathan Gordon"
+                },
+                {
+                    "authorId": "2275250003",
+                    "name": "Morgan Grafstein"
+                },
+                {
+                    "authorId": "145565184",
+                    "name": "Scott Gray"
+                },
+                {
+                    "authorId": "2275247307",
+                    "name": "Ryan Greene"
+                },
+                {
+                    "authorId": "2275137274",
+                    "name": "Joshua Gross"
+                },
+                {
+                    "authorId": "2253699903",
+                    "name": "S. Gu"
+                },
+                {
+                    "authorId": "2276101257",
+                    "name": "Yufei Guo"
+                },
+                {
+                    "authorId": "2004021329",
+                    "name": "Chris Hallacy"
+                },
+                {
+                    "authorId": "2275540338",
+                    "name": "Jesse Han"
+                },
+                {
+                    "authorId": "2275295848",
+                    "name": "Jeff Harris"
+                },
+                {
+                    "authorId": "2275226809",
+                    "name": "Yuchen He"
+                },
+                {
+                    "authorId": "2275245527",
+                    "name": "Mike Heaton"
+                },
+                {
+                    "authorId": "2151087994",
+                    "name": "Johannes Heidecke"
+                },
+                {
+                    "authorId": "2242286342",
+                    "name": "Chris Hesse"
+                },
+                {
+                    "authorId": "2226452668",
+                    "name": "Alan Hickey"
+                },
+                {
+                    "authorId": "2275246148",
+                    "name": "W. Hickey"
+                },
+                {
+                    "authorId": "2275245339",
+                    "name": "Peter Hoeschele"
+                },
+                {
+                    "authorId": "103681415",
+                    "name": "Brandon Houghton"
+                },
+                {
+                    "authorId": "2275214107",
+                    "name": "Kenny Hsu"
+                },
+                {
+                    "authorId": "2275210604",
+                    "name": "Shengli Hu"
+                },
+                {
+                    "authorId": "2275777049",
+                    "name": "Xin Hu"
+                },
+                {
+                    "authorId": "39378983",
+                    "name": "Joost Huizinga"
+                },
+                {
+                    "authorId": "2276187117",
+                    "name": "Shantanu Jain"
+                },
+                {
+                    "authorId": "2171110177",
+                    "name": "Shawn Jain"
+                },
+                {
+                    "authorId": "2151094350",
+                    "name": "Joanne Jang"
+                },
+                {
+                    "authorId": "2253471334",
+                    "name": "Angela Jiang"
+                },
+                {
+                    "authorId": "2275172062",
+                    "name": "Roger Jiang"
+                },
+                {
+                    "authorId": "2275752035",
+                    "name": "Haozhun Jin"
+                },
+                {
+                    "authorId": "2275203081",
+                    "name": "Denny Jin"
+                },
+                {
+                    "authorId": "2275250083",
+                    "name": "Shino Jomoto"
+                },
+                {
+                    "authorId": "2275247096",
+                    "name": "B. Jonn"
+                },
+                {
+                    "authorId": "35450887",
+                    "name": "Heewoo Jun"
+                },
+                {
+                    "authorId": "2403754",
+                    "name": "Tomer Kaftan"
+                },
+                {
+                    "authorId": "2275230678",
+                    "name": "Lukasz Kaiser"
+                },
+                {
+                    "authorId": "2275169038",
+                    "name": "Ali Kamali"
+                },
+                {
+                    "authorId": "3151440",
+                    "name": "I. Kanitscheider"
+                },
+                {
+                    "authorId": "2844898",
+                    "name": "N. Keskar"
+                },
+                {
+                    "authorId": "2152264064",
+                    "name": "Tabarak Khan"
+                },
+                {
+                    "authorId": "2314112114",
+                    "name": "Logan Kilpatrick"
+                },
+                {
+                    "authorId": "2260346092",
+                    "name": "Jong Wook Kim"
+                },
+                {
+                    "authorId": "2149054292",
+                    "name": "Christina Kim"
+                },
+                {
+                    "authorId": "2275296777",
+                    "name": "Yongjik Kim"
+                },
+                {
+                    "authorId": "2275112980",
+                    "name": "Hendrik Kirchner"
+                },
+                {
+                    "authorId": "51131802",
+                    "name": "J. Kiros"
+                },
+                {
+                    "authorId": "2146257375",
+                    "name": "Matthew Knight"
+                },
+                {
+                    "authorId": "1485556711",
+                    "name": "Daniel Kokotajlo"
+                },
+                {
+                    "authorId": "2275246094",
+                    "name": "Lukasz Kondraciuk"
+                },
+                {
+                    "authorId": "1666171360",
+                    "name": "Andrew Kondrich"
+                },
+                {
+                    "authorId": "2275252322",
+                    "name": "Aris Konstantinidis"
+                },
+                {
+                    "authorId": "2275245594",
+                    "name": "Kyle Kosic"
+                },
+                {
+                    "authorId": "2064404342",
+                    "name": "Gretchen Krueger"
+                },
+                {
+                    "authorId": "2275229877",
+                    "name": "Vishal Kuo"
+                },
+                {
+                    "authorId": "2275247085",
+                    "name": "Michael Lampe"
+                },
+                {
+                    "authorId": "2275246287",
+                    "name": "Ikai Lan"
+                },
+                {
+                    "authorId": "2274915115",
+                    "name": "Teddy Lee"
+                },
+                {
+                    "authorId": "2990741",
+                    "name": "Jan Leike"
+                },
+                {
+                    "authorId": "52152632",
+                    "name": "Jade Leung"
+                },
+                {
+                    "authorId": "2275256930",
+                    "name": "Daniel Levy"
+                },
+                {
+                    "authorId": "2275285124",
+                    "name": "Chak Li"
+                },
+                {
+                    "authorId": "2275176375",
+                    "name": "Rachel Lim"
+                },
+                {
+                    "authorId": "2275759230",
+                    "name": "Molly Lin"
+                },
+                {
+                    "authorId": "2253840098",
+                    "name": "Stephanie Lin"
+                },
+                {
+                    "authorId": "1380985420",
+                    "name": "Ma-teusz Litwin"
+                },
+                {
+                    "authorId": "2275248327",
+                    "name": "Theresa Lopez"
+                },
+                {
+                    "authorId": "2257272397",
+                    "name": "Ryan Lowe"
+                },
+                {
+                    "authorId": "2275245628",
+                    "name": "Patricia Lue"
+                },
+                {
+                    "authorId": "119341078",
+                    "name": "A. Makanju"
+                },
+                {
+                    "authorId": "2275245649",
+                    "name": "Kim Malfacini"
+                },
+                {
+                    "authorId": "46430291",
+                    "name": "Sam Manning"
+                },
+                {
+                    "authorId": "14113256",
+                    "name": "Todor Markov"
+                },
+                {
+                    "authorId": "2275245336",
+                    "name": "Yaniv Markovski"
+                },
+                {
+                    "authorId": "2114362965",
+                    "name": "Bianca Martin"
+                },
+                {
+                    "authorId": "2275231822",
+                    "name": "Katie Mayer"
+                },
+                {
+                    "authorId": "2275247045",
+                    "name": "Andrew Mayne"
+                },
+                {
+                    "authorId": "39593364",
+                    "name": "Bob McGrew"
+                },
+                {
+                    "authorId": "2047820455",
+                    "name": "S. McKinney"
+                },
+                {
+                    "authorId": "3028785",
+                    "name": "Christine McLeavey"
+                },
+                {
+                    "authorId": "2274772421",
+                    "name": "Paul McMillan"
+                },
+                {
+                    "authorId": "2275234856",
+                    "name": "Jake McNeil"
+                },
+                {
+                    "authorId": "2275210659",
+                    "name": "David Medina"
+                },
+                {
+                    "authorId": "2275132306",
+                    "name": "Aalok Mehta"
+                },
+                {
+                    "authorId": "10698483",
+                    "name": "Jacob Menick"
+                },
+                {
+                    "authorId": "2275246330",
+                    "name": "Luke Metz"
+                },
+                {
+                    "authorId": "2275252694",
+                    "name": "An-drey Mishchenko"
+                },
+                {
+                    "authorId": "2051714782",
+                    "name": "Pamela Mishkin"
+                },
+                {
+                    "authorId": "2275245453",
+                    "name": "Vinnie Monaco"
+                },
+                {
+                    "authorId": "1404556973",
+                    "name": "Evan Morikawa"
+                },
+                {
+                    "authorId": "3407880",
+                    "name": "Daniel P. Mossing"
+                },
+                {
+                    "authorId": "2275154456",
+                    "name": "Tong Mu"
+                },
+                {
+                    "authorId": "2117715631",
+                    "name": "Mira Murati"
+                },
+                {
+                    "authorId": "147746767",
+                    "name": "O. Murk"
+                },
+                {
+                    "authorId": "2275246116",
+                    "name": "David M'ely"
+                },
+                {
+                    "authorId": "3422774",
+                    "name": "Ashvin Nair"
+                },
+                {
+                    "authorId": "7406311",
+                    "name": "Reiichiro Nakano"
+                },
+                {
+                    "authorId": "2057426488",
+                    "name": "Rajeev Nayak"
+                },
+                {
+                    "authorId": "2072676",
+                    "name": "Arvind Neelakantan"
+                },
+                {
+                    "authorId": "2273886618",
+                    "name": "Richard Ngo"
+                },
+                {
+                    "authorId": "2275115983",
+                    "name": "Hyeonwoo Noh"
+                },
+                {
+                    "authorId": "2228518120",
+                    "name": "Ouyang Long"
+                },
+                {
+                    "authorId": "1435765036",
+                    "name": "Cullen O'Keefe"
+                },
+                {
+                    "authorId": "2713380",
+                    "name": "J. Pachocki"
+                },
+                {
+                    "authorId": "34800652",
+                    "name": "A. Paino"
+                },
+                {
+                    "authorId": "2275244652",
+                    "name": "Joe Palermo"
+                },
+                {
+                    "authorId": "2275246178",
+                    "name": "Ashley Pantuliano"
+                },
+                {
+                    "authorId": "50213542",
+                    "name": "Giambattista Parascandolo"
+                },
+                {
+                    "authorId": "2275245818",
+                    "name": "Joel Parish"
+                },
+                {
+                    "authorId": "2275245435",
+                    "name": "Emy Parparita"
+                },
+                {
+                    "authorId": "2274774915",
+                    "name": "Alexandre Passos"
+                },
+                {
+                    "authorId": "2068123790",
+                    "name": "Mikhail Pavlov"
+                },
+                {
+                    "authorId": "2275125663",
+                    "name": "Andrew Peng"
+                },
+                {
+                    "authorId": "2275245529",
+                    "name": "Adam Perelman"
+                },
+                {
+                    "authorId": "2275250075",
+                    "name": "Filipe de Avila Belbute Peres"
+                },
+                {
+                    "authorId": "2136008481",
+                    "name": "Michael Petrov"
+                },
+                {
+                    "authorId": "1463773776",
+                    "name": "Henrique Pond\u00e9 de Oliveira Pinto"
+                },
+                {
+                    "authorId": "2275246346",
+                    "name": "Michael Pokorny"
+                },
+                {
+                    "authorId": "2275246814",
+                    "name": "Michelle Pokrass"
+                },
+                {
+                    "authorId": "144401061",
+                    "name": "Vitchyr H. Pong"
+                },
+                {
+                    "authorId": "2275150061",
+                    "name": "Tolly Powell"
+                },
+                {
+                    "authorId": "146162186",
+                    "name": "Alethea Power"
+                },
+                {
+                    "authorId": "2151088845",
+                    "name": "Boris Power"
+                },
+                {
+                    "authorId": "2275243930",
+                    "name": "Elizabeth Proehl"
+                },
+                {
+                    "authorId": "2285654208",
+                    "name": "Raul Puri"
+                },
+                {
+                    "authorId": "38909097",
+                    "name": "Alec Radford"
+                },
+                {
+                    "authorId": "2275178294",
+                    "name": "Jack W. Rae"
+                },
+                {
+                    "authorId": "2261024614",
+                    "name": "Aditya Ramesh"
+                },
+                {
+                    "authorId": "2275225165",
+                    "name": "Cameron Raymond"
+                },
+                {
+                    "authorId": "2275252438",
+                    "name": "Francis Real"
+                },
+                {
+                    "authorId": "2275252095",
+                    "name": "Kendra Rimbach"
+                },
+                {
+                    "authorId": "2275207240",
+                    "name": "Carl Ross"
+                },
+                {
+                    "authorId": "11150265",
+                    "name": "Bob Rotsted"
+                },
+                {
+                    "authorId": "2275250007",
+                    "name": "Henri Roussez"
+                },
+                {
+                    "authorId": "2260406867",
+                    "name": "Nick Ryder"
+                },
+                {
+                    "authorId": "47204843",
+                    "name": "M. Saltarelli"
+                },
+                {
+                    "authorId": "2275246803",
+                    "name": "Ted Sanders"
+                },
+                {
+                    "authorId": "2852106",
+                    "name": "Shibani Santurkar"
+                },
+                {
+                    "authorId": "144864359",
+                    "name": "Girish Sastry"
+                },
+                {
+                    "authorId": "2275265666",
+                    "name": "Heather Schmidt"
+                },
+                {
+                    "authorId": "2252874293",
+                    "name": "David Schnurr"
+                },
+                {
+                    "authorId": "47971768",
+                    "name": "John Schulman"
+                },
+                {
+                    "authorId": "2196579",
+                    "name": "Daniel Selsam"
+                },
+                {
+                    "authorId": "2275244711",
+                    "name": "Kyla Sheppard"
+                },
+                {
+                    "authorId": "102475503",
+                    "name": "Toki Sherbakov"
+                },
+                {
+                    "authorId": "2275246834",
+                    "name": "Jessica Shieh"
+                },
+                {
+                    "authorId": "118335789",
+                    "name": "Sarah Shoker"
+                },
+                {
+                    "authorId": "67311962",
+                    "name": "Pranav Shyam"
+                },
+                {
+                    "authorId": "2700360",
+                    "name": "Szymon Sidor"
+                },
+                {
+                    "authorId": "2064673055",
+                    "name": "Eric Sigler"
+                },
+                {
+                    "authorId": "2151735251",
+                    "name": "Maddie Simens"
+                },
+                {
+                    "authorId": "2275252299",
+                    "name": "Jordan Sitkin"
+                },
+                {
+                    "authorId": "2117680841",
+                    "name": "Katarina Slama"
+                },
+                {
+                    "authorId": "103422608",
+                    "name": "Ian Sohl"
+                },
+                {
+                    "authorId": "2901424",
+                    "name": "Benjamin Sokolowsky"
+                },
+                {
+                    "authorId": "2307592658",
+                    "name": "Yang Song"
+                },
+                {
+                    "authorId": "2275245668",
+                    "name": "Natalie Staudacher"
+                },
+                {
+                    "authorId": "9927844",
+                    "name": "F. Such"
+                },
+                {
+                    "authorId": "2275252251",
+                    "name": "Natalie Summers"
+                },
+                {
+                    "authorId": "1701686",
+                    "name": "I. Sutskever"
+                },
+                {
+                    "authorId": "2275750817",
+                    "name": "Jie Tang"
+                },
+                {
+                    "authorId": "145950540",
+                    "name": "N. Tezak"
+                },
+                {
+                    "authorId": "2151289331",
+                    "name": "Madeleine Thompson"
+                },
+                {
+                    "authorId": "2275252092",
+                    "name": "P. Tillet"
+                },
+                {
+                    "authorId": "2267339677",
+                    "name": "Amin Tootoonchian"
+                },
+                {
+                    "authorId": "2275249879",
+                    "name": "Elizabeth Tseng"
+                },
+                {
+                    "authorId": "2275249709",
+                    "name": "Preston Tuggle"
+                },
+                {
+                    "authorId": "2275244171",
+                    "name": "Nick Turley"
+                },
+                {
+                    "authorId": "2065005836",
+                    "name": "Jerry Tworek"
+                },
+                {
+                    "authorId": "2275203310",
+                    "name": "Juan Felipe Cer'on Uribe"
+                },
+                {
+                    "authorId": "2275244586",
+                    "name": "Andrea Vallone"
+                },
+                {
+                    "authorId": "2275245661",
+                    "name": "Arun Vijayvergiya"
+                },
+                {
+                    "authorId": "153387869",
+                    "name": "Chelsea Voss"
+                },
+                {
+                    "authorId": "2275245962",
+                    "name": "Carroll L. Wainwright"
+                },
+                {
+                    "authorId": "2275528432",
+                    "name": "Justin Jay Wang"
+                },
+                {
+                    "authorId": "2275540420",
+                    "name": "Alvin Wang"
+                },
+                {
+                    "authorId": "2275189326",
+                    "name": "Ben Wang"
+                },
+                {
+                    "authorId": "2170081200",
+                    "name": "Jonathan Ward"
+                },
+                {
+                    "authorId": "2253952872",
+                    "name": "Jason Wei"
+                },
+                {
+                    "authorId": "2275244218",
+                    "name": "CJ Weinmann"
+                },
+                {
+                    "authorId": "2275245663",
+                    "name": "Akila Welihinda"
+                },
+                {
+                    "authorId": "2930640",
+                    "name": "Peter Welinder"
+                },
+                {
+                    "authorId": "2275139180",
+                    "name": "Jiayi Weng"
+                },
+                {
+                    "authorId": "2065741038",
+                    "name": "Lilian Weng"
+                },
+                {
+                    "authorId": "2275252154",
+                    "name": "Matt Wiethoff"
+                },
+                {
+                    "authorId": "2275249733",
+                    "name": "Dave Willner"
+                },
+                {
+                    "authorId": "2059411355",
+                    "name": "Clemens Winter"
+                },
+                {
+                    "authorId": "2275244177",
+                    "name": "Samuel Wolrich"
+                },
+                {
+                    "authorId": "2275225207",
+                    "name": "Hannah Wong"
+                },
+                {
+                    "authorId": "2275245771",
+                    "name": "Lauren Workman"
+                },
+                {
+                    "authorId": "2275299848",
+                    "name": "Sherwin Wu"
+                },
+                {
+                    "authorId": "2274911253",
+                    "name": "Jeff Wu"
+                },
+                {
+                    "authorId": "2307456650",
+                    "name": "Michael Wu"
+                },
+                {
+                    "authorId": "2275190169",
+                    "name": "Kai Xiao"
+                },
+                {
+                    "authorId": "2275452480",
+                    "name": "Tao Xu"
+                },
+                {
+                    "authorId": "2275310096",
+                    "name": "Sarah Yoo"
+                },
+                {
+                    "authorId": "2275593618",
+                    "name": "Kevin Yu"
+                },
+                {
+                    "authorId": "2275194186",
+                    "name": "Qim-ing Yuan"
+                },
+                {
+                    "authorId": "2563432",
+                    "name": "Wojciech Zaremba"
+                },
+                {
+                    "authorId": "49629836",
+                    "name": "Rowan Zellers"
+                },
+                {
+                    "authorId": "2262080679",
+                    "name": "Chong Zhang"
+                },
+                {
+                    "authorId": "2275288889",
+                    "name": "Marvin Zhang"
+                },
+                {
+                    "authorId": "2275545682",
+                    "name": "Shengjia Zhao"
+                },
+                {
+                    "authorId": "2275257857",
+                    "name": "Tianhao Zheng"
+                },
+                {
+                    "authorId": "2275201537",
+                    "name": "Juntang Zhuang"
+                },
+                {
+                    "authorId": "2275245715",
+                    "name": "William Zhuk"
+                },
+                {
+                    "authorId": "2368067",
+                    "name": "Barret Zoph"
+                }
+            ],
+            "abstract": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers. GPT-4 is a Transformer-based model pre-trained to predict the next token in a document. The post-training alignment process results in improved performance on measures of factuality and adherence to desired behavior. A core component of this project was developing infrastructure and optimization methods that behave predictably across a wide range of scales. This allowed us to accurately predict some aspects of GPT-4's performance based on models trained with no more than 1/1,000th the compute of GPT-4.",
+            "score": 1
+        },
+        {
+            "id": "57e849d0de13ed5f91d086936296721d4ff75a75",
+            "paperId": "57e849d0de13ed5f91d086936296721d4ff75a75",
+            "title": "LLaMA: Open and Efficient Foundation Language Models",
+            "year": 2023,
+            "citationCount": 14815,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2302.13971, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2113243762",
+                    "name": "Hugo Touvron"
+                },
+                {
+                    "authorId": "46183616",
+                    "name": "Thibaut Lavril"
+                },
+                {
+                    "authorId": "1410231361",
+                    "name": "Gautier Izacard"
+                },
+                {
+                    "authorId": "1490887583",
+                    "name": "Xavier Martinet"
+                },
+                {
+                    "authorId": "114952298",
+                    "name": "M. Lachaux"
+                },
+                {
+                    "authorId": "47733973",
+                    "name": "Timoth\u00e9e Lacroix"
+                },
+                {
+                    "authorId": "3361236",
+                    "name": "Baptiste Rozi\u00e8re"
+                },
+                {
+                    "authorId": "39589154",
+                    "name": "Naman Goyal"
+                },
+                {
+                    "authorId": "2072738644",
+                    "name": "Eric Hambro"
+                },
+                {
+                    "authorId": "2209986197",
+                    "name": "Faisal Azhar"
+                },
+                {
+                    "authorId": "2166043087",
+                    "name": "Aur'elien Rodriguez"
+                },
+                {
+                    "authorId": "2319608",
+                    "name": "Armand Joulin"
+                },
+                {
+                    "authorId": "3024698",
+                    "name": "Edouard Grave"
+                },
+                {
+                    "authorId": "1830914",
+                    "name": "Guillaume Lample"
+                }
+            ],
+            "abstract": "We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.",
+            "score": 1
+        },
+        {
+            "id": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+            "paperId": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+            "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+            "year": 2022,
+            "citationCount": 11144,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2201.11903, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "119640649",
+                    "name": "Jason Wei"
+                },
+                {
+                    "authorId": "1524732527",
+                    "name": "Xuezhi Wang"
+                },
+                {
+                    "authorId": "1714772",
+                    "name": "Dale Schuurmans"
+                },
+                {
+                    "authorId": "40377863",
+                    "name": "Maarten Bosma"
+                },
+                {
+                    "authorId": "2226805",
+                    "name": "Ed H. Chi"
+                },
+                {
+                    "authorId": "144956443",
+                    "name": "F. Xia"
+                },
+                {
+                    "authorId": "1998340269",
+                    "name": "Quoc Le"
+                },
+                {
+                    "authorId": "65855107",
+                    "name": "Denny Zhou"
+                }
+            ],
+            "abstract": "We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the ability of large language models to perform complex reasoning. In particular, we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting. Experiments on three large language models show that chain of thought prompting improves performance on a range of arithmetic, commonsense, and symbolic reasoning tasks. The empirical gains can be striking. For instance, prompting a 540B-parameter language model with just eight chain of thought exemplars achieves state of the art accuracy on the GSM8K benchmark of math word problems, surpassing even finetuned GPT-3 with a verifier.",
+            "score": 1
+        },
+        {
+            "id": "a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+            "paperId": "a8ca46b171467ceb2d7652fbfb67fe701ad86092",
+            "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+            "year": 2021,
+            "citationCount": 11961,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.09685, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2157840220",
+                    "name": "J. E. Hu"
+                },
+                {
+                    "authorId": "1752875",
+                    "name": "Yelong Shen"
+                },
+                {
+                    "authorId": "104100507",
+                    "name": "Phillip Wallis"
+                },
+                {
+                    "authorId": "1388725932",
+                    "name": "Zeyuan Allen-Zhu"
+                },
+                {
+                    "authorId": "2110486765",
+                    "name": "Yuanzhi Li"
+                },
+                {
+                    "authorId": "2135571585",
+                    "name": "Shean Wang"
+                },
+                {
+                    "authorId": "2109136147",
+                    "name": "Weizhu Chen"
+                }
+            ],
+            "abstract": "An important paradigm of natural language processing consists of large-scale pre-training on general domain data and adaptation to particular tasks or domains. As we pre-train larger models, full fine-tuning, which retrains all model parameters, becomes less feasible. Using GPT-3 175B as an example -- deploying independent instances of fine-tuned models, each with 175B parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. Compared to GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA performs on-par or better than fine-tuning in model quality on RoBERTa, DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher training throughput, and, unlike adapters, no additional inference latency. We also provide an empirical investigation into rank-deficiency in language model adaptation, which sheds light on the efficacy of LoRA. We release a package that facilitates the integration of LoRA with PyTorch models and provide our implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at https://github.com/microsoft/LoRA.",
+            "score": 1
+        },
+        {
+            "id": "2873f78efd7adcb118a70f8ea3ca7fa1501e320a",
+            "paperId": "2873f78efd7adcb118a70f8ea3ca7fa1501e320a",
+            "title": "FewRel 2.0: Towards More Challenging Few-Shot Relation Classification",
+            "year": 2019,
+            "citationCount": 251,
+            "openAccessPdf": {
+                "url": "https://www.aclweb.org/anthology/D19-1649.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.07124, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "4800645",
+                    "name": "Tianyu Gao"
+                },
+                {
+                    "authorId": "48506411",
+                    "name": "Xu Han"
+                },
+                {
+                    "authorId": "144459859",
+                    "name": "Hao Zhu"
+                },
+                {
+                    "authorId": "49293587",
+                    "name": "Zhiyuan Liu"
+                },
+                {
+                    "authorId": "144326610",
+                    "name": "Peng Li"
+                },
+                {
+                    "authorId": "1753344",
+                    "name": "Maosong Sun"
+                },
+                {
+                    "authorId": "2108485135",
+                    "name": "Jie Zhou"
+                }
+            ],
+            "abstract": "We present FewRel 2.0, a more challenging task to investigate two aspects of few-shot relation classification models: (1) Can they adapt to a new domain with only a handful of instances? (2) Can they detect none-of-the-above (NOTA) relations? To construct FewRel 2.0, we build upon the FewRel dataset by adding a new test set in a quite different domain, and a NOTA relation choice. With the new dataset and extensive experimental analysis, we found (1) that the state-of-the-art few-shot relation classification models struggle on these two aspects, and (2) that the commonly-used techniques for domain adaptation and NOTA detection still cannot handle the two challenges well. Our research calls for more attention and further efforts to these two real-world issues. All details and resources about the dataset and baselines are released at https://github.com/thunlp/fewrel.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.089562
+}

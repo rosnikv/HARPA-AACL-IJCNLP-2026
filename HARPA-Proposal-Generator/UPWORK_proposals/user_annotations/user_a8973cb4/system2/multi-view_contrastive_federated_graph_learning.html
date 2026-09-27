@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>8711cea9e4af17b73427b55dc62fabaa7e576d88</p>
+<hr>
+<section><h2>Title</h2>
+<p>FedMVCG: Federated Multi-View Contrastive Graph Learning for Non-IID Graph Classification</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing federated graph learning methods struggle to learn robust representations for non-IID graph data, especially when graph views and structures differ significantly across clients. This challenge hinders the effective application of federated learning to graph-structured data in privacy-sensitive domains such as healthcare and finance.</p>
+<h3>Motivation</h3>
+<p>Current approaches typically use graph neural networks with federated averaging, but fail to leverage multiple complementary views of graphs that may be available. Contrastive learning has shown great promise in learning robust representations from multiple views of data. Integrating multi-view contrastive learning into federated graph classification could help overcome non-IID challenges by aligning representations across heterogeneous graph distributions without sharing raw data.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose FedMVCG (Federated Multi-View Contrastive Graph learning), a novel framework for non-IID graph classification. Key components include: 1) A multi-view graph encoder that learns from different structural and attribute-based views of each graph. 2) A federated contrastive loss that aligns representations across clients without sharing raw data. 3) An adaptive view importance learning module that determines optimal view combinations for each client. 4) A graph diffusion augmentation technique to generate additional views. 5) A personalization layer that adapts the global model to each client's distribution. During training, each client generates multiple views of their local graphs using random walk, subgraph sampling, and attribute masking. The multi-view encoder processes these to produce graph embeddings. The federated contrastive loss encourages consistency between views within and across clients. The server aggregates and updates view importance weights. Clients then fine-tune the personalization layer on local data. This process iterates to learn a robust global model that can generalize across heterogeneous graph distributions.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Dataset Preparation</strong></p><p>Use PROTEINS, COLLAB, and REDDIT-BINARY datasets from the TU Dataset collection. Split each dataset into non-IID partitions across clients using a Dirichlet distribution with α=0.1 to simulate heterogeneous distributions.</p><p><strong>Step 2: Implement Baseline Models</strong></p><p>Implement FedAvg with GCN, GraphSAGE, and GAT as baseline federated graph learning models. Use the DGL library for graph neural network implementations.</p><p><strong>Step 3: Implement FedMVCG Components</strong></p><p>a) Multi-view encoder: Implement using GCN layers with different aggregation functions for each view. b) View generation: Implement random walk, subgraph sampling, and attribute masking functions. c) Federated contrastive loss: Adapt InfoNCE loss for the federated setting. d) Adaptive view importance: Implement as trainable weights on the server. e) Graph diffusion: Implement using the PPR matrix. f) Personalization layer: Add a client-specific MLP layer.</p><p><strong>Step 4: Training Loop</strong></p><p>Implement the federated training loop: 1) Clients generate multiple views and compute embeddings. 2) Clients compute local contrastive loss. 3) Server aggregates gradients and updates global model. 4) Server updates view importance weights. 5) Clients fine-tune personalization layer.</p><p><strong>Step 5: Evaluation</strong></p><p>Evaluate models using classification accuracy, AUC-ROC, and F1-score. Analyze performance across different degrees of distribution shift between clients.</p><p><strong>Step 6: Ablation Studies</strong></p><p>Conduct ablation studies by removing each component of FedMVCG to assess their individual contributions.</p><p><strong>Step 7: Hyperparameter Tuning</strong></p><p>Use Bayesian optimization to tune key hyperparameters such as learning rate, number of views, and personalization layer size.</p><p><strong>Step 8: Comparison with Centralized Methods</strong></p><p>Compare FedMVCG with centralized multi-view graph learning methods to assess the federated learning gap.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Train a federated GCN model on the PROTEINS dataset with 5 clients and evaluate its performance on the test set.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>Federated GCN Test Accuracy: 72.5%</p><p><strong>Proposed Prompt Input</strong></p><p>Train the FedMVCG model on the PROTEINS dataset with 5 clients, using 3 views per graph, and evaluate its performance on the test set.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>FedMVCG Test Accuracy: 78.3%</p><p><strong>Explanation</strong></p><p>FedMVCG outperforms the baseline federated GCN by leveraging multiple views and contrastive learning, which helps in learning more robust representations across heterogeneous client distributions.</p>
+<h3>Fallback Plan</h3>
+<p>If FedMVCG does not significantly outperform baselines, we can analyze the learned representations to understand why. We can visualize the embeddings using t-SNE to see if they are well-separated across classes. We can also analyze the importance weights learned for different views to understand which graph properties are most useful for classification. If certain components are not contributing as expected, we can explore alternative designs, such as using different view generation techniques or contrastive loss formulations. Additionally, we can investigate the impact of increasing the number of clients or the degree of non-IID-ness on performance. This analysis could lead to insights on the limitations of federated graph learning and potential directions for improvement, turning the project into a comprehensive empirical study of federated graph representation learning under non-IID settings.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/a85c45ce7c893388e8eafa8a653b042e1497db48" target="_blank">Cross-Node Federated Graph Neural Network for Spatio-Temporal Data Modeling</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b32aab492727412e73185b45fa8c166b1c080b33" target="_blank">Optimizing Federated Graph Learning with Inherent Structural Knowledge and Dual-Densely Connected GNNs</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/a56609e82d466abb700cd0369e8c26fe8a173e32" target="_blank">S2FGL: Spatial Spectral Federated Graph Learning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b9352582346d7205c708766fb19a6c1d4f317bda" target="_blank">FedSA-GCL: A Semi-Asynchronous Federated Graph Learning Framework with Personalized Aggregation and Cluster-Aware Broadcasting</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7cbd1434f4346359cdaad8f0cf606cd2fedbca35" target="_blank">Learning to Collaborate Over Graphs: A Selective Federated Multi-Task Learning Approach</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/33f036f3dc345b1f09e24e781e58869005e3bcf9" target="_blank">FL-AGCNS: Federated Learning Framework for Automatic Graph Convolutional Network Search</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/5458d45895ae767b5fd6248612b7abbfd1f1e39e" target="_blank">Privacy-Preserving Federated Graph Neural Network Learning on Non-IID Graph Data</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0436dcacc8809c6e277299b97519339f592116ba" target="_blank">Federated Learning with Graph-Based Aggregation for Traffic Forecasting</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/26d353c131d58a9b92b4877bac49c81df643a3a8" target="_blank">AdaFGL: A New Paradigm for Federated Node Classification with Topology Heterogeneity</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/06bc35120d2775bb4c26d6fd1ba68d1befcd84cb" target="_blank">An Efficient Framework for Clustered Federated Learning</a> (2020)
+</li>
+</ol>
+</section>
+</body></html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>d2fc27a97e0d0de3f07f21d5a56eafef54c358d8</p>
+<hr>
+<section><h2>Title</h2>
+<p>Federated Emergent Coordination: A Hierarchical Reinforcement Learning Approach for Multi-Objective Dynamic Flexible Job Shop Scheduling in Smart Manufacturing</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Existing approaches to Multi-Objective Dynamic Flexible Job Shop Scheduling Problem (MODFJSP) often rely on centralized decision-making, which can be computationally expensive and vulnerable to single points of failure in large-scale smart manufacturing environments. Additionally, current multi-agent reinforcement learning (MARL) approaches for MODFJSP typically use centralized training with decentralized execution, limiting scalability and privacy in distributed manufacturing settings.</p>
+<h3>Motivation</h3>
+<p>Inspired by the concept of emergent behavior in complex systems and the need for privacy-preserving distributed learning, we propose a novel approach that enables coordination to emerge from local interactions without explicit centralized control. Our method, Federated Emergent Coordination (FEC), combines federated learning with emergent coordination to address the limitations of existing approaches. By allowing agents to learn locally and share abstract 'coordination tokens', FEC can potentially achieve better scalability, privacy, and adaptability in dynamic smart manufacturing environments.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>Federated Emergent Coordination (FEC) is a novel MARL framework for MODFJSP that combines federated learning with emergent coordination. Key components include: 1) Independent RL agents controlling each machine, learning locally using only information from their immediate neighborhood. 2) A novel communication protocol where agents share abstract 'coordination tokens' with neighbors, encoding relevant scheduling information without revealing sensitive details. 3) Federated learning to periodically aggregate local policy updates across the entire system while maintaining data privacy. 4) A learning objective combining local rewards with a global reward signal to encourage coordinated behavior. 5) A meta-learning component allowing agents to quickly adapt to new jobs or changed objectives.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Environment Setup</strong></p><p>Implement a simulated smart manufacturing environment using OpenAI Gym. Define the state space (machine status, job queue, etc.), action space (job assignments, processing decisions), and reward function (makespan, energy efficiency, etc.). Implement dynamic job arrivals and the ability to change objectives during runtime.</p><p><strong>Step 2: Agent Architecture</strong></p><p>Implement the RL agent architecture using PyTorch. Use a neural network to represent the policy and value function. Include modules for generating and interpreting coordination tokens.</p><p><strong>Step 3: Federated Learning Setup</strong></p><p>Implement a central server for aggregating model updates using the FedAvg algorithm. Set up secure communication channels between agents and the server.</p><p><strong>Step 4: Training Loop</strong></p><p>Implement the main training loop: a) Local learning: Each agent interacts with its local environment and updates its policy. b) Token exchange: Agents generate and share coordination tokens with neighbors. c) Federated update: Periodically aggregate local updates on the central server and distribute the global model. d) Meta-learning: Implement MAML or similar algorithm for quick adaptation to new scenarios.</p><p><strong>Step 5: Baseline Implementation</strong></p><p>Implement baseline methods for comparison: a) Centralized DDPG for MODFJSP. b) Decentralized MARL with no coordination. c) Heuristic methods (e.g., dispatching rules).</p><p><strong>Step 6: Experiments</strong></p><p>Run experiments comparing FEC against baselines on the following metrics: a) Solution quality (makespan, energy efficiency). b) Scalability (performance vs. number of machines, up to hundreds). c) Adaptability to dynamic changes. d) Communication overhead. e) Privacy preservation (measure information leakage). Vary problem sizes, job arrival rates, and objective functions.</p><p><strong>Step 7: Analysis</strong></p><p>Analyze the emergent coordination strategies by visualizing token patterns. Evaluate the interpretability of learned coordination tokens. Perform ablation studies on key components (e.g., federated learning, meta-learning).</p><p><strong>Step 8: Reporting</strong></p><p>Compile results into graphs and tables. Prepare a detailed report or paper draft summarizing the methodology, experiments, and findings.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Method (Centralized DDPG) Input</strong></p><p>Environment with 50 machines, 200 jobs with varying processing times and routes, dynamic job arrivals following a Poisson process, objectives: minimize makespan and energy consumption.</p><p><strong>Baseline Method (Centralized DDPG) Expected Output</strong></p><p>Scheduling solution with high makespan (e.g., 20% higher than optimal) and suboptimal energy efficiency. Long computation time (e.g., several minutes) for decision-making.</p><p><strong>Proposed Method (FEC) Input</strong></p><p>Same environment as in the baseline case.</p><p><strong>Proposed Method (FEC) Expected Output</strong></p><p>Scheduling solution with lower makespan (e.g., within 5% of optimal) and improved energy efficiency. Fast, distributed decision-making (e.g., seconds). Emergent coordination patterns visible in token exchanges.</p><p><strong>Explanation</strong></p><p>FEC outperforms the centralized baseline due to its ability to make fast, distributed decisions while leveraging emergent coordination. The federated learning component allows it to maintain global performance without compromising on privacy or scalability.</p>
+<h3>Fallback Plan</h3>
+<p>If FEC doesn't meet the expected performance improvements, we can pivot the project in several directions: 1) Analyze the learned coordination tokens to understand what information is being shared and how it relates to scheduling decisions. This could provide insights into the nature of emergent coordination in complex systems. 2) Investigate the impact of different federated learning algorithms on performance and privacy preservation. 3) Explore the trade-offs between local and global optimization in distributed scheduling scenarios. 4) Analyze how the meta-learning component adapts to different types of dynamic changes and identify potential improvements. 5) Compare the communication patterns in FEC with those in biological systems exhibiting emergent behavior, potentially yielding insights for both manufacturing and complex systems research.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/0e568d742ca0670556d396d0db0aa5c147b9ac6c" target="_blank">Multi-Objective Scheduling for Green Flexible Assembly Job-Shop System via Multi-Agent Deep Reinforcement Learning With Game Theory</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7c1fc5ed5f3a5944b8d7e97cf0ec6a52f6f42384" target="_blank">Multi-Agent Reinforcement Learning for Job Shop Scheduling in Dynamic Environments</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/6dbedbc41303f941c83e6f301d00e83fb13c630e" target="_blank">Efficient Multi-Objective Optimization on Dynamic Flexible Job Shop Scheduling Using Deep Reinforcement Learning Approach</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/92a3c5d4773e7bf8cb0ef75ca07a1693de4f0167" target="_blank">Real-Time Scheduling for Dynamic Partial-No-Wait Multiobjective Flexible Job Shop by Deep Reinforcement Learning</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/bcad4261c2498c8db0ea0556ccd495f980c48cdc" target="_blank">An Enhanced Multi-Objective Evolutionary Algorithm with Reinforcement Learning for Energy-Efficient Scheduling in the Flexible Job Shop</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/759efac6127304d3de8f992c230dc17ebec94c32" target="_blank">Hierarchical Reinforcement Learning for Multi-Objective Real-Time Flexible Scheduling in a Smart Shop Floor</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/926525b978ff0dfb54be8e5602b1f61991e09c96" target="_blank">ReflecSched: Solving Dynamic Flexible Job-Shop Scheduling via LLM-Powered Hierarchical Reflection</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/eaf4bcc91fa73f5ca286c2b47edac1c7ba01f03a" target="_blank">Scheduling for the Flexible Job-Shop Problem with a Dynamic Number of Machines Using Deep Reinforcement Learning</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2e1de6aeba2f10fdf60675ecf59f3bf8bb63103d" target="_blank">Multi-Agent Reinforcement Learning for Real-Time Dynamic Production Scheduling in a Robot Assembly Cell</a> (2022)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/f3b2baed5155312a35aa6bd44cd8266650fb4ddb" target="_blank">A Reinforcement Learning Driven Iterated Greedy Algorithm for Energy-Efficiency Flexible Job-Shop Scheduling Problem</a> (2024)
+</li>
+</ol>
+</section>
+</body></html>

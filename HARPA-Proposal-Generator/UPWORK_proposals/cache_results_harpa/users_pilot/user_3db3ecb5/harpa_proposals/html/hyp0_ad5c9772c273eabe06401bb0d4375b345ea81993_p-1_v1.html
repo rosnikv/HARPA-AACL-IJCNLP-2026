@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>ad5c9772c273eabe06401bb0d4375b345ea81993</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating BERT embeddings with TCN and attention for improved Urdu sentiment analysis.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating BERT-base-uncased tokenizer embeddings with a Temporal Convolutional Network (TCN) configured with an attention mechanism will improve the accuracy of temporal sentiment analysis in Urdu online reviews, as measured by F1-score and precision, compared to traditional static models using the UDSA-23 dataset.</p>
+<h3>Motivation</h3>
+<p>Existing methods for sentiment analysis in low-resource languages like Urdu often rely on static models or simple combinations of BERT embeddings with traditional neural networks. These approaches do not fully leverage the potential of advanced temporal models like Temporal Convolutional Networks (TCNs) configured with attention mechanisms to capture nuanced temporal dependencies in sentiment changes over time. Most studies have not explored the integration of BERT embeddings with TCNs using attention mechanisms specifically tuned for Urdu sentiment analysis, particularly in the context of the UDSA-23 dataset. This gap is significant because it overlooks the potential improvements in capturing temporal sentiment dynamics, which are crucial for understanding sentiment trends in online reviews.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The proposed research explores the integration of BERT-base-uncased tokenizer embeddings with a Temporal Convolutional Network (TCN) configured with an attention mechanism to enhance the accuracy of temporal sentiment analysis in Urdu online reviews. The BERT-base-uncased tokenizer will preprocess Urdu reviews, generating embeddings that capture semantic nuances. These embeddings will serve as input to a TCN, which will be configured with an attention mechanism to focus on relevant temporal dependencies in the data. This configuration is expected to improve the model's ability to capture sentiment trends over time, particularly in the context of the UDSA-23 dataset. The attention mechanism will allow the TCN to prioritize specific time steps in the input sequence, enhancing its ability to detect sentiment changes. This approach addresses the gap in existing research by leveraging the strengths of both BERT embeddings and TCNs with attention mechanisms, providing a novel method for improving sentiment analysis in low-resource languages. The expected outcome is an improvement in F1-score and precision, demonstrating the model's enhanced capability to classify sentiments accurately in Urdu reviews.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/b9cf91af715a3e1b2f4ea97c62854f8ce5501ff7">BERT-base-uncased tokenizer</a>: The BERT-base-uncased tokenizer is used to preprocess Urdu reviews by splitting the text into tokens compatible with the BERT model. This tokenizer is part of the BERT-base model, designed to handle lowercase English text without accent markers. In this experiment, it will be used to generate embeddings that capture the semantic and syntactic nuances of Urdu, serving as input features for the sentiment classification model. The choice of this tokenizer is based on its proven effectiveness in enhancing sentiment analysis accuracy in low-resource languages.</p>
+<p><a href="https://www.semanticscholar.org/paper/e6b8d720983606efefe8e54e3cb2e553944dd783">Temporal Convolutional Network (TCN)</a>: The TCN will be configured with an attention mechanism to enhance its ability to capture temporal dependencies in sentiment analysis tasks. The attention mechanism assigns weights to different time steps, allowing the model to prioritize certain inputs over others. This is particularly useful in sentiment analysis, where specific words or phrases may carry more sentiment weight. The TCN's configuration will include parameters such as the number of layers, kernel size, and dilation factor, optimized through cross-validation to ensure effective pattern capture without overfitting.</p>
+<p><a href="https://www.semanticscholar.org/paper/e9610842ababe83670f7f5b92c796abb8b092516">Attention Mechanism</a>: The attention mechanism integrated into the TCN will enhance its ability to focus on relevant parts of the input sequence, improving the model's performance in tasks requiring nuanced temporal understanding. The attention mechanism assigns weights to different time steps, allowing the model to prioritize certain inputs over others. This is particularly useful in sentiment analysis, where specific words or phrases may carry more sentiment weight. Implementing attention involves adding an additional layer that computes attention scores and applies them to the input sequence, typically requiring additional computational resources but offering significant performance gains.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates BERT-base-uncased tokenizer embeddings with a TCN configured with an attention mechanism to improve temporal sentiment analysis in Urdu online reviews. The process begins by using the BERT-base-uncased tokenizer to preprocess the UDSA-23 dataset, generating embeddings that capture the semantic nuances of Urdu text. These embeddings are then fed into a TCN, which is configured with an attention mechanism to focus on relevant temporal dependencies. The TCN's configuration includes parameters such as the number of layers, kernel size, and dilation factor, optimized through cross-validation to ensure effective pattern capture without overfitting. The attention mechanism assigns weights to different time steps, allowing the model to prioritize certain inputs over others. This integration aims to enhance the model's ability to detect sentiment changes over time, particularly in the context of the UDSA-23 dataset. The expected outcome is an improvement in F1-score and precision, demonstrating the model's enhanced capability to classify sentiments accurately in Urdu reviews.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating BERT embeddings with a Temporal Convolutional Network (TCN) and attention mechanism improves Urdu sentiment analysis performance. The experiment should compare our proposed BERT-TCN-Attention model against baseline models using the UDSA-23 dataset.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>The experiment will test the hypothesis that integrating BERT-base-uncased tokenizer embeddings with a Temporal Convolutional Network (TCN) configured with an attention mechanism will improve the accuracy of temporal sentiment analysis in Urdu online reviews, as measured by F1-score and precision, compared to traditional static models.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset</strong></h4>
+<ol>
+<li>Obtain the UDSA-23 (Urdu Dataset for Sentiment Analysis) dataset.</li>
+<li>Preprocess the dataset by cleaning text, removing special characters, and handling missing values.</li>
+<li>Split the dataset into training (70%), validation (15%), and test (15%) sets with stratification to maintain class distribution.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Models to Implement</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Experimental Model: BERT-TCN-Attention</strong></h4>
+<ol>
+<li>Use BERT-base-uncased tokenizer to preprocess Urdu reviews and generate embeddings.</li>
+<li>Implement a Temporal Convolutional Network (TCN) with the following configuration:</li>
+<li>Number of layers: 4</li>
+<li>Kernel size: 3</li>
+<li>Dilation factors: [1, 2, 4, 8]</li>
+<li>Dropout rate: 0.2</li>
+<li>Implement an attention mechanism on top of the TCN that:</li>
+<li>Computes attention scores for different time steps</li>
+<li>Applies these scores to weight the importance of different parts of the input sequence</li>
+<li>Add a final classification layer for sentiment prediction.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Baseline Models</strong></h4>
+<ol>
+<li><strong>BERT-only</strong>: A model using only BERT embeddings with a simple feed-forward network for classification.</li>
+<li><strong>TCN-only</strong>: A model using word embeddings (not BERT) with the same TCN architecture but without attention.</li>
+<li><strong>Traditional ML</strong>: A traditional machine learning model (SVM) with TF-IDF features.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Training Procedure</strong></h4>
+<ol>
+<li>For each model:</li>
+<li>Train using cross-entropy loss</li>
+<li>Use Adam optimizer with learning rate 2e-5</li>
+<li>Implement early stopping based on validation F1-score</li>
+<li>Use batch size of 16 for full experiment, 8 for pilot, and 4 for mini-pilot</li>
+<li>Train for a maximum of 10 epochs for full experiment, 5 for pilot, and 2 for mini-pilot</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>Evaluate all models on the test set using:</li>
+<li>F1-score (macro and weighted)</li>
+<li>Precision (macro and weighted)</li>
+<li>Recall (macro and weighted)</li>
+<li>Accuracy</li>
+<li>Perform statistical significance testing using bootstrap resampling to determine if the experimental model significantly outperforms the baselines.</li>
+<li>Generate confusion matrices for all models.</li>
+<li>Analyze model performance across different sentiment classes.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Pilot Experiment Settings</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li><strong>MINI_PILOT</strong>:</li>
+<li>Use only 100 samples from the training set</li>
+<li>Use 20 samples each from validation and test sets</li>
+<li>Train for maximum 2 epochs</li>
+<li>Use simplified TCN with 2 layers</li>
+<li>Purpose: Quick code verification and debugging</li>
+</ol></p>
+<p><ol>
+<li><strong>PILOT</strong>:</li>
+<li>Use 1000 samples from the training set</li>
+<li>Use 200 samples each from validation and test sets</li>
+<li>Train for maximum 5 epochs</li>
+<li>Use full TCN architecture but with reduced parameters</li>
+<li>Purpose: Verify if results are promising and if differences between models are emerging</li>
+</ol></p>
+<p><ol>
+<li><strong>FULL_EXPERIMENT</strong>:</li>
+<li>Use the entire dataset</li>
+<li>Train for maximum 10 epochs</li>
+<li>Use the complete model architectures as specified</li>
+<li>Perform comprehensive evaluation and analysis</li>
+</ol></p>
+<p><p>Run the MINI_PILOT first, then if everything looks good, run the PILOT. After the pilot, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT).</p></p>
+<p><h4 class="custom-heading"><strong>Required Output</strong></h4>
+<ol>
+<li>Training and validation curves (loss, F1-score, precision) for all models.</li>
+<li>Test set performance metrics table comparing all models.</li>
+<li>Confusion matrices for all models.</li>
+<li>Statistical significance test results.</li>
+<li>Sample predictions on test examples, highlighting where the experimental model performs better or worse than baselines.</li>
+<li>Summary of findings and whether the hypothesis is supported.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Code Structure</strong></h4>
+<ol>
+<li>Implement modular code with separate files for:</li>
+<li>Data loading and preprocessing</li>
+<li>Model definitions (BERT-TCN-Attention and baselines)</li>
+<li>Training loop</li>
+<li>Evaluation functions</li>
+<li>Visualization utilities</li>
+<li>Main experiment runner</li>
+</ol></p>
+<p><ol>
+<li>Ensure proper logging of all experimental details, hyperparameters, and results.</li>
+</ol></p>
+<p><ol>
+<li>Save model checkpoints after each epoch and the best model based on validation F1-score.</li>
+</ol></p>
+<p><ol>
+<li>Implement proper error handling and progress reporting.</li>
+</ol></p>
+<p><p>Please start by implementing the MINI_PILOT version to verify the code works correctly, then proceed to the PILOT version if successful.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/ad5c9772c273eabe06401bb0d4375b345ea81993">Paper 0: Sentiment analysis for Urdu online reviews using deep learning models</a> (31 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/b9cf91af715a3e1b2f4ea97c62854f8ce5501ff7">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/f908a6333ca7626130266f308dcd31601ba65426">Paper 2</a>. The progression from the source paper to the related papers highlights a clear trajectory towards more sophisticated and nuanced sentiment analysis models for Urdu. The use of BERT and GAT represents significant advancements in handling the complexities of sentiment analysis in low-resource languages. However, there remains a gap in exploring the temporal dynamics of sentiment, which could provide deeper insights into how sentiments evolve over time in Urdu content. Building upon the existing work, a research idea that incorporates temporal sentiment analysis using these advanced models could significantly advance the field by offering a more comprehensive understanding of sentiment trends and patterns.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/ad5c9772c273eabe06401bb0d4375b345ea81993" target="_blank">Sentiment analysis for Urdu online reviews using deep learning models</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/b9cf91af715a3e1b2f4ea97c62854f8ce5501ff7" target="_blank">BERT-Based Sentiment Analysis for Low-Resourced Languages: A Case Study of Urdu Language</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/f908a6333ca7626130266f308dcd31601ba65426" target="_blank">Advancing Urdu NLP: Aspect-Based Sentiment Analysis with Graph Attention Networks</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/b9cf91af715a3e1b2f4ea97c62854f8ce5501ff7" target="_blank">BERT‐Based Sentiment Analysis for Low‐Resourced Languages: A Case Study of Urdu Language</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/a4e58681400b4f95fe3269e30b8442f2d3a834d2" target="_blank">Multi-class sentiment analysis of urdu text using multilingual BERT</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/e8a403d869524e87b876fab1ec728238ae0216fd" target="_blank">Sentiment Analysis in Low-Resource Settings: A Comprehensive Review of Approaches, Languages, and Data Sources</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/818ecf0070139c3d76edfbe98a31eb4ac57324f7" target="_blank">Revolutionizing Mental Health Sentiment Analysis With BERT-Fuse: A Hybrid Deep Learning Model</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/39bd789ef319267fb71766b0cff909b8970df9ec" target="_blank">E-Commerce Review Sentiment Analysis and Purchase Intention Prediction Based on Deep Learning Technology</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/2244380c4abfd241422437112e5458913361d9ed" target="_blank">A deep learning approach in predicting products’ sentiment ratings: a comparative analysis</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/e2ff13b31321b6c9049a8c211929ee6170d0f23e" target="_blank">An Experimental Analysis of Deep Neural Network Based Classifiers for Sentiment Analysis Task</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/1c755fd7686f8ed25f7c66ff27d99ff71fee1bd5" target="_blank">Lexicon Integrated CNN Models with Attention for Sentiment Analysis</a> (2016)</li>
+<li><a href="https://www.semanticscholar.org/paper/39101f056809c01bdc45d2646fd862a3f3717d28" target="_blank">Graph embedding approach to analyze sentiments on cryptocurrency</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/e6b8d720983606efefe8e54e3cb2e553944dd783" target="_blank">Synthetic Sentiment Cue Enhanced Graph Relation-Attention Network for Aspect-Level Sentiment Analysis</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/e9610842ababe83670f7f5b92c796abb8b092516" target="_blank">Research on Sentiment Analysis of Chinese E-Commerce Comments Based on Deep Learning</a> (2019)</li>
+</ol>
+</body>
+</html>

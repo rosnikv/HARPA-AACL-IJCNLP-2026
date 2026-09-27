@@ -1,0 +1,2005 @@
+{
+    "topic_description": "stochastically perturbed optimizers for differentiable decision-making in machine learning pipelines",
+    "all_queries": [
+        "KeywordQuery(\"stochastically perturbed optimizers for differentiable decision-making in machine learning pipelines\")",
+        "PaperQuery(\"3bfb5f836d944414c171f8f843eaf90cf5604243\")",
+        "GetReferences(\"3bfb5f836d944414c171f8f843eaf90cf5604243\")",
+        "KeywordQuery(\"differentiable combinatorial optimization\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "3bfb5f836d944414c171f8f843eaf90cf5604243",
+            "paperId": "3bfb5f836d944414c171f8f843eaf90cf5604243",
+            "title": "Learning with Differentiable Perturbed Optimizers",
+            "year": 2020,
+            "citationCount": 109,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.08676, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a systematic method to transform optimizers into operations that are differentiable and never locally constant, and relies on stochastically perturbed optimizers, and can be used readily together with existing solvers."
+            },
+            "authors": [
+                {
+                    "authorId": "3169833",
+                    "name": "Quentin Berthet"
+                },
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                },
+                {
+                    "authorId": "2386687",
+                    "name": "O. Teboul"
+                },
+                {
+                    "authorId": "1711979",
+                    "name": "Marco Cuturi"
+                },
+                {
+                    "authorId": "152303545",
+                    "name": "Jean-Philippe Vert"
+                },
+                {
+                    "authorId": "144570279",
+                    "name": "F. Bach"
+                }
+            ],
+            "abstract": "Machine learning pipelines often rely on optimization procedures to make discrete decisions (e.g., sorting, picking closest neighbors, or shortest paths). Although these discrete decisions are easily computed, they break the back-propagation of computational graphs. In order to expand the scope of learning problems that can be solved in an end-to-end fashion, we propose a systematic method to transform optimizers into operations that are differentiable and never locally constant. Our approach relies on stochastically perturbed optimizers, and can be used readily together with existing solvers. Their derivatives can be evaluated efficiently, and smoothness tuned via the chosen noise amplitude. We also show how this framework can be connected to a family of losses developed in structured prediction, and give theoretical guarantees for their use in learning tasks. We demonstrate experimentally the performance of our approach on various tasks.",
+            "score": 10
+        },
+        {
+            "id": "f1fa4fd79ee58a491687a537aa876628d302ff16",
+            "paperId": "f1fa4fd79ee58a491687a537aa876628d302ff16",
+            "title": "Differentiable Dynamic Programming for Structured Prediction and Attention",
+            "year": 2018,
+            "citationCount": 132,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1802.03676, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1697879",
+                    "name": "A. Mensch"
+                },
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                }
+            ],
+            "abstract": "Dynamic programming (DP) solves a variety of structured combinatorial problems by iteratively breaking them down into smaller subproblems. In spite of their versatility, DP algorithms are usually non-differentiable, which hampers their use as a layer in neural networks trained by backpropagation. To address this issue, we propose to smooth the max operator in the dynamic programming recursion, using a strongly convex regularizer. This allows to relax both the optimal value and solution of the original combinatorial problem, and turns a broad class of DP algorithms into differentiable operators. Theoretically, we provide a new probabilistic perspective on backpropagating through these DP operators, and relate them to inference in graphical models. We derive two particular instantiations of our framework, a smoothed Viterbi algorithm for sequence prediction and a smoothed DTW algorithm for time-series alignment. We showcase these instantiations on two structured prediction tasks and on structured and sparse attention for neural machine translation.",
+            "score": 8
+        },
+        {
+            "id": "15b0dbc21d0e5875c00bbdda7c3abb4cfc797062",
+            "paperId": "15b0dbc21d0e5875c00bbdda7c3abb4cfc797062",
+            "title": "Differentiation of Blackbox Combinatorial Solvers",
+            "year": 2019,
+            "citationCount": 298,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1912.02175, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2333423",
+                    "name": "P. MarinVlastelica"
+                },
+                {
+                    "authorId": "1443432623",
+                    "name": "Anselm Paulus"
+                },
+                {
+                    "authorId": "153431278",
+                    "name": "V\u00edt Musil"
+                },
+                {
+                    "authorId": "144247521",
+                    "name": "G. Martius"
+                },
+                {
+                    "authorId": "2753055",
+                    "name": "Michal Rolinek"
+                }
+            ],
+            "abstract": "Achieving fusion of deep learning with combinatorial algorithms promises transformative changes to artificial intelligence. One possible approach is to introduce combinatorial building blocks into neural networks. Such end-to-end architectures have the potential to tackle combinatorial problems on raw input data such as ensuring global consistency in multi-object tracking or route planning on maps in robotics. In this work, we present a method that implements an efficient backward pass through blackbox implementations of combinatorial solvers with linear objective functions. We provide both theoretical and experimental backing. In particular, we incorporate the Gurobi MIP solver, Blossom V algorithm, and Dijkstra's algorithm into architectures that extract suitable features from raw inputs for the traveling salesman problem, the min-cost perfect matching problem and the shortest path problem.",
+            "score": 7
+        },
+        {
+            "id": "0f45215ddad707f955ab08e90397fbc5c2a2298c",
+            "paperId": "0f45215ddad707f955ab08e90397fbc5c2a2298c",
+            "title": "Learning Latent Trees with Stochastic Perturbations and Differentiable Dynamic Programming",
+            "year": 2019,
+            "citationCount": 17,
+            "openAccessPdf": {
+                "url": "https://www.aclweb.org/anthology/P19-1551.pdf",
+                "status": "HYBRID",
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1906.09992, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370433927",
+                    "name": "Caio Corro"
+                },
+                {
+                    "authorId": "144889265",
+                    "name": "Ivan Titov"
+                }
+            ],
+            "abstract": "We treat projective dependency trees as latent variables in our probabilistic model and induce them in such a way as to be beneficial for a downstream task, without relying on any direct tree supervision. Our approach relies on Gumbel perturbations and differentiable dynamic programming. Unlike previous approaches to latent tree learning, we stochastically sample global structures and our parser is fully differentiable. We illustrate its effectiveness on sentiment analysis and natural language inference tasks. We also study its properties on a synthetic structure induction task. Ablation studies emphasize the importance of both stochasticity and constraining latent structures to be projective trees.",
+            "score": 7
+        },
+        {
+            "id": "5eef6a00d9eab08f3071ef19ea3e4b545421e8cb",
+            "paperId": "5eef6a00d9eab08f3071ef19ea3e4b545421e8cb",
+            "title": "Fast Differentiable Sorting and Ranking",
+            "year": 2020,
+            "citationCount": 236,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.08871, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                },
+                {
+                    "authorId": "2386687",
+                    "name": "O. Teboul"
+                },
+                {
+                    "authorId": "3169833",
+                    "name": "Quentin Berthet"
+                },
+                {
+                    "authorId": "2941141",
+                    "name": "J. Djolonga"
+                }
+            ],
+            "abstract": "The sorting operation is one of the most commonly used building blocks in computer programming. In machine learning, it is often used for robust statistics. However, seen as a function, it is piecewise linear and as a result includes many kinks where it is non-differentiable. More problematic is the related ranking operator, often used for order statistics and ranking metrics. It is a piecewise constant function, meaning that its derivatives are null or undefined. While numerous works have proposed differentiable proxies to sorting and ranking, they do not achieve the $O(n \\log n)$ time complexity one would expect from sorting and ranking operations. In this paper, we propose the first differentiable sorting and ranking operators with $O(n \\log n)$ time and $O(n)$ space complexity. Our proposal in addition enjoys exact computation and differentiation. We achieve this feat by constructing differentiable operators as projections onto the permutahedron, the convex hull of permutations, and using a reduction to isotonic optimization. Empirically, we confirm that our approach is an order of magnitude faster than existing approaches and showcase two novel applications: differentiable Spearman's rank correlation coefficient and least trimmed squares.",
+            "score": 6
+        },
+        {
+            "id": "e1678aece552737a99e46b3e4ddb854347466e1e",
+            "paperId": "e1678aece552737a99e46b3e4ddb854347466e1e",
+            "title": "Differentiable Top-k Operator with Optimal Transport",
+            "year": 2020,
+            "citationCount": 27,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.06504, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "7767755",
+                    "name": "Yujia Xie"
+                },
+                {
+                    "authorId": "2791430",
+                    "name": "H. Dai"
+                },
+                {
+                    "authorId": "2108809403",
+                    "name": "Minshuo Chen"
+                },
+                {
+                    "authorId": "144445933",
+                    "name": "Bo Dai"
+                },
+                {
+                    "authorId": "36345161",
+                    "name": "T. Zhao"
+                },
+                {
+                    "authorId": "145203884",
+                    "name": "H. Zha"
+                },
+                {
+                    "authorId": "2149192597",
+                    "name": "Wei Wei"
+                },
+                {
+                    "authorId": "1945962",
+                    "name": "Tomas Pfister"
+                }
+            ],
+            "abstract": "The top-k operation, i.e., finding the k largest or smallest elements from a collection of scores, is an important model component, which is widely used in information retrieval, machine learning, and data mining. However, if the top-k operation is implemented in an algorithmic way, e.g., using bubble algorithm, the resulting model cannot be trained in an end-to-end way using prevalent gradient descent algorithms. This is because these implementations typically involve swapping indices, whose gradient cannot be computed. Moreover, the corresponding mapping from the input scores to the indicator vector of whether this element belongs to the top-k set is essentially discontinuous. To address the issue, we propose a smoothed approximation, namely the SOFT (Scalable Optimal transport-based diFferenTiable) top-k operator. Specifically, our SOFT top-k operator approximates the output of the top-k operation as the solution of an Entropic Optimal Transport (EOT) problem. The gradient of the SOFT operator can then be efficiently approximated based on the optimality conditions of EOT problem. We apply the proposed operator to the k-nearest neighbors and beam search algorithms, and demonstrate improved performance.",
+            "score": 6
+        },
+        {
+            "id": "5b8077a4a77e9431ae622e3a6da6aa34b48cf0b8",
+            "paperId": "5b8077a4a77e9431ae622e3a6da6aa34b48cf0b8",
+            "title": "Differentiable Ranks and Sorting using Optimal Transport",
+            "year": 2019,
+            "citationCount": 161,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1905.11885, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1711979",
+                    "name": "Marco Cuturi"
+                },
+                {
+                    "authorId": "2386687",
+                    "name": "O. Teboul"
+                },
+                {
+                    "authorId": "152303545",
+                    "name": "Jean-Philippe Vert"
+                }
+            ],
+            "abstract": "Sorting an array is a fundamental routine in machine learning, one that is used to compute rank-based statistics, cumulative distribution functions (CDFs), quantiles, or to select closest neighbors and labels. The sorting function is however piece-wise constant (the sorting permutation of a vector does not change if the entries of that vector are infinitesimally perturbed) and therefore has no gradient information to back-propagate. We propose a framework to sort elements that is algorithmically differentiable. We leverage the fact that sorting can be seen as a particular instance of the optimal transport (OT) problem on $\\mathbb{R}$, from input values to a predefined array of sorted values (e.g. $1,2,\\dots,n$ if the input array has $n$ elements). Building upon this link , we propose generalized CDFs and quantile operators by varying the size and weights of the target presorted array. Because this amounts to using the so-called Kantorovich formulation of OT, we call these quantities K-sorts, K-CDFs and K-quantiles. We recover differentiable algorithms by adding to the OT problem an entropic regularization, and approximate it using a few Sinkhorn iterations. We call these operators S-sorts, S-CDFs and S-quantiles, and use them in various learning settings: we benchmark them against the recently proposed neuralsort [Grover et al. 2019], propose applications to quantile regression and introduce differentiable formulations of the top-k accuracy that deliver state-of-the art performance.",
+            "score": 6
+        },
+        {
+            "id": "29927b4e90810e05c3f329a3a9324d4f6859a93c",
+            "paperId": "29927b4e90810e05c3f329a3a9324d4f6859a93c",
+            "title": "Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder",
+            "year": 2018,
+            "citationCount": 57,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1807.09875, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2370433927",
+                    "name": "Caio Corro"
+                },
+                {
+                    "authorId": "144889265",
+                    "name": "Ivan Titov"
+                }
+            ],
+            "abstract": "Human annotation for syntactic parsing is expensive, and large resources are available only for a fraction of languages. A question we ask is whether one can leverage abundant unlabeled texts to improve syntactic parsers, beyond just using the texts to obtain more generalisable lexical features (i.e. beyond word embeddings). To this end, we propose a novel latent-variable generative model for semi-supervised syntactic dependency parsing. As exact inference is intractable, we introduce a differentiable relaxation to obtain approximate samples and compute gradients with respect to the parser parameters. Our method (Differentiable Perturb-and-Parse) relies on differentiable dynamic programming over stochastically perturbed edge scores. We demonstrate effectiveness of our approach with experiments on English, French and Swedish.",
+            "score": 6
+        },
+        {
+            "id": "8e0cc47c194ef7daf15aaef14d61e493879ae137",
+            "paperId": "8e0cc47c194ef7daf15aaef14d61e493879ae137",
+            "title": "Deep Network Flow for Multi-object Tracking",
+            "year": 2017,
+            "citationCount": 205,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/1706.08482",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1706.08482, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1790643",
+                    "name": "S. Schulter"
+                },
+                {
+                    "authorId": "2998590",
+                    "name": "Paul Vernaza"
+                },
+                {
+                    "authorId": "17132791",
+                    "name": "Wongun Choi"
+                },
+                {
+                    "authorId": "2099305",
+                    "name": "Manmohan Chandraker"
+                }
+            ],
+            "abstract": "Data association problems are an important component of many computer vision applications, with multi-object tracking being one of the most prominent examples. A typical approach to data association involves finding a graph matching or network flow that minimizes a sum of pairwise association costs, which are often either hand-crafted or learned as linear functions of fixed features. In this work, we demonstrate that it is possible to learn features for network-flow-based data association via backpropagation, by expressing the optimum of a smoothed network flow problem as a differentiable function of the pairwise association costs. We apply this approach to multi-object tracking with a network flow formulation. Our experiments demonstrate that we are able to successfully learn all cost functions for the association problem in an end-to-end fashion, which outperform hand-crafted costs in all settings. The integration and combination of various sources of inputs becomes easy and the cost functions can be learned entirely from data, alleviating tedious hand-designing of costs.",
+            "score": 6
+        },
+        {
+            "id": "29e944711a354c396fad71936f536e83025b6ce0",
+            "paperId": "29e944711a354c396fad71936f536e83025b6ce0",
+            "title": "Categorical Reparameterization with Gumbel-Softmax",
+            "year": 2016,
+            "citationCount": 5497,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1611.01144, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145116380",
+                    "name": "Eric Jang"
+                },
+                {
+                    "authorId": "2046135",
+                    "name": "S. Gu"
+                },
+                {
+                    "authorId": "16443937",
+                    "name": "Ben Poole"
+                }
+            ],
+            "abstract": "Categorical variables are a natural choice for representing discrete structure in the world. However, stochastic neural networks rarely use categorical latent variables due to the inability to backpropagate through samples. In this work, we present an efficient gradient estimator that replaces the non-differentiable sample from a categorical distribution with a differentiable sample from a novel Gumbel-Softmax distribution. This distribution has the essential property that it can be smoothly annealed into a categorical distribution. We show that our Gumbel-Softmax estimator outperforms state-of-the-art gradient estimators on structured output prediction and unsupervised generative modeling tasks with categorical latent variables, and enables large speedups on semi-supervised classification.",
+            "score": 6
+        },
+        {
+            "id": "3316878dab3f9e26325f5d36d8482743000be7e5",
+            "paperId": "3316878dab3f9e26325f5d36d8482743000be7e5",
+            "title": "Differentiable Extensions with Rounding Guarantees for Combinatorial Optimization over Permutations",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2411.10707, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Birkhoff Extension is presented, an almost-everywhere-differentiable continuous polytime-computable extension of any real-valued function on permutations to doubly stochastic matrices that is amenable to not only gradient-descent based optimizations, but also unsupervised neural combinatorial optimization where training often requires a differentiable loss."
+            },
+            "authors": [
+                {
+                    "authorId": "2293488115",
+                    "name": "Robert R. Nerem"
+                },
+                {
+                    "authorId": "2294429636",
+                    "name": "Zhishang Luo"
+                },
+                {
+                    "authorId": "23731362",
+                    "name": "Akbar Rafiey"
+                },
+                {
+                    "authorId": "2275103086",
+                    "name": "Yusu Wang"
+                }
+            ],
+            "abstract": "We present Birkhoff Extension (BE), an almost-everywhere-differentiable continuous polytime-computable extension of any real-valued function on permutations to doubly stochastic matrices. Our approach is based on Birkhoff decomposition (also referred to as Birkhoff von-Neumann decomposition) which allows construction of an extension that is always a convex combination of the objective's values at permutations. We show how to construct a specific family of Birkhoff decompositions that are continuous. In addition to continuity, our extension has several nice properties making it appealing for optimization problems. First, BE provides a rounding guarantee, namely any solution to the extension can be efficiently rounded to a permutation without increasing the function value. Furthermore, an approximate solution in the relaxed case (with extension) will give rise to an approximate solution in the space of permutations. Second, using BE, any real-valued optimization objective on permutations can be extended to an almost everywhere differentiable objective function over the space of doubly stochastic matrices. This makes our BE amenable to not only gradient-descent based optimizations, but also unsupervised neural combinatorial optimization where training often requires a differentiable loss. Third, based on the above properties, we present a simple optimization procedure which can be readily combined with existing optimization approaches to offer local improvements (i.e., the quality of the final solution is no worse than the initial solution). We present preliminary experimental results to verify our theoretical results on several combinatorial optimization problems related to permutations.",
+            "score": 6
+        },
+        {
+            "id": "f7daa82747a13314c42a1df0c8eb2d4958ac27d6",
+            "paperId": "f7daa82747a13314c42a1df0c8eb2d4958ac27d6",
+            "title": "Tackling Prevalent Conditions in Unsupervised Combinatorial Optimization: Cardinality, Minimum, Covering, and More",
+            "year": 2024,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.08424, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work concretizes the targets for objective construction and derandomization with theoretical justification, and derives nontrivial objectives and derandomization to meet the targets and applies the derivations to various CO problems."
+            },
+            "authors": [
+                {
+                    "authorId": "2065674134",
+                    "name": "Fanchen Bu"
+                },
+                {
+                    "authorId": "2055335611",
+                    "name": "Hyeonsoo Jo"
+                },
+                {
+                    "authorId": "2218932858",
+                    "name": "Soo Yong Lee"
+                },
+                {
+                    "authorId": "2301797085",
+                    "name": "Sungsoo Ahn"
+                },
+                {
+                    "authorId": "2242112674",
+                    "name": "Kijung Shin"
+                }
+            ],
+            "abstract": "Combinatorial optimization (CO) is naturally discrete, making machine learning based on differentiable optimization inapplicable. Karalias&Loukas (2020) adapted the probabilistic method to incorporate CO into differentiable optimization. Their work ignited the research on unsupervised learning for CO, composed of two main components: probabilistic objectives and derandomization. However, each component confronts unique challenges. First, deriving objectives under various conditions (e.g., cardinality constraints and minimum) is nontrivial. Second, the derandomization process is underexplored, and the existing derandomization methods are either random sampling or naive rounding. In this work, we aim to tackle prevalent (i.e., commonly involved) conditions in unsupervised CO. First, we concretize the targets for objective construction and derandomization with theoretical justification. Then, for various conditions commonly involved in different CO problems, we derive nontrivial objectives and derandomization to meet the targets. Finally, we apply the derivations to various CO problems. Via extensive experiments on synthetic and real-world graphs, we validate the correctness of our derivations and show our empirical superiority w.r.t. both optimization quality and speed.",
+            "score": 6
+        },
+        {
+            "id": "84dbf3f70e0192e74674df29be5bb2bc7e3d9d97",
+            "paperId": "84dbf3f70e0192e74674df29be5bb2bc7e3d9d97",
+            "title": "Combinatorial optimization with physics-inspired graph neural networks",
+            "year": 2021,
+            "citationCount": 198,
+            "openAccessPdf": {
+                "url": "https://authors.library.caltech.edu/records/wf2sp-zb126/files/2107.01188.pdf?download=1",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2107.01188, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A new graph neural network deep learning approach that incorporates concepts from statistical physics is used to develop a robust solver that can tackle a large class of NP-hard combinatorial optimization problems."
+            },
+            "authors": [
+                {
+                    "authorId": "153273114",
+                    "name": "M. Schuetz"
+                },
+                {
+                    "authorId": "2117570941",
+                    "name": "J. K. Brubaker"
+                },
+                {
+                    "authorId": "2823504",
+                    "name": "H. Katzgraber"
+                }
+            ],
+            "abstract": "Combinatorial optimization problems are pervasive across science and industry. Modern deep learning tools are poised to solve these problems at unprecedented scales, but a unifying framework that incorporates insights from statistical physics is still outstanding. Here we demonstrate how graph neural networks can be used to solve combinatorial optimization problems. Our approach is broadly applicable to canonical NP-hard problems in the form of quadratic unconstrained binary optimization problems, such as maximum cut, minimum vertex cover, maximum independent set, as well as Ising spin glasses and higher-order generalizations thereof in the form of polynomial unconstrained binary optimization problems. We apply a relaxation strategy to the problem Hamiltonian to generate a differentiable loss function with which we train the graph neural network and apply a simple projection to integer variables once the unsupervised training process has completed. We showcase our approach with numerical results for the canonical maximum cut and maximum independent set problems. We find that the graph neural network optimizer performs on par or outperforms existing solvers, with the ability to scale beyond the state of the art to problems with millions of variables. Combinatorial optimization, the search for the minimum of an objective function within a finite but very large set of candidate solutions, finds many important and challenging applications in science and industry. A new graph neural network deep learning approach that incorporates concepts from statistical physics is used to develop a robust solver that can tackle a large class of NP-hard combinatorial optimization problems.",
+            "score": 6
+        },
+        {
+            "id": "aac513b5f9a8538807ea80b5e2d2403c691877c5",
+            "paperId": "aac513b5f9a8538807ea80b5e2d2403c691877c5",
+            "title": "Deep Graph Matching via Blackbox Differentiation of Combinatorial Solvers",
+            "year": 2020,
+            "citationCount": 113,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2003.11657, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2753055",
+                    "name": "Michal Rolinek"
+                },
+                {
+                    "authorId": "143657159",
+                    "name": "P. Swoboda"
+                },
+                {
+                    "authorId": "52306341",
+                    "name": "Dominik Zietlow"
+                },
+                {
+                    "authorId": "1443432623",
+                    "name": "Anselm Paulus"
+                },
+                {
+                    "authorId": "153431278",
+                    "name": "V\u00edt Musil"
+                },
+                {
+                    "authorId": "144247521",
+                    "name": "G. Martius"
+                }
+            ],
+            "abstract": "Building on recent progress at the intersection of combinatorial optimization and deep learning, we propose an end-to-end trainable architecture for deep graph matching that contains unmodified combinatorial solvers. Using the presence of heavily optimized combinatorial solvers together with some improvements in architecture design, we advance state-of-the-art on deep graph matching benchmarks for keypoint correspondence. In addition, we highlight the conceptual advantages of incorporating solvers into deep learning architectures, such as the possibility of post-processing with a strong multi-graph matching solver or the indifference to changes in the training setting. Finally, we propose two new challenging experimental setups. The code is available at this https URL",
+            "score": 5
+        },
+        {
+            "id": "fffae8a5c88b8689eb393e254809faf62e1f4e81",
+            "paperId": "fffae8a5c88b8689eb393e254809faf62e1f4e81",
+            "title": "Optimizing Rank-Based Metrics With Blackbox Differentiation",
+            "year": 2019,
+            "citationCount": 86,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1912.03500",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1912.03500, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2753055",
+                    "name": "Michal Rolinek"
+                },
+                {
+                    "authorId": "153431278",
+                    "name": "V\u00edt Musil"
+                },
+                {
+                    "authorId": "1443432623",
+                    "name": "Anselm Paulus"
+                },
+                {
+                    "authorId": "2333423",
+                    "name": "P. MarinVlastelica"
+                },
+                {
+                    "authorId": "40899528",
+                    "name": "Claudio Michaelis"
+                },
+                {
+                    "authorId": "144247521",
+                    "name": "G. Martius"
+                }
+            ],
+            "abstract": "Rank-based metrics are some of the most widely used criteria for performance evaluation of computer vision models. Despite years of effort, direct optimization for these metrics remains a challenge due to their non-differentiable and non-decomposable nature. We present an efficient, theoretically sound, and general method for differentiating rank-based metrics with mini-batch gradient descent. In addition, we address optimization instability and sparsity of the supervision signal that both arise from using rank-based metrics as optimization targets. Resulting losses based on recall and Average Precision are applied to image retrieval and object detection tasks. We obtain performance that is competitive with state-of-the-art on standard image retrieval datasets and consistently improve performance of near state-of-the-art object detectors.",
+            "score": 5
+        },
+        {
+            "id": "f4937d10b090ea21d9b6f54c7001a808e22d3d67",
+            "paperId": "f4937d10b090ea21d9b6f54c7001a808e22d3d67",
+            "title": "The Limited Multi-Label Projection Layer",
+            "year": 2019,
+            "citationCount": 36,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1906.08707, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1773498",
+                    "name": "Brandon Amos"
+                },
+                {
+                    "authorId": "145231047",
+                    "name": "V. Koltun"
+                },
+                {
+                    "authorId": "145116464",
+                    "name": "J. Z. Kolter"
+                }
+            ],
+            "abstract": "We propose the Limited Multi-Label (LML) projection layer as a new primitive operation for end-to-end learning systems. The LML layer provides a probabilistic way of modeling multi-label predictions limited to having exactly k labels. We derive efficient forward and backward passes for this layer and show how the layer can be used to optimize the top-k recall for multi-label tasks with incomplete label information. We evaluate LML layers on top-k CIFAR-100 classification and scene graph generation. We show that LML layers add a negligible amount of computational overhead, strictly improve the model's representational capacity, and improve accuracy. We also revisit the truncated top-k entropy method as a competitive baseline for top-k classification.",
+            "score": 5
+        },
+        {
+            "id": "bd575b481405fa6d6ada0277c30cb8f58a4e6d44",
+            "paperId": "bd575b481405fa6d6ada0277c30cb8f58a4e6d44",
+            "title": "SparseMAP: Differentiable Sparse Structured Inference",
+            "year": 2018,
+            "citationCount": 124,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1802.04223, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2114966",
+                    "name": "Vlad Niculae"
+                },
+                {
+                    "authorId": "145644643",
+                    "name": "Andr\u00e9 F. T. Martins"
+                },
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                },
+                {
+                    "authorId": "1748501",
+                    "name": "Claire Cardie"
+                }
+            ],
+            "abstract": "Structured prediction requires searching over a combinatorial number of structures. To tackle it, we introduce SparseMAP: a new method for sparse structured inference, and its natural loss function. SparseMAP automatically selects only a few global structures: it is situated between MAP inference, which picks a single structure, and marginal inference, which assigns probability mass to all structures, including implausible ones. Importantly, SparseMAP can be computed using only calls to a MAP oracle, making it applicable to problems with intractable marginal inference, e.g., linear assignment. Sparsity makes gradient backpropagation efficient regardless of the structure, enabling us to augment deep neural networks with generic and sparse structured hidden layers. Experiments in dependency parsing and natural language inference reveal competitive accuracy, improved interpretability, and the ability to capture natural language ambiguities, which is attractive for pipeline systems.",
+            "score": 5
+        },
+        {
+            "id": "12a5cd04b4ac6b096a2c2aa3ba38593f2a8400a9",
+            "paperId": "12a5cd04b4ac6b096a2c2aa3ba38593f2a8400a9",
+            "title": "Lost Relatives of the Gumbel Trick",
+            "year": 2017,
+            "citationCount": 27,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1706.04161, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1956459",
+                    "name": "Matej Balog"
+                },
+                {
+                    "authorId": "1925801",
+                    "name": "Nilesh Tripuraneni"
+                },
+                {
+                    "authorId": "1744700",
+                    "name": "Zoubin Ghahramani"
+                },
+                {
+                    "authorId": "145689461",
+                    "name": "Adrian Weller"
+                }
+            ],
+            "abstract": "\u00a9 2017 International Machine Learning Society (IMLS). All rights reserved. The Gumbel trick is a method to sample from a discrete probability distribution, or to estimate its normalizing partition function. The method relies on repeatedly applying a random perturbation to the distribution in a particular way, each time solving for the most likely configuration. We derive an entire family of related methods, of which the Gumbel trick is one member, and show that the new methods have superior properties in several settings with minimal additional computational cost. In particular, for the Gumbel trick to yield computational benefits for discrete graphical models, Gumbel perturbations on all configurations are typically replaced with socalled low-rank perturbations. We show how a subfamily of our new methods adapts to this setting, proving new upper and lower bounds on the log partition function and deriving a family of sequential samplers for the Gibbs distribution. Finally, we balance the discussion by showing how the simpler analytical form of the Gumbel trick enables additional theoretical results.",
+            "score": 5
+        },
+        {
+            "id": "80f9fdb6467f5add5fa910cb29166cb091832197",
+            "paperId": "80f9fdb6467f5add5fa910cb29166cb091832197",
+            "title": "Differentiable Combinatorial Scheduling at Scale",
+            "year": 2024,
+            "citationCount": 3,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2406.06593, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper proposes a novel approach using a differentiable combinatorial scheduling framework, utilizing Gumbel-Softmax differentiable sampling technique, which allows for a fully differentiable formulation of linear programming (LP) based scheduling, extending its application to a broader range of LP formulations."
+            },
+            "authors": [
+                {
+                    "authorId": "2257432944",
+                    "name": "Mingju Liu"
+                },
+                {
+                    "authorId": "2110437380",
+                    "name": "Yingjie Li"
+                },
+                {
+                    "authorId": "2243763633",
+                    "name": "Jiaqi Yin"
+                },
+                {
+                    "authorId": "2284031854",
+                    "name": "Zhiru Zhang"
+                },
+                {
+                    "authorId": "2243375457",
+                    "name": "Cunxi Yu"
+                }
+            ],
+            "abstract": "This paper addresses the complex issue of resource-constrained scheduling, an NP-hard problem that spans critical areas including chip design and high-performance computing. Traditional scheduling methods often stumble over scalability and applicability challenges. We propose a novel approach using a differentiable combinatorial scheduling framework, utilizing Gumbel-Softmax differentiable sampling technique. This new technical allows for a fully differentiable formulation of linear programming (LP) based scheduling, extending its application to a broader range of LP formulations. To encode inequality constraints for scheduling tasks, we introduce \\textit{constrained Gumbel Trick}, which adeptly encodes arbitrary inequality constraints. Consequently, our method facilitates an efficient and scalable scheduling via gradient descent without the need for training data. Comparative evaluations on both synthetic and real-world benchmarks highlight our capability to significantly improve the optimization efficiency of scheduling, surpassing state-of-the-art solutions offered by commercial and open-source solvers such as CPLEX, Gurobi, and CP-SAT in the majority of the designs.",
+            "score": 5
+        },
+        {
+            "id": "570a4a186f348ebad33816afc82c16acabd07122",
+            "paperId": "570a4a186f348ebad33816afc82c16acabd07122",
+            "title": "DIMES: A Differentiable Meta Solver for Combinatorial Optimization Problems",
+            "year": 2022,
+            "citationCount": 99,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2210.04123",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2210.04123, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper addresses the scalability challenge in large-scale combinatorial optimization by proposing a novel approach, namely, DIMES, a compact continuous space for parameterizing the underlying distribution of candidate solutions that allows stable REINFORCE-based training and fine-tuning via massively parallel sampling."
+            },
+            "authors": [
+                {
+                    "authorId": "2187298875",
+                    "name": "Ruizhong Qiu"
+                },
+                {
+                    "authorId": "48064856",
+                    "name": "Zhiqing Sun"
+                },
+                {
+                    "authorId": "46286308",
+                    "name": "Yiming Yang"
+                }
+            ],
+            "abstract": "Recently, deep reinforcement learning (DRL) models have shown promising results in solving NP-hard Combinatorial Optimization (CO) problems. However, most DRL solvers can only scale to a few hundreds of nodes for combinatorial optimization problems on graphs, such as the Traveling Salesman Problem (TSP). This paper addresses the scalability challenge in large-scale combinatorial optimization by proposing a novel approach, namely, DIMES. Unlike previous DRL methods which suffer from costly autoregressive decoding or iterative refinements of discrete solutions, DIMES introduces a compact continuous space for parameterizing the underlying distribution of candidate solutions. Such a continuous space allows stable REINFORCE-based training and fine-tuning via massively parallel sampling. We further propose a meta-learning framework to enable the effective initialization of model parameters in the fine-tuning stage. Extensive experiments show that DIMES outperforms recent DRL-based methods on large benchmark datasets for Traveling Salesman Problems and Maximal Independent Set problems.",
+            "score": 5
+        },
+        {
+            "id": "2b289739c90a9773edfc41f10c73b526b1b49eea",
+            "paperId": "2b289739c90a9773edfc41f10c73b526b1b49eea",
+            "title": "Combinatorial Optimization for Panoptic Segmentation: A Fully Differentiable Approach",
+            "year": 2021,
+            "citationCount": 14,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2106.03188, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This approach shows the utility of using combinatorial optimization in tandem with deep learning in a challenging large scale real-world problem and showcases benefits and insights into training such an architecture."
+            },
+            "authors": [
+                {
+                    "authorId": "2055662897",
+                    "name": "Ahmed Abbas"
+                },
+                {
+                    "authorId": "143657159",
+                    "name": "P. Swoboda"
+                }
+            ],
+            "abstract": "We propose a fully differentiable architecture for simultaneous semantic and instance segmentation (a.k.a. panoptic segmentation) consisting of a convolutional neural network and an asymmetric multiway cut problem solver. The latter solves a combinatorial optimization problem that elegantly incorporates semantic and boundary predictions to produce a panoptic labeling. Our formulation allows to directly maximize a smooth surrogate of the panoptic quality metric by backpropagating the gradient through the optimization problem. Experimental evaluation shows improvement by backpropagating through the optimization problem w.r.t. comparable approaches on Cityscapes and COCO datasets. Overall, our approach shows the utility of using combinatorial optimization in tandem with deep learning in a challenging large scale real-world problem and showcases benefits and insights into training such an architecture.",
+            "score": 5
+        },
+        {
+            "id": "3e0766ede1c7f0d89254843ee17c8e18b58581f8",
+            "paperId": "3e0766ede1c7f0d89254843ee17c8e18b58581f8",
+            "title": "Learning to Solve Combinatorial Optimization under Positive Linear Constraints via Non-Autoregressive Neural Networks",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "https://www.sciengine.com/doi/pdfView/1AB661DFB4B947DCBF54420D7A1DD13A",
+                "status": "HYBRID",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.04495, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "A family of non-autoregressive neural networks to solve CO problems under positive linear constraints with the following merits: the positive linear constraint covers a wide range of CO problems, indicating that this approach breaks the generality bottleneck of existing non-autoregressive networks."
+            },
+            "authors": [
+                {
+                    "authorId": "89674661",
+                    "name": "Runzhong Wang"
+                },
+                {
+                    "authorId": "2288114199",
+                    "name": "Yang Li"
+                },
+                {
+                    "authorId": "2277244020",
+                    "name": "Junchi Yan"
+                },
+                {
+                    "authorId": "2159107948",
+                    "name": "Xiaokang Yang"
+                }
+            ],
+            "abstract": "Combinatorial optimization (CO) is the fundamental problem at the intersection of computer science, applied mathematics, etc. The inherent hardness in CO problems brings up challenge for solving CO exactly, making deep-neural-network-based solvers a research frontier. In this paper, we design a family of non-autoregressive neural networks to solve CO problems under positive linear constraints with the following merits. First, the positive linear constraint covers a wide range of CO problems, indicating that our approach breaks the generality bottleneck of existing non-autoregressive networks. Second, compared to existing autoregressive neural network solvers, our non-autoregressive networks have the advantages of higher efficiency and preserving permutation invariance. Third, our offline unsupervised learning has lower demand on high-quality labels, getting rid of the demand of optimal labels in supervised learning. Fourth, our online differentiable search method significantly improves the generalizability of our neural network solver to unseen problems. We validate the effectiveness of this framework in solving representative CO problems including facility location, max-set covering, and traveling salesman problem. Our non-autoregressive neural solvers are competitive to and can be even superior to state-of-the-art solvers such as SCIP and Gurobi, especially when both efficiency and efficacy are considered. Code is available at https://github.com/Thinklab-SJTU/NAR-CO-Solver",
+            "score": 5
+        },
+        {
+            "id": "90e12a5780fad7be739bbfe1aa5db9954e44a776",
+            "paperId": "90e12a5780fad7be739bbfe1aa5db9954e44a776",
+            "title": "Differentiable Quadratic Optimization For The Maximum Independent Set Problem",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2406.19532, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work proposes a new quadratic formulation for MIS by incorporating an MC term, improving convergence and exploration, and shows that every maximal independent set corresponds to a local minimizer, derive conditions with respect to the MIS size, and characterize stationary points."
+            },
+            "authors": [
+                {
+                    "authorId": "69339617",
+                    "name": "Ismail R. Alkhouri"
+                },
+                {
+                    "authorId": "2309007311",
+                    "name": "Cedric Le Denmat"
+                },
+                {
+                    "authorId": "2110437380",
+                    "name": "Yingjie Li"
+                },
+                {
+                    "authorId": "2110627332",
+                    "name": "Cunxi Yu"
+                },
+                {
+                    "authorId": "2309115604",
+                    "name": "Jia Liu"
+                },
+                {
+                    "authorId": "2239167562",
+                    "name": "Rongrong Wang"
+                },
+                {
+                    "authorId": "2309007188",
+                    "name": "Alvaro Velasquez"
+                }
+            ],
+            "abstract": "Combinatorial Optimization (CO) addresses many important problems, including the challenging Maximum Independent Set (MIS) problem. Alongside exact and heuristic solvers, differentiable approaches have emerged, often using continuous relaxations of ReLU-based or quadratic objectives. Noting that an MIS in a graph is a Maximum Clique (MC) in its complement, we propose a new quadratic formulation for MIS by incorporating an MC term, improving convergence and exploration. We show that every maximal independent set corresponds to a local minimizer, derive conditions with respect to the MIS size, and characterize stationary points. To tackle the non-convexity of the objective, we propose optimizing several initializations in parallel using momentum-based gradient descent, complemented by an efficient MIS checking criterion derived from our theory. We dub our method as parallelized Clique-Informed Quadratic Optimization for MIS (pCQO-MIS). Our experimental results demonstrate the effectiveness of the proposed method compared to exact, heuristic, sampling, and data-centric approaches. Notably, our method avoids the out-of-distribution tuning and reliance on (un)labeled data required by data-centric methods, while achieving superior MIS sizes and competitive runtime relative to their inference time. Additionally, a key advantage of pCQO-MIS is that, unlike exact and heuristic solvers, the runtime scales only with the number of nodes in the graph, not the number of edges. Our code is available at the GitHub repository: https://github.com/ledenmat/pCQO-mis-benchmark/tree/refactor.",
+            "score": 5
+        },
+        {
+            "id": "695ea601f5eda0d35e4d4c72920dec9d4987038c",
+            "paperId": "695ea601f5eda0d35e4d4c72920dec9d4987038c",
+            "title": "Deep k-grouping: An Unsupervised Learning Framework for Combinatorial Optimization on Graphs and Hypergraphs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2505.20972, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Novel one-hot encoded polynomial unconstrained binary optimization (OH-PUBO), a formulation for modeling k-grouping problems on graphs and hypergraphs, and GPU-accelerated algorithms for large-scale k-grouping CO problems are contributed."
+            },
+            "authors": [
+                {
+                    "authorId": "2052829681",
+                    "name": "Sen Bai"
+                },
+                {
+                    "authorId": "2363706905",
+                    "name": "Chunqi Yang"
+                },
+                {
+                    "authorId": "2363669646",
+                    "name": "Xin Bai"
+                },
+                {
+                    "authorId": "2363562386",
+                    "name": "Xin Zhang"
+                },
+                {
+                    "authorId": "2363617375",
+                    "name": "Zhengang Jiang"
+                }
+            ],
+            "abstract": "Along with AI computing shining in scientific discovery, its potential in the combinatorial optimization (CO) domain has also emerged in recent years. Yet, existing unsupervised neural network solvers struggle to solve $k$-grouping problems (e.g., coloring, partitioning) on large-scale graphs and hypergraphs, due to limited computational frameworks. In this work, we propose Deep $k$-grouping, an unsupervised learning-based CO framework. Specifically, we contribute: Novel one-hot encoded polynomial unconstrained binary optimization (OH-PUBO), a formulation for modeling k-grouping problems on graphs and hypergraphs (e.g., graph/hypergraph coloring and partitioning); GPU-accelerated algorithms for large-scale k-grouping CO problems. Deep $k$-grouping employs the relaxation of large-scale OH-PUBO objectives as differentiable loss functions and trains to optimize them in an unsupervised manner. To ensure scalability, it leverages GPU-accelerated algorithms to unify the training pipeline; A Gini coefficient-based continuous relaxation annealing strategy to enforce discreteness of solutions while preventing convergence to local optima. Experimental results demonstrate that Deep $k$-grouping outperforms existing neural network solvers and classical heuristics such as SCIP and Tabu.",
+            "score": 5
+        },
+        {
+            "id": "de1f9dbac829e5846f5bcf9028de5d4c9f0ff1b5",
+            "paperId": "de1f9dbac829e5846f5bcf9028de5d4c9f0ff1b5",
+            "title": "A Trainable Optimizer",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01764, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2298563874",
+                    "name": "Ruiqi Wang"
+                },
+                {
+                    "authorId": "2252250110",
+                    "name": "Diego Klabjan"
+                }
+            ],
+            "abstract": "The concept of learning to optimize involves utilizing a trainable optimization strategy rather than relying on manually defined full gradient estimations such as ADAM. We present a framework that jointly trains the full gradient estimator and the trainable weights of the model. Specifically, we prove that pseudo-linear TO (Trainable Optimizer), a linear approximation of the full gradient, matches SGD's convergence rate while effectively reducing variance. Pseudo-linear TO incurs negligible computational overhead, requiring only minimal additional tensor multiplications. To further improve computational efficiency, we introduce two simplified variants of Pseudo-linear TO. Experiments demonstrate that TO methods converge faster than benchmark algorithms (e.g., ADAM) in both strongly convex and non-convex settings, and fine tuning of an LLM.",
+            "score": 4
+        },
+        {
+            "id": "88e83776313effc1564044d7bf19972981815e3c",
+            "paperId": "88e83776313effc1564044d7bf19972981815e3c",
+            "title": "Differentiable Convex Optimization Layers",
+            "year": 2019,
+            "citationCount": 683,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.12430, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1945142",
+                    "name": "Akshay Agrawal"
+                },
+                {
+                    "authorId": "1773498",
+                    "name": "Brandon Amos"
+                },
+                {
+                    "authorId": "3379664",
+                    "name": "Shane T. Barratt"
+                },
+                {
+                    "authorId": "1843103",
+                    "name": "Stephen P. Boyd"
+                },
+                {
+                    "authorId": "2039713286",
+                    "name": "Steven Diamond"
+                },
+                {
+                    "authorId": "145116464",
+                    "name": "J. Z. Kolter"
+                }
+            ],
+            "abstract": "Recent work has shown how to embed differentiable optimization problems (that is, problems whose solutions can be backpropagated through) as layers within deep learning architectures. This method provides a useful inductive bias for certain problems, but existing software for differentiable optimization layers is rigid and difficult to apply to new settings. In this paper, we propose an approach to differentiating through disciplined convex programs, a subclass of convex optimization problems used by domain-specific languages (DSLs) for convex optimization. We introduce disciplined parametrized programming, a subset of disciplined convex programming, and we show that every disciplined parametrized program can be represented as the composition of an affine map from parameters to problem data, a solver, and an affine map from the solver\u2019s solution to a solution of the original problem (a new form we refer to as affine-solver-affine form). We then demonstrate how to efficiently differentiate through each of these components, allowing for end-to-end analytical differentiation through the entire convex program. We implement our methodology in version 1.1 of CVXPY, a popular Python-embedded DSL for convex optimization, and additionally implement differentiable layers for disciplined convex programs in PyTorch and TensorFlow 2.0. Our implementation significantly lowers the barrier to using convex optimization problems in differentiable programs. We present applications in linear machine learning models and in stochastic control, and we show that our layer is competitive (in execution time) compared to specialized differentiable solvers from past work.",
+            "score": 4
+        },
+        {
+            "id": "a916ce29404f991ea0978a0dff1ac8b3fc8ba858",
+            "paperId": "a916ce29404f991ea0978a0dff1ac8b3fc8ba858",
+            "title": "Structured Prediction with Projection Oracles",
+            "year": 2019,
+            "citationCount": 33,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.11369, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                }
+            ],
+            "abstract": "We propose in this paper a general framework for deriving loss functions for structured prediction. In our framework, the user chooses a convex set including the output space and provides an oracle for projecting onto that set. Given that oracle, our framework automatically generates a corresponding convex and smooth loss function. As we show, adding a projection as output layer provably makes the loss smaller. We identify the marginal polytope, the output space's convex hull, as the best convex set on which to project. However, because the projection onto the marginal polytope can sometimes be expensive to compute, we allow to use any convex superset instead, with potentially cheaper-to-compute projection. Since efficient projection algorithms are available for numerous convex sets, this allows us to construct loss functions for a variety of tasks. On the theoretical side, when combined with calibrated decoding, we prove that our loss functions can be used as a consistent surrogate for a (potentially non-convex) target loss function of interest. We demonstrate our losses on label ranking, ordinal regression and multilabel classification, confirming the improved accuracy enabled by projections.",
+            "score": 4
+        },
+        {
+            "id": "1e007cb313de9cb4d71ea9d0a77172209ad0ad0d",
+            "paperId": "1e007cb313de9cb4d71ea9d0a77172209ad0ad0d",
+            "title": "A Smoother Way to Train Structured Prediction Models",
+            "year": 2019,
+            "citationCount": 20,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1902.03228, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1507584470",
+                    "name": "Krishna Pillutla"
+                },
+                {
+                    "authorId": "2082395",
+                    "name": "Vincent Roulet"
+                },
+                {
+                    "authorId": "144695232",
+                    "name": "S. Kakade"
+                },
+                {
+                    "authorId": "1753355",
+                    "name": "Za\u00efd Harchaoui"
+                }
+            ],
+            "abstract": "We present a framework to train a structured prediction model by performing smoothing on the inference algorithm it builds upon. Smoothing overcomes the non-smoothness inherent to the maximum margin structured prediction objective, and paves the way for the use of fast primal gradient-based optimization algorithms. We illustrate the proposed framework by developing a novel primal incremental optimization algorithm for the structural support vector machine. The proposed algorithm blends an extrapolation scheme for acceleration and an adaptive smoothing scheme and builds upon the stochastic variance-reduced gradient algorithm. We establish its worst-case global complexity bound and study several practical variants. We present experimental results on two real-world problems, namely named entity recognition and visual object localization. The experimental results show that the proposed framework allows us to build upon efficient inference algorithms to develop large-scale optimization algorithms for structured prediction which can achieve competitive performance on the two real-world problems.",
+            "score": 4
+        },
+        {
+            "id": "1bc28a782dc9f82270bbef66fd1b161355ed1846",
+            "paperId": "1bc28a782dc9f82270bbef66fd1b161355ed1846",
+            "title": "SequentialAttention++ for Block Sparsification: Differentiable Pruning Meets Combinatorial Optimization",
+            "year": 2024,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.17902, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Theoretically, it is shown how many existing differentiable pruning techniques can be understood as nonconvex regularization for group sparse optimization, and proved that for a wide class of nonconvex regularizers, the global optimum is unique, group-sparse, and provably yields an approximate solution to a sparse convex optimization problem."
+            },
+            "authors": [
+                {
+                    "authorId": "144738628",
+                    "name": "T. Yasuda"
+                },
+                {
+                    "authorId": "2235415677",
+                    "name": "Kyriakos Axiotis"
+                },
+                {
+                    "authorId": "2266239326",
+                    "name": "Gang Fu"
+                },
+                {
+                    "authorId": "70638610",
+                    "name": "M. Bateni"
+                },
+                {
+                    "authorId": "1728881",
+                    "name": "V. Mirrokni"
+                }
+            ],
+            "abstract": "Neural network pruning is a key technique towards engineering large yet scalable, interpretable, and generalizable models. Prior work on the subject has developed largely along two orthogonal directions: (1) differentiable pruning for efficiently and accurately scoring the importance of parameters, and (2) combinatorial optimization for efficiently searching over the space of sparse models. We unite the two approaches, both theoretically and empirically, to produce a coherent framework for structured neural network pruning in which differentiable pruning guides combinatorial optimization algorithms to select the most important sparse set of parameters. Theoretically, we show how many existing differentiable pruning techniques can be understood as nonconvex regularization for group sparse optimization, and prove that for a wide class of nonconvex regularizers, the global optimum is unique, group-sparse, and provably yields an approximate solution to a sparse convex optimization problem. The resulting algorithm that we propose, SequentialAttention++, advances the state of the art in large-scale neural network block-wise pruning tasks on the ImageNet and Criteo datasets.",
+            "score": 4
+        },
+        {
+            "id": "0c529677fcf1ea2ba112dc99b92700c44fc8d120",
+            "paperId": "0c529677fcf1ea2ba112dc99b92700c44fc8d120",
+            "title": "A Differentiable Approach to Combinatorial Optimization using Dataless Neural Networks",
+            "year": 2022,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/2203.08209",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2203.08209, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This paper reduces the combinatorial optimization problem to a neural network and employs a dataless training scheme to refine the parameters of the network such that those parameters yield the structure of interest."
+            },
+            "authors": [
+                {
+                    "authorId": "69339617",
+                    "name": "Ismail R. Alkhouri"
+                },
+                {
+                    "authorId": "46893530",
+                    "name": "George K. Atia"
+                },
+                {
+                    "authorId": "145720050",
+                    "name": "Alvaro Velasquez"
+                }
+            ],
+            "abstract": "The success of machine learning solutions for reasoning about discrete structures has brought attention to its adoption within combinatorial optimization algorithms. Such approaches generally rely on supervised learning by leveraging datasets of the combinatorial structures of interest drawn from some distribution of problem instances. Reinforcement learning has also been employed to find such structures. In this paper, we propose a radically different approach in that no data is required for training the neural networks that produce the solution. In particular, we reduce the combinatorial optimization problem to a neural network and employ a dataless training scheme to refine the parameters of the network such that those parameters yield the structure of interest. We consider the combinatorial optimization problems of finding maximum independent sets and maximum cliques in a graph. In principle, since these problems belong to the NP-hard complexity class, our proposed approach can be used to solve any other NP-hard problem. Additionally, we propose a universal graph reduction procedure to handle large scale graphs. The reduction exploits community detection for graph partitioning and is applicable to any graph type and/or density. Experimental evaluation on both synthetic graphs and real-world benchmarks demonstrates that our method performs on par with or outperforms state-of-the-art heuristic, reinforcement learning, and machine learning based methods without requiring any data.",
+            "score": 4
+        },
+        {
+            "id": "b86390738b00f91c6d3f933773980c1a2a689b92",
+            "paperId": "b86390738b00f91c6d3f933773980c1a2a689b92",
+            "title": "A Combinatorial Optimization Framework for Probability-Based Algorithms by Means of Generative Models",
+            "year": 2024,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "https://dl.acm.org/doi/pdf/10.1145/3665650",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3665650?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3665650, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This article introduces an iterative optimization framework that employs generative models to efficiently estimate the parameters of probability models for optimization problems and demonstrates that the convergence of the algorithms is controllable by adjusting the components of the framework."
+            },
+            "authors": [
+                {
+                    "authorId": "120000218",
+                    "name": "Mikel Malag\u00f3n"
+                },
+                {
+                    "authorId": "2289969646",
+                    "name": "Ekhine Irurozki"
+                },
+                {
+                    "authorId": "2260652140",
+                    "name": "Josu Ceberio"
+                }
+            ],
+            "abstract": "Probability-based algorithms have proven to be a solid alternative for approaching optimization problems. Nevertheless, in many cases, using probabilistic models that efficiently exploit the characteristics of the problem involves large computational overheads, and therefore, lower complexity models such as those that are univariate are usually employed within approximation algorithms. With the motivation to address such an issue, in this article, we aim to introduce an iterative optimization framework that employs generative models to efficiently estimate the parameters of probability models for optimization problems. This allows the use of complex probabilistic models (or those that are appropriate for each problem) in a way that is feasible to apply them iteratively. Specifically, the framework is composed of three elements: a generative model, a probability model whose probability rule is differentiable, and a loss function. The possibility of modifying any of the three elements of the framework offers the flexibility to design algorithms that best adapt to the problem at hand. Experiments conducted on two case studies reveal that the presented approach has strong performance in terms of objective value and execution time when compared to other probability-based algorithms. Moreover, the experimental analysis demonstrates that the convergence of the algorithms is controllable by adjusting the components of the framework. For the sake of reproducibility, the source code, results, scripts, figures, and other material related to the manuscript are available at https://github.com/mikelma/nnco_lib.",
+            "score": 4
+        },
+        {
+            "id": "006d3ae4ff5584f1cfe00381c5cc5a4c1f2215b7",
+            "paperId": "006d3ae4ff5584f1cfe00381c5cc5a4c1f2215b7",
+            "title": "Differentiable Optimization for Orchestration: Resource Offloading for Vehicles in Smart Cities",
+            "year": 2024,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10423649.pdf",
+                "status": "GOLD",
+                "license": "CCBYNCND",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2024.3363426?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2024.3363426, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This Differentiable Orchestrator converts a combinatorial problem into a soft-constrained differentiable analog, which can be solved very quickly and significantly outperforms most competing methods in artificial examples and realistic scenarios."
+            },
+            "authors": [
+                {
+                    "authorId": "2283166953",
+                    "name": "Thilo Strauss"
+                },
+                {
+                    "authorId": "52211220",
+                    "name": "Michael Oechsle"
+                },
+                {
+                    "authorId": "2283177530",
+                    "name": "Uwe Bauknecht"
+                }
+            ],
+            "abstract": "Connected and Autonomous Vehicles (CAV) which interact with Roadside Units (RSU) as part of a smart city infrastructure are currently seeing first real-world deployments. Not only can CAVs benefit from access to a cities\u2019 infrastructure by obtaining data from various sensors (e.g., Video or Lidar), but they can also leverage the broad network coverage to offload complex computation tasks from their limited on-board hardware to scalable cloud resources. Furthermore, a smart city supporting multi-access edge computing (MEC) can even provide safety-relevant and time-critical services thanks to reduced latency and increased reliability. This requires an algorithm to determine which vehicle offloads computation to which computation resource in the city. This orchestration task is a challenging combinatorial problem subject to resource and quality of service constraints. We present a novel and powerful, yet surprisingly simple algorithm that provides a good and fast approximation to this problem. This Differentiable Orchestrator converts a combinatorial problem into a soft-constrained differentiable analog, which can be solved very quickly. We compare the proposed method with other heuristic methods and conclude that it significantly outperforms most competing methods in artificial examples and realistic scenarios. In order to make the method as reproducible as possible and serve as a baseline for future research we make our data and simulations publicly available.",
+            "score": 4
+        },
+        {
+            "id": "3f87530bf87a3ed3a7a803f0aa7815484d5bc7e6",
+            "paperId": "3f87530bf87a3ed3a7a803f0aa7815484d5bc7e6",
+            "title": "Differentiable Scaffolding Tree for Molecular Optimization",
+            "year": 2021,
+            "citationCount": 78,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2109.10469, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "DST enables a gradient-based optimization on a chemical graph structure by back-propagating the derivatives from the target properties through a graph neural network (GNN) and can also provide an explanation that helps domain experts understand the model output."
+            },
+            "authors": [
+                {
+                    "authorId": "2427076",
+                    "name": "Tianfan Fu"
+                },
+                {
+                    "authorId": "2153575781",
+                    "name": "Wenhao Gao"
+                },
+                {
+                    "authorId": "145781464",
+                    "name": "Cao Xiao"
+                },
+                {
+                    "authorId": "1500475065",
+                    "name": "Jacob Yasonik"
+                },
+                {
+                    "authorId": "13027820",
+                    "name": "Connor W. Coley"
+                },
+                {
+                    "authorId": "1738536",
+                    "name": "Jimeng Sun"
+                }
+            ],
+            "abstract": "The structural design of functional molecules, also called molecular optimization, is an essential chemical science and engineering task with important applications, such as drug discovery. Deep generative models and combinatorial optimization methods achieve initial success but still struggle with directly modeling discrete chemical structures and often heavily rely on brute-force enumeration. The challenge comes from the discrete and non-differentiable nature of molecule structures. To address this, we propose differentiable scaffolding tree (DST) that utilizes a learned knowledge network to convert discrete chemical structures to locally differentiable ones. DST enables a gradient-based optimization on a chemical graph structure by back-propagating the derivatives from the target properties through a graph neural network (GNN). Our empirical studies show the gradient-based molecular optimizations are both effective and sample efficient. Furthermore, the learned graph parameters can also provide an explanation that helps domain experts understand the model output.",
+            "score": 4
+        },
+        {
+            "id": "6eb422c8324e0a731ed8c3d6f8ead3f3e8d7e2c0",
+            "paperId": "6eb422c8324e0a731ed8c3d6f8ead3f3e8d7e2c0",
+            "title": "Advancing Differentiable Economics: A Neural Network Framework for Revenue-Maximizing Combinatorial Auction Mechanisms",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2501.19219, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "Two architectures are proposed: CANet, a fully connected neural network, and CAFormer, a transformer-based model designed to learn optimal randomized mechanisms, offering a scalable and flexible framework for designing revenue-maximizing mechanisms."
+            },
+            "authors": [
+                {
+                    "authorId": "2343502772",
+                    "name": "Mai Pham"
+                },
+                {
+                    "authorId": "145870521",
+                    "name": "Vikrant Vaze"
+                },
+                {
+                    "authorId": "2310762967",
+                    "name": "Peter Chin"
+                }
+            ],
+            "abstract": "Differentiable economics, which uses neural networks as function approximators and gradient-based optimization in automated mechanism design (AMD), marked a significant breakthrough with the introduction of RegretNet \\citep{regretnet_paper}. It combines the flexibility of deep learning with a regret-based approach to relax incentive compatibility, allowing for approximations of revenue-maximizing auctions. However, applying these techniques to combinatorial auctions (CAs) - where bidders value bundles rather than individual items, capturing item interdependencies - remains a challenge, primarily due to the lack of methodologies that can effectively deal with combinatorial constraints. To tackle this, we propose two architectures: CANet, a fully connected neural network, and CAFormer, a transformer-based model designed to learn optimal randomized mechanisms. Unlike existing methods in traditional AMD, our approach is more scalable and free of assumptions about the structures of allowable bundles or bidder valuations. We demonstrate that our models match current methods in non-combinatorial settings and set new benchmarks for CAs. Specifically, our models consistently outperform benchmark mechanisms derived from heuristic approaches and provide empirical solutions where analytical results are unavailable. This work bridges the gap in applying differentiable economics to combinatorial auctions, offering a scalable and flexible framework for designing revenue-maximizing mechanisms.",
+            "score": 4
+        },
+        {
+            "id": "4ed104b6446f8a3bc1864454994bc1b13abeec5e",
+            "paperId": "4ed104b6446f8a3bc1864454994bc1b13abeec5e",
+            "title": "Sequential Policy Gradient for Adaptive Hyperparameter Optimization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.15051, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2367520682",
+                    "name": "Zheng Li"
+                },
+                {
+                    "authorId": "2367491441",
+                    "name": "Jerry Cheng"
+                },
+                {
+                    "authorId": "2367725619",
+                    "name": "Huanying Helen Gu"
+                }
+            ],
+            "abstract": "Reinforcement learning is essential for neural architecture search and hyperparameter optimization, but the conventional approaches impede widespread use due to prohibitive time and computational costs. Inspired by DeepSeek-V3 multi-token prediction architecture, we propose Sequential Policy Gradient modeling (SPG), a novel trajectory generation paradigm for lightweight online hyperparameter optimization. In contrast to conventional policy gradient methods, SPG extends the base model with temporary modules, enabling it to generate state-action (padded) trajectories in a single forward pass. Our experiments demonstrate that models gain performance when retrained with SPG on their original datasets and also outperform standard transfer fine-tuning. We evaluate on five datasets spanning computer vision (ImageNet, COCO), natural language processing (GLUE, SQuAD), and audio (SUPERB) to assess the industrial applicability of SPG. The proposed method demonstrates consistent improvements across widely adopted models, achieving performance gains of $+0.2\\sim7\\%$, with significantly low computational costs. Fully reproducible code and pre-trained models: https://huggingface.co/UniversalAlgorithmic/SPG.",
+            "score": 3
+        },
+        {
+            "id": "0c9083e88123793b50548d73f2065a86e5bfd845",
+            "paperId": "0c9083e88123793b50548d73f2065a86e5bfd845",
+            "title": "Neural Network Training via Stochastic Alternating Minimization with Trainable Step Sizes",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04193, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2264207100",
+                    "name": "Chengcheng Yan"
+                },
+                {
+                    "authorId": "2287881326",
+                    "name": "Jiawei Xu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Zheng Peng"
+                },
+                {
+                    "authorId": "2349552827",
+                    "name": "Qingsong Wang"
+                }
+            ],
+            "abstract": "The training of deep neural networks is inherently a nonconvex optimization problem, yet standard approaches such as stochastic gradient descent (SGD) require simultaneous updates to all parameters, often leading to unstable convergence and high computational cost. To address these issues, we propose a novel method, Stochastic Alternating Minimization with Trainable Step Sizes (SAMT), which updates network parameters in an alternating manner by treating the weights of each layer as a block. By decomposing the overall optimization into sub-problems corresponding to different blocks, this block-wise alternating strategy reduces per-step computational overhead and enhances training stability in nonconvex settings. To fully leverage these benefits, inspired by meta-learning, we proposed a novel adaptive step size strategy to incorporate into the sub-problem solving steps of alternating updates. It supports different types of trainable step sizes, including but not limited to scalar, element-wise, row-wise, and column-wise, enabling adaptive step size selection tailored to each block via meta-learning. We further provide a theoretical convergence guarantee for the proposed algorithm, establishing its optimization soundness. Extensive experiments for multiple benchmarks demonstrate that SAMT achieves better generalization performance with fewer parameter updates compared to state-of-the-art methods, highlighting its effectiveness and potential in neural network optimization.",
+            "score": 3
+        },
+        {
+            "id": "abfc74feb59ba6b0502c593199099afeadedf36d",
+            "paperId": "abfc74feb59ba6b0502c593199099afeadedf36d",
+            "title": "Jointly Learnable Behavior and Trajectory Planning for Self-Driving Vehicles",
+            "year": 2019,
+            "citationCount": 94,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1910.04586",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.04586, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "152948272",
+                    "name": "Abbas Sadat"
+                },
+                {
+                    "authorId": "2540599",
+                    "name": "Mengye Ren"
+                },
+                {
+                    "authorId": "49224681",
+                    "name": "A. Pokrovsky"
+                },
+                {
+                    "authorId": "49415774",
+                    "name": "Yen-Chen Lin"
+                },
+                {
+                    "authorId": "8020964",
+                    "name": "Ersin Yumer"
+                },
+                {
+                    "authorId": "2422559",
+                    "name": "R. Urtasun"
+                }
+            ],
+            "abstract": "The motion planners used in self-driving vehicles need to generate trajectories that are safe, comfortable, and obey the traffic rules. This is usually achieved by two modules: behavior planner, which handles high-level decisions and produces a coarse trajectory, and trajectory planner that generates a smooth, feasible trajectory for the duration of the planning horizon. These planners, however, are typically developed separately, and changes in the behavior planner might affect the trajectory planner in unexpected ways. Furthermore, the final trajectory outputted by the trajectory planner might differ significantly from the one generated by the behavior planner, as they do not share the same objective. In this paper, we propose a jointly learnable behavior and trajectory planner. Unlike most existing learnable motion planners that address either only behavior planning, or use an uninterpretable neural network to represent the entire logic from sensors to driving commands, our approach features an interpretable cost function on top of perception, prediction and vehicle dynamics, and a joint learning algorithm that learns a shared cost function employed by our behavior and trajectory components. Experiments on real-world self-driving data demonstrate that jointly learned planner performs significantly better in terms of both similarity to human driving and other safety metrics, compared to baselines that do not adopt joint behavior and trajectory learning.",
+            "score": 3
+        },
+        {
+            "id": "3ca8a63b74859c8e74ec905f6f655470b8e47b17",
+            "paperId": "3ca8a63b74859c8e74ec905f6f655470b8e47b17",
+            "title": "Learning with Fenchel-Young Losses",
+            "year": 2019,
+            "citationCount": 143,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1901.02324, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "27257992",
+                    "name": "Mathieu Blondel"
+                },
+                {
+                    "authorId": "145644643",
+                    "name": "Andr\u00e9 F. T. Martins"
+                },
+                {
+                    "authorId": "2114966",
+                    "name": "Vlad Niculae"
+                }
+            ],
+            "abstract": "Over the past decades, numerous loss functions have been been proposed for a variety of supervised learning tasks, including regression, classification, ranking, and more generally structured prediction. Understanding the core principles and theoretical properties underpinning these losses is key to choose the right loss for the right problem, as well as to create new losses which combine their strengths. In this paper, we introduce Fenchel-Young losses, a generic way to construct a convex loss function for a regularized prediction function. We provide an in-depth study of their properties in a very broad setting, covering all the aforementioned supervised learning tasks, and revealing new connections between sparsity, generalized entropies, and separation margins. We show that Fenchel-Young losses unify many well-known loss functions and allow to create useful new ones easily. Finally, we derive efficient predictive and training algorithms, making Fenchel-Young losses appealing both in theory and practice.",
+            "score": 3
+        },
+        {
+            "id": "1aac087c15d9c02604da5ff28060d6d6194d3c2a",
+            "paperId": "1aac087c15d9c02604da5ff28060d6d6194d3c2a",
+            "title": "Differentiable Mapper For Topological Optimization Of Data Representation",
+            "year": 2024,
+            "citationCount": 6,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.12854, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "This work builds on a recently proposed optimization framework incorporating topology to provide the first filter optimization scheme for Mapper graphs, and proposes a relaxed and more general version of the Mapper graph, whose convergence properties are investigated."
+            },
+            "authors": [
+                {
+                    "authorId": "2284767462",
+                    "name": "Ziyad Oulhaj"
+                },
+                {
+                    "authorId": "2284766210",
+                    "name": "Mathieu Carri\u00e8re"
+                },
+                {
+                    "authorId": "2284768398",
+                    "name": "Bertrand Michel"
+                }
+            ],
+            "abstract": "Unsupervised data representation and visualization using tools from topology is an active and growing field of Topological Data Analysis (TDA) and data science. Its most prominent line of work is based on the so-called Mapper graph, which is a combinatorial graph whose topological structures (connected components, branches, loops) are in correspondence with those of the data itself. While highly generic and applicable, its use has been hampered so far by the manual tuning of its many parameters-among these, a crucial one is the so-called filter: it is a continuous function whose variations on the data set are the main ingredient for both building the Mapper representation and assessing the presence and sizes of its topological structures. However, while a few parameter tuning methods have already been investigated for the other Mapper parameters (i.e., resolution, gain, clustering), there is currently no method for tuning the filter itself. In this work, we build on a recently proposed optimization framework incorporating topology to provide the first filter optimization scheme for Mapper graphs. In order to achieve this, we propose a relaxed and more general version of the Mapper graph, whose convergence properties are investigated. Finally, we demonstrate the usefulness of our approach by optimizing Mapper graph representations on several datasets, and showcasing the superiority of the optimized representation over arbitrary ones.",
+            "score": 3
+        },
+        {
+            "id": "f5cb32542c67f606ae3a4da9ac2b744ebe4e53a4",
+            "paperId": "f5cb32542c67f606ae3a4da9ac2b744ebe4e53a4",
+            "title": "KaryoNet: Chromosome Recognition With End-to-End Combinatorial Optimization Network",
+            "year": 2023,
+            "citationCount": 10,
+            "openAccessPdf": {
+                "url": "",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TMI.2023.3268889?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TMI.2023.3268889, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "An end-to-end differentiable combinatorial optimization method, KaryoNet, which captures long-range interactions between chromosomes with the proposed Masked Feature Interaction Module (MFIM) and conducts label assignment in a flexible and differentiable way with Deep Assignment Module (DAM)."
+            },
+            "authors": [
+                {
+                    "authorId": "2056989136",
+                    "name": "Chao Xia"
+                },
+                {
+                    "authorId": "2144491603",
+                    "name": "Ji-ying Wang"
+                },
+                {
+                    "authorId": "1717081702",
+                    "name": "Yulei Qin"
+                },
+                {
+                    "authorId": "2113341239",
+                    "name": "Juan Wen"
+                },
+                {
+                    "authorId": "2214912756",
+                    "name": "Zhaojiang Liu"
+                },
+                {
+                    "authorId": "5449716",
+                    "name": "Ning-jing Song"
+                },
+                {
+                    "authorId": "6181909",
+                    "name": "Lingqian Wu"
+                },
+                {
+                    "authorId": "2146712517",
+                    "name": "Bing Chen"
+                },
+                {
+                    "authorId": "143908242",
+                    "name": "Yun Gu"
+                },
+                {
+                    "authorId": "2118580703",
+                    "name": "Jie Yang"
+                }
+            ],
+            "abstract": "Chromosome recognition is a critical way to diagnose various hematological malignancies and genetic diseases, which is however a repetitive and time-consuming process in karyotyping. To explore the relative relation between chromosomes, in this work, we start from a global perspective and learn the contextual interactions and class distribution features between chromosomes within a karyotype. We propose an end-to-end differentiable combinatorial optimization method, KaryoNet, which captures long-range interactions between chromosomes with the proposed Masked Feature Interaction Module (MFIM) and conducts label assignment in a flexible and differentiable way with Deep Assignment Module (DAM). Specially, a Feature Matching Sub-Network is built to predict the mask array for attention computation in MFIM. Lastly, Type and Polarity Prediction Head can predict chromosome type and polarity simultaneously. Extensive experiments on R-band and G-band two clinical datasets demonstrate the merits of the proposed method. For normal karyotypes, the proposed KaryoNet achieves the accuracy of 98.41% on R-band chromosome and 99.58% on G-band chromosome. Owing to the extracted internal relation and class distribution features, KaryoNet can also achieve state-of-the-art performances on karyotypes of patients with different types of numerical abnormalities. The proposed method has been applied to assist clinical karyotype diagnosis. Our code is available at: https://github.com/xiabc612/KaryoNet.",
+            "score": 3
+        },
+        {
+            "id": "cb14794260e9220dcda07e1b8ad6e4370a5b5ff7",
+            "paperId": "cb14794260e9220dcda07e1b8ad6e4370a5b5ff7",
+            "title": "Offline Reinforcement Learning with Wasserstein Regularization via Optimal Transport Maps",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.10843, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2290906540",
+                    "name": "Motoki Omura"
+                },
+                {
+                    "authorId": "2374364",
+                    "name": "Yusuke Mukuta"
+                },
+                {
+                    "authorId": "2366005318",
+                    "name": "Kazuki Ota"
+                },
+                {
+                    "authorId": "2253748734",
+                    "name": "Takayuki Osa"
+                },
+                {
+                    "authorId": "2253762492",
+                    "name": "Tatsuya Harada"
+                }
+            ],
+            "abstract": "Offline reinforcement learning (RL) aims to learn an optimal policy from a static dataset, making it particularly valuable in scenarios where data collection is costly, such as robotics. A major challenge in offline RL is distributional shift, where the learned policy deviates from the dataset distribution, potentially leading to unreliable out-of-distribution actions. To mitigate this issue, regularization techniques have been employed. While many existing methods utilize density ratio-based measures, such as the $f$-divergence, for regularization, we propose an approach that utilizes the Wasserstein distance, which is robust to out-of-distribution data and captures the similarity between actions. Our method employs input-convex neural networks (ICNNs) to model optimal transport maps, enabling the computation of the Wasserstein distance in a discriminator-free manner, thereby avoiding adversarial training and ensuring stable learning. Our approach demonstrates comparable or superior performance to widely used existing methods on the D4RL benchmark dataset. The code is available at https://github.com/motokiomura/Q-DOT .",
+            "score": 2
+        },
+        {
+            "id": "a41868378f83755a82d0fe882e8e507eafb151ec",
+            "paperId": "a41868378f83755a82d0fe882e8e507eafb151ec",
+            "title": "Thompson Sampling in Function Spaces via Neural Operators",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.21894, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2321093450",
+                    "name": "Rafael Oliveira"
+                },
+                {
+                    "authorId": "2303408392",
+                    "name": "Xuesong Wang"
+                },
+                {
+                    "authorId": "1890071",
+                    "name": "K. M. Chai"
+                },
+                {
+                    "authorId": "2302803908",
+                    "name": "Edwin V. Bonilla"
+                }
+            ],
+            "abstract": "We propose an extension of Thompson sampling to optimization problems over function spaces where the objective is a known functional of an unknown operator's output. We assume that functional evaluations are inexpensive, while queries to the operator (such as running a high-fidelity simulator) are costly. Our algorithm employs a sample-then-optimize approach using neural operator surrogates. This strategy avoids explicit uncertainty quantification by treating trained neural operators as approximate samples from a Gaussian process. We provide novel theoretical convergence guarantees, based on Gaussian processes in the infinite-dimensional setting, under minimal assumptions. We benchmark our method against existing baselines on functional optimization tasks involving partial differential equations and other nonlinear operator-driven phenomena, demonstrating improved sample efficiency and competitive performance.",
+            "score": 2
+        },
+        {
+            "id": "4047669bcb8825fb90b42e1742cb6d33f25f81cc",
+            "paperId": "4047669bcb8825fb90b42e1742cb6d33f25f81cc",
+            "title": "Direct Regret Optimization in Bayesian Optimization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.06529, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2258699877",
+                    "name": "Fengxue Zhang"
+                },
+                {
+                    "authorId": "2258604755",
+                    "name": "Yuxin Chen"
+                }
+            ],
+            "abstract": "Bayesian optimization (BO) is a powerful paradigm for optimizing expensive black-box functions. Traditional BO methods typically rely on separate hand-crafted acquisition functions and surrogate models for the underlying function, and often operate in a myopic manner. In this paper, we propose a novel direct regret optimization approach that jointly learns the optimal model and non-myopic acquisition by distilling from a set of candidate models and acquisitions, and explicitly targets minimizing the multi-step regret. Our framework leverages an ensemble of Gaussian Processes (GPs) with varying hyperparameters to generate simulated BO trajectories, each guided by an acquisition function chosen from a pool of conventional choices, until a Bayesian early stop criterion is met. These simulated trajectories, capturing multi-step exploration strategies, are used to train an end-to-end decision transformer that directly learns to select next query points aimed at improving the ultimate objective. We further adopt a dense training--sparse learning paradigm: The decision transformer is trained offline with abundant simulated data sampled from ensemble GPs and acquisitions, while a limited number of real evaluations refine the GPs online. Experimental results on synthetic and real-world benchmarks suggest that our method consistently outperforms BO baselines, achieving lower simple regret and demonstrating more robust exploration in high-dimensional or noisy settings.",
+            "score": 2
+        },
+        {
+            "id": "31e6449d9b1d79043d8ccd90af83a5360a1c723e",
+            "paperId": "31e6449d9b1d79043d8ccd90af83a5360a1c723e",
+            "title": "Deep Reinforcement Learning with Gradient Eligibility Traces",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.09087, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2086720736",
+                    "name": "Esraa Elelimy"
+                },
+                {
+                    "authorId": "2282962550",
+                    "name": "Brett Daley"
+                },
+                {
+                    "authorId": "2363493359",
+                    "name": "Andrew Patterson"
+                },
+                {
+                    "authorId": "40066857",
+                    "name": "Marlos C. Machado"
+                },
+                {
+                    "authorId": "2261440541",
+                    "name": "Adam White"
+                },
+                {
+                    "authorId": "2266713684",
+                    "name": "Martha White"
+                }
+            ],
+            "abstract": "Achieving fast and stable off-policy learning in deep reinforcement learning (RL) is challenging. Most existing methods rely on semi-gradient temporal-difference (TD) methods for their simplicity and efficiency, but are consequently susceptible to divergence. While more principled approaches like Gradient TD (GTD) methods have strong convergence guarantees, they have rarely been used in deep RL. Recent work introduced the Generalized Projected Bellman Error ($\\GPBE$), enabling GTD methods to work efficiently with nonlinear function approximation. However, this work is only limited to one-step methods, which are slow at credit assignment and require a large number of samples. In this paper, we extend the $\\GPBE$ objective to support multistep credit assignment based on the $\\lambda$-return and derive three gradient-based methods that optimize this new objective. We provide both a forward-view formulation compatible with experience replay and a backward-view formulation compatible with streaming algorithms. Finally, we evaluate the proposed algorithms and show that they outperform both PPO and StreamQ in MuJoCo and MinAtar environments, respectively. Code available at https://github.com/esraaelelimy/gtd\\_algos",
+            "score": 2
+        },
+        {
+            "id": "a93f3e5f0e3fcf617ec01c673e1b3656551c574c",
+            "paperId": "a93f3e5f0e3fcf617ec01c673e1b3656551c574c",
+            "title": "Fast and Stable Diffusion Planning through Variational Adaptive Weighting",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.16688, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368647292",
+                    "name": "Zhiying Qiu"
+                },
+                {
+                    "authorId": "2367750249",
+                    "name": "Tao Lin"
+                }
+            ],
+            "abstract": "Diffusion models have recently shown promise in offline RL. However, these methods often suffer from high training costs and slow convergence, particularly when using transformer-based denoising backbones. While several optimization strategies have been proposed -- such as modified noise schedules, auxiliary prediction targets, and adaptive loss weighting -- challenges remain in achieving stable and efficient training. In particular, existing loss weighting functions typically rely on neural network approximators, which can be ineffective in early training phases due to limited generalization capacity of MLPs when exposed to sparse feedback in the early training stages. In this work, we derive a variationally optimal uncertainty-aware weighting function and introduce a closed-form polynomial approximation method for its online estimation under the flow-based generative modeling framework. We integrate our method into a diffusion planning pipeline and evaluate it on standard offline RL benchmarks. Experimental results on Maze2D and Kitchen tasks show that our method achieves competitive performance with up to 10 times fewer training steps, highlighting its practical effectiveness.",
+            "score": 2
+        },
+        {
+            "id": "6f1ee04e9d1d27661de1e5cd788504e270b06ca3",
+            "paperId": "6f1ee04e9d1d27661de1e5cd788504e270b06ca3",
+            "title": "Decoupled Relative Learning Rate Schedules",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.03526, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2261391884",
+                    "name": "Jan Ludziejewski"
+                },
+                {
+                    "authorId": "2344621662",
+                    "name": "Jan Mala'snicki"
+                },
+                {
+                    "authorId": "2261392151",
+                    "name": "Maciej Pi'oro"
+                },
+                {
+                    "authorId": "2261391303",
+                    "name": "Michal Krutul"
+                },
+                {
+                    "authorId": "2278427988",
+                    "name": "Kamil Ciebiera"
+                },
+                {
+                    "authorId": "2344621744",
+                    "name": "Maciej Stefaniak"
+                },
+                {
+                    "authorId": "2261391307",
+                    "name": "Jakub Krajewski"
+                },
+                {
+                    "authorId": "2268495134",
+                    "name": "Piotr Sankowski"
+                },
+                {
+                    "authorId": "2261392232",
+                    "name": "Marek Cygan"
+                },
+                {
+                    "authorId": "2287756379",
+                    "name": "Kamil Adamczewski"
+                },
+                {
+                    "authorId": "2373035602",
+                    "name": "Sebastian Jaszczur"
+                }
+            ],
+            "abstract": "In this work, we introduce a novel approach for optimizing LLM training by adjusting learning rates across weights of different components in Transformer models. Traditional methods often apply a uniform learning rate across all network layers, potentially overlooking the unique dynamics of each part. Remarkably, our introduced relative learning rates, RLRS, method accelerates the training process by up to $23\\%$, particularly in complex models such as Mixture of Experts (MoE). Hyperparameters of RLRS can be efficiently tuned on smaller models and then effectively reused on models up to $27\\times$ larger. This simple and effective method results in a substantial reduction in training time and computational resources, offering a practical and scalable solution for optimizing large-scale neural networks.",
+            "score": 2
+        },
+        {
+            "id": "89769de6e51c984fd24c54b64c3b421c2763ea88",
+            "paperId": "89769de6e51c984fd24c54b64c3b421c2763ea88",
+            "title": "LG-XLR: Loss-Guided Exponential Learning Rate Adaptation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/DSP65409.2025.11075054?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/DSP65409.2025.11075054, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1580379718",
+                    "name": "Rakib Ul Haque"
+                },
+                {
+                    "authorId": "2342697259",
+                    "name": "P. Markopoulos"
+                }
+            ],
+            "abstract": "The learning rate (LR) critically shapes the con-vergence and performance of machine learning models, yet traditional adaptive strategies often rely on manually tuned initializations and optimizer-specific designs, constraining their flexibility. This paper presents LG-XLR, a novel, fully automated, and optimizer-agnostic framework for dynamic LR adaptation, guided by real-time loss trends. Our approach hinges on two innovations: (1) loss-guided adaptation, where training and validation loss changes are monitored at each epoch to steer LR updates, and (2) an exponential LR range exploration that dynamically adjusts bounds without predefined schedules or initial guesses. By refining the LR range based on these loss-driven insights, our method exhibits stable convergence, mitigates overfitting, and eliminates task-specific tuning. Compatible with any gradient-based optimizer, it adapts seamlessly across models, datasets, and training scenarios. Experiments on CIFAR-10 image classification show consistent generalization (82-84% test accuracy) and faster convergence (25\u201342 epochs to 80% accuracy) across five optimizers, outperforming baselines like CLR and LRTuner in versatility and efficiency.",
+            "score": 2
+        },
+        {
+            "id": "8e51d68250db5637cd6bc1de98a99396441399b2",
+            "paperId": "8e51d68250db5637cd6bc1de98a99396441399b2",
+            "title": "Computational Optimal Transport",
+            "year": 2018,
+            "citationCount": 2203,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1803.00567",
+                "status": "CLOSED",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1803.00567, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145481009",
+                    "name": "G. Peyr\u00e9"
+                },
+                {
+                    "authorId": "1711979",
+                    "name": "Marco Cuturi"
+                }
+            ],
+            "abstract": "Optimal transport (OT) theory can be informally described using the words of the French mathematician Gaspard Monge (1746-1818): A worker with a shovel in hand has to move a large pile of sand lying on a construction site. The goal of the worker is to erect with all that sand a target pile with a prescribed shape (for example, that of a giant sand castle). Naturally, the worker wishes to minimize her total effort, quantified for instance as the total distance or time spent carrying shovelfuls of sand. Mathematicians interested in OT cast that problem as that of comparing two probability distributions, two different piles of sand of the same volume. They consider all of the many possible ways to morph, transport or reshape the first pile into the second, and associate a \"global\" cost to every such transport, using the \"local\" consideration of how much it costs to move a grain of sand from one place to another. Recent years have witnessed the spread of OT in several fields, thanks to the emergence of approximate solvers that can scale to sizes and dimensions that are relevant to data sciences. Thanks to this newfound scalability, OT is being increasingly used to unlock various problems in imaging sciences (such as color or texture processing), computer vision and graphics (for shape manipulation) or machine learning (for regression, classification and density fitting). This short book reviews OT with a bias toward numerical methods and their applications in data sciences, and sheds lights on the theoretical properties of OT that make it particularly useful for some of these applications.",
+            "score": 2
+        },
+        {
+            "id": "a7d7e882a29342b7efb13429ebea82a7c40ccebf",
+            "paperId": "a7d7e882a29342b7efb13429ebea82a7c40ccebf",
+            "title": "Optimizers Qualitatively Alter Solutions And We Should Leverage This",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.12224, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1996134",
+                    "name": "Razvan Pascanu"
+                },
+                {
+                    "authorId": "2316622654",
+                    "name": "Clare Lyle"
+                },
+                {
+                    "authorId": "1994528233",
+                    "name": "Ionut-Vlad Modoranu"
+                },
+                {
+                    "authorId": "2211432469",
+                    "name": "Naima Elosegui Borras"
+                },
+                {
+                    "authorId": "3311387",
+                    "name": "Dan Alistarh"
+                },
+                {
+                    "authorId": "2261482840",
+                    "name": "Petar Velickovic"
+                },
+                {
+                    "authorId": "123607932",
+                    "name": "Sarath Chandar"
+                },
+                {
+                    "authorId": "2374027523",
+                    "name": "Soham De"
+                },
+                {
+                    "authorId": "2288176078",
+                    "name": "James Martens"
+                }
+            ],
+            "abstract": "Due to the nonlinear nature of Deep Neural Networks (DNNs), one can not guarantee convergence to a unique global minimum of the loss when using optimizers relying only on local information, such as SGD. Indeed, this was a primary source of skepticism regarding the feasibility of DNNs in the early days of the field. The past decades of progress in deep learning have revealed this skepticism to be misplaced, and a large body of empirical evidence shows that sufficiently large DNNs following standard training protocols exhibit well-behaved optimization dynamics that converge to performant solutions. This success has biased the community to use convex optimization as a mental model for learning, leading to a focus on training efficiency, either in terms of required iteration, FLOPs or wall-clock time, when improving optimizers. We argue that, while this perspective has proven extremely fruitful, another perspective specific to DNNs has received considerably less attention: the optimizer not only influences the rate of convergence, but also the qualitative properties of the learned solutions. Restated, the optimizer can and will encode inductive biases and change the effective expressivity of a given class of models. Furthermore, we believe the optimizer can be an effective way of encoding desiderata in the learning process. We contend that the community should aim at understanding the biases of already existing methods, as well as aim to build new optimizers with the explicit intent of inducing certain properties of the solution, rather than solely judging them based on their convergence rates. We hope our arguments will inspire research to improve our understanding of how the learning process can impact the type of solution we converge to, and lead to a greater recognition of optimizers design as a critical lever that complements the roles of architecture and data in shaping model outcomes.",
+            "score": 1
+        },
+        {
+            "id": "be698680a28332761ee61814bc50a95cea5af0df",
+            "paperId": "be698680a28332761ee61814bc50a95cea5af0df",
+            "title": "Elucidating linear programs by neural encodings",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": "CCBY",
+                "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC12213677, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2074681963",
+                    "name": "Florian Peter Busch"
+                },
+                {
+                    "authorId": "35745805",
+                    "name": "M. Zecevic"
+                },
+                {
+                    "authorId": "2113406566",
+                    "name": "K. Kersting"
+                },
+                {
+                    "authorId": "39552485",
+                    "name": "D. Dhami"
+                }
+            ],
+            "abstract": "Linear Programs (LPs) are one of the major building blocks of AI and have championed recent strides in differentiable optimizers for learning systems. While efficient solvers exist for even high-dimensional LPs, explaining their solutions has not received much attention yet, as explainable artificial intelligence (XAI) has mostly focused on deep learning models. LPs are mostly considered white-box and thus assumed simple to explain, but we argue that they are not easy to understand in terms of relationships between inputs and outputs. To mitigate this rather non-explainability of LPs we show how to adapt attribution methods by encoding LPs in a neural fashion. The encoding functions consider aspects such as the feasibility of the decision space, the cost attached to each input, and the distance to special points of interest. Using a variety of LPs, including a very large-scale LP with 10k dimensions, we demonstrate the usefulness of explanation methods using our neural LP encodings, although the attribution methods Saliency and LIME are indistinguishable for low perturbation levels. In essence, we demonstrate that LPs can and should be explained, which can be achieved by representing an LP as a neural network.",
+            "score": 1
+        },
+        {
+            "id": "2b620f81725787637c520e7ef3d803771a664d0f",
+            "paperId": "2b620f81725787637c520e7ef3d803771a664d0f",
+            "title": "Parametrized Multi-Agent Routing via Deep Attention Models",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.22338, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2922592",
+                    "name": "S. Basiri"
+                },
+                {
+                    "authorId": "2281972702",
+                    "name": "Dhananjay Tiwari"
+                },
+                {
+                    "authorId": "2282056779",
+                    "name": "Srinivasa M. Salapaka"
+                }
+            ],
+            "abstract": "We propose a scalable deep learning framework for parametrized sequential decision-making (ParaSDM), where multiple agents jointly optimize discrete action policies and shared continuous parameters. A key subclass of this setting arises in Facility-Location and Path Optimization (FLPO), where multi-agent systems must simultaneously determine optimal routes and facility locations, aiming to minimize the cumulative transportation cost within the network. FLPO problems are NP-hard due to their mixed discrete-continuous structure and highly non-convex objective. To address this, we integrate the Maximum Entropy Principle (MEP) with a neural policy model called the Shortest Path Network (SPN)-a permutation-invariant encoder-decoder that approximates the MEP solution while enabling efficient gradient-based optimization over shared parameters. The SPN achieves up to 100$\\times$ speedup in policy inference and gradient computation compared to MEP baselines, with an average optimality gap of approximately 6% across a wide range of problem sizes. Our FLPO approach yields over 10$\\times$ lower cost than metaheuristic baselines while running significantly faster, and matches Gurobi's optimal cost with annealing at a 1500$\\times$ speedup-establishing a new state of the art for ParaSDM problems. These results highlight the power of structured deep models for solving large-scale mixed-integer optimization tasks.",
+            "score": 1
+        },
+        {
+            "id": "ef1bf62eaae541e67d6a4f41356f07d7104b7585",
+            "paperId": "ef1bf62eaae541e67d6a4f41356f07d7104b7585",
+            "title": "A Simplified Analysis of SGD for Linear Regression with Weight Averaging",
+            "year": 2025,
+            "citationCount": 2,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.15535, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2007246756",
+                    "name": "Alexandru Meterez"
+                },
+                {
+                    "authorId": "2003598814",
+                    "name": "Depen Morwani"
+                },
+                {
+                    "authorId": "2223774692",
+                    "name": "Costin-Andrei Oncescu"
+                },
+                {
+                    "authorId": "2328185462",
+                    "name": "Jingfeng Wu"
+                },
+                {
+                    "authorId": "2577481",
+                    "name": "Cengiz Pehlevan"
+                },
+                {
+                    "authorId": "144695232",
+                    "name": "S. Kakade"
+                }
+            ],
+            "abstract": "Theoretically understanding stochastic gradient descent (SGD) in overparameterized models has led to the development of several optimization algorithms that are widely used in practice today. Recent work by~\\citet{zou2021benign} provides sharp rates for SGD optimization in linear regression using constant learning rate, both with and without tail iterate averaging, based on a bias-variance decomposition of the risk. In our work, we provide a simplified analysis recovering the same bias and variance bounds provided in~\\citep{zou2021benign} based on simple linear algebra tools, bypassing the requirement to manipulate operators on positive semi-definite (PSD) matrices. We believe our work makes the analysis of SGD on linear regression very accessible and will be helpful in further analyzing mini-batching and learning rate scheduling, leading to improvements in the training of realistic models.",
+            "score": 1
+        },
+        {
+            "id": "264013423ebd86e6a316b2579c58b9db59f913f8",
+            "paperId": "264013423ebd86e6a316b2579c58b9db59f913f8",
+            "title": "Local Pairwise Distance Matching for Backpropagation-Free Reinforcement Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11367, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373274922",
+                    "name": "Daniel Tanneberg"
+                }
+            ],
+            "abstract": "Training neural networks with reinforcement learning (RL) typically relies on backpropagation (BP), necessitating storage of activations from the forward pass for subsequent backward updates. Furthermore, backpropagating error signals through multiple layers often leads to vanishing or exploding gradients, which can degrade learning performance and stability. We propose a novel approach that trains each layer of the neural network using local signals during the forward pass in RL settings. Our approach introduces local, layer-wise losses leveraging the principle of matching pairwise distances from multi-dimensional scaling, enhanced with optional reward-driven guidance. This method allows each hidden layer to be trained using local signals computed during forward propagation, thus eliminating the need for backward passes and storing intermediate activations. Our experiments, conducted with policy gradient methods across common RL benchmarks, demonstrate that this backpropagation-free method achieves competitive performance compared to their classical BP-based counterpart. Additionally, the proposed method enhances stability and consistency within and across runs, and improves performance especially in challenging environments.",
+            "score": 1
+        },
+        {
+            "id": "e301730e4656287586f87a1aeeeac6e330c33311",
+            "paperId": "e301730e4656287586f87a1aeeeac6e330c33311",
+            "title": "Tractable Sharpness-Aware Learning of Probabilistic Circuits",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.05537, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2336235981",
+                    "name": "Hrithik Suresh"
+                },
+                {
+                    "authorId": "2257283111",
+                    "name": "Sahil Sidheekh"
+                },
+                {
+                    "authorId": "2375140718",
+                    "name": "Vishnu Shreeram M.P"
+                },
+                {
+                    "authorId": "143927103",
+                    "name": "S. Natarajan"
+                },
+                {
+                    "authorId": "2503137",
+                    "name": "N. C. Krishnan"
+                }
+            ],
+            "abstract": "Probabilistic Circuits (PCs) are a class of generative models that allow exact and tractable inference for a wide range of queries. While recent developments have enabled the learning of deep and expressive PCs, this increased capacity can often lead to overfitting, especially when data is limited. We analyze PC overfitting from a log-likelihood-landscape perspective and show that it is often caused by convergence to sharp optima that generalize poorly. Inspired by sharpness aware minimization in neural networks, we propose a Hessian-based regularizer for training PCs. As a key contribution, we show that the trace of the Hessian of the log-likelihood-a sharpness proxy that is typically intractable in deep neural networks-can be computed efficiently for PCs. Minimizing this Hessian trace induces a gradient-norm-based regularizer that yields simple closed-form parameter updates for EM, and integrates seamlessly with gradient based learning methods. Experiments on synthetic and real-world datasets demonstrate that our method consistently guides PCs toward flatter minima, improves generalization performance.",
+            "score": 1
+        },
+        {
+            "id": "975d2891db24fbbf724868984acccc7201b58bd7",
+            "paperId": "975d2891db24fbbf724868984acccc7201b58bd7",
+            "title": "HiPreNets: High-Precision Neural Networks through Progressive Training",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.15064, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2293315323",
+                    "name": "Ethan Mulle"
+                },
+                {
+                    "authorId": "2359325733",
+                    "name": "Wei Kang"
+                },
+                {
+                    "authorId": "2359374290",
+                    "name": "Qi Gong"
+                }
+            ],
+            "abstract": "Deep neural networks are powerful tools for solving nonlinear problems in science and engineering, but training highly accurate models becomes challenging as problem complexity increases. Non-convex optimization and numerous hyperparameters to tune make performance improvement difficult, and traditional approaches often prioritize minimizing mean squared error (MSE) while overlooking $L^{\\infty}$ error, which is the critical focus in many applications. To address these challenges, we present a progressive framework for training and tuning high-precision neural networks (HiPreNets). Our approach refines a previously explored staged training technique for neural networks that improves an existing fully connected neural network by sequentially learning its prediction residuals using additional networks, leading to improved overall accuracy. We discuss how to take advantage of the structure of the residuals to guide the choice of loss function, number of parameters to use, and ways to introduce adaptive data sampling techniques. We validate our framework's effectiveness through several benchmark problems.",
+            "score": 1
+        },
+        {
+            "id": "8ddccf8cdc58a9530e371c54d8b749558a5a6c4b",
+            "paperId": "8ddccf8cdc58a9530e371c54d8b749558a5a6c4b",
+            "title": "Beyond Value Functions: Single-Loop Bilevel Optimization under Flatness Conditions",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.20400, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2307101617",
+                    "name": "Liuyuan Jiang"
+                },
+                {
+                    "authorId": "2256992663",
+                    "name": "Quan Xiao"
+                },
+                {
+                    "authorId": "2292213175",
+                    "name": "Lisha Chen"
+                },
+                {
+                    "authorId": "2257252141",
+                    "name": "Tianyi Chen"
+                }
+            ],
+            "abstract": "Bilevel optimization, a hierarchical optimization paradigm, has gained significant attention in a wide range of practical applications, notably in the fine-tuning of generative models. However, due to the nested problem structure, most existing algorithms require either the Hessian vector calculation or the nested loop updates, which are computationally inefficient in large language model (LLM) fine-tuning. In this paper, building upon the fully first-order penalty-based approach, we propose an efficient value function-free (PBGD-Free) algorithm that eliminates the loop of solving the lower-level problem and admits fully single-loop updates. Inspired by the landscape analysis of representation learning-based LLM fine-tuning problem, we propose a relaxed flatness condition for the upper-level function and prove the convergence of the proposed value-function-free algorithm. We test the performance of the proposed algorithm in various applications and demonstrate its superior computational efficiency over the state-of-the-art bilevel methods.",
+            "score": 1
+        },
+        {
+            "id": "5ff1e493fa97a6135557e7f1f384057796725130",
+            "paperId": "5ff1e493fa97a6135557e7f1f384057796725130",
+            "title": "Mapping uncertainty using differentiable programming",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1002/aic.18940?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1002/aic.18940, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2341800213",
+                    "name": "Victor Alves"
+                },
+                {
+                    "authorId": "2302655275",
+                    "name": "Carl D. Laird"
+                },
+                {
+                    "authorId": "2249111428",
+                    "name": "Fernando V. Lima"
+                },
+                {
+                    "authorId": "2238949182",
+                    "name": "John R. Kitchin"
+                }
+            ],
+            "abstract": "Uncertainty quantification (UQ) and propagation is a ubiquitous challenge in science, permeating our field in a general fashion, and its importance cannot be overstated. Recently, the commoditization of differentiable programming, motivated by the development of machine learning, has allowed easier access to tools for evaluating derivatives of complex systems, of implicit and nonlinear nature. Motivated by this, we develop a UQ mapping approach based on differentiable programming principles. The approach is novel, faster, and yields equally accurate results when compared against the current state\u2010of\u2010the\u2010art approaches for the UQ problem, which is to quantify and map uncertainty using linear methods or expensive Monte Carlo simulations. Three case studies\u2014namely a continuous stirred tank reactor, a membrane reactor, and a fed\u2010batch bioreactor\u2014are assessed and compared against typical uncertainty mapping techniques. Lastly, the method allows the use of a single model implementation to perform forward and inverse uncertainty maps, easily switching mapping directions.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.100839
+}

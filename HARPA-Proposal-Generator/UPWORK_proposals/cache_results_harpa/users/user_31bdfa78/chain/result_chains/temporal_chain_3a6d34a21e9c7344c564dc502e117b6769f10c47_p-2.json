@@ -1,0 +1,28 @@
+[
+    {
+        "paperId": "3a6d34a21e9c7344c564dc502e117b6769f10c47",
+        "pmid": "2401.06866",
+        "title": "Health-LLM: Large Language Models for Health Prediction via Wearable Sensor Data",
+        "abstract": "Large language models (LLMs) are capable of many natural language tasks, yet they are far from perfect. In health applications, grounding and interpreting domain-specific and non-linguistic data is crucial. This paper investigates the capacity of LLMs to make inferences about health based on contextual information (e.g. user demographics, health knowledge) and physiological data (e.g. resting heart rate, sleep minutes). We present a comprehensive evaluation of 12 state-of-the-art LLMs with prompting and fine-tuning techniques on four public health datasets (PMData, LifeSnaps, GLOBEM and AW_FB). Our experiments cover 10 consumer health prediction tasks in mental health, activity, metabolic, and sleep assessment. Our fine-tuned model, HealthAlpaca exhibits comparable performance to much larger models (GPT-3.5, GPT-4 and Gemini-Pro), achieving the best performance in 8 out of 10 tasks. Ablation studies highlight the effectiveness of context enhancement strategies. Notably, we observe that our context enhancement can yield up to 23.8% improvement in performance. While constructing contextually rich prompts (combining user context, health knowledge and temporal information) exhibits synergistic improvement, the inclusion of health knowledge context in prompts significantly enhances overall performance.",
+        "year": 2024,
+        "citation_count": 78
+    },
+    {
+        "paperId": "86b57eba5a37cee1eef0a6989ad042ace9e0fe12",
+        "title": "PhysioLLM: Supporting Personalized Health Insights with Wearables and Large Language Models",
+        "abstract": "We present PhysioLLM, an interactive system that leverages large language models (LLMs) to provide personalized health understanding and exploration by integrating physiological data from wearables with contextual information. Unlike commercial health apps for wearables, our system offers a comprehensive statistical analysis component that discovers correlations and trends in user data, allowing users to ask questions in natural language and receive generated personalized insights, and guides them to develop actionable goals. As a case study, we focus on improving sleep quality, given its measurability through physiological data and its importance to general well-being. Through a user study with 24 Fitbit watch users, we demonstrate that PhysioLLM outperforms both the Fitbit App alone and a generic LLM chatbot in facilitating a deeper, personalized understanding of health data and supporting actionable steps toward personal health goals.",
+        "year": 2024,
+        "citation_count": 14,
+        "relevance": 2,
+        "explanation": "This paper presents PhysioLLM, which integrates physiological data from wearables with LLMs for personalized health insights, directly building on the source paper's findings on health prediction using wearable sensor data."
+    },
+    {
+        "paperId": "5d5dc58bdf18f82b55d03ffe160d784a02357dc4",
+        "title": "SleepCoT: A Lightweight Personalized Sleep Health Model via Chain-of-Thought Distillation",
+        "abstract": "We present a novel approach to personalized sleep health management using few-shot Chain-of-Thought (CoT) distillation, enabling small-scale language models (>2B parameters) to rival the performance of large language models (LLMs) in specialized health domains. Our method simultaneously distills problem-solving strategies, long-tail expert knowledge, and personalized recommendation capabilities from larger models into more efficient, compact models. Unlike existing systems, our approach offers three key functionalities: generating personalized sleep health recommendations, supporting user-specific follow-up inquiries, and providing responses to domain-specific knowledge questions. We focus on sleep health due to its measurability via wearable devices and its impact on overall well-being. Our experimental setup, involving GPT-4o for data synthesis, Qwen-max for instruction set creation, and Qwen2.5 1.5B for model distillation, demonstrates significant improvements over baseline small-scale models in penalization, reasoning, and knowledge application. Experiments using 100 simulated sleep reports and 1,000 domain-specific questions shows our model achieves comparable performance to larger models while maintaining efficiency for real-world deployment. This research not only advances AI-driven health management but also provides a novel approach to leveraging LLM capabilities in resource-constrained environments, potentially enhancing the accessibility of personalized healthcare solutions.",
+        "year": 2024,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper shares a focus on personalized sleep health management using models, similar to PhysioLLM's case study on sleep quality. The approach of using distilled models for personalized recommendations aligns with PhysioLLM's goal of providing personalized insights, suggesting a partial dependency on the findings or methodologies of the source paper."
+    }
+]

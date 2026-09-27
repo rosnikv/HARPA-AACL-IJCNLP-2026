@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>53d8b356551a2361020a948f64454a6d599af69f</p>
+<hr>
+<h2>Title</h2>
+<p>Integrate Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning to enhance efficiency and performance.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning will improve computational efficiency and maintain or enhance performance on text classification and summarization tasks compared to standard prefix-tuning methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods in prefix-tuning and sparse attention have explored various configurations for efficiency and performance improvements. However, the specific combination of Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning has not been extensively tested. This combination could potentially leverage the hierarchical structure to focus on salient features while dynamically adjusting prefix vectors for each layer, optimizing both computational efficiency and task-specific adaptation. No prior work has explicitly tested this combination under the constraints of maintaining computational efficiency without additional model parameters, which is crucial for resource-constrained environments.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The research explores the integration of Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning to enhance computational efficiency and performance in text classification and summarization tasks. Hierarchical Sparse Prefix-Tuning applies sparsity constraints on hierarchically blocked prefixes, allowing for improved performance by focusing on salient features while reducing computational load. Adaptive Prefix Tuning dynamically adjusts prefix vectors at both token and layer levels, tailoring the prefix to each layer's learned syntax and semantics. The combination is expected to synergize by leveraging the hierarchical structure to focus on important features while dynamically adapting to task-specific requirements. This approach addresses the gap in existing research by exploring a novel combination that maintains computational efficiency without introducing additional model parameters. The expected outcome is improved performance on text classification and summarization tasks, as measured by accuracy and F1-score, with reduced computational time and resources.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/a3c8c57075dfebf7f5a57952afafb7407762cc46">Hierarchical Sparse Prefix-Tuning</a>: This variable involves applying sparsity constraints on hierarchically blocked prefixes, focusing on salient features while minimizing unrelated features. Implemented by applying soft sparsity at lower layers with blocked prefix parameters and dense prefixes at top layers, it enhances performance on summarization tasks with shorter outputs. This method is selected for its ability to improve performance by efficiently encoding salient features, directly influencing the model's ability to generate coherent and factual text.</p>
+<p><a href="https://www.semanticscholar.org/paper/5193003d574eff310742e6ce94612fc82851fee0">Adaptive Prefix Tuning</a>: Adaptive Prefix Tuning adjusts prefix vectors at both token and layer levels using a gate mechanism, tailoring the prefix to each layer's learned syntax and semantics. This method optimizes continuous prefix vectors inserted into Transformer layers, with the gate mechanism enabling tailored prefix adjustments for each layer. It is selected for its ability to enhance parameter-efficient fine-tuning by dynamically adapting to task-specific requirements, directly influencing the model's ability to maintain high performance while optimizing a small subset of parameters.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning to enhance computational efficiency and performance. The implementation involves structuring prefix parameters hierarchically, applying soft sparsity at lower layers with blocked prefix parameters, and using dense prefixes at top layers. Adaptive Prefix Tuning is integrated by dynamically adjusting prefix vectors at both token and layer levels using a gate mechanism. The process begins with initializing the hierarchical sparse prefix structure, followed by configuring the adaptive prefix tuning mechanism. During training, the model dynamically adjusts prefix vectors based on the learned syntax and semantics of each layer, optimizing the focus on salient features while minimizing unrelated features. The integration occurs at the attention mechanism level, where the hierarchical sparse prefix structure guides the model's focus, and the adaptive prefix tuning mechanism dynamically adjusts the prefix vectors. The expected outcome is improved performance on text classification and summarization tasks, with reduced computational time and resources. The implementation is feasible using the ASD agent's capabilities, with all components linked through a well-defined data and control-flow process.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating Hierarchical Sparse Prefix-Tuning with Adaptive Prefix Tuning will improve computational efficiency while maintaining or enhancing performance on text classification and summarization tasks compared to standard prefix-tuning methods.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three prefix-tuning approaches:<br />
+1. Standard Prefix-Tuning (baseline)<br />
+2. Hierarchical Sparse Prefix-Tuning (baseline)<br />
+3. Adaptive Prefix Tuning (baseline)<br />
+4. Integrated Adaptive Hierarchical Sparse Tuning (experimental)</p></p>
+<p><p>The experiment will evaluate these approaches on two tasks:<br />
+1. Text classification using the DBpedia dataset<br />
+2. Text summarization using the XSum dataset</p></p>
+<p><p>Performance will be measured using accuracy and F1-score for classification, and ROUGE scores for summarization. Computational efficiency will be measured by tracking training time, inference time, and memory usage.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4>
+<p>Implement a global variable PILOT_MODE with three possible settings: 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT'.</p></p>
+<p><ul>
+<li>MINI_PILOT: Use 10 examples from each dataset for training and 10 for evaluation. Train for 3 epochs with a small batch size (e.g., 2). Use a small pre-trained model like DistilBERT or T5-small.</li>
+<li>PILOT: Use 500 examples from each dataset for training and 100 for evaluation. Train for 5 epochs with a moderate batch size (e.g., 8). Use a medium-sized pre-trained model like BERT-base or T5-base.</li>
+<li>FULL_EXPERIMENT: Use the full datasets, train for the optimal number of epochs determined from the PILOT, and use the full-sized models (BERT-large or T5-large).</li>
+</ul></p>
+<p><p>Start by running the MINI_PILOT. If successful, proceed to the PILOT. Stop after the PILOT is complete and do not run the FULL_EXPERIMENT (this will be manually triggered after human verification).</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Standard Prefix-Tuning (Baseline)</strong></h4>
+<p>Implement standard prefix-tuning as described in Li &amp; Liang (2021), where a small set of continuous task-specific vectors (prefixes) are prepended to the hidden states at each layer of the pre-trained model. These prefixes are the only parameters updated during fine-tuning.</p></p>
+<p><h4 class="custom-heading"><strong>2. Hierarchical Sparse Prefix-Tuning (Baseline)</strong></h4>
+<p>Implement hierarchical sparse prefix-tuning with the following components:<br />
+- Structure prefix parameters hierarchically across layers<br />
+- Apply soft sparsity constraints at lower layers with blocked prefix parameters<br />
+- Use dense prefixes at top layers<br />
+- Implement a sparsity loss term that encourages sparsity in the lower layers while maintaining dense representations in the upper layers</p></p>
+<p><h4 class="custom-heading"><strong>3. Adaptive Prefix Tuning (Baseline)</strong></h4>
+<p>Implement adaptive prefix tuning with the following components:<br />
+- Dynamic adjustment of prefix vectors at both token and layer levels<br />
+- Implement a gate mechanism that controls how much of the prefix is applied at each layer<br />
+- The gate should be conditioned on the layer's hidden states to adapt to each layer's learned syntax and semantics</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>4. Integrated Adaptive Hierarchical Sparse Tuning (Experimental)</strong></h4>
+<p>Integrate the hierarchical sparse prefix-tuning with adaptive prefix tuning:<br />
+- Start with the hierarchical sparse prefix structure<br />
+- Add the adaptive gating mechanism to dynamically adjust prefix vectors<br />
+- The gate should be aware of the hierarchical structure and sparsity constraints<br />
+- Implement a combined loss function that balances sparsity and adaptivity</p></p>
+<p><h4 class="custom-heading"><strong>Model Architecture</strong></h4>
+<p>Use a transformer-based architecture:<br />
+- For text classification: BERT or RoBERTa<br />
+- For summarization: T5 or BART</p></p>
+<p><h4 class="custom-heading"><strong>Training Process</strong></h4>
+<ol>
+<li>Initialize the hierarchical sparse prefix structure</li>
+<li>Configure the adaptive prefix tuning mechanism</li>
+<li>During training, dynamically adjust prefix vectors based on layer-specific information</li>
+<li>Apply sparsity constraints according to the hierarchical structure</li>
+<li>Track training metrics including loss, performance metrics, and computational resources</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4>
+<ol>
+<li>For text classification:</li>
+<li>Accuracy</li>
+<li>F1-score (macro and weighted)</li>
+<li>Training time</li>
+<li>Inference time</li>
+<li>Memory usage</li>
+</ol></p>
+<p><ol>
+<li>For summarization:</li>
+<li>ROUGE-1, ROUGE-2, and ROUGE-L scores</li>
+<li>Training time</li>
+<li>Inference time</li>
+<li>Memory usage</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Data Processing</strong></h4>
+<ol>
+<li>DBpedia dataset:</li>
+<li>Load and preprocess the DBpedia dataset for text classification</li>
+<li>Split into train/validation/test sets if not already done</li>
+<li>For MINI_PILOT and PILOT, use subsets as specified</li>
+</ol></p>
+<p><ol>
+<li>XSum dataset:</li>
+<li>Load and preprocess the XSum dataset for summarization</li>
+<li>Split into train/validation/test sets if not already done</li>
+<li>For MINI_PILOT and PILOT, use subsets as specified</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Statistical Analysis</strong></h4>
+<ol>
+<li>Compare performance metrics across all methods using appropriate statistical tests (t-tests or bootstrap resampling)</li>
+<li>Analyze the trade-off between performance and computational efficiency</li>
+<li>Generate visualizations to illustrate the differences between methods</li>
+<li>Report confidence intervals for all metrics</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4>
+<ol>
+<li>Save model checkpoints for each method</li>
+<li>Generate detailed logs of training and evaluation processes</li>
+<li>Create summary tables comparing all methods across all metrics</li>
+<li>Generate visualizations of performance and efficiency metrics</li>
+<li>Provide a detailed analysis of the results, including statistical significance</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Notes</strong></h4>
+<ul>
+<li>Ensure all random seeds are fixed for reproducibility</li>
+<li>Implement early stopping based on validation performance</li>
+<li>Use the same preprocessing, model architecture, and hyperparameters across all methods for fair comparison</li>
+<li>Track and report memory usage and computational time accurately</li>
+<li>Implement proper logging and error handling</li>
+</ul></p>
+<p><p>Please run the MINI_PILOT first to verify the implementation, then proceed to the PILOT if successful. Stop after the PILOT is complete and await further instructions before running the FULL_EXPERIMENT.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/53d8b356551a2361020a948f64454a6d599af69f">Paper 0: Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> (4442 citations, 2021). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/341cdab5b85415123fac782642639132c3cbf65e">Paper 1</a>. The analysis reveals that while prefix-tuning offers a lightweight alternative to traditional fine-tuning, there are still inefficiencies in the process, particularly in terms of computational resources and time. The introduction of 'Shadowy Sparsity' and the 'Long Exposure' system in Paper 0 addresses these inefficiencies by optimizing the fine-tuning process further. Building upon this, a research idea could explore how these concepts can be applied to enhance prefix-tuning specifically, potentially by developing a new method that combines the strengths of prefix-tuning with the efficiency gains from 'Shadowy Sparsity'. This would advance the field by making prefix-tuning even more resource-efficient and faster, addressing the limitations of previous work while leveraging existing advancements.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/53d8b356551a2361020a948f64454a6d599af69f" target="_blank">Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/341cdab5b85415123fac782642639132c3cbf65e" target="_blank">LONG EXPOSURE: Accelerating Parameter-Efficient Fine-Tuning for LLMs under Shadowy Sparsity</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/a3c8c57075dfebf7f5a57952afafb7407762cc46" target="_blank">Discourse-Aware Soft Prompting for Text Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/d0f3fa051ece6e9f090d37fe1293bd2b20906d54" target="_blank">Prefix-Tuning+: Modernizing Prefix-Tuning by Decoupling the Prefix from Attention</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5193003d574eff310742e6ce94612fc82851fee0" target="_blank">Towards Adaptive Prefix Tuning for Parameter-Efficient Language Model Fine-tuning</a> (2023)</li>
+</ol>
+</body>
+</html>

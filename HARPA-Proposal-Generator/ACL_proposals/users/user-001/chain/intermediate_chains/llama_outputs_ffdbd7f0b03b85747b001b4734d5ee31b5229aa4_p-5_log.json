@@ -1,0 +1,74 @@
+[
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "26b84d62ceb16c5490bda6a3f3cf5fcda1358a86",
+            "pmid": "2412.09722",
+            "title": "GReaTer: Gradients over Reasoning Makes Smaller Language Models Strong Prompt Optimizers",
+            "abstract": "The effectiveness of large language models (LLMs) is closely tied to the design of prompts, making prompt optimization essential for enhancing their performance across a wide range of tasks. Many existing approaches to automating prompt engineering rely exclusively on textual feedback, refining prompts based solely on inference errors identified by large, computationally expensive LLMs. Unfortunately, smaller models struggle to generate high-quality feedback, resulting in complete dependence on large LLM judgment. Moreover, these methods fail to leverage more direct and finer-grained information, such as gradients, due to operating purely in text space. To this end, we introduce GReaTer, a novel prompt optimization technique that directly incorporates gradient information over task-specific reasoning. By utilizing task loss gradients, GReaTer enables self-optimization of prompts for open-source, lightweight language models without the need for costly closed-source LLMs. This allows high-performance prompt optimization without dependence on massive LLMs, closing the gap between smaller models and the sophisticated reasoning often needed for prompt refinement. Extensive evaluations across diverse reasoning tasks including BBH, GSM8k, and FOLIO demonstrate that GReaTer consistently outperforms previous state-of-the-art prompt optimization methods, even those reliant on powerful LLMs. Additionally, GReaTer-optimized prompts frequently exhibit better transferability and, in some cases, boost task performance to levels comparable to or surpassing those achieved by larger language models, highlighting the effectiveness of prompt optimization guided by gradients over reasoning. Code of GReaTer is available at https://github.com/psunlpgroup/GreaTer.",
+            "year": 2024,
+            "citation_count": 5
+        },
+        "llama_output": {
+            "paper_list": {
+                "1. Prompt Smart, Pay Less: Cost-Aware APO for Real-World Applications": {
+                    "explanation": "This paper discusses Automatic Prompt Optimization (APO) methods, including gradient-based techniques, similar to GReaTer's approach of using gradients for prompt optimization. However, it primarily focuses on cost-efficiency in real-world applications, which is a different aspect than the source paper's emphasis on closing the gap between smaller and larger models.",
+                    "relevance": 1
+                },
+                "2. SI-Agent: An Agentic Framework for Feedback-Driven Generation and Tuning of Human-Readable System Instructions for Large Language Models": {
+                    "explanation": "SI-Agent focuses on generating human-readable system instructions for LLMs through a feedback-driven loop, which is different from GReaTer's gradient-based prompt optimization. The connection is minimal as the methodologies and objectives differ significantly.",
+                    "relevance": 0
+                },
+                "3. Compound AI Systems Optimization: A Survey of Methods, Challenges, and Future Directions": {
+                    "explanation": "This paper is a review of optimization methods in AI systems, including LLMs, but does not present novel hypotheses or findings directly related to GReaTer's gradient-based prompt optimization approach.",
+                    "relevance": 0
+                },
+                "4. Evaluating the Effectiveness of Black-Box Prompt Optimization as the Scale of LLMs Continues to Grow": {
+                    "explanation": "This paper evaluates black-box prompt optimization methods and their effectiveness as LLMs scale. While it discusses prompt optimization, it does not directly build on the gradient-based approach of GReaTer, focusing instead on black-box methods and model scale.",
+                    "relevance": 1
+                },
+                "5. GREATERPROMPT: A Unified, Customizable, and High-Performing Open-Source Toolkit for Prompt Optimization": {
+                    "explanation": "GREATERPROMPT builds directly on the GReaTer framework, expanding it into a unified toolkit for prompt optimization. It leverages the gradient-based optimization approach introduced by GReaTer, making it highly dependent on the source paper's findings.",
+                    "relevance": 2
+                }
+            },
+            "top3_relevant_papers": {
+                "1. GREATERPROMPT: A Unified, Customizable, and High-Performing Open-Source Toolkit for Prompt Optimization": {
+                    "explanation": "GREATERPROMPT builds directly on the GReaTer framework, expanding it into a unified toolkit for prompt optimization. It leverages the gradient-based optimization approach introduced by GReaTer, making it highly dependent on the source paper's findings.",
+                    "relevance": 2
+                },
+                "2. Prompt Smart, Pay Less: Cost-Aware APO for Real-World Applications": {
+                    "explanation": "This paper discusses Automatic Prompt Optimization (APO) methods, including gradient-based techniques, similar to GReaTer's approach of using gradients for prompt optimization. However, it primarily focuses on cost-efficiency in real-world applications, which is a different aspect than the source paper's emphasis on closing the gap between smaller and larger models.",
+                    "relevance": 1
+                },
+                "3. Evaluating the Effectiveness of Black-Box Prompt Optimization as the Scale of LLMs Continues to Grow": {
+                    "explanation": "This paper evaluates black-box prompt optimization methods and their effectiveness as LLMs scale. While it discusses prompt optimization, it does not directly build on the gradient-based approach of GReaTer, focusing instead on black-box methods and model scale.",
+                    "relevance": 1
+                }
+            }
+        },
+        "seed": 2025
+    },
+    {
+        "year": 2025,
+        "source_paper": {
+            "paperId": "d72b83093248d19c410e27d753aa5a13ec1b2060",
+            "title": "GREATERPROMPT: A Unified, Customizable, and High-Performing Open-Source Toolkit for Prompt Optimization",
+            "abstract": "LLMs have gained immense popularity among researchers and the general public for its impressive capabilities on a variety of tasks. Notably, the efficacy of LLMs remains significantly dependent on the quality and structure of the input prompts, making prompt design a critical factor for their performance. Recent advancements in automated prompt optimization have introduced diverse techniques that automatically enhance prompts to better align model outputs with user expectations. However, these methods often suffer from the lack of standardization and compatibility across different techniques, limited flexibility in customization, inconsistent performance across model scales, and they often exclusively rely on expensive proprietary LLM APIs. To fill in this gap, we introduce GREATERPROMPT, a novel framework that democratizes prompt optimization by unifying diverse methods under a unified, customizable API while delivering highly effective prompts for different tasks. Our framework flexibly accommodates various model scales by leveraging both text feedback-based optimization for larger LLMs and internal gradient-based optimization for smaller models to achieve powerful and precise prompt improvements. Moreover, we provide a user-friendly Web UI that ensures accessibility for non-expert users, enabling broader adoption and enhanced performance across various user groups and application scenarios. GREATERPROMPT is available at https://github.com/psunlpgroup/GreaterPrompt via GitHub, PyPI, and web user interfaces.",
+            "year": 2025,
+            "citation_count": 1,
+            "relevance": 2,
+            "explanation": "GREATERPROMPT builds directly on the GReaTer framework, expanding it into a unified toolkit for prompt optimization. It leverages the gradient-based optimization approach introduced by GReaTer, making it highly dependent on the source paper's findings."
+        },
+        "llama_output": {
+            "paper_list": {
+                "1.MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs": {
+                    "explanation": "This paper focuses on the faithful expression of uncertainty in LLMs, which is a different aspect of LLM performance compared to prompt optimization. While both papers deal with LLMs and involve prompt strategies, the key hypothesis and findings of MetaFaith are not directly inspired by or dependent on the findings of GREATERPROMPT. MetaFaith introduces a novel calibration approach, which is not directly related to the prompt optimization framework presented in GREATERPROMPT.",
+                    "relevance": 0
+                }
+            },
+            "top3_relevant_papers": {}
+        },
+        "seed": 2025
+    }
+]

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>f0a992f35ce89e4eb330bb64d3826d8d07c95e99</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating RNA Sequencing, histopathology, and ultrasound features using cross-attention for improved breast cancer diagnosis.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating RNA Sequencing, high-resolution digital histopathology images, and ultrasound radiomics features using a cross-attention fusion mechanism within a ResNet-based framework will significantly improve the diagnostic accuracy of breast cancer compared to traditional concatenation fusion methods.</p>
+<h3>Motivation</h3>
+<p>Existing methods often integrate gene expression profiles, histopathology images, and ultrasound radiomics features using straightforward concatenation or late fusion strategies. However, these approaches may not fully capture the complex interactions between modalities, leading to suboptimal diagnostic accuracy. No prior work has extensively explored the use of cross-attention fusion mechanisms specifically for integrating RNA Sequencing data, high-resolution digital histopathology images, and ultrasound radiomics features in a ResNet-based framework. This gap is critical because capturing the nuanced interactions between these modalities could significantly enhance the diagnostic precision of breast cancer models.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores a novel integration of RNA Sequencing, high-resolution digital histopathology images, and ultrasound radiomics features using a cross-attention fusion mechanism within a ResNet-based framework to enhance breast cancer diagnostic accuracy. The motivation stems from the need to capture complex interactions between these diverse data modalities, which traditional fusion methods fail to fully exploit. The cross-attention fusion mechanism allows the model to dynamically focus on the most relevant features from each modality, potentially uncovering subtle patterns indicative of cancer that might be missed by simpler fusion strategies. This approach leverages the detailed molecular insights from RNA Sequencing, the morphological details from high-resolution histopathology images, and the textural and shape information from ultrasound radiomics. The expected outcome is a significant improvement in diagnostic metrics such as AUC, precision, and recall, providing a more robust and interpretable model for breast cancer diagnosis. This hypothesis addresses the gap in existing research by proposing a method that not only integrates multiple data types but does so in a way that enhances the model's ability to learn from the interactions between them, thereby improving diagnostic performance.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/e1463cdcf4f7de2d36df5f5c1770bf0c9454f649">RNA Sequencing</a>: RNA Sequencing provides comprehensive molecular insights by quantifying gene expression levels, offering a detailed view of the transcriptome. In this experiment, RNA Sequencing data will be used to capture the molecular characteristics of breast cancer, which are crucial for accurate subtype classification. The data will be processed and normalized to ensure compatibility with the deep learning framework. This variable is chosen for its ability to provide detailed molecular information that complements imaging data, enhancing the model's diagnostic accuracy.</p>
+<p><a href="https://www.semanticscholar.org/paper/90efb341c68cb0169e8404624344b314e32fd841">High-resolution digital histopathology images</a>: High-resolution digital histopathology images offer detailed morphological and structural information about breast tissue samples. These images will be processed using a ResNet-based architecture to extract relevant features. The high resolution ensures that critical cellular structures are captured, which are essential for accurate cancer diagnosis. This variable is selected for its ability to provide detailed morphological insights that complement molecular data, enhancing the model's diagnostic capabilities.</p>
+<p><a href="https://www.semanticscholar.org/paper/5c13dad7c049805dfb505cf2ae63714394c50882">Ultrasound radiomics features</a>: Ultrasound radiomics features capture textural and shape information from ultrasound images, providing additional diagnostic information. These features will be extracted using a deep learning radiomics model and integrated into the framework. The choice of ultrasound radiomics is due to its non-invasive nature and ability to capture complementary information that enhances the overall diagnostic accuracy of the model.</p>
+<p><a href="https://www.semanticscholar.org/paper/e1463cdcf4f7de2d36df5f5c1770bf0c9454f649">Cross-attention fusion mechanism</a>: The cross-attention fusion mechanism allows the model to focus on the most relevant features from each modality, enhancing the integration and analysis of diverse data types. This mechanism will be implemented using attention layers within the neural network, which dynamically weigh the importance of features from each modality. The choice of this mechanism is due to its ability to capture complex interactions between modalities, which are crucial for improving diagnostic accuracy.</p>
+<h3>Implementation</h3>
+<p>The proposed method involves integrating RNA Sequencing, high-resolution digital histopathology images, and ultrasound radiomics features using a cross-attention fusion mechanism within a ResNet-based framework. The process begins with the extraction of RNA Sequencing data, which is normalized and fed into fully connected layers for processing. High-resolution digital histopathology images are processed using a ResNet architecture to extract morphological features. Ultrasound radiomics features are extracted using a deep learning radiomics model. The cross-attention fusion mechanism is then applied to integrate these diverse data types. This mechanism uses attention layers to dynamically weigh the importance of features from each modality, allowing the model to focus on the most relevant information. The integrated features are then fed into a final classification layer to predict breast cancer diagnosis. The expected outcome is an improvement in diagnostic metrics such as AUC, precision, and recall, demonstrating the effectiveness of the proposed integration method. The implementation will involve building new logic for the cross-attention fusion mechanism, ensuring that it effectively captures the interactions between modalities. The data flow involves sequential processing of each modality, followed by integration using the attention mechanism, and final classification. This design leverages the strengths of each data type, providing a comprehensive analysis that enhances diagnostic accuracy.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement a multi-modal fusion experiment for breast cancer diagnosis that integrates RNA sequencing data, histopathology images, and ultrasound radiomics features using a cross-attention mechanism. The experiment should compare this novel approach against baseline fusion methods.</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Requirements</strong></h4>
+<p>Please use a publicly available breast cancer dataset that contains:<br />
+1. RNA sequencing data (gene expression profiles)<br />
+2. High-resolution histopathology images<br />
+3. Ultrasound images or pre-extracted radiomics features</p></p>
+<p><p>If a single dataset with all three modalities is not available, you may use separate datasets and create a synthetic multi-modal dataset by matching samples based on cancer subtypes or other relevant characteristics. The TCGA-BRCA dataset for RNA-seq, BACH dataset for histopathology, and a public ultrasound dataset would be appropriate choices.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Structure</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><h4 class="custom-heading"><strong>Mini Pilot Mode</strong></h4>
+<ul>
+<li>Use only 10 patient samples (5 malignant, 5 benign)</li>
+<li>Train for maximum 5 epochs</li>
+<li>Use a small subset of RNA-seq features (top 100 most variable genes)</li>
+<li>Downsample histopathology images to 224x224 pixels</li>
+<li>Use a simplified model architecture with fewer layers</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode</strong></h4>
+<ul>
+<li>Use 100-200 patient samples (balanced classes)</li>
+<li>Train for maximum 20 epochs with early stopping</li>
+<li>Use top 1000 most variable genes for RNA-seq</li>
+<li>Use histopathology images at 512x512 resolution</li>
+<li>Implement full model architecture but with reduced complexity</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Full Experiment Mode</strong></h4>
+<ul>
+<li>Use the entire dataset</li>
+<li>Train for up to 100 epochs with early stopping</li>
+<li>Use all relevant RNA-seq features after proper feature selection</li>
+<li>Use histopathology images at full resolution</li>
+<li>Implement the complete model architecture</li>
+</ul></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then if successful, proceed to PILOT mode. It should stop after PILOT mode and not automatically run the FULL_EXPERIMENT (this will be manually triggered after human verification).</p></p>
+<p><h4 class="custom-heading"><strong>Model Implementation</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Data Processing</strong></h4>
+<ol>
+<li>RNA Sequencing Data:</li>
+<li>Normalize using appropriate methods (e.g., log transformation, quantile normalization)</li>
+<li>Handle missing values</li>
+<li>Perform feature selection to identify the most informative genes</li>
+<li>Scale features to a common range</li>
+</ol></p>
+<p><ol>
+<li>Histopathology Images:</li>
+<li>Preprocess images (resize, normalize, augment)</li>
+<li>Use a pre-trained ResNet model to extract features</li>
+<li>Implement appropriate data augmentation (rotations, flips, color jittering)</li>
+</ol></p>
+<p><ol>
+<li>Ultrasound Radiomics:</li>
+<li>Extract radiomics features using a deep learning model</li>
+<li>Alternatively, if pre-extracted features are available, normalize and scale them</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Model Architecture</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Baseline Models</strong></h4>
+<p>Implement two baseline fusion methods:</p></p>
+</div><div style='flex: 1;'>
+<p><ol>
+<li>Concatenation Fusion:</li>
+<li>Process each modality through its respective network</li>
+<li>Concatenate the feature vectors from all modalities</li>
+<li>Pass through fully connected layers for classification</li>
+</ol></p>
+<p><ol>
+<li>Late Fusion:</li>
+<li>Process each modality through its respective network</li>
+<li>Make separate predictions for each modality</li>
+<li>Combine predictions (e.g., weighted average, voting)</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Experimental Model (Cross-Attention Fusion)</strong></h4>
+<ol>
+<li>Process each modality through its respective network:</li>
+<li>RNA-seq: Fully connected layers</li>
+<li>Histopathology: ResNet</li>
+<li>Ultrasound: Radiomics feature extractor</li>
+</ol></p>
+<p><ol>
+<li>Implement cross-attention fusion mechanism:</li>
+<li>Create query, key, and value projections for each modality</li>
+<li>Compute cross-attention scores between modalities</li>
+<li>Use attention scores to weight features from each modality</li>
+<li>Combine weighted features</li>
+</ol></p>
+<p><ol>
+<li>The cross-attention mechanism should specifically:</li>
+<li>Allow RNA-seq features to attend to histopathology and ultrasound features</li>
+<li>Allow histopathology features to attend to RNA-seq and ultrasound features</li>
+<li>Allow ultrasound features to attend to RNA-seq and histopathology features</li>
+<li>Dynamically adjust the importance of features based on their relevance</li>
+</ol></p>
+<p><ol>
+<li>Pass fused features through final classification layers</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Training and Evaluation</strong></h4></p>
+<p><ol>
+<li>Training:</li>
+<li>Split data into training (70%), validation (15%), and test (15%) sets</li>
+<li>Use appropriate loss function (e.g., binary cross-entropy for binary classification)</li>
+<li>Implement early stopping based on validation performance</li>
+<li>Use appropriate optimizer (e.g., Adam) with learning rate scheduling</li>
+</ol></p>
+<p><ol>
+<li>Evaluation:</li>
+<li>Calculate AUC, precision, recall, and F1-score on the test set</li>
+<li>Perform statistical significance testing between baseline and experimental models</li>
+<li>Generate ROC curves and precision-recall curves</li>
+<li>Analyze model performance across different cancer subtypes or stages</li>
+</ol></p>
+<p><ol>
+<li>Visualization and Interpretation:</li>
+<li>Visualize attention weights to understand which modalities and features are most important</li>
+<li>Generate t-SNE or UMAP plots of the fused features</li>
+<li>Create confusion matrices for each model</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><ol>
+<li>Use TensorFlow for implementing the models</li>
+<li>Ensure proper data handling with pandas</li>
+<li>Implement appropriate data loaders and batching</li>
+<li>Use proper random seeds for reproducibility</li>
+<li>Log all experimental results and model checkpoints</li>
+<li>Implement proper error handling and validation</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Expected Outputs</strong></h4></p>
+<p><ol>
+<li>Trained model weights for all approaches</li>
+<li>Performance metrics for all models (AUC, precision, recall, F1-score)</li>
+<li>Statistical comparison between baseline and experimental models</li>
+<li>Visualizations of model performance and attention weights</li>
+<li>Analysis of which modalities contribute most to the final prediction</li>
+</ol></p>
+<p><p>Please implement this experiment with clean, well-documented code and ensure all data processing steps are properly explained. The focus should be on correctly implementing the cross-attention fusion mechanism and comparing it fairly against the baseline methods.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/f0a992f35ce89e4eb330bb64d3826d8d07c95e99">Paper 0: Deep Learning Based Analysis of Breast Cancer Using Advanced Ensemble Classifier and Linear Discriminant Analysis</a> (31 citations, 2020). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/fe6eb0ff42886d5072b6a8d62312ba703d75abae">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/77cd77ade383a598aabe3c19d98eed000bffc203">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/90efb341c68cb0169e8404624344b314e32fd841">Paper 3</a>. The progression of research from the source paper to the related papers shows a clear trend towards improving breast cancer diagnosis through deep learning, with a focus on image classification and integration of diverse data sources. The source paper laid the groundwork with a deep learning framework combining LDA and AE for gene expression profile classification. Subsequent papers have built on this by enhancing image classification techniques and integrating additional data types, such as radiomics and clinical data, to improve diagnostic accuracy. A promising research idea would be to further explore the integration of multiple data modalities, leveraging the strengths of each to enhance predictive performance while addressing the limitations of previous models.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/f0a992f35ce89e4eb330bb64d3826d8d07c95e99" target="_blank">Deep Learning Based Analysis of Breast Cancer Using Advanced Ensemble Classifier and Linear Discriminant Analysis</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/fe6eb0ff42886d5072b6a8d62312ba703d75abae" target="_blank">Breast Cancer Pathological Image Classification Based on the Multiscale CNN Squeeze Model</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/77cd77ade383a598aabe3c19d98eed000bffc203" target="_blank">Breast Cancer Detection in Histopathology Images using ResNet101 Architecture</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/90efb341c68cb0169e8404624344b314e32fd841" target="_blank">Enhanced HER-2 prediction in breast cancer through synergistic integration of deep learning, ultrasound radiomics, and clinical data</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/e1463cdcf4f7de2d36df5f5c1770bf0c9454f649" target="_blank">Multimodal Deep Learning for Subtype Classification in Breast Cancer Using Histopathological Images and Gene Expression Data</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/9623c3bf0fe9b550ee681035c4009875f2cf528f" target="_blank">Breast cancer detection via wavelet energy and feed-forward neural network trained by genetic algorithm</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/375546e3b1b9bf8fa92a1fa3dffda6a07fe367cb" target="_blank">Big data in breast cancer: Towards precision treatment</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/bbabc188bb83c50ac060fec2a048e11f6b7c9575" target="_blank">CNN-Based Cross-Modality Fusion for Enhanced Breast Cancer Detection Using Mammography and Ultrasound</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/208077fc7d539318e4622f673833db9966bf275a" target="_blank">Predicting breast cancer types on and beyond molecular level in a multi-modal fashion</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/b678bc058a7179e7f812123d60a8f0190a07d6f7" target="_blank">Deep Multi-modal Breast Cancer Detection Network</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/9eec78451632f871ee421c15ee1f7ff01a1cf46c" target="_blank">Identification of Luminal A breast cancer by using deep learning analysis based on multi-modal images</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/d1090dfc26b0288d2aba6285dac96dc0950380ce" target="_blank">A twin convolutional neural network with hybrid binary optimizer for multimodal breast cancer digital image classification</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/b00374c264cf323eefe19bde1c018ac4f2e772bb" target="_blank">Multi-modality approaches for medical support systems: A systematic review of the last decade</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/ece2bbef0b07a5cf8cff0a1a3b902b8a5d46310f" target="_blank">Application of Multimodal Fusion Deep Learning Model in Disease Recognition</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/51f75d431157e418e23084b75a4fdafa036479d4" target="_blank">Diagnostic efficiency of multi-modal MRI based deep learning with Sobel operator in differentiating benign and malignant breast mass lesions—a retrospective study</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/5c13dad7c049805dfb505cf2ae63714394c50882" target="_blank">Predicting HER2 Status in Breast Cancer on Ultrasound Images Using Deep Learning Method</a> (2022)</li>
+</ol>
+</body>
+</html>

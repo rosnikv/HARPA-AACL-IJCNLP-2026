@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>a76209fea4627974b5e12d8b4942268eb17bc7df</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating sentence-level re-ranking with adaptive retrieval strategies to enhance RAG system accuracy and robustness.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating sentence-level re-ranking with adaptive retrieval strategies in RAG systems will improve factual accuracy and robustness in medical diagnostics and cybersecurity domains compared to traditional static retrieval methods.</p>
+<h3>Motivation</h3>
+<p>Existing RAG systems often fail to maintain high factual accuracy and robustness in dynamic domains like medical diagnostics and cybersecurity due to their reliance on static retrieval and generation processes. These systems typically do not adapt retrieval strategies based on query complexity or domain-specific requirements, leading to potential inaccuracies and inefficiencies. Additionally, while sentence-level re-ranking and contextual reconstruction have been explored, their integration with dynamic retrieval mechanisms remains underexplored. This hypothesis addresses the gap by combining sentence-level re-ranking with adaptive retrieval strategies to enhance both factual accuracy and robustness in RAG systems, particularly in the medical diagnostics and cybersecurity domains.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>The proposed research explores the integration of sentence-level re-ranking with adaptive retrieval strategies in RAG systems to enhance factual accuracy and robustness, specifically in the medical diagnostics and cybersecurity domains. Sentence-level re-ranking involves decomposing retrieved passages into individual sentences and re-ranking them based on relevance scores. This method ensures that only the most pertinent sentences are retained for subsequent reconstruction, improving the precision of retrieved information. Adaptive retrieval strategies dynamically adjust retrieval methods based on query types and complexity, allowing the system to better handle diverse information needs and improve retrieval accuracy. By combining these two approaches, the system can dynamically refine its retrieval strategy while ensuring that the most relevant information is prioritized. This integration is expected to enhance the system's ability to provide accurate and contextually relevant responses, particularly in complex and dynamic domains like medical diagnostics and cybersecurity. The expected outcome is a significant improvement in both factual accuracy and robustness compared to traditional static retrieval methods, which often struggle with maintaining precision and relevance in these domains.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/66e483e7f0f2cc7aa57d9d6411e9b644447c8468">Sentence-Level Re-ranking</a>: This variable involves decomposing retrieved passages into individual sentences and re-ranking them based on relevance scores. The DSLR framework employs this method to ensure that only the most pertinent sentences are retained for subsequent reconstruction. This approach is particularly effective in domain-specific contexts, where the relevance of information can significantly vary across different sentences within the same passage. The expected role of sentence-level re-ranking is to improve the precision of retrieved information by filtering out irrelevant content, thereby enhancing the factual accuracy of the RAG system.</p>
+<p><a href="https://www.semanticscholar.org/paper/21620a67bbef3a4c607bf17be07d42514163dfaf">Adaptive Retrieval Strategies</a>: Adaptive retrieval strategies dynamically adjust retrieval methods based on query types and complexity. This involves selecting the most appropriate retrieval approach for each specific query, allowing the system to better handle diverse information needs and improve retrieval accuracy. By tailoring retrieval strategies to the characteristics of each query, adaptive retrieval enhances the system's ability to provide contextually relevant and precise information. This approach is particularly beneficial in domain-specific applications, where the nature of queries can vary significantly. The expected role of adaptive retrieval strategies is to enhance the robustness of the RAG system by ensuring that the retrieval process is aligned with the specific needs of each query.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates sentence-level re-ranking with adaptive retrieval strategies to enhance the factual accuracy and robustness of RAG systems in medical diagnostics and cybersecurity domains. The implementation involves several steps: First, the system retrieves a broad set of documents using traditional retrieval methods. Next, the retrieved passages are decomposed into individual sentences, which are then re-ranked based on relevance scores using off-the-shelf retrievers and re-rankers. This ensures that only the most pertinent sentences are retained for reconstruction. In parallel, the system employs adaptive retrieval strategies to dynamically adjust retrieval methods based on the complexity and type of queries received. This involves using algorithms that can switch between different retrieval techniques, such as keyword matching, vector similarity, or graph-based retrieval, depending on the nature of the query. By combining these two approaches, the system can dynamically refine its retrieval strategy while ensuring that the most relevant information is prioritized. The integration occurs at the retrieval phase, where sentence-level re-ranking filters the initial retrieval results, and adaptive retrieval strategies adjust the retrieval process based on query characteristics. The expected outcome is a significant improvement in both factual accuracy and robustness compared to traditional static retrieval methods.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating sentence-level re-ranking with adaptive retrieval strategies in RAG systems will improve factual accuracy and robustness in medical diagnostics and cybersecurity domains compared to traditional static retrieval methods.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare three RAG systems:<br />
+1. <strong>Baseline</strong>: A traditional RAG system using static retrieval methods<br />
+2. <strong>Sentence-Level Re-ranking</strong>: A RAG system with sentence-level re-ranking but without adaptive retrieval<br />
+3. <strong>Experimental (Combined)</strong>: A RAG system integrating both sentence-level re-ranking and adaptive retrieval strategies</p></p>
+<p><h4 class="custom-heading"><strong>Data Requirements</strong></h4>
+<ol>
+<li>Create two domain-specific datasets:</li>
+<li><strong>Medical diagnostics dataset</strong>: Collection of medical documents, case studies, and diagnostic information</li>
+<li><strong>Cybersecurity dataset</strong>: Collection of cybersecurity documents, threat reports, and vulnerability information</li>
+<li>For each domain, create:</li>
+<li>A set of queries of varying complexity (simple factual, complex reasoning, etc.)</li>
+<li>Ground truth relevant documents/passages for each query</li>
+<li>A version with injected noise (irrelevant content, misspellings) for robustness testing</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>System Implementation</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Baseline System</strong></h4>
+<p>Implement a standard RAG system with:<br />
+- Vector database for document storage<br />
+- Static retrieval using BM25 or vector similarity<br />
+- No re-ranking or adaptive components</p></p>
+<p><h4 class="custom-heading"><strong>Sentence-Level Re-ranking System</strong></h4>
+<p>Extend the baseline with:<br />
+- Document segmentation into sentences<br />
+- Re-ranking of sentences based on relevance to query<br />
+- Selection of top-k most relevant sentences for response generation</p></p>
+<p><h4 class="custom-heading"><strong>Experimental System (Combined)</strong></h4>
+<p>Implement the full system with:<br />
+- Sentence-level re-ranking as above<br />
+- Adaptive retrieval strategy that can dynamically select between:<br />
+  - Keyword-based retrieval (BM25)<br />
+  - Dense vector retrieval<br />
+  - Hybrid retrieval<br />
+  - Based on query classification (factual, complex, domain-specific, etc.)</p></p>
+<p><h4 class="custom-heading"><strong>Evaluation Methodology</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Factual Accuracy Metrics</strong></h4>
+<ul>
+<li>Precision: Proportion of retrieved documents that are relevant</li>
+<li>Recall: Proportion of relevant documents that are retrieved</li>
+<li>F1 Score: Harmonic mean of precision and recall</li>
+<li>Answer correctness: For factual queries, measure if the generated answer contains the correct information</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Robustness Metrics</strong></h4>
+<ul>
+<li>Performance degradation under noisy conditions</li>
+<li>Consistency of results across query variations</li>
+<li>Ability to handle out-of-distribution queries</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>Experiment Execution</strong></h4></p>
+</div><div style='flex: 1;'>
+<p><p>Please implement this experiment with three pilot modes controlled by a global variable PILOT_MODE which can be set to 'MINI_PILOT', 'PILOT', or 'FULL_EXPERIMENT':</p></p>
+<p><h4 class="custom-heading"><strong>MINI_PILOT Mode</strong></h4>
+<ul>
+<li>Use 10 queries per domain (20 total)</li>
+<li>Retrieve top-5 documents per query</li>
+<li>Use a small subset of the corpus (100 documents per domain)</li>
+<li>Run only on clean data (no noise testing)</li>
+<li>Purpose: Quick verification of system functionality and code debugging</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>PILOT Mode</strong></h4>
+<ul>
+<li>Use 50 queries per domain (100 total)</li>
+<li>Retrieve top-10 documents per query</li>
+<li>Use a medium-sized corpus (1000 documents per domain)</li>
+<li>Include basic noise testing with 20% of queries</li>
+<li>Run bootstrap resampling with 100 iterations</li>
+<li>Purpose: Preliminary assessment of performance differences between systems</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>FULL_EXPERIMENT Mode</strong></h4>
+<ul>
+<li>Use all available queries (at least 200 per domain)</li>
+<li>Retrieve top-20 documents per query</li>
+<li>Use the full corpus</li>
+<li>Comprehensive noise testing with varying levels of noise</li>
+<li>Run bootstrap resampling with 1000 iterations</li>
+<li>Detailed analysis of performance across query types</li>
+</ul></p>
+<p><p>Please run the MINI_PILOT first, then if everything looks good, run the PILOT. After the PILOT completes, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Output Requirements</strong></h4></p>
+<p><ol>
+<li><strong>Results File</strong>: CSV file containing:</li>
+<li>Query ID</li>
+<li>Query text</li>
+<li>System type (Baseline, Sentence-Level, Combined)</li>
+<li>Precision, Recall, F1 scores</li>
+<li>Response generation time</li>
+<li>Retrieved document IDs</li>
+</ol></p>
+<p><ol>
+<li><strong>Summary Statistics</strong>:</li>
+<li>Average precision, recall, F1 across all queries</li>
+<li>Performance breakdown by domain (medical vs. cybersecurity)</li>
+<li>Performance breakdown by query complexity</li>
+<li>Statistical significance tests comparing the three systems</li>
+<li>Robustness metrics under noisy conditions</li>
+</ol></p>
+<p><ol>
+<li><strong>Visualizations</strong>:</li>
+<li>Precision-recall curves for each system</li>
+<li>Performance comparison bar charts</li>
+<li>Robustness degradation graphs under increasing noise</li>
+</ol></p>
+<p><ol>
+<li><strong>Log Files</strong>:</li>
+<li>Detailed logs of each query processing</li>
+<li>Retrieved documents and their relevance scores</li>
+<li>Re-ranked sentences (for applicable systems)</li>
+<li>Adaptive strategy decisions (for the combined system)</li>
+</ol></p>
+<p><p>Please ensure all code is well-documented and includes appropriate error handling. The implementation should be modular to allow for easy modification and extension of the experiment.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/a76209fea4627974b5e12d8b4942268eb17bc7df">Paper 0: Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation</a> (16 citations, 2024). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/9b302002c4b764f61fa7a3d14270470f625945cf">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/98cb07d3e50f0718ff17eca4e898f451e0f3381d">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/b4a97890b16468f4e635c602b4b629e3bbb9d3df">Paper 3</a> --&gt; <a href="https://www.semanticscholar.org/paper/0c34e53897c5527241efc1d34c88b8d49a238dfe">Paper 4</a> --&gt; <a href="https://www.semanticscholar.org/paper/9d4a10c751946acb3e16c9ec939ca966ff37313f">Paper 5</a> --&gt; <a href="https://www.semanticscholar.org/paper/2532746a5edeeee54f19399727a308e5f1d2e780">Paper 6</a>. The analysis reveals a progression from optimizing RAG systems to addressing domain-specific challenges in medical vision-language models, focusing on modality alignment, factual accuracy, and efficient report generation. The existing work has made significant advancements in improving RAG systems and addressing hallucinations in LVLMs. However, there is still a gap in exploring the integration of unsupervised information refinement with domain-specific retrieval mechanisms to further enhance factual accuracy and robustness in RAG systems. A research idea that combines these elements could advance the field by providing a more generalizable and efficient approach to improving RAG systems across various domains.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/a76209fea4627974b5e12d8b4942268eb17bc7df" target="_blank">Unsupervised Information Refinement Training of Large Language Models for Retrieval-Augmented Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9b302002c4b764f61fa7a3d14270470f625945cf" target="_blank">RAG-DDR: Optimizing Retrieval-Augmented Generation Using Differentiable Data Rewards</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/98cb07d3e50f0718ff17eca4e898f451e0f3381d" target="_blank">MMed-RAG: Versatile Multimodal RAG System for Medical Vision Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/b4a97890b16468f4e635c602b4b629e3bbb9d3df" target="_blank">Calibrated Self-Rewarding Vision Language Models</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/0c34e53897c5527241efc1d34c88b8d49a238dfe" target="_blank">MMedPO: Aligning Medical Vision-Language Models with Clinical-Aware Multimodal Preference Optimization</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/9d4a10c751946acb3e16c9ec939ca966ff37313f" target="_blank">Improving Medical Large Vision-Language Models with Abnormal-Aware Feedback</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/2532746a5edeeee54f19399727a308e5f1d2e780" target="_blank">Revolutionizing Radiology Workflow with Factual and Efficient CXR Report Generation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/4f3abcd13d609c64c12f64db2b4c71b17690edbc" target="_blank">LLM-Assisted Proactive Threat Intelligence for Automated Reasoning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/9723096a4ec19ddb0d2b77b9d8ef96aa0df037a8" target="_blank">Engineering RAG Systems for Real-World Applications: Design, Development, and Evaluation</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/615ac174673a078411063efcbfb5d9c7117dd9e4" target="_blank">Enhancing medical AI with retrieval-augmented generation: A mini narrative review</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/66e483e7f0f2cc7aa57d9d6411e9b644447c8468" target="_blank">DSLR: Document Refinement with Sentence-Level Re-ranking and Reconstruction to Enhance Retrieval-Augmented Generation</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/e0ef8a375283ac6bc4d7c093427bb10b79451531" target="_blank">EnterpriseEM: Fine-tuned Embeddings for Enterprise Semantic Search</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/d0d6ed96e5c29ebb6dd51acc8028dc1bad4630fa" target="_blank">Leveraging Retrieval-Augmented Generation for Persian University Knowledge Retrieval</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/7380204a6e05454614dd09d382ef2a387ca68466" target="_blank">Iterative NLP Query Refinement for Enhancing Domain-Specific Information Retrieval: A Case Study in Career Services</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/7afb80c8c0dc0c5f32d63a847a72b9bc8bada519" target="_blank">MCTS-RAG: Enhancing Retrieval-Augmented Generation with Monte Carlo Tree Search</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/45ed289c810d1d7025a2597c66b0e21c592c02a7" target="_blank">Retrieval-Augmented Generation: A Comprehensive Survey of Architectures, Enhancements, and Robustness Frontiers</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/21620a67bbef3a4c607bf17be07d42514163dfaf" target="_blank">Modular RAG: Transforming RAG Systems into LEGO-like Reconfigurable Frameworks</a> (2024)</li>
+</ol>
+</body>
+</html>

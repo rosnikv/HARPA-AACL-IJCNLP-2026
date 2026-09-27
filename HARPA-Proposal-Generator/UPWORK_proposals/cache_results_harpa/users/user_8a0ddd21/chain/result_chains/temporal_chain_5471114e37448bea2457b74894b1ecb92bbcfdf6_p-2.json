@@ -1,0 +1,64 @@
+[
+    {
+        "paperId": "5471114e37448bea2457b74894b1ecb92bbcfdf6",
+        "pmid": "2305.08283",
+        "title": "From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models",
+        "abstract": "Language models (LMs) are pretrained on diverse data sources\u2014news, discussion forums, books, online encyclopedias. A significant portion of this data includes facts and opinions which, on one hand, celebrate democracy and diversity of ideas, and on the other hand are inherently socially biased. Our work develops new methods to (1) measure media biases in LMs trained on such corpora, along social and economic axes, and (2) measure the fairness of downstream NLP models trained on top of politically biased LMs. We focus on hate speech and misinformation detection, aiming to empirically quantify the effects of political (social, economic) biases in pretraining data on the fairness of high-stakes social-oriented tasks. Our findings reveal that pretrained LMs do have political leanings which reinforce the polarization present in pretraining corpora, propagating social biases into hate speech predictions and media biases into misinformation detectors. We discuss the implications of our findings for NLP research and propose future directions to mitigate unfairness.",
+        "year": 2023,
+        "citation_count": 266
+    },
+    {
+        "paperId": "9bee647cd2999fcd2b68b964bbe128a471d3707c",
+        "title": "Generative language models exhibit social identity biases",
+        "abstract": "Social identity biases, particularly the tendency to favor one\u2019s own group (ingroup solidarity) and derogate other groups (outgroup hostility), are deeply rooted in human psychology and social behavior. However, it is unknown if such biases are also present in artificial intelligence systems. Here we show that large language models (LLMs) exhibit patterns of social identity bias, similarly to humans. By administering sentence completion prompts to 77 different LLMs (for instance, \u2018We are\u2026\u2019), we demonstrate that nearly all base models and some instruction-tuned and preference-tuned models display clear ingroup favoritism and outgroup derogation. These biases manifest both in controlled experimental settings and in naturalistic human\u2013LLM conversations. However, we find that careful curation of training data and specialized fine-tuning can substantially reduce bias levels. These findings have important implications for developing more equitable artificial intelligence systems and highlight the urgent need to understand how human\u2013LLM interactions might reinforce existing social biases.",
+        "year": 2023,
+        "citation_count": 64,
+        "relevance": 2,
+        "explanation": "This paper directly explores social identity biases in LLMs, which aligns closely with the source paper's focus on political and social biases in language models. It builds on the source paper's findings about bias propagation."
+    },
+    {
+        "paperId": "f503b95c0a64f6a84eb1d90e5ea1e094b1e1892b",
+        "title": "Systematic Biases in LLM Simulations of Debates",
+        "abstract": "The emergence of Large Language Models (LLMs), has opened exciting possibilities for constructing computational simulations designed to replicate human behavior accurately. Current research suggests that LLM-based agents become increasingly human-like in their performance, sparking interest in using these AI agents as substitutes for human participants in behavioral studies. However, LLMs are complex statistical learners without straightforward deductive rules, making them prone to unexpected behaviors. Hence, it is crucial to study and pinpoint the key behavioral distinctions between humans and LLM-based agents. In this study, we highlight the limitations of LLMs in simulating human interactions, particularly focusing on LLMs\u2019 ability to simulate political debates on topics that are important aspects of people\u2019s day-to-day lives and decision-making processes. Our findings indicate a tendency for LLM agents to conform to the model\u2019s inherent social biases despite being directed to debate from certain political perspectives. This tendency results in behavioral patterns that seem to deviate from well-established social dynamics among humans. We reinforce these observations using an automatic self-fine-tuning method, which enables us to manipulate the biases within the LLM and demonstrate that agents subsequently align with the altered biases. These results underscore the need for further research to develop methods that help agents overcome these biases, a critical step toward creating more realistic simulations.",
+        "year": 2024,
+        "citation_count": 68,
+        "relevance": 2,
+        "explanation": "This paper discusses the systematic biases in LLMs during simulations of debates, highlighting the inherent social biases in LLMs. It builds upon the source paper's findings by further exploring how these biases manifest in specific contexts, such as debates, making it partially dependent on the source paper's findings."
+    },
+    {
+        "paperId": "6b86326016fc7b900deac073e119c543daa0bafd",
+        "title": "Quantifying the Persona Effect in LLM Simulations",
+        "abstract": "Large language models (LLMs) have shown remarkable promise in simulating human language and behavior. This study investigates how integrating persona variables-demographic, social, and behavioral factors-impacts LLMs' ability to simulate diverse perspectives. We find that persona variables account for<10% variance in annotations in existing subjective NLP datasets. Nonetheless, incorporating persona variables via prompting in LLMs provides modest but statistically significant improvements. Persona prompting is most effective in samples where many annotators disagree, but their disagreements are relatively minor. Notably, we find a linear relationship in our setting: the stronger the correlation between persona variables and human annotations, the more accurate the LLM predictions are using persona prompting. In a zero-shot setting, a powerful 70b model with persona prompting captures 81% of the annotation variance achievable by linear regression trained on ground truth annotations. However, for most subjective NLP datasets, where persona variables have limited explanatory power, the benefits of persona prompting are limited.",
+        "year": 2024,
+        "citation_count": 83,
+        "relevance": 2,
+        "explanation": "This paper investigates how persona variables affect LLM simulations, which is directly related to the source paper's exploration of biases in LLM simulations of debates. It builds on the source paper's findings about biases in LLM behavior."
+    },
+    {
+        "paperId": "ae03f10729959435ecefc0e90cba4cbe8438a10b",
+        "title": "Evaluating Large Language Model Biases in Persona-Steered Generation",
+        "abstract": "The task of persona-steered text generation requires large language models (LLMs) to generate text that reflects the distribution of views that an individual fitting a persona could have. People have multifaceted personas, but prior work on bias in LLM-generated opinions has only explored multiple-choice settings or one-dimensional personas. We define an incongruous persona as a persona with multiple traits where one trait makes its other traits less likely in human survey data, e.g. political liberals who support increased military spending. We find that LLMs are 9.7% less steerable towards incongruous personas than congruous ones, sometimes generating the stereotypical stance associated with its demographic rather than the target stance. Models that we evaluate that are fine-tuned with Reinforcement Learning from Human Feedback (RLHF) are more steerable, especially towards stances associated with political liberals and women, but present significantly less diverse views of personas. We also find variance in LLM steerability that cannot be predicted from multiple-choice opinion evaluation. Our results show the importance of evaluating models in open-ended text generation, as it can surface new LLM opinion biases. Moreover, such a setup can shed light on our ability to steer models toward a richer and more diverse range of viewpoints.",
+        "year": 2024,
+        "citation_count": 46,
+        "relevance": 2,
+        "explanation": "This paper evaluates biases in persona-steered text generation, which is related to the source paper's focus on persona variables. It builds on the source paper's findings about the effects of persona prompting."
+    },
+    {
+        "paperId": "0fc3091301f8b269cdc2c38bad050a3ad91635cf",
+        "title": "Persona Setting Pitfall: Persistent Outgroup Biases in Large Language Models Arising from Social Identity Adoption",
+        "abstract": "Drawing parallels between human cognition and artificial intelligence, we explored how large language models (LLMs) internalize identities imposed by targeted prompts. Informed by Social Identity Theory, these identity assignments lead LLMs to distinguish between\"we\"(the ingroup) and\"they\"(the outgroup). This self-categorization generates both ingroup favoritism and outgroup bias. Nonetheless, existing literature has predominantly focused on ingroup favoritism, often overlooking outgroup bias, which is a fundamental source of intergroup prejudice and discrimination. Our experiment addresses this gap by demonstrating that outgroup bias manifests as strongly as ingroup favoritism. Furthermore, we successfully mitigated the inherent pro-liberal, anti-conservative bias in LLMs by guiding them to adopt the perspectives of the initially disfavored group. These results were replicated in the context of gender bias. Our findings highlight the potential to develop more equitable and balanced language models.",
+        "year": 2024,
+        "citation_count": 3,
+        "relevance": 2,
+        "explanation": "This paper examines biases in LLMs arising from persona adoption, specifically focusing on outgroup biases. It is closely related to the source paper's investigation of biases in persona-steered generation."
+    },
+    {
+        "paperId": "aeaf287733a97296b2e80374cbab96f1bcc94a98",
+        "title": "Language Models Predict Empathy Gaps Between Social In-groups and Out-groups",
+        "abstract": "Studies of human psychology have demonstrated that people are more motivated to extend empathy to in-group members than out-group members (Cikara et al., 2011). In this study, we investigate how this aspect of intergroup relations in humans is replicated by LLMs in an emotion intensity prediction task. In this task, the LLM is given a short description of an experience a person had that caused them to feel a particular emotion; the LLM is then prompted to predict the intensity of the emotion the person experienced on a numerical scale. By manipulating the group identities assigned to the LLM's persona (the\"perceiver\") and the person in the narrative (the\"experiencer\"), we measure how predicted emotion intensities differ between in-group and out-group settings. We observe that LLMs assign higher emotion intensity scores to in-group members than out-group members. This pattern holds across all three types of social groupings we tested: race/ethnicity, nationality, and religion. We perform an in-depth analysis on Llama-3.1-8B, the model which exhibited strongest intergroup bias among those tested.",
+        "year": 2025,
+        "citation_count": 4,
+        "relevance": 2,
+        "explanation": "This paper investigates how LLMs replicate human intergroup empathy gaps, focusing on in-group and out-group dynamics. It is directly related to the source paper's exploration of outgroup bias in LLMs, as it examines a similar phenomenon of bias in emotion intensity prediction tasks."
+    }
+]

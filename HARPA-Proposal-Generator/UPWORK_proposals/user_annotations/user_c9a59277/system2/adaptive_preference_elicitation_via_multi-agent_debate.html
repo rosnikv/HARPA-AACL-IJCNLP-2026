@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>1828e31b0cfac45c3a616c78f2547fbe47548bf7</p>
+<hr>
+<section><h2>Title</h2>
+<p>APEX: Adaptive Preference EXploration for Multi-Agent Conversational Recommendation</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current conversational recommender systems struggle to efficiently elicit user preferences, often requiring excessive rounds of interaction or failing to capture nuanced trade-offs between different attributes. This inefficiency leads to suboptimal recommendations and poor user experiences.</p>
+<h3>Motivation</h3>
+<p>Existing methods typically employ single-agent approaches with fixed question-asking strategies or rely on pre-defined decision trees for preference elicitation. These approaches lack the flexibility to adapt to diverse user preferences and complex product domains. Inspired by human group decision-making processes, we propose leveraging multiple specialized agents to engage in a debate-style interaction, dynamically adapting the preference elicitation strategy based on the user's responses and the agents' collective reasoning. This approach aims to more efficiently capture user preferences and provide more accurate recommendations.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We introduce APEX (Adaptive Preference EXploration), a multi-agent framework consisting of: (1) A Moderator agent that orchestrates the debate and interacts with the user; (2) Multiple Advocate agents, each specializing in a particular product domain or attribute category; (3) A Synthesizer agent that aggregates insights from the debate. The system operates in rounds, where Advocate agents propose questions or recommendations, justify their choices, and critique others' proposals. The Moderator selects the most informative action to present to the user, while the Synthesizer continuously updates a shared preference model. We train the agents using multi-agent reinforcement learning, with rewards based on recommendation success and conversation efficiency. To handle the large action space, we employ hierarchical policy learning where high-level policies select question types or product categories, and low-level policies generate specific questions or recommendations.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use the MultiWOZ dataset for restaurant recommendations and Amazon product reviews for e-commerce recommendations. Preprocess the data to extract user preferences, product attributes, and dialogue flows.</p><p><strong>Step 2: Agent Implementation</strong></p><p>Implement the Moderator, Advocate, and Synthesizer agents using GPT-3.5 or GPT-4 API. Define prompts for each agent role. For example, Advocate prompt: 'You are an expert in [domain]. Given the current user preferences [preferences], propose a question or recommendation to better understand or satisfy the user's needs.'</p><p><strong>Step 3: Dialogue Simulation</strong></p><p>Create a dialogue simulator that uses the preprocessed data to generate user responses. Implement a function to evaluate recommendation quality based on ground truth preferences.</p><p><strong>Step 4: Training Loop</strong></p><p>Implement the multi-agent reinforcement learning loop. In each iteration: (1) Advocates generate proposals, (2) Moderator selects an action, (3) User simulator responds, (4) Synthesizer updates the preference model, (5) Calculate rewards based on recommendation quality and dialogue efficiency.</p><p><strong>Step 5: Baseline Implementation</strong></p><p>Implement baseline methods: (1) Single-agent approach using GPT-3.5/4 with a fixed question-asking strategy, (2) Traditional conversational recommender system using pre-defined decision trees.</p><p><strong>Step 6: Evaluation</strong></p><p>Compare APEX against baselines on metrics including recommendation accuracy, conversation length, and user satisfaction (simulated based on preference matching). Use at least 1000 simulated conversations for statistically significant results.</p><p><strong>Step 7: Ablation Studies</strong></p><p>Conduct ablation studies by removing or modifying components of APEX: (1) Remove the debate mechanism, (2) Use a fixed number of Advocates, (3) Remove the Synthesizer agent.</p><p><strong>Step 8: Analysis</strong></p><p>Analyze the generated dialogues, focusing on the diversity of questions asked, the adaptability to user responses, and the quality of final recommendations. Use GPT-4 to perform qualitative analysis on a subset of dialogues.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input (Single-agent approach)</strong></p><p>User: I'm looking for a restaurant in the city center. System: What type of cuisine do you prefer? User: I like Italian food. System: Do you have a preference for price range? User: I'd prefer something mid-range. System: Based on your preferences, I recommend 'La Trattoria'. It's an Italian restaurant in the city center with mid-range prices. Does this sound good?</p><p><strong>Baseline Prompt Expected Output (Single-agent approach)</strong></p><p>User: That sounds nice, but can you tell me more about the atmosphere? System: I apologize, but I don't have specific information about the atmosphere of 'La Trattoria'. Would you like me to recommend another restaurant or provide more general information about Italian restaurants in the city center?</p><p><strong>Proposed Prompt Input (APEX)</strong></p><p>Moderator: The user is looking for a restaurant in the city center and likes Italian food in the mid-range price category. Advocates, please propose questions or recommendations. Advocate 1 (Cuisine Expert): I suggest asking about specific Italian dishes they enjoy, as this can help narrow down the best options. Advocate 2 (Atmosphere Expert): Given that they're looking in the city center, we should inquire about their preferred ambiance - romantic, bustling, or family-friendly. Advocate 3 (Price Expert): While they mentioned mid-range, it would be helpful to define a specific budget to ensure we recommend appropriate options. Moderator: These are all good suggestions. Let's ask about the atmosphere first, as it seems most relevant to the user's interests. User, what kind of atmosphere do you prefer for your Italian dining experience in the city center?</p><p><strong>Proposed Prompt Expected Output (APEX)</strong></p><p>User: I'd prefer a romantic atmosphere for a date night. Moderator: Thank you for that information. Advocates, please propose updated recommendations or questions based on this new information. Advocate 1 (Cuisine Expert): Given the romantic atmosphere preference, I recommend 'Amore Mio'. It's a charming Italian restaurant in the city center known for its intimate setting and excellent pasta dishes. It falls within the mid-range price category and is perfect for date nights. Advocate 2 (Atmosphere Expert): I agree with the recommendation of 'Amore Mio'. To further enhance the romantic experience, we should ask if they'd like a table with a view or a more secluded spot in the restaurant. Advocate 3 (Price Expert): 'Amore Mio' fits the budget preference. We could also inquire if they're interested in any special romantic packages or wine pairings that might be slightly above the mid-range but could enhance their date night experience. Moderator: Excellent suggestions. User, based on your preferences for an Italian restaurant in the city center with a romantic atmosphere and mid-range prices, we recommend 'Amore Mio'. Would you like more details about table options or any special romantic offerings they might have?</p><p><strong>explanation</strong></p><p>The APEX approach demonstrates a more nuanced and adaptive conversation flow. By leveraging multiple expert agents, it can provide more detailed and relevant recommendations, anticipate user needs, and offer a more engaging interaction compared to the single-agent approach.</p>
+<h3>Fallback Plan</h3>
+<p>If APEX doesn't significantly outperform baselines, we can pivot the project to focus on analyzing the multi-agent debate process. We could investigate how different agents contribute to the recommendation process, identify patterns in successful vs. unsuccessful recommendations, and explore how the system adapts to different user types. This analysis could provide valuable insights into the strengths and weaknesses of multi-agent systems for conversational AI. Additionally, we could experiment with different reward structures or agent compositions to improve performance. If the multi-agent approach proves too complex, we could simplify the system to a dual-agent setup (e.g., one for eliciting preferences, one for making recommendations) and compare this to single-agent baselines, which might offer a more manageable trade-off between complexity and performance improvement.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/f7ea50dea238913894dde804d696f22b13c7cbdf" target="_blank">Multi-Objective Intrinsic Reward Learning for Conversational Recommender Systems</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/490b66fbd697d82c1542d1f43be243e8d8ff7fbb" target="_blank">Chain-of-Choice Hierarchical Policy Learning for Conversational Recommendation</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/849175924b095347002dd73920288d3c30036927" target="_blank">AgentTOD: A Task-Oriented Dialogue Agent with a Flexible and Adaptive API Calling Paradigm</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/b358c4986679b49b85925a265896f22de7d683ad" target="_blank">Tailored Conversations beyond LLMs: A RL-Based Dialogue Manager</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/0e07768e8dff74c8bb5eb3e42998c6198a0ca0bb" target="_blank">Leveraging Long Short-Term User Preference in Conversational Recommendation via Multi-agent Reinforcement Learning</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/080b2aa6b9b819f14d6ec4e66c4ad83714caf3ba" target="_blank">Expectation Confirmation Preference Optimization for Multi-Turn Conversational Recommendation Agent</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/389a1735f67a7c210c90098d1de0c3440e44c815" target="_blank">On Mitigating Data Sparsity in Conversational Recommender Systems</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/59c62abbe629c80e8a1928e6e868e967a63db677" target="_blank">Vaiage: A Multi-Agent Solution to Personalized Travel Planning</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/280857f4ce62db55de7ec585f4030ab6c2a5ef86" target="_blank">The Future is Agentic: Definitions, Perspectives, and Open Challenges of Multi-Agent Recommender Systems</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/894a733ff2ca3ec77f8385a6ac65bd17b42896c1" target="_blank">Towards Hierarchical Policy Learning for Conversational Recommendation with Hypergraph-based Reinforcement Learning</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

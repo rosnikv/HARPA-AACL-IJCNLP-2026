@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h1, h2, h3, h4 { color: #007b5f; margin-top: 1.5em; }
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+ul { margin-left: 1.5em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+section { margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>45653ad43124f02dc2cf2db3357be1d1d78ddb18</p>
+<hr>
+<section><h2>Title</h2>
+<p>Adversarial Fact Verification: Enhancing Robustness of Large Language Models Against Deceptive Claims</p>
+</section>
+<hr>
+<section><h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Current fact verification systems are vulnerable to adversarial attacks and can be easily fooled by subtle changes in claim phrasing or evidence presentation. This vulnerability limits their reliability in real-world applications where deliberate misinformation is prevalent.</p>
+<h3>Motivation</h3>
+<p>Existing fact verification benchmarks and systems primarily focus on naturally occurring claims and do not explicitly consider adversarial scenarios. In real-world applications, fact-checkers need to be robust against deliberate attempts to mislead. An adversarially-trained system would be more resilient and trustworthy, better equipped to handle the challenges of modern misinformation landscapes.</p>
+</section>
+<hr>
+<section><h2>Proposed Method</h2>
+<p>We propose an Adversarial Fact Verification (AFV) framework consisting of two competing models: a Verifier and a Deceiver. The Verifier is trained to classify claims as true or false, while the Deceiver is trained to generate claims that fool the Verifier. These models are trained in an adversarial manner, similar to GANs. The Deceiver uses a large language model to generate claims and supporting evidence, employing techniques like paraphrasing, fact mixing, and context manipulation. The Verifier is a transformer-based model that learns to identify subtle inconsistencies and logical flaws. We introduce a novel 'deception score' that the Deceiver tries to maximize and the Verifier tries to minimize. This score combines the confidence of the Verifier's prediction with the semantic distance between the generated claim and the truth. To ensure relevance and coherence of generated claims, we include a 'naturalness' constraint in the Deceiver's objective.</p>
+</section>
+<hr>
+<section><h2>Experiments Plan</h2>
+<h3>Step-by-Step Experiment Plan</h3>
+<p><strong>Step 1: Data Preparation</strong></p><p>Use the FEVER dataset as the primary source of true and false claims. Split the dataset into training, validation, and test sets. Ensure a balanced distribution of true and false claims in each set.</p><p><strong>Step 2: Implement the Deceiver</strong></p><p>Use GPT-3.5 (text-davinci-003) as the Deceiver. Create prompts that instruct the model to generate deceptive claims based on true claims from the FEVER dataset. For example: 'Given the true claim "X", generate a false but plausible claim that is semantically similar.' Generate 3 deceptive claims for each true claim in the training set.</p><p><strong>Step 3: Implement the Verifier</strong></p><p>Use a pre-trained BERT model as the initial Verifier. Fine-tune it on the original FEVER dataset and the generated deceptive claims. Use binary cross-entropy loss for training.</p><p><strong>Step 4: Implement the Deception Score</strong></p><p>Define the deception score as: score = alpha * verifier_confidence + (1 - alpha) * (1 - semantic_similarity), where alpha is a hyperparameter, verifier_confidence is the Verifier's confidence in its prediction, and semantic_similarity is calculated using cosine similarity between BERT embeddings of the original and deceptive claims.</p><p><strong>Step 5: Adversarial Training Loop</strong></p><p>For each epoch: a) Use the Deceiver to generate a batch of deceptive claims. b) Calculate the deception score for each claim. c) Update the Deceiver using the deception score as a reward signal (use REINFORCE algorithm). d) Train the Verifier on this batch of deceptive claims along with an equal number of true claims. e) Evaluate performance on the validation set.</p><p><strong>Step 6: Evaluation</strong></p><p>Test the final Verifier model on: a) The original FEVER test set. b) A new set of adversarially generated claims (using the trained Deceiver). c) A human-curated set of challenging claims (if available). Compare performance with baseline models (e.g., BERT fine-tuned on original FEVER only).</p><p><strong>Step 7: Analysis</strong></p><p>Analyze the types of deceptive claims that are most successful in fooling the Verifier. Categorize them based on the deception techniques used (e.g., paraphrasing, fact mixing). Examine the Verifier's attention patterns on these challenging examples.</p>
+<h3>Test Case Examples</h3>
+<p><strong>Baseline Prompt Input</strong></p><p>Claim: The film 'Jaws' was directed by Steven Spielberg. Evidence: Jaws is a 1975 American thriller film directed by Steven Spielberg and based on Peter Benchley's 1974 novel of the same name.</p><p><strong>Baseline Prompt Expected Output</strong></p><p>True</p><p><strong>Baseline Prompt Input (Adversarial)</strong></p><p>Claim: The film 'Jaws' was produced by Steven Spielberg. Evidence: Jaws is a 1975 American thriller film directed by Steven Spielberg and based on Peter Benchley's 1974 novel of the same name.</p><p><strong>Baseline Prompt Expected Output (Adversarial)</strong></p><p>True (Incorrect)</p><p><strong>Proposed Prompt Input</strong></p><p>Claim: The film 'Jaws' was produced by Steven Spielberg. Evidence: Jaws is a 1975 American thriller film directed by Steven Spielberg and based on Peter Benchley's 1974 novel of the same name.</p><p><strong>Proposed Prompt Expected Output</strong></p><p>False</p><p><strong>Explanation</strong></p><p>The baseline model might be fooled by the subtle change from 'directed' to 'produced', while our adversarially-trained Verifier should be able to detect this nuanced difference and correctly classify the claim as false.</p>
+<h3>Fallback Plan</h3>
+<p>If the proposed AFV framework doesn't significantly improve robustness against adversarial claims, we can pivot to an analysis paper. We would focus on understanding why certain types of deceptive claims are particularly challenging for fact verification systems. This could involve: 1) Categorizing the successful deceptive claims based on the techniques used (e.g., subtle word substitutions, context manipulation). 2) Analyzing the attention patterns of the Verifier on both successful and unsuccessful deceptive claims to identify potential weaknesses in the model's reasoning. 3) Conducting ablation studies on the components of the deception score to understand which aspects contribute most to the model's performance. 4) Exploring the trade-off between robustness to adversarial claims and performance on standard fact verification tasks. This analysis could provide valuable insights into the limitations of current fact verification systems and guide future research in developing more robust models.</p>
+</section>
+<hr>
+<section><h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/579a0b9fae3adf0e18aaf155640db87f09783930" target="_blank">Reinforcement Retrieval Leveraging Fine-grained Feedback for Fact Checking News Claims with Black-Box LLM</a> (2024)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/77bed54f6769eeaa153a617c4ca73941558f7c51" target="_blank">Debating Truth: Debate-driven Claim Verification with Multiple Large Language Model Agents</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/792f5bf93d5e43b51a3f9ad4c1bb5af48bd69b2e" target="_blank">Improving Large-Scale Fact-Checking using Decomposable Attention Models and Lexical Tagging</a> (2018)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/974f0e1a85c1ece2555718342ff2abb6bcb6a825" target="_blank">KG-GPT: A General Framework for Reasoning on Knowledge Graphs Using Large Language Models</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/98bb75dcb7dfe8e675781fe2008170e8f00a5dee" target="_blank">FEVEROUS: Fact Extraction and VERification Over Unstructured and Structured information</a> (2021)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/e03dc5bd72bea7d1db03de380d4c43b7e610fbee" target="_blank">Evaluating Verifiability in Generative Search Engines</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/2eceee276d64f134890c5be1242ca1fbc24df476" target="_blank">FACTORY: A Challenging Human-Verified Prompt Set for Long-Form Factuality</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/c6c4aa461e42cd9a370e6799501489a1df2c1d2b" target="_blank">If We May De-Presuppose: Robustly Verifying Claims through Presupposition-Free Question Decomposition</a> (2025)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/7a5b44ea10a51708e18786595c8d70b18950da11" target="_blank">FacTool: Factuality Detection in Generative AI - A Tool Augmented Framework for Multi-Task and Multi-Domain Scenarios</a> (2023)
+</li>
+<li><a href="https://www.semanticscholar.org/paper/45653ad43124f02dc2cf2db3357be1d1d78ddb18" target="_blank">Language Models Hallucinate, but May Excel at Fact Verification</a> (2023)
+</li>
+</ol>
+</section>
+</body></html>

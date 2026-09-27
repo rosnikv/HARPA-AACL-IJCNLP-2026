@@ -1,0 +1,38 @@
+[
+    {
+        "paperId": "39058bbc1420dc3c218fe494aa183303550440f8",
+        "title": "MOHONE: Modeling Higher Order Network Effects in KnowledgeGraphs via Network Infused Embeddings",
+        "abstract": "Many knowledge graph embedding methods operate on triples and are therefore implicitly limited by a very local view of the entire knowledge graph. We present a new framework MOHONE to effectively model higher order network effects in knowledge-graphs, thus enabling one to capture varying degrees of network connectivity (from the local to the global). Our framework is generic, explicitly models the network scale, and captures two different aspects of similarity in networks: (a) shared local neighborhood and (b) structural role-based similarity. First, we introduce methods that learn network representations of entities in the knowledge graph capturing these varied aspects of similarity. We then propose a fast, efficient method to incorporate the information captured by these network representations into existing knowledge graph embeddings. We show that our method consistently and significantly improves the performance on link prediction of several different knowledge-graph embedding methods including TRANSE, TRANSD, DISTMULT, and COMPLEX(by at least 4 points or 17% in some cases).",
+        "year": 2018,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "MOHONE captures network connectivity and structural role-based similarity, similar to GraphWave's focus on structural roles. The method of incorporating higher-order network effects is partially dependent on the concepts introduced in the source paper."
+    },
+    {
+        "paperId": "f950e179e939d2cdda04e27a29c2c0e6fced9e9d",
+        "title": "Identifying Important Spatial Structures in Cities Based on Graphwave \u2013 Taking Shanghai as an Example",
+        "abstract": "With the advancement and development of urbanization in China, human activities are closely related to the changes in the internal structure and external layout of the city. The human migration model reflects the internal structure of the city to some extent. In two places where the city is far apart, the layout is very similar, and people's activities may also have certain similarities. Inspired by Graphwave, the city's spatial network was constructed using data from human travel. It was found that the city's more important and potentially influential areas of urban functioning. This paper uses the data of Shanghai Mobike and taxis to build a network, identifies the similarity nodes in the city, uses the POI data set to verify the final data, and explains its important geographical significance. Experiments show that similarity nodes are mostly distributed in schools and communities, and are relatively close to transportation hubs.",
+        "year": 2018,
+        "citation_count": 2,
+        "relevance": 2,
+        "explanation": "This paper directly uses GraphWave to analyze spatial structures in cities, demonstrating a practical application of the source paper's method. It is highly dependent on the findings of the source paper."
+    },
+    {
+        "paperId": "dc42b3fab0c2e15825f64aa24c101e9923c925fd",
+        "title": "Node Embedding with Adaptive Similarities for Scalable Learning over Graphs",
+        "abstract": "Node embedding is the task of extracting informative and descriptive features over the nodes of a graph. The importance of node embedding for graph analytics as well as learning tasks, such as node classification, link prediction, and community detection, has led to a growing interest and a number of recent advances. Nonetheless, node embedding faces several major challenges. Practical embedding methods have to deal with real-world graphs that arise from different domains, with inherently diverse underlying processes as well as similarity structures and metrics. On the other hand, similar to principal component analysis in feature vector spaces, node embedding is an inherently unsupervised task. Lacking metadata for validation, practical schemes motivate standardization and limited use of tunable hyperparameters. Finally, node embedding methods must be scalable in order to cope with large-scale real-world graphs of networks with ever-increasing size. The present work puts forth an adaptive node embedding framework that adjusts the embedding process to a given underlying graph, in a fully unsupervised manner. This is achieved by leveraging the notion of a tunable node similarity matrix that assigns weights on multihop paths. The design of multihop similarities ensures that the resultant embeddings also inherit interpretable spectral properties. The proposed model is thoroughly investigated, interpreted, and numerically evaluated using stochastic block models. Moreover, an unsupervised algorithm is developed for training the model parameters effieciently. Extensive node classification, link prediction, and clustering experiments are carried out on many real-world graphs from various domains, along with comparisons with state-of-the-art scalable and unsupervised node embedding alternatives. The proposed method enjoys superior performance in many cases, while also yielding interpretable information on the underlying graph structure.",
+        "year": 2018,
+        "citation_count": 18,
+        "relevance": 1,
+        "explanation": "This paper proposes an adaptive node embedding framework that adjusts to the graph's underlying structure, similar to how GraphWave learns embeddings based on structural roles. However, it uses a different approach involving a tunable node similarity matrix, which does not directly rely on the findings of the source paper."
+    },
+    {
+        "paperId": "252d373e8132a6e8f2e98d960a30af8d83b7f0b0",
+        "title": "REGAL: Representation Learning-based Graph Alignment",
+        "abstract": "Problems involving multiple networks are prevalent in many scientific and other domains. In particular, network alignment, or the task of identifying corresponding nodes in different networks, has applications across the social and natural sciences. Motivated by recent advancements in node representation learning for single-graph tasks, we propose REGAL (REpresentation learning-based Graph ALignment), a framework that leverages the power of automatically-learned node representations to match nodes across different graphs. Within REGAL we devise xNetMF, an elegant and principled node embedding formulation that uniquely generalizes to multi-network problems. Our results demonstrate the utility and promise of unsupervised representation learning-based network alignment in terms of both speed and accuracy. REGAL runs up to 30x faster in the representation learning stage than comparable methods, outperforms existing network alignment methods by 20 to 30% accuracy on average, and scales to networks with millions of nodes each.",
+        "year": 2018,
+        "citation_count": 256,
+        "relevance": 1,
+        "explanation": "The REGAL paper is inspired by recent advancements in node representation learning, similar to the GraphWave method from the source paper. Both papers focus on leveraging automatically-learned node representations, but REGAL extends this concept to the task of network alignment across multiple networks, whereas GraphWave focuses on structural role identification within a single network. The key hypothesis in REGAL is inspired by the general idea of using unsupervised representation learning for graph tasks, as demonstrated in the source paper."
+    }
+]

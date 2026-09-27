@@ -1,0 +1,1491 @@
+{
+    "topic_description": "unsupervised graph embeddings using heat wavelet diffusion for structural role identification in networks",
+    "all_queries": [
+        "KeywordQuery(\"unsupervised graph embeddings using heat wavelet diffusion for structural role identification in networks\")",
+        "PaperQuery(\"4657c06d57cea792eab4f14e3a12f50d88109680\")",
+        "KeywordQuery(\"structural role identification graph embeddings\")",
+        "GetReferences(\"4657c06d57cea792eab4f14e3a12f50d88109680\")",
+        "KeywordQuery(\"heat kernel graph diffusion embeddings\")",
+        "PaperQuery(\"0f7f5679615effcc4c9b98cf2deb17c30744a6d7\")",
+        "PaperQuery(\"b00cea45c85e68002d34b608aecb4fddd18210aa\")",
+        "KeywordQuery(\"graph wavelet diffusion embeddings\")",
+        "KeywordQuery(\"spectral graph theory node embeddings\")",
+        "GetReferences(\"0f7f5679615effcc4c9b98cf2deb17c30744a6d7\")",
+        "PaperQuery(\"36ee2c8bd605afd48035d15fdc6b8c8842363376\")"
+    ],
+    "paper_bank": [
+        {
+            "id": "4657c06d57cea792eab4f14e3a12f50d88109680",
+            "paperId": "4657c06d57cea792eab4f14e3a12f50d88109680",
+            "title": "Learning Structural Node Embeddings via Diffusion Wavelets",
+            "year": 2017,
+            "citationCount": 398,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1710.10321",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1710.10321, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "tldr": {
+                "model": "tldr@v2.0.0",
+                "text": "GraphWave is developed, a method that represents each node's network neighborhood via a low-dimensional embedding by leveraging heat wavelet diffusion patterns and mathematically proves that nodes with similar network neighborhoods will have similar GraphWave embeddings even though these nodes may reside in very different parts of the network, and the method scales linearly with the number of edges."
+            },
+            "authors": [
+                {
+                    "authorId": "9638065",
+                    "name": "Claire Donnat"
+                },
+                {
+                    "authorId": "2095762",
+                    "name": "M. Zitnik"
+                },
+                {
+                    "authorId": "2444195",
+                    "name": "David Hallac"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ],
+            "abstract": "Nodes residing in different parts of a graph can have similar structural roles within their local network topology. The identification of such roles provides key insight into the organization of networks and can be used for a variety of machine learning tasks. However, learning structural representations of nodes is a challenging problem, and it has typically involved manually specifying and tailoring topological features for each node. In this paper, we develop GraphWave, a method that represents each node's network neighborhood via a low-dimensional embedding by leveraging heat wavelet diffusion patterns. Instead of training on hand-selected features, GraphWave learns these embeddings in an unsupervised way. We mathematically prove that nodes with similar network neighborhoods will have similar GraphWave embeddings even though these nodes may reside in very different parts of the network, and our method scales linearly with the number of edges. Experiments in a variety of different settings demonstrate GraphWave's real-world potential for capturing structural roles in networks, and our approach outperforms existing state-of-the-art baselines in every experiment, by as much as 137%.",
+            "score": 10
+        },
+        {
+            "id": "0f7f5679615effcc4c9b98cf2deb17c30744a6d7",
+            "paperId": "0f7f5679615effcc4c9b98cf2deb17c30744a6d7",
+            "title": "struc2vec: Learning Node Representations from Structural Identity",
+            "year": 2017,
+            "citationCount": 1176,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1704.03165",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1704.03165, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "10430740",
+                    "name": "Leonardo F. R. Ribeiro"
+                },
+                {
+                    "authorId": "1397888582",
+                    "name": "Pedro H. P. Saverese"
+                },
+                {
+                    "authorId": "2041244",
+                    "name": "Daniel R. Figueiredo"
+                }
+            ],
+            "abstract": "Structural identity is a concept of symmetry in which network nodes are identified according to the network structure and their relationship to other nodes. Structural identity has been studied in theory and practice over the past decades, but only recently has it been addressed with representational learning techniques. This work presents struc2vec, a novel and flexible framework for learning latent representations for the structural identity of nodes. struc2vec uses a hierarchy to measure node similarity at different scales, and constructs a multilayer graph to encode structural similarities and generate structural context for nodes. Numerical experiments indicate that state-of-the-art techniques for learning node representations fail in capturing stronger notions of structural identity, while struc2vec exhibits much superior performance in this task, as it overcomes limitations of prior approaches. As a consequence, numerical experiments indicate that struc2vec improves performance on classification tasks that depend more on structural identity.",
+            "score": 7
+        },
+        {
+            "id": "b00cea45c85e68002d34b608aecb4fddd18210aa",
+            "paperId": "b00cea45c85e68002d34b608aecb4fddd18210aa",
+            "title": "Learning Graph Representations with Embedding Propagation",
+            "year": 2017,
+            "citationCount": 170,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1710.03059, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1405061488",
+                    "name": "Alberto Garc\u00eda-Dur\u00e1n"
+                },
+                {
+                    "authorId": "2780262",
+                    "name": "Mathias Niepert"
+                }
+            ],
+            "abstract": "We propose Embedding Propagation (EP), an unsupervised learning framework for graph-structured data. EP learns vector representations of graphs by passing two types of messages between neighboring nodes. Forward messages consist of label representations such as representations of words and other attributes associated with the nodes. Backward messages consist of gradients that result from aggregating the label representations and applying a reconstruction loss. Node representations are finally computed from the representation of their labels. With significantly fewer parameters and hyperparameters an instance of EP is competitive with and often outperforms state of the art unsupervised and semi-supervised learning methods on a range of benchmark data sets.",
+            "score": 6
+        },
+        {
+            "id": "36ee2c8bd605afd48035d15fdc6b8c8842363376",
+            "paperId": "36ee2c8bd605afd48035d15fdc6b8c8842363376",
+            "title": "node2vec: Scalable Feature Learning for Networks",
+            "year": 2016,
+            "citationCount": 11066,
+            "openAccessPdf": {
+                "url": "https://europepmc.org/articles/pmc5108654?pdf=render",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1607.00653, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1954250",
+                    "name": "Aditya Grover"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ],
+            "abstract": "Prediction tasks over nodes and edges in networks require careful effort in engineering features used by learning algorithms. Recent research in the broader field of representation learning has led to significant progress in automating prediction by learning the features themselves. However, present feature learning approaches are not expressive enough to capture the diversity of connectivity patterns observed in networks. Here we propose node2vec, an algorithmic framework for learning continuous feature representations for nodes in networks. In node2vec, we learn a mapping of nodes to a low-dimensional space of features that maximizes the likelihood of preserving network neighborhoods of nodes. We define a flexible notion of a node's network neighborhood and design a biased random walk procedure, which efficiently explores diverse neighborhoods. Our algorithm generalizes prior work which is based on rigid notions of network neighborhoods, and we argue that the added flexibility in exploring neighborhoods is the key to learning richer representations. We demonstrate the efficacy of node2vec over existing state-of-the-art techniques on multi-label classification and link prediction in several real-world networks from diverse domains. Taken together, our work represents a new way for efficiently learning state-of-the-art task-independent representations in complex networks.",
+            "score": 5
+        },
+        {
+            "id": "322cf9bcde458a45eaeca989a1eec92f7c6db984",
+            "paperId": "322cf9bcde458a45eaeca989a1eec92f7c6db984",
+            "title": "Discriminative Embeddings of Latent Variable Models for Structured Data",
+            "year": 2016,
+            "citationCount": 703,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1603.05629, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2791430",
+                    "name": "H. Dai"
+                },
+                {
+                    "authorId": "144445933",
+                    "name": "Bo Dai"
+                },
+                {
+                    "authorId": "1779453",
+                    "name": "Le Song"
+                }
+            ],
+            "abstract": "Kernel classifiers and regressors designed for structured data, such as sequences, trees and graphs, have significantly advanced a number of interdisciplinary areas such as computational biology and drug design. Typically, kernels are designed beforehand for a data type which either exploit statistics of the structures or make use of probabilistic generative models, and then a discriminative classifier is learned based on the kernels via convex optimization. However, such an elegant two-stage approach also limited kernel methods from scaling up to millions of data points, and exploiting discriminative information to learn feature representations. \n \nWe propose, structure2vec, an effective and scalable approach for structured data representation based on the idea of embedding latent variable models into feature spaces, and learning such feature spaces using discriminative information. Interestingly, structure2vec extracts features by performing a sequence of function mappings in a way similar to graphical model inference procedures, such as mean field and belief propagation. In applications involving millions of data points, we showed that structure2vec runs 2 times faster, produces models which are 10, 000 times smaller, while at the same time achieving the state-of-the-art predictive performance.",
+            "score": 5
+        },
+        {
+            "id": "fff114cbba4f3ba900f33da574283e3de7f26c83",
+            "paperId": "fff114cbba4f3ba900f33da574283e3de7f26c83",
+            "title": "DeepWalk: online learning of social representations",
+            "year": 2014,
+            "citationCount": 9910,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1403.6652",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1403.6652, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2271808",
+                    "name": "Bryan Perozzi"
+                },
+                {
+                    "authorId": "1388360943",
+                    "name": "Rami Al-Rfou"
+                },
+                {
+                    "authorId": "1721948",
+                    "name": "S. Skiena"
+                }
+            ],
+            "abstract": "We present DeepWalk, a novel approach for learning latent representations of vertices in a network. These latent representations encode social relations in a continuous vector space, which is easily exploited by statistical models. DeepWalk generalizes recent advancements in language modeling and unsupervised feature learning (or deep learning) from sequences of words to graphs. DeepWalk uses local information obtained from truncated random walks to learn latent representations by treating walks as the equivalent of sentences. We demonstrate DeepWalk's latent representations on several multi-label network classification tasks for social networks such as BlogCatalog, Flickr, and YouTube. Our results show that DeepWalk outperforms challenging baselines which are allowed a global view of the network, especially in the presence of missing information. DeepWalk's representations can provide F1 scores up to 10% higher than competing methods when labeled data is sparse. In some experiments, DeepWalk's representations are able to outperform all baseline methods while using 60% less training data. DeepWalk is also scalable. It is an online learning algorithm which builds useful incremental results, and is trivially parallelizable. These qualities make it suitable for a broad class of real world applications such as network classification, and anomaly detection.",
+            "score": 5
+        },
+        {
+            "id": "1d0f007192db92d29b1cdf43aa9325ba0535b23a",
+            "paperId": "1d0f007192db92d29b1cdf43aa9325ba0535b23a",
+            "title": "Vertex similarity in networks.",
+            "year": 2005,
+            "citationCount": 840,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/physics/0510143",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/physics/0510143, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "49766290",
+                    "name": "E. Leicht"
+                },
+                {
+                    "authorId": "145864135",
+                    "name": "P. Holme"
+                },
+                {
+                    "authorId": "2061349316",
+                    "name": "Mark Newman"
+                }
+            ],
+            "abstract": "We consider methods for quantifying the similarity of vertices in networks. We propose a measure of similarity based on the concept that two vertices are similar if their immediate neighbors in the network are themselves similar. This leads to a self-consistent matrix formulation of similarity that can be evaluated iteratively using only a knowledge of the adjacency matrix of the network. We test our similarity measure on computer-generated networks for which the expected results are known, and on a number of real-world networks.",
+            "score": 5
+        },
+        {
+            "id": "6b7d6e6416343b2a122f8416e69059ce919026ef",
+            "paperId": "6b7d6e6416343b2a122f8416e69059ce919026ef",
+            "title": "Inductive Representation Learning on Large Graphs",
+            "year": 2017,
+            "citationCount": 15750,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1706.02216, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "49437682",
+                    "name": "William L. Hamilton"
+                },
+                {
+                    "authorId": "4058003",
+                    "name": "Z. Ying"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ],
+            "abstract": "Low-dimensional embeddings of nodes in large graphs have proved extremely useful in a variety of prediction tasks, from content recommendation to identifying protein functions. However, most existing approaches require that all nodes in the graph are present during training of the embeddings; these previous approaches are inherently transductive and do not naturally generalize to unseen nodes. Here we present GraphSAGE, a general, inductive framework that leverages node feature information (e.g., text attributes) to efficiently generate node embeddings for previously unseen data. Instead of training individual embeddings for each node, we learn a function that generates embeddings by sampling and aggregating features from a node's local neighborhood. Our algorithm outperforms strong baselines on three inductive node-classification benchmarks: we classify the category of unseen nodes in evolving information graphs based on citation and Reddit post data, and we show that our algorithm generalizes to completely unseen graphs using a multi-graph dataset of protein-protein interactions.",
+            "score": 4
+        },
+        {
+            "id": "36eff562f65125511b5dfab68ce7f7a943c27478",
+            "paperId": "36eff562f65125511b5dfab68ce7f7a943c27478",
+            "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+            "year": 2016,
+            "citationCount": 29778,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1609.02907, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "41016725",
+                    "name": "Thomas Kipf"
+                },
+                {
+                    "authorId": "1678311",
+                    "name": "M. Welling"
+                }
+            ],
+            "abstract": "We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convolutional neural networks which operate directly on graphs. We motivate the choice of our convolutional architecture via a localized first-order approximation of spectral graph convolutions. Our model scales linearly in the number of graph edges and learns hidden layer representations that encode both local graph structure and features of nodes. In a number of experiments on citation networks and on a knowledge graph dataset we demonstrate that our approach outperforms related methods by a significant margin.",
+            "score": 4
+        },
+        {
+            "id": "3d846cb01f6a975554035d2210b578ca61344b22",
+            "paperId": "3d846cb01f6a975554035d2210b578ca61344b22",
+            "title": "Revisiting Semi-Supervised Learning with Graph Embeddings",
+            "year": 2016,
+            "citationCount": 2157,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1603.08861, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2109512754",
+                    "name": "Zhilin Yang"
+                },
+                {
+                    "authorId": "50056360",
+                    "name": "William W. Cohen"
+                },
+                {
+                    "authorId": "145124475",
+                    "name": "R. Salakhutdinov"
+                }
+            ],
+            "abstract": "We present a semi-supervised learning framework based on graph embeddings. Given a graph between instances, we train an embedding for each instance to jointly predict the class label and the neighborhood context in the graph. We develop both transductive and inductive variants of our method. In the transductive variant of our method, the class labels are determined by both the learned embeddings and input feature vectors, while in the inductive variant, the embeddings are defined as a parametric function of the feature vectors, so predictions can be made on instances not seen during training. On a large and diverse set of benchmark tasks, including text classification, distantly supervised entity extraction, and entity classification, we show improved performance over many of the existing models.",
+            "score": 4
+        },
+        {
+            "id": "5d2e403358b845673783de0a774d97379f6f7376",
+            "paperId": "5d2e403358b845673783de0a774d97379f6f7376",
+            "title": "RolX: Role Extraction and Mining in Large Networks",
+            "year": 2011,
+            "citationCount": 28,
+            "openAccessPdf": {
+                "url": "https://digital.library.unt.edu/ark:/67531/metadc870531/m2/1/high_res_d/1111134.pdf",
+                "status": "GREEN",
+                "license": "other-oa",
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.2172/1111134?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.2172/1111134, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "152223760",
+                    "name": "Keith W. Henderson"
+                },
+                {
+                    "authorId": "153701431",
+                    "name": "Brian Gallagher"
+                },
+                {
+                    "authorId": "1397398770",
+                    "name": "Tina Eliassi-Rad"
+                },
+                {
+                    "authorId": "8163721",
+                    "name": "Hanghang Tong"
+                },
+                {
+                    "authorId": "3255268",
+                    "name": "L. Akoglu"
+                },
+                {
+                    "authorId": "2479152",
+                    "name": "Danai Koutra"
+                },
+                {
+                    "authorId": null,
+                    "name": "Lei Li"
+                },
+                {
+                    "authorId": "40632403",
+                    "name": "Sugato Basu"
+                },
+                {
+                    "authorId": "1702392",
+                    "name": "C. Faloutsos"
+                }
+            ],
+            "abstract": "Given a graph, how can we automatically discover roles for nodes? Roles could be, eg., \u2019bridges\u2019, or \u2019peripherynodes\u2019, etc. Roles are compact summaries of a node\u2019s behavior that generalize across networks. They enable numerous novel and useful network mining tasks, such as sense-making, searching for similar nodes, and node classification. We propose RolX (Role eXtraction), a scalable (linear in the number of edges), unsupervised learning approach for automatically extracting roles from general network data. We demonstrate the effectiveness of RolX on several network mining tasks, from exploratory data analysis to network transfer learning. Moreover, we compare network role discovery with network community discovery. We highlight fundamental differences between the two (e.g., roles generalize across disconnected networks, communities do not). Keywords-Graph mining, role discovery",
+            "score": 4
+        },
+        {
+            "id": "ecf6c42d84351f34e1625a6a2e4cc6526da45c74",
+            "paperId": "ecf6c42d84351f34e1625a6a2e4cc6526da45c74",
+            "title": "Representation Learning on Graphs: Methods and Applications",
+            "year": 2017,
+            "citationCount": 1990,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1709.05584, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "49437682",
+                    "name": "William L. Hamilton"
+                },
+                {
+                    "authorId": "83539859",
+                    "name": "Rex Ying"
+                },
+                {
+                    "authorId": "1702139",
+                    "name": "J. Leskovec"
+                }
+            ],
+            "abstract": "Machine learning on graphs is an important and ubiquitous task with applications ranging from drug design to friendship recommendation in social networks. The primary challenge in this domain is finding a way to represent, or encode, graph structure so that it can be easily exploited by machine learning models. Traditionally, machine learning approaches relied on user-defined heuristics to extract features encoding structural information about a graph (e.g., degree statistics or kernel functions). However, recent years have seen a surge in approaches that automatically learn to encode graph structure into low-dimensional embeddings, using techniques based on deep learning and nonlinear dimensionality reduction. Here we provide a conceptual review of key advancements in this area of representation learning on graphs, including matrix factorization-based methods, random-walk based algorithms, and graph neural networks. We review methods to embed individual nodes as well as approaches to embed entire (sub)graphs. In doing so, we develop a unified framework to describe these recent approaches, and we highlight a number of important applications and directions for future work.",
+            "score": 3
+        },
+        {
+            "id": "f09f7888aa5aeaf88a2a44aea768d9a8747e97d2",
+            "paperId": "f09f7888aa5aeaf88a2a44aea768d9a8747e97d2",
+            "title": "Geometric Deep Learning on Graphs and Manifolds Using Mixture Model CNNs",
+            "year": 2016,
+            "citationCount": 1834,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1611.08402",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1611.08402, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2500309",
+                    "name": "Federico Monti"
+                },
+                {
+                    "authorId": "1804261",
+                    "name": "Davide Boscaini"
+                },
+                {
+                    "authorId": "2426718",
+                    "name": "Jonathan Masci"
+                },
+                {
+                    "authorId": "1796150",
+                    "name": "E. Rodol\u00e0"
+                },
+                {
+                    "authorId": "2064928589",
+                    "name": "Jan Svoboda"
+                },
+                {
+                    "authorId": "1732570",
+                    "name": "M. Bronstein"
+                }
+            ],
+            "abstract": "Deep learning has achieved a remarkable performance breakthrough in several fields, most notably in speech recognition, natural language processing, and computer vision. In particular, convolutional neural network (CNN) architectures currently produce state-of-the-art performance on a variety of image analysis tasks such as object detection and recognition. Most of deep learning research has so far focused on dealing with 1D, 2D, or 3D Euclidean-structured data such as acoustic signals, images, or videos. Recently, there has been an increasing interest in geometric deep learning, attempting to generalize deep learning methods to non-Euclidean structured data such as graphs and manifolds, with a variety of applications from the domains of network analysis, computational social science, or computer graphics. In this paper, we propose a unified framework allowing to generalize CNN architectures to non-Euclidean domains (graphs and manifolds) and learn local, stationary, and compositional task-specific features. We show that various non-Euclidean CNN methods previously proposed in the literature can be considered as particular instances of our framework. We test the proposed method on standard tasks from the realms of image-, graph-and 3D shape analysis and show that it consistently outperforms previous approaches.",
+            "score": 3
+        },
+        {
+            "id": "c41eb895616e453dcba1a70c9b942c5063cc656c",
+            "paperId": "c41eb895616e453dcba1a70c9b942c5063cc656c",
+            "title": "Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering",
+            "year": 2016,
+            "citationCount": 7755,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1606.09375, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "3422350",
+                    "name": "Micha\u00ebl Defferrard"
+                },
+                {
+                    "authorId": "2549032",
+                    "name": "X. Bresson"
+                },
+                {
+                    "authorId": "1697397",
+                    "name": "P. Vandergheynst"
+                }
+            ],
+            "abstract": "In this work, we are interested in generalizing convolutional neural networks (CNNs) from low-dimensional regular grids, where image, video and speech are represented, to high-dimensional irregular domains, such as social networks, brain connectomes or words' embedding, represented by graphs. We present a formulation of CNNs in the context of spectral graph theory, which provides the necessary mathematical background and efficient numerical schemes to design fast localized convolutional filters on graphs. Importantly, the proposed technique offers the same linear computational complexity and constant learning complexity as classical CNNs, while being universal to any graph structure. Experiments on MNIST and 20NEWS demonstrate the ability of this novel deep learning system to learn local, stationary, and compositional features on graphs.",
+            "score": 3
+        },
+        {
+            "id": "e02f59cf876cb40233573ff78a1609f969d301cc",
+            "paperId": "e02f59cf876cb40233573ff78a1609f969d301cc",
+            "title": "subgraph2vec: Learning Distributed Representations of Rooted Sub-graphs from Large Graphs",
+            "year": 2016,
+            "citationCount": 157,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1606.08928, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2075601",
+                    "name": "A. Narayanan"
+                },
+                {
+                    "authorId": "1735135",
+                    "name": "Mahinthan Chandramohan"
+                },
+                {
+                    "authorId": "6187400",
+                    "name": "Lihui Chen"
+                },
+                {
+                    "authorId": "2152799887",
+                    "name": "Yang Liu"
+                },
+                {
+                    "authorId": "32921464",
+                    "name": "S. Saminathan"
+                }
+            ],
+            "abstract": "In this paper, we present subgraph2vec, a novel approach for learning latent representations of rooted subgraphs from large graphs inspired by recent advancements in Deep Learning and Graph Kernels. These latent representations encode semantic substructure dependencies in a continuous vector space, which is easily exploited by statistical models for tasks such as graph classification, clustering, link prediction and community detection. subgraph2vec leverages on local information obtained from neighbourhoods of nodes to learn their latent representations in an unsupervised fashion. We demonstrate that subgraph vectors learnt by our approach could be used in conjunction with classifiers such as CNNs, SVMs and relational data clustering algorithms to achieve significantly superior accuracies. Also, we show that the subgraph vectors could be used for building a deep learning variant of Weisfeiler-Lehman graph kernel. Our experiments on several benchmark and large-scale real-world datasets reveal that subgraph2vec achieves significant improvements in accuracies over existing graph kernels on both supervised and unsupervised learning tasks. Specifically, on two realworld program analysis tasks, namely, code clone and malware detection, subgraph2vec outperforms state-of-the-art kernels by more than 17% and 4%, respectively.",
+            "score": 3
+        },
+        {
+            "id": "7e1874986cf6433fabf96fff93ef42b60bdc49f8",
+            "paperId": "7e1874986cf6433fabf96fff93ef42b60bdc49f8",
+            "title": "Weisfeiler-Lehman Graph Kernels",
+            "year": 2011,
+            "citationCount": 2115,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.5555/1953048.2078187?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.5555/1953048.2078187, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1898417",
+                    "name": "N. Shervashidze"
+                },
+                {
+                    "authorId": "31500557",
+                    "name": "Pascal Schweitzer"
+                },
+                {
+                    "authorId": "1711983",
+                    "name": "E. J. V. Leeuwen"
+                },
+                {
+                    "authorId": "1698752",
+                    "name": "K. Mehlhorn"
+                },
+                {
+                    "authorId": "1704422",
+                    "name": "Karsten M. Borgwardt"
+                }
+            ],
+            "abstract": "In this article, we propose a family of efficient kernels for large graphs with discrete node labels. Key to our method is a rapid feature extraction scheme based on the Weisfeiler-Lehman test of isomorphism on graphs. It maps the original graph to a sequence of graphs, whose node attributes capture topological and label information. A family of kernels can be defined based on this Weisfeiler-Lehman sequence of graphs, including a highly efficient kernel comparing subtree-like patterns. Its runtime scales only linearly in the number of edges of the graphs and the length of the Weisfeiler-Lehman graph sequence. In our experimental evaluation, our kernels outperform state-of-the-art graph kernels on several graph classification benchmark data sets in terms of accuracy and runtime. Our kernels open the door to large-scale applications of graph kernels in various disciplines such as computational biology and social network analysis.",
+            "score": 3
+        },
+        {
+            "id": "e24cdf73b3e7e590c2fe5ecac9ae8aa983801367",
+            "paperId": "e24cdf73b3e7e590c2fe5ecac9ae8aa983801367",
+            "title": "Neural Message Passing for Quantum Chemistry",
+            "year": 2017,
+            "citationCount": 7616,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1704.01212, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2058362",
+                    "name": "J. Gilmer"
+                },
+                {
+                    "authorId": "2601641",
+                    "name": "S. Schoenholz"
+                },
+                {
+                    "authorId": "119508204",
+                    "name": "Patrick F. Riley"
+                },
+                {
+                    "authorId": "1689108",
+                    "name": "O. Vinyals"
+                },
+                {
+                    "authorId": "35188630",
+                    "name": "George E. Dahl"
+                }
+            ],
+            "abstract": "Supervised learning on molecules has incredible potential to be useful in chemistry, drug discovery, and materials science. Luckily, several promising and closely related neural network models invariant to molecular symmetries have already been described in the literature. These models learn a message passing algorithm and aggregation procedure to compute a function of their entire input graph. At this point, the next step is to find a particularly effective variant of this general approach and apply it to chemical prediction benchmarks until we either solve them or reach the limits of the approach. In this paper, we reformulate existing models into a single common framework we call Message Passing Neural Networks (MPNNs) and explore additional novel variations within this framework. Using MPNNs we demonstrate state of the art results on an important molecular property prediction benchmark; these results are strong enough that we believe future work should focus on datasets with larger molecules or more accurate ground truth labels.",
+            "score": 2
+        },
+        {
+            "id": "5d1bfeed240709725c78bc72ea40e55410b373dc",
+            "paperId": "5d1bfeed240709725c78bc72ea40e55410b373dc",
+            "title": "Convolutional Networks on Graphs for Learning Molecular Fingerprints",
+            "year": 2015,
+            "citationCount": 3379,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1509.09292, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1704657",
+                    "name": "D. Duvenaud"
+                },
+                {
+                    "authorId": "1683298",
+                    "name": "D. Maclaurin"
+                },
+                {
+                    "authorId": "1422175619",
+                    "name": "J. Aguilera-Iparraguirre"
+                },
+                {
+                    "authorId": "2344011563",
+                    "name": "Rafael G\u00f3mez-Bombarelli"
+                },
+                {
+                    "authorId": "145916942",
+                    "name": "Timothy D. Hirzel"
+                },
+                {
+                    "authorId": "1380248954",
+                    "name": "Al\u00e1n Aspuru-Guzik"
+                },
+                {
+                    "authorId": "1722180",
+                    "name": "Ryan P. Adams"
+                }
+            ],
+            "abstract": "We introduce a convolutional neural network that operates directly on graphs. These networks allow end-to-end learning of prediction pipelines whose inputs are graphs of arbitrary size and shape. The architecture we present generalizes standard molecular feature extraction methods based on circular fingerprints. We show that these data-driven features are more interpretable, and have better predictive performance on a variety of tasks.",
+            "score": 2
+        },
+        {
+            "id": "39e223e6b5a6f8727e9f60b8b7c7720dc40a5dbc",
+            "paperId": "39e223e6b5a6f8727e9f60b8b7c7720dc40a5dbc",
+            "title": "The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains",
+            "year": 2012,
+            "citationCount": 4023,
+            "openAccessPdf": {
+                "url": "http://arxiv.org/pdf/1211.0053.pdf",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1211.0053, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "50058359",
+                    "name": "D. Shuman"
+                },
+                {
+                    "authorId": "1799060",
+                    "name": "S. K. Narang"
+                },
+                {
+                    "authorId": "1703189",
+                    "name": "P. Frossard"
+                },
+                {
+                    "authorId": "145029825",
+                    "name": "Antonio Ortega"
+                },
+                {
+                    "authorId": "1697397",
+                    "name": "P. Vandergheynst"
+                }
+            ],
+            "abstract": "In applications such as social, energy, transportation, sensor, and neuronal networks, high-dimensional data naturally reside on the vertices of weighted graphs. The emerging field of signal processing on graphs merges algebraic and spectral graph theoretic concepts with computational harmonic analysis to process such signals on graphs. In this tutorial overview, we outline the main challenges of the area, discuss different ways to define graph spectral domains, which are the analogs to the classical frequency domain, and highlight the importance of incorporating the irregular structures of graph data domains when processing signals on graphs. We then review methods to generalize fundamental operations such as filtering, translation, modulation, dilation, and downsampling to the graph setting and survey the localized, multiscale transforms that have been proposed to efficiently extract information from high-dimensional data on graphs. We conclude with a brief discussion of open issues and possible extensions.",
+            "score": 2
+        },
+        {
+            "id": "1a37f07606d60df365d74752857e8ce909f700b3",
+            "paperId": "1a37f07606d60df365d74752857e8ce909f700b3",
+            "title": "Deep Neural Networks for Learning Graph Representations",
+            "year": 2016,
+            "citationCount": 991,
+            "openAccessPdf": {
+                "url": "https://ojs.aaai.org/index.php/AAAI/article/download/10179/10038",
+                "status": "BRONZE",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1609/aaai.v30i1.10179?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1609/aaai.v30i1.10179, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2105817",
+                    "name": "Shaosheng Cao"
+                },
+                {
+                    "authorId": "143844110",
+                    "name": "Wei Lu"
+                },
+                {
+                    "authorId": "3101288",
+                    "name": "Qiongkai Xu"
+                }
+            ],
+            "abstract": "\n \n In this paper, we propose a novel model for learning graph representations, which generates a low-dimensional vector representation for each vertex by capturing the graph structural information. Different from other previous research efforts, we adopt a random surfing model to capture graph structural information directly, instead of using the sampling-based method for generating linear sequences proposed by Perozzi et al. (2014). The advantages of our approach will be illustrated from both theorical and empirical perspectives. We also give a new perspective for the matrix factorization method proposed by Levy and Goldberg (2014), in which the pointwise mutual information (PMI) matrix is considered as an analytical solution to the objective function of the skip-gram model with negative sampling proposed by Mikolov et al. (2013). Unlike their approach which involves the use of the SVD for finding the low-dimensitonal projections from the PMI matrix, however, the stacked denoising autoencoder is introduced in our model to extract complex features and model non-linearities. To demonstrate the effectiveness of our model, we conduct experiments on clustering and visualization tasks, employing the learned vertex representations as features. Empirical results on datasets of varying sizes show that our model outperforms other stat-of-the-art models in such tasks.\n \n",
+            "score": 2
+        },
+        {
+            "id": "0834e74304b547c9354b6d7da6fa78ef47a48fa8",
+            "paperId": "0834e74304b547c9354b6d7da6fa78ef47a48fa8",
+            "title": "LINE: Large-scale Information Network Embedding",
+            "year": 2015,
+            "citationCount": 5380,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1503.03578",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1503.03578, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "145357803",
+                    "name": "Jian Tang"
+                },
+                {
+                    "authorId": "35955224",
+                    "name": "Meng Qu"
+                },
+                {
+                    "authorId": "2108927052",
+                    "name": "Mingzhe Wang"
+                },
+                {
+                    "authorId": "47474380",
+                    "name": "Ming Zhang"
+                },
+                {
+                    "authorId": "2112592519",
+                    "name": "Jun Yan"
+                },
+                {
+                    "authorId": "1743469",
+                    "name": "Qiaozhu Mei"
+                }
+            ],
+            "abstract": "This paper studies the problem of embedding very large information networks into low-dimensional vector spaces, which is useful in many tasks such as visualization, node classification, and link prediction. Most existing graph embedding methods do not scale for real world information networks which usually contain millions of nodes. In this paper, we propose a novel network embedding method called the ``LINE,'' which is suitable for arbitrary types of information networks: undirected, directed, and/or weighted. The method optimizes a carefully designed objective function that preserves both the local and global network structures. An edge-sampling algorithm is proposed that addresses the limitation of the classical stochastic gradient descent and improves both the effectiveness and the efficiency of the inference. Empirical experiments prove the effectiveness of the LINE on a variety of real-world information networks, including language networks, social networks, and citation networks. The algorithm is very efficient, which is able to learn the embedding of a network with millions of vertices and billions of edges in a few hours on a typical single machine. The source code of the LINE is available online\\footnote{\\url{https://github.com/tangjianpku/LINE}}.",
+            "score": 2
+        },
+        {
+            "id": "2c2ff76b98100fc6d6cd33c566c29fe730cc1cc3",
+            "paperId": "2c2ff76b98100fc6d6cd33c566c29fe730cc1cc3",
+            "title": "Emergence of network features from multiplexity",
+            "year": 2012,
+            "citationCount": 489,
+            "openAccessPdf": {
+                "url": "https://www.nature.com/articles/srep01344.pdf",
+                "status": "GOLD",
+                "license": "CCBYNCSA",
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1212.2153, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "49870342",
+                    "name": "Alessio Cardillo"
+                },
+                {
+                    "authorId": "1401290379",
+                    "name": "J. G\u00f3mez-Garde\u00f1es"
+                },
+                {
+                    "authorId": "1800889",
+                    "name": "M. Zanin"
+                },
+                {
+                    "authorId": "8526808",
+                    "name": "M. Romance"
+                },
+                {
+                    "authorId": "2857771",
+                    "name": "D. Papo"
+                },
+                {
+                    "authorId": "96447651",
+                    "name": "F. Pozo"
+                },
+                {
+                    "authorId": "1928935",
+                    "name": "S. Boccaletti"
+                }
+            ],
+            "abstract": "Many biological and man-made networked systems are characterized by the simultaneous presence of different sub-networks organized in separate layers, with links and nodes of qualitatively different types. While during the past few years theoretical studies have examined a variety of structural features of complex networks, the outstanding question is whether such features are characterizing all single layers, or rather emerge as a result of coarse-graining, i.e. when going from the multilayered to the aggregate network representation. Here we address this issue with the help of real data. We analyze the structural properties of an intrinsically multilayered real network, the European Air Transportation Multiplex Network in which each commercial airline defines a network layer. We examine how several structural measures evolve as layers are progressively merged together. In particular, we discuss how the topology of each layer affects the emergence of structural properties in the aggregate network.",
+            "score": 1
+        },
+        {
+            "id": "87f40e6f3022adbc1f1905e3e506abad05a9964f",
+            "paperId": "87f40e6f3022adbc1f1905e3e506abad05a9964f",
+            "title": "Distributed Representations of Words and Phrases and their Compositionality",
+            "year": 2013,
+            "citationCount": 33722,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1310.4546, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2047446108",
+                    "name": "Tomas Mikolov"
+                },
+                {
+                    "authorId": "1701686",
+                    "name": "I. Sutskever"
+                },
+                {
+                    "authorId": "2118440152",
+                    "name": "Kai Chen"
+                },
+                {
+                    "authorId": "32131713",
+                    "name": "G. Corrado"
+                },
+                {
+                    "authorId": "49959210",
+                    "name": "J. Dean"
+                }
+            ],
+            "abstract": "The recently introduced continuous Skip-gram model is an efficient method for learning high-quality distributed vector representations that capture a large number of precise syntactic and semantic word relationships. In this paper we present several extensions that improve both the quality of the vectors and the training speed. By subsampling of the frequent words we obtain significant speedup and also learn more regular word representations. We also describe a simple alternative to the hierarchical softmax called negative sampling. \n \nAn inherent limitation of word representations is their indifference to word order and their inability to represent idiomatic phrases. For example, the meanings of \"Canada\" and \"Air\" cannot be easily combined to obtain \"Air Canada\". Motivated by this example, we present a simple method for finding phrases in text, and show that learning good vector representations for millions of phrases is possible.",
+            "score": 1
+        },
+        {
+            "id": "f6b51c8753a871dc94ff32152c00c01e94f90f09",
+            "paperId": "f6b51c8753a871dc94ff32152c00c01e94f90f09",
+            "title": "Efficient Estimation of Word Representations in Vector Space",
+            "year": 2013,
+            "citationCount": 31765,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1301.3781, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2047446108",
+                    "name": "Tomas Mikolov"
+                },
+                {
+                    "authorId": "2118440152",
+                    "name": "Kai Chen"
+                },
+                {
+                    "authorId": "32131713",
+                    "name": "G. Corrado"
+                },
+                {
+                    "authorId": "49959210",
+                    "name": "J. Dean"
+                }
+            ],
+            "abstract": "We propose two novel model architectures for computing continuous vector\nrepresentations of words from very large data sets. The quality of these\nrepresentations is measured in a word similarity task, and the results are\ncompared to the previously best performing techniques based on different types\nof neural networks. We observe large improvements in accuracy at much lower\ncomputational cost, i.e. it takes less than a day to learn high quality word\nvectors from a 1.6 billion words data set. Furthermore, we show that these\nvectors provide state-of-the-art performance on our test set for measuring\nsyntactic and semantic word similarities.",
+            "score": 1
+        },
+        {
+            "id": "0de728ad1b67221d7a7302f809f987bb926f4504",
+            "paperId": "0de728ad1b67221d7a7302f809f987bb926f4504",
+            "title": "An Information Flow Model for Conflict and Fission in Small Groups",
+            "year": 1977,
+            "citationCount": 4300,
+            "openAccessPdf": {
+                "url": "https://arxiv.org/pdf/1707.03587",
+                "status": "GREEN",
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1707.03587, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "1726907",
+                    "name": "Konstantin Avrachenkov"
+                },
+                {
+                    "authorId": null,
+                    "name": "Aleksei Yu. Kondratev"
+                },
+                {
+                    "authorId": "3192364",
+                    "name": "V. Mazalov"
+                }
+            ],
+            "abstract": "Data from a voluntary association are used to construct a new formal model for a traditional anthropological problem, fission in small groups. The process leading to fission is viewed as an unequal flow of sentiments and information across the ties in a social network. This flow is unequal because it is uniquely constrained by the contextual range and sensitivity of each relationship in the network. The subsequent differential sharing of sentiments leads to the formation of subgroups with more internal stability than the group as a whole, and results in fission. The Ford-Fulkerson labeling algorithm allows an accurate prediction of membership in the subgroups and of the locus of the fission to be made from measurements of the potential for information flow across each edge in the network. Methods for measurement of potential information flow are discussed, and it is shown that all appropriate techniques will generate the same predictions.",
+            "score": 1
+        },
+        {
+            "id": "2978e7ab3b2c14b2019b78444546ffab4784438c",
+            "paperId": "2978e7ab3b2c14b2019b78444546ffab4784438c",
+            "title": "A Lightweight Deep Learning-based Model for Ranking Influential Nodes in Complex Networks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.19702, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373528319",
+                    "name": "Mohammed A. Ramadhan"
+                },
+                {
+                    "authorId": "2356245818",
+                    "name": "A. O. Mohammed"
+                }
+            ],
+            "abstract": "Identifying influential nodes in complex networks is a critical task with a wide range of applications across different domains. However, existing approaches often face trade-offs between accuracy and computational efficiency. To address these challenges, we propose 1D-CGS, a lightweight and effective hybrid model that integrates the speed of one-dimensional convolutional neural networks (1D-CNN) with the topological representation power of GraphSAGE for efficient node ranking. The model uses a lightweight input representation built on two straightforward and significant topological features: node degree and average neighbor degree. These features are processed through 1D convolutions to extract local patterns, followed by GraphSAGE layers to aggregate neighborhood information. We formulate the node ranking task as a regression problem and use the Susceptible-Infected-Recovered (SIR) model to generate ground truth influence scores. 1D-CGS is initially trained on synthetic networks generated by the Barabasi-Albert model and then applied to real world networks for identifying influential nodes. Experimental evaluations on twelve real world networks demonstrate that 1D-CGS significantly outperforms traditional centrality measures and recent deep learning models in ranking accuracy, while operating in very fast runtime. The proposed model achieves an average improvement of 4.73% in Kendall's Tau correlation and 7.67% in Jaccard Similarity over the best performing deep learning baselines. It also achieves an average Monotonicity Index (MI) score 0.99 and produces near perfect rank distributions, indicating highly unique and discriminative rankings. Furthermore, all experiments confirm that 1D-CGS operates in a highly reasonable time, running significantly faster than existing deep learning methods, making it suitable for large scale applications.",
+            "score": 1
+        },
+        {
+            "id": "bbf9d587ebda35d6483ae3f93a7fd465b4f9a5ed",
+            "paperId": "bbf9d587ebda35d6483ae3f93a7fd465b4f9a5ed",
+            "title": "Graph Neural Networks Powered by Encoder Embedding for Improved Node Learning",
+            "year": 2025,
+            "citationCount": 1,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.11732, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2372626480",
+                    "name": "Shiyu Chen"
+                },
+                {
+                    "authorId": "2773312",
+                    "name": "Cencheng Shen"
+                },
+                {
+                    "authorId": "6770837",
+                    "name": "Youngser Park"
+                },
+                {
+                    "authorId": "2068800231",
+                    "name": "Carey E. Priebe"
+                }
+            ],
+            "abstract": "Graph neural networks (GNNs) have emerged as a powerful framework for a wide range of node-level graph learning tasks. However, their performance is often constrained by reliance on random or minimally informed initial feature representations, which can lead to slow convergence and suboptimal solutions. In this paper, we leverage a statistically grounded method, one-hot graph encoder embedding (GEE), to generate high-quality initial node features that enhance the end-to-end training of GNNs. We refer to this integrated framework as the GEE-powered GNN (GG), and demonstrate its effectiveness through extensive simulations and real-world experiments across both unsupervised and supervised settings. In node clustering, GG consistently achieves state-of-the-art performance, ranking first across all evaluated real-world datasets, while exhibiting faster convergence compared to the standard GNN. For node classification, we further propose an enhanced variant, GG-C, which concatenates the outputs of GG and GEE and outperforms competing baselines. These results confirm the importance of principled, structure-aware feature initialization in realizing the full potential of GNNs.",
+            "score": 1
+        },
+        {
+            "id": "226f97a1f11a783c9168e7a9715c0ba528639a79",
+            "paperId": "226f97a1f11a783c9168e7a9715c0ba528639a79",
+            "title": "Layer-Wise Training of Graph Neural Networks With Self-Supervised Learning.",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/TNNLS.2025.3577702?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/TNNLS.2025.3577702, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2159574333",
+                    "name": "Oscar Pina"
+                },
+                {
+                    "authorId": "2148333622",
+                    "name": "Ver\u00f3nica Vilaplana"
+                }
+            ],
+            "abstract": "Training graph neural networks (GNNs) on large graphs is challenging due to both the high memory and computational costs of end-to-end training and the scarcity of detailed node-level annotations. To address these challenges, we propose layer-wise regularized graph infomax (LRGI), a self-supervised learning algorithm inspired by predictive coding, a biologically motivated principle in which each layer is trained locally to predict its future inputs. LRGI trains GNNs layer by layer, decoupling their memory and time complexity from the network depth, thereby enabling scalable training on large graphs. In LRGI, each layer learns to predict the features propagated from its neighbors, allowing independent training of each layer. This approach, combined with regularization that promotes diverse representations, also helps mitigate oversmoothing in deep GNNs. Experiments on large inductive graph benchmarks demonstrate that LRGI achieves competitive performance compared to state-of-the-art end-to-end methods, while substantially improving efficiency.",
+            "score": 1
+        },
+        {
+            "id": "629476b32c2c8f72b02082b1c1bb5b062c886c00",
+            "paperId": "629476b32c2c8f72b02082b1c1bb5b062c886c00",
+            "title": "Bridging Theory and Practice in Link Representation with Graph Neural Networks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.24018, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2354172142",
+                    "name": "Veronica Lachi"
+                },
+                {
+                    "authorId": "2249551952",
+                    "name": "Francesco Ferrini"
+                },
+                {
+                    "authorId": "2130615549",
+                    "name": "Antonio Longa"
+                },
+                {
+                    "authorId": "2291065942",
+                    "name": "Bruno Lepri"
+                },
+                {
+                    "authorId": "2300473851",
+                    "name": "Andrea Passerini"
+                },
+                {
+                    "authorId": "2249569580",
+                    "name": "Manfred Jaeger"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) are widely used to compute representations of node pairs for downstream tasks such as link prediction. Yet, theoretical understanding of their expressive power has focused almost entirely on graph-level representations. In this work, we shift the focus to links and provide the first comprehensive study of GNN expressiveness in link representation. We introduce a unifying framework, the $k_\\phi$-$k_\\rho$-$m$ framework, that subsumes existing message-passing link models and enables formal expressiveness comparisons. Using this framework, we derive a hierarchy of state-of-the-art methods and offer theoretical tools to analyze future architectures. To complement our analysis, we propose a synthetic evaluation protocol comprising the first benchmark specifically designed to assess link-level expressiveness. Finally, we ask: does expressiveness matter in practice? We use a graph symmetry metric that quantifies the difficulty of distinguishing links and show that while expressive models may underperform on standard benchmarks, they significantly outperform simpler ones as symmetry increases, highlighting the need for dataset-aware model selection.",
+            "score": 1
+        },
+        {
+            "id": "3cb188f78e4d4ca5be85a1ae15634f54b750328e",
+            "paperId": "3cb188f78e4d4ca5be85a1ae15634f54b750328e",
+            "title": "Understanding Generalization in Node and Link Prediction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00927, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2055402284",
+                    "name": "Antonis Vasileiou"
+                },
+                {
+                    "authorId": "2373023981",
+                    "name": "Timo Stoll"
+                },
+                {
+                    "authorId": "2283842316",
+                    "name": "Christopher Morris"
+                }
+            ],
+            "abstract": "Using message-passing graph neural networks (MPNNs) for node and link prediction is crucial in various scientific and industrial domains, which has led to the development of diverse MPNN architectures. Besides working well in practical settings, their ability to generalize beyond the training set remains poorly understood. While some studies have explored MPNNs'generalization in graph-level prediction tasks, much less attention has been given to node- and link-level predictions. Existing works often rely on unrealistic i.i.d.\\@ assumptions, overlooking possible correlations between nodes or links, and assuming fixed aggregation and impractical loss functions while neglecting the influence of graph structure. In this work, we introduce a unified framework to analyze the generalization properties of MPNNs in inductive and transductive node and link prediction settings, incorporating diverse architectural parameters and loss functions and quantifying the influence of graph structure. Additionally, our proposed generalization framework can be applied beyond graphs to any classification task under the inductive or transductive setting. Our empirical study supports our theoretical insights, deepening our understanding of MPNNs'generalization capabilities in these tasks.",
+            "score": 1
+        },
+        {
+            "id": "df998f1fcd5c813cca23818e370ab1e0c5158983",
+            "paperId": "df998f1fcd5c813cca23818e370ab1e0c5158983",
+            "title": "A Scalable Pretraining Framework for Link Prediction with Efficient Adaptation",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.04645, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": null,
+                    "name": "Yu Song"
+                },
+                {
+                    "authorId": "2293482433",
+                    "name": "Zhigang Hua"
+                },
+                {
+                    "authorId": "93719189",
+                    "name": "Harry Shomer"
+                },
+                {
+                    "authorId": "2293352728",
+                    "name": "Yan Xie"
+                },
+                {
+                    "authorId": "2282543720",
+                    "name": "Jingzhe Liu"
+                },
+                {
+                    "authorId": "2338267824",
+                    "name": "Bo Long"
+                },
+                {
+                    "authorId": null,
+                    "name": "Hui Liu"
+                }
+            ],
+            "abstract": "Link Prediction (LP) is a critical task in graph machine learning. While Graph Neural Networks (GNNs) have significantly advanced LP performance recently, existing methods face key challenges including limited supervision from sparse connectivity, sensitivity to initialization, and poor generalization under distribution shifts. We explore pretraining as a solution to address these challenges. Unlike node classification, LP is inherently a pairwise task, which requires the integration of both node- and edge-level information. In this work, we present the first systematic study on the transferability of these distinct modules and propose a late fusion strategy to effectively combine their outputs for improved performance. To handle the diversity of pretraining data and avoid negative transfer, we introduce a Mixture-of-Experts (MoE) framework that captures distinct patterns in separate experts, facilitating seamless application of the pretrained model on diverse downstream datasets. For fast adaptation, we develop a parameter-efficient tuning strategy that allows the pretrained model to adapt to unseen datasets with minimal computational overhead. Experiments on 16 datasets across two domains demonstrate the effectiveness of our approach, achieving state-of-the-art performance on low-resource link prediction while obtaining competitive results compared to end-to-end trained methods, with over 10,000x lower computational overhead.",
+            "score": 1
+        },
+        {
+            "id": "22fbc68b1a9475256f5f421c81f3824c757611ad",
+            "paperId": "22fbc68b1a9475256f5f421c81f3824c757611ad",
+            "title": "Bayesian Graph Neural Networks for Interpretable Link Prediction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICACI65340.2025.11096302?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICACI65340.2025.11096302, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375223458",
+                    "name": "Jia-Ran Gao"
+                },
+                {
+                    "authorId": "2374283109",
+                    "name": "Xiao-Tian Chen"
+                },
+                {
+                    "authorId": "2375095626",
+                    "name": "Jia-Xuan Shen"
+                },
+                {
+                    "authorId": "153518900",
+                    "name": "Feng-Feng Wei"
+                },
+                {
+                    "authorId": "2309194593",
+                    "name": "Wei-neng Chen"
+                }
+            ],
+            "abstract": "Link prediction is a fundamental problem in complex networks, with applications ranging from social media to bioinformatics. Existing methods often rely solely on either topological heuristics or latent variable models that neglect rich node attribute information. In this paper, we propose a Bayesian Graph Neural Network (BGNN) framework that simultaneously extracts deep node embeddings and leverages probabilistic graphical models to address these shortcomings. Specifically, our method first employs a multi-layer GNN to capture both local and global structural features. It then extracts non-topological features through attribute encoding. These complementary features are fused into a unified representation and fed into a Bayesian Network. The network computes the posterior probability of edge existence using Bayes' Theorem. This integration not only enhances prediction accuracy by leveraging both structural and attribute information, but also provides interpretable insights by quantifying the contribution of each feature to the final decision. Extensive experiments on standard datasets demonstrate that BGNN outperforms state-of-the-art methods both qualitatively and quantitatively. For instance, BGNN achieves an accuracy of 93% on the SCHOLAT dataset and 81% on the YST dataset, with significant improvements in precision, recall, and AUC.",
+            "score": 1
+        },
+        {
+            "id": "51f61a4f34b702065f7778cf0861aa8caaada111",
+            "paperId": "51f61a4f34b702065f7778cf0861aa8caaada111",
+            "title": "A Transfer Learning Framework for Multilayer Networks via Model Averaging",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.12455, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2368736196",
+                    "name": "Yongqin Qiu"
+                },
+                {
+                    "authorId": "2367474491",
+                    "name": "Xinyu Zhang"
+                }
+            ],
+            "abstract": "Link prediction in multilayer networks is a key challenge in applications such as recommendation systems and protein-protein interaction prediction. While many techniques have been developed, most rely on assumptions about shared structures and require access to raw auxiliary data, limiting their practicality. To address these issues, we propose a novel transfer learning framework for multilayer networks using a bi-level model averaging method. A $K$-fold cross-validation criterion based on edges is used to automatically weight inter-layer and intra-layer candidate models. This enables the transfer of information from auxiliary layers while mitigating model uncertainty, even without prior knowledge of shared structures. Theoretically, we prove the optimality and weight convergence of our method under mild conditions. Computationally, our framework is efficient and privacy-preserving, as it avoids raw data sharing and supports parallel processing across multiple servers. Simulations show our method outperforms others in predictive accuracy and robustness. We further demonstrate its practical value through two real-world recommendation system applications.",
+            "score": 1
+        },
+        {
+            "id": "dc42a5acd4181b72454d8faf07e3905af68b79be",
+            "paperId": "dc42a5acd4181b72454d8faf07e3905af68b79be",
+            "title": "Enhancing Spectral Graph Neural Networks with LLM-Predicted Homophily",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.14220, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2281746766",
+                    "name": "Kangkang Lu"
+                },
+                {
+                    "authorId": "2281950230",
+                    "name": "Yanhua Yu"
+                },
+                {
+                    "authorId": "2315303144",
+                    "name": "Zhiyong Huang"
+                },
+                {
+                    "authorId": "2315992692",
+                    "name": "Tat-Seng Chua"
+                }
+            ],
+            "abstract": "Spectral Graph Neural Networks (SGNNs) have achieved remarkable performance in tasks such as node classification due to their ability to learn flexible filters. Typically, these filters are learned under the supervision of downstream tasks, enabling SGNNs to adapt to diverse structural patterns. However, in scenarios with limited labeled data, SGNNs often struggle to capture the optimal filter shapes, resulting in degraded performance, especially on graphs with heterophily. Meanwhile, the rapid progress of Large Language Models (LLMs) has opened new possibilities for enhancing graph learning without modifying graph structure or requiring task-specific training. In this work, we propose a novel framework that leverages LLMs to estimate the homophily level of a graph and uses this global structural prior to guide the construction of spectral filters. Specifically, we design a lightweight and plug-and-play pipeline where a small set of labeled node pairs is formatted as natural language prompts for the LLM, which then predicts the graph's homophily ratio. This estimated value informs the spectral filter basis, enabling SGNNs to adapt more effectively to both homophilic and heterophilic structures. Extensive experiments on multiple benchmark datasets demonstrate that our LLM-assisted spectral framework consistently improves performance over strong SGNN baselines. Importantly, this enhancement incurs negligible computational and monetary cost, making it a practical solution for real-world graph applications.",
+            "score": 1
+        },
+        {
+            "id": "14dbf588df7aa4ab219ac001c84612220f39bacf",
+            "paperId": "14dbf588df7aa4ab219ac001c84612220f39bacf",
+            "title": "Cooperative Sheaf Neural Networks",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00647, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2375195445",
+                    "name": "Andr'e Ribeiro"
+                },
+                {
+                    "authorId": "153430101",
+                    "name": "A. Ten'orio"
+                },
+                {
+                    "authorId": "2373001483",
+                    "name": "Juan Belieni"
+                },
+                {
+                    "authorId": "2304746545",
+                    "name": "Amauri H. Souza"
+                },
+                {
+                    "authorId": "2332264881",
+                    "name": "Diego Mesquita"
+                }
+            ],
+            "abstract": "Sheaf diffusion has recently emerged as a promising design pattern for graph representation learning due to its inherent ability to handle heterophilic data and avoid oversmoothing. Meanwhile, cooperative message passing has also been proposed as a way to enhance the flexibility of information diffusion by allowing nodes to independently choose whether to propagate/gather information from/to neighbors. A natural question ensues: is sheaf diffusion capable of exhibiting this cooperative behavior? Here, we provide a negative answer to this question. In particular, we show that existing sheaf diffusion methods fail to achieve cooperative behavior due to the lack of message directionality. To circumvent this limitation, we introduce the notion of cellular sheaves over directed graphs and characterize their in- and out-degree Laplacians. We leverage our construction to propose Cooperative Sheaf Neural Networks (CSNNs). Theoretically, we characterize the receptive field of CSNN and show it allows nodes to selectively attend (listen) to arbitrarily far nodes while ignoring all others in their path, potentially mitigating oversquashing. Our experiments show that CSNN presents overall better performance compared to prior art on sheaf diffusion as well as cooperative graph neural networks.",
+            "score": 1
+        },
+        {
+            "id": "2c9a131de605c5d5626c0d0ac6a7d00a1eeb36c3",
+            "paperId": "2c9a131de605c5d5626c0d0ac6a7d00a1eeb36c3",
+            "title": "Effects of structural properties of neural networks on machine learning performance",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.10005, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373459941",
+                    "name": "Yash Arya"
+                },
+                {
+                    "authorId": "2373601098",
+                    "name": "Sang Hoon Lee"
+                }
+            ],
+            "abstract": "In recent years, graph-based machine learning techniques, such as reinforcement learning and graph neural networks, have garnered significant attention. While some recent studies have started to explore the relationship between the graph structure of neural networks and their predictive performance, they often limit themselves to a narrow range of model networks, particularly lacking mesoscale structures such as communities. Our work advances this area by conducting a more comprehensive investigation, incorporating realistic network structures characterized by heterogeneous degree distributions and community structures, which are typical characteristics of many real networks. These community structures offer a nuanced perspective on network architecture. Our analysis employs model networks such as random and scale-free networks, alongside a comparison with a biological neural network and its subsets for more detailed analysis. We examine the impact of these structural attributes on the performance of image classification tasks. Our findings reveal that structural properties do affect performance to some extent. Specifically, networks featuring coherent, densely interconnected communities demonstrate enhanced learning capabilities. The comparison with the biological neural network emphasizes the relevance of our findings to real-world structures, suggesting an intriguing connection worth further exploration. This study contributes meaningfully to network science and machine learning, providing insights that could inspire the design of more biologically informed neural networks.",
+            "score": 1
+        },
+        {
+            "id": "083139346b759da7f57cdc78c37588166b3fc955",
+            "paperId": "083139346b759da7f57cdc78c37588166b3fc955",
+            "title": "Knowledge Tracing Enhanced by Graph Convolutional Networks With Self-Supervised Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.4018/ijicte.385130?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.4018/ijicte.385130, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373738727",
+                    "name": "Yanhong Shen"
+                },
+                {
+                    "authorId": "2373558833",
+                    "name": "Yi Chen"
+                }
+            ],
+            "abstract": "Knowledge tracing (KT) plays a key role in adaptive learning, yet traditional recurrent neural network\u2013based methods often struggle with sparse data and overlook relationships between knowledge points. To address these limitations, this paper proposes a novel knowledge tracing model (KGS-KT) that integrates knowledge graphs, graph convolutional networks (GCNs), and self-supervised learning (SSL). Our approach constructs a knowledge graph from learners' performance data to capture inherent relationships among knowledge points and employs GCNs to generate comprehensive knowledge point embeddings. In addition, two SSL tasks\u2014node attribute prediction and edge relation prediction\u2014are introduced. These tasks enhance feature representation by reconstructing masked node attributes and inferring missing connections, while also providing deeper insight into the role of structured dependencies. This strengthens the model's robustness against data sparsity. Experimental results show that our approach outperforms existing methods, demonstrating the effectiveness of combining structured knowledge and SSL in KT.",
+            "score": 1
+        },
+        {
+            "id": "c515409767c4a18b68f97140b70ea734cfe19142",
+            "paperId": "c515409767c4a18b68f97140b70ea734cfe19142",
+            "title": "Graph Learning-Based Network Dismantling via hierarchical feature fusion and margin-ranked optimization",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1093/comnet/cnaf015?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1093/comnet/cnaf015, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373208019",
+                    "name": "Jihui Han"
+                },
+                {
+                    "authorId": "2374265862",
+                    "name": "Yupeng Shi"
+                },
+                {
+                    "authorId": "2373901305",
+                    "name": "Daoying Huang"
+                },
+                {
+                    "authorId": "2374490715",
+                    "name": "Ziqi Huang"
+                },
+                {
+                    "authorId": "2374369524",
+                    "name": "Anlin Zhang"
+                }
+            ],
+            "abstract": "\n Network dismantling\u2014the strategic removal of nodes to disrupt connectivity in complex systems\u2014is a foundational task in domains such as infrastructure protection, epidemic containment, and systemic risk mitigation. While existing approaches range from heuristic centrality metrics to optimization-based algorithms, they often lack generalization across topologies and fail to learn task-specific node influence. Recent graph learning-based methods, including CLMA, NRAND, and MaxShot-RL, introduce structural adaptability but typically rely on auxiliary modules such as contrastive heads, epidemic simulators, or reinforcement policies, increasing complexity and limiting scalability. Compared to recent reinforcement learning-based approaches such as MaxShot-RL, our method achieves higher scalability and dismantling accuracy while avoiding sample inefficiency and unstable convergence. In this work, we present GLND, a lightweight, self-contained dismantling framework that formulates node importance prediction as a supervised ranking problem. GLND integrates hierarchical attention to capture multi-scale topological patterns, a margin-based ranking loss to enforce score separation, and role-aware attention to amplify structurally pivotal nodes. Extensive experiments on both synthetic and real-world networks demonstrate that GLND consistently improves dismantling effectiveness, suppresses dynamic propagation more efficiently, and scales favorably with graph size, all while maintaining minimal architectural overhead. These results position GLND as a practical and generalizable tool for structural intervention across diverse complex networks.",
+            "score": 1
+        },
+        {
+            "id": "348d4f7e59a3c0b4378b570c5dce8b468e09a4ee",
+            "paperId": "348d4f7e59a3c0b4378b570c5dce8b468e09a4ee",
+            "title": "Learnable Diffusion Distances for Link Prediction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2025.3590610?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2025.3590610, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2170361105",
+                    "name": "Ahmed Begga"
+                },
+                {
+                    "authorId": "144108199",
+                    "name": "M. Lozano"
+                },
+                {
+                    "authorId": "2344247531",
+                    "name": "Francisco Escolano"
+                }
+            ],
+            "abstract": "In this paper, we address the problem of link prediction (LP) in Graph Neural Networks (GNNs) by learning approximated diffusion distances. Since diffusion distances have a spectral interpretation, we learn the smallest eigenvectors of the normalized Laplacian using the training edges. The resulting \u201cempirical eigenfunctions\u201d are reactive both to the Dirichlet loss that finds the eigenvectors and to the prediction loss. This allows us to chase the spectrum of the network in addition to provide competitive results in many LP benchmarks without precomputing subgraphs or subgraphs sketches (e.g., SEAL, WalkPooling, and ELPH/BUDDY). In addition, we provide a scalable approach for large graphs, where we do not rely on the matrix of diffusion distances.",
+            "score": 1
+        },
+        {
+            "id": "b25039cfb29964fbb69c4f49cc440a4b64a79448",
+            "paperId": "b25039cfb29964fbb69c4f49cc440a4b64a79448",
+            "title": "Learning Network Dismantling without Handcrafted Inputs",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.00706, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2298861035",
+                    "name": "Haozhe Tian"
+                },
+                {
+                    "authorId": "1818771",
+                    "name": "P. Ferraro"
+                },
+                {
+                    "authorId": "2354316998",
+                    "name": "Robert Shorten"
+                },
+                {
+                    "authorId": "2374404673",
+                    "name": "Mahdi Jalili"
+                },
+                {
+                    "authorId": "35532686",
+                    "name": "Homayoun Hamedmoghadam"
+                }
+            ],
+            "abstract": "The application of message-passing Graph Neural Networks has been a breakthrough for important network science problems. However, the competitive performance often relies on using handcrafted structural features as inputs, which increases computational cost and introduces bias into the otherwise purely data-driven network representations. Here, we eliminate the need for handcrafted features by introducing an attention mechanism and utilizing message-iteration profiles, in addition to an effective algorithmic approach to generate a structurally diverse training set of small synthetic networks. Thereby, we build an expressive message-passing framework and use it to efficiently solve the NP-hard problem of Network Dismantling, virtually equivalent to vital node identification, with significant real-world applications. Trained solely on diversified synthetic networks, our proposed model -- MIND: Message Iteration Network Dismantler -- generalizes to large, unseen real networks with millions of nodes, outperforming state-of-the-art network dismantling methods. Increased efficiency and generalizability of the proposed model can be leveraged beyond dismantling in a range of complex network problems.",
+            "score": 1
+        },
+        {
+            "id": "bc5ade36268ef14f6a67855a5028a8b18d8f0b45",
+            "paperId": "bc5ade36268ef14f6a67855a5028a8b18d8f0b45",
+            "title": "GNNs Meet Sequence Models Along the Shortest-Path: an Expressive Method for Link Prediction",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.07138, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2249551952",
+                    "name": "Francesco Ferrini"
+                },
+                {
+                    "authorId": "2354172142",
+                    "name": "Veronica Lachi"
+                },
+                {
+                    "authorId": "2130615549",
+                    "name": "Antonio Longa"
+                },
+                {
+                    "authorId": "2291065942",
+                    "name": "Bruno Lepri"
+                },
+                {
+                    "authorId": "2256993219",
+                    "name": "Andrea Passerini"
+                }
+            ],
+            "abstract": "Graph Neural Networks (GNNs) often struggle to capture the link-specific structural patterns crucial for accurate link prediction, as their node-centric message-passing schemes overlook the subgraph structures connecting a pair of nodes. Existing methods to inject such structural context either incur high computational cost or rely on simplistic heuristics (e.g., common neighbor counts) that fail to model multi-hop dependencies. We introduce SP4LP (Shortest Path for Link Prediction), a novel framework that combines GNN-based node encodings with sequence modeling over shortest paths. Specifically, SP4LP first applies a GNN to compute representations for all nodes, then extracts the shortest path between each candidate node pair and processes the resulting sequence of node embeddings using a sequence model. This design enables SP4LP to capture expressive multi-hop relational patterns with computational efficiency. Empirically, SP4LP achieves state-of-the-art performance across link prediction benchmarks. Theoretically, we prove that SP4LP is strictly more expressive than standard message-passing GNNs and several state-of-the-art structural features methods, establishing it as a general and principled approach for link prediction in graphs.",
+            "score": 1
+        },
+        {
+            "id": "ea9e5f6f6ff4b1f1d4728d4db0259d2929823785",
+            "paperId": "ea9e5f6f6ff4b1f1d4728d4db0259d2929823785",
+            "title": "A graph neural network based on feature network for identifying influential nodes",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.01278, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2298242060",
+                    "name": "Yanmei Hu"
+                },
+                {
+                    "authorId": null,
+                    "name": "Siyuan Yin"
+                },
+                {
+                    "authorId": "2312868547",
+                    "name": "Yihang Wu"
+                },
+                {
+                    "authorId": "2298053186",
+                    "name": "Xue Yue"
+                },
+                {
+                    "authorId": "2298716083",
+                    "name": "Yue Liu"
+                }
+            ],
+            "abstract": "Identifying influential nodes in complex networks is of great importance, and has many applications in practice. For example, finding influential nodes in e-commerce network can provide merchants with customers with strong purchase intent; identifying influential nodes in computer information system can help locating the components that cause the system break down and identifying influential nodes in these networks can accelerate the flow of information in networks. Thus, a lot of efforts have been made on the problem of indentifying influential nodes. However, previous efforts either consider only one aspect of the network structure, or using global centralities with high time consuming as node features to identify influential nodes, and the existing methods do not consider the relationships between different centralities. To solve these problems, we propose a Graph Convolutional Network Framework based on Feature Network, abbreviated as FNGCN (graph convolutional network is abbreviated as GCN in the following text). Further, to exclude noises and reduce redundency, FNGCN utilizes feature network to represent the complicated relationships among the local centralities, based on which the most suitable local centralities are determined. By taking a shallow GCN and a deep GCN into the FNGCN framework, two FNGCNs are developed. With ground truth obtained from the widely used Susceptible Infected Recovered (SIR) model, the two FNGCNs are compared with the state-of-art methods on several real-world networks. Experimental results show that the two FNGCNs can identify the influential nodes more accurately than the compared methods, indicating that the proposed framework is effective in identifying influential nodes in complex networks.",
+            "score": 1
+        },
+        {
+            "id": "ab99572bb05af734b990d508be6edf30a39e8b8c",
+            "paperId": "ab99572bb05af734b990d508be6edf30a39e8b8c",
+            "title": "Structural-Aware Key Node Identification in Hypergraphs via Representation Learning and Fine-Tuning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.20682, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2373618252",
+                    "name": "Xiaonan Ni"
+                },
+                {
+                    "authorId": "2355867072",
+                    "name": "Guangyuan Mei"
+                },
+                {
+                    "authorId": "2266803369",
+                    "name": "Su-Su Zhang"
+                },
+                {
+                    "authorId": "2324934128",
+                    "name": "Yang Chen"
+                },
+                {
+                    "authorId": "2375134816",
+                    "name": "Xin Xu"
+                },
+                {
+                    "authorId": "2267017594",
+                    "name": "Chuang Liu"
+                },
+                {
+                    "authorId": "3174120",
+                    "name": "Xiuxiu Zhan"
+                }
+            ],
+            "abstract": "Evaluating node importance is a critical aspect of analyzing complex systems, with broad applications in digital marketing, rumor suppression, and disease control. However, existing methods typically rely on conventional network structures and fail to capture the polyadic interactions intrinsic to many real-world systems. To address this limitation, we study key node identification in hypergraphs, where higher-order interactions are naturally modeled as hyperedges. We propose a novel framework, AHGA, which integrates an Autoencoder for extracting higher-order structural features, a HyperGraph neural network-based pre-training module (HGNN), and an Active learning-based fine-tuning process. This fine-tuning step plays a vital role in mitigating the gap between synthetic and real-world data, thereby enhancing the model's robustness and generalization across diverse hypergraph topologies. Extensive experiments on eight empirical hypergraphs show that AHGA outperforms classical centrality-based baselines by approximately 37.4%. Furthermore, the nodes identified by AHGA exhibit both high influence and strong structural disruption capability, demonstrating their superiority in detecting multifunctional nodes.",
+            "score": 1
+        },
+        {
+            "id": "3295c2f58bf0e7a410cef557286c655c45da77df",
+            "paperId": "3295c2f58bf0e7a410cef557286c655c45da77df",
+            "title": "Scalable Feature Learning on Huge Knowledge Graphs for Downstream Machine Learning",
+            "year": 2025,
+            "citationCount": 0,
+            "openAccessPdf": {
+                "url": "",
+                "status": null,
+                "license": null,
+                "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2507.00965, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            },
+            "authors": [
+                {
+                    "authorId": "2362498475",
+                    "name": "F'elix Lefebvre"
+                },
+                {
+                    "authorId": "3025780",
+                    "name": "G. Varoquaux"
+                }
+            ],
+            "abstract": "Many machine learning tasks can benefit from external knowledge. Large knowledge graphs store such knowledge, and embedding methods can be used to distill it into ready-to-use vector representations for downstream applications. For this purpose, current models have however two limitations: they are primarily optimized for link prediction, via local contrastive learning, and they struggle to scale to the largest graphs due to GPU memory limits. To address these, we introduce SEPAL: a Scalable Embedding Propagation ALgorithm for large knowledge graphs designed to produce high-quality embeddings for downstream tasks at scale. The key idea of SEPAL is to enforce global embedding alignment by optimizing embeddings only on a small core of entities, and then propagating them to the rest of the graph via message passing. We evaluate SEPAL on 7 large-scale knowledge graphs and 46 downstream machine learning tasks. Our results show that SEPAL significantly outperforms previous methods on downstream tasks. In addition, SEPAL scales up its base embedding model, enabling fitting huge knowledge graphs on commodity hardware.",
+            "score": 1
+        }
+    ],
+    "total_cost": 0.131376
+}

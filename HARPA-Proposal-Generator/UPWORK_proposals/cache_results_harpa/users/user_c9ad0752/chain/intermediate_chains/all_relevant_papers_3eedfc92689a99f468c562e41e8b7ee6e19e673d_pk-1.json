@@ -1,0 +1,29 @@
+[
+    {
+        "paperId": "63e2c2e1283d9214c1e8702dfd2e746b87aa96e2",
+        "title": "Multi-resource constrained dynamic workshop scheduling based on proximal policy optimisation",
+        "abstract": "Multi-resource constrained dynamic workshop scheduling is a complex and challenging task in discrete manufacturing. In this paper, to obtain a high-performance scheduling in limited time, this problem is modelled into a Markov decision process, and solved by proximal policy optimisation algorithm, which can learn from the simulated workshop environment directly. A multi-modal hybrid neural network is used in the model to make good use of numerical state features representing workshop environment information and graphical state features representing constraint information during the learning process. Multi-label technique is used in this paper to decouple the output acts of jobs, machines, tools, and workers. Action mask technique coding the constraints is also used to prune invalid exploration. The experimental results show that compared with heuristic rules such as weighted shortest processing time, weighted modified due date, weighted cost over time, apparent tardiness cost and other reinforcement learning methods such as DeepRM and DeepRM2, the performance of the proposed method is at least better in scheduling penalty.",
+        "year": 2021,
+        "citation_count": 32,
+        "relevance": 2,
+        "explanation": "This paper uses proximal policy optimization for scheduling, similar to the source paper, and involves modeling scheduling as a Markov decision process, which is conceptually aligned with the source paper's approach."
+    },
+    {
+        "paperId": "29ad8b90355c6735029b31d633717e7a067da1fe",
+        "title": "ScheduleNet: Learn to solve multi-agent scheduling problems with reinforcement learning",
+        "abstract": "We propose ScheduleNet, a RL-based real-time scheduler, that can solve various types of multi-agent scheduling problems. We formulate these problems as a semi-MDP with episodic reward (makespan) and learn ScheduleNet, a decentralized decision-making policy that can effectively coordinate multiple agents to complete tasks. The decision making procedure of ScheduleNet includes: (1) representing the state of a scheduling problem with the agent-task graph, (2) extracting node embeddings for agent and tasks nodes, the important relational information among agents and tasks, by employing the type-aware graph attention (TGA), and (3) computing the assignment probability with the computed node embeddings. We validate the effectiveness of ScheduleNet as a general learning-based scheduler for solving various types of multi-agent scheduling tasks, including multiple salesman traveling problem (mTSP) and job shop scheduling problem (JSP).",
+        "year": 2021,
+        "citation_count": 40,
+        "relevance": 2,
+        "explanation": "ScheduleNet addresses multi-agent scheduling problems using RL and graph representations, similar to the source paper's approach to job-shop scheduling, indicating a conceptual dependency."
+    },
+    {
+        "paperId": "688d6e3e8c04c0d8a1b7db551b66b847474c2351",
+        "title": "A Global DAG Task Scheduler Using Deep Reinforcement Learning and Graph Convolution Network",
+        "abstract": "Parallelization of tasks and efficient utilization of processors are considered important and challenging in operating large-scale real-time systems. Recently, deep reinforcement learning (DRL) was found to provide effective solutions to various combinatorial optimization problems. In this paper, inspired by recent achievements in DRL, we employ DRL techniques for scheduling a directed acyclic graph (DAG) task in which a set of non-preemptive subtasks are specified by precedence conditions among them. We propose a DRL-based priority assignment model for scheduling a DAG task on a multiprocessor system, named GoSu, which adapts a graph convolution network (GCN) to process a complex interdependent task structure and minimize the makespan of a DAG task. Our proposed model makes use of both temporal and structural features in a DAG to effectively learn a priority-based scheduling policy via GCN and policy gradient methods. With comprehensive evaluations, we verify that our model shows comparable performance to several state-of-the-art DAG task scheduling algorithms, and outperforms them by 2~3% in the slowdown of achieved makespans particularly in nontrivial system configurations where workloads are neither too small nor heavy compared to the given number of processors. We also analyze the priority assignment behaviors of our model by leveraging a regression method that imitates the learned policy of the model.",
+        "year": 2021,
+        "citation_count": 9,
+        "relevance": 1,
+        "explanation": "This paper uses DRL and GCN for scheduling tasks in a DAG, which is related to the source paper's use of GNN and RL for scheduling, but it focuses on a different type of scheduling problem."
+    }
+]

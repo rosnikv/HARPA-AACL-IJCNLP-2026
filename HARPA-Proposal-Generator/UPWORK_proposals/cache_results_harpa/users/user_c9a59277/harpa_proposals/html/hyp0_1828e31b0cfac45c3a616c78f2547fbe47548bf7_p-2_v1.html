@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>1828e31b0cfac45c3a616c78f2547fbe47548bf7</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating real-time implicit feedback with multi-agent planning to enhance conversational recommendations.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating real-time implicit feedback analysis with a multi-agent act planning framework in conversational recommender systems will enhance recommendation accuracy and user satisfaction compared to systems without such integration.</p>
+<h3>Motivation</h3>
+<p>Existing conversational recommender systems often struggle to adapt recommendations in real-time based on implicit user feedback, such as session duration or click-through rates, which can provide valuable insights into user preferences. While many systems utilize explicit feedback or rely on static data, they frequently overlook the dynamic potential of implicit signals to refine recommendations on-the-fly. This gap is critical because implicit feedback can offer a more nuanced understanding of user satisfaction and engagement, which is often missed by explicit feedback alone. Our hypothesis addresses this gap by integrating real-time implicit feedback analysis with a multi-agent act planning framework to dynamically adjust recommendations, providing a more personalized and responsive user experience.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of real-time implicit feedback analysis with a multi-agent act planning framework in conversational recommender systems. The goal is to enhance recommendation accuracy and user satisfaction by dynamically adjusting recommendations based on implicit user feedback, such as session duration and click-through rates. The multi-agent act planning framework consists of multiple responder agents and a planner agent, each responsible for generating and selecting dialogue acts. By incorporating implicit feedback, the system can refine dialogue strategies and recommendations in real-time, providing a more personalized user experience. This approach addresses the limitations of existing systems that rely heavily on explicit feedback and static data, offering a novel solution that leverages the dynamic nature of implicit signals. The expected outcome is a significant improvement in recommendation accuracy and user satisfaction, as the system can adapt to user preferences more effectively. This hypothesis is tested using datasets like Movielens, with metrics such as precision, recall, F1-score, and user satisfaction ratings.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/1828e31b0cfac45c3a616c78f2547fbe47548bf7">Multi-Agent Act Planning Framework</a>: This framework involves multiple agents, each responsible for specific dialogue acts, and a planner agent that selects the most appropriate response. It is designed to control dialogue flow and dynamically refine recommendations. The framework is compatible with large language models and is tested on datasets like Movielens. The multi-agent system allows for more complex dialogue management and personalized recommendations, which are expected to improve user interaction experience and recommendation accuracy.</p>
+<p><a href="https://www.semanticscholar.org/paper/a15d30eb18c6b63a58578e9c72233219e418bd5d">Implicit Feedback Analysis</a>: This involves collecting and analyzing user behavior data, such as session duration and click-through patterns, to improve system performance. The data-driven approach identifies patterns and common issues, allowing the system to adapt and update its response mechanisms. This method is compatible with systems that have robust data processing capabilities and can process large volumes of interaction data in real-time. The expected role of implicit feedback analysis is to provide a more nuanced understanding of user satisfaction and engagement, leading to more accurate and personalized recommendations.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates real-time implicit feedback analysis with a multi-agent act planning framework in conversational recommender systems. The system begins by collecting implicit feedback data, such as session duration and click-through rates, during user interactions. This data is processed in real-time to identify patterns and trends in user behavior. The multi-agent act planning framework consists of multiple responder agents, each responsible for generating candidate responses based on different dialogue acts, and a planner agent that selects the most appropriate response. The implicit feedback data is used to refine the dialogue strategies and recommendation algorithms dynamically. The integration occurs at the decision-making stage, where the planner agent uses the feedback data to adjust the dialogue flow and recommendation strategy. The system continuously learns from user interactions, allowing it to adapt to changing preferences and provide more personalized recommendations. The implementation involves setting up a data processing pipeline for real-time feedback analysis, configuring the multi-agent framework, and integrating the feedback data into the decision-making process. The expected outcome is an improvement in recommendation accuracy and user satisfaction, as the system can respond more effectively to user preferences.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test whether integrating real-time implicit feedback analysis with a multi-agent act planning framework in conversational recommender systems enhances recommendation accuracy and user satisfaction compared to systems without such integration. The experiment should use the MovieLens dataset for movie recommendations.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4></p>
+<p><p>Implement three different conversational recommender systems:</p></p>
+<p><ol>
+<li><strong>Baseline 1 (Static Recommender)</strong>: A simple conversational recommender system that uses collaborative filtering without any real-time feedback integration.</li>
+</ol></p>
+<p><ol>
+<li><strong>Baseline 2 (Explicit Feedback Only)</strong>: A conversational recommender system that uses only explicit feedback (ratings) to adjust recommendations.</li>
+</ol></p>
+<p><ol>
+<li><strong>Experimental System (Implicit Feedback Multi-Agent)</strong>: A conversational recommender system that integrates real-time implicit feedback analysis with a multi-agent act planning framework.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4></p>
+<p><p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use only 10 users and 50 movies from the MovieLens dataset. Run 5 simulated conversations per system. This should complete in a few minutes and is for code verification and debugging.</li>
+</ul></p>
+<p><ul>
+<li><strong>PILOT</strong>: Use 100 users and 500 movies from the MovieLens dataset. Run 50 simulated conversations per system. This should complete in 1-2 hours and is to verify if the results show promising differences between systems.</li>
+</ul></p>
+<p><ul>
+<li><strong>FULL_EXPERIMENT</strong>: Use the complete MovieLens dataset. Run 500 simulated conversations per system. This is the final experiment with comprehensive evaluation.</li>
+</ul></p>
+<p><p>Start by running the MINI_PILOT first, then if everything looks good, run the PILOT. After the pilot, stop and do not run the FULL_EXPERIMENT (a human will manually verify the results and make the change to FULL_EXPERIMENT if needed).</p></p>
+<p><h4 class="custom-heading"><strong>Dataset Preparation</strong></h4></p>
+<p><ol>
+<li>Load the MovieLens dataset (use the 100K version for MINI_PILOT and PILOT, and the 1M version for FULL_EXPERIMENT).</li>
+<li>Split the dataset into training (70%), validation (15%), and test (15%) sets.</li>
+<li>For MINI_PILOT and PILOT, use subsets of the training and validation sets as specified above.</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>System Implementation</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Baseline 1: Static Recommender</strong></h4></p>
+<p><p>Implement a simple conversational recommender system that:<br />
+- Uses collaborative filtering to generate movie recommendations<br />
+- Has a basic dialogue management system with predefined templates<br />
+- Does not update its recommendation strategy during the conversation</p></p>
+<p><h4 class="custom-heading"><strong>2. Baseline 2: Explicit Feedback Only</strong></h4></p>
+<p><p>Implement a conversational recommender system that:<br />
+- Uses collaborative filtering for initial recommendations<br />
+- Collects explicit feedback (ratings) during the conversation<br />
+- Updates its recommendation strategy based only on explicit feedback<br />
+- Uses a simple dialogue management system</p></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>3. Experimental System: Implicit Feedback Multi-Agent</strong></h4></p>
+<p><p>Implement a conversational recommender system that:</p></p>
+<p><p><strong>Multi-Agent Framework</strong>:<br />
+- Create 4 responder agents, each responsible for different dialogue acts:<br />
+  - Information-seeking agent (asks questions about preferences)<br />
+  - Recommendation agent (suggests movies)<br />
+  - Explanation agent (explains why a movie was recommended)<br />
+  - Refinement agent (refines recommendations based on feedback)<br />
+- Implement a planner agent that selects the most appropriate response from the responder agents</p></p>
+<p><p><strong>Implicit Feedback Analysis</strong>:<br />
+- Track the following implicit feedback signals during conversations:<br />
+  - Time spent on each recommendation (simulated in the experiment)<br />
+  - Click-through patterns (simulated as selection of movie details)<br />
+  - Conversation flow patterns (e.g., follow-up questions after recommendations)<br />
+- Process this data in real-time to identify patterns in user behavior</p></p>
+<p><p><strong>Integration</strong>:<br />
+- The planner agent should use the implicit feedback data to adjust dialogue flow and recommendation strategy<br />
+- Implement a mechanism for the system to learn from interactions and adapt to changing preferences</p></p>
+<p><h4 class="custom-heading"><strong>Conversation Simulation</strong></h4></p>
+<p><p>Implement a user simulator that:<br />
+1. Has predefined user profiles based on the MovieLens dataset<br />
+2. Simulates conversations with each recommender system<br />
+3. Provides explicit feedback (ratings) when asked<br />
+4. Generates implicit feedback signals (time spent, clicks, etc.)</p></p>
+<p><p>For each conversation:<br />
+1. Initialize with a user profile<br />
+2. Run the conversation for a minimum of 10 turns<br />
+3. Record all interactions, recommendations, and feedback</p></p>
+<p><h4 class="custom-heading"><strong>Evaluation</strong></h4></p>
+<p><p>Evaluate each system using the following metrics:</p></p>
+<p><ol>
+<li><strong>Recommendation Accuracy</strong>:</li>
+<li>Precision: Proportion of recommended items that are relevant</li>
+<li>Recall: Proportion of relevant items that are recommended</li>
+<li>F1-score: Harmonic mean of precision and recall</li>
+</ol></p>
+<p><ol>
+<li><strong>User Satisfaction</strong> (simulated):</li>
+<li>Simulate user satisfaction ratings based on recommendation relevance</li>
+<li>Track conversation length and engagement patterns</li>
+</ol></p>
+<p><ol>
+<li><strong>Conversation Quality</strong>:</li>
+<li>Diversity of recommendations</li>
+<li>Appropriateness of dialogue acts</li>
+</ol></p>
+<p><p>Perform statistical analysis to determine if differences between systems are significant:<br />
+- Use bootstrap resampling for confidence intervals<br />
+- Conduct paired t-tests or Wilcoxon signed-rank tests as appropriate</p></p>
+<p><h4 class="custom-heading"><strong>Output and Reporting</strong></h4></p>
+<p><p>Generate a comprehensive report that includes:<br />
+1. Detailed performance metrics for each system<br />
+2. Statistical analysis of the differences between systems<br />
+3. Sample conversations from each system<br />
+4. Visualizations of performance metrics<br />
+5. Analysis of how implicit feedback affected recommendations in the experimental system</p></p>
+<p><h4 class="custom-heading"><strong>Implementation Details</strong></h4></p>
+<p><ul>
+<li>Use a language model (e.g., GPT-4) for generating dialogue responses</li>
+<li>Implement the multi-agent framework using a modular architecture</li>
+<li>Use collaborative filtering for the base recommendation algorithm</li>
+<li>Simulate implicit feedback based on recommendation relevance</li>
+</ul></p>
+<p><p>Please run the experiment in MINI_PILOT mode first, then PILOT mode if successful. Do not proceed to FULL_EXPERIMENT without human verification.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/1828e31b0cfac45c3a616c78f2547fbe47548bf7">Paper 0: A Multi-Agent Conversational Recommender System</a> (29 citations, 2024). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/59a35a90a1e71417a519fab635ef547ea3bf2002">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/6fbf26121566ac9dbbffe0b278c96fa4b0ed5f88">Paper 2</a>. The progression of research from the source paper through the related papers highlights the challenges of integrating LLMs into CRSs, particularly in terms of dialogue flow control, user feedback incorporation, and grounding recommendations in real-world contexts. The advancements made in Papers 0 and 1 address these challenges by optimizing LLMs for retrieval and generation tasks and augmenting them with graph-based reasoning. However, these approaches still rely on structured prompts and graph-based reasoning, which may not fully capture the dynamic and evolving nature of user preferences in real-time interactions. A novel research idea could focus on developing a dynamic feedback loop mechanism that continuously adapts the dialogue flow and recommendation strategies based on real-time user interactions and implicit feedback, without relying on predefined structures or external knowledge bases.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/1828e31b0cfac45c3a616c78f2547fbe47548bf7" target="_blank">A Multi-Agent Conversational Recommender System</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/59a35a90a1e71417a519fab635ef547ea3bf2002" target="_blank">Unleashing the Retrieval Potential of Large Language Models in Conversational Recommender Systems</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/6fbf26121566ac9dbbffe0b278c96fa4b0ed5f88" target="_blank">Graph Retrieval-Augmented LLM for Conversational Recommendation Systems</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/960f194d1b129843de4a99c5eea5a535f142fcef" target="_blank">A Survey on Reinforcement Learning for Recommender Systems</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/f8612d592c60f7b88f235ef071f58b9aec8011e9" target="_blank">Collaborative Filtering with A Synthetic Feedback Loop</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/afd5b0296a00e0f56f6c14a1ed96ae30dfc3952e" target="_blank">Knowledge Graph-enhanced Sampling for Conversational Recommender System</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/894b734d6d7b2434639641e98697170cd97ca904" target="_blank">Rec-R1: Bridging Generative Large Language Models and User-Centric Recommendation Systems via Reinforcement Learning</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/a12338cd4fd4b45e86eca285617c6da5f63aa7ff" target="_blank">Learning to Recommend from Sparse Data via Generative User Feedback</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/bc2673037d720154a1daf32e9ae77512f29e8290" target="_blank">Reward Constrained Interactive Recommendation with Natural Language Feedback</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/ac281a25bd6a66415d8d6b7b101b12fe6b8954a7" target="_blank">Deep Adaptive Interest Network: Personalized Recommendation with Context-Aware Learning</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/7e06467f1af79880640ff1f2790255741103e48f" target="_blank">Towards Next-Generation LLM-based Recommender Systems: A Survey and Beyond</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/8daaad6834a5cddceab4b9caa4ca8eeb4bc8f114" target="_blank">Enhancing user engagement and satisfaction through personalized news recommendation systems</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/a15d30eb18c6b63a58578e9c72233219e418bd5d" target="_blank">Error Correction and Adaptation in Conversational AI: A Review of Techniques and Applications in Chatbots</a> (2024)</li>
+</ol>
+</body>
+</html>

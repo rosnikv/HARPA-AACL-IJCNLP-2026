@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Summary</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; padding: 20px; line-height: 1.6; box-sizing: border-box; max-width: 1000px; }
+h2, h3, h4 { color: #007b5f; }
+.custom-heading {color: black;font-weight: bold;}
+hr { border: none; border-top: 1px solid #ccc; margin: 2em 0; }
+p { margin-bottom: 1em; }
+table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+.end-note, .end-note * { color: #888 !important; font-style: italic; font-weight: normal; margin-top: 2em; }
+</style>
+</head>
+<body>
+<hr>
+<h2>Paper ID</h2>
+<p>82ba96443173da0b8b3e870c5ab8f41109a67203</p>
+<hr>
+<h2>Title</h2>
+<p>Integrating Procrustes method with cosine similarity and latent space manipulation to enhance image controllability and diversity.</p>
+<hr>
+<h2>Introduction</h2>
+<h3>Problem Statement</h3>
+<p>Integrating the Procrustes method with cosine similarity and latent space manipulation in StyleGAN2's framework will enhance the controllability and diversity of generated images compared to traditional contrastive learning approaches.</p>
+<h3>Motivation</h3>
+<p>Existing methods for aligning text and image modalities often focus on contrastive learning frameworks, which maximize mutual information between paired representations. However, these methods may not fully leverage the geometric structure of the data, leading to suboptimal semantic consistency and diversity in generated images. The Procrustes method, which preserves geometric structure, has not been extensively explored in combination with cosine similarity and latent space manipulation for improving controllability and diversity. This hypothesis addresses the gap by integrating these techniques to enhance semantic alignment and image diversity without requiring extensive paired data.</p>
+<hr>
+<h2>Proposed Method</h2>
+<p>This research explores the integration of the Procrustes method with cosine similarity and latent space manipulation within the StyleGAN2 framework to improve the controllability and diversity of generated images. The Procrustes method will be used to align text and image modalities by preserving their geometric structure, which is crucial for maintaining semantic consistency. Cosine similarity will serve as the primary metric for evaluating alignment quality, ensuring that similar pairs are closely aligned while dissimilar pairs are distinguished. Latent space manipulation will enable the adjustment of image attributes based on text descriptions, leveraging the disentangled nature of StyleGAN2's latent space. This combination is expected to enhance both the semantic alignment and diversity of generated images, addressing limitations in existing contrastive learning frameworks that may not fully preserve geometric structure or achieve high diversity. The hypothesis will be tested by comparing the performance of this integrated approach against baseline methods such as CLIP and traditional contrastive learning frameworks, using metrics like Inception Score and LPIPS to evaluate diversity and semantic consistency.</p>
+<h3>Background</h3>
+<p><a href="https://www.semanticscholar.org/paper/65cf5af700e2102f911ff05fbc72b75a9867e877">Procrustes Method</a>: The Procrustes method is used to align text and image datasets through an isometric rotation transformation, preserving the geometric structure of the data. In this experiment, it will be applied to align the embeddings of text and image modalities within a shared latent space. This method is selected for its ability to maintain the local geometric structure, which is expected to enhance semantic consistency across modalities. The Procrustes method will be operationalized by applying rotation transformations to the embeddings, ensuring that the intrinsic features of the data are preserved. The expected outcome is improved semantic alignment, which will be measured using cosine similarity scores between aligned pairs.</p>
+<p><a href="https://www.semanticscholar.org/paper/362dcc6cca690940f4b47828c5e1894332f193eb">Cosine Similarity</a>: Cosine similarity is used as a metric to evaluate the alignment quality between text and image embeddings in the shared latent space. It measures the cosine of the angle between two vectors, providing a normalized score of their similarity. In this experiment, cosine similarity will be used to optimize the alignment of embeddings, ensuring that similar pairs have high similarity scores while dissimilar pairs have low scores. This metric is chosen for its effectiveness in capturing semantic relationships between modalities. The expected role of cosine similarity is to enhance the alignment quality, which will be assessed by comparing similarity scores before and after alignment.</p>
+<p><a href="https://www.semanticscholar.org/paper/5ea5b774898d4f4fcf1d48b42b722a4d3f0f7749">Latent Space Manipulation</a>: Latent space manipulation involves adjusting the latent codes in StyleGAN2's latent space to achieve desired image attributes based on text descriptions. This process leverages the disentangled nature of the latent space, allowing for precise control over image attributes. In this experiment, latent space manipulation will be used to modify image attributes in response to text inputs, enabling text-driven image editing. This variable is expected to enhance the controllability of image generation, allowing for specific attributes to be altered based on textual input. The success of latent space manipulation will be measured by the degree of alignment between the modified images and the input text descriptions, using metrics like LPIPS for diversity assessment.</p>
+<h3>Implementation</h3>
+<p>The proposed method integrates the Procrustes method with cosine similarity and latent space manipulation within the StyleGAN2 framework. The implementation involves several steps: First, text and image embeddings are aligned using the Procrustes method, which applies isometric rotation transformations to preserve the geometric structure of the data. This alignment ensures that the intrinsic features of the data are maintained, enhancing semantic consistency. Next, cosine similarity is used as a metric to evaluate the alignment quality, optimizing the embeddings to maximize similarity for aligned pairs and minimize it for unaligned pairs. This step involves computing cosine similarity scores between embeddings and adjusting them to improve alignment. Finally, latent space manipulation is applied to adjust the latent codes in StyleGAN2's latent space, enabling text-driven image editing. This process involves projecting text features into the latent space and modifying the latent codes to achieve desired image attributes based on text descriptions. The integration of these components is expected to enhance both the controllability and diversity of generated images. The hypothesis will be tested by comparing the performance of this integrated approach against baseline methods, using metrics like Inception Score and LPIPS to evaluate diversity and semantic consistency.</p>
+<hr>
+<h2>Experiments Plan</h2>
+<h3>Operationalization Information</h3>
+
+<div style="display: flex; gap: 2em;">
+<div style="flex: 1;">
+
+<p><p>Please implement an experiment to test the hypothesis that integrating the Procrustes method with cosine similarity and latent space manipulation in StyleGAN2's framework will enhance the controllability and diversity of generated images compared to traditional contrastive learning approaches.</p></p>
+<p><h4 class="custom-heading"><strong>Experiment Overview</strong></h4>
+<p>This experiment will compare a novel approach (Procrustes-Cosine Latent Alignment) against two baselines:<br />
+1. CLIP-based alignment (Baseline 1)<br />
+2. Traditional contrastive learning alignment (Baseline 2)</p></p>
+<p><p>The experiment should evaluate image generation quality, controllability, and diversity using established metrics.</p></p>
+<p><h4 class="custom-heading"><strong>Pilot Mode Settings</strong></h4>
+<p>Implement a global variable <code>PILOT_MODE</code> with three possible settings: <code>MINI_PILOT</code>, <code>PILOT</code>, or <code>FULL_EXPERIMENT</code>.</p></p>
+<p><ul>
+<li><strong>MINI_PILOT</strong>: Use only 10 text-image pairs from a standard dataset (e.g., MS-COCO). Run only 5 generation attempts per method. This should complete in under 10 minutes and is for code verification only.</li>
+<li><strong>PILOT</strong>: Use 100 text-image pairs. Run 20 generation attempts per method. This should complete in under 2 hours and will help determine if the results show promising differences between methods.</li>
+<li><strong>FULL_EXPERIMENT</strong>: Use the full dataset (1000+ pairs). Run 100 generation attempts per method with full statistical analysis.</li>
+</ul></p>
+<p><p>The experiment should first run in MINI_PILOT mode, then if successful, run in PILOT mode. It should stop after the PILOT run and not proceed to FULL_EXPERIMENT (which will require manual verification and activation).</p></p>
+<p><h4 class="custom-heading"><strong>Data Requirements</strong></h4>
+<ol>
+<li>A dataset of paired text descriptions and corresponding images (MS-COCO is recommended)</li>
+<li>Pre-trained StyleGAN2 model (preferably trained on a diverse image dataset)</li>
+<li>Pre-trained text encoder (e.g., BERT or similar)</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Implementation Steps</strong></h4></p>
+<p><h4 class="custom-heading"><strong>1. Setup and Data Preparation</strong></h4>
+<ul>
+<li>Load the StyleGAN2 model</li>
+<li>Load the text encoder model</li>
+<li>Prepare the text-image dataset</li>
+<li>Extract image features using StyleGAN2's latent space</li>
+<li>Extract text features using the text encoder</li>
+</ul></p>
+</div><div style='flex: 1;'>
+<p><h4 class="custom-heading"><strong>2. Baseline Methods Implementation</strong></h4>
+<ul>
+<li><strong>Baseline 1 (CLIP)</strong>: Implement CLIP-based alignment between text and image embeddings</li>
+<li><strong>Baseline 2 (Contrastive Learning)</strong>: Implement traditional contrastive learning alignment using InfoNCE or similar loss</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>3. Experimental Method Implementation</strong></h4>
+<ul>
+<li>Implement the Procrustes method for aligning text and image embeddings:</li>
+<li>Compute the optimal rotation matrix that aligns text embeddings to image embeddings while preserving geometric structure</li>
+<li>Apply the rotation transformation to the text embeddings</li>
+<li>Implement cosine similarity calculation between aligned embeddings</li>
+<li>Implement latent space manipulation in StyleGAN2:</li>
+<li>Project text features into StyleGAN2's latent space</li>
+<li>Modify latent codes based on text descriptions</li>
+<li>Generate images using the modified latent codes</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>4. Evaluation</strong></h4>
+<ul>
+<li>Generate images using all three methods (two baselines and experimental)</li>
+<li>Calculate Inception Score for each method to assess diversity and quality</li>
+<li>Calculate LPIPS scores to assess perceptual similarity and diversity</li>
+<li>Implement a text-image alignment score using cosine similarity</li>
+<li>Perform statistical analysis to compare the methods:</li>
+<li>Compute mean and standard deviation for each metric</li>
+<li>Perform significance testing (t-test or bootstrap resampling)</li>
+<li>Generate visualizations comparing the performance of each method</li>
+</ul></p>
+<p><h4 class="custom-heading"><strong>5. Specific Technical Details</strong></h4></p>
+<p><h4 class="custom-heading"><strong>Procrustes Method Implementation</strong></h4>
+<p>Implement the Procrustes method as follows:<br />
+1. Let X be the matrix of text embeddings and Y be the matrix of image embeddings<br />
+2. Compute the covariance matrix C = X^T Y<br />
+3. Compute the SVD of C: C = USV^T<br />
+4. Compute the rotation matrix R = VU^T<br />
+5. Apply the rotation to align text embeddings: X_aligned = XR</p></p>
+<p><h4 class="custom-heading"><strong>Latent Space Manipulation</strong></h4>
+<ol>
+<li>Map text embeddings to StyleGAN2's W+ space</li>
+<li>Implement text-guided attribute manipulation by identifying directions in latent space that correspond to specific attributes</li>
+<li>Modify latent codes along these directions based on text descriptions</li>
+<li>Generate images using the modified latent codes</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Evaluation Metrics</strong></h4>
+<ol>
+<li><strong>Inception Score</strong>: Higher scores indicate greater diversity and quality</li>
+<li><strong>LPIPS</strong>: Higher scores indicate greater diversity between generated images</li>
+<li><strong>Text-Image Alignment Score</strong>: Cosine similarity between text embeddings and image embeddings (higher is better)</li>
+<li><strong>User Study</strong> (for FULL_EXPERIMENT only): Human evaluation of image quality and text alignment</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Expected Outputs</strong></h4>
+<ol>
+<li>Generated images from all three methods</li>
+<li>Quantitative results for all evaluation metrics</li>
+<li>Statistical analysis comparing the three methods</li>
+<li>Visualizations of the results</li>
+<li>A comprehensive report summarizing the findings</li>
+</ol></p>
+<p><h4 class="custom-heading"><strong>Required Statistical Analysis</strong></h4>
+<ol>
+<li>Compute mean and standard deviation for each metric across all methods</li>
+<li>Perform paired t-tests or bootstrap resampling to determine statistical significance</li>
+<li>Generate box plots and bar charts comparing the performance of each method</li>
+<li>Report p-values and effect sizes</li>
+</ol></p>
+<p><p>Please implement this experiment following the described methodology and ensure proper documentation of all steps. The code should be modular and well-commented to facilitate understanding and future modifications.</p></p>
+</div></div>
+<div class="end-note"><strong>End Note:</strong> <p>The source paper is <a href="https://www.semanticscholar.org/paper/82ba96443173da0b8b3e870c5ab8f41109a67203">Paper 0: StyleGAN-XL: Scaling StyleGAN to Large Diverse Datasets</a> (528 citations, 2022). This idea draws upon a trajectory of prior work, as seen in the following sequence: <a href="https://www.semanticscholar.org/paper/df155537f7c4e59e179a95f3b37a179f913c94f9">Paper 1</a> --&gt; <a href="https://www.semanticscholar.org/paper/ebb832ce9ebc2817946a287f1cc869a6f6e05a78">Paper 2</a> --&gt; <a href="https://www.semanticscholar.org/paper/063171664f46ea1e08c09423d1eca7bad859fb52">Paper 3</a>. The progression of research from the source paper to the related papers shows a clear trend towards integrating text and image modalities using CLIP and StyleGAN, with a focus on improving image generation and manipulation capabilities. The source paper identified limitations in training strategies for large diverse datasets, which subsequent papers addressed by leveraging CLIP embeddings and diffusion models for text-driven generation and manipulation. However, there remains an opportunity to explore the integration of these advancements to improve the controllability and diversity of generated images further. A research idea that builds upon this progression could focus on enhancing the alignment between text and image modalities to achieve more nuanced and context-aware image generation.<br />
+The initial trend observed from the progression of related work highlights a consistent research focus. However, the final hypothesis proposed here is not merely a continuation of that trend — it is the result of a deeper analysis of the hypothesis space. By identifying underlying gaps and reasoning through the connections between works, the idea builds on, but meaningfully diverges from, prior directions to address a more specific challenge.</p></div>
+<hr>
+<h2>References</h2>
+<ol>
+<li><a href="https://www.semanticscholar.org/paper/82ba96443173da0b8b3e870c5ab8f41109a67203" target="_blank">StyleGAN-XL: Scaling StyleGAN to Large Diverse Datasets</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/df155537f7c4e59e179a95f3b37a179f913c94f9" target="_blank">clip2latent: Text driven sampling of a pre-trained StyleGAN using denoising diffusion and CLIP</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/ebb832ce9ebc2817946a287f1cc869a6f6e05a78" target="_blank">Bridging CLIP and StyleGAN through Latent Alignment for Image Editing</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/063171664f46ea1e08c09423d1eca7bad859fb52" target="_blank">Multi‐Modal Face Stylization with a Generative Prior</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/363d76367aba08466299f74b328fbe73fc971781" target="_blank">DALR: Dual-level Alignment Learning for Multimodal Sentence Representation Learning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/307183616e099b5ff440a7f3cae0828512c2f9b2" target="_blank">Distributional Vision-Language Alignment by Cauchy-Schwarz Divergence</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/faed82f8980af7ee8dbdb8bea732422f81e638e5" target="_blank">TediGAN: Text-Guided Diverse Image Generation and Manipulation</a> (2020)</li>
+<li><a href="https://www.semanticscholar.org/paper/eab22f9cbc6717eb919a7f0eb7a2a92063068ff9" target="_blank">Towards Language-Free Training for Text-to-Image Generation</a> (2021)</li>
+<li><a href="https://www.semanticscholar.org/paper/bd14dbf16ed3de01c9df12274f8694b47790360d" target="_blank">Lafite2: Few-shot Text-to-Image Generation</a> (2022)</li>
+<li><a href="https://www.semanticscholar.org/paper/686e6a152a0b5e77d72cad027a2a979bdf997721" target="_blank">Generative Modeling of Class Probability for Multi-Modal Representation Learning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/3a37dedf3f1a0064994c19a4791fc5a892d17b05" target="_blank">Variational Mixture-of-Experts Autoencoders for Multi-Modal Deep Generative Models</a> (2019)</li>
+<li><a href="https://www.semanticscholar.org/paper/da6e3c291c326222d588156cbf96a7604d7128c4" target="_blank">X-VILA: Cross-Modality Alignment for Large Language Model</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/8bcf57931ef79e35e711ef48795888dc7b4a9322" target="_blank">DecAlign: Hierarchical Cross-Modal Alignment for Decoupled Multimodal Representation Learning</a> (2025)</li>
+<li><a href="https://www.semanticscholar.org/paper/65cf5af700e2102f911ff05fbc72b75a9867e877" target="_blank">GeRA: Label-Efficient Geometrically Regularized Alignment</a> (2023)</li>
+<li><a href="https://www.semanticscholar.org/paper/362dcc6cca690940f4b47828c5e1894332f193eb" target="_blank">Seeing the Image: Prioritizing Visual Correlation by Contrastive Alignment</a> (2024)</li>
+<li><a href="https://www.semanticscholar.org/paper/5ea5b774898d4f4fcf1d48b42b722a4d3f0f7749" target="_blank">HyperEditor: Achieving Both Authenticity and Cross-Domain Capability in Image Editing via Hypernetworks</a> (2023)</li>
+</ol>
+</body>
+</html>
